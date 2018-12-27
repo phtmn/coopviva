@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('site.welcome');
+    return view('site.index');
 });
 
 Auth::routes();
