@@ -18,7 +18,7 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-6 mt-4 order-1 order-lg-2">
-                    <img src="/vendor/site/images/welcome.jpg" alt="welcome">
+                    <img src="/vendor/site/images/tmp.png" alt="welcome">
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
