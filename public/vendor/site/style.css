@@ -2137,3 +2137,7 @@ ul.tabs-nav .tab-nav.active {
 .form-filter {
     margin: 20px;
 }
+
+form.form.form-investidor {
+    margin: 0 0 30px 0;
+}

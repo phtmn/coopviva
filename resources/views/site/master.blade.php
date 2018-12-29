@@ -70,7 +70,7 @@
                                     @else
                                 <li><a href="{{ route('login') }}">Login</a></li>
                                         @if (Route::has('register'))
-                                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                        <li><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
                                         @endif
                                     @endauth               
                                 @endif
@@ -192,6 +192,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script type='text/javascript' src='/vendor/site/js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='/vendor/site/js/custom.js'></script>
+    @yield('js')
 
 </body>
 </html>
