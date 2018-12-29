@@ -8,16 +8,12 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h1>Doe</h1>
-                                    <h4>Para um mundo Melhor</h4>
+                                    <h1>Participe</h1>
+                                    <h4>Da maior rede de cooperação viva e cidadã</h4>
                                 </header><!-- .entry-header -->
 
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
-
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Doe Agora</a>
+                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
                                     <a href="#" class="btn orange-border">Saiba Mais</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -34,16 +30,14 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h1>Doe</h1>
-                                    <h4>Para um mundo Melhor</h4>
+                                    <h1>Invista</h1>
+                                    <h4>Em ações sustentáveis para um futuro melhor</h4>
                                 </header><!-- .entry-header -->
 
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
+                                <!-- .entry-content -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Doe Agora</a>
+                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
                                     <a href="#" class="btn orange-border">Saiba Mais</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -60,16 +54,14 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h1>Doe</h1>
-                                    <h4>Para um mundo melhor</h4>
+                                    <h1>Vivencie</h1>
+                                    <h4>Experiências Singulares</h4>
                                 </header><!-- .entry-header -->
 
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
+                                <!-- .entry-content -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Doe Agora</a>
+                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
                                     <a href="#" class="btn orange-border">Saiba Mais</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
