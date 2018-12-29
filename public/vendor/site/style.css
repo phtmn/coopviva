@@ -2131,3 +2131,9 @@ ul.tabs-nav .tab-nav.active {
     background: #131212;
     text-align: center;
 }
+
+/* Custom Css */
+
+.form-filter {
+    margin: 20px;
+}

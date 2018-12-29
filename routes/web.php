@@ -8,3 +8,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/oscs','Site\OrganizacoesController@index')->name('oscs');
+Route::get('/oscs/detalhe','Site\OrganizacoesController@detalhe')->name('oscs.detalhe');
