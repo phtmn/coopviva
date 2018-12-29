@@ -60,7 +60,7 @@
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                 <li class="current-menu-item"><a href="index.html">Home</a></li>
-                                <li><a href="#">Sobre Nos</a></li>
+                                <li><a href="#">Sobre Nós</a></li>
                                 <li><a href="#">OSC's</a></li>
                                 <li><a href="#">Agenda 2030</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -98,9 +98,9 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2><a class="foot-logo" href="#"><img src="/vendor/site/images/foot-logo.png" alt=""></a></h2>
+                            <h2><a class="foot-logo" href="#"><img src="/vendor/site/images/logo-branco.png" alt=""></a></h2>
 
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p>
+                            <p>A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade, empreendedorismo e na transformação social.</p>
 
                             <ul class="d-flex flex-wrap align-items-center">
                                 <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
@@ -114,22 +114,21 @@
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <h2>Useful Links</h2>
+                        <h2>Links</h2>
 
                         <ul>
-                            <li><a href="#">Privacy Polticy</a></li>
-                            <li><a href="#">Become  a Volunteer</a></li>
-                            <li><a href="#">Donate</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Causes</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sobre Nós </a></li>
+                            <li><a href="#">OSC's</a></li>
+                            <li><a href="#">Agenda 2030</a></li>
+                            <li><a href="#">Blog</a></li>
+                                                        
                         </ul>
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-latest-news">
-                            <h2>Latest News</h2>
+                            <h2>Últimas Notícias</h2>
 
                             <ul>
                                 <li>
@@ -152,19 +151,19 @@
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
-                            <h2>Contact</h2>
+                            <h2>Contato</h2>
 
                             <ul>
-                                <li><i class="fa fa-phone"></i><span>+45 677 8993000 223</span></li>
-                                <li><i class="fa fa-envelope"></i><span>office@template.com</span></li>
-                                <li><i class="fa fa-map-marker"></i><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+                                <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
+                                <li><i class="fa fa-envelope"></i><span>contato@rededeconexao.art.br</span></li>
+                                <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba - Brasil</span></li>
                             </ul>
                         </div><!-- .foot-contact -->
 
                         <div class="subscribe-form">
                             <form class="d-flex flex-wrap align-items-center">
-                                <input type="email" placeholder="Your email">
-                                <input type="submit" value="send">
+                                <input type="email" placeholder="Seu email">
+                                <input type="submit" value="Enviar">
                             </form><!-- .flex -->
                         </div><!-- .search-widget -->
                     </div><!-- .col -->
