@@ -1,3 +1,10 @@
+<style>
+.sub_top {
+  padding-left: 120px;
+ 
+}
+</style>
+
 <div class="swiper-container hero-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide hero-content-wrap">
@@ -6,10 +13,10 @@
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
                         <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
                                     <h1>Participe</h1>
-                                    <h4>Da maior rede de cooperação viva e cidadã</h4>
+                                     <div class="sub_top"><h3>Da maior rede de cooperação viva e cidadã</h3></div>
                                 </header><!-- .entry-header -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
@@ -28,10 +35,10 @@
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
                         <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
                                     <h1>Invista</h1>
-                                    <h4>Em ações sustentáveis para um futuro melhor</h4>
+                                     <div class="sub_top"><h3>Em ações sustentáveis para um futuro melhor</h3> </div>
                                 </header><!-- .entry-header -->
 
                                 <!-- .entry-content -->
@@ -52,10 +59,10 @@
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
                         <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h1>Vivencie</h1>
-                                    <h4>Experiências Singulares</h4>
+                                    <h1>Vivencie </h1>
+                                    <div class="sub_top"> <h3> Experiências Singulares </h3> </div>
                                 </header><!-- .entry-header -->
 
                                 <!-- .entry-content -->

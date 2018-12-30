@@ -8,7 +8,7 @@
                         </header><!-- .entry-header -->
 
                         <div class="entry-content mt-5">
-                            <p>No sistema COOPVIVA, todos os processos de captação de recursos, seja de pessoa física ou jurídica , via leis de incentivo ou doação direta podem ser alinhados as estratégias de Investimento social privado. O COOPVIVA é uma ferramenta  de colaboração viva e transversal. Seus stakeholders estarão, ainda mais, engajados e alinhados em seus projetos ou causa,  de forma planejada, estruturada e transparente.</p>
+                            <p>No sistema COOPVIVA, todos os processos de captação de recursos, seja de pessoa física ou jurídica, via leis de incentivo ou doação direta podem ser alinhados as estratégias de Investimento social privado. O COOPVIVA é uma ferramenta  de colaboração viva e transversal. Seus stakeholders estarão, ainda mais, engajados e alinhados em seus projetos ou causa,  de forma planejada, estruturada e transparente.</p>
                         </div><!-- .entry-content -->
 
                         <div class="entry-footer mt-5">

@@ -3,9 +3,9 @@
             <div class="row align-items-end">
                 <div class="coL-12 col-lg-6">
                     <div class="section-heading">
-                        <h2 class="entry-title">We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</h2>
+                        <h2 class="entry-title">Somos facilitadores para um planeta com equilíbrio e prospero, buscando a PAZ universal tornando-o melhor e com menos desigualdades. Daqui 12 anos, teremos muitos objetivos alcançados.</h2>
 
-                        <p class="mt-5">Dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. Lorem ipsum dolor sit amet.</p>
+                        <p class="mt-5">O plano indica, ainda 17 Objetivos de Desenvolvimento Sustentável, os ODS, com 169 meta.</p>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
 
