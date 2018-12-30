@@ -29,7 +29,7 @@
             <label for="exampleInputEmail1"><strong>Você é pessoa juridica?</strong></label>
             <div class="options">     
                 <div class=" form-check-inline">
-                    <input class="form-check-input"  name="PJ" type="checkbox" name="inlineRadioOptions" value="PF" id="pessoaFisica" v-model="tipo" checked="false">
+                    <input class="form-check-input"  name="tipo" type="checkbox" name="inlineRadioOptions" value="true" id="pessoaFisica" v-model="tipo" checked="false">
                     <label class="form-check-label" for="pessoaFisica" style="cursor:pointer"><i>Sim, Sou portador(a) de CNPJ</i></label>
                 </div>
                
@@ -38,7 +38,7 @@
         
         <div class="form-group" v-if="tipo">
             <label for="exampleInputPassword1"><strong>CNPJ</strong></label>
-            <input type="cnpj" name="cnpj "class="form-control" id="exampleInputPassword1"  placeholder="Apenas números">
+            <input type="cnpj" name="cnpj" class="form-control" id="exampleInputPassword1"  placeholder="Apenas números">
         </div>
         
         <div class="form-group" v-else="tipo">

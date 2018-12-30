@@ -15,8 +15,9 @@ class SiteController extends Controller
         return view('site.cadastro.formInvestidor');
     }
 
-    public function create(Request $request){
-         //um array com as mensagens traduzidas para cada regra
+    public function create(Request $request, User $user){
+        
+   
          $messages = [
             'required'  => 'O campo :attribute é obrigatório', //mensagem para campos required
             'min'       => 'A quantidade de caracteres do campo :attribute é minima', //mensagem para campos min
@@ -40,11 +41,10 @@ class SiteController extends Controller
                             ->withErrors($validator) // withErros() = retorna os erros de validação
                             ->withInputs(); // withIput() = retorna com os campos preenchidos
         }else{
-            $user = new User();
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = bcrypt($request->password);
-            $user->save();
+            
+           return 'ok';
+            
+
         }        
        
        

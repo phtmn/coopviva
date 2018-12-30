@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function cadastraPF($request){
+        dd($request->email);
+    }
+
+    public function cadastraPJ($request){
+        dd($request->email);
+    }   
 }
