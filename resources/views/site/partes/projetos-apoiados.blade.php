@@ -1,9 +1,9 @@
 <div class="our-causes">
         <div class="container">
             <div class="row">
-                <div class="coL-12">
+                <div class="coL-12 col-lg-6">
                     <div class="section-heading">
-                        <h2 class="entry-title">Nosso Projetos Apoiados</h2>
+                        <h2 class="entry-title">Nossas OSC's e seus Projetos</h2>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->

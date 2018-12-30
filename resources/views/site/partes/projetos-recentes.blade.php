@@ -4,7 +4,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="upcoming-events">
                         <div class="section-heading">
-                            <h2 class="entry-title">Projetos Recentes</h2>
+                            <h2 class="entry-title">Notícias Recentes</h2>
                         </div><!-- .section-heading -->
 
                         <div class="event-wrap d-flex flex-wrap justify-content-between">
@@ -14,7 +14,7 @@
 
                             <div class="event-content-wrap">
                                 <header class="entry-header d-flex flex-wrap align-items-center">
-                                    <h3 class="entry-title w-100 m-0"><a href="#">Fundo para Criancas</a></h3>
+                                    <h3 class="entry-title w-100 m-0"><a href="#">Fundo para Crianças</a></h3>
 
                                     <div class="posted-date">
                                         <a href="#">Aug 25, 2018 </a>
@@ -96,7 +96,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="featured-cause">
                         <div class="section-heading">
-                            <h2 class="entry-title">Projeto em Destaque</h2>
+                            <h2 class="entry-title">OSC em Destaque</h2>
                         </div><!-- .section-heading -->
 
                         <div class="cause-wrap d-flex flex-wrap justify-content-between">
@@ -122,7 +122,7 @@
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Incentive Agora</a>
+                                    <a href="#" class="btn gradient-bg mr-2">Quero Participar</a>
                                 </div><!-- .entry-footer -->
                             </div><!-- .cause-content-wrap -->
 

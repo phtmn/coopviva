@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CoopViva</title>
-
-    <!-- Required meta tags -->
+    <title>Coopviva</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
+	 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                         <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" href="index.html" rel="home"><img class="d-block" src="{{asset('imgs/logo-branco.png')}}" alt="logo"></a>
+                           <a class="d-block" href="index.html" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
                         </div><!-- .site-branding -->
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
@@ -96,7 +96,7 @@
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="foot-about">
                             <h2><a class="foot-logo" href="#"><img src="/vendor/site/images/logo-branco.png" alt=""></a></h2>
 
@@ -113,7 +113,7 @@
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                    <div class="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
                         <h2>Links</h2>
 
                         <ul>
@@ -122,6 +122,16 @@
                             <li><a href="#">OSC's</a></li>
                             <li><a href="#">Agenda 2030</a></li>
                             <li><a href="#">Blog</a></li>
+							@if (Route::has('login'))               
+                                    @auth
+                                        <li><a href="{{ url('/home') }}">Home</a></li>
+                                    @else
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                        @if (Route::has('register'))
+                                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                        @endif
+                                    @endauth               
+                                @endif
                                                         
                         </ul>
                     </div><!-- .col -->
@@ -156,14 +166,14 @@
                             <ul>
                                 <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
                                 <li><i class="fa fa-envelope"></i><span>contato@rededeconexao.art.br</span></li>
-                                <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba - Brasil</span></li>
+                                <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba – Brasil</span></li>
                             </ul>
                         </div><!-- .foot-contact -->
 
                         <div class="subscribe-form">
                             <form class="d-flex flex-wrap align-items-center">
-                                <input type="email" placeholder="Seu email">
-                                <input type="submit" value="Enviar">
+                                <input type="email" placeholder="Seu e-mail">
+                                <input type="submit" value="blog RC">
                             </form><!-- .flex -->
                         </div><!-- .search-widget -->
                     </div><!-- .col -->
@@ -176,7 +186,7 @@
                 <div class="row">
                     <div class="col-12">
                         <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE DE CONEXÃO | Todos os Direitos Reservados
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div><!-- .col-12 -->
                 </div><!-- .row -->
