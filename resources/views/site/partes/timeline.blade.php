@@ -12,47 +12,12 @@
                 <div class="col-12 col-lg-6">
                     <div class="milestones d-flex flex-wrap justify-content-between">
                         <div class="col-12 col-sm-4 mt-5 mt-lg-0">
-                            <div class="counter-box">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="/vendor/site/images/teamwork.png" alt="">
-                                </div>
-
-                                <div class="d-flex justify-content-center align-items-baseline">
-                                    <div class="start-counter" data-to="120" data-speed="2000"></div>
-                                    <div class="counter-k">K</div>
-                                </div>
-
-                                <h3 class="entry-title">Children helped</h3><!-- entry-title -->
-                            </div><!-- counter-box -->
+                            <img src="/vendor/site/images/agenda1.png" alt="welcome">
                         </div><!-- .col -->
 
-                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
-                            <div class="counter-box">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="/vendor/site/images/donation.png" alt="">
-                                </div>
+                        
 
-                                <div class="d-flex justify-content-center align-items-baseline">
-                                    <div class="start-counter" data-to="79" data-speed="2000"></div>
-                                </div>
-
-                                <h3 class="entry-title">Water wells</h3><!-- entry-title -->
-                            </div><!-- counter-box -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
-                            <div class="counter-box">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="/vendor/site/images/dove.png" alt="">
-                                </div>
-
-                                <div class="d-flex justify-content-center align-items-baseline">
-                                    <div class="start-counter" data-to="253" data-speed="2000"></div>
-                                </div>
-
-                                <h3 class="entry-title">Volunteeres</h3><!-- entry-title -->
-                            </div><!-- counter-box -->
-                        </div><!-- .col -->
+                        
                     </div><!-- .milestones -->
                 </div><!-- .col -->
             </div><!-- .row -->
