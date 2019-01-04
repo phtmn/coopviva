@@ -2,10 +2,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
-                    <div class="icon-box active">
+                    <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/hands-gray.png" alt="">
-                            <img src="/vendor/site/images/hands-white.png" alt="">
+                            <img src="/vendor/site/images/edu2.png" alt="">
+                            <img src="/vendor/site/images/edu1.png" alt="">
                         </figure>
 
                         <header class="entry-header">
@@ -21,8 +21,8 @@
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/donation-gray.png" alt="">
-                            <img src="/vendor/site/images/donation-white.png" alt="">
+                            <img src="/vendor/site/images/cri1.png" alt="">
+                            <img src="/vendor/site/images/cri2.png" alt="">
                         </figure>
 
                         <header class="entry-header">
@@ -38,8 +38,8 @@
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/charity-gray.png" alt="">
-                            <img src="/vendor/site/images/charity-white.png" alt="">
+                            <img src="/vendor/site/images/idoso2.png" alt="">
+                            <img src="/vendor/site/images/idoso1.png" alt="">
                         </figure>
 
                         <header class="entry-header">
@@ -58,8 +58,8 @@
 				<div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/hands-gray.png" alt="">
-                            <img src="/vendor/site/images/hands-white.png" alt="">
+                            <img src="/vendor/site/images/saude2.png" alt="">
+                            <img src="/vendor/site/images/saude1.png" alt="">
                         </figure>
 
                         <header class="entry-header">
@@ -75,8 +75,8 @@
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/donation-gray.png" alt="">
-                            <img src="/vendor/site/images/donation-white.png" alt="">
+                            <img src="/vendor/site/images/esporte1.png" alt="">
+                            <img src="/vendor/site/images/esporte2.png" alt="">
                         </figure>
 
                         <header class="entry-header">
@@ -92,8 +92,8 @@
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/charity-gray.png" alt="">
-                            <img src="/vendor/site/images/charity-white.png" alt="">
+                            <img src="/vendor/site/images/cult2.png" alt="">
+                            <img src="/vendor/site/images/cult.png" alt="">
                         </figure>
 
                         <header class="entry-header">

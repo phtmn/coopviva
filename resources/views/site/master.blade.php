@@ -27,17 +27,18 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="top-header-bar">
+        <div class="top-header-bar ">
             <div class="container">
                 <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
                     <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
                         <div class="header-bar-email">
-                            E-mail: <a href="#">contato@redeconexao.art.br</a>
+                            E-mail: <a href="#">contato@rededeconexao.art.br</a>
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
-                            <p>Telefones: <span>+55 83 3034-1663</span></p>
-                        </div><!-- .header-bar-text -->
+                            <p>Tel.: <span> +55 83 3034-1663 | WhatsApp +55 83 3034-1663 </span></p>
+                        </div>
+						
                     </div><!-- .col -->
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
@@ -54,7 +55,7 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                         <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" href="index.html" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
+                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
                         </div><!-- .site-branding -->
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
@@ -63,6 +64,11 @@
                                 <li><a href="#">Sobre Nós</a></li>
                                 <li><a href="{{ url('/oscs') }}">OSC's</a></li>
                                 <li><a href="#">Agenda 2030</a></li>
+								 <!--<li class="current-menu-item"><a href="index.html">Home</a></li> -->
+							   <li><a href="/">Home</a></li>
+                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>
+                                <li><a href="#">OSC's</a></li>
+                                <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li><a href="#">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
@@ -102,14 +108,14 @@
 
                             <p>A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade, empreendedorismo e na transformação social.</p>
 
-                            <ul class="d-flex flex-wrap align-items-center">
+                         <!--   <ul class="d-flex flex-wrap align-items-center">
                                 <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            </ul> -->
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
@@ -117,10 +123,10 @@
                         <h2>Links</h2>
 
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre Nós </a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="{{ route('sobre_nos') }}">Sobre Nós </a></li>
                             <li><a href="#">OSC's</a></li>
-                            <li><a href="#">Agenda 2030</a></li>
+                            <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a href="#">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
@@ -165,6 +171,7 @@
 
                             <ul>
                                 <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
+								<li><i class="fa fa-whatsapp"></i><span>+55 83 3034-1663</span></li>								
                                 <li><i class="fa fa-envelope"></i><span>contato@rededeconexao.art.br</span></li>
                                 <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba – Brasil</span></li>
                             </ul>
@@ -172,8 +179,9 @@
 
                         <div class="subscribe-form">
                             <form class="d-flex flex-wrap align-items-center">
-                                <input type="email" placeholder="Seu e-mail">
-                                <input type="submit" value="blog RC">
+							
+                                <input type="email" placeholder="Cadastre seu e-mail">
+                                <input type="submit" value="Enviar">
                             </form><!-- .flex -->
                         </div><!-- .search-widget -->
                     </div><!-- .col -->
