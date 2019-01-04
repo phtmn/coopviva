@@ -17,7 +17,7 @@ class SiteController extends Controller
 
     public function create(Request $request, User $user){
         
-   
+        //dd($request->segment(2));
          $messages = [
             'required'  => 'O campo :attribute é obrigatório', //mensagem para campos required
             'min'       => 'A quantidade de caracteres do campo :attribute é minima', //mensagem para campos min
@@ -42,7 +42,26 @@ class SiteController extends Controller
                             ->withInputs(); // withIput() = retorna com os campos preenchidos
         }else{
             
-           return 'ok';
+            $data = $request->all();
+            
+            //dd($data);
+            $user = new User;
+            $user->name = $data['name'];
+            $user->email = $data['email'];
+            $user->password = bcrypt($data['password']);
+            $user->tipo = $data['tipo'] == !null ? 'PJ'  : 'PF';
+            $user->telefone = $data['telefone'];
+            $user->cadastro = $request->segment(2);
+            $user->cpf  = $data['cpf'];
+            $user->cnpj = $data['cnpj'];
+            $user->razao_social = $data['razao_social'];
+            $user->save();
+
+            if($user){
+                return redirect()->back()->with('success','Seus dados foram eviados com sucesso!');
+            }else{
+                return redirect()->back()->with('error','Não foi possivel completar seu cadastro!');
+            }
             
 
         }        
