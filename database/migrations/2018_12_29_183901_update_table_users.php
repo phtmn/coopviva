@@ -15,8 +15,10 @@ class UpdateTableUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
              $table->string('tipo')->nullable();
-             $table->string('telefone')->nullable();
-             $table->string('documento')->nullable();
+             $table->string('tipo')->nullable();
+             $table->string('cadastro',20)->nullable();
+             $table->string('cpf')->nullable();
+             $table->string('cnpj')->nullable();
              $table->string('razao_social')->nullable();
              $table->string('foto')->nullable();
         });
