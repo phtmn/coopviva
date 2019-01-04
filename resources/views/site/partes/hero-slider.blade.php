@@ -3,6 +3,8 @@
   padding-left: 120px;
  
 }
+
+
 </style>
 
 <div class="swiper-container hero-slider">
@@ -20,8 +22,9 @@
                                 </header><!-- .entry-header -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
-                                    <a href="#" class="btn orange-border">Saiba Mais</a>
+                                  <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+									
+                                   <!-- <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -44,8 +47,8 @@
                                 <!-- .entry-content -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
-                                    <a href="#" class="btn orange-border">Saiba Mais</a>
+                                    <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+                                <!--    <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -67,9 +70,9 @@
 
                                 <!-- .entry-content -->
 
-                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Participe aqui</a>
-                                    <a href="#" class="btn orange-border">Saiba Mais</a>
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">                                   
+								   <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+                                 <!--   <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
