@@ -43,7 +43,7 @@
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         <div class="donate-btn">
-                            <a href="#">Invista Agora</a>
+                            <a href="{{ route('cadastro','investidor') }}">Invista Agora</a>
                         </div><!-- .donate-btn -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -133,9 +133,9 @@
                                     @auth
                                         <li><a href="{{ url('/home') }}">Home</a></li>
                                     @else
-                                <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('site.painel') }}">Login</a></li>
                                         @if (Route::has('register'))
-                                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                        <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
                                     @endauth               
                                 @endif

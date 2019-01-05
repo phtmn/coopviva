@@ -62,10 +62,13 @@ desenvolvimento de projetos inovadores e singulares.</p>
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
+        
     </div><!-- .home-page-events -->
+    <figure class="m-0">
+                      <center>  <img src="/vendor/site/images/sobre.png" alt=""> </center>
+                            </figure> 
 
-
-
+    
 
 
     
@@ -78,11 +81,11 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</p>
+                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="images/testimonial-1.jpg" alt="">
+                                <img src="/vendor/site/images/testimonial-1.jpg" alt="">
     
                                 <h4>Maria Williams, <span>Volunteer</span></h4>
                             </div>
@@ -92,11 +95,11 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>We love to help all the children that have problems in the world. After 15 years we have many goals achieved.</p>
+                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="images/testimonial-2.jpg" alt="">
+                                <img src="/vendor/site/images/testimonial-2.jpg" alt="">
     
                                 <h4>Cristian James, <span>Volunteer</span></h4>
                             </div>
@@ -110,78 +113,12 @@ desenvolvimento de projetos inovadores e singulares.</p>
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <h2>Help us so we can help others</h2>
+                        <h2>Faça parda dessa REDE de CONEXÃO</h2>
     
-                        <a class="btn orange-border" href="#">Donate now</a>
+                        <a class="btn orange-border" href="{{ url('/cadastro')}}">Cadastre-se Aqui</a>
                     </div>
                 </div>
             </div>
         </div>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <div class="about-stats">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="circular-progress-bar">
-                            <div class="circle" id="loader_1">
-                                <strong class="d-flex justify-content-center"></strong>
-                            </div>
-    
-                            <h3 class="entry-title">Hard Work</h3>
-                        </div>
-                    </div>
-    
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="circular-progress-bar">
-                            <div class="circle" id="loader_2">
-                                <strong class="d-flex justify-content-center"></strong>
-                            </div>
-    
-                            <h3 class="entry-title">Pure Love</h3>
-                        </div>
-                    </div>
-    
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="circular-progress-bar">
-                            <div class="circle" id="loader_3">
-                                <strong class="d-flex justify-content-center"></strong>
-                            </div>
-    
-                            <h3 class="entry-title">Smart Ideas</h3>
-                        </div>
-                    </div>
-    
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="circular-progress-bar">
-                            <div class="circle" id="loader_4">
-                                <strong class="d-flex justify-content-center"></strong>
-                            </div>
-    
-                            <h3 class="entry-title">Good Decisions</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     
