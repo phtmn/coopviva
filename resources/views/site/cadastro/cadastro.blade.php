@@ -7,7 +7,7 @@
       <h1 class="jumbotron-heading">Alterar esse texto???</h1>
       <p class="lead text-muted">alterar esse texto ????????</p>
       <p>
-        <a href="{{ route('cadastro','investidor') }}" class="btn gradient-bg mr-2">Sou um Invenstidor</a>
+        <a href="{{ route('cadastro','investidor') }}" class="btn gradient-bg mr-2">Sou um Investidor</a>
         <a href="{{ route('cadastro','osc') }}" class="btn gradient-bg mr-2">Sou uma OSC</a>
       </p>
     </div>

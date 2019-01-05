@@ -14,8 +14,10 @@
                     <div class="">
                         <div class="col-12 col-sm-4 mt-5 mt-lg-0">
 						
-						<a class="d-block" href="{{ route('agenda_2030') }}" rel="home"><img class="d-block" src="/vendor/site/images/agenda1.png" ></a>
-                                                        
+						<a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda1.png" ></a>
+                        
+                        <a  href="{{ url('cadastro') }}" ><img src="/vendor/site/images/testimonial-2.jpg" alt="">   </a>   
+                                              
                         </div><!-- .col -->
 
                         
