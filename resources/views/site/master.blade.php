@@ -60,7 +60,8 @@
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li>
+                            <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
+                                <li><a href="{{url('/') }}">Home</a></li>
                                 <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
                                 <li><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
                                 <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
