@@ -14,7 +14,7 @@
                     <div class="">
                         <div class="col-12 col-sm-4 mt-5 mt-lg-0">
 						
-						<a class="d-block" href="{{ route('agenda_2030') }}" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/agenda1.png')}}" ></a>
+						<a class="d-block" href="{{ route('agenda_2030') }}" rel="home"><img class="d-block" src="{{asset('vendor/site/images/agenda1.png')}}" ></a>
                                                         
                         </div><!-- .col -->
 
