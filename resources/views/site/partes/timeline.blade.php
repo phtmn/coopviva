@@ -16,7 +16,7 @@
 						
 						<a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda1.png" ></a>
                         
-                        <a  href="{{ url('cadastro') }}" ><img src="/vendor/site/images/testimonial-2.jpg" alt="">   </a>   
+                        <a  href="{{ url('cadastro') }}" ><img src="/vendor/site/images/agenda1.png" alt="">   </a>   
                                               
                         </div><!-- .col -->
 
