@@ -22,11 +22,11 @@
                         </div><!-- .col -->
 
                         <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
+                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
                         </div><!-- .site-branding -->
 
                         <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/agenda1.png')}}"></a>
+                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('vendor/site/images/agenda1.png')}}"></a>
                         </div><!-- .site-branding -->
 
                         
