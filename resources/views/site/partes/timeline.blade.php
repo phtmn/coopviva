@@ -12,24 +12,9 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="">
-                    <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda1.png" ></a>
-                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
-						
-						<a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda2030.png" ></a>
-                        
-                        <a  href="{{ url('cadastro') }}" ><img src="/vendor/site/images/agenda1.png" alt="">   </a>   
-                                              
-                        </div><!-- .col -->
-
                         <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
+                        <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda2030.png" ></a>
                         </div><!-- .site-branding -->
-
-                        <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" rel="home"><img class="d-block" src="{{asset('vendor/site/images/agenda1.png')}}"></a>
-                        </div><!-- .site-branding -->
-
-                        
 
                         
                     </div><!-- .milestones -->
