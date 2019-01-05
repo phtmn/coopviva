@@ -6,7 +6,7 @@ Route::view('/sobre', 'site.paginas.sobre')->name('sobre_nos');
 Route::view('/agenda2030', 'site.paginas.agenda2030')->name('agenda_2030');
 
 //RotasReferentes as OSC
-Route::get('/oscs','Site\OrganizacoesController@index')->name('oscs');
+Route::view('/oscs','site.osc.index')->name('oscs');
 Route::get('/oscs/detalhe','Site\OrganizacoesController@detalhe')->name('oscs.detalhe');
 
 //Rotas para manutenção de cadastros-logins
