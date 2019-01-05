@@ -6,8 +6,8 @@
       <h1 class="jumbotron-heading">Algumas das  Organizações</h1>
       <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod vel inventore necessitatibus aliquid. Aperiam, dolores atque voluptatibus eligendi ipsum recusandae adipisci consequuntur illo, sunt nemo saepe quia molestiae error quod.</p>
       <p>
-        <a href="#" class="btn gradient-bg mr-2">Cadastre a sua</a>
-        <a href="#" class="btn gradient-bg mr-2">Seja um incentivador</a>
+        <a href="{{route('cadastro','osc')}}" class="btn gradient-bg mr-2">Cadastre a sua</a>
+        <a href="{{route('cadastro','investidor')}}" class="btn gradient-bg mr-2">Seja um incentivador</a>
       </p>
     </div>
 </section>

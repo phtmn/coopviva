@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,
+       
 
         /*
          * Application Service Providers...

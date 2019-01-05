@@ -23,43 +23,43 @@
     </header>
     <div class="row">
         <div class="col-md-6">
-            <form class="form form-investidor" action="{{route('cadastro.create',osc)}}" method="POST">
+            <form class="form form-investidor" action="{{route('cadastro.create','osc')}}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="exampleInputEmail1">Responsável pela Organização</label>
-            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome para podermos contactar">
+            <label for="name">Responsável pela Organização</label>
+            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome para podermos contactar">
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
         </div>
         
         <div class="form-group">
-            <label for="exampleInputPassword1"><strong>CNPJ</strong></label>
-            <input type="cnpj" name="cnpj" class="form-control" id="exampleInputPassword1"  placeholder="Apenas números">
+            <label for="cnpj"><strong>CNPJ</strong></label>
+            <input type="cnpj" name="cnpj" class="form-control" id="cnpj"  placeholder="Apenas números">
         </div>        
                
         <div class="form-group">
-            <label for="exampleInputEmail1"><strong>Razão Social</strong></label>
-            <input type="text" name="razao_social" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="razao_social"><strong>Razão Social</strong></label>
+            <input type="text" name="razao_social" class="form-control" id="razao_social" aria-describedby="emailHelp">
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Telefone Contato:</label>
-            <input type="text" name="telefone" class="form-control" id="exampleInputPassword1" placeholder="Apenas números">
+            <label for="telefone">Telefone Contato:</label>
+            <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Apenas números">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Digite seu melhor e-mail">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu melhor e-mail">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
+            <label for="password">Senha</label>
             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Repita a Senha</label>
-            <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1" placeholder="">
+            <label for="password_confirmation">Repita a Senha</label>
+            <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="">
         </div>
 
     

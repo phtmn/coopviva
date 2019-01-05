@@ -10,7 +10,7 @@
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                            <a href="{{url('oscs/detalhe')}}" class="btn gradient-bg mr-2">Incentivar</a>                 
+                            <a href="#" class="btn gradient-bg mr-2">Incentivar</a>                 
                             </div>
                             <small class="text-muted">Desde: 29/12/2018</small>
                         </div>

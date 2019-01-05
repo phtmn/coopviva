@@ -61,13 +61,8 @@
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                 <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li>
-                                <li><a href="#">Sobre Nós</a></li>
                                 <li><a href="{{ url('/oscs') }}">OSC's</a></li>
-                                <li><a href="#">Agenda 2030</a></li>
-								 <!--<li class="current-menu-item"><a href="index.html">Home</a></li> -->
-							   <li><a href="/">Home</a></li>
-                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>
-                                <li><a href="#">OSC's</a></li>
+                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>                                
                                 <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li><a href="#">Blog</a></li>
                                 @if (Route::has('login'))               
@@ -201,15 +196,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
             </div><!-- .container -->
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
-
-    <script type='text/javascript' src='/vendor/site/js/jquery.js'></script>
+    
+    <!-- <script type='text/javascript' src='/vendor/site/js/jquery.js'></script> -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.collapsible.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/swiper.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.countdown.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/circle-progress.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
-    <script type='text/javascript' src='/vendor/site/js/custom.js'></script>
+    <script type='text/javascript' src='/vendor/site/js/custom.js'></script>    
+    <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("#telefone").mask('(00)00000-0000');
+        $("#cpf").mask('000.000.000-00', {reverse: true});
+        $("#cnpj").mask('00.000.000/0000-00', {reverse: true});
+      });
+    </script>
     @yield('js')
 
 </body>
