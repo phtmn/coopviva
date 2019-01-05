@@ -15,7 +15,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="/vendor/site/images/cause-1.jpg" alt="">
+                                        <img src="/vendor/site/images/agenda1.png" alt="">
 
                                         <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
                                             <a href="#" class="btn gradient-bg mr-2">Donate Now</a>

@@ -12,6 +12,7 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="">
+                    <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda1.png" ></a>
                         <div class="col-12 col-sm-4 mt-5 mt-lg-0">
 						
 						<a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda1.png" ></a>
