@@ -23,7 +23,7 @@
     </header>
     <div class="row">
         <div class="col-md-6">
-            <form class="form form-investidor" action="{{route('cadastro.create','investidor')}}" method="POST">
+            <form class="form form-investidor" action="{{route('register')}}" method="POST">
         @csrf
         <div class="form-group">
             <label for="name">Como se chama?</label>
@@ -77,15 +77,14 @@
             <label for="password_confirmation">Repita a Senha</label>
             <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="">
         </div>
-
-    
+        <input type="hidden" name="cadastro" value="{{Request::segment(2)}}">    
         <button type="submit" class="btn btn-success btn-block btn-outline-success">Cadastrar</button>
     </form>
 
     </div>
     <div class="col-md-4">
         <h3>Já sou cadastrado</h3>
-        <form action="{{route('login') }}" class="form form-investidor" method="POST">
+        <form action=" {{route('login') }}" class="form form-investidor" method="POST">
             @csrf
             <div class="card success">
                 <div class="card-header">

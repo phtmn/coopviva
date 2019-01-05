@@ -89,6 +89,11 @@
             </div><!-- .container -->
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
+    @if(Session::has('mensagem'))
+            <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
+                     {{ Session::get('mensagem')['msg'] }}
+            </div>
+        @endif
     @yield('content')
 
 

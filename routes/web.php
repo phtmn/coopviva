@@ -1,24 +1,21 @@
 <?php
-
-
-Route::get('/', function () {
-    return view('site.index');
-});
-
 Auth::routes(['verify'=>true]);
+//Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW 
+Route::view('/','site.index');
+Route::view('/sobre', 'site.paginas.sobre')->name('sobre_nos');
+Route::view('/agenda2030', 'site.paginas.agenda2030')->name('agenda_2030');
 
+//RotasReferentes as OSC
 Route::get('/oscs','Site\OrganizacoesController@index')->name('oscs');
 Route::get('/oscs/detalhe','Site\OrganizacoesController@detalhe')->name('oscs.detalhe');
 
-
+//Rotas para manutenção de cadastros-logins
 Route::view('/cadastro','site.cadastro.cadastro')->name('site.cadastro');
 Route::get('/cadastro/{type}','Site\SiteController@cadastro')->name('cadastro');
 Route::post('/cadastro/{type}','Site\SiteController@create')->name('cadastro.create');
 
-
+//Rotas para os Paineis de Investidor e Osc
 Route::get('/painel','Site\PainelController@painel')
         ->name('site.painel')->middleware('auth');
         
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/sobre', 'SobreNosController@index')->name('sobre_nos');
-Route::get('/agenda2030', 'Agenda2030Controller@index')->name('agenda_2030');
+

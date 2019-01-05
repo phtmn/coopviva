@@ -7,7 +7,7 @@
         <div class="card-header">Painel do OSC</div>
 
         <div class="card-body">
-            Conteudo do painel Investidor
+            Conteudo do painel OSC
         
         </div>
     

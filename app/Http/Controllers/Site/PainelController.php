@@ -8,6 +8,12 @@ use Auth;
 
 class PainelController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
+
     public function painel(){
 
         if(Auth::user()->cadastro == 'investidor')
