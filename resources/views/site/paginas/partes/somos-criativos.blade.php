@@ -64,13 +64,32 @@ desenvolvimento de projetos inovadores e singulares.</p>
         </div><!-- .container -->
         
     </div><!-- .home-page-events -->
-    <figure class="m-0">
+    
+    <div class="about-stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-1">
+                    
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-10">
+                    
+
+                        <figure class="m-0">
                       <center>  <img src="/vendor/site/images/sobre.png" alt=""> </center>
                             </figure> 
+                   
+                </div>
+               
 
+                <div class="col-12 col-sm-6 col-lg-1">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
     
-
-
+  
     
     
     
