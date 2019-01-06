@@ -993,6 +993,14 @@ ul.tabs-nav .tab-nav.active {
     z-index: 99;
 }
 
+.our-causes2 {
+    position: relative;
+    padding: 96px 0;
+    
+    background-size: cover;
+    z-index: 99;
+}
+
 .our-causes::after {
     content: '';
     position: absolute;
