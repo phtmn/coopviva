@@ -70,7 +70,7 @@
                                     @auth
                                         <li><a href="{{ route('site.painel') }}">Painel</a></li>
                                     @else
-                                        <!-- <li><a href="{{ route('login') }}">Login</a></li> -->
+                                        <li><a href="{{ url('/cadastro') }}">Login</a></li> 
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
                                         @endif
