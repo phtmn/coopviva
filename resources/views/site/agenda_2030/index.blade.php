@@ -1,10 +1,10 @@
 @extends('site.master')
 
 @section('content')
-    @include('site.partes.hero-slider')
-    @include('site.partes.icons-boxes')
-    @include('site.partes.bem-vindo')
-    @include('site.partes.projetos-recentes')
-    @include('site.partes.projetos-apoiados')
-    @include('site.partes.timeline')
+    @include('site.agenda_2030.hero-slider')
+    @include('site.agenda_2030.info_agenda')
+    @include('site.agenda_2030.plano_agenda')
+    @include('site.agenda_2030.plano2_agenda')
+    @include('site.agenda_2030.plano3')
+    
 @stop
