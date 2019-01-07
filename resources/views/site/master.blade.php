@@ -132,7 +132,7 @@
                                     @auth
                                         <li><a href="{{ url('/home') }}">Home</a></li>
                                     @else
-                                <li><a href="{{ route('login') }}">Login</a></li>
+                                        <li><a href="{{ route('login') }}">Login</a></li>
                                         @if (Route::has('register'))
                                         <li><a href="{{ route('register') }}">Cadastre-se</a></li>
                                         @endif
