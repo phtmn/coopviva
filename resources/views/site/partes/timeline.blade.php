@@ -13,7 +13,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="section-heading">
                         <div class="site-branding d-flex align-items-center">
-                        <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda2030.png" ></a>
+                      <!--  <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda2030.png" ></a> -->
                         </div><!-- .site-branding -->
 
                         

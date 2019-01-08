@@ -8,7 +8,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4>Agenda 2030</h4>
+                                    <h1>Agenda 2030</h1>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->

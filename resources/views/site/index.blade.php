@@ -4,7 +4,8 @@
     @include('site.partes.hero-slider')
     @include('site.partes.icons-boxes')
     @include('site.partes.bem-vindo')
+    @include('site.partes.timeline')
     @include('site.partes.projetos-recentes')
  
-    @include('site.partes.timeline')
+   
 @stop
