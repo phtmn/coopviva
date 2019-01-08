@@ -22,7 +22,7 @@
                                 </header><!-- .entry-header -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                  <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+                                  <a href="{{ url('cadastro') }}" class="btn gradient-bg mr-2">Participe aqui</a>
 									
                                    <!-- <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
@@ -47,7 +47,7 @@
                                 <!-- .entry-content -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+                                    <a href="{{ url('cadastro') }}" class="btn gradient-bg mr-2">Participe aqui</a>
                                 <!--    <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
@@ -71,7 +71,7 @@
                                 <!-- .entry-content -->
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">                                   
-								   <a href="{{ route('register') }}" class="btn gradient-bg mr-2">Participe aqui</a>
+								   <a href="{{ url('cadastro') }}" class="btn gradient-bg mr-2">Participe aqui</a>
                                  <!--   <a href="#" class="btn orange-border">Saiba Mais</a> -->
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->

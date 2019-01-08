@@ -62,4 +62,82 @@ desenvolvimento de projetos inovadores e singulares.</p>
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
+        
     </div><!-- .home-page-events -->
+    
+    <div class="about-stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-1">
+                    
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-10">
+                    
+
+                        <figure class="m-0">
+                      <center>  <img src="/vendor/site/images/sobre.png" alt=""> </center>
+                            </figure> 
+                   
+                </div>
+               
+
+                <div class="col-12 col-sm-6 col-lg-1">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+    
+    
+    
+    
+        <div class="about-testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-5">
+                        <div class="testimonial-cont">
+                            <div class="entry-content">
+                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                            </div>
+    
+                            <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                <img src="/vendor/site/images/testimonial-1.jpg" alt="">
+    
+                                <h4>Maria Williams, <span>Volunteer</span></h4>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
+                        <div class="testimonial-cont">
+                            <div class="entry-content">
+                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                            </div>
+    
+                            <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                <img src="/vendor/site/images/testimonial-2.jpg" alt="">
+    
+                                <h4>Cristian James, <span>Volunteer</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="help-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <h2>Faça parda dessa REDE de CONEXÃO</h2>
+    
+                        <a class="btn orange-border" href="{{ url('/cadastro')}}">Cadastre-se Aqui</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    

@@ -42,7 +42,7 @@ a:hover, a:active {
 # Header Bar
 --------------------------------*/
 .top-header-bar {
-    background: #8DDF6A;
+    background: #262222;
     color: #fff;
 }
 
@@ -86,7 +86,7 @@ a:hover, a:active {
     line-height: 1;
     color: #fff;
     text-decoration: navajowhite;
-    background: #262222;
+    background: #8DDF6A;
 }
 
 /*
@@ -989,6 +989,14 @@ ul.tabs-nav .tab-nav.active {
     position: relative;
     padding: 96px 0;
     background: url("images/cause-bg.jpg") no-repeat center;
+    background-size: cover;
+    z-index: 99;
+}
+
+.our-causes2 {
+    position: relative;
+    padding: 96px 0;
+    
     background-size: cover;
     z-index: 99;
 }

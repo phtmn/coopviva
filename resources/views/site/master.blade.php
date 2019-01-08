@@ -43,7 +43,7 @@
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         <div class="donate-btn">
-                            <a href="#">Invista Agora</a>
+                            <a href="{{ route('cadastro','investidor') }}">Invista Agora</a>
                         </div><!-- .donate-btn -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -60,16 +60,17 @@
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li>
-                                <li><a href="{{ url('/oscs') }}">OSC's</a></li>
-                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>                                
+                            <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
+                                <li><a href="{{url('/') }}">Home</a></li>
+                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
+                                <li><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
                                 <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li><a href="#">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ route('site.painel') }}">Painel</a></li>
                                     @else
-                                        <!-- <li><a href="{{ route('login') }}">Login</a></li> -->
+                                        <li><a href="{{ url('/cadastro') }}">Login</a></li> 
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
                                         @endif
@@ -132,9 +133,9 @@
                                     @auth
                                         <li><a href="{{ url('/home') }}">Home</a></li>
                                     @else
-                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('site.painel') }}">Login</a></li>
                                         @if (Route::has('register'))
-                                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                        <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
                                     @endauth               
                                 @endif

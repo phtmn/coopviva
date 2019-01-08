@@ -1,6 +1,7 @@
 @extends('site.master')
 
 
+
 @section('content')
 <div class="container" id="abc">
 @if ($errors->any())

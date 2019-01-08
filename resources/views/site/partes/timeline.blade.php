@@ -11,14 +11,10 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-6">
-                    <div class="milestones d-flex flex-wrap justify-content-between">
-                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
-						
-						<a class="d-block" href="{{ route('agenda_2030') }}" rel="home"><img class="d-block" src="{{asset('/vendor/site/images/agenda1.png')}}" alt="logo"></a>
-                                                        
-                        </div><!-- .col -->
-
-                        
+                    <div class="section-heading">
+                        <div class="site-branding d-flex align-items-center">
+                        <a  href="{{ route('agenda_2030') }}" ><img src="/vendor/site/images/agenda2030.png" ></a>
+                        </div><!-- .site-branding -->
 
                         
                     </div><!-- .milestones -->
