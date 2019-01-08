@@ -6,6 +6,5 @@
     @include('site.partes.bem-vindo')
     @include('site.partes.timeline')
     @include('site.partes.projetos-recentes')
- 
-   
+
 @stop

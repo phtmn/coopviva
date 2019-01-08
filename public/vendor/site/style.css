@@ -551,7 +551,7 @@ ul.tabs-nav .tab-nav.active {
     padding: 34px;
 }
 
-.tab-content {
+.tab-pane {
     display: none;
 }
 

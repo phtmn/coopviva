@@ -2,77 +2,65 @@
 
 @section('content')
 
-        <div class="swiper-container ">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide hero-content-wrap">
-                        <img src="/vendor/site/images/about-bg.jpg" alt="">
-
-                        <div class="hero-content-overlay position-absolute w-100 h-100">
-                            <div class="container h-100">
-                                <div class="row h-100">
-                                    <div class="col-12 col-lg-12 d-flex flex-column justify-content-center ">
-                                        <header  class="entry-header">
-                                        <div align="right"> <h4 >Bem Vindo </h4> 
-                                            <h5> {{ Auth::user()->name }}</h5>
-                                            <h6>Sair</h6>
-                                            </div>    
-                                        </header><!-- .entry-header -->
-                                    </div><!-- .col -->
-                                
-                                </div><!-- .row -->
-                            </div><!-- .container -->
-                        </div><!-- .hero-content-overlay -->
-                    </div><!-- .hero-content-wrap -->
-            </div><!-- .hero-slider -->
-
-
-
-
-            </br>  
-
-
-                <div class="container">
-                        <div class="">
-                            <div class="">
+    <div class="swiper-container ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="/vendor/site/images/about-bg.jpg" alt="">
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-12 d-flex flex-column justify-end ">
+                                <header  class="entry-header">
+                                    <div align="right"> <h4 >Bem Vindo </h4> 
+                                    <h5> {{ Auth::user()->name }}</h5>
+                                    <a class="text-white" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Sair</a>
+                                    </div> 
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>   
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
                         
-                                <ul class="nav nav-tabs">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#home">Painel do Investidor</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#menu2">Perfil</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#menu3">Investimentos</a>
-                                    </li>
-                                </ul>                    
-                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+    </div><!-- .hero-slider -->
 
-                            @include('site.investidor.painel-do-investidor')
-                            <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-   
-    <!-- colocar aqui o include do painel-do-investidor -->
-     
+    <div class="container" style="margin-top:20px; padding:20px">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Investimentos</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+            </li> -->
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.investidor.tabHome')</div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('site.investidor.tabPerfil')</div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">@include('site.investidor.tabInvestimentos')</div>
+            <!-- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">..ccccc.</div> -->
+        </div> 
+    </div>
+
+
+
+         
+
+
   
-    </div>
-    <div id="home" class="tab-pane fade">
-    @include('site.investidor.perfil')
-    
-    </div>
-    <div id="menu2" class="tab-pane fade">
-    @include('site.investidor.investimentos')
-    
-    </div>
- 
-  </div>
-              
-        </div>
-     
 
+   
 
-        </div>
-
-        </br>
+        
 @endsection

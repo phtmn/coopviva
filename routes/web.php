@@ -1,5 +1,5 @@
 <?php
-Auth::routes(['verify'=>true]);
+Auth::routes(['verify'=>false]);
 //Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW 
 Route::view('/','site.index');
 Route::view('/sobre', 'site.paginas.sobre')->name('sobre_nos');
