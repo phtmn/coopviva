@@ -9,28 +9,26 @@
 
                         <div class="event-wrap d-flex flex-wrap justify-content-between">
                             <figure class="m-0">
-                                <img src="/vendor/site/images/event-1.jpg" alt="">
+                                <img src="/vendor/site/images/blog2.png" alt="">
                             </figure>
 
                             <div class="event-content-wrap">
                                 <header class="entry-header d-flex flex-wrap align-items-center">
-                                    <h3 class="entry-title w-100 m-0"><a href="#">Fundo para Crianças</a></h3>
+                                    <h4 class="entry-title w-100 m-0"><a href="#">ODS 17 - PARCERIAS E MEIOS DE IMPLEMENTAÇÃO</a></h4>
 
-                                    <div class="posted-date">
-                                        <a href="#">Aug 25, 2018 </a>
+                                    <div class="entry-content">
+                                        <a href="#">30 DE NOVEMBRO DE 2018 </a>
                                     </div><!-- .posted-date -->
 
-                                    <div class="cats-links">
-                                        <a href="#">Cidade</a>
-                                    </div><!-- .cats-links -->
+                                   
                                 </header><!-- .entry-header -->
 
                                 <div class="entry-content">
-                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                    <p class="m-0"> Incentivar e promover parceria públicas, públicas privadas e com a sociedade civil</p>
                                 </div><!-- .entry-content -->
 
                                 <div class="entry-footer">
-                                    <a href="#">Saiba Mais</a>
+                                    <a href="https://www.rededeconexao.art.br/blog/post/23">Saiba Mais</a>
                                 </div><!-- .entry-footer -->
                             </div><!-- .event-content-wrap -->
                         </div><!-- .event-wrap -->

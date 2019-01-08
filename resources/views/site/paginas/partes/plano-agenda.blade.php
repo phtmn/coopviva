@@ -41,7 +41,7 @@ Conheça a nossa agenda, participe aqui de nossa rede.</p>
 
                         <div class="cause-content-wrap">
                             <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Acabar com a pobreza em todas as suas formas, em todos os lugares.</h3>
+                                <h4 class="entry-title w-100 m-0">Acabar com a pobreza em todas as suas formas, em todos os lugares.</h4>
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
@@ -59,7 +59,7 @@ Conheça a nossa agenda, participe aqui de nossa rede.</p>
 
                         <div class="cause-content-wrap">
                             <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todas e todos.</h3>
+                                <h4 class="entry-title w-100 m-0">Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todas e todos.</h4>
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">

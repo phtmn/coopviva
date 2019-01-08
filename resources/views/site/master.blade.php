@@ -43,7 +43,7 @@
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         <div class="donate-btn">
-                            <a href="{{ route('cadastro','investidor') }}">Invista Agora</a>
+                            <a href="{{ url('/cadastro') }}">Login</a>
                         </div><!-- .donate-btn -->
                     </div><!-- .col -->
                 </div><!-- .row -->
@@ -70,7 +70,7 @@
                                     @auth
                                         <li><a href="{{ route('site.painel') }}">Painel</a></li>
                                     @else
-                                        <li><a href="{{ url('/cadastro') }}">Login</a></li> 
+                                    <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
                                         @endif
@@ -126,14 +126,14 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ route('sobre_nos') }}">Sobre Nós </a></li>
-                            <li><a href="#">OSC's</a></li>
+                            <li><a href="{{ url('/oscs') }}">OSC's</a></li>
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a href="#">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ url('/home') }}">Home</a></li>
                                     @else
-                                <li><a href="{{ route('site.painel') }}">Login</a></li>
+                             <!--   <li><a href="{{ route('site.painel') }}">Login</a></li> -->
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
@@ -179,11 +179,7 @@
                         </div><!-- .foot-contact -->
 
                         <div class="subscribe-form">
-                            <form class="d-flex flex-wrap align-items-center">
-							
-                                <input type="email" placeholder="Cadastre seu e-mail">
-                                <input type="submit" value="Enviar">
-                            </form><!-- .flex -->
+                            
                         </div><!-- .search-widget -->
                     </div><!-- .col -->
                 </div><!-- .row -->
