@@ -52,64 +52,34 @@
             <div class="row">
                 
 
-                <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-6">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                        
+                    <form action=" {{route('login') }}" class="form form-investidor" method="POST">
+                             @csrf
                             <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Não tenho cadastro</h3>  
+                                <h3 class="entry-title w-100 m-0">Já tenho cadastro!</h3> 
                                 <div class="posted-date">
-                                    <a href="#">Cadastro no Sistema </a>
+                                    <a href="#">Acesso ao Sistema </a>
                                 </div><!-- .posted-date -->
-                                                  
+                                                   
                             </header><!-- .entry-header -->
 
                   
-                            <div class="card-body">  
-
-        <form class="form form-investidor" action="{{route('perfil.store')}}" method="POST">
-              @csrf  
-              <div class="form-group">
-                  <label for="name">Como se chama?</label>
-                  <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
-                  
-              </div>
-
-              <div class="form-group">
-                  <label for="name">Selecione o seu Estado?</label>
-                  <select name="uf" id="" class="form-control">
-                      <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
-                      <option value="PB">PB - Paraíba</option>
-                      <option value="PE">PE - Pernanbuco</option>
-                  </select>
-                  
-              </div>
-
-              <!-- TODO Criar o select para cidades baseado no estado selecionado -->  
-                  <!-- Criar aqui o select -->
-              <!-- Fim TODO -->
-
-              <div class="form-group">
-                  <label for="email">E-mail</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-              </div>
-
-              <div class="form-group">
-                  <label for="password">Senha</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Digite sua senha">
-              </div>
-
-              <div class="form-group">
-                  <label for="password_confirmation">Repita a Senha</label>
-                  <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Repita sua senha">
-              </div>
-        
-              <div class="form-group">
-                  <button type="submit" class="btn gradient-bg">Cadastrar</button>
-              </div>
-              </form>
-                           
-    </div>
-              
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="label">E-mail</div>
+                                    <input type="email" name="email" class="form-control" placeholder="Digite seu e-mail">
+                                 </div>
+                                <div class="form-group">
+                                    <div class="label">Senha</div>
+                                    <input type="password" name="password" class="form-control" placeholder="Digite sua senha">
+                                </div>
+                                <div class="form-group">
+                                        <center>    <button type="submit" class="btn gradient-bg">Entrar</button>
+                                        <a href="">Esqueci a senha</a> </center>
+                                </div>                    
+                            </div>
+                    </form>
                        
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->

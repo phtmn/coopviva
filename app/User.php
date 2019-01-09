@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','tipo','telefone','cadastro','foto','razao_social','cpf','cnpj'
+        'name', 'email', 'password','uf','cidade'
     ];
 
     /**
@@ -28,11 +28,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'password', 'remember_token',
     ];
 
-    public function cadastraPF($request){
-        dd($request->email);
-    }
+    public function perfil(){
+        return $this->hasOne(\App\Models\Perfil::class);
 
-    public function cadastraPJ($request){
-        dd($request->email);
-    }   
+    }
+    
 }

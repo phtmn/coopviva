@@ -5,23 +5,20 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
+use App\Models\Perfil;
 
 class PainelController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware(['auth', 'verified']);
+        $this->middleware(['auth', 'existe.perfil']);
     }
 
 
     public function painel(){
 
-        if(Auth::user()->cadastro == 'investidor')
-        {
-            return view('site.investidor.painel');
-
-        }else{
-            return view('site.osc.painel');
-        }
+       $perfil = Perfil::where('user_id',Auth::user()->id)->first();
+       
+       return view('site.painel.painel',compact('perfil'));
     }
 }

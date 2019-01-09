@@ -63,21 +63,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-                //dd($data);
-            $cpf  = array_key_exists('cpf', $data) ? $data['cpf'] : null;
-            $cnpj = array_key_exists('cnpj', $data) ? $data['cnpj'] : null;
-            // dd($cpf,$cnpj);
+           
         $user = User::create([
             'name'          => $data['name'],
             'email'         => $data['email'],           
             'password'      => Hash::make($data['password']),
-            'tipo'          => array_key_exists('tipo', $data) ? 'PJ' : 'PF',
-            'cadastro'      => $data['cadastro'],
-            'cpf'           => array_key_exists('cpf', $data) ? $data['cpf'] : null,
-            'cnpj'          => array_key_exists('cnpj', $data) ? $data['cnpj'] : null,
-            'razao_social'  => array_key_exists('razao_social', $data) ? $data['razao_social'] : null,
-            'telefone'      => $data['telefone'],
-        ]);
+            'uf'            => $data['uf'],
+            //'cidade'        => $data['cidade'],
+        ]);            
 
         \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
         return $user;

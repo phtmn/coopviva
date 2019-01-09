@@ -13,7 +13,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4> Investidor</h4>
+                                    <h4> Meu perfil</h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
@@ -56,9 +56,9 @@
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
                         
                             <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Não tenho cadastro</h3>  
+                                <h3 class="entry-title w-100 m-0">Preencha dados do seu Perfil</h3>  
                                 <div class="posted-date">
-                                    <a href="#">Cadastro no Sistema </a>
+                                    <a href="#">Meu perfil de Usuário </a>
                                 </div><!-- .posted-date -->
                                                   
                             </header><!-- .entry-header -->
@@ -69,39 +69,26 @@
         <form class="form form-investidor" action="{{route('perfil.store')}}" method="POST">
               @csrf  
               <div class="form-group">
-                  <label for="name">Como se chama?</label>
-                  <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
+                  <label for="name">Seu nome Completo</label>
+                  <input type="text" name="nome_completo" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
                   
               </div>
 
               <div class="form-group">
-                  <label for="name">Selecione o seu Estado?</label>
-                  <select name="uf" id="" class="form-control">
-                      <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
-                      <option value="PB">PB - Paraíba</option>
-                      <option value="PE">PE - Pernanbuco</option>
+                  <label for="name">Selecione como deseja utilizar o sistema</label>
+                  <select name="tipo_perfil" id="" class="form-control">
+                      <option value="I">Sou investidor</option> //TODO -- incluir as siglas dos estados
+                      <option value="O">Sou uma Organização Social Civil</option>
+                      <option value="D">Desejo as duas opções</option>
                   </select>
                   
               </div>
+                <p>Criar os campos aqui abaixo \/\/\/\/\ </p>
+              <!-- TODO Criar o campos de acordo com as informações da base-->  
+                  
 
-              <!-- TODO Criar o select para cidades baseado no estado selecionado -->  
-                  <!-- Criar aqui o select -->
+              
               <!-- Fim TODO -->
-
-              <div class="form-group">
-                  <label for="email">E-mail</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-              </div>
-
-              <div class="form-group">
-                  <label for="password">Senha</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Digite sua senha">
-              </div>
-
-              <div class="form-group">
-                  <label for="password_confirmation">Repita a Senha</label>
-                  <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Repita sua senha">
-              </div>
         
               <div class="form-group">
                   <button type="submit" class="btn gradient-bg">Cadastrar</button>
@@ -115,10 +102,19 @@
                 </div><!-- .col -->
              
                 <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                        <p>Aqui terá textos com informações</p>
-                       
-                    </div><!-- .cause-wrap -->
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-success">
+                        <h3 class="text-white">Perfil Ivestidor</h3>
+                        <p class="text-white">O cadastro como investidor é possivel realizar investimentos em projetos que estão na nossa base....</p>
+                    </div>
+                    <!-- .cause-wrap -->
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-info">
+                        <h3 class="text-white">Perfil OSC(Organização Socical Civil)</h3>
+                        <p class="text-white">O cadastro como OSC você poderá cadastrar sua instituição e poder receber investimentos...</p>
+                    </div>
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-danger">
+                        <h3 class="text-white">Perfil Duplo (investidor e osc)</h3>
+                        <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic inventore, rem, accusantium optio perferendis odit voluptatem aperiam ratione tenetur aut sapiente amet consequuntur, quibusdam nostrum accusamus unde consequatur corrupti ducimus.</p>
+                    </div>
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->

@@ -43,7 +43,9 @@
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         <div class="donate-btn">
-                            <a href="{{ url('/cadastro') }}">Login</a>
+                            @guest
+                                <a href="{{ url('/entrar')}}">Login</a>
+                            @endguest
                         </div><!-- .donate-btn -->
                     </div><!-- .col -->
                 </div><!-- .row -->

@@ -12,7 +12,8 @@
                             <div class="col-12 col-lg-12 d-flex flex-column justify-end ">
                                 <header  class="entry-header">
                                     <div align="right"> <h4 >Bem Vindo </h4> 
-                                    <h5> {{ Auth::user()->name }}</h5>
+                                    <h5> {{ Auth::user()->name }} - {{ $perfil->tipo_perfil }}</h5>
+                                   
                                     <a class="text-white" href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Sair</a>
                                     </div> 
@@ -46,9 +47,9 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.investidor.tabHome')</div>
-            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('site.investidor.tabPerfil')</div>
-            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">@include('site.investidor.tabInvestimentos')</div>
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.painel.tabHome')</div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('site.painel.tabPerfil')</div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">@include('site.painel.tabInvestimentos')</div>
             <!-- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">..ccccc.</div> -->
         </div> 
     </div>
