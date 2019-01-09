@@ -11,17 +11,17 @@
                                         <img src="/vendor/site/images/1agend.png" alt="">
 
                                         <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
+                                            <a target=_blank href="http://www.agenda2030.com.br/ods/1/#" class="btn gradient-bg mr-2">Saiba mais</a>
                                         </div><!-- .figure-overlay -->
                                     </figure>
 
                                     <div class="cause-content-wrap">
                                         <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">Acabar com a pobreza em todas as suas formas, em todos os lugares.</a></h3>
+                                            <h5 align="justify" class="entry-title w-100 m-0">Acabar com a pobreza em todas as suas formas, em todos os lugares.</h5>
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0">1. A garantir uma mobilização significativa de recursos a partir de uma variedade de fontes, inclusive por meio do reforço da cooperação para o desenvolvimento, para proporcionar meios adequados e previsíveis para que os países em desenvolvimento, em particular os países menos desenvolvidos, implementem programas e políticas para acabar com a pobreza em todas as suas dimensões.</p>
+                                            <p  align="justify" class="m-0">1. A garantir uma mobilização significativa de recursos a partir de uma variedade de fontes, inclusive por meio do reforço da cooperação para o desenvolvimento, para proporcionar meios adequados e previsíveis para que os países em desenvolvimento, em particular os países menos desenvolvidos, implementem programas e políticas para acabar com a pobreza em todas as suas dimensões.</p>
                                         </div><!-- .entry-content -->
 
                                     </div><!-- .cause-content-wrap -->

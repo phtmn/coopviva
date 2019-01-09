@@ -32,17 +32,27 @@
                 <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
                     <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
                         <div class="header-bar-email">
-                            E-mail: <a href="#">contato@rededeconexao.art.br</a>
+                                <i class="fa fa-envelope"></i><span> <a href="mailto:contato@rededeconexao.art.br"> contato@rededeconexao.art.br</a></span></li>
+                                       
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
-                            <p>Tel.: <span> +55 83 3034-1663 | WhatsApp +55 83 3034-1663 </span></p>
+                        
+                               <i class="fa fa-phone"></i><span> +55 83 3034-1663 --- </span>
+							<i class="fa fa-whatsapp"></i><span> +55 83 3034-1663</span>								                           
+                        <!--	<i class="fa fa-whatsapp"></i><span> <a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=5583981300880=%22Ol%C3%A1,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEX%C3%83O">+55 83 3034-1663</a></span>	-->							                              
                         </div>
+
+                        
 						
                     </div><!-- .col -->
-
+ 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                        
+                       
                         <div class="donate-btn">
+                       
+                       
                             <a href="{{ url('/cadastro') }}">Login</a>
                         </div><!-- .donate-btn -->
                     </div><!-- .col -->
@@ -103,11 +113,11 @@
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6  col-lg-6">
                         <div class="foot-about">
-                            <h2><a class="foot-logo" href="#"><img src="/vendor/site/images/logo-branco.png" alt=""></a></h2>
+                          <center>  <h2><a class="foot-logo" href="#"><img src="/vendor/site/images/logo-branco.png" alt=""></a></h2> </center>
 
-                            <p>A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade, empreendedorismo e na transformação social.</p>
+                            <p align="justify">A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade, empreendedorismo e na transformação social.</p>
 
                          <!--   <ul class="d-flex flex-wrap align-items-center">
                                 <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
@@ -120,7 +130,7 @@
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
-                    <div class="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
+                    <div class="col-12 col-md-4 col-lg-2 mt-5 mt-md-0">
                         <h2>Links</h2>
 
                         <ul>
@@ -128,7 +138,7 @@
                             <li><a href="{{ route('sobre_nos') }}">Sobre Nós </a></li>
                             <li><a href="{{ url('/oscs') }}">OSC's</a></li>
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ url('/home') }}">Home</a></li>
@@ -139,11 +149,11 @@
                                         @endif
                                     @endauth               
                                 @endif
-                                                        
+                            <li><a href="#">Termo de Uso</a></li>                            
                         </ul>
                     </div><!-- .col -->
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                  <!--  <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-latest-news">
                             <h2>Últimas Notícias</h2>
 
@@ -163,17 +173,19 @@
                                     <div class="posted-date">MArch 12, 2018</div>
                                 </li>
                             </ul>
-                        </div><!-- .foot-latest-news -->
-                    </div><!-- .col -->
+                        </div>
+                    </div>
+                   -->
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                    <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
                             <h2>Contato</h2>
 
                             <ul>
+                            <li>
+                                <i class="fa fa-envelope"></i><span><a href="mailto:contato@rededeconexao.art.br">contato@rededeconexao.art.br</a></span></li>
                                 <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
-								<li><i class="fa fa-whatsapp"></i><span>+55 83 3034-1663</span></li>								
-                                <li><i class="fa fa-envelope"></i><span>contato@rededeconexao.art.br</span></li>
+								<li><i class="fa fa-whatsapp"></i><span><a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=5583981300880=%22Ol%C3%A1,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEX%C3%83O">+55 83 3034-1663</a></span></li>								                                
                                 <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba – Brasil</span></li>
                             </ul>
                         </div><!-- .foot-contact -->

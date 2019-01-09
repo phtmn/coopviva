@@ -138,7 +138,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <h2>Faça parda dessa REDE de CONEXÃO</h2>
+                        <h2>Faça parte dessa REDE de CONEXÃO</h2>
     
                         <a class="btn orange-border" href="{{ url('/cadastro')}}">Cadastre-se Aqui</a>
                     </div>
