@@ -28,11 +28,14 @@ class PerfilController extends Controller
         $perfil->nome_completo = $request['nome_completo'];
         $perfil->tipo_perfil = $request['tipo_perfil'];
         $perfil->data_nascimento = $request['data_nascimento'];
+<<<<<<< HEAD
         $perfil->telefone = $request['telefone'];
         $perfil->cpf = $request['cpf'];
         $perfil->cnpj = $request['cnpj'];
         $perfil->razao_social = $request['razao_social'];
         $perfil->nome_fantasia = $request['nome_fantasia'];
+=======
+>>>>>>> 45afadec98ef8f7c2c18758a706e4778953868ed
         //TODO: inserir os campos relacionado a perfil
 
 
