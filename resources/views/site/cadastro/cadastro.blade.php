@@ -66,7 +66,7 @@
                   
                             <div class="card-body">  
 
-        <form class="form form-investidor" action="{{route('perfil.store')}}" method="POST">
+        <form class="form form-investidor" action="{{route('register')}}" method="POST">
               @csrf  
               <div class="form-group">
                   <label for="name">Como se chama?</label>
