@@ -27,6 +27,7 @@ class PerfilController extends Controller
         $perfil->user_id = Auth::user()->id;
         $perfil->nome_completo = $request['nome_completo'];
         $perfil->tipo_perfil = $request['tipo_perfil'];
+        $perfil->dadta_nascimento = $request['data_nascimento'];
         //TODO: inserir os campos relacionado a perfil
 
 

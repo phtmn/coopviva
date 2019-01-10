@@ -22,7 +22,31 @@
                         <input type="date" name="data_nascimento" class="form-control" value="{{$perfil->data_nascimento}}">    
                     </div>
 
+                    <div class="form-group">
+                        <label for="Nome">Telefone</label>
+                        <input type="text" name="telefone" class="form-control" value="{{$perfil->telefone_principal}}">    
+                    </div>
                     
+                    <div class="form-group">
+                        <label for="Nome">CPF</label>
+                        <input type="text" name="cpf" class="form-control" value="{{$perfil->cpf}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">CNPJ</label>
+                        <input type="text" name="cnpj" class="form-control" value="{{$perfil->cnpj}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Razão Social</label>
+                        <input type="text" name="razao_social" class="form-control" value="{{$perfil->razao_social}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Nome Fantasia</label>
+                        <input type="text" name="nome_fantasia" class="form-control" value="{{$perfil->nome_fantasia}}">    
+                    </div>
+
                     <div class="form-group">
                         
                         <input type="submit" value="Atualizar dados" class="btn btn-success">    
