@@ -106,14 +106,14 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <h3 align="justify">Um agente de transformação é aquele que experimenta sua própria transformação e assim se encontra em condições de inspirar e incentivar outros no mesmo sentido.
-O COOPVIVA é um instrumento potencializador para nossa transformação!</h3>
+                                <h5 >Um agente de transformação é aquele que experimenta sua própria transformação e assim se encontra em condições de inspirar e incentivar outros no mesmo sentido.
+O COOPVIVA é um instrumento potencializador para nossa transformação!</h5>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                 <img src="/vendor/site/images/alessandra.jpg" alt="">
     
-                                <h4>Alessandra Santos, <span>Fundadora Rede de Conexão</span></h4>
+                                <h4>Alessandra Santos, </br><span>Fundadora Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>
@@ -121,13 +121,13 @@ O COOPVIVA é um instrumento potencializador para nossa transformação!</h3>
                     <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <h3 align="justify">A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</h3>
+                                <h5 >A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</h5>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                 <img src="/vendor/site/images/bernardo.jpg" alt="">
     
-                                <h4>Bernardo Lopes, <span>Co-Fundador Rede de Conexão</span></h4>
+                                <h4>Bernardo Lopes, </br><span>Co-Fundador Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Coopviva</title>
+    <title>COOPVIVA</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
 	 <!-- Required meta tags -->
     <meta charset="utf-8">

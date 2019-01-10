@@ -72,7 +72,7 @@
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
                                     <h1>Vivencie </h1>
-                                    <div class="sub_top"> <h5> Experiências Singulares </h5> </div>
+                                    <div class="sub_top"> <h5> Experiências singulares com agilidade e transparência </h5> </div>
                                 </header><!-- .entry-header -->
 
                                 <!-- .entry-content -->
