@@ -24,7 +24,7 @@
 
                     <div class="form-group">
                         <label for="Nome">Telefone</label>
-                        <input type="text" name="telefone" class="form-control" value="{{$perfil->telefone_principal}}">    
+                        <input type="text" name="telefone_principal" class="form-control" value="{{$perfil->telefone_principal}}">    
                     </div>
                     
                     <div class="form-group">
