@@ -11,7 +11,7 @@
                            <!-- <figure class="m-0">
                                 <img src="/vendor/site/images/event-1.jpg" alt="">
                             </figure> -->
-<p class="mt-0">A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade,
+<p class="mt-0" align="justify">A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade,
 empreendedorismo e na transformação social. Atuamos com uma equipe multidisciplinar, há 16 anos e oportunizamos às pessoas,
 organizações das mais diversas esferas e a quem mais se interessar um encontro estratégico que possibilite a todos os envolvidos o
 desenvolvimento de projetos inovadores e singulares.</p>
@@ -71,7 +71,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     
 
                         <figure class="m-0">
-                      <center>  <img src="/vendor/site/images/sobre3.png" alt=""> </center>
+                       <img src="/vendor/site/images/sobre3.png" alt=""> 
                             </figure> 
                    
                 </div>
@@ -80,7 +80,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     
 
                         <figure class="m-0">
-                      <center>  <img src="/vendor/site/images/sobre4.png" alt=""> </center>
+                     <img src="/vendor/site/images/sobre4.png" alt="">
                             </figure> 
                    
                 </div>
@@ -88,7 +88,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
 
                 <div class="col-12 col-sm-4 col-lg-4">
                 <figure class="m-0">
-                      <center>  <img src="/vendor/site/images/sobre2.png" alt=""> </center>
+                     <img src="/vendor/site/images/sobre1.png" alt=""> 
                             </figure>     
                 </div>
             </div>
@@ -106,13 +106,14 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                                <p>UM AGENTE DE TRANSFORMAÇÃO É AQUELE QUE EXPERIMENTA SUA PRÓPRIA TRANSFORMAÇÃO E ASSIM SE ENCONTRA EM CONDIÇÕES DE INSPIRAR E INCENTIVAR OUTROS NO MESMO SENTIDO.
+O COOPVIVA É UM INSTRUMENTO POTENCIALIZADOR PARA NOSSA TRANSFORMAÇÃO!</p>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="/vendor/site/images/testimonial-1.jpg" alt="">
+                                <img src="/vendor/site/images/alessandra.jpg" alt="">
     
-                                <h4>Maria Williams, <span>Volunteer</span></h4>
+                                <h4>Alessandra Santos, <span>Fundadora Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>
@@ -120,13 +121,13 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                                <p>A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</p>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="/vendor/site/images/testimonial-2.jpg" alt="">
+                                <img src="/vendor/site/images/bernardo.jpg" alt="">
     
-                                <h4>Cristian James, <span>Volunteer</span></h4>
+                                <h4>Bernardo Lopes, <span>Co-Fundador Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>
