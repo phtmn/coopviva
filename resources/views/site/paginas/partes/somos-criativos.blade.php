@@ -106,7 +106,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>Um agente de transformação é aquele que experimenta sua própria transformação e assim se encontra em condições de inspirar e incentivar outros no mesmo sentido.
+                                <p align="justify">Um agente de transformação é aquele que experimenta sua própria transformação e assim se encontra em condições de inspirar e incentivar outros no mesmo sentido.
 O COOPVIVA é um instrumento potencializador para nossa transformação!</p>
                             </div>
     
@@ -121,7 +121,7 @@ O COOPVIVA é um instrumento potencializador para nossa transformação!</p>
                     <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</p>
+                                <p align="justify">A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</p>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
