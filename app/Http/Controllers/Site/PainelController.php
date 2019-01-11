@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 use App\Models\Perfil;
+use App\Models\Osc;
 
 class PainelController extends Controller
 {
@@ -16,9 +17,9 @@ class PainelController extends Controller
 
 
     public function painel(){
-
-       $perfil = Perfil::where('user_id',Auth::user()->id)->first();
-       
-       return view('site.painel.painel',compact('perfil'));
+       $user    = Auth::user()->id;
+       $perfil  = Perfil::find($user);
+       $osc     = Osc::find($user);
+       return view('site.painel.painel',compact('perfil','osc'));
     }
 }

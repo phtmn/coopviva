@@ -40,6 +40,14 @@
             <li class="nav-item">
                 <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Investimentos</a>
             </li>
+            @can('osc')
+            <li class="nav-item">
+                <a class="nav-link" id="projetos-tab" data-toggle="tab" href="#projetos" role="tab" aria-controls="projetos" aria-selected="false">Projetos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="osc-tab" data-toggle="tab" href="#osc" role="tab" aria-controls="osc" aria-selected="false">Dados da minha OSC</a>
+            </li>
+            @endcan
             <!-- <li class="nav-item">
                 <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
             </li> -->
@@ -49,7 +57,9 @@
         <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.painel.tabHome')</div>
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('site.painel.tabPerfil')</div>
+            <div class="tab-pane" id="projetos" role="tabpanel" aria-labelledby="projetos-tab">@include('site.painel.tabProjetos')</div>
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">@include('site.painel.tabInvestimentos')</div>
+            <div class="tab-pane" id="osc" role="tabpanel" aria-labelledby="osc-tab">@include('site.painel.tabOsc')</div>
             <!-- <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">..ccccc.</div> -->
         </div> 
     </div>

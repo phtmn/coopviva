@@ -64,11 +64,11 @@
                           <div class="col-xs-12">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                             <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
-                                <li><a href="{{url('/') }}" >Home</a></li>
-                                <li><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>  
-                                <li><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
-                                <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li class="{{ isset($active) == 'home' ? 'current-menu-item' : ''}}"><a href="{{url('/') }}" >Home</a></li>
+                                <li class="{{ isset($active) == 'sobre' ? 'current-menu-item' : ''}}"><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>  
+                                <li class="{{ isset($active) == 'oscs' ? 'current-menu-item' : ''}}"><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
+                                <li class="{{ isset($active) == 'agenda2030' ? 'current-menu-item' : ''}}"><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
+                                <li class="{{ isset($active) == 'blog' ? 'current-menu-item' : ''}}"><a href="#">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ route('site.painel') }}">Painel</a></li>
@@ -94,14 +94,14 @@
             </div><!-- .container -->
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
-    @if(Session::has('mensagem'))
+        @if(Session::has('mensagem'))
             <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
                      {{ Session::get('mensagem')['msg'] }}
             </div>
         @endif
     @yield('content')
 
-
+    
 
     <footer class="site-footer">
         <div class="footer-widgets">
