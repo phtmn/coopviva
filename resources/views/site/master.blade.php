@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110332879-2"></script>
+		<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-110332879-2');
+		</script>
     <title>COOPVIVA</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
 	 <!-- Required meta tags -->
