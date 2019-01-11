@@ -23,7 +23,7 @@
                                             </header><!-- .entry-header -->
                                 
                                             <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                                div class="sub_top">
+                                                <div class="sub_top">
                                                     <a href="{{ url('cadastro') }}" class="btn gradient-bg mr-2 ">Participe aqui</a> 
                                                 </div>									
                                                           <!-- <a href="#" class="btn orange-border">Saiba Mais</a> -->
