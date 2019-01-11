@@ -46,7 +46,7 @@
                                     </figure>
 
                                     <div class="cause-content-wrap">
-                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                        <header class="entry-header d-flex flex-wrap align-items-center ">
                                             <h3 class="entry-title w-100 m-0"><a href="#">Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todas e todos.</a></h3>
                                         </header><!-- .entry-header -->
 

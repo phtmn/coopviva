@@ -33,9 +33,7 @@ organizações das mais diversas esferas e a quem mais se interessar um encontro
 desenvolvimento de projetos inovadores e singulares.</p>
                                 </div> -->
 
-                                <div class="entry-footer">
-                                    <a href="#">Saiba Mais</a>
-                                </div><!-- .entry-footer -->
+                             
                             </div><!-- .event-content-wrap -->
                         </div><!-- .event-wrap -->
 
@@ -68,22 +66,30 @@ desenvolvimento de projetos inovadores e singulares.</p>
     <div class="about-stats">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-1">
-                    
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-10">
+               
+                <div class="col-12 col-sm-4 col-lg-4">
                     
 
                         <figure class="m-0">
-                      <center>  <img src="/vendor/site/images/sobre.png" alt=""> </center>
+                      <center>  <img src="/vendor/site/images/sobre3.png" alt=""> </center>
+                            </figure> 
+                   
+                </div>
+
+                <div class="col-12 col-sm-4 col-lg-4">
+                    
+
+                        <figure class="m-0">
+                      <center>  <img src="/vendor/site/images/sobre4.png" alt=""> </center>
                             </figure> 
                    
                 </div>
                
 
-                <div class="col-12 col-sm-6 col-lg-1">
-                   
+                <div class="col-12 col-sm-4 col-lg-4">
+                <figure class="m-0">
+                      <center>  <img src="/vendor/site/images/sobre2.png" alt=""> </center>
+                            </figure>     
                 </div>
             </div>
         </div>
@@ -132,7 +138,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <h2>Faça parda dessa REDE de CONEXÃO</h2>
+                        <h2>Faça parte dessa REDE de CONEXÃO</h2>
     
                         <a class="btn orange-border" href="{{ url('/cadastro')}}">Cadastre-se Aqui</a>
                     </div>

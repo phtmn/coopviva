@@ -36,7 +36,7 @@
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
-                            <p>Tel.: <span> +55 83 3034-1663 | WhatsApp +55 83 3034-1663 </span></p>
+                            <p>Tel.: <span> +55 83 3034-1663 | <a id="link" href="https://web.whatsapp.com/" target="_blank" class="text-white " style="text-decoration:none"> WhatsApp +55 83 3034-1663</a> </span></p>
                         </div>
 						
                     </div><!-- .col -->
@@ -61,10 +61,11 @@
                         </div><!-- .site-branding -->
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
+                          <div class="col-xs-12">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                             <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
-                                <li><a href="{{url('/') }}">Home</a></li>
-                                <li><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
+                                <li><a href="{{url('/') }}" >Home</a></li>
+                                <li><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>  
                                 <li><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
                                 <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -79,6 +80,7 @@
                                     @endauth               
                                 @endif
                             </ul>
+                          </div>
                         </nav><!-- .site-navigation -->
 
                         <div class="hamburger-menu d-lg-none">
@@ -127,8 +129,8 @@
 
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="{{ route('sobre_nos') }}">Sobre Nós </a></li>
-                            <li><a href="{{ url('/oscs') }}">OSC's</a></li>
+                            <li><a href="{{ route('sobre_nos') }}" >Sobre Nós </a></li>
+                            <li><a href="{{ url('/oscs') }}" >OSC's</a></li>
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a href="#">Blog</a></li>
 							@if (Route::has('login'))               
@@ -211,7 +213,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='/vendor/site/js/custom.js'></script>    
     <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
-
+    <script src="jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         $("#telefone").mask('(00)00000-0000');
