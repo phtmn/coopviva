@@ -29,4 +29,5 @@ Route::post('/meu-perfil','Site\PerfilController@store')->name('perfil.store');
 
 
         
-
+//Routa para atualizar cadastro
+Route::put('/meu-perfil', 'Site\PerfilController@update')->name('perfil.update');

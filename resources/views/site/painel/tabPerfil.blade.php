@@ -47,8 +47,8 @@
                         <input type="text" name="nome_fantasia" class="form-control" value="{{$perfil->nome_fantasia}}">    
                     </div>
 
-                    <div class="form-group">
-                        
+                    <div class="form-group" action="{{route('perfil.update')}}" method="POST">
+                        @csrf
                         <input type="submit" value="Atualizar dados" class="btn btn-success">    
                     </div>
                 </Form>

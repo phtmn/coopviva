@@ -41,4 +41,21 @@ class PerfilController extends Controller
         return redirect()->route('site.painel');
 
     }
+
+    public function update(Request $request){
+
+        try {
+            $perfil = $request->all();
+    
+            $user_id = tabPerfil::findOrFail($id);
+            $user_id->update($perfil);
+    
+            return redirect()->route('site.painel')->with('success','Os dados foram atualizados com sucesso.');
+    
+        } catch (Exception $ex) {
+    
+            return redirect('site.painel')->with('error', 'Ocorreu um erro ao tentar atualizar os dados!');
+    
+        }
+    }
 }
