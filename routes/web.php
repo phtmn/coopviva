@@ -22,4 +22,5 @@ Route::get('/painel','Site\PainelController@painel')->name('site.painel');
 Route::get('/meu-perfil','Site\PerfilController@create')->name('perfil.create');
 Route::post('/meu-perfil','Site\PerfilController@store')->name('perfil.store');
         
-
+//Routa para atualizar cadastro
+Route::put('/meu-perfil', 'Site\PerfilController@update')->name('perfil.update');
