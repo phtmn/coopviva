@@ -13,7 +13,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4> Investidor</h4>
+                                    <h4> Cadastro no Sistema</h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
@@ -53,13 +53,11 @@
                 
 
                 <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                    <div class="cause-wrap  flex-wrap justify-content-between">
                         
-                            <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Não tenho cadastro</h3>  
-                                <div class="posted-date">
-                                    <a href="#">Cadastro no Sistema </a>
-                                </div><!-- .posted-date -->
+                            <header class="entry-header  flex-wrap align-items-center">
+                                <h3 class="entry-title w-100 m-0">Não tenho cadastro!</h3>  
+                              
                                                   
                             </header><!-- .entry-header -->
 
@@ -104,7 +102,7 @@
               </div>
         
               <div class="form-group">
-                  <button type="submit" class="btn gradient-bg">Cadastrar</button>
+                <center>  <button type="submit" class="btn gradient-bg">Cadastrar</button> </center>
               </div>
               </form>
                            
