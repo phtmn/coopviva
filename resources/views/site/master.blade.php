@@ -70,21 +70,21 @@
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                            <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li>  -->
-							 
-						
-                                <li class=""><a href="{{url('/') }}">Home</a></li>
-                                <li class=""><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
+								
+								<li class=""><a href="{{url('/') }}">Home</a></li>  
+						        <li class=""><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
                                 <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
                                 <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
-                                @if (Route::has('login'))               
+                                
+								
+							   @if (Route::has('login'))               
                                     @auth
-                                        <li class=""><a href="{{ route('site.painel') }}">Painel</a></li>
+                                        <li class=" "><a href="{{ route('site.painel') }}">Painel</a></li>
                                     @else
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
-                                        <li class=""><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
+                                        <li class=" "><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
                                         @endif
                                     @endauth               
                                 @endif
