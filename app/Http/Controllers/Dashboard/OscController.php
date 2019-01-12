@@ -40,7 +40,7 @@ class OscController extends Controller
 
         if($osc){
             \Session::flash('mensagem',['msg'=>'Sua OSc foi cadastrada com sucesso','class'=>'alert-success']);
-            return redirect()->route('dashboard.osc.index');
+            return redirect()->route('osc.index');
         }else{
             return 'erro ocorrido';
         }
