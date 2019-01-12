@@ -15,7 +15,7 @@ class ProjetosController extends Controller
     }
 
     public function index(){
-        $data = Projeto::where('user_id',1)->get();
+        $data = Projeto::where('user_id',Auth::user()->id)->get();
         $tab = 'projetos';
         return view('dashboard.projetos.index',compact('data','tab'));
     }
