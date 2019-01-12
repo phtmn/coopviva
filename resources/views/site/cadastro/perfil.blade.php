@@ -77,9 +77,9 @@
               <div class="form-group">
                   <label for="name">Selecione como deseja utilizar o sistema</label>
                   <select name="tipo_perfil" id="" class="form-control">
-                      <option value="I">Sou investidor</option> //TODO -- incluir as siglas dos estados
-                      <option value="O">Sou uma Organização Social Civil</option>
-                      <option value="D">Desejo as duas opções</option>
+                      <option value="Investidor">Sou investidor</option> //TODO -- incluir as siglas dos estados
+                      <option value="Osc">Sou uma Organização Social Civil</option>
+                      <option value="Duplo">Desejo as duas opções</option>
                   </select>
                   
               </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Site;
+namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -8,14 +8,12 @@ use App\Models\Perfil;
 use Auth;
 
 class PerfilController extends Controller
-{
-    public function __construct(){
-        $this->middleware('auth');
-    }
+{   
 
     public function create(){
-
-        return view('site.cadastro.perfil');
+        $perfil = Perfil::where('user_id', Auth::user()->id)->first();          
+        $tab    = 'perfil';
+        return view('dashboard.perfil.create-edit',compact('tab','perfil'));
     }
 
     public function store(Request $request){
@@ -38,24 +36,19 @@ class PerfilController extends Controller
 
         //grava os dados no banco
         $perfil->save();
-        return redirect()->route('site.painel');
+        return redirect()->route('dashboard.index');
 
     }
 
-    public function update(Request $request){
+    public function update(Request $request,$id){
+           
+       $data = $request->all();
+       $perfil = Perfil::find($id)->update($data);
 
-        try {
-            $perfil = $request->all();
-    
-            $user_id = tabPerfil::findOrFail($id);
-            $user_id->update($perfil);
-    
-            return redirect()->route('site.painel')->with('success','Os dados foram atualizados com sucesso.');
-    
-        } catch (Exception $ex) {
-    
-            return redirect('site.painel')->with('error', 'Ocorreu um erro ao tentar atualizar os dados!');
-    
-        }
+       if($perfil){
+         return redirect()->route('dashboard.index');
+       }else{
+           return 'erro ao atualizar';
+       }
     }
 }

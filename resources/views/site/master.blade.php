@@ -42,14 +42,31 @@
                     </div><!-- .col -->
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                    @guest
-                        <div class="donate-btn">
-                           
+                        @guest
+                            <div class="donate-btn">                            
                                 <a href="{{ url('/entrar')}}">Login</a>
+                            </div>
+                            @else
+
+                                <div class="donate-btn">                            
+                                    <a href="{{ url('/entrar')}}">Olá, {{ Auth::user()->name }}</a>
+                                </div>
+
+                                <div class="donate-btn">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                                                        Sair
+                                    </a>
+                                </div>
+                               
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                           
+                                    
                                 
-                                                     
-                            
-                        </div>
                         @endguest
                       
                           <!-- .donate-btn -->
@@ -70,14 +87,16 @@
                           <div class="col-xs-12">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                             <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
-                                <li class="{{ isset($active) == 'home' ? 'current-menu-item' : ''}}"><a href="{{url('/') }}" >Home</a></li>
-                                <li class="{{ isset($active) == 'sobre' ? 'current-menu-item' : ''}}"><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>  
-                                <li class="{{ isset($active) == 'oscs' ? 'current-menu-item' : ''}}"><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
-                                <li class="{{ isset($active) == 'agenda2030' ? 'current-menu-item' : ''}}"><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                                <li class="{{ isset($active) == 'blog' ? 'current-menu-item' : ''}}"><a href="#">Blog</a></li>
+                                <li class=""><a href="{{url('/') }}" >Home</a></li>
+                                <li class=""><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>
+                                @guest  
+                                    <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>
+                                @endguest                                                              
+                                <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
+                                <li class=""><a href="#">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
-                                        <li><a href="{{ route('site.painel') }}">Painel</a></li>
+                                        <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
 
                                        @else
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
@@ -144,7 +163,7 @@
                                     @auth
                                     <!--    <li><a href="{{ url('/home') }}">Home</a></li> -->
                                     @else
-                             <!--   <li><a href="{{ route('site.painel') }}">Login</a></li> -->
+                               <li><a href="#">Login</a></li>
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
