@@ -71,11 +71,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     
 
                         <figure class="m-0">
-<<<<<<< HEAD
-                       <img src="/vendor/site/images/sobre3.png" alt=""> 
-=======
                       <center>  <img src="/vendor/site/images/sobre3.png" alt=""> </center>
->>>>>>> dev
                             </figure> 
                    
                 </div>
@@ -84,11 +80,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     
 
                         <figure class="m-0">
-<<<<<<< HEAD
-                     <img src="/vendor/site/images/sobre4.png" alt="">
-=======
                       <center>  <img src="/vendor/site/images/sobre4.png" alt=""> </center>
->>>>>>> dev
                             </figure> 
                    
                 </div>
@@ -96,11 +88,7 @@ desenvolvimento de projetos inovadores e singulares.</p>
 
                 <div class="col-12 col-sm-4 col-lg-4">
                 <figure class="m-0">
-<<<<<<< HEAD
-                     <img src="/vendor/site/images/sobre1.png" alt=""> 
-=======
                       <center>  <img src="/vendor/site/images/sobre2.png" alt=""> </center>
->>>>>>> dev
                             </figure>     
                 </div>
             </div>

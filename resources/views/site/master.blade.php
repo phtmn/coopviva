@@ -46,14 +46,7 @@
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
-<<<<<<< HEAD
-                        
-                               <i class="fa fa-phone"></i><span> +55 83 3034-1663 --- </span>
-							<i class="fa fa-whatsapp"></i><span> +55 83 3034-1663</span>								                           
-                        <!--	<i class="fa fa-whatsapp"></i><span> <a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=5583981300880=%22Ol%C3%A1,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEX%C3%83O">+55 83 3034-1663</a></span>	-->							                              
-=======
                             <p>Tel.: <span> +55 83 3034-1663 | <a id="link" href="https://web.whatsapp.com/" target="_blank" class="text-white " style="text-decoration:none"> WhatsApp +55 83 3034-1663</a> </span></p>
->>>>>>> dev
                         </div>
 
                         
@@ -61,15 +54,6 @@
                     </div><!-- .col -->
  
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-<<<<<<< HEAD
-                        
-                       
-                        <div class="donate-btn">
-                       
-                       
-                            <a href="{{ url('/cadastro') }}">Login</a>
-                        </div><!-- .donate-btn -->
-=======
                         @guest
                             <div class="donate-btn">                            
                                 <a href="{{ url('/entrar')}}">Login</a>
@@ -98,7 +82,6 @@
                         @endguest
                       
                           <!-- .donate-btn -->
->>>>>>> dev
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
@@ -115,20 +98,6 @@
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                           <div class="col-xs-12">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-<<<<<<< HEAD
-								
-								<li class=""><a href="{{url('/') }}">Home</a></li>  
-						        <li class=""><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
-                                <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>                                                              
-                                <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                                <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
-                                
-								
-							   @if (Route::has('login'))               
-                                    @auth
-                                        <li class=" "><a href="{{ route('site.painel') }}">Painel</a></li>
-                                    @else
-=======
                             <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
                                 <li class=""><a href="{{url('/') }}" >Home</a></li>
                                 <li class=""><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>
@@ -142,7 +111,6 @@
                                         <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
 
                                        @else
->>>>>>> dev
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
                                         <li class=" "><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
