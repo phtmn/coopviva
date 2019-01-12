@@ -46,7 +46,8 @@
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
-                            <p>Tel.: <span> +55 83 3034-1663 | <a id="link" href="https://web.whatsapp.com/" target="_blank" class="text-white " style="text-decoration:none"> WhatsApp +55 83 3034-1663</a> </span></p>
+                        
+                            <p><span><i class="fa fa-phone"></i> +55 83 3034-1663 | <i class="fa fa-whatsapp"></i> <a id="link" href="https://api.whatsapp.com/send?1=pt_BR&phone=558330341663=" target="_blank" class="text-white " style="text-decoration:none"> +55 83 3034-1663</a> </span></p>
                         </div>
 
                         
@@ -105,7 +106,7 @@
                                     <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>
                                 @endguest                                                              
                                 <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                                <li class=""><a href="#">Blog</a></li>
+                                <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
@@ -175,7 +176,7 @@
                                     @auth
                                     <!--    <li><a href="{{ url('/home') }}">Home</a></li> -->
                                     @else
-                               <li><a href="#">Login</a></li>
+                               <li><!--<a href="#">Login</a>--></li>
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
@@ -217,7 +218,7 @@
                             <li>
                                 <i class="fa fa-envelope"></i><span><a href="mailto:contato@rededeconexao.art.br">contato@rededeconexao.art.br</a></span></li>
                                 <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
-								<li><i class="fa fa-whatsapp"></i><span><a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=5583981300880=%22Ol%C3%A1,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEX%C3%83O">+55 83 3034-1663</a></span></li>								                                
+								<li><i class="fa fa-whatsapp"></i><span><a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=558330341663="Olá,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEXÃO">+55 83 3034-1663</a></span></li>								                                
                                 <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba – Brasil</span></li>
                             </ul>
                         </div><!-- .foot-contact -->
