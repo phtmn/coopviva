@@ -32,7 +32,7 @@
     <div class="container" style="margin-top:20px; padding:20px">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dashboard</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Perfil</a>
@@ -47,6 +47,7 @@
             <li class="nav-item">
                 <a class="nav-link" id="osc-tab" data-toggle="tab" href="#osc" role="tab" aria-controls="osc" aria-selected="false">Dados da minha OSC</a>
             </li>
+
             @endcan
             <!-- <li class="nav-item">
                 <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
@@ -55,7 +56,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.painel.tabHome')</div>
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">@include('site.painel.tabDashboard')</div>
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('site.painel.tabPerfil')</div>
             <div class="tab-pane" id="projetos" role="tabpanel" aria-labelledby="projetos-tab">@include('site.painel.tabProjetos')</div>
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">@include('site.painel.tabInvestimentos')</div>

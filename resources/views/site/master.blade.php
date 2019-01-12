@@ -42,11 +42,17 @@
                     </div><!-- .col -->
 
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                    @guest
                         <div class="donate-btn">
-                            @guest
+                           
                                 <a href="{{ url('/entrar')}}">Login</a>
-                            @endguest
-                        </div><!-- .donate-btn -->
+                                
+                                                     
+                            
+                        </div>
+                        @endguest
+                      
+                          <!-- .donate-btn -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
@@ -72,7 +78,8 @@
                                 @if (Route::has('login'))               
                                     @auth
                                         <li><a href="{{ route('site.painel') }}">Painel</a></li>
-                                    @else
+
+                                       @else
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
@@ -135,7 +142,7 @@
                             <li><a href="#">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
-                                        <li><a href="{{ url('/home') }}">Home</a></li>
+                                    <!--    <li><a href="{{ url('/home') }}">Home</a></li> -->
                                     @else
                              <!--   <li><a href="{{ route('site.painel') }}">Login</a></li> -->
                                         @if (Route::has('register'))
