@@ -46,7 +46,7 @@ class CreateProjetosTable extends Migration
                                   
             $table->timestamps();
 
-            $table->foreign('osc_id')->references('id')->on('oscs')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
