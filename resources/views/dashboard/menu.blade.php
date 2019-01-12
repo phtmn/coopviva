@@ -1,3 +1,26 @@
+
+<div class="swiper-container ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="/vendor/site/images/about-bg.jpg" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h5> Olá, {{ Auth::user()->name }}</h5>
+                                    
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+    </div><!-- .hero-slider -->
+
+    </br>
+
 <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link {{ $tab == 'dashboard' ? 'active' : ''}}" href="{{ route('dashboard.index') }}">Dashboard</a></li>
@@ -28,3 +51,5 @@
             @endcan
         </ul>
     </div>
+
+   

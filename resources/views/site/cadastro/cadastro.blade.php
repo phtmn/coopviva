@@ -25,27 +25,13 @@
 
 
 <div class="container" id="abc">
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
     <header class="entry-header">
             <h2 class="entry-title"></h2>
     </header> 
     
 
-</br>
+
 <div class="featured-cause">
         <div class="container">           
 
@@ -56,6 +42,25 @@
                     <div class="cause-wrap  flex-wrap justify-content-between">
                         
                             <header class="entry-header  flex-wrap align-items-center">
+
+                              
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+
                                 <h3 class="entry-title w-100 m-0">Não tenho cadastro!</h3>  
                               
                                                   
@@ -75,7 +80,7 @@
               <div class="form-group">
                   <label for="name">Selecione o seu Estado?</label>
                   <select name="uf" id="" class="form-control">
-                      <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
+                      <option value="#">... Selecione ...</option> //TODO -- incluir as siglas dos estados
                       <option value="PB">PB - Paraíba</option>
                       <option value="PE">PE - Pernanbuco</option>
                   </select>

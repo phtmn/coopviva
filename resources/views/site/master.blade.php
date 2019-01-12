@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<!-- Google Analytics -->
+
+
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110332879-2"></script>
 		<script>
 				window.dataLayer = window.dataLayer || [];
@@ -35,6 +37,10 @@
     <link rel="stylesheet" href="/vendor/site/style.css">
 </head>
 <body>
+
+<script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
+    @include('sweet::alert')
+
     <header class="site-header">
         <div class="top-header-bar ">
             <div class="container">
@@ -57,18 +63,19 @@
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         @guest
                             <div class="donate-btn">                            
-                                <a href="{{ url('/entrar')}}">Login</a>
+                                <a href="{{ url('/entrar')}}">Entrar</a>
                             </div>
                             @else
 
-                                <div class="donate-btn">                            
+                            <!--    <div class="donate-btn">      
+                                
                                     <a href="{{ url('/entrar')}}">Olá, {{ Auth::user()->name }}</a>
-                                </div>
+                                </div> -->
 
                                 <div class="donate-btn">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a style="text-decoration:none class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                      document.getElementById('logout-form').submit();">
                                                                                         Sair
                                     </a>
                                 </div>

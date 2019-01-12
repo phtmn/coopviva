@@ -34,7 +34,7 @@ return [
     'page_not_found_text' => 'Kami tidak dapat menemukan halaman yang anda cari.',
     'page_not_found_tips' => '* Mohon pastikan URL yang anda kunjungi sudah benar<br/>
                 * Mohon pastikan kesesuaian besar kecil karakter pada URL<br/>
-                * Mungkin halaman yang anda kunjungi telah dihapus oleh Admin<br/>
+                * Mungkin halaman yang anda kunjungi telah dihapus oleh Site<br/>
                 * Anda tetap bisa kembali ke halaman sebelumnya dengan menekan tombol back pada browser anda<br/>',
 
     'log_try_view' => 'Mencoba melihat data :name pada :module',
@@ -229,7 +229,7 @@ return [
 
     // privilege
     'privileges_name' => 'Privilege Name',
-    'privileges_super_admin' => 'Super Admin',
+    'privileges_super_admin' => 'Super Site',
     'privileges_standart_user' => 'Standart user',
     'privileges_ID' => 'ID',
     'set_as_superadmin' => 'Set as Superadmin',

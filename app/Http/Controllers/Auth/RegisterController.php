@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Alert;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'entrar';
 
     /**
      * Create a new controller instance.
@@ -71,7 +72,11 @@ class RegisterController extends Controller
             'uf'            => $data['uf'],           
         ]);            
         //dd($user);
-        \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
+
+        Alert::info('Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação)',':)')->persistent('x');
+       
+       // \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
+       
         return $user;
 
        

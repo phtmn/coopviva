@@ -36,7 +36,7 @@ return [
     'page_not_found_text' => 'We are unable search the page that you are looking for.',
     'page_not_found_tips' => '* Please make sure the URL is correct<br/>
                 * Please make sure the font capitalizing is correct because case sensitive<br/>
-                * Maybe the page that you are looking for has been deleted by Admin<br/>
+                * Maybe the page that you are looking for has been deleted by Site<br/>
                 * You can go back by click Back Button at browser<br/>',
 
     'log_try_view' => 'Try view the data :name at :module',
@@ -236,7 +236,7 @@ return [
 
     // privilege
     'privileges_name' => 'Privilege Name',
-    'privileges_super_admin' => 'Super Admin',
+    'privileges_super_admin' => 'Super Site',
     'privileges_standart_user' => 'Standart user',
     'privileges_ID' => 'ID',
     'set_as_superadmin' => 'Set as Superadmin',
