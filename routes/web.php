@@ -1,25 +1,30 @@
 <?php
-Auth::routes(['verify'=>false]);
+Auth::routes(['verify'=>false,'active'=>'']);
 
 //Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW 
-Route::view('/','site.index');
-Route::view('/sobre', 'site.paginas.sobre')->name('sobre_nos');
-Route::view('/agenda2030', 'site.paginas.agenda2030')->name('agenda_2030');
-Route::view('/oscs','site.osc.index')->name('oscs');
-
-
-//RotasReferentes as OSC
+Route::view('/','site.index', ['active' => 'home']);
+Route::view('/sobre', 'site.paginas.sobre', ['active' => 'sobre'])->name('sobre_nos');
+Route::view('/agenda2030', 'site.paginas.agenda2030', ['active' => 'agenda2030'])->name('agenda_2030');
+Route::view('/oscs','site.osc.index', ['active' => 'oscs'])->name('oscs');
 Route::get('/oscs/detalhe','Site\OrganizacoesController@detalhe')->name('oscs.detalhe');
 
+
 //Rotas para manutenção de cadastros-logins
-Route::view('/cadastro','site.cadastro.cadastro')->name('site.cadastro');
-Route::view('/entrar','site.cadastro.login')->name('site.login');
+Route::view('/cadastro','site.cadastro.cadastro',['active'=>'cadastro'])->name('site.cadastro');
+Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.login');
+Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
 
 //Rotas para dashboards do site
-Route::get('/painel','Site\PainelController@painel')->name('site.painel');
+Route::group(['middleware'=>['auth'],'prefix'=>'dashboard'],function(){
 
-//Rotas para cadastro de Perfil
-Route::get('/meu-perfil','Site\PerfilController@create')->name('perfil.create');
-Route::post('/meu-perfil','Site\PerfilController@store')->name('perfil.store');
+    Route::get('/','Dashboard\DashboardController@index')->name('dashboard.index'); 
+    
+    Route::resource('osc','Dashboard\OscController');
+    Route::resource('projetos','Dashboard\ProjetosController');
+    Route::resource('perfil','Dashboard\PerfilController');
+});
+
+
+
         
 

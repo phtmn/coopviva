@@ -46,10 +46,14 @@
                         </div><!-- .header-bar-email -->
 
                         <div class="header-bar-text">
+<<<<<<< HEAD
                         
                                <i class="fa fa-phone"></i><span> +55 83 3034-1663 --- </span>
 							<i class="fa fa-whatsapp"></i><span> +55 83 3034-1663</span>								                           
                         <!--	<i class="fa fa-whatsapp"></i><span> <a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=5583981300880=%22Ol%C3%A1,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEX%C3%83O">+55 83 3034-1663</a></span>	-->							                              
+=======
+                            <p>Tel.: <span> +55 83 3034-1663 | <a id="link" href="https://web.whatsapp.com/" target="_blank" class="text-white " style="text-decoration:none"> WhatsApp +55 83 3034-1663</a> </span></p>
+>>>>>>> dev
                         </div>
 
                         
@@ -57,6 +61,7 @@
                     </div><!-- .col -->
  
                     <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+<<<<<<< HEAD
                         
                        
                         <div class="donate-btn">
@@ -64,6 +69,36 @@
                        
                             <a href="{{ url('/cadastro') }}">Login</a>
                         </div><!-- .donate-btn -->
+=======
+                        @guest
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Login</a>
+                            </div>
+                            @else
+
+                                <div class="donate-btn">                            
+                                    <a href="{{ url('/entrar')}}">Olá, {{ Auth::user()->name }}</a>
+                                </div>
+
+                                <div class="donate-btn">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                                                        Sair
+                                    </a>
+                                </div>
+                               
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                           
+                                    
+                                
+                        @endguest
+                      
+                          <!-- .donate-btn -->
+>>>>>>> dev
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
@@ -78,7 +113,9 @@
                         </div><!-- .site-branding -->
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
+                          <div class="col-xs-12">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+<<<<<<< HEAD
 								
 								<li class=""><a href="{{url('/') }}">Home</a></li>  
 						        <li class=""><a href="{{ route('sobre_nos') }}">Sobre Nós</a></li>  
@@ -91,6 +128,21 @@
                                     @auth
                                         <li class=" "><a href="{{ route('site.painel') }}">Painel</a></li>
                                     @else
+=======
+                            <!-- <li class="current-menu-item"><a href="{{url('/') }}">Home</a></li> -->
+                                <li class=""><a href="{{url('/') }}" >Home</a></li>
+                                <li class=""><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>
+                                @guest  
+                                    <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>
+                                @endguest                                                              
+                                <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
+                                <li class=""><a href="#">Blog</a></li>
+                                @if (Route::has('login'))               
+                                    @auth
+                                        <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
+
+                                       @else
+>>>>>>> dev
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
                                         <li class=" "><a href="{{ url('/cadastro')}}">Cadastre-se</a></li>
@@ -98,6 +150,7 @@
                                     @endauth               
                                 @endif
                             </ul>
+                          </div>
                         </nav><!-- .site-navigation -->
 
                         <div class="hamburger-menu d-lg-none">
@@ -111,14 +164,14 @@
             </div><!-- .container -->
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
-    @if(Session::has('mensagem'))
+        @if(Session::has('mensagem'))
             <div class="alert {{ Session::get('mensagem')['class'] }}" role="alert">
                      {{ Session::get('mensagem')['msg'] }}
             </div>
         @endif
     @yield('content')
 
-
+    
 
     <footer class="site-footer">
         <div class="footer-widgets">
@@ -146,15 +199,15 @@
 
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="{{ route('sobre_nos') }}">Sobre Nós </a></li>
-                            <li><a href="{{ url('/oscs') }}">OSC's</a></li>
+                            <li><a href="{{ route('sobre_nos') }}" >Sobre Nós </a></li>
+                            <li><a href="{{ url('/oscs') }}" >OSC's</a></li>
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
-                                        <li><a href="{{ url('/home') }}">Home</a></li>
+                                    <!--    <li><a href="{{ url('/home') }}">Home</a></li> -->
                                     @else
-                             <!--   <li><a href="{{ route('site.painel') }}">Login</a></li> -->
+                               <li><a href="#">Login</a></li>
                                         @if (Route::has('register'))
                                         <li><a href="{{ url('/cadastro') }}">Cadastre-se</a></li>
                                         @endif
@@ -232,7 +285,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='/vendor/site/js/custom.js'></script>    
     <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
-
+    <script src="jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         $("#telefone").mask('(00)00000-0000');

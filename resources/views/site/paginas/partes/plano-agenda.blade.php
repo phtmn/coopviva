@@ -45,7 +45,7 @@ Conheça a nossa agenda, participe aqui de nossa rede.</p>
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
-                                <p class="m-0">1. A garantir uma mobilização significativa de recursos a partir de uma variedade de fontes, inclusive por meio do reforço da cooperação para o desenvolvimento, para proporcionar meios adequados e previsíveis para que os países em desenvolvimento, em particular os países menos desenvolvidos, implementem programas e políticas para acabar com a pobreza em todas as suas dimensões.</p>
+                                <p class="m-0">1. testesteA garantir uma mobilização significativa de recursos a partir de uma variedade de fontes, inclusive por meio do reforço da cooperação para o desenvolvimento, para proporcionar meios adequados e previsíveis para que os países em desenvolvimento, em particular os países menos desenvolvidos, implementem programas e políticas para acabar com a pobreza em todas as suas dimensões.</p>
                             </div><!-- .entry-content -->     
                         </div><!-- .cause-content-wrap -->
                     </div><!-- .cause-wrap -->
@@ -104,11 +104,11 @@ Conheça a nossa agenda, participe aqui de nossa rede.</p>
 
                         <div class="cause-content-wrap">
                             <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Assegurar a disponibilidade e a gestão sustentável da água e saneamento para todos</h3>
+                                <h3 class="entry-title w-100 m-0 text-justify">Assegurar a disponibilidade e a gestão sustentável da água e saneamento para todos</h3>
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
-                                <p class="m-0">6.b Apoiar e fortalecer a participação das comunidades locais, para melhorar a gestão da água e do saneamento</p>
+                                <p class="m-0 text-justify">6.b Apoiar e fortalecer a participação das comunidades locais, para melhorar a gestão da água e do saneamento</p>
                             </div><!-- .entry-content -->     
                         </div><!-- .cause-content-wrap -->
                     </div><!-- .cause-wrap -->

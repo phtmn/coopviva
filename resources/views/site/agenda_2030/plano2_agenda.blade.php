@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="coL-12 col-lg-6">
                     <div class="section-heading">
-                        <h2 class="entry-title"</h2>
+                        <h2 class="entry-title"></h2>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->
@@ -28,7 +28,7 @@
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0">6.b Apoiar e fortalecer a participação das comunidades locais, para melhorar a gestão da água e do saneamento</p>
+                                            <p class="m-0  text-justify">6.b teste teste Apoiar e fortalecer a participação das comunidades locais, para melhorar a gestão da água e do saneamento</p>
                                         </div><!-- .entry-content -->
                                     </div><!-- .cause-content-wrap -->
                                 </div><!-- .cause-wrap -->

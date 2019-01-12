@@ -17,13 +17,13 @@ class CreatePerfilsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('nome_completo')->nullable();
-            $table->date('data_nascimento');
+            $table->date('data_nascimento')->nullable();
             $table->string('telefone_principal')->nullable();
             $table->string('cpf')->unique()->nullable();
             $table->string('cnpj')->unique()->nullable();
             $table->string('razao_social')->nullable();
             $table->string('nome_fantasia')->nullable();
-            $table->enum('tipo_perfil',['O','I','D'])->defaul('I');
+            $table->string('tipo_perfil');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

@@ -68,10 +68,9 @@ class RegisterController extends Controller
             'name'          => $data['name'],
             'email'         => $data['email'],           
             'password'      => Hash::make($data['password']),
-            'uf'            => $data['uf'],
-            //'cidade'        => $data['cidade'],
+            'uf'            => $data['uf'],           
         ]);            
-
+        //dd($user);
         \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
         return $user;
     }
