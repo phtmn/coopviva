@@ -7,6 +7,7 @@ use App\Models\Projeto;
 use App\Models\Osc;
 Use Auth;
 use App\Http\Controllers\Controller;
+use Validator;
 
 class ProjetosController extends Controller
 {
