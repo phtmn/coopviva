@@ -7,9 +7,10 @@
         <h1 class="jumbotron-heading">Como você quer se CONECTAR nesta REDE?</h1>
         <p class="lead text-muted">Venha fazer parte da maior rede do BEM. Escolha uma das opções abaixo e faça seu pré-cadastro.</p>
         <p>   
-       
-        <a href="{{route('site.cadastro','investidor')}}" class="btn gradient-bg mr-2">Sou um investidor</a>
-        <a href="{{route('site.cadastro','osc')}}" class="btn gradient-bg mr-2">Sou uma OSC</a>
+       <div class="col-auto">
+        <a href="{{route('site.cadastro','investidor')}}" class="btn gradient-bg mr-2" style="margin:4px">Sou um investidor</a>
+        <a href="{{route('site.cadastro','osc')}}" class="btn gradient-bg mr-2" style="margin:4px">Sou uma OSC</a>
+        </div>
        @endguest
       </p>
     </div>
