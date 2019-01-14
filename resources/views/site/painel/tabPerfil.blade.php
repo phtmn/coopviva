@@ -47,6 +47,31 @@
                         <input type="text" name="nome_fantasia" class="form-control" value="{{$perfil->nome_fantasia}}">    
                     </div>
 
+                    <div class="form-group">
+                        <label for="Nome">CEP</label>
+                        <input type="text" name="cep" class="form-control" value="{{$perfil->cep}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Endereço / Número</label>
+                        <input type="text" name="endereco" class="form-control" value="{{$perfil->endereco}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Complemento</label>
+                        <input type="text" name="complemento" class="form-control" value="{{$perfil->complemento}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Cidade</label>
+                        <input type="text" name="cidade" class="form-control" value="{{$perfil->cidade}}">    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nome">Estado</label>
+                        <input type="text" name="estado" class="form-control" value="{{$perfil->estado}}">    
+                    </div>
+
                     <div class="form-group" action="{{route('perfil.update')}}" method="POST">
                         @csrf
                         <input type="submit" value="Atualizar dados" class="btn btn-success">    

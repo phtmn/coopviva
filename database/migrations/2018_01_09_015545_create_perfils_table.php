@@ -23,6 +23,11 @@ class CreatePerfilsTable extends Migration
             $table->string('cnpj')->unique()->nullable();
             $table->string('razao_social')->nullable();
             $table->string('nome_fantasia')->nullable();
+            $table->string('cep')->nullable();
+            $table->string('endereco')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('estado')->nullable();
+            $table->string('complemento')->nullable();
             $table->enum('tipo_perfil',['O','I','D'])->default('I');
             $table->timestamps();
 

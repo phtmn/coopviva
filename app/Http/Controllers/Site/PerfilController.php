@@ -33,6 +33,11 @@ class PerfilController extends Controller
         $perfil->cnpj = $request['cnpj'];
         $perfil->razao_social = $request['razao_social'];
         $perfil->nome_fantasia = $request['nome_fantasia'];
+        $perfil->cep = $request['cep'];
+        $perfil->endereco = $request['endereco'];
+        $perfil->cidade = $request['cidade'];
+        $perfil->estado = $request['estado'];
+        $perfil->complemento = $request['complemento'];
         //TODO: inserir os campos relacionado a perfil
 
 
