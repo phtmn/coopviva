@@ -38,6 +38,30 @@ class ProjetosController extends Controller
         $projeto->valor_meta = $request->valor_meta;
         // TODO:Incluir todos os campos
 
+        $messages = [
+            'required'  => 'O campo :attribute é obrigatório', 
+            'min'       => 'A quantidade de caracteres do campo :attribute é minima', 
+            'max'       => 'A quantidade de caracteres do campo :attribute é maxima', 
+            'string'    => 'O campo :attribute não é do tipo texto',
+            'unique'    => 'O valor do campo :attribute já está em uso, escolha outro'
+        ];
+
+        $validator = Validator::make($request->all(),[  
+            'decricao'              => 'required|min:10|max:100|string|',
+            'instancia'             => 'required|min:4',
+            'ambito'                => 'required|min:4',
+            'segmento_cultural'     => 'required|min:4',
+            'valor_meta'            => 'required|min:4'
+                               
+        ],$messages);
+        
+        //caso alguma regra falhe
+        if($validator->fails()){
+
+            return redirect()->back()       // = volta pra pagina anterior
+                            ->withErrors($validator) // retorna os erros de validação
+                            ->withInput(); // retorna com os campos preenchidos
+        }
 
         // fim TODO
         $projeto->user_id = Auth::user()->id;
