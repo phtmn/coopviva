@@ -217,7 +217,7 @@ return [
 
     // privilege
     'privileges_name' => 'Nombre del Privilegio',
-    'privileges_super_admin' => 'Super Admin',
+    'privileges_super_admin' => 'Super Site',
     'privileges_standart_user' => 'Usuario Estándar',
     'privileges_ID' => 'ID',
     'set_as_superadmin' => 'Establecer como Superadmin',

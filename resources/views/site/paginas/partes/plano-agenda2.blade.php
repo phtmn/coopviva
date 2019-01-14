@@ -148,9 +148,83 @@
                                     </div><!-- .cause-content-wrap -->
                                 </div><!-- .cause-wrap -->
                             </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/vendor/site/images/12agend.png"  alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a target="_blank" href="http://www.agenda2030.com.br/ods/12/#" class="btn gradient-bg mr-2">Saiba mais</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h5 class="entry-title w-100 m-0 text-justify">Assegurar padrões de produção e de consumo sustentáveis</h5>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 text-justify">Incentivar as empresas, especialmente as empresas grandes e transnacionais, a adotar práticas sustentáveis e a integrar informações de sustentabilidade em seu ciclo de relatórios.</p>
+                                        </div><!-- .entry-content -->
+                                                    <!--:::::::::::::::::::card_12 FEITO:::::::::::::::-->
+                                        
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/vendor/site/images/15agend.png"  alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a target="_blank" href="http://www.agenda2030.com.br/ods/15/#" class="btn gradient-bg mr-2">Saiba mais</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h5 class="entry-title w-100 m-0 text-justify">Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda</h5>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 text-justify"> A Mobilizar e aumentar significativamente, a partir de todas as fontes, os recursos financeiros para a conservação e o uso sustentável da biodiversidade e dos ecossistemas.</p>
+                                        </div><!-- .entry-content -->
+                                                    <!--:::::::::::::::::::card_15 FEITO:::::::::::::::-->
+                                        
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/vendor/site/images/17agend.png"  alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a target="_blank" href="http://www.agenda2030.com.br/ods/17/#" class="btn gradient-bg mr-2">Saiba mais</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h5 class="entry-title w-100 m-0 text-justify">Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável</h5>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 text-justify">Incentivar e promover parcerias públicas, público-privadas e com a sociedade civil eficazes, a partir da experiência das estratégias de mobilização de recursos dessas parcerias.  </p>
+                                        </div><!-- .entry-content -->
+                                                    <!--:::::::::::::::::::card_17 FEITO:::::::::::::::-->
+                                        
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
                         </div><!-- .swiper-wrapper -->
 
                     </div><!-- .swiper-container -->
+
+                    
 
                     <!-- Add Arrows -->
                     <div class="swiper-button-next flex justify-content-center align-items-center">

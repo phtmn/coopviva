@@ -11,7 +11,7 @@
                            <!-- <figure class="m-0">
                                 <img src="/vendor/site/images/event-1.jpg" alt="">
                             </figure> -->
-<p class="mt-0">A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade,
+<p class="mt-0" align="justify">A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade,
 empreendedorismo e na transformação social. Atuamos com uma equipe multidisciplinar, há 16 anos e oportunizamos às pessoas,
 organizações das mais diversas esferas e a quem mais se interessar um encontro estratégico que possibilite a todos os envolvidos o
 desenvolvimento de projetos inovadores e singulares.</p>
@@ -106,13 +106,14 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                                <h5 >Um agente de transformação é aquele que experimenta sua própria transformação e assim se encontra em condições de inspirar e incentivar outros no mesmo sentido.
+O COOPVIVA é um instrumento potencializador para nossa transformação!</h5>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="/vendor/site/images/testimonial-1.jpg" alt="">
+                                <img src="/vendor/site/images/alessandra.jpg" alt="">
     
-                                <h4>Maria Williams, <span>Volunteer</span></h4>
+                                <h4>Alessandra Santos, </br><span>Fundadora Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>
@@ -120,13 +121,13 @@ desenvolvimento de projetos inovadores e singulares.</p>
                     <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                         <div class="testimonial-cont">
                             <div class="entry-content">
-                                <p>Nós amamos ajudar todas as crianças que têm problemas no mundo. Depois de 15 anos, temos muitos objetivos alcançados.</p>
+                                <h5 >A construção da humanidade perpassa pela transparência e pela credibilidade em ações de Sustentabilidade. É o que encontramos aqui no COOPVIVA.</h5>
                             </div>
     
                             <div class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                <img src="/vendor/site/images/testimonial-2.jpg" alt="">
+                                <img src="/vendor/site/images/bernardo.jpg" alt="">
     
-                                <h4>Cristian James, <span>Volunteer</span></h4>
+                                <h4>Bernardo Lopes, </br><span>Co-Fundador Rede de Conexão</span></h4>
                             </div>
                         </div>
                     </div>

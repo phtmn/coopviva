@@ -32,5 +32,13 @@ class User extends Authenticatable
         return $this->hasOne(\App\Models\Perfil::class);
 
     }
+
+    public function projetos(){
+        return $this->hasMany(Model\Projeto::class);
+    }
+
+    public function oscs(){
+        return $this->hasMany(Models\Osc::class);
+    }
     
 }

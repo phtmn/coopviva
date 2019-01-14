@@ -64,7 +64,7 @@
                                              <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                                 <header class="entry-header">
                                                     <h1 style="color: #fff">Vivencie </h1>
-                                                    <div class="sub_top" style="color: #fff"> <h5> Experiências Singulares </h5> </div>
+                                                    <div class="sub_top" style="color: #fff"> <h5> Experiências singulares com agilidade e transparência </h5> </div>
                                                 </header><!-- .entry-header -->
                                                  <!-- .entry-content -->
                                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">                                   
@@ -76,8 +76,22 @@
                                             </div><!-- .col -->
                                         </div><!-- .row -->
                                     </div><!-- .container -->
-                                </div><!-- .hero-content-overlay -->
+                                </div><!-- .hero-content-overlay -->                            
+
                         </div>
-                     </div>                              
+
+                        
+
+                     </div> 
+                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
             </div>          
         

@@ -13,7 +13,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4> Investidor</h4>
+                                    <h4> Cadastro no Sistema</h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
@@ -25,27 +25,13 @@
 
 
 <div class="container" id="abc">
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
     <header class="entry-header">
             <h2 class="entry-title"></h2>
     </header> 
     
 
-</br>
+
 <div class="featured-cause">
         <div class="container">           
 
@@ -53,13 +39,30 @@
                 
 
                 <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                    <div class="cause-wrap  flex-wrap justify-content-between">
                         
-                            <header class="entry-header d-flex flex-wrap align-items-center">
-                                <h3 class="entry-title w-100 m-0">Não tenho cadastro</h3>  
-                                <div class="posted-date">
-                                    <a href="#">Cadastro no Sistema </a>
-                                </div><!-- .posted-date -->
+                            <header class="entry-header  flex-wrap align-items-center">
+
+                              
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+
+                                <h3 class="entry-title w-100 m-0">Não tenho cadastro!</h3>  
+                              
                                                   
                             </header><!-- .entry-header -->
 
@@ -77,6 +80,7 @@
               <div class="form-group">
                   <label for="name">Selecione o seu Estado?</label>
                   <select name="uf" id="" class="form-control">
+<<<<<<< HEAD
                       <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
                       <option value="AC">AC - Acre</option>
                       <option value="AL">AL - Alagoas</option>
@@ -92,6 +96,9 @@
                       <option value="MS">MS - Mato Grosso do Sul</option>
                       <option value="MG">MG - Minas Gerais</option>
                       <option value="PA">PA - Pará</option>
+=======
+                      <option value="#">... Selecione ...</option> //TODO -- incluir as siglas dos estados
+>>>>>>> 86e86227e383d326c53f58afe56b86b750b6ae06
                       <option value="PB">PB - Paraíba</option>
                       <option value="PR">PR - Paraná</option>
                       <option value="PE">PE - Pernanbuco</option>
@@ -130,7 +137,7 @@
               </div>
         
               <div class="form-group">
-                  <button type="submit" class="btn gradient-bg">Cadastrar</button>
+                <center>  <button type="submit" class="btn gradient-bg">Cadastrar</button> </center>
               </div>
               </form>
                            

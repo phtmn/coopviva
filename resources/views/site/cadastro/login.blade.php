@@ -13,7 +13,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4> Investidor</h4>
+                                    <h4> Acesso ao Sistema</h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
@@ -25,42 +25,44 @@
 
 
 <div class="container" id="abc">
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
     <header class="entry-header">
             <h2 class="entry-title"></h2>
     </header> 
     
-
-</br>
 <div class="featured-cause">
+
+
         <div class="container">           
 
             <div class="row">
                 
 
                   <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                    <div class="cause-wrap  flex-wrap justify-content-between">
                     <form action=" {{route('login') }}" class="form form-investidor" method="POST">
                              @csrf
-                            <header class="entry-header d-flex flex-wrap align-items-center">
+                            <header class="entry-header  flex-wrap align-items-center">
+                                    
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+
+                                    @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+
+
                                 <h3 class="entry-title w-100 m-0">Já tenho cadastro!</h3> 
-                                <div class="posted-date">
-                                    <a href="#">Acesso ao Sistema </a>
-                                </div><!-- .posted-date -->
+                                
                                                    
                             </header><!-- .entry-header -->
 
@@ -75,8 +77,11 @@
                                     <input type="password" name="password" class="form-control" placeholder="Digite sua senha">
                                 </div>
                                 <div class="form-group">
-                                        <center>    <button type="submit" class="btn gradient-bg">Entrar</button>
-                                        <a href="">Esqueci a senha</a> </center>
+                                        <center> <a href="">Esqueci minha senha</a> </center>
+                                </div> 
+
+                                <div class="form-group">
+                                        <center> <button type="submit" class="btn gradient-bg">Entrar</button> </center>
                                 </div>                    
                             </div>
                     </form>

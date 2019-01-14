@@ -89,6 +89,7 @@ a:hover, a:active {
     background: #8DDF6A;
 }
 
+
 /*
 # Site Branding
 --------------------------------*/
@@ -989,6 +990,13 @@ ul.tabs-nav .tab-nav.active {
     position: relative;
     padding: 96px 0;
     background: url("images/cause-bg.jpg") no-repeat center;
+    background-size: cover;
+    z-index: 99;
+}
+
+.our-causes-agenda {
+    position: relative;
+    padding: 96px 0;    
     background-size: cover;
     z-index: 99;
 }

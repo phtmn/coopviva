@@ -22,7 +22,7 @@ class CreateOscsTable extends Migration
             $table->string('situacao_imovel')->nullable();
             $table->string('responsavel_legal')->nullable();
             $table->string('ano_inscricao_cnpj')->nullable();
-            $table->date('ano_fundacao')->nullable();
+            $table->string('ano_fundacao')->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('decricao_osc')->nullable();
             $table->string('site')->nullable();

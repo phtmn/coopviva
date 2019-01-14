@@ -36,7 +36,7 @@ return [
     'page_not_found_text' => 'Aradığınız sayfayı bulamıyoruz. Teknik çalışmalarımız sürüyor. üzgünüm :( ',
     'page_not_found_tips' => '* Lütfen URLnin doğru olduğundan emin olun<br/>
                 * font yolunun doğru olmasına dikkat edin, çünkü büyük / küçük harf duyarlı<br/>
-                * Belki aradığınız sayfa Admin tarafından silindi<br/>
+                * Belki aradığınız sayfa Site tarafından silindi<br/>
                 * Geri  Düğmesine tıklayın <br/>',
 
     'log_try_view' => 'Verileri görüntülemeyi denedi :name / :module',
