@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Nome">CEP</label>
+                        <label for="Nome">Cep</label>
                         <input type="text" name="cep" class="form-control" value="{{$perfil->cep}}">    
                     </div>
 
