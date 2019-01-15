@@ -41,7 +41,6 @@
                        {!! Form::text('telefone_principal',null,['class'=> 'form-control']) !!}  
                     </div>
 
-<<<<<<< HEAD:resources/views/site/painel/tabPerfil.blade.php
                     <div class="form-group">
                         <label for="Nome">Cep</label>
                         <input type="text" name="cep" class="form-control" value="{{$perfil->cep}}">    
@@ -72,12 +71,6 @@
                         <input type="submit" value="Atualizar dados" class="btn btn-success">    
                     </div>
                 </Form>
-=======
-                   <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Salvar</button>
-                                    
-                {{ Form::close() }}
-               
->>>>>>> 86e86227e383d326c53f58afe56b86b750b6ae06:resources/views/dashboard/perfil/create-edit.blade.php
         </div>
     </div>
 </div>

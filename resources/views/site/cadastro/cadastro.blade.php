@@ -80,7 +80,6 @@
               <div class="form-group">
                   <label for="name">Selecione o seu Estado?</label>
                   <select name="uf" id="" class="form-control">
-<<<<<<< HEAD
                       <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
                       <option value="AC">AC - Acre</option>
                       <option value="AL">AL - Alagoas</option>
@@ -96,9 +95,6 @@
                       <option value="MS">MS - Mato Grosso do Sul</option>
                       <option value="MG">MG - Minas Gerais</option>
                       <option value="PA">PA - Pará</option>
-=======
-                      <option value="#">... Selecione ...</option> //TODO -- incluir as siglas dos estados
->>>>>>> 86e86227e383d326c53f58afe56b86b750b6ae06
                       <option value="PB">PB - Paraíba</option>
                       <option value="PR">PR - Paraná</option>
                       <option value="PE">PE - Pernanbuco</option>
