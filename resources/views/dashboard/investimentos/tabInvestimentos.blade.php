@@ -6,35 +6,32 @@
             <tr>
                 <th>#</th>
                 <th>Date do Investimento</th>
-                <th>Osc /  Projeto</th>
+                <th>Tipo</th>
                 <th>Valor R$</th>
+                <th>Projeto</th>
+                <th>Osc</th>
+                <th>Recibo</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>1</td>
                 <td>15-12-2018</td>
-                <td>Nome do Projeto</td>
-                <td>R$ 85,00</td>
+                <td>xxx</td>
+                <td>xxx</td>
+                <th>xxx</th>
+                <th>xxx</th>
+                <th>xxx</th>
             </tr>
             <tr>
                 <td>1</td>
-                <td>15-12-2018</td>
-                <td>Nome do Projeto</td>
-                <td>R$ 85,00</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>15-12-2018</td>
-                <td>Nome do Projeto</td>
-                <td>R$ 85,00</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>15-12-2018</td>
-                <td>Nome do Projeto</td>
-                <td>R$ 85,00</td>
-            </tr>
+                <td>xxx</td>
+                <td>xxx</td>
+                <td>xxx</td>
+                <th>xxx</th>
+                <th>xxx</th>
+                <th>xxx</th>
+            </tr>            
         </tbody>
     </table>
 </div>
