@@ -13,7 +13,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4> Meu perfil</h4>
+                                    <h4> Tipo de Acesso</h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
@@ -37,7 +37,7 @@
             <div class="row">
                 
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-5">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
                         
                             <header class="entry-header d-flex flex-wrap align-items-center">
@@ -77,8 +77,7 @@
                   <label for="name">Selecione como deseja utilizar o sistema</label>
                   <select name="tipo_perfil" id="" class="form-control">
                       <option value="Investidor">Sou investidor</option> 
-                      <option value="Osc">Sou uma Organização Social Civil</option>
-                      <option value="Duplo">Desejo as duas opções</option>
+                      <option value="Osc">Sou uma Organização Social Civil (OSC)</option>                      
                   </select>
                   
               </div>
@@ -89,7 +88,7 @@
               
               <!-- Fim TODO -->
         
-              <div class="form-group">
+              <div class="form-group d-flex justify-content-center ">
                   <button type="submit" class="btn gradient-bg">Cadastrar</button>
               </div>
               </form>
@@ -100,21 +99,19 @@
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
              
-                <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-success">
-                        <h3 class="text-white">Perfil Ivestidor</h3>
-                        <p class="text-white">O cadastro como investidor é possivel realizar investimentos em projetos que estão na nossa base....</p>
+                                   <!--::::::::::::::: cards_Perfil::::::::::::::::::::::::::::-->
+
+                    <div class="col-xs-12 col-lg-3 cause-wrap d-flex flex-wrap justify-content-between bg-success" style="margin-right:10px">
+                        <h3 class="text-white">Perfil Investidor</h3>
+                        <p class="text-white text-justify">O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituição que estão na nossa base....</p>
                     </div>
+                    
                     <!-- .cause-wrap -->
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-info">
-                        <h3 class="text-white">Perfil OSC(Organização Socical Civil)</h3>
-                        <p class="text-white">O cadastro como OSC você poderá cadastrar sua instituição e poder receber investimentos...</p>
-                    </div>
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between bg-danger">
-                        <h3 class="text-white">Perfil Duplo (investidor e osc)</h3>
-                        <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic inventore, rem, accusantium optio perferendis odit voluptatem aperiam ratione tenetur aut sapiente amet consequuntur, quibusdam nostrum accusamus unde consequatur corrupti ducimus.</p>
-                    </div>
-                </div><!-- .col -->
+                    <div class="col-xs-12 col-lg-3  cause-wrap d-flex flex-wrap justify-content-between bg-info">
+                        <h3 class="text-white">Perfil OSC</h3>
+                        <p class="text-white text-justify">Com esse cadastro sua instituição irá ter a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...</p>
+                    </div> 
+                
             </div><!-- .row -->
         </div><!-- .container -->
         </div>

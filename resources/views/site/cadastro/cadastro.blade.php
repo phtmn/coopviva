@@ -145,7 +145,12 @@
              
                 <div class="col-12 col-lg-6">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                        <p>Aqui terá textos com informações</p>
+                        <p class="text-justify">
+Participe do COOPVIVA e faça parte da maior rede de cooperação viva e cidadã.
+Para você que promove ações de sustentabilidade seja com projetos educacionais, ambientais, sociais, esportivos, culturais de saúde, criança e adolescente ou idoso.
+Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.
+Basta se cadastrar no formulário ao lado e assim que validado seu contato entraremos em contato.
+Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento <a href="#" class="text-success">contato@redeconexao.com.br</a>, ou pelo telefone: <strong class="text-muted">83 3034-1663</strong></p>
                        
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
