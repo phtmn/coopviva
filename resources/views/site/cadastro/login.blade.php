@@ -89,24 +89,38 @@
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
              
-                <div class="col-12 col-lg-7">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                <div class="col-12 col-lg-7" ">
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between"> 
+
+
                     <header class="entry-header  flex-wrap align-items-center">
 
-                                <h3 class="entry-title w-100 m-0">Participe do COOPVIVA!</h3>  
-                              
-                                                  
-                            </header>
-                
-                            <div class="card-body">  
+<h3 class="entry-title w-100 m-0">Formas de Acesso</h3>  
 
-        
+                  
+</header><!-- .entry-header -->
+
+
+<div class="card-body">  
+
+
 <div class="form-group">
-    <label for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
+<label for="name"><strong>Perfil Investidor</strong></label>
+<p class="text-justify">
 
-    
+O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base...
+</p>
+
 </div>
 
+<div class="form-group">
+<label for="name"><strong>Perfil OSC</strong></label>
+<p class="text-justify">
+
+Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...
+</p>
+
+</div>
 
 
 

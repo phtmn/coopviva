@@ -28,7 +28,7 @@ class CreatePerfilsTable extends Migration
             $table->string('cidade')->nullable();
             $table->string('estado')->nullable();
             $table->string('complemento')->nullable();
-            $table->enum('tipo_perfil',['O','I','D'])->default('I');
+            $table->string('tipo_perfil')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

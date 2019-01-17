@@ -57,7 +57,7 @@
         {{ session('success') }}
     </div>
 @endif
-                                <h3 class="entry-title w-100 m-0">Perfil de acesso!</h3>  
+                                <h3 class="entry-title w-100 m-0">Olá, {{ Auth::user()->name }}</h3>  
                                 
                                                   
                             </header><!-- .entry-header -->
@@ -67,18 +67,14 @@
 
         <form class="form form-investidor" action="{{route('perfil.store')}}" method="POST">
               @csrf  
-              <div class="form-group">
-                  <label for="name">Seu nome Completo </label>
-                  <input type="text" name="nome_completo" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
-                  
-              </div>
+              
 
               <div class="form-group">
-                  <label for="name">Selecione como deseja utilizar o sistema</label>
+                  <label for="name">Como deseja utilizar o COOPVIVA?</label>
                   <select name="tipo_perfil" id="" class="form-control">
                       <option value="#">Selecione...</option>  
-                      <option value="Investidor">Sou um investidor</option> 
-                      <option value="Osc">Sou uma Organização Social Civil (OSC)</option>                      
+                      <option value="Investidor">Perfil investidor</option> 
+                      <option value="Osc">Perfil Organização Social Civil (OSC)</option>                      
                   </select>
                   
               </div>

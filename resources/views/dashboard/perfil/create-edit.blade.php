@@ -66,8 +66,7 @@
                         <input type="text" name="estado" class="form-control" value="{{$perfil->estado}}">    
                     </div>
 
-                    <div class="form-group" action="{{route('perfil.update')}}" method="POST">
-                        @csrf
+                   
                         <input type="submit" value="Atualizar dados" class="btn btn-success">    
                     </div>
                 </Form>
