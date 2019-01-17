@@ -38,7 +38,7 @@
             <div class="row">
                 
 
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-5">
                     <div class="cause-wrap  flex-wrap justify-content-between">
                     <form action=" {{route('login') }}" class="form form-investidor" method="POST">
                              @csrf
@@ -89,9 +89,33 @@
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
              
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-7">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                        <p>Aqui terá textos com informações</p>
+                    <header class="entry-header  flex-wrap align-items-center">
+
+                                <h3 class="entry-title w-100 m-0">Participe do COOPVIVA!</h3>  
+                              
+                                                  
+                            </header>
+                
+                            <div class="card-body">  
+
+        
+<div class="form-group">
+    <label for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
+
+    
+</div>
+
+
+
+
+
+             
+</div>
+
+
+
                        
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->

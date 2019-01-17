@@ -57,7 +57,7 @@
         {{ session('success') }}
     </div>
 @endif
-                                <h3 class="entry-title w-100 m-0">Preencha dados do seu Perfil</h3>  
+                                <h3 class="entry-title w-100 m-0">Perfil de acesso!</h3>  
                                 
                                                   
                             </header><!-- .entry-header -->
@@ -68,7 +68,7 @@
         <form class="form form-investidor" action="{{route('perfil.store')}}" method="POST">
               @csrf  
               <div class="form-group">
-                  <label for="name">Seu nome Completo</label>
+                  <label for="name">Seu nome Completo </label>
                   <input type="text" name="nome_completo" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
                   
               </div>
@@ -76,7 +76,8 @@
               <div class="form-group">
                   <label for="name">Selecione como deseja utilizar o sistema</label>
                   <select name="tipo_perfil" id="" class="form-control">
-                      <option value="Investidor">Sou investidor</option> 
+                      <option value="#">Selecione...</option>  
+                      <option value="Investidor">Sou um investidor</option> 
                       <option value="Osc">Sou uma Organização Social Civil (OSC)</option>                      
                   </select>
                   
@@ -100,18 +101,56 @@
                 </div><!-- .col -->
              
                                    <!--::::::::::::::: cards_Perfil::::::::::::::::::::::::::::-->
+    
+                    <div class="col-12 col-lg-7" ">
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between"> 
 
-                    <div class="col-xs-12 col-lg-3 cause-wrap d-flex flex-wrap justify-content-between bg-success" style="margin-right:10px">
-                        <h3 class="text-white">Perfil Investidor</h3>
-                        <p class="text-white text-justify">O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituição que estão na nossa base....</p>
+
+                    <header class="entry-header  flex-wrap align-items-center">
+
+<h3 class="entry-title w-100 m-0">Formas de Acesso</h3>  
+
+                  
+</header><!-- .entry-header -->
+
+
+<div class="card-body">  
+
+
+<div class="form-group">
+<label for="name"><strong>Perfil Investidor</strong></label>
+<p class="text-justify">
+
+O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base...
+</p>
+
+</div>
+
+<div class="form-group">
+<label for="name"><strong>Perfil OSC</strong></label>
+<p class="text-justify">
+
+Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...
+</p>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+                       
                     </div>
-                    
-                    <!-- .cause-wrap -->
-                    <div class="col-xs-12 col-lg-3  cause-wrap d-flex flex-wrap justify-content-between bg-info">
-                        <h3 class="text-white">Perfil OSC</h3>
-                        <p class="text-white text-justify">Com esse cadastro sua instituição irá ter a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...</p>
                     </div> 
-                
+
+                     
+                              
             </div><!-- .row -->
         </div><!-- .container -->
         </div>

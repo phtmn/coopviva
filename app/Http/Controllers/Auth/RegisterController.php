@@ -73,7 +73,7 @@ class RegisterController extends Controller
         ]);            
         //dd($user);
 
-        Alert::success( 'Nós enviamos um código de ativação. )','Verifique seu e-mail')->persistent('Ok');
+        Alert::success( 'Nós enviamos um código de ativação. ','Verifique seu e-mail')->persistent('Ok');
        
        // \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
        

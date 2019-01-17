@@ -38,7 +38,7 @@
             <div class="row">
                 
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-5">
                     <div class="cause-wrap  flex-wrap justify-content-between">
                         
                             <header class="entry-header  flex-wrap align-items-center">
@@ -143,20 +143,94 @@
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
              
-                <div class="col-12 col-lg-6">
-                    <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                        <p class="text-justify">
-Participe do COOPVIVA e faça parte da maior rede de cooperação viva e cidadã.
+                
+
+
+
+
+<div class="col-12 col-lg-7">
+                    <div class="cause-wrap  flex-wrap justify-content-between">
+                        
+                            <header class="entry-header  flex-wrap align-items-center">
+
+                                <h3 class="entry-title w-100 m-0">Participe do COOPVIVA!</h3>  
+                              
+                                                  
+                            </header><!-- .entry-header -->
+
+                  
+                            <div class="card-body">  
+
+        
+              <div class="form-group">
+                  <label for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
+                  <p class="text-justify">
+
 Para você que promove ações de sustentabilidade seja com projetos educacionais, ambientais, sociais, esportivos, culturais de saúde, criança e adolescente ou idoso.
-Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.
-Basta se cadastrar no formulário ao lado e assim que validado seu contato entraremos em contato.
-Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento <a href="#" class="text-success">contato@redeconexao.com.br</a>, ou pelo telefone: <strong class="text-muted">83 3034-1663</strong></p>
+<p class="text-justify">Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.</p>
+Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entraremos em contato. </p>
+<p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
+                  
+              </div>
+
+              
+
+        
+          
+                           
+    </div>
+              
                        
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div><!-- .row -->
         </div><!-- .container -->
         </div>
+        
         </br>
     </div><!-- .featured-cause -->
 @stop

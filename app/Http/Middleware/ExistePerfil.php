@@ -28,7 +28,7 @@ class ExistePerfil
             //Alert::info('Você precisa preencher alguns dados para continua)',':)')->persistent('x');
             // \Session::flash('mensagem',['msg'=>'Você precisa preencher alguns dados para continuar','class'=>'alert alert-warning']);
              //dd('nao tem perfil');
-             Alert::info('Você precisa preencher seus dados para realizar um investimento','Atenção!')->persistent('x');
+            // Alert::info('Você precisa preencher seus dados para realizar um investimento','Atenção!')->persistent('x');
              return redirect()->route('site.perfil');
          }
        
