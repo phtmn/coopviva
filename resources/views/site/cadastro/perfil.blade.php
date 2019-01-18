@@ -113,9 +113,9 @@
 <div class="card-body">  
 
 
-<div class="form-group">
-<label for="name"><strong>Perfil Investidor</strong></label>
-<p class="text-justify">
+    <div class="form-group">
+    <label for="name"><strong>Perfil Investidor</strong></label>
+    <p class="text-justify">
 
 O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base...
 </p>

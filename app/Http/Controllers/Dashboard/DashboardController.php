@@ -10,14 +10,9 @@ use App\Models\Osc;
 
 class DashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth', 'existe.perfil']);
-    }
-
 
     public function index(){
-        $tab = 'dashboard';
-        return view('dashboard.index',compact('tab'));
+
+        return view('dashboard.index',['tab'=>'dashboard']);
     }
 }

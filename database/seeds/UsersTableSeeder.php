@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
+use App\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -14,35 +14,30 @@ class UsersTableSeeder extends Seeder
     {
         User::create([           
                
-            'name'      => 'Investidor',
-            'email'     => 'investidor@email.com',
-            'password'  => bcrypt('123456'),
-            'uf'        => 'PB',
-            'sexo'      => 'M',
-            'cidade'    => 'João Pessoa'
+            'name'          => 'Investidor',
+            'email'         => 'investidor@email.com',
+            'password'      => bcrypt('123456'),
+            'uf'            => 'PB',
+            'sexo'          => 'M',
+            'cidade'        => 'João Pessoa',
+            'tipo_usuario'  => 'investidor',
+            'tipo'          => 'PF'
                
         ]);
 
         User::create([           
                
-            'name'      => 'Osc',
-            'email'     => 'osc@email.com',
-            'password'  => bcrypt('123456'),
-            'uf'        => 'PB',
-            'sexo'      => 'M',
-            'cidade'    => 'João Pessoa'
+            'name'          => 'Osc',
+            'email'         => 'osc@email.com',
+            'password'      => bcrypt('123456'),
+            'uf'            => 'PB',
+            'sexo'          => 'M',
+            'cidade'        => 'João Pessoa',
+            'tipo_usuario'  => 'osc',
+            'tipo'          => 'PJ'
                
         ]);
 
-        User::create([           
-               
-            'name'      => 'Investidor_Osc',
-            'email'     => 'investidor-osc@email.com',
-            'password'  => bcrypt('123456'),
-            'uf'        => 'PB',
-            'sexo'      => 'M',
-            'cidade'    => 'João Pessoa'
-               
-        ]);
+
     }
 }

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
+use App\Mail\VerifyMail;
+use Illuminate\Support\Facades\Mail;
+use App\Models\VerifyUser;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'entrar';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -50,9 +54,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'name'          => ['required', 'string', 'max:255'],
+            'email'         => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password'      => ['required', 'string', 'min:6', 'confirmed'],
+            'tipo_usuario'  => ['required','string']
         ]);
     }
 
@@ -60,25 +65,63 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create(array $data)
     {
-           
+           //dd($data);
         $user = User::create([
             'name'          => $data['name'],
-            'email'         => $data['email'],           
+            'email'         => $data['email'],
+            'tipo_usuario'  => $data['tipo_usuario'],
+            'tipo'          => $data['tipo'],
             'password'      => Hash::make($data['password']),
             'uf'            => $data['uf'],           
-        ]);            
-        //dd($user);
+        ]);
 
-        Alert::success( 'Nós enviamos um código de ativação. ','Verifique seu e-mail')->persistent('Ok');
-       
-       // \Session::flash('mensagem',['msg'=>'Nós enviamos um código de ativação. Verifique seu e-mail e clique no link de verificação.','class'=>'alert-success']);
-       
+
+        $verifyUser = VerifyUser::create([
+            'user_id'   => $user->id,
+            'token'     => sha1(time()),
+        ]);
+
+        Mail::to($user->email)->send(new VerifyMail($user));
+
+        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+
         return $user;
 
        
+    }
+    public function verifyUser($token)
+    {
+        $verifyUser = VerifyUser::where('token', $token)->first();
+        if(isset($verifyUser) ){
+            $user = $verifyUser->user;
+            if(!$user->verified) {
+                $verifyUser->user->verified = 1;
+                $verifyUser->user->save();
+                $status = 'active';
+            }else{
+                $status = 'activated';
+            }
+        }else{
+            Alert::error( 'Não indentificamos sua conta em nosso sistema =(','Eita!')->persistent('Ok');
+            return redirect('/entrar');
+        }
+        if($status == 'activated'){
+            Alert::warning( 'Sua Conta ja foi Ativada','Keep Calm')->persistent('Ok');
+            return redirect('/entrar');
+        }
+        Alert::success( 'Uau Obrigado por ativar sua conta','Bom Trabalho!!!')->persistent('Ok');
+        return redirect('/entrar');
+    }
+
+    protected function registered(Request $request, $user)
+    {
+        $this->guard()->logout();
+        //We sent you an activation code. Check your email and click on the link to verify.
+        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+        return redirect('/');
     }
 }

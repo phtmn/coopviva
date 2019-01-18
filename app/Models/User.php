@@ -1,9 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -16,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','uf','cidade'
+        'name', 'email', 'password','uf','cidade','tipo_usuario','tipo'
     ];
 
     /**
@@ -28,17 +27,26 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function verifyUser(){
+        return $this->hasOne(VerifyUser::class);
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new MyResetPasswordNotification($token));
+    }
+
     public function perfil(){
-        return $this->hasOne(\App\Models\Perfil::class);
+        return $this->hasOne(Perfil::class);
 
     }
 
     public function projetos(){
-        return $this->hasMany(Model\Projeto::class);
+        return $this->hasMany(Projeto::class);
     }
 
     public function oscs(){
-        return $this->hasMany(Models\Osc::class);
+        return $this->hasOne(Osc::class);
     }
     
 }

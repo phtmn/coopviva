@@ -14,7 +14,6 @@
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
                                     <h4> Cadastro no Sistema</h4>
-                                    
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -33,17 +32,11 @@
 
 
 <div class="featured-cause">
-        <div class="container">           
-
+        <div class="container">
             <div class="row">
-                
-
                 <div class="col-12 col-lg-5">
                     <div class="cause-wrap  flex-wrap justify-content-between">
-                        
                             <header class="entry-header  flex-wrap align-items-center">
-
-                              
                             @if ($errors->any())
                                 <div class="alert alert-danger">
                                     <ul>
@@ -61,7 +54,7 @@
                             @endif
 
 
-                                <h3 class="entry-title w-100 m-0">Não tenho cadastro!</h3>  
+                                <h3 class="entry-title w-100 m-0">Não tenho cadastro</h3>
                               
                                                   
                             </header><!-- .entry-header -->
@@ -74,13 +67,35 @@
               <div class="form-group">
                   <label for="name">Como se chama?</label>
                   <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
-                  
+              </div>
+
+              <div class="form-group">
+                  <label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
+                  <select name="tipo_usuario" id="" class="form-control">
+                      <option value="investidor">Como um investidor</option>
+                      <option value="osc">Como uma OSC (Organização Social Civil)</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <div class="form-group" style="margin-left: 25px">
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="tipo" id="inlineRadio1" value="PF"
+                                 onclick="monstraCPF()">
+                          <label class="form-check-label" for="inlineRadio1">Pessoa Física</label>
+                      </div>
+                      <br>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="tipo" id="inlineRadio2" value="PJ">
+                          <label class="form-check-label" for="inlineRadio2">Pessoa Jurídica</label>
+                      </div>
+                  </div>
               </div>
 
               <div class="form-group">
                   <label for="name">Selecione o seu Estado?</label>
                   <select name="uf" id="" class="form-control">
-                      <option value="#">Selecione...</option> //TODO -- incluir as siglas dos estados
+                      <option value="#">Selecione...</option>
                       <option value="AC">AC - Acre</option>
                       <option value="AL">AL - Alagoas</option>
                       <option value="AP">AP - Amapá</option>
@@ -108,14 +123,9 @@
                       <option value="SP">SP - São Paulo</option>
                       <option value="SE">SE - Sergipe</option>
                       <option value="TO">TO - Tocantins</option>
-
                   </select>
                   
               </div>
-
-              <!-- TODO Criar o select para cidades baseado no estado selecionado -->  
-                  <!-- Criar aqui o select -->
-              <!-- Fim TODO -->
 
               <div class="form-group">
                   <label for="email">E-mail</label>
@@ -150,18 +160,18 @@
 
 <div class="col-12 col-lg-7">
                     <div class="cause-wrap  flex-wrap justify-content-between">
-                        
+
                             <header class="entry-header  flex-wrap align-items-center">
 
-                                <h3 class="entry-title w-100 m-0">Participe do COOPVIVA!</h3>  
-                              
-                                                  
+                                <h3 class="entry-title w-100 m-0">Participe do COOPVIVA!</h3>
+
+
                             </header><!-- .entry-header -->
 
-                  
-                            <div class="card-body">  
 
-        
+                            <div class="card-body">
+
+
               <div class="form-group">
                   <label for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
                   <p class="text-justify">
@@ -170,14 +180,14 @@ Para você que promove ações de sustentabilidade seja com projetos educacionai
 <p class="text-justify">Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.</p>
 Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entraremos em contato. </p>
 <p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
-                  
+
               </div>
 
-              
 
-        
-          
-                           
+
+
+
+
     </div>
               
                        

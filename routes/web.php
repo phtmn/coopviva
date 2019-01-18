@@ -1,5 +1,6 @@
 <?php
-Auth::routes(['verify'=>false,'active'=>'']);
+Auth::routes(['verify'=>true]);
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 //Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW 
 Route::view('/','site.index', ['active' => 'home']);
@@ -15,7 +16,7 @@ Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.log
 Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
 
 //Rotas para dashboards do site
-Route::group(['middleware'=>['auth'],'prefix'=>'dashboard'],function(){
+Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(){
 
     Route::get('/','Dashboard\DashboardController@index')->name('dashboard.index'); 
     

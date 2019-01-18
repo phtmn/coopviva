@@ -2,71 +2,75 @@
 
 @section('content')
     @include('dashboard.menu')
-<div class="container">      
+<div class="container">
 
-        <form action="{{ route('osc.store') }}" method="POST">
-            @csrf
+        @if( $osc)
+            {!! Form::model($osc, [ 'route' => ['osc.update', $osc->id ],'method'=>'PUT']) !!}
+            @method('PUT')
+        @else
+            {!! Form::open(['route'=>'osc.store']) !!}
+        @endif
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="">Nome Fantasia</label>
-                <input type="text" name="nome_fantasia" class="form-control">
+                {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-2">
                 <label for="">Sigla</label>
-                <input type="text" name="sigla_osc" class="form-control">
+                {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-2">
                 <label for="">Ano Fundação</label>
-                <input type="text" name="ano_fundacao" class="form-control">
+                {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-2">
                 <label for="">Ano Inscrição CNPJ</label>
-                <input type="text" name="ano_inscricao_cnpj" class="form-control">
+                {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="">Responsável Legal</label>
-                <input type="text" name="responsavel_legal" class="form-control">
+                {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-4">
                 <label for="">Email do Responsável</label>
-                <input type="text" name="email" class="form-control">
+                {!! Form::text('email',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-2">
                 <label for="">Telefone</label>
-                <input type="text" name="telefone" class="form-control">
+                {!! Form::text('telefone',null,['class'=>'form-control']) !!}
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="">Site</label>
-                <input type="text" name="site" class="form-control">
+                {!! Form::text('site',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-4">
                 <label for="">Situacao do Imóvel</label>
-                <input type="text" name="situacao_imovel" class="form-control">
+                {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-4">
                 <label for="">Atividade Econômica</label>
-                <input type="text" name="atividade_economica" class="form-control">
+                {!! Form::text('atividade_economica',null,['class'=>'form-control']) !!}
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="">Area de Atuação</label>
-                <input type="text" name="area_atuacao" class="form-control">
+                {!! Form::text('area_atuacao',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-4">
                 <label for="">Sub-Área 01</label>
-                <input type="text" name="sub_area1" class="form-control">
+                {!! Form::text('sub_area1',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-4">
                 <label for="">Sub-Área 02</label>
-                <input type="text" name="sub_area2" class="form-control">
+                {!! Form::text('sub_area2',null,['class'=>'form-control']) !!}
             </div>
         </div>
 
@@ -76,6 +80,6 @@
             </div>
         </div>
 
-        </form>
+        {!! Form::close() !!}
 </div>
 @endsection

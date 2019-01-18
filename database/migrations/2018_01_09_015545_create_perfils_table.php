@@ -19,16 +19,11 @@ class CreatePerfilsTable extends Migration
             $table->string('nome_completo')->nullable();
             $table->date('data_nascimento')->nullable();
             $table->string('telefone_principal')->nullable();
+            $table->string('email')->nullable();
             $table->string('cpf')->unique()->nullable();
             $table->string('cnpj')->unique()->nullable();
             $table->string('razao_social')->nullable();
             $table->string('nome_fantasia')->nullable();
-            $table->string('cep')->nullable();
-            $table->string('endereco')->nullable();
-            $table->string('cidade')->nullable();
-            $table->string('estado')->nullable();
-            $table->string('complemento')->nullable();
-            $table->string('tipo_perfil')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

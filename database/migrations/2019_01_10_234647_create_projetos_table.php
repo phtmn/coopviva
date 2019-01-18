@@ -24,24 +24,6 @@ class CreateProjetosTable extends Migration
             $table->string('num_registro2')->nullable();
             $table->string('segmento_cultural')->nullable();
             $table->string('artigo')->nullable();
-            
-            $table->string('banco_patrocinio')->nullable();
-            $table->string('banco_agencia_patrocinio')->nullable();
-            $table->string('banco_conta_patrocinio')->nullable();
-
-            $table->string('banco_doacao')->nullable();
-            $table->string('banco_agencia_doacao')->nullable();
-            $table->string('banco_conta_doacao')->nullable();
-            
-            $table->string('nome_prop')->nullable();
-            $table->string('documento_prop')->nullable();
-            $table->string('assinatura')->nullable();
-            $table->string('responsável_empresa')->nullable();
-            $table->string('telefone_1')->nullable();
-            $table->string('telefone_2')->nullable();
-            $table->string('email_principal')->nullable();
-            $table->string('email_secundario')->nullable();
-
             $table->decimal('valor_meta',24,2)->default(0);
                                   
             $table->timestamps();

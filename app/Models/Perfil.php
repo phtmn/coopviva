@@ -2,13 +2,32 @@
 
 namespace App\Models;
 
+use App\Scopes\User\UserScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Perfil extends Model
 {
-   protected $fillable = [ 'nome_completo','tipo_perfil', 'data_nascimento', 'telefone_principal', 'cpf', 'cnpj', 'razao_social', 'nome_fantasia', 'cep', 'endereco', 'cidade', 'estado', 'complemento'];
+    public static function boot(){
+        parent::boot();
+        static::addGlobalScope(new UserScope());
+    }
 
-   public function usuario(){
-       return $this->BelongsTo(\App\User::class);
-   }
+    protected $fillable = [
+        'nome_completo',
+        'data_nascimento',
+        'telefone_principal',
+        'cpf',
+        'cnpj',
+        'razao_social',
+        'nome_fantasia',
+        'cep',
+        'rua',
+        'endereco',
+        'cidade',
+        'estado',
+        'complemento'];
+
+    public function usuario(){
+       return $this->BelongsTo(\App\Models\User::class);
+    }
 }

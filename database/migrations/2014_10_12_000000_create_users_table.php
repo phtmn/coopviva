@@ -17,11 +17,12 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->enum('tipo_usuario',['investidor','osc']);
+            $table->enum('tipo',['PF','PJ']);
             $table->string('password');
             $table->string('sexo')->nullable();
             $table->string('uf')->nullable();
-            $table->string('cidade')->nullable(); 
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('cidade')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
