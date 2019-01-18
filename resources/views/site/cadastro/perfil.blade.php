@@ -37,7 +37,7 @@
             <div class="row">
                 
 
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-6">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between">
                         
                             <header class="entry-header d-flex flex-wrap align-items-center">
@@ -98,7 +98,7 @@
              
                                    <!--::::::::::::::: cards_Perfil::::::::::::::::::::::::::::-->
     
-                    <div class="col-12 col-lg-7" ">
+                    <div class="col-12 col-lg-6" ">
                     <div class="cause-wrap d-flex flex-wrap justify-content-between"> 
 
 
