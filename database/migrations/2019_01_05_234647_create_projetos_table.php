@@ -15,7 +15,6 @@ class CreateProjetosTable extends Migration
     {
         Schema::create('projetos', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
             $table->string('descricao');
             $table->string('imagem')->nullable();
             $table->string('instancia')->nullable();
@@ -25,10 +24,18 @@ class CreateProjetosTable extends Migration
             $table->string('segmento_cultural')->nullable();
             $table->string('artigo')->nullable();
             $table->decimal('valor_meta',24,2)->default(0);
-                                  
+
+            $table->unsignedInteger('osc_id');
+            $table->unsignedInteger('proponente_id');
+            $table->unsignedInteger('banco_patrocinio_id');
+            $table->unsignedInteger('banco_doacao_id');
+
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('osc_id')->references('id')->on('oscs')->onDelete('cascade');
+            $table->foreign('proponente_id')->references('id')->on('pessoas')->onDelete('cascade');
+            $table->foreign('banco_patrocinio_id')->references('id')->on('bancos')->onDelete('cascade');
+            $table->foreign('banco_doacao_id')->references('id')->on('bancos')->onDelete('cascade');
         });
     }
 

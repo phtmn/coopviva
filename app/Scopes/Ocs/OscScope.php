@@ -10,9 +10,9 @@ class OscScope implements Scope
 {
     public function apply(Builder $builder, Model $model)
     {
-        $user = auth()->user()->id;
-        //dd($user);
-        $builder->where('osc_id',$user);
+        $osc = auth()->user()->osc()->id;
+        //dd($osc);
+        $builder->where('osc_id',$osc);
     }
 
 }

@@ -15,7 +15,6 @@ class Osc extends Model
         'telefone',
         'site',
         'email',
-        'responsavel_legal',
         'ano_inscricao_cnpj',
         'situacao_imovel',
         'atividade_economica',

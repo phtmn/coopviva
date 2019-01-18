@@ -18,13 +18,8 @@
 
 
         <div class="col-md-8">
-                @if( $perfil)
-                    {!! Form::model($perfil, [ 'route' => ['perfil.update', $perfil->id ],'method'=>'PUT']) !!}
-                    @method('PUT')
-                @else
-                    {!! Form::open(['route'=>'perfil.store']) !!}
-                @endif
-
+            {!! Form::model($perfil, [ 'route' => ['perfil.update', $perfil->id ]]) !!}
+            @method('PUT')
                 <h5>Meus Dados</h5>
                     <div class="row">
                         <div class="form-group col-md-8">
@@ -57,8 +52,8 @@
 
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="telefone_principal">Telfone Principal</label>
-                           {!! Form::text('telefone_principal',null,['class'=> 'form-control']) !!}
+                            <label for="telefone">Telfone Principal</label>
+                           {!! Form::text('telefone',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
@@ -70,30 +65,30 @@
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="cep">Cep</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('cep',$endereco->cep,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-5">
                             <label for="rua">Rua/Logradouro</label>
-                            {!! Form::text('rua',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('rua',$endereco->rua,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-4">
                             <label for="cidade">Cidade</label>
-                            {!! Form::text('cidade',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('cidade',$endereco->cidade,['class'=> 'form-control']) !!}
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-2">
                             <label for="numero">Numero</label>
-                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('numero',$endereco->numero,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-3">
                             <label for="uf">Estado</label>
-                            {!! Form::text('uf',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('uf',$endereco->uf,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-7">
                             <label for="complemento">Complemento</label>
-                            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('complemento',$endereco->complemento,['class'=> 'form-control']) !!}
                         </div>
                     </div>
                         <input type="submit" value="Atualizar dados" class="btn orange-border">

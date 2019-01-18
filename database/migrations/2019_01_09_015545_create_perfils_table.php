@@ -15,19 +15,25 @@ class CreatePerfilsTable extends Migration
     {
         Schema::create('perfils', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
             $table->string('nome_completo')->nullable();
             $table->date('data_nascimento')->nullable();
-            $table->string('telefone_principal')->nullable();
+            $table->string('telefone')->nullable();
             $table->string('email')->nullable();
             $table->string('cpf')->unique()->nullable();
             $table->string('cnpj')->unique()->nullable();
             $table->string('razao_social')->nullable();
             $table->string('nome_fantasia')->nullable();
+
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('endereco_id');
+            $table->unsignedInteger('banco_id');
+
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-        
+            $table->foreign('endereco_id')->references('id')->on('enderecos');
+            $table->foreign('banco_id')->references('id')->on('bancos');
+
         });
     }
 

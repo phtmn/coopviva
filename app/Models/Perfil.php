@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Perfil extends Model
 {
+
     public static function boot(){
         parent::boot();
-        static::addGlobalScope(new UserScope());
+            static::addGlobalScope(new UserScope());
     }
 
     protected $fillable = [
@@ -22,12 +23,21 @@ class Perfil extends Model
         'nome_fantasia',
         'cep',
         'rua',
+        'numero',
         'endereco',
         'cidade',
         'estado',
         'complemento'];
 
     public function usuario(){
-       return $this->BelongsTo(\App\Models\User::class);
+       return $this->BelongsTo(User::class);
+    }
+
+    public function endereco(){
+        return $this->belongsTo(Endereco::class)->first();
+    }
+
+    public function banco(){
+        return $this->belongsTo(Banco::class)->first();
     }
 }

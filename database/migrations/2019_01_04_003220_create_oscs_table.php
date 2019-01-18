@@ -19,12 +19,11 @@ class CreateOscsTable extends Migration
             $table->string('nome_fantasia')->nullable();
             $table->string('sigla_osc');
             $table->string('situacao_imovel')->nullable();
-            $table->string('responsavel_legal')->nullable();
             $table->string('ano_inscricao_cnpj')->nullable();
             $table->string('ano_fundacao')->nullable();
             $table->string('email')->unique()->nullable();
-            $table->string('decricao_osc')->nullable();
             $table->string('site')->nullable();
+            $table->string('descricao_osc')->nullable();
             $table->string('telefone')->nullable();
             $table->string('objetivo_ods')->nullable();
             $table->string('metas_ods')->nullable();
@@ -39,10 +38,7 @@ class CreateOscsTable extends Migration
             $table->string('link_estatuto_osc')->nullable();	
             $table->timestamps();
 
-            $table->foreign('user_id')
-                    ->references('id')
-                    ->on('users')
-                    ->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

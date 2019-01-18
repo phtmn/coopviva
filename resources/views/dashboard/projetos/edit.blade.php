@@ -24,7 +24,9 @@
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
                 </li>
             </ul>
-                {{ Form::open(['route'=>'projetos.store']) }}
+            {{ Form::model($projeto,['route'=>['projetos.update',$projeto->id] ]) }}
+                @csrf
+                @method('PUT')
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
@@ -87,40 +89,40 @@
                         <div class="row"><!--row-4-->
                             <div class="form-group col-md-6">
                             {!! Form::label('Nome do Proponente') !!}
-                            {!! Form::text('nome',null,['class'=>'form-control']) !!}
+                            {!! Form::text('nome',$proponente->nome,['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
                             {!! Form::label('cpf') !!}
-                            {!! Form::text('cpf',null,['class'=>'form-control']) !!}
+                            {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
                                 {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',null,['class'=>'form-control','placeholder'=>'CPF ou CNPJ']) !!}
+                                {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','placeholder'=>'CPF ou CNPJ']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 
                         <div class="row"><!--row-5-->
                             <div class="form-group col-md-4">
                             {!! Form::label('Numero de Telefone') !!}
-                            {!! Form::text('telefone_1',null,['class'=>'form-control','id'=>'phone_number']) !!}
+                            {!! Form::text('telefone_1',$proponente->telefone_1,['class'=>'form-control','id'=>'phone_number']) !!}
                             </div>
 
                             <div class="form-group col-md-4">
                             {!! Form::label('Numero de Telefone 2') !!}
-                            {!! Form::text('telefone_2',null,['class'=>'form-control','id'=>'phone_number']) !!}
+                            {!! Form::text('telefone_2',$proponente->telefone_2,['class'=>'form-control','id'=>'phone_number']) !!}
                             </div>
                         </div><!--end-of-row-5-->
 
                         <div class="row"><!--row-6-->
                             <div class="form-group col-md-6">
                             {!! Form::label('Email Principal') !!}
-                            {!! Form::email('email_1',null,['class'=>'form-control']) !!}
+                            {!! Form::email('email_1',$proponente->email_1,['class'=>'form-control']) !!}
                             </div>
                             <div class="form-group col-md-6">
                             {!! Form::label('Email Secundário') !!}
-                            {!! Form::email('email_2',null,['class'=>'form-control']) !!}
+                            {!! Form::email('email_2',$proponente->email_2,['class'=>'form-control']) !!}
                             </div>
                         </div><!--end-of-row-6-->
                     {{--fimDadosResponsavel--}}
@@ -130,26 +132,26 @@
                             <div class="row"><!--row-3-->
                                 <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
-                                {!! Form::select('banco_doacao',[
-                                'CEF'   =>  "Caixa Economica Federal",
-                                'BB'    =>  "Banco do Brasil",
-                                'SA'    =>  "Banco Santander",
-                                'IT'    =>  "Banco Itaú"
-                                ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                    {!! Form::select('banco_docao',[
+                                        'CEF'   =>  "Caixa Economica Federal",
+                                        'BB'    =>  "Banco do Brasil",
+                                        'SA'    =>  "Banco Santander",
+                                        'IT'    =>  "Banco Itaú"
+                                    ],$bancoDoacao->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-3">
                                 {!! Form::label('Agencia') !!}
-                                {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
+                                {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-3">
                                 {!! Form::label('Conta') !!}
-                                {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
+                                {!! Form::text('conta_doacao',$bancoDoacao->conta,['class'=>'form-control']) !!}
                                 </div>
                                 <div class="form-group col-md-3">
                                     {!! Form::label('Conta DV') !!}
-                                    {!! Form::text('contaDV_doacao',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDV_doacao',$bancoDoacao->contaDV,['class'=>'form-control']) !!}
                                 </div>
                             </div><!--end-of-row-3-->
 
@@ -162,28 +164,28 @@
                             'BB'    =>  "Banco do Brasil",
                             'SA'    =>  "Banco Santander",
                             'IT'    =>  "Banco Itaú"
-                            ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ],$bancoPatrocinio->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Agencia') !!}
-                            {!! Form::text('agencia_patrocinio',null,['class'=>'form-control']) !!}
+                            {!! Form::text('agencia_patrocinio',$bancoPatrocinio->agencia,['class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Conta') !!}
-                            {!! Form::text('conta_patrocinio',null,['class'=>'form-control']) !!}
+                            {!! Form::text('conta_patrocinio',$bancoPatrocinio->conta,['class'=>'form-control']) !!}
                         </div>
                         <div class="form-group col-md-3">
                             {!! Form::label('Conta Dv') !!}
-                            {!! Form::text('contaDv_patrocinio',null,['class'=>'form-control']) !!}
+                            {!! Form::text('contaDv_patrocinio',$bancoPatrocinio->contaDV,['class'=>'form-control']) !!}
                         </div>
                     </div><!--end-of-row-3-->
 
                             <div class="row">
                                 <div class="form-group col-md-6 pull-right">
                                     {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true']) !!}
+                                    {!! Form::text('valor_meta',$projeto->valor_meta,['class'=>'input input-lg form-control','required'=>'true']) !!}
                                 </div>
                             </div>
 
@@ -191,7 +193,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
-                {!! Form::close() !!}
+            {!! Form::close() !!}
             </div>
         </div>
     </div>

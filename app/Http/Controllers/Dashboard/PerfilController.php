@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Models\Banco;
+use App\Models\Endereco;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Perfil;
@@ -9,19 +11,44 @@ use Auth;
 use Alert;
 
 class PerfilController extends Controller
-{   
+{
 
     public function create(){
 
-        return view('dashboard.perfil.create-edit',[
+        $perfil = Perfil::first();
+        if($perfil){
+            return view('dashboard.perfil.edit',[
+                'tab'       => 'perfil',
+                'perfil'    => $perfil,
+                'endereco'  => $perfil->endereco(),
+                'banco'     => $perfil->banco()
+            ]);
+        }
+        return view('dashboard.perfil.create',[
             'tab'       => 'perfil',
-            'perfil'    => Perfil::first()
         ]);
     }
 
     public function store(Request $request){
 
-        $perfil = $request->user()->perfil()->create($request->all());
+        $dados      = $request->all();
+        $endereco   = Endereco::create($dados);
+        $banco      = Banco::create($dados);
+
+        $perfil                     = new Perfil();
+        $perfil->nome_completo      = $request->nome_completo;
+        $perfil->data_nascimento    = $request->data_nascimento;
+        $perfil->telefone           = $request->telefone;
+        $perfil->email              = $request->email;
+        $perfil->cpf                = $request->cpf;
+        $perfil->cnpj               = $request->cnpj;
+        $perfil->razao_social       = $request->razao_social;
+        $perfil->nome_fantasia      = $request->nome_fantasia;
+        $perfil->endereco_id        = $endereco->id;
+        $perfil->banco_id           = $banco->id;
+        $perfil->user_id            = $request->user()->id;
+
+        $perfil->save();
 
         if($perfil){
             Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
@@ -33,7 +60,22 @@ class PerfilController extends Controller
 
     public function update(Request $request,$id){
 
-        $perfil = Perfil::first()->update($request->all());
+        $perfil = Perfil::first();
+
+        $dados      = $request->all();
+        $endereco   = $perfil->endereco()->update($dados);
+        $banco      = $perfil->banco()->update($dados);
+
+        $perfil->nome_completo      = $request->nome_completo;
+        $perfil->data_nascimento    = $request->data_nascimento;
+        $perfil->telefone           = $request->telefone;
+        $perfil->email              = $request->email;
+        $perfil->cpf                = $request->cpf;
+        $perfil->cnpj               = $request->cnpj;
+        $perfil->razao_social       = $request->razao_social;
+        $perfil->nome_fantasia      = $request->nome_fantasia;
+
+        $perfil->save();
 
         if($perfil){
             Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');

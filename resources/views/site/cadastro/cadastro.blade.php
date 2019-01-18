@@ -71,23 +71,22 @@
 
               <div class="form-group">
                   <label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
-                  <select name="tipo_usuario" id="" class="form-control">
+                  <select name="tipo_usuario" id="tipo-perfil" class="form-control">
                       <option value="investidor">Como um investidor</option>
                       <option value="osc">Como uma OSC (Organização Social Civil)</option>
                   </select>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="box-tipo-usuario">
                   <div class="form-group" style="margin-left: 25px">
                       <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="tipo" id="inlineRadio1" value="PF"
-                                 onclick="monstraCPF()">
-                          <label class="form-check-label" for="inlineRadio1">Pessoa Física</label>
+                          <input class="form-check-input" type="radio" name="tipo" id="radioPF" value="PF">
+                          <label class="form-check-label" for="radioPF">Pessoa Física</label>
                       </div>
                       <br>
                       <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="tipo" id="inlineRadio2" value="PJ">
-                          <label class="form-check-label" for="inlineRadio2">Pessoa Jurídica</label>
+                          <input class="form-check-input" type="radio" name="tipo" id="radioPJ" value="PJ">
+                          <label class="form-check-label" for="radioPJ">Pessoa Jurídica</label>
                       </div>
                   </div>
               </div>
@@ -182,19 +181,29 @@ Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entr
 <p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
 
               </div>
-
-
-
-
-
-
     </div>
-              
-                       
-                    </div><!-- .cause-wrap -->
-                </div><!-- .col -->
 
+        </div><!-- .cause-wrap -->
+    </div><!-- .col -->
 
+@section('js')
+    <script>
+        $(document).ready(function(){
+            let tipoPerfil      = $('#tipo-perfil');
+            let boxTipoUsuario  = $('#box-tipo-usuario');
+            let radioPJ         = $('#radioPJ');
+            tipoPerfil.change(function(){
+                if(tipoPerfil.val() === 'osc'){
+                    boxTipoUsuario.css({'display':'none'});
+                    radioPJ.attr('checked', true);
+                }else{
+                    boxTipoUsuario.css({'display':'block'});
+                    radioPJ.attr('checked', false);
+                }
+            })
+        });
+    </script>
+@stop
 
 
 
