@@ -113,7 +113,7 @@ class RegisterController extends Controller
             Alert::warning( 'Sua Conta ja foi Ativada','Keep Calm')->persistent('Ok');
             return redirect('/entrar');
         }
-        Alert::success( 'Uau Obrigado por ativar sua conta','Bom Trabalho!!!')->persistent('Ok');
+        Alert::success( 'Obrigado por ativar sua conta','Bom Trabalho!!!')->persistent('Ok');
         return redirect('/entrar');
     }
 
