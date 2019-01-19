@@ -1,7 +1,7 @@
 @extends('site.master')
 @section('content')
 
-
+@include('dashboard.menu')
 
 
 

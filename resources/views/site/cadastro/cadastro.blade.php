@@ -72,8 +72,8 @@
               <div class="form-group">
                   <label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
                   <select name="tipo_usuario" id="tipo-perfil" class="form-control">
-                      <option value="Investidor">Perfil Investidor</option>
-                      <option value="OSC">Perfil OSC (Organização Social Civil)</option>
+                      <option value="investidor">Perfil Investidor</option>
+                      <option value="osc">Perfil OSC (Organização Social Civil)</option>
                   </select>
               </div>
 
