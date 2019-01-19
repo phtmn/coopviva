@@ -4,18 +4,18 @@
     @include('dashboard.menu')
     <div class="container">
         <div class="button" style="margin-top:10px">
-            <a href="{{route('projetos.create')}}" class="btn orange-border">Incluir Projeto</a>
+            <a href="{{route('projetos.create')}}" class="btn gradient-bg">Novo Projeto</a>
         </div>
 
-        <div class="table" style="margin-top:20px">
-            <table class="table table-bordered table-hover">
+        <div  class="table" style="margin-top:20px">
+            <table  class="table table-responsive table-hover ">
                 <thead>
                     <tr>
-                        <th>Descricao do Projeto</th>
-                        <th>Instancia</th>
+                        <th>Nome Do Projeto</th>
+                        <th>Instância</th>
                         <th>Segmento cultural</th>
-                        <th>Valor_meta</th>
-                        <th></th>
+                        <th>Valor Do Projeto</th>
+                        <th>#</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@
                 </tbody>
             </table>
 
-        </div>
+        </div>  
     </div>
     
 

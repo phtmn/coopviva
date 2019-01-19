@@ -77,7 +77,7 @@
                                     <input type="password" name="password" class="form-control" placeholder="Digite sua senha">
                                 </div>
                                 <div class="form-group">
-                                        <center> <a href="">Esqueci minha senha</a> </center>
+                                        <center> <a href="{{url('/password/reset') }}">Esqueceu sua senha?</a> </center>
                                 </div> 
 
                                 <div class="form-group">
@@ -103,16 +103,16 @@
 <div class="card-body">
 
 
-<div class="form-group">
-<label for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
-<p class="text-justify">
+    <div class="form-group">
+    <label class="text-justify" for="name">Faça parte da maior rede de cooperação viva e cidadã.</label>
+    <p class="text-justify">
 
-Para você que promove ações de sustentabilidade seja com projetos educacionais, ambientais, sociais, esportivos, culturais de saúde, criança e adolescente ou idoso.
-<p class="text-justify">Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.</p>
-Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entraremos em contato. </p>
-<p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
+    Para você que promove ações de sustentabilidade seja com projetos educacionais, ambientais, sociais, esportivos, culturais de saúde, criança e adolescente ou idoso.
+    <p class="text-justify">Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.</p>
+    <p class="text-justify"> Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entraremos em contato. </p>
+    <p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
 
-</div>
+    </div>
 
 </div>              
 

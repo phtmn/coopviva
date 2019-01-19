@@ -37,12 +37,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Nome">Telfone Principal</label>
+                        <label for="Nome">Telefone Principal</label>
                        {!! Form::text('telefone_principal',null,['class'=> 'form-control']) !!}  
                     </div>
 
                     <div class="form-group">
-                        <label for="Nome">Cep</label>
+                        <label for="Nome">CEP</label>
                         <input type="text" name="cep" class="form-control" value="{{$perfil->cep}}">    
                     </div>
 

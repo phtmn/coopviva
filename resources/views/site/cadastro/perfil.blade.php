@@ -104,32 +104,32 @@
 
                     <header class="entry-header  flex-wrap align-items-center">
 
-<h3 class="entry-title w-100 m-0">Formas de Acesso</h3>  
+                    <h3 class="entry-title w-100 m-0">Formas de Acesso</h3>  
 
-                  
-</header><!-- .entry-header -->
-
-
-<div class="card-body">  
+                                    
+                    </header><!-- .entry-header -->
 
 
-    <div class="form-group">
-    <label for="name"><strong>Perfil Investidor</strong></label>
-    <p class="text-justify">
+                    <div class="card-body">  
 
-O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base...
-</p>
 
-</div>
+                        <div class="form-group">
+                        <label for="name"><strong>Perfil Investidor</strong></label>
+                        <p class="text-justify">
 
-<div class="form-group">
-<label for="name"><strong>Perfil OSC</strong></label>
-<p class="text-justify">
+                    O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base...
+                    </p>
 
-Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...
-</p>
+                    </div>
 
-</div>
+                    <div class="form-group">
+                    <label for="name"><strong>Perfil OSC</strong></label>
+                    <p class="text-justify">
+
+                    Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados...
+                    </p>
+
+                    </div>
 
 
 

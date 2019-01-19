@@ -72,8 +72,8 @@
               <div class="form-group">
                   <label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
                   <select name="tipo_usuario" id="tipo-perfil" class="form-control">
-                      <option value="investidor">Como um investidor</option>
-                      <option value="osc">Como uma OSC (Organização Social Civil)</option>
+                      <option value="investidor">Perfil Investidor</option>
+                      <option value="osc">Perfil OSC (Organização Social Civil)</option>
                   </select>
               </div>
 
@@ -144,8 +144,8 @@
               <div class="form-group">
                   <div class="form-group" style="margin-left: 25px">
                       <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" name="termo_uso" value="termo_uso"        >
-                          <label class="form-check-label" >Aceito os Termos de Usos</label>
+                          <input class="form-check-input" type="checkbox" name="termo_uso" value="termo_uso" disabled="disabled" checked="checked"      >
+                          <label class="form-check-label" >Aceito os Termos de Uso</label>
                       </div>
                       <br>
                       
@@ -163,7 +163,61 @@
                     </div><!-- .cause-wrap -->
                 </div><!-- .col -->
              
-          
+
+
+
+                <div class="col-12 col-lg-6" ">
+                    <div class="cause-wrap d-flex flex-wrap justify-content-between"> 
+
+
+                    <header class="entry-header  flex-wrap align-items-center">
+
+                    <h3 class="entry-title w-100 m-0">Perfis de Acesso!</h3>  
+
+                                    
+                    </header><!-- .entry-header -->
+
+
+                    <div class="card-body">  
+
+
+                        <div class="form-group">
+                        <label for="name"><strong>Perfil Investidor</strong></label>
+                        <p class="text-justify">
+
+                    O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base.
+                    </p>
+
+                    </div>
+
+                    <div class="form-group">
+                    <label for="name"><strong>Perfil OSC</strong></label>
+                    <p class="text-justify">
+
+                    Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados.
+                    </p>
+
+                    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+                       
+                    </div>
+                    </div> 
+
+                     
+                              
+            </div><!-- .row -->
+
+
 
 
 @section('js')

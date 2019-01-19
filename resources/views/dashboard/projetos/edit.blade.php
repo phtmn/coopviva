@@ -6,7 +6,7 @@
     <div class="container" style="margin-top:20px">
             <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Cadastro de Projeto</h3>
+                            <h3 class="card-title">Dados do Projeto</h3>
                         </div>
 
 
@@ -24,6 +24,7 @@
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
                 </li>
             </ul>
+            <hr>
             {{ Form::model($projeto,['route'=>['projetos.update',$projeto->id] ]) }}
                 @csrf
                 @method('PUT')
@@ -31,6 +32,7 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                 {{--TabDadosGerais--}}
+            
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
@@ -38,12 +40,12 @@
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Instancia') !!}
+                            {!! Form::label('Instância') !!}
                             {!! Form::text('instancia',null,['placeholder'=>'Selecione uma opção','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Ambito') !!}
+                            {!! Form::label('Âmbito') !!}
                             {!! Form::select('ambito',[
                                             'federal'   =>  "Federal",
                                             'estadual'  => "Estadual",
@@ -55,12 +57,12 @@
 
                     <div class="row"><!--row-2-->
                         <div class="form-group col-md-3">
-                            {!! Form::label('Numero de Registro 1') !!}
+                            {!! Form::label('Número de Registro 1') !!}
                             {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Numero de Registro 2') !!}
+                            {!! Form::label('Número de Registro 2') !!}
                             {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
                         </div>
 
@@ -93,7 +95,7 @@
                             </div>
 
                             <div class="form-group col-md-3">
-                            {!! Form::label('cpf') !!}
+                            {!! Form::label('CPF') !!}
                             {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control']) !!}
                             </div>
 
@@ -105,23 +107,23 @@
 
                         <div class="row"><!--row-5-->
                             <div class="form-group col-md-4">
-                            {!! Form::label('Numero de Telefone') !!}
+                            {!! Form::label('Telefone 1') !!}
                             {!! Form::text('telefone_1',$proponente->telefone_1,['class'=>'form-control','id'=>'phone_number']) !!}
                             </div>
 
                             <div class="form-group col-md-4">
-                            {!! Form::label('Numero de Telefone 2') !!}
+                            {!! Form::label('Telefone 2') !!}
                             {!! Form::text('telefone_2',$proponente->telefone_2,['class'=>'form-control','id'=>'phone_number']) !!}
                             </div>
                         </div><!--end-of-row-5-->
 
                         <div class="row"><!--row-6-->
                             <div class="form-group col-md-6">
-                            {!! Form::label('Email Principal') !!}
+                            {!! Form::label('E-mail Principal') !!}
                             {!! Form::email('email_1',$proponente->email_1,['class'=>'form-control']) !!}
                             </div>
                             <div class="form-group col-md-6">
-                            {!! Form::label('Email Secundário') !!}
+                            {!! Form::label('E-mail Secundário') !!}
                             {!! Form::email('email_2',$proponente->email_2,['class'=>'form-control']) !!}
                             </div>
                         </div><!--end-of-row-6-->
@@ -141,7 +143,7 @@
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                {!! Form::label('Agencia') !!}
+                                {!! Form::label('Agência') !!}
                                 {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
                                 </div>
 
@@ -150,7 +152,7 @@
                                 {!! Form::text('conta_doacao',$bancoDoacao->conta,['class'=>'form-control']) !!}
                                 </div>
                                 <div class="form-group col-md-3">
-                                    {!! Form::label('Conta DV') !!}
+                                    {!! Form::label('DV') !!}
                                     {!! Form::text('contaDV_doacao',$bancoDoacao->contaDV,['class'=>'form-control']) !!}
                                 </div>
                             </div><!--end-of-row-3-->
@@ -159,16 +161,13 @@
                     <div class="row"><!--row-3-->
                         <div class="form-group col-md-3">
                             {!! Form::label('Banco') !!}
-                            {!! Form::select('banco_patrocinio',[
-                            'CEF'   =>  "Caixa Economica Federal",
-                            'BB'    =>  "Banco do Brasil",
-                            'SA'    =>  "Banco Santander",
-                            'IT'    =>  "Banco Itaú"
+                            {!! Form::select('banco_patrocinio',[                            
+                            'BB'    =>  "Banco do Brasil"
                             ],$bancoPatrocinio->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Agencia') !!}
+                            {!! Form::label('Agência') !!}
                             {!! Form::text('agencia_patrocinio',$bancoPatrocinio->agencia,['class'=>'form-control']) !!}
                         </div>
 
@@ -177,7 +176,7 @@
                             {!! Form::text('conta_patrocinio',$bancoPatrocinio->conta,['class'=>'form-control']) !!}
                         </div>
                         <div class="form-group col-md-3">
-                            {!! Form::label('Conta Dv') !!}
+                            {!! Form::label('Dv') !!}
                             {!! Form::text('contaDv_patrocinio',$bancoPatrocinio->contaDV,['class'=>'form-control']) !!}
                         </div>
                     </div><!--end-of-row-3-->
@@ -192,10 +191,11 @@
                         {{--FimDadosFinaneiros--}}
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+           <center> <button type="submit" class="btn gradient-bg">Salvar</button> </center>
             {!! Form::close() !!}
             </div>
         </div>
+        <br>
     </div>
 @stop
 
