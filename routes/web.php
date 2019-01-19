@@ -23,7 +23,7 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
     Route::resource('osc','Dashboard\OscController');
     Route::resource('projetos','Dashboard\ProjetosController');
     Route::resource('perfil','Dashboard\PerfilController');
-    //Route::view('/investimentos/index','dashboard.investimentos.index',['tab'=>'investimentos'])->name('investimentos.index');
+    Route::resource('investimentos','Dashboard\InvestimentosController');
 });
 
 
