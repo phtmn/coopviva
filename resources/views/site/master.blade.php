@@ -12,7 +12,7 @@
 
 				gtag('config', 'UA-110332879-2');
 		</script>
-    <title>COOPVIVA - BETA</title>
+    <title>COOPVIVA - BETA 1.0</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
 	 <!-- Required meta tags -->
     <meta charset="utf-8">
