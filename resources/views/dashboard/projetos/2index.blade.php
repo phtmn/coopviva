@@ -41,7 +41,7 @@
                         <div class="">
                          <!--    <div class="card-body">
                                <div class="d-flex no-block">
-                                   <h4 class="card-title">Doa��o - Patroc�nio</h4> -->
+                                   <h4 class="card-title">Doação - Patrocínio</h4> -->
                                    <!-- <div class="ml-auto">
                                         <select class="custom-select">
                                             <option selected="">January</option>
@@ -74,7 +74,7 @@
                         </td>
                     </tr>
                     @empty
-                        <p>Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                        <p>Você ainda nao cadastrou nenhum Projeto. <span></span><a href="{{ route('projetos.create') }} ">Clique aqui para cadatrar ou use o botão acima</a></p>
                     @endforelse
                 </tbody>
                                     </table>
@@ -111,3 +111,4 @@
     
 
 @endsection
+

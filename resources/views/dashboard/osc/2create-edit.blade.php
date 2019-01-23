@@ -8,7 +8,7 @@
     <div class="container" style="margin-top:20px; padding:20px">
     <div class="row row justify-content-center">
 
-      <!--  <div class="com-md-4">
+        <div class="com-md-4">
             <div class="card-outline-success" style="width: 18rem;">   
             <div class="card-header">
             
@@ -20,39 +20,21 @@
                     <h5><small>{{ Auth::user()->tipo_usuario ?? '' }}</small> </h5>
                 </div>
             </div>
-        </div> -->
+        </div>
 
 
        
 
 
-        <div class="col-md-12">
-     
-        
+        <div class="col-md-8">
+        <div class="card-header">
+            
+            </div>
+            <br>
           
           
-            <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-dados-tab" data-toggle="pill" href="#pills-dados" role="tab" aria-controls="pills-dados" aria-selected="true">Dados Gerais</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false">Endereço</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false">Descrição</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-up-tab" data-toggle="pill" href="#pills-up" role="tab" aria-controls="pills-up" aria-selected="false">Upload</a>
-                </li>
-
-            </ul>
-                <br>
+                <h4>Dados Gerais </h4>
+                <hr>
                     <div class="row">
                     <div class="form-group col-md-12">
                           
@@ -63,164 +45,79 @@
         @else
             {!! Form::open(['route'=>'osc.store']) !!}
         @endif
-
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-dados" role="tabpanel" aria-labelledby="pills-dados-tab">
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="">Nome Fantasia</label>
-                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="">Sigla OSC</label>
-                    {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group col-md-2">
-                    <label for=""> Fundação</label>
-                    {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="">  Cadastro de CNPJ</label>
-                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="">Responsável Legal</label>
-                    {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="">E-mail </label>
-                    {!! Form::text('email',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="">Telefone</label>
-                    {!! Form::text('telefone',null,['class'=>'form-control']) !!}
-                </div>
-            </div>
-        </div>
-
-
-        <div class="tab-pane fade " id="pills-end" role="tabpanel" aria-labelledby="pills-end-tab">
-            
-            <div class="row">
-                        <div class="form-group col-md-3">
-                            <label for="cep">CEP</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control']) !!}
-                        </div>
-                        <div class="form-group col-md-7">
-                            <label for="rua">Rua/Logradouro</label>
-                            {!! Form::text('rua',null,['class'=> 'form-control']) !!}
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="numero">Número</label>
-                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}                           
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="form-group col-md-5">
-                            <label for="cidade">Cidade</label>
-                            {!! Form::text('cidade',null,['class'=> 'form-control']) !!}
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="uf">Estado</label>
-                            {!! Form::text('uf',null,['class'=> 'form-control']) !!}
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="complemento">Complemento</label>
-                            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="">Situação do Imóvel</label>
-                            {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
-                        </div>                
-            </div>
-        </div>
-
-
-
-
-        <div class="tab-pane fade " id="pills-descricao" role="tabpanel" aria-labelledby="pills-descricao-tab">
-            <div class="row">
-            <div class="form-group col-md-12">
-                    <label for="">O que a OSC faz?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="">Como surgiu a OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="">Missão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="">Visão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="">Link do Site </label>
-                    {!! Form::text('site',null,['class'=>'form-control']) !!}
-                </div>   
-                <div class="form-group col-md-4">
-                    <label for="">Link do Estatuto </label>
-                    {!! Form::text('abc',null,['class'=>'form-control']) !!}
-                </div>         
-                <div class="form-group col-md-4">
-                    <label for="">Link da Finalidade Estatutária</label>
-                    {!! Form::text('abc',null,['class'=>'form-control']) !!}
-                </div>
-                
-            </div>
-        </div>
-    
-
-        <div class="tab-pane fade " id="pills-atuacao" role="tabpanel" aria-labelledby="pills-atuacao-tab">
         <div class="row">
-        <div class="form-group col-md-12">
-                <label for="">Atividade Econômica (CNAE)</label>
-                {!! Form::text('abc',null,['class'=>'form-control']) !!}
+            <div class="form-group col-md-4">
+                <label for="">Nome Fantasia</label>
+                {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
             </div>
+            <div class="form-group col-md-2">
+                <label for="">Sigla OSC</label>
+                {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Ano Fundação</label>
+                {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Ano Inscrição CNPJ</label>
+                {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+
+        <div class="row">
             <div class="form-group col-md-6">
-                <label for="">Área de Atuação 1</label>
+                <label for="">Responsável Legal</label>
+                {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Email do Responsável</label>
+                {!! Form::text('email',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Telefone</label>
+                {!! Form::text('telefone',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="">Site</label>
+                {!! Form::text('site',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Situacao do Imóvel</label>
+                {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Atividade Econômica</label>
+                {!! Form::text('atividade_economica',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="">Area de Atuação</label>
                 {!! Form::text('area_atuacao',null,['class'=>'form-control']) !!}
             </div>
-            <div class="form-group col-md-6">
-                <label for="">Sub-Área</label>
+            <div class="form-group col-md-4">
+                <label for="">Sub-Área 01</label>
                 {!! Form::text('sub_area1',null,['class'=>'form-control']) !!}
             </div>
-          
-        </div>
-        </div>
-
-        <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
-        <div class="row">
-        <div class="form-group col-md-12">
-                <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
-                
-                @include('dashboard.osc.odsform')
-            </div> 
-         
-  
-          
-        </div>
-        </div>
-        
-        <div class="tab-pane fade " id="pills-up" role="tabpanel" aria-labelledby="pills-up-tab">
-        <div class="row">
             <div class="form-group col-md-4">
-                <label for="">Link para Vídeo do YOUTUBE</label>
-                {!! Form::text('abc',null,['class'=>'form-control']) !!}
-            </div>  
-            <div class="form-group col-md-4">
-                <label for="">UPLOAD LOGO... UPLOAD IMAGEnS</label>
-                
-            </div>          
-        </div>
+                <label for="">Sub-Área 02</label>
+                {!! Form::text('sub_area2',null,['class'=>'form-control']) !!}
+            </div>
         </div>
         <br>
-
+        <!--<h4> Áreas de Atuação </h4>
+            <hr>
+          Colocar formulários de Áreas de Atuação aqui   https://mapaosc.ipea.gov.br/visualizar-osc.html#/790286
+            <br>
+        <h4> Descrição da OSC </h4>
+            <hr>
+            Colocar formulários de Descrição da OSC aqui  https://mapaosc.ipea.gov.br/visualizar-osc.html#/790286
+          
+            <br>        -->
        
 
         
@@ -239,7 +136,6 @@
     
                     </div>
                 
-        </div>
         </div>
     </div>
 </div>
