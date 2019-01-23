@@ -27,6 +27,12 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
 });
 
 
+Route::group(['prefix'=>'sistema','middleware'=>['auth','isAdmin']],function(){
+    Route::view('/','admin.home');
+
+    Route::resource('admin-osc','Admin\OscController');
+});
+
 
         
 

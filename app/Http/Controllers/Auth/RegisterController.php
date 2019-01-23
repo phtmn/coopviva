@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\NewUser;
 use App\Models\User;
 use App\Mail\VerifyMail;
 use Illuminate\Support\Facades\Mail;
@@ -69,7 +70,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-           //dd($data);
+
         $user = User::create([
             'name'          => $data['name'],
             'email'         => $data['email'],
@@ -80,13 +81,13 @@ class RegisterController extends Controller
         ]);
 
 
-        $verifyUser = VerifyUser::create([
+        VerifyUser::create([
             'user_id'   => $user->id,
             'token'     => sha1(time()),
         ]);
 
         Mail::to($user->email)->send(new VerifyMail($user));
-
+        Mail::send(new NewUser($user));
         Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
 
         return $user;
