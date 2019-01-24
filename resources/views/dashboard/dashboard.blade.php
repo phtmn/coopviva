@@ -69,37 +69,8 @@
                                                
                                                 <td>R$ 22.000.000,00</td>
                                             </tr>                                       
-                                            <tr>
-                                                <td><span class="round round-success">2º</span></td>
-                                                <td>
-                                                    <h6>Lei Rouanet</h6><small class="text-muted">cultura</small></td>
-                                                <td>Projeto Mais Musicas</td>
-                                               
-                                                <td>R$ 15.000.000,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-primary">3º</span></td>
-                                                <td>
-                                                    <h6>PRONON</h6><small class="text-muted">educação</small></td>
-                                                <td>Projeto Criança na Escola</td>
-                                               
-                                                <td>R$ 2.000.000,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-warning">4º</span></td>
-                                                <td>
-                                                    <h6>ESPORTE</h6><small class="text-muted">esporte</small></td>
-                                                <td>Projeto Futebol na Praça</td>
-                                                
-                                                <td>R$ 22.000,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-danger">5º</span></td>
-                                                <td>
-                                                    <h6>Lei </h6><small class="text-muted">idoso</small></td>
-                                                <td>Projeto de acolhimento ao idoso</td>
-                                                <td> R$ 12.000,00</td>
-                                            </tr>
+                                        
+                                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -123,7 +94,7 @@
 
                     <div class="card-body">
                     <div class="form-group col-md-12">
-                            <label for="cep">Aqui poderá ter um texto bla blabla blabla blabla blabla blabla blabla bla bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla</label>
+                            <!--<label for="cep">Aqui poderá ter um texto bla blabla blabla blabla blabla blabla blabla bla bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla</label> -->
                            
                         </div>
                                 </div>

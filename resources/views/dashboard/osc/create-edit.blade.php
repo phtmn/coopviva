@@ -69,19 +69,19 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Nome Fantasia</label>
-                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
+                    {!! Form::text('nome_fantasia',null,['class'=>'form-control','required'=>'true']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Sigla OSC</label>
-                    {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
+                    {!! Form::text('sigla_osc',null,['class'=>'form-control','required'=>'true']) !!}
                 </div>
                 <div class="form-group col-md-2">
-                    <label for=""> Fundação</label>
+                    <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong>Fundação</label>
                     {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="">  Cadastro de CNPJ</label>
-                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
+                    <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong>Inscrição CNPJ</label>
+                    {!! Form::Url('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="row">
@@ -106,7 +106,7 @@
             <div class="row">
                         <div class="form-group col-md-3">
                             <label for="cep">CEP</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true']) !!}
                         </div>
                         <div class="form-group col-md-7">
                             <label for="rua">Rua/Logradouro</label>

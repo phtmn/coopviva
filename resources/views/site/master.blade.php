@@ -110,7 +110,7 @@
                                 <li class=""><a href="{{url('/') }}" >Home</a></li>
                                 <li class=""><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>
                                 @guest  
-                                    <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>
+                                  <!--  <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li> -->
                                 @endguest                                                              
                                 <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
@@ -176,7 +176,7 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ route('sobre_nos') }}" >Sobre Nós </a></li>
-                            <li><a href="{{ url('/oscs') }}" >OSC's</a></li>
+                         <!--   <li><a href="{{ url('/oscs') }}" >OSC's</a></li> -->
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
 							@if (Route::has('login'))               
