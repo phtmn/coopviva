@@ -56,7 +56,7 @@
     </div>
 </div>
 
-@include('site.osc.resultado-pesquisa')
+@include('dashboard.incentivos.resultado-pesquisa')
 
 -->
 @endsection

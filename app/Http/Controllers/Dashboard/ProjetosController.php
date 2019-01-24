@@ -141,4 +141,18 @@ class ProjetosController extends Controller
         Alert::warning( 'A Operação não foi realizada','Erro')->persistent('Ok');
         return redirect()->route('projetos.index');
     }
+
+    public function galeria($id){
+        return view('dashboard.projetos.galeria',[
+            'tab' => 'galeria'
+        ]);
+    }
+
+    public function save(Request $request){
+        $image = $request->file('file');
+        $imageName = time().$image->getClientOriginalName();
+        $image->move(public_path('images'),$imageName);
+        return response()->json(['success'=>$imageName]);
+    }
+    
 }

@@ -70,6 +70,7 @@
                         <td>{{$d->valor_meta}}</td>
                         <td class="text-center ">
                                 <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil"></i></a>
+                                <a href="{{route('projeto.galeria',$d->id)}}">Galeria</a>
 
                         </td>
                     </tr>

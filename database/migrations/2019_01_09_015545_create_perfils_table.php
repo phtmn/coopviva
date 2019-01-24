@@ -25,8 +25,8 @@ class CreatePerfilsTable extends Migration
             $table->string('nome_fantasia')->nullable();
 
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('endereco_id');
-            $table->unsignedInteger('banco_id');
+            $table->unsignedInteger('endereco_id')->nullable();
+            $table->unsignedInteger('banco_id')->nullable();
 
             $table->timestamps();
 

@@ -35,6 +35,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/vendor/site/style.css">
+    @yield('css')
 </head>
 <body>
 

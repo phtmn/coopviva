@@ -6,7 +6,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Lista de Osc <small>Lista dos últimos cadastros</small></h2>
+                    <h2>Usuários<small>Lista dos últimos cadastros</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -27,12 +27,14 @@
 
                 <div class="x_content">
 
-                    <table class="table">
+                    <table class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Codigo Interno</th>
-                                <th>Nome Fantasia</th>
-                                <th>Fundação</th>
+                                <th>#ID</th>
+                                <th>Nome Usuário</th>
+                                <th>E-mail</th>
+                                <th>Perfil</th>
+                                <th>UF</th>
                                 <th>Data Cadastro</th>
                             </tr>
                         </thead>
@@ -40,12 +42,14 @@
                             @forelse($data as $d)
                                 <tr>
                                     <td>{{$d->id}}</td>
-                                    <td>{$d->nome_fantasia</td>
-                                    <td>{{$d->ano_fundacao}}</td>
-                                    <td>{{$d->created_at}}</td>
+                                    <td>{{$d->name}}</td>
+                                    <td>{{$d->email}}</td>
+                                    <td>{{$d->tipo_usuario}}</td>
+                                    <td>{{$d->uf}}</td>
+                                    <td>{{ date('d/m/Y',strToTime($d->created_at)) }}</td>
                                 </tr>
                             @empty
-                                <h4 class="label label-info">Nenhum registro encontrado</h4>                 
+                                <p class="label-info">Nenhum registro encontrado</p>
                             @endforelse
                         </tbody>
                     </table>
