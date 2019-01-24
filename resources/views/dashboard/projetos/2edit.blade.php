@@ -51,7 +51,7 @@
                                             'estadual'  => "Estadual",
                                             'municipal' => "Municipal"
                                             ],null,
-                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ['placeholder'=>'Escolha uma opção','class'=>'form-control', 'required'=>'true']) !!}
                         </div>
                     </div><!--endOfRow1-->
 
@@ -74,12 +74,12 @@
                                             'educação'  => "Educação",
                                             'saude'     => "Saúde"
                                             ],null,
-                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ['placeholder'=>'Escolha uma opção','class'=>'form-control', 'required'=>'true']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Artigo de Enquadramento') !!}
-                            {!! Form::text('artigo',null,['class'=>'form-control']) !!}
+                            {!! Form::text('artigo',null,['class'=>'form-control', 'required'=>'true']) !!}
                         </div>
                     </div>
                 {{--FimDadosGerais--}}
@@ -91,24 +91,24 @@
                         <div class="row"><!--row-4-->
                             <div class="form-group col-md-6">
                             {!! Form::label('Nome do Proponente') !!}
-                            {!! Form::text('nome',$proponente->nome,['class'=>'form-control']) !!}
+                            {!! Form::text('nome',$proponente->nome,['class'=>'form-control', 'required'=>'true']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
                             {!! Form::label('CPF') !!}
-                            {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control']) !!}
+                            {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control', 'required'=>'true']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
                                 {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','placeholder'=>'CPF ou CNPJ']) !!}
+                                {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','placeholder'=>'CPF ou CNPJ', 'required'=>'true']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 
                         <div class="row"><!--row-5-->
                             <div class="form-group col-md-4">
                             {!! Form::label('Telefone 1') !!}
-                            {!! Form::text('telefone_1',$proponente->telefone_1,['class'=>'form-control','id'=>'phone_number']) !!}
+                            {!! Form::text('telefone_1',$proponente->telefone_1,['class'=>'form-control','id'=>'phone_number', 'required'=>'true']) !!}
                             </div>
 
                             <div class="form-group col-md-4">
@@ -120,7 +120,7 @@
                         <div class="row"><!--row-6-->
                             <div class="form-group col-md-6">
                             {!! Form::label('E-mail Principal') !!}
-                            {!! Form::email('email_1',$proponente->email_1,['class'=>'form-control']) !!}
+                            {!! Form::email('email_1',$proponente->email_1,['class'=>'form-control', 'required'=>'true']) !!}
                             </div>
                             <div class="form-group col-md-6">
                             {!! Form::label('E-mail Secundário') !!}

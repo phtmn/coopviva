@@ -33,7 +33,7 @@
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
-                            {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
+                            {!! Form::text('descricao',null,["class"=>"form-control"]) !!}
                         </div>
 
                         <div class="form-group col-md-3">
@@ -181,7 +181,7 @@
                             <div class="row">
                                 <div class="form-group col-md-6 pull-right">
                                     {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true']) !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control']) !!}
                                 </div>
                             </div>
 
