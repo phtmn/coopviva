@@ -21,6 +21,7 @@ class Perfil extends Model
         'cnpj',
         'razao_social',
         'nome_fantasia',
+        'genero',
         'cep',
         'rua',
         'numero',

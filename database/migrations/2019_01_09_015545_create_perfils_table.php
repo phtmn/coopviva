@@ -18,15 +18,15 @@ class CreatePerfilsTable extends Migration
             $table->string('nome_completo')->nullable();
             $table->date('data_nascimento')->nullable();
             $table->string('telefone')->nullable();
-            $table->string('email')->nullable();
+            $table->string('genero')->nullable();
             $table->string('cpf')->unique()->nullable();
             $table->string('cnpj')->unique()->nullable();
             $table->string('razao_social')->nullable();
             $table->string('nome_fantasia')->nullable();
 
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('endereco_id');
-            $table->unsignedInteger('banco_id');
+            $table->unsignedInteger('endereco_id')->nullable();
+            $table->unsignedInteger('banco_id')->nullable();
 
             $table->timestamps();
 

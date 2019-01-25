@@ -10,9 +10,9 @@ use Alert;
 
 class OscController extends Controller
 {
-    public function __construct(){
-        $this->middleware('can:osc');
-    }
+//    public function __construct(){
+//        $this->middleware('can:osc');
+//    }
 
     public function create(){
 
@@ -66,5 +66,26 @@ class OscController extends Controller
         }
         Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
         return redirect()->route('dashboard.index');
+    }
+
+    public function show($id){
+
+        $osc = OSC::find($id);
+        //dd($osc->projetos->pluck('descricao','id'));
+        return view('dashboard.incentivos.detalhe_osc',[
+            'osc'       => $osc,
+            'projetos'  => $osc->projetos,
+            'tab'       => 'investir'
+        ]);
+
+    }
+
+    public function oscs(){
+
+        $data = OSC::all();
+        return view('dashboard.incentivos.lista_oscs',[
+            'data' => $data,
+            'tab' => 'investir'
+        ]);
     }
 }
