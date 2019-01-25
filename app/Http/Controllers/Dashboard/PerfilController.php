@@ -39,7 +39,7 @@ class PerfilController extends Controller
         $perfil->nome_completo      = $request->nome_completo;
         $perfil->data_nascimento    = $request->data_nascimento;
         $perfil->telefone           = $request->telefone;
-        $perfil->email              = $request->email;
+        $perfil->genero              = $request->genero;
         $perfil->cpf                = $request->cpf;
         $perfil->cnpj               = $request->cnpj;
         $perfil->razao_social       = $request->razao_social;
@@ -69,7 +69,7 @@ class PerfilController extends Controller
         $perfil->nome_completo      = $request->nome_completo;
         $perfil->data_nascimento    = $request->data_nascimento;
         $perfil->telefone           = $request->telefone;
-        $perfil->email              = $request->email;
+        $perfil->genero             = $request->genero;
         $perfil->cpf                = $request->cpf;
         $perfil->cnpj               = $request->cnpj;
         $perfil->razao_social       = $request->razao_social;

@@ -76,12 +76,12 @@
                     {!! Form::text('sigla_osc',null,['class'=>'form-control','required'=>'true']) !!}
                 </div>
                 <div class="form-group col-md-2">
-                    <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong>Ano de Fundação</label>
+                    <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação</label>
                     {!! Form::text('ano_fundacao',null,['class'=>'form-control', 'required'=>'true']) !!}
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong>Ano de Inscrição CNPJ</label>
-                    {!! Form::Url('ano_inscricao_cnpj',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ</label>
+                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control', 'required'=>'true']) !!}
                 </div>
             </div>
             <div class="row">
@@ -95,7 +95,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Telefone</label>
-                    {!! Form::text('telefone',null,['placeholder'=>'DDD 000000000', 'class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('telefone',null,['class'=>'form-control', 'required'=>'true']) !!}
                 </div>
             </div>
         </div>

@@ -261,7 +261,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
     <script type='text/javascript' src='/vendor/site/js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='/vendor/site/js/custom.js'></script>    
+    
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>
 
+    <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+    
     @yield('js')
 
 </body>

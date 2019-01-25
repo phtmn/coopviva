@@ -7,19 +7,17 @@
     <div class="container" style="margin-top:20px; padding:20px">
         <div class="row row justify-content-center">
 
-            <div class="col-md-12">
-                <div class="card-header">
+       
+               
 
 
             <div class="col-md-12">
-            <div class="card-header">
-                
-                </div>
-                <br>
-
-
-
-                <h4>Investimentos Realizados / Recebidos </h4>
+        
+        
+                <h4>Investimentos Realizados   </h4>
+                @can('osc')
+                <h4>Investimentos Recebidos </h4>
+                @endcan
                 <hr>
                 <div class="row">
                     <div class="col-lg-12">
@@ -55,13 +53,14 @@
                             </div>
                         </div>
                             
-                        </div>
+                     
                 
                         <br>
                     </div>
                     
-            </div>
+       
         </div>
+    </div>
     </div>
 
     @endsection
