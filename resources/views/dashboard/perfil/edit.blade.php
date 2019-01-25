@@ -27,7 +27,7 @@
      
             {!! Form::model($perfil, [ 'route' => ['perfil.update', $perfil->id ]]) !!}
             @method('PUT')
-                <h4>Meus Dados</h4>
+                <h4>Dados Pessoais</h4>
                 <hr>
                     <div class="row">
                         <div class="form-group col-md-8">

@@ -27,7 +27,7 @@
          
             {!! Form::open(['route'=>'perfil.store']) !!}
 
-                <h4>Meus Dadooos</h4>
+                <h4>Dados Pessoais</h4>
                 <hr>
                     <div class="row">
                         <div class="form-group col-md-8">
