@@ -4,7 +4,8 @@
     @include('dashboard.menu')
 
 
-<div class="container" style="margin-top:20px; padding:20px">
+
+    <div class="container" style="margin-top:20px; padding:20px">
     <div class="row row justify-content-center">
 
         <div class="com-md-4">
@@ -32,86 +33,112 @@
             <br>
           
           
-                <h4>Projetos mais Beneficiados </h4>
+                <h4>Dados Gerais </h4>
                 <hr>
                     <div class="row">
-                    <div class="col-lg-12">
-                        <div class="">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <h4 class="card-title">Doação - Patrocínio</h4>
-                                   <!-- <div class="ml-auto">
-                                        <select class="custom-select">
-                                            <option selected="">January</option>
-                                            <option value="1">February</option>
-                                            <option value="2">March</option>
-                                            <option value="3">April</option>
-                                        </select>
-                                    </div> -->
-                                </div>
-                                <div class="table-responsive m-t-20">
-                                    <table class="table stylish-table">
-                                        <thead>
-                                            <tr>
-                                               <!-- <th colspan="2">Investidor</th> -->
-                                               <th >Investidor</th>
-                                               <th >Seguimento</th>
-                                                <th>Projeto</th>                              
-                                                <th>Valor Investido </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width:50px;"><span class="round">1</span></td>
-                                                <td>
-                                                    <h6>Lei Rouanet</h6><small class="text-muted">cultura</small></td>
-                                                <td>Projeto Mais Cultura</td>
-                                               
-                                                <td>R$ 22.000.000,00</td>
-                                            </tr>                                       
-                                        
-                                           
-                                        </tbody>
-                                    </table>
+                    <div class="form-group col-md-12">
+                          
+                                    
+                                @if( $osc)
+            {!! Form::model($osc, [ 'route' => ['osc.update', $osc->id ],'method'=>'PUT']) !!}
+            @method('PUT')
+        @else
+            {!! Form::open(['route'=>'osc.store']) !!}
+        @endif
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="">Nome Fantasia</label>
+                {!! Form::text('nome_fantasia',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Sigla OSC</label>
+                {!! Form::text('sigla_osc',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Ano Fundação</label>
+                {!! Form::text('ano_fundacao',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="">Ano Inscrição CNPJ</label>
+                {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Responsável Legal</label>
+                {!! Form::text('responsavel_legal',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Email do Responsável</label>
+                {!! Form::text('email',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-2">
+                <label for="">Telefone</label>
+                {!! Form::text('telefone',null,['placeholder'=>'DDD 000000000''class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="">Site</label>
+                {!! Form::text('site',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Situacao do Imóvel</label>
+                {!! Form::text('situacao_imovel',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Atividade Econômica</label>
+                {!! Form::text('atividade_economica',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="">Area de Atuação</label>
+                {!! Form::text('area_atuacao',null,['class'=>'form-control', 'required'=>'true']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Sub-Área 01</label>
+                {!! Form::text('sub_area1',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Sub-Área 02</label>
+                {!! Form::text('sub_area2',null,['class'=>'form-control']) !!}
+            </div>
+        </div>
+        <br>
+        <!--<h4> Áreas de Atuação </h4>
+            <hr>
+          Colocar formulários de Áreas de Atuação aqui   https://mapaosc.ipea.gov.br/visualizar-osc.html#/790286
+            <br>
+        <h4> Descrição da OSC </h4>
+            <hr>
+            Colocar formulários de Descrição da OSC aqui  https://mapaosc.ipea.gov.br/visualizar-osc.html#/790286
+          
+            <br>        -->
+       
+
+        
+     
+            <center>    <button type="submit" class="btn gradient-bg">Salvar</button> </center>
+        
+
+        {!! Form::close() !!}
+
+
                                 </div>
                             </div>
-                        </div>
-                    </div>
                         
                     </div>
-
-               
                     <br>
-
-                    <div class="card-header">
-            
-            </div>
-            <br>
-
-            <h4>Saiba mais </h4>
-            <hr>
-                    <div class="row">
-
-                    <div class="card-body">
-                    <div class="form-group col-md-12">
-                            <!--<label for="cep">Aqui poderá ter um texto bla blabla blabla blabla blabla blabla blabla bla bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla</label> -->
-                           
-                        </div>
-                                </div>
-
-
-
-                        
-                        
-                    </div>
-
-                    
-                   
+    
                     </div>
                 
         </div>
     </div>
 </div>
-@stop
-
-
+  
+</div>
+@endsection

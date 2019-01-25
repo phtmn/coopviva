@@ -1,19 +1,23 @@
 @extends('site.master')
-
-@section('content')
-
+    @section('content')
     @include('dashboard.menu')
+    
+
 
     <div class="container" style="margin-top:20px; padding:20px">
         <div class="row row justify-content-center">
 
-
-
             <div class="col-md-12">
                 <div class="card-header">
 
+
+            <div class="col-md-12">
+            <div class="card-header">
+                
                 </div>
                 <br>
+
+
 
                 <h4>Investimentos Realizados / Recebidos </h4>
                 <hr>
@@ -50,17 +54,14 @@
                                 </table>
                             </div>
                         </div>
+                            
+                        </div>
+                
+                        <br>
                     </div>
-                </div>
-
+                    
             </div>
-
-            <br>
         </div>
-
-    </div>
-    </div>
     </div>
 
-
-@stop
+    @endsection

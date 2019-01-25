@@ -18,7 +18,7 @@
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dados Gerais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Responsável</a>
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Respons�vel</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
@@ -40,41 +40,43 @@
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Instância') !!}
-                            {!! Form::text('instancia',null,['placeholder'=>'Selecione uma opção','class'=>'form-control']) !!}
+                            {!! Form::label('Inst�ncia') !!}
+                            {!! Form::text('instancia',null,['placeholder'=>'Selecione uma op��o','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Âmbito') !!}
+                            {!! Form::label('�mbito') !!}
                             {!! Form::select('ambito',[
                                             'federal'   =>  "Federal",
                                             'estadual'  => "Estadual",
                                             'municipal' => "Municipal"
                                             ],null,
-                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ['placeholder'=>'Escolha uma op��o','class'=>'form-control']) !!}
                         </div>
                     </div><!--endOfRow1-->
 
                     <div class="row"><!--row-2-->
                         <div class="form-group col-md-3">
-                            {!! Form::label('Número de Registro 1') !!}
+                            {!! Form::label('N�mero de Registro 1') !!}
                             {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Número de Registro 2') !!}
+                            {!! Form::label('N�mero de Registro 2') !!}
                             {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Segmento Cultural') !!}
                             {!! Form::select('segmento_cultural',[
-                                            'esportes'  => "Esportes",
-                                            'cultura'   => "Cultura",
-                                            'educação'  => "Educação",
-                                            'saude'     => "Saúde"
+                                            'esportes'          => "Esportes",
+                                            'cultura'           => "Cultura",
+                                            'educa��o'          => "Educa��o",
+                                            'saude'             => "Sa�de",
+                                            'crian�asejovens'   => "Crian�as e Jovens",
+                                            'idosos'            => "Idosos"
                                             ],null,
-                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ['placeholder'=>'Escolha uma op��o','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
@@ -123,14 +125,14 @@
                             {!! Form::email('email_1',$proponente->email_1,['class'=>'form-control']) !!}
                             </div>
                             <div class="form-group col-md-6">
-                            {!! Form::label('E-mail Secundário') !!}
+                            {!! Form::label('E-mail Secund�rio') !!}
                             {!! Form::email('email_2',$proponente->email_2,['class'=>'form-control']) !!}
                             </div>
                         </div><!--end-of-row-6-->
                     {{--fimDadosResponsavel--}}
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                        <h5>Conta para receber Doações</h5>
+                        <h5>Conta para receber Doa��es</h5>
                             <div class="row"><!--row-3-->
                                 <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
@@ -138,12 +140,12 @@
                                         'CEF'   =>  "Caixa Economica Federal",
                                         'BB'    =>  "Banco do Brasil",
                                         'SA'    =>  "Banco Santander",
-                                        'IT'    =>  "Banco Itaú"
-                                    ],$bancoDoacao->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                        'IT'    =>  "Banco Ita�"
+                                    ],$bancoDoacao->banco,['placeholder'=>'Escolha uma op��o','class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-3">
-                                {!! Form::label('Agência') !!}
+                                {!! Form::label('Ag�ncia') !!}
                                 {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
                                 </div>
 
@@ -157,17 +159,17 @@
                                 </div>
                             </div><!--end-of-row-3-->
 
-                            <h5>Conta para receber Patrocínios</h5>
+                            <h5>Conta para receber Patroc�nios</h5>
                     <div class="row"><!--row-3-->
                         <div class="form-group col-md-3">
                             {!! Form::label('Banco') !!}
                             {!! Form::select('banco_patrocinio',[                            
                             'BB'    =>  "Banco do Brasil"
-                            ],$bancoPatrocinio->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            ],$bancoPatrocinio->banco,['placeholder'=>'Escolha uma op��o','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Agência') !!}
+                            {!! Form::label('Ag�ncia') !!}
                             {!! Form::text('agencia_patrocinio',$bancoPatrocinio->agencia,['class'=>'form-control']) !!}
                         </div>
 
@@ -189,6 +191,38 @@
                             </div>
 
                         {{--FimDadosFinaneiros--}}
+                </div>
+                <div class="tab-pane fade" id="pills-messages" role="tabpanel" aria-labelledby="pills-messages-tab">
+                    {{--Resumo--}}
+                        <div class="row"><!--row-4-->
+                            <div class="form-group col-md-6">
+                            {!! Form::label('Objetivo Geral') !!}
+                            {!! Form::text('objetivo',null,['class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group col-md-3">
+                            {!! Form::label('Objetivos Espec�ficos') !!}
+                            {!! Form::text('obj_especifico',null,['class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                {!! Form::label('Justificativa') !!}
+                                {!! Form::text('justificativa',null,['class'=>'form-control']) !!}
+                            </div>
+                        </div><!--end-of-row-4-->
+
+                        <div class="row"><!--row-5-->
+                            <div class="form-group col-md-4">
+                            {!! Form::label('Publico Alvo') !!}
+                            {!! Form::text('publico_alvo',null,['class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group col-md-4">
+                            {!! Form::label('Impactos Esperados') !!}
+                            {!! Form::text('impactos_esperados',null,['class'=>'form-control']) !!}
+                            </div>
+                        </div><!--end-of-row-5-->
+                    {{--fimResumo--}}
                 </div>
             </div>
            <center> <button type="submit" class="btn gradient-bg">Salvar</button> </center>
