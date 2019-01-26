@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e7e248-a37b-4f7e-875e-68f693ff7979" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/site/images/ods/ods_logo_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/osc/2create-edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/osc/odsform.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/2create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/2edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/2index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/investimentos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/investimentos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/osc/create-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/osc/create-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/perfil/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/perfil/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/projetos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/projetos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/projetos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/projetos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/osc/odsform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/osc/odsform.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +47,29 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="41" column="50" lean-forward="true" selection-start-line="39" selection-end-line="41" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Financeiro/CheckoutController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="51" />
+              <folding>
+                <element signature="e#51#79#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,12 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Scopes/Ocs/OscScope.php" />
-        <option value="$PROJECT_DIR$/app/Models/User.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_04_003220_create_oscs_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Pessoa.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/projetos/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProjetosController.php" />
         <option value="$PROJECT_DIR$/resources/views/site/cadastro/cadastro.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Events/UserCreated.php" />
@@ -134,10 +118,16 @@
         <option value="$PROJECT_DIR$/app/Models/Investimento.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Dashboard/InvestimentosController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Financeiro/CheckoutController.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/investimentos/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_25_223715_create_objetivos_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_25_223909_create_metas_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/osc/odsform.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ObjetivosTableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/MetasTableSeeder.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Financeiro/CheckoutController.php" />
       </list>
     </option>
   </component>
@@ -311,28 +301,18 @@
             <path>
               <item name="coopviva-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="coopviva-2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="coopviva-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="coopviva-2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="coopviva-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="coopviva-2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="coopviva-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coopviva-2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="investimentos" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -350,15 +330,15 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\coopviva-2\resources\views\dashboard\projetos" />
+      <recent name="C:\laragon\www\coopviva-2\resources\views\dashboard\perfil" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\coopviva-2\resources\views\dashboard\incentivos" />
       <recent name="C:\laragon\www\coopviva-2\app\Http\Controllers" />
       <recent name="C:\laragon\www\coopviva-2\app\Http\Controllers\Financeiro" />
       <recent name="C:\laragon\www\coopviva-2\app\Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\coopviva-2\resources\views\dashboard\projetos" />
-      <recent name="C:\laragon\www\coopviva-2\resources\views\dashboard\perfil" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,17 +371,19 @@
       <workItem from="1548185927355" duration="7095000" />
       <workItem from="1548294447594" duration="24976000" />
       <workItem from="1548365714155" duration="967000" />
+      <workItem from="1548461359144" duration="5070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83437000" />
+    <option name="totallyTimeSpent" value="88507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.02118003" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18683812" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -416,10 +398,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout>
   </component>
@@ -433,36 +415,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/investimentos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/UserCreated.php" />
-    <entry file="file://$PROJECT_DIR$/app/Notifications/UsuarioCriado.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Observers/UserObserver.php" />
     <entry file="file://$PROJECT_DIR$/app/Notifications/MySponsorSendNotification.php" />
     <entry file="file://$PROJECT_DIR$/app/Notifications/MyResetPasswordNotification.php">
@@ -681,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/PerfisTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_09_015545_create_perfils_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -713,36 +658,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-          <folding>
-            <element signature="e#30#60#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Dashboard/PerfilController.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Financeiro/CheckoutController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding>
-            <element signature="e#51#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -757,9 +679,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_25_223909_create_metas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="99" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_25_223715_create_objetivos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/osc/odsform.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="108" column="74" lean-forward="true" selection-start-line="108" selection-start-column="74" selection-end-line="108" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/PerfisTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ObjetivosTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="e#50#78#0#PHP" expanded="true" />
+            <element signature="e#7#38#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/MetasTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Financeiro/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="51" />
+          <folding>
+            <element signature="e#51#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="41" column="50" lean-forward="true" selection-start-line="39" selection-end-line="41" selection-end-column="50" />
         </state>
       </provider>
     </entry>
