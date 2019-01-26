@@ -68,9 +68,9 @@
                             </div>
                             @else
 
-                            <!--    <div class="donate-btn">      
+                             <!--   <div class="">      
                                 
-                                    <a href="{{ url('/entrar')}}">Olá, {{ Auth::user()->name }}</a>
+                                <p><span>   Olá, {{ Auth::user()->name }}  </span></p>
                                 </div> -->
 
                                 <div class="donate-btn">

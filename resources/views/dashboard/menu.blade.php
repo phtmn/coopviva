@@ -1,6 +1,6 @@
 
 <div class="swiper-container ">
-        <div class="swiper-wrapper">
+      <!--  <div class="swiper-wrapper">
             <div class="swiper-slide hero-content-wrap">
                 <img src="/vendor/site/images/about-bg.jpg" alt="">
 
@@ -11,28 +11,28 @@
                                 <header class="entry-header">
                                     <h5> Olá, {{ Auth::user()->name }}</h5>
                                     
-                                </header><!-- .entry-header -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-    </div><!-- .hero-slider -->
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>>
+            </div>
+    </div>
 
-    </br>
+    </br> -->
 
 <div class="container">
-        <ul class="nav nav-tabs justify-content-center">
-            <li class="nav-item"><a class="nav-link {{ $tab == 'dashboard' ? 'active' : ''}}" href="{{ route('dashboard.index') }}">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link {{ $tab == 'perfil' ? 'active' : ''}}"  href="{{route('perfil.create')}}">Perfil do Usuário</a></li>
-            <li class="nav-item"><a class="nav-link {{ $tab == 'investimentos' ? 'active' : ''}}" href="{{ route('investimentos.index') }}"  >Investimentos</a></li>
+        <ul class="nav nav-tabs justify-content-center ">
+            <li class="nav-item"><a class="nav-link {{ $tab == 'dashboard' ? 'active' : ''}}" href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"> <strong> Dashboard </strong> </i></a></li>
+            <li class="nav-item"><a class="nav-link {{ $tab == 'perfil' ? 'active' : ''}}"  href="{{route('perfil.create')}}"><i class="fa fa-user"> <strong>Perfil do Usuário </strong> </i></a></li>
+            <li class="nav-item"><a class="nav-link {{ $tab == 'investimentos' ? 'active' : ''}}" href="{{ route('investimentos.index') }}"  ><i class="fa fa-line-chart"> <strong>Investimentos </strong> </i></a></li>
 
-            <li class="nav-item"><a class="nav-link {{ $tab == 'investir' ? 'active' : ''}}" href="{{ route('listar.oscs') }}"  >Quero Investir</a></li>
+            <li class="nav-item"><a class="nav-link {{ $tab == 'investir' ? 'active' : ''}}" href="{{ route('listar.oscs') }}"  ><i class="fa fa-money"> <strong> Investir </strong> </i></a></li>
 
             @can('osc')
-            <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}">Perfil da OSC</a></li>
+            <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"><i class="fa fa-institution"> <strong>Perfil da OSC </strong> </i></a></li>
                 <!-- <li class="nav-item"><a class="nav-link {{ $tab == 'projetos' ? 'active' : ''}}"  href="{{route('projetos.create')}}">Incluir Projeto</a></li> -->
-                <li class="nav-item"><a class="nav-link {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"> Projetos</a></li>
+                <li class="nav-item"><a class="nav-link {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"><i class="fa fa-suitcase"> <strong> Projetos</strong> </i></a></li>
                 
             @endcan
         </ul>

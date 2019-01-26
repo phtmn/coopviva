@@ -77,25 +77,25 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação</label>
-                    {!! Form::text('ano_fundacao',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ</label>
-                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Responsável Legal</label>
-                    {!! Form::text('responsavel_legal',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">E-mail </label>
-                    {!! Form::text('email',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('email',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Telefone</label>
-                    {!! Form::text('telefone',null,['class'=>'form-control', 'required'=>'true']) !!}
+                    {!! Form::text('telefone',null,['class'=>'form-control']) !!}
                 </div>
             </div>
         </div>
@@ -106,34 +106,34 @@
             <div class="row">
                         <div class="form-group col-md-3">
                             <label for="cep">CEP</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true']) !!}
+                            {!! Form::text('cep',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-7">
                             <label for="rua">Rua/Logradouro</label>
-                            {!! Form::text('rua',null,['class'=> 'form-control', 'required'=>'true']) !!}
+                            {!! Form::text('rua',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="numero">Número</label>
-                            {!! Form::text('numero',null,['class'=> 'form-control', 'required'=>'true']) !!}                           
+                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}                           
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-5">
                             <label for="cidade">Cidade</label>
-                            {!! Form::text('cidade',null,['class'=> 'form-control', 'required'=>'true']) !!}
+                            {!! Form::text('cidade',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="uf">Estado</label>
-                            {!! Form::text('uf',null,['class'=> 'form-control', 'required'=>'true']) !!}
+                            {!! Form::text('uf',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-3">
                             <label for="complemento">Complemento</label>
-                            {!! Form::text('complemento',null,['class'=> 'form-control', 'required'=>'true']) !!}
+                            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="">Situação do Imóvel</label>
-                            {!! Form::text('situacao_imovel',null,['class'=>'form-control', 'required'=>'true']) !!}
+                            {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
                         </div>                
             </div>
         </div>
@@ -145,19 +145,19 @@
             <div class="row">
             <div class="form-group col-md-12">
                     <label for="">O que a OSC faz?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5', 'required'=>'true']) !!}
+                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Como surgiu a OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5', 'required'=>'true']) !!}
+                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Missão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5', 'required'=>'true']) !!}
+                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Visão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5', 'required'=>'true']) !!}
+                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Link do Site </label>
@@ -180,11 +180,11 @@
         <div class="row">
         <div class="form-group col-md-12">
                 <label for="">Atividade Econômica (CNAE)</label>
-                {!! Form::text('abc',null,['class'=>'form-control', 'required'=>'true']) !!}
+                {!! Form::text('abc',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-6">
                 <label for="">Área de Atuação 1</label>
-                {!! Form::text('area_atuacao',null,['class'=>'form-control', 'required'=>'true']) !!}
+                {!! Form::text('area_atuacao',null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group col-md-6">
                 <label for="">Sub-Área</label>
