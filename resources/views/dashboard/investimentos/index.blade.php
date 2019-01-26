@@ -13,11 +13,13 @@
 
             <div class="col-md-12">
         
-        
-                <h4>Investimentos Realizados   </h4>
-                @can('osc')
-                <h4>Investimentos Recebidos </h4>
-                @endcan
+      
+                @can('investidor') <h4>Investimentos Realizados </h4>@endcan
+                
+                @can('osc')<h4>Investimentos Recebidos   @endcan</h4>
+             
+
+          
                 <hr>
                 <div class="row">
                     <div class="col-lg-12">
@@ -29,8 +31,9 @@
                                             <th>Data</th>
                                             <th>Tipo</th>
                                             <th>Valor (R$)</th>
-                                            <th>Projeto</th>
-                                            <th>OSC / Investidor </th>
+                            @can('osc')    <th> Investidor </th> @endcan
+                                            <th>OSC </th>   
+                                            <th>Projeto</th>                                                                                   
                                             <th>Recibo </th>
                                         </tr>
                                     </thead>
@@ -40,8 +43,9 @@
                                         <td>{{$d->created_at}}</td>
                                         <td>Doacao</td>
                                         <td>{{$d->valor_investimento}}</td>
-                                        <td>{{$d->projeto->descricao}}</td>
+                            @can('osc')             <td> </td> @endcan
                                         <td>{{$d->osc->nome_fantasia}}</td>
+                                        <td>{{$d->projeto->descricao}}</td>
                                         <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td>
 
                                     </tr>

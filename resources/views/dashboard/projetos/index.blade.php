@@ -56,7 +56,7 @@
                                         <thead>
                                             <tr>
                                                <!-- <th colspan="2">Investidor</th> -->
-                                               <th>Nome Do Projeto</th>
+                                               <th>Nome do Projeto</th>
                                                <th>Instância</th>
                                                <th>Valor (R$)</th>                                              
                                                <th># </th>                                               
