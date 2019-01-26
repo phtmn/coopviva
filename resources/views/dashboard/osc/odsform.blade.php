@@ -105,7 +105,7 @@
       </p>
 
       <hr>
-      <p> <input class="form-check-input" type="checkbox" name=" " value=""  > 
+      <p> <input class="form-check-input" type="checkbox" name=" " value="1.3"  >
       <strong class="text-danger">1.3</strong> Implementar, em nível nacional, medidas e sistemas de proteção social apropriados, para todos, incluindo pisos, e até 2030 
       atingir a cobertura substancial dos pobres e vulneráveis
       </p>
