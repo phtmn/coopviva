@@ -24,6 +24,14 @@ class OscController extends Controller
 
     public function store(Request $request){
 
+        $bancoDoacao                = new banco();
+        $bancoDoacao->banco         = $request->banco_doacao;
+        $bancoDoacao->conta         = $request->conta_doacao;
+        $bancoDoacao->agencia       = $request->agencia_doacao;
+        $bancoDoacao->contaDv       = $request->contaDv_doacao;
+        $bancoDoacao->save();
+        
+        
         $osc                            = new Osc();
         $osc->nome_fantasia             = $request->nome_fantasia;
         $osc->sigla_osc                 = $request->sigla_osc;
