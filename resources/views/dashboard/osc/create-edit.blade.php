@@ -195,16 +195,45 @@
         </div>
 
         <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
-        <div class="row">
-        <div class="form-group col-md-12">
+            <div class="row">
+                 <div class="form-group col-md-12">
                 <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
                 
                 @include('dashboard.osc.odsform')
-            </div> 
+                 </div> 
          
   
           
+             </div>
         </div>
+
+        <div class="tab-pane fade " id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
+             <h5>Conta para receber Doações</h5>
+                 <div class="row">
+                    <div class="form-group col-md-3">
+                                {!! Form::label('Banco') !!}
+                                    {!! Form::select('banco_docao',[
+                                        'CEF'   =>  "Caixa Economica Federal",
+                                        'BB'    =>  "Banco do Brasil",
+                                        'SA'    =>  "Banco Santander",
+                                        'IT'    =>  "Banco Itaú"
+                                    ],$bancoDoacao->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                      </div>
+
+                      <div class="form-group col-md-3">
+                                {!! Form::label('Agência') !!}
+                                {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
+                      </div>
+
+                      <div class="form-group col-md-3">
+                                {!! Form::label('Conta') !!}
+                                {!! Form::text('conta_doacao',$bancoDoacao->conta,['class'=>'form-control']) !!}
+                      </div> 
+                      <div class="form-group col-md-3">
+                                    {!! Form::label('DV') !!}
+                                    {!! Form::text('contaDV_doacao',$bancoDoacao->contaDV,['class'=>'form-control']) !!}
+                      </div>
+                 </div>
         </div>
         
         <div class="tab-pane fade " id="pills-up" role="tabpanel" aria-labelledby="pills-up-tab">
