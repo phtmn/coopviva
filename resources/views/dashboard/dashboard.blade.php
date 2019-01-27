@@ -96,13 +96,10 @@
     <div class="col-lg-8  col-md-12">
                         <div class="card card-inverse card-primary">
                             <div class="card-body">
-                                <div class="d-flex">
-                                    
-                                    <div class="m-r-20 align-self-center">
-                                        <h1 class="text-white"><i class="mdi mdi-chart-areaspline"></i></h1></div>
-                                    <div>
-                                        <h4 class="card-title"> Em Destaque
-                                        <ul class="nav nav-tabs justify-content-center ">
+                            <div class="d-flex no-block">
+                                   <h4 class="card-title">Em Destaque</h4> 
+                                  <div class="ml-auto">
+                                  <ul class="nav nav-tabs justify-content-center ">
                                                 <li class="nav-item">
                                                 <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">OSC</a>
                                                 </li>
@@ -112,12 +109,18 @@
                                                 </li>
                                              
                                         </ul>
-                                        </h4>
-                                    
-                                       
-                                         </div>
-                                        
-                                </div>
+                                      <!--  <select class="custom-select">
+                                            <option selected="">January</option>
+                                            <option value="1">February</option>
+                                            <option value="2">March</option>
+                                            <option value="3">April</option>
+                                        </select> -->
+                                    </div> 
+                                </div> 
+
+
+
+                               </br>
 
 
                                 <div class="tab-content" id="pills-tabContent">

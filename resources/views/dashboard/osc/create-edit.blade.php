@@ -211,27 +211,22 @@
              <h5>Conta para receber Doações</h5>
                  <div class="row">
                     <div class="form-group col-md-3">
-                                {!! Form::label('Banco') !!}
-                                    {!! Form::select('banco_docao',[
-                                        'CEF'   =>  "Caixa Economica Federal",
-                                        'BB'    =>  "Banco do Brasil",
-                                        'SA'    =>  "Banco Santander",
-                                        'IT'    =>  "Banco Itaú"
-                                    ],$bancoDoacao->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                              {!! Form::label('Banco') !!}
+                                    
                       </div>
 
                       <div class="form-group col-md-3">
                                 {!! Form::label('Agência') !!}
-                                {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
+                          
                       </div>
 
                       <div class="form-group col-md-3">
                                 {!! Form::label('Conta') !!}
-                                {!! Form::text('conta_doacao',$bancoDoacao->conta,['class'=>'form-control']) !!}
+                          
                       </div> 
                       <div class="form-group col-md-3">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDV_doacao',$bancoDoacao->contaDV,['class'=>'form-control']) !!}
+                          
                       </div>
                  </div>
         </div>
