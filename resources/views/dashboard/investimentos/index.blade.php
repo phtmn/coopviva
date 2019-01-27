@@ -20,7 +20,7 @@
              
 
           
-                <hr>
+                
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="table-responsive table-hover m-t-20">
@@ -33,7 +33,7 @@
                                             <th>Valor (R$)</th>
                             @can('osc')    <th> Investidor </th> @endcan
                                             <th>OSC </th>   
-                                            <th>Projeto</th>                                                                                   
+                                       <!--     <th>Projeto</th> -->                                                                                  
                                             <th>Recibo </th>
                                         </tr>
                                     </thead>
