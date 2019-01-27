@@ -13,13 +13,14 @@
 
             <div class="col-md-12">
         
-      
-                @can('investidor') <h4>Investimentos Realizados </h4>@endcan
                 
-                @can('osc')<h4>Investimentos Recebidos   @endcan</h4>
-             
-
-          
+                @can('osc')
+                
+                    <h4>Investimentos Recebidos em {{ Auth::user()->name }}  </h4>
+                @endcan
+                @cannot('osc')
+                    <h4>Investimentos Realizados  </h4>
+                @endcannot
                 
                 <div class="row">
                     <div class="col-lg-12">
@@ -32,9 +33,9 @@
                                             <th>Tipo</th>
                                             <th>Valor (R$)</th>
                             @can('osc')    <th> Investidor </th> @endcan
-                                            <th>OSC </th>   
+                            @cannot('osc')                <th>OSC </th>   @endcannot
                                        <!--     <th>Projeto</th> -->                                                                                  
-                                            <th>Recibo </th>
+                                        <!--    <th>Recibo </th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -44,9 +45,9 @@
                                         <td>Doacao</td>
                                         <td>{{$d->valor_investimento}}</td>
                             @can('osc')             <td> </td> @endcan
-                                        <td>{{$d->osc->nome_fantasia}}</td>
-                                        <td>{{$d->projeto->descricao}}</td>
-                                        <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td>
+                            @cannot('osc')  <th>{{$d->nome_fantasia}} </th>   @endcannot          
+                                    
+                                    <!--    <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td> -->
 
                                     </tr>
                                     @empty

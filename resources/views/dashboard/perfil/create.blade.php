@@ -44,12 +44,12 @@
                         @if(Auth::user()->tipo == 'PF')
                             <div class="form-group col-md-6">
                                 <label for="cpf">CPF</label>
-                                {!! Form::text('cpf',null,['class'=> 'form-control','required'=>'true']) !!}
+                                {!! Form::text('cpf',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
                             </div>
                         @else
                             <div class="form-group col-md-6">
                                 <label for="cnpj">CNPJ</label>
-                                {!! Form::text('cnpj',null,['class'=> 'form-control','required'=>'true']) !!}
+                                {!! Form::text('cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="razao_social">Razão Social</label>
@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="telefone">Telefone </label>
-                           {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true']) !!}
+                           {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
                         </div>
                         <div class="form-group col-md-6">
                             <label for="email">Gênero</label>
@@ -81,7 +81,7 @@
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="cep">CEP</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true']) !!}
+                            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
                         </div>
                         <div class="form-group col-md-7">
                             <label for="rua">Rua/Logradouro</label>
@@ -124,14 +124,14 @@
     </div>
 
 
-
-    
-
-
 @section('js')
 <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');
+            $("#cpf").mask('000.000.000-00');
+            $("#cnpj").mask('00.000.000/0000-00');
+            $("#cep").mask('00.000-000');
+           
         });
     </script>
     @endsection

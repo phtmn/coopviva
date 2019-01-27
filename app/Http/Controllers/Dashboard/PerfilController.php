@@ -79,9 +79,9 @@ class PerfilController extends Controller
 
         if($perfil){
             Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
         }
             Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
     }
 }

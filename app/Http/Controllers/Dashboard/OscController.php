@@ -58,10 +58,10 @@ class OscController extends Controller
 
         if($osc){
             Alert::success( 'Os dados da OSC foram atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
         }
         Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-        return redirect()->route('dashboard.index');
+        return redirect()->route('investimentos.index');
     }
 
     public function update(Request $request,$id){
@@ -70,10 +70,10 @@ class OscController extends Controller
 
         if($osc){
             Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
         }
         Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-        return redirect()->route('dashboard.index');
+        return redirect()->route('investimentos.index');
     }
 
     public function show($id){
