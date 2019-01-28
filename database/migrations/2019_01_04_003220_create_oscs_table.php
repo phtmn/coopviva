@@ -17,9 +17,9 @@ class CreateOscsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('nome_fantasia')->nullable();
-            $table->string('sigla_osc');
-            $table->string('cnae');
-            $table->string('responsavel_legal');
+            $table->string('sigla_osc')->nullable();
+            $table->string('cnae')->nullable();
+            $table->string('responsavel_legal')->nullable();
             $table->string('situacao_imovel')->nullable();
             $table->string('ano_inscricao_cnpj')->nullable();
             $table->string('ano_fundacao')->nullable();
@@ -36,13 +36,15 @@ class CreateOscsTable extends Migration
             $table->text('surgimento_osc')->nullable();
             $table->text('missao_osc')->nullable();
             $table->text('visao_osc')->nullable();
-            $table->text('finalidades_estatutarias_ods')->nullable();
+            $table->string('finalidades_estatutarias_ods')->nullable();
             $table->string('link_estatuto_osc')->nullable();	
             
             $table->unsignedInteger('banco_doacao_id');
-            
+            $table->unsignedInteger('endereco_id');
+
             $table->timestamps();
 
+            $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('banco_doacao_id')->references('id')->on('bancos')->onDelete('cascade');
         });

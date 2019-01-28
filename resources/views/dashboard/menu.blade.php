@@ -13,7 +13,9 @@
             @endcannot 
             
             @can('osc')
-                <li class="nav-item"><a class="nav-link {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}"><i class="fa fa-institution" style="color:#8DDF6A;" ></i><b class="text-dark">Objetivos ODS</b></a></li>
+                
+            <li class="nav-item"><a class="nav-link {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}" > <i class="fa fa-institution" style="color:#8DDF6A;"></i> <b class="text-dark"> ODS</b></a></li>
+            <!--    <li class="nav-item"><a class="nav-link {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}" src="{{asset('/vendor/site/images/favicon.png ')}}">  <b class="text-dark"><center><img class="d-block" src="{{asset('/vendor/site/images/favicon.png ')}}" ></center> ODS</b></a></li> -->
 
                 <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"><i class="fa fa-institution" style="color:#8DDF6A;"></i><b class="text-dark"> Perfil da OSC</b> </a></li>
                 <!-- <li class="nav-item"><a class="nav-link {{ $tab == 'projetos' ? 'active' : ''}}"  href="{{route('projetos.create')}}">Incluir Projeto</a></li> -->

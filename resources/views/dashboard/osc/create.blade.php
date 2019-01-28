@@ -48,11 +48,11 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Nome Fantasia</label>
-                    {!! Form::text('nome_fantasia',null,['class'=>'form-control','required'=>'true']) !!}
+                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Sigla OSC</label>
-                    {!! Form::text('sigla_osc',null,['class'=>'form-control','required'=>'true']) !!}
+                    {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação</label>
@@ -101,7 +101,7 @@
                                 'SA'       => 'Banco Santander',
                                 'IT'       =>  'Banco Itaú',
                                 'Outro'    => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select','placeholder'=> 'Escolha uma opção', 'required'=>'true']) 
+                                ],null,['class'=>'form-control custom-select']) 
                             }} 
 
                       </div>
@@ -116,8 +116,8 @@
                                 {!! Form::text('conta',null,['class'=>'form-control']) !!}
                       </div> 
                       <div class="form-group col-md-1">
-                                    {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
+                                {!! Form::label('DV') !!}
+                                {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
                       </div>
                  </div>
         </div>
@@ -156,9 +156,9 @@
                         <div class="form-group col-md-2">
                             <label for="">Situação do Imóves</label>
                             {{ Form::select('situacao_imovel',[
-                                'PR'      => 'Próprio',
-                                'AL'       => 'Alugado', 
-                                'EM'       => 'Emprestado',                                
+                                'Próprio'      => 'Próprio',
+                                'Alugado'       => 'Alugado', 
+                                'Emprestado'       => 'Emprestado',                                
                                 'Outro'    => 'Outro'                                
                                 ],null,['class'=>'form-control custom-select']) 
                             }}                             
@@ -193,7 +193,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Link do Estatuto </label>
-                    {!! Form::text('link_estatuso_osc',null,['class'=>'form-control']) !!}
+                    {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Link da Finalidade Estatutária</label>

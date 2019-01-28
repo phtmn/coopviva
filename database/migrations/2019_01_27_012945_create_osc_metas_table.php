@@ -18,7 +18,7 @@ class CreateOscMetasTable extends Migration
             $table->unsignedInteger('osc_id');
             $table->unsignedInteger('meta_id');
             $table->string('meta_codigo');
-            $table->string('meta_descricao');
+            $table->longText('meta_descricao');
 
             $table->timestamps();
         });

@@ -36,12 +36,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-dados-tab" data-toggle="pill" href="#pills-dados" role="tab" aria-controls="pills-dados" aria-selected="true">Dados Gerais</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false">Endereço</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false">Dados Financeiros</a>
                 </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false">Endereço</a>
+                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false">Descrição</a>
                 </li>
@@ -70,33 +73,37 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Nome Fantasia</label>
-                    {!! Form::text('nome_fantasia',null,['class'=>'form-control','required'=>'true']) !!}
+                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Sigla OSC</label>
-                    {!! Form::text('sigla_osc',null,['class'=>'form-control','required'=>'true']) !!}
+                    {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação</label>
-                    {!! Form::text('ano_fundacao',null,['class'=>'form-control']) !!}
+                    {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ</label>
-                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control']) !!}
+                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control','id'=>'ano',  'placeholder' => 'Ano']) !!}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-md-6">
+                 <div class="form-group col-md-2">
+                    <label for=""><strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE</label>
+                    {!! Form::text('cnae',null,['class'=>'form-control','id'=>'cnae']) !!}
+                 </div>
+                <div class="form-group col-md-5">
                     <label for="">Responsável Legal</label>
                     {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label for="">E-mail </label>
                     {!! Form::text('email',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group col-md-2">
                     <label for="">Telefone</label>
-                    {!! Form::text('telefone',null,['class'=>'form-control']) !!}
+                    {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                 </div>
             </div>
         </div>
@@ -134,7 +141,13 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="">Situação do Imóvel</label>
-                            {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
+                            {{ Form::select('situacao_imovel',[
+                                'Próprio'      => 'Próprio',
+                                'Alugado'       => 'Alugado', 
+                                'Emprestado'       => 'Emprestado',                                
+                                'Outro'    => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select']) 
+                            }}  
                         </div>                
             </div>
         </div>
@@ -166,7 +179,7 @@
                 </div>   
                 <div class="form-group col-md-4">
                     <label for="">Link do Estatuto </label>
-                    {!! Form::text('link_estatuso_osc',null,['class'=>'form-control']) !!}
+                    {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
                 </div>         
                 <div class="form-group col-md-4">
                     <label for="">Link da Finalidade Estatutária</label>
@@ -177,7 +190,7 @@
         </div>
     
 
-        <div class="tab-pane fade " id="pills-atuacao" role="tabpanel" aria-labelledby="pills-atuacao-tab">
+       <!-- <div class="tab-pane fade " id="pills-atuacao" role="tabpanel" aria-labelledby="pills-atuacao-tab">
         <div class="row">
         <div class="form-group col-md-12">
                 <label for="">Atividade Econômica (CNAE)</label>
@@ -193,7 +206,7 @@
             </div>
           
         </div>
-        </div>
+        </div> -->
 
         <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
             <div class="row">
@@ -213,8 +226,12 @@
         </div>
 
         <div class="tab-pane fade " id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
-             <h5>Conta para receber Doações</h5>
-                 <div class="row">
+        <div class="row">
+                 
+                 <div class="form-group col-md-4">
+                 <br><h4>Conta para receber Doações</h4>
+                      </div>
+                 
                     <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
                                     {!! Form::select('banco',[
@@ -222,21 +239,21 @@
                                         'BB'    =>  "Banco do Brasil",
                                         'SA'    =>  "Banco Santander",
                                         'IT'    =>  "Banco Itaú"
-                                    ],$banco->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                    ],$banco->banco,['class'=>'form-control']) !!}
                       </div>
 
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-2">
                                 {!! Form::label('Agência') !!}
                                 {!! Form::text('agencia',$banco->agencia,['class'=>'form-control']) !!}
                       </div>
 
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-2">
                                 {!! Form::label('Conta') !!}
                                 {!! Form::text('conta',$banco->conta,['class'=>'form-control']) !!}
                       </div> 
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-1">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('conta',$banco->contaDV,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDv',$banco->contaDv,['class'=>'form-control']) !!}
                       </div>
                  </div>
         </div>
@@ -279,4 +296,22 @@
 </div>
   
 </div>
-@endsection
+@stop
+
+
+
+@section('js')
+<script>
+        $(document).ready(function(){
+            $('#telefone').mask('(99) 9 9999-9999');
+            $("#cpf").mask('000.000.000-00');
+            $("#cnpj").mask('00.000.000/0000-00');
+            $("#cep").mask('00.000-000');
+            $("#ano").mask('0000');            
+            $("#anofun").mask('0000');  
+            $("#cnae").mask('0000000');
+        });
+    </script>
+
+
+    @stop

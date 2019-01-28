@@ -14,9 +14,9 @@ class PerfilController extends Controller
 {
 
     public function create(){
-
-        $perfil = Perfil::where('user_id',Auth::user()->id);
-
+        
+        $perfil = Perfil::where('user_id',Auth::user()->id)->first();
+                
         if($perfil){
             return view('dashboard.perfil.edit',[
                 'tab'       => 'perfil',
@@ -52,16 +52,16 @@ class PerfilController extends Controller
         $perfil->save();
 
         if($perfil){
-            Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            Alert::success( 'Seus dados foram Salvos','Sucesso')->persistent('Ok');
+            return redirect()->route('investimentos.index');
         }
-        Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-        return redirect()->route('dashboard.index');
+        Alert::warning( 'Não foi possível Salvar seus dados','Erro')->persistent('Ok');
+            return redirect()->route('investimentos.index');
     }
 
     public function update(Request $request,$id){
 
-        $perfil = Perfil::where('user_id',Auth::user()->id);
+        $perfil = Perfil::where('user_id',Auth::user()->id)->first();
 
         $dados      = $request->all();
         $endereco   = $perfil->endereco()->update($dados);
@@ -79,10 +79,10 @@ class PerfilController extends Controller
         $perfil->save();
 
         if($perfil){
-            Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
+            Alert::success( 'Seus dados foram Salvos','Sucesso')->persistent('Ok');
             return redirect()->route('investimentos.index');
         }
-            Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
+            Alert::warning( 'Não foi possível Salvar seus dados','Erro')->persistent('Ok');
             return redirect()->route('investimentos.index');
     }
 }

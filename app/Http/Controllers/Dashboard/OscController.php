@@ -18,6 +18,7 @@ class OscController extends Controller
     public function create(){
 
         $osc = OSC::where('user_id',Auth::user()->id)->first();
+
         if($osc){
             return view('dashboard.osc.edit',[
                 'tab'       => 'osc',
@@ -38,10 +39,11 @@ class OscController extends Controller
 
             try {
                 $bancoDoacao = new banco();
-                $bancoDoacao->banco = $request->banco;
-                $bancoDoacao->conta = $request->conta;
-                $bancoDoacao->agencia = $request->agencia;
-                $bancoDoacao->contaDv = $request->contaDv;
+                $bancoDoacao->banco     = $request->banco;
+                $bancoDoacao->conta     = $request->conta;
+                $bancoDoacao->agencia   = $request->agencia;
+                $bancoDoacao->tipo_conta    = 'doacao';
+                $bancoDoacao->contaDv   = $request->contaDv;
                 $bancoDoacao->save();
 
                 $endereco = new Endereco();
@@ -82,12 +84,14 @@ class OscController extends Controller
                 $osc->endereco_id           = $endereco->id;
                 $osc->save();
 
-                Alert::success('Os dados da OSC foram atualizados', 'Sucesso')->persistent('Ok');
-                return redirect()->route('investimentos.index');
+                Alert::success('Os dados da OSC foram salvos', 'Sucesso')->persistent('Ok');
+                //return redirect()->route('investimentos.index');
+                return redirect()->back();
 
             } catch (Throwable $t) {
                 Alert::error('Algum Erro ocorrou'.$t->getMessage(), 'Erro')->persistent('Ok');
-                return redirect()->route('investimentos.index');
+                //return redirect()->route('investimentos.index');
+                return redirect()->back();
             }
         },2); return $result;
     }
@@ -122,14 +126,16 @@ class OscController extends Controller
                 $osc->missao_osc = $request->missao_osc;
                 $osc->visao_osc = $request->visao_osc;
                 $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
-                $osc->link_estatuto_osc = $request->link_estatuso_osc;
+                $osc->link_estatuto_osc = $request->link_estatuto_osc;
 
                 $osc->save();
-                Alert::success('Seus dados foram Atualizados', 'Sucesso')->persistent('Ok');
-                return redirect()->route('investimentos.index');
+                Alert::success('Seus dados foram Salvos', 'Sucesso')->persistent('Ok');
+                //return redirect()->route('investimentos.index');
+                return redirect()->back();
             } catch (Throwable $t) {
-                Alert::warning('Não foi possível atualizar seus dados' . $t->getMessage(), 'Erro')->persistent('Ok');
-                return redirect()->route('investimentos.index');
+                Alert::warning('Não foi possível Salvar seus dados' . $t->getMessage(), 'Erro')->persistent('Ok');
+                //return redirect()->route('investimentos.index');
+                return redirect()->back();
             }
         },2);
         return $result;

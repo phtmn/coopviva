@@ -96,6 +96,47 @@
             </div><!-- .container -->
         </div><!-- .top-header-bar -->
 
+<!--
+        <div class="top-header-bar ">
+            <div class="container">
+                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-3 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                        <a class="d-block" rel="home" href="{{url('/') }}"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
+                                       
+                        </div>
+						
+                    </div>
+ 
+                    <div class="col-12 col-lg-9 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Home</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Sobre Nós</a>
+                            </div>
+                               
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Agenda 2030</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Blog</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Dashboard</a>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+-->
+
         <div class="nav-bar">
             <div class="container">
                 <div class="row">
@@ -130,12 +171,6 @@
                           </div>
                         </nav><!-- .site-navigation -->
 
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->

@@ -4,7 +4,8 @@
     @include('dashboard.menu')
 
 <div class="container">
-      <h4>Clique em um dos 17 Objetivos para selecionar suas metas</h4>
+<
+      <h4 class="text-center">Qual é o seu ODS?</h4>
 
 
       <a href="{{route('metas',1)}}" style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods1.png')}}"></a>
