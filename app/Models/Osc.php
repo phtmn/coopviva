@@ -36,4 +36,16 @@ class Osc extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function banco(){
+        return $this->belongsTo(Banco::class);
+    }
+
+    public function endereco(){
+        return $this->belongsTo(Endereco::class);
+    }
+
+    public function metas(){
+        return $this->belongsToMany(Meta::class);
+    }
 }

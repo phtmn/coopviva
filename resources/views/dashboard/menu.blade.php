@@ -30,7 +30,9 @@
             <li class="nav-item"><a class="nav-link {{ $tab == 'investir' ? 'active' : ''}}" href="{{ route('listar.oscs') }}"  ><i class="fa fa-money"></i> Investir</a></li>
 
             @can('osc')
-            <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"><i class="fa fa-institution"></i> Perfil da OSC </a></li>
+                <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"><i class="fa fa-institution"> <strong>Perfil da OSC </strong> </i></a></li>
+                <li class="nav-item"><a class="nav-link {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}"><i class="fa fa-institution"> <strong>Objetivos ODS</strong> </i></a></li>
+
                 <!-- <li class="nav-item"><a class="nav-link {{ $tab == 'projetos' ? 'active' : ''}}"  href="{{route('projetos.create')}}">Incluir Projeto</a></li> -->
                 <li class="nav-item"><a class="nav-link {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"><i class="fa fa-suitcase"></i> Projeto </a></li>
                 

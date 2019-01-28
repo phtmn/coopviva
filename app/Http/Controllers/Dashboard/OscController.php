@@ -16,20 +16,28 @@ class OscController extends Controller
 
     public function create(){
 
-        return view('dashboard.osc.create-edit',[
-            'tab' => 'osc',
-            'osc' => OSC::first()
+        $osc = OSC::first();
+        if($osc){
+            return view('dashboard.osc.edit',[
+                'tab'       => 'osc',
+                'osc'       => $osc,
+                'endereco'  => $osc->endereco(),
+                'banco'     => $osc->banco()
+            ]);
+        }
+        return view('dashboard.osc.create',[
+            'tab'       => 'osc',
         ]);
     }
 
     public function store(Request $request){
 
-        $bancoDoacao                = new banco();
-        $bancoDoacao->banco         = $request->banco_doacao;
-        $bancoDoacao->conta         = $request->conta_doacao;
-        $bancoDoacao->agencia       = $request->agencia_doacao;
-        $bancoDoacao->contaDv       = $request->contaDv_doacao;
-        $bancoDoacao->save();
+//        $bancoDoacao                = new banco();
+//        $bancoDoacao->banco         = $request->banco_doacao;
+//        $bancoDoacao->conta         = $request->conta_doacao;
+//        $bancoDoacao->agencia       = $request->agencia_doacao;
+//        $bancoDoacao->contaDv       = $request->contaDv_doacao;
+//        $bancoDoacao->save();
         
         
         $osc                            = new Osc();
