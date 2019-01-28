@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Perfil extends Model
 {
 
-    public static function boot(){
-        parent::boot();
-            static::addGlobalScope(new UserScope());
-    }
+//    public static function boot(){
+//        parent::boot();
+//            static::addGlobalScope(new UserScope());
+//    }
 
     protected $fillable = [
         'nome_completo',

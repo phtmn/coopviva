@@ -15,8 +15,8 @@ class PerfilController extends Controller
 
     public function create(){
 
-        $perfil = Perfil::first();
-        //dd($perfil);
+        $perfil = Perfil::where('user_id',Auth::user()->id);
+
         if($perfil){
             return view('dashboard.perfil.edit',[
                 'tab'       => 'perfil',
@@ -61,7 +61,7 @@ class PerfilController extends Controller
 
     public function update(Request $request,$id){
 
-        $perfil = Perfil::first();
+        $perfil = Perfil::where('user_id',Auth::user()->id);
 
         $dados      = $request->all();
         $endereco   = $perfil->endereco()->update($dados);

@@ -27,22 +27,26 @@
 
                 <div class="x_content">
 
-                    <table class="table">
+                    <table class="table table-hover table-striped">
                         <thead>
                             <tr>
                                 <th>Codigo Interno</th>
                                 <th>Nome Fantasia</th>
                                 <th>Fundação</th>
                                 <th>Data Cadastro</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($data as $d)
                                 <tr>
                                     <td>{{$d->id}}</td>
-                                    <td>{$d->nome_fantasia</td>
+                                    <td>{{$d->nome_fantasia}}</td>
                                     <td>{{$d->ano_fundacao}}</td>
-                                    <td>{{$d->created_at}}</td>
+                                    <td>{{ date('d/m/Y',strtotime($d->created_at))}}</td>
+                                    <td>
+                                        <a href="{{route('admin-osc.show',$d->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Detalhes</a>
+                                    </td>
                                 </tr>
                             @empty
                                 <h4 class="label label-info">Nenhum registro encontrado</h4>                 

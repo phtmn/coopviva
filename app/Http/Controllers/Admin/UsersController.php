@@ -14,4 +14,12 @@ class UsersController extends Controller
             'data' => $data
         ]);
     }
+
+    public function show($id){
+        $user = User::find($id);
+        return view('admin.users.show',[
+            'user'      => $user,
+            'perfil'    => $user->perfil()->first(),
+        ]);
+    }
 }

@@ -17,7 +17,7 @@ class OscController extends Controller
 
     public function create(){
 
-        $osc = OSC::first();
+        $osc = OSC::where('user_id',Auth::user()->id)->first();
         if($osc){
             return view('dashboard.osc.edit',[
                 'tab'       => 'osc',
@@ -94,7 +94,7 @@ class OscController extends Controller
 
     public function update(Request $request,$id){
 
-        $osc = OSC::first();
+        $osc = OSC::where('user_id',Auth::user()->id)->first();
         $dados = $request->all();
         $result = DB::transaction(function() use ($request,$dados,$osc) {
             try {
@@ -133,16 +133,5 @@ class OscController extends Controller
             }
         },2);
         return $result;
-    }
-
-    public function show($id){
-
-        $osc = OSC::find($id);
-        return view('dashboard.incentivos.detalhe_osc',[
-            'osc'       => $osc,
-            'projetos'  => $osc->projetos,
-            'tab'       => 'investir'
-        ]);
-
     }
 }

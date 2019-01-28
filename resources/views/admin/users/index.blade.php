@@ -36,6 +36,7 @@
                                 <th>Perfil</th>
                                 <th>UF</th>
                                 <th>Data Cadastro</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,6 +48,9 @@
                                     <td>{{$d->tipo_usuario}}</td>
                                     <td>{{$d->uf}}</td>
                                     <td>{{ date('d/m/Y',strToTime($d->created_at)) }}</td>
+                                    <td>
+                                        <a href="{{route('admin-users.show',$d->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Detalhes</a>
+                                    </td>
                                 </tr>
                             @empty
                                 <p class="label-info">Nenhum registro encontrado</p>
