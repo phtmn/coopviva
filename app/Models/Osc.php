@@ -10,6 +10,8 @@ class Osc extends Model
     protected $fillable = [
         'user_id',
         'nome_fantasia',
+        'cnae',
+        'responsavel_legal',
         'sigla_osc',
         'ano_fundacao',
         'telefone',

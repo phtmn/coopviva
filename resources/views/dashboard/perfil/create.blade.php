@@ -70,7 +70,7 @@
                                 'Feminino'       => 'Feminino',                                
                                 'Outro'         => 'Outro'                                
                                 ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true']) 
-                }}
+                            }}
                         </div>
                     </div>
                     <br>

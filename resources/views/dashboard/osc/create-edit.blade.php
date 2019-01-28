@@ -92,7 +92,7 @@
             
                 <div class="form-group col-md-2">
                 <label for=""><strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE</label>
-                {!! Form::text('abc',null,['class'=>'form-control','id'=>'cnae']) !!}
+                {!! Form::text('cnae',null,['class'=>'form-control','id'=>'cnae']) !!}
                  </div>   
 
                 <div class="form-group col-md-5">
@@ -117,29 +117,32 @@
                  <div class="form-group col-md-4">
                  <br><h4>Conta para receber Doações</h4>
                       </div>
-                    <div class="form-group col-md-3">
+                      <div class="form-group col-md-3">
                               {!! Form::label('Banco') !!}
-                              {!! Form::select('banco_docao',[
-                                        'CEF'   =>  "Caixa Economica Federal",
-                                        'BB'    =>  "Banco do Brasil",
-                                        'SA'    =>  "Banco Santander",
-                                        'IT'    =>  "Banco Itaú"
-                                    ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!} 
+
+                              {{ Form::select('banco',[
+                                'CEF'      => 'Caixa Economica Federal',
+                                'BB'       => 'Banco do Brasil', 
+                                'SA'       => 'Banco Santander',
+                                'IT'       =>  'Banco Itaú',
+                                'Outro'    => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select','placeholder'=> 'Escolha uma opção', 'required'=>'true']) 
+                            }} 
 
                       </div>
 
                       <div class="form-group col-md-2">
                                 {!! Form::label('Agência') !!}
-                                {!! Form::text('abc',null,['class'=>'form-control']) !!}
+                                {!! Form::text('agencia',null,['class'=>'form-control']) !!}
                       </div>
 
                       <div class="form-group col-md-2">
                                 {!! Form::label('Conta') !!}
-                                {!! Form::text('abc',null,['class'=>'form-control']) !!}
+                                {!! Form::text('conta',null,['class'=>'form-control']) !!}
                       </div> 
                       <div class="form-group col-md-1">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('abc',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
                       </div>
                  </div>
         </div>
@@ -176,8 +179,14 @@
                             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="">Situação do Imóvel</label>
-                            {!! Form::text('situacao_imovel',null,['class'=>'form-control']) !!}
+                            <label for="">Situação do Imóves</label>
+                            {{ Form::select('situacao_imovel',[
+                                'PR'      => 'Próprio',
+                                'AL'       => 'Alugado', 
+                                'EM'       => 'Emprestado',                                
+                                'Outro'    => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select']) 
+                            }}                             
                         </div>                
             </div>
         </div>
