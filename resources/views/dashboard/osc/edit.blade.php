@@ -40,11 +40,14 @@
                     <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false">Endereço</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false">Descrição</a>
+                    <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false">Dados Financeiros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a>
+                    <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false">Descrição</a>
                 </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a>--}}
+                {{--</li>--}}
                 <li class="nav-item">
                     <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
                 </li>
@@ -104,30 +107,30 @@
             <div class="row">
                         <div class="form-group col-md-3">
                             <label for="cep">CEP</label>
-                            {!! Form::text('cep',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('cep',$endereco->cep,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-7">
                             <label for="rua">Rua/Logradouro</label>
-                            {!! Form::text('rua',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('rua',$endereco->rua,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="numero">Número</label>
-                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}                           
+                            {!! Form::text('numero',$endereco->numero,['class'=> 'form-control']) !!}
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-5">
                             <label for="cidade">Cidade</label>
-                            {!! Form::text('cidade',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('cidade',$endereco->cidade,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="uf">Estado</label>
-                            {!! Form::text('uf',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('uf',$endereco->uf,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-3">
                             <label for="complemento">Complemento</label>
-                            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+                            {!! Form::text('complemento',$endereco->uf,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
                             <label for="">Situação do Imóvel</label>
@@ -143,19 +146,19 @@
             <div class="row">
             <div class="form-group col-md-12">
                     <label for="">O que a OSC faz?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                    {!! Form::textarea('descricao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Como surgiu a OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Missão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                    {!! Form::textarea('missao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Visão da OSC?</label>
-                    {!! Form::textarea('abc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                    {!! Form::textarea('visao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Link do Site </label>
@@ -163,11 +166,11 @@
                 </div>   
                 <div class="form-group col-md-4">
                     <label for="">Link do Estatuto </label>
-                    {!! Form::text('abc',null,['class'=>'form-control']) !!}
+                    {!! Form::text('link_estatuso_osc',null,['class'=>'form-control']) !!}
                 </div>         
                 <div class="form-group col-md-4">
                     <label for="">Link da Finalidade Estatutária</label>
-                    {!! Form::text('abc',null,['class'=>'form-control']) !!}
+                    {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
                 </div>
                 
             </div>
@@ -195,9 +198,13 @@
         <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
             <div class="row">
                  <div class="form-group col-md-12">
-                <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
+                    <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
                 
-
+                    @forelse($metas as $meta)
+                        <p>{{ $meta->meta_codigo }} - {{ $meta->meta_descricao }}</p>
+                    @empty
+                        <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
+                    @endforelse
                  </div> 
          
   
@@ -210,26 +217,26 @@
                  <div class="row">
                     <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
-                                    {!! Form::select('banco_docao',[
+                                    {!! Form::select('banco',[
                                         'CEF'   =>  "Caixa Economica Federal",
                                         'BB'    =>  "Banco do Brasil",
                                         'SA'    =>  "Banco Santander",
                                         'IT'    =>  "Banco Itaú"
-                                    ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                    ],$banco->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                       </div>
 
                       <div class="form-group col-md-3">
                                 {!! Form::label('Agência') !!}
-                                {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
+                                {!! Form::text('agencia',$banco->agencia,['class'=>'form-control']) !!}
                       </div>
 
                       <div class="form-group col-md-3">
                                 {!! Form::label('Conta') !!}
-                                {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
+                                {!! Form::text('conta',$banco->conta,['class'=>'form-control']) !!}
                       </div> 
                       <div class="form-group col-md-3">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDV_doacao',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('conta',$banco->contaDV,['class'=>'form-control']) !!}
                       </div>
                  </div>
         </div>

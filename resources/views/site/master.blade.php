@@ -117,8 +117,8 @@
                                 <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
-                                        <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
-
+                                       <!-- <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li> -->
+                                       <li><a href="{{ route('investimentos.index') }}">Dashboard</a></li>
                                        @else
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))

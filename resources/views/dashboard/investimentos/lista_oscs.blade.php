@@ -3,6 +3,6 @@
 @section('content')
 
     @include('dashboard.menu')
-    @include('dashboard.incentivos.resultado-pesquisa')
+    @include('dashboard.investimentos.resultado-pesquisa')
 
 @stop

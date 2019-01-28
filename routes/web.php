@@ -31,10 +31,12 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
     Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
 
-    Route::get('/quero_investir','Dashboard\OscController@oscs')->name('listar.oscs');
     Route::get('/investir/{id}','Financeiro\CheckoutController@formIncentivar')->name('investir');
     Route::post('/pagar','Financeiro\CheckoutController@pagar')->name('pagar');
 
+
+    Route::get('/quero_investir','Dashboard\InvestimentosController@oscs')->name('listar.oscs');
+    Route::get('/detalhes/{id}','Dashboard\InvestimentosController@detalhe')->name('detalhe.osc');
     Route::get('/investimento/{status}','Dashboard\InvestimentosController@callback');
 
 });

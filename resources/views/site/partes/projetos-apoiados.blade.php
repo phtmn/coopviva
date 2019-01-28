@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="coL-12 col-lg-6">
                     <div class="section-heading">
-                        <h2 class="entry-title">Nossas OSC's e seus Projetos</h2>
+                        <h2 class="entry-title"> OSC's em Destaque</h2>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->

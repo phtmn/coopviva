@@ -31,9 +31,9 @@
                 @forelse($metas as $meta)
 
                 <div class="form-check">
-                    <input class="form-check-input" name="codigos[]" type="checkbox" value="{{$meta->codigo}}" id="{{$meta->descricao}}" >
+                    <input class="form-check-input" name="codigos[]" type="checkbox" value="{{$meta->id}}" id="{{$meta->descricao}}" >
                     <label class="form-check-label" for="{{$meta->descricao}}" style="cursor:pointer;">
-                        {{$meta->descricao}}
+                       <b>{{$meta->codigo}}</b> - {{$meta->descricao}}
                     </label>
                 </div>
 

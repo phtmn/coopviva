@@ -33,12 +33,6 @@
                     </div>
                 </div>
 
-            <!-- <div class="form-group">
-                    <label for="name">Projetos Disponiveis</label>
-                    {!! Form::select('projeto_id',$projetos, old('projeto_id'),
-                        ['class'=>'form-control','id'=>'projetos']) !!}
-                </div> -->
-
                 <div class="form-group">
                     <center>  
                     <label for="name"><strong>VALOR (R$)</strong></label>

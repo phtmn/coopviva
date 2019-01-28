@@ -6,6 +6,7 @@ use App\Models\Investimento;
 use App\Models\Projeto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use MercadoPago\SDK as MP;
 use App\Models\Osc;
 use Auth;
@@ -14,10 +15,10 @@ use Alert;
 class CheckoutController extends Controller
 {
     public function formIncentivar($id){
-        $osc = OSC::find($id);
+        $osc = DB::table('oscs')->find($id);
         return view('dashboard.incentivos.formCheckout',[
             'osc'       => $osc,
-            'projetos'  => $osc->projetos->pluck('descricao','id'),
+            //'projetos'  => $osc->projetos->pluck('descricao','id'),
             'tab'       => 'investir'
         ]);
 

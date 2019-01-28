@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('sexo')->nullable();
             $table->string('uf')->nullable();
             $table->string('cidade')->nullable();
+            $table->boolean('isAdmin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

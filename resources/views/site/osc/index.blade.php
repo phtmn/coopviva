@@ -56,7 +56,7 @@
     </div>
 </div>
 
-@include('dashboard.incentivos.resultado-pesquisa')
+@include('dashboard.investimentos.resultado-pesquisa')
 
 -->
 @endsection

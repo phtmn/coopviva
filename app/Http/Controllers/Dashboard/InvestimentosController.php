@@ -6,6 +6,7 @@ use App\Models\Investimento;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Alert;
+use Illuminate\Support\Facades\DB;
 
 class InvestimentosController extends Controller
 {
@@ -16,6 +17,25 @@ class InvestimentosController extends Controller
             'data'=> $data,
             'tab' => 'investimentos'
         ]);
+    }
+
+    public function oscs(){
+        $data = DB::table('oscs')->get();
+        return view('dashboard.investimentos.lista_oscs',[
+            'data' => $data,
+            'tab' => 'investir'
+        ]);
+    }
+
+    public function detalhe($id){
+
+
+        return view('dashboard.investimentos.detalhe_osc',[
+            'osc'       => DB::table('oscs')->where('id',$id)->first(),
+            'metas'     => DB::table('osc_metas')->where('osc_id',$id)->get(),
+            'tab'       => 'investir'
+        ]);
+
     }
 
     public function callback(Request $request){

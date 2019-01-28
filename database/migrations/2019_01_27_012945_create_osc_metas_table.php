@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOscsMetasTable extends Migration
+class CreateOscMetasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateOscsMetasTable extends Migration
      */
     public function up()
     {
-        Schema::create('meta_osc', function (Blueprint $table) {
+        Schema::create('osc_metas', function (Blueprint $table) {
             $table->increments('id');
-
             $table->unsignedInteger('osc_id');
             $table->unsignedInteger('meta_id');
+            $table->string('meta_codigo');
+            $table->string('meta_descricao');
 
-
-            $table->foreign('osc_id','fk_osc_id')->references('id')->on('oscs')->onDelete('cascade');
-            $table->foreign('meta_id','fk_meta_id')->references('id')->on('metas')->onDelete('cascade');
             $table->timestamps();
         });
     }

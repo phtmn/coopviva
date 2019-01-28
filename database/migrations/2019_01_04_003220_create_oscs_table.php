@@ -18,6 +18,8 @@ class CreateOscsTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('nome_fantasia')->nullable();
             $table->string('sigla_osc');
+            $table->string('cnae');
+            $table->string('responsavel_legal');
             $table->string('situacao_imovel')->nullable();
             $table->string('ano_inscricao_cnpj')->nullable();
             $table->string('ano_fundacao')->nullable();

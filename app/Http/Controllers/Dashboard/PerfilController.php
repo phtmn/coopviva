@@ -16,6 +16,7 @@ class PerfilController extends Controller
     public function create(){
 
         $perfil = Perfil::first();
+        //dd($perfil);
         if($perfil){
             return view('dashboard.perfil.edit',[
                 'tab'       => 'perfil',
@@ -79,9 +80,9 @@ class PerfilController extends Controller
 
         if($perfil){
             Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
         }
             Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            return redirect()->route('investimentos.index');
     }
 }
