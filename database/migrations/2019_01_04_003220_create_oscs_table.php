@@ -25,7 +25,7 @@ class CreateOscsTable extends Migration
             $table->string('ano_fundacao')->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('site')->nullable();
-            $table->string('descricao_osc')->nullable();
+            $table->longText('descricao_osc')->nullable();
             $table->string('telefone')->nullable();
             $table->string('objetivo_ods')->nullable();
             $table->string('metas_ods')->nullable();
@@ -33,9 +33,9 @@ class CreateOscsTable extends Migration
             $table->string('area_atuacao')->nullable();
             $table->string('sub_area1')->nullable();
             $table->string('sub_area2')->nullable();
-            $table->text('surgimento_osc')->nullable();
-            $table->text('missao_osc')->nullable();
-            $table->text('visao_osc')->nullable();
+            $table->longText('surgimento_osc')->nullable();
+            $table->longText('missao_osc')->nullable();
+            $table->longText('visao_osc')->nullable();
             $table->string('finalidades_estatutarias_ods')->nullable();
             $table->string('link_estatuto_osc')->nullable();	
             

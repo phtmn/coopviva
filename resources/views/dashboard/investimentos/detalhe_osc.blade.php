@@ -40,12 +40,21 @@
                     <div class="card card-inverse card-primary">
                         <div class="card-body">
                         <div class="d-flex no-block">
-                               <h4 class="card-title"> <p>{{$osc->nome_fantasia}}</p></h4> 
+                               <h4 class="card-title"> <p>{{$osc->sigla_osc}}</p></h4> 
                               <div class="ml-auto">
                               <ul class="nav nav-tabs justify-content-center ">
                                             <li class="nav-item">
                                             <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Perfil da OSC</a>
-                                            </li>                                                                           
+                                            </li>  
+                                            <!--<li class="nav-item">
+                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">ODS</a>
+                                            </li>      
+                                            <li class="nav-item">
+                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Projetos</a>
+                                            </li>  
+                                            <li class="nav-item">
+                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Galeria</a>
+                                            </li>  -->                                                                     
                                     </ul>                                
                                 </div> 
                             </div> 
@@ -57,19 +66,31 @@
                             <div class="table-responsive m-t-20">
 
                             <hr>
-
+                            <h4>Dados Gerais</h4>
                             <p>{{$osc->nome_fantasia}}</p>
-                        <p>{{$osc->sigla_osc}}</p>
-                        <p>{{$osc->ano_fundacao}}</p>
-                        <p>{{$osc->area_atuacao}}</p>
-                        <h4>Missao</h4>
-                            <p>
-                                {{$osc->missao_osc}}
-                            </p>
-                        <h4>Visaoo</h4>
-                            <p>
-                                {{$osc->visao_osc}}
-                            </p>                   
+                            <p>{{$osc->sigla_osc}}</p>
+                            <p>{{$osc->ano_fundacao}}</p>
+                            <p>{{$osc->cnae}}</p>
+                            <hr>                            
+                            <h4>Endereço</h4>
+
+                            
+
+                           <!-- cidade estado -->
+
+                            <p>{{$osc->cnae}}</p>
+                            cidade e estado
+                            <h4>Descrição</h4>    
+                            <h3>O que a OSC faz?</h3> 
+                            <p>{{$osc->descricao_osc}} </p>
+                            <h3>Como surgiu a OSC?</h3> 
+                            <p>{{$osc->descricao_osc}} </p>
+                            <h3>Missão da OSC?</h3> 
+                            <p>{{$osc->missao_osc}} </p>
+                            <h3>Visão da OSC?</h3> 
+                            <p>{{$osc->visao_osc}} </p>
+
+                                  <!--     link do site -->
                                                         
                             </div>
                     </div>                
@@ -99,13 +120,44 @@
 
                             <div class="card-body">
                                 <div class="circular-progress-bar">
-                                        
-                                        <input class="form-check-input" type="radio" name="tipo" id="radioPJ" value="PROJETO">
-                            <label class="form-check-label" for="radioPJ">Desejo realizar uma Doação </label>
+                                <div class="row">
+                        <div class="form-group col-md-12">
+                                        <input class="form-check-input" type="radio" name=" " id=" " value="OSC">
+                                                <label class="form-check-label" for="">Desejo realizar uma Doação </label>
+                        <div class="form-group col-md-12">
+                                        <input class="form-check-input" type="radio" name="" id="" value="PROJETO">
+                                            <label class="form-check-label" for="">Desejo Patrocinar um projeto </label>
 
-                            <label for="name"><strong>VALOR (R$)</strong></label>
+                                        </div>
+
+                        <div class="form-group col-md-12">
+                        <label for="">Escolha um Projeto</label>
+                            {{ Form::select('situacao_imovel',[
+                                'Próprio'      => 'Próprio',
+                                'Alugado'       => 'Alugado', 
+                                'Emprestado'       => 'Emprestado',                                
+                                'Outro'    => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select']) 
+                            }}  
+
+                                        </div>
+
+
+
+                                        <div class="form-group col-md-12">
+                        
+
+                        <label for="name"><strong>VALOR (R$)</strong></label>
                             <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="">                
-                            <a href="{{route('investir',$osc->id)}}" class="btn gradient-bg">Investir </a>
+                            <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg">Investir </a>
+
+
+                        </div>
+
+                                        </div>
+                                        </div>
+
+                           
                                 </div>  
                             </div>
 
