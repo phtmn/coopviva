@@ -170,6 +170,12 @@
                             </ul>
                           </div>
                         </nav><!-- .site-navigation -->
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
 
                     </div><!-- .col -->
                 </div><!-- .row -->

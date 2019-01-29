@@ -1,5 +1,5 @@
 
-<div class="album py-5 ">
+<div class="album py-4 ">
     <div class="container">
         <div class="row">
             @foreach($data as $d)
