@@ -40,21 +40,21 @@
                     <div class="card card-inverse card-primary">
                         <div class="card-body">
                         <div class="d-flex no-block">
-                               <h4 class="card-title"> <p>{{$osc->sigla_osc}}</p></h4> 
+                               <h2 class="card-title"> <p>{{$osc->sigla_osc}}</p></h2> 
                               <div class="ml-auto">
                               <ul class="nav nav-tabs justify-content-center ">
                                             <li class="nav-item">
-                                            <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Perfil da OSC</a>
+                                            <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil da OSC</b></a>
                                             </li>  
-                                            <!--<li class="nav-item">
-                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">ODS</a>
+                                            <li class="nav-item">
+                                            <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                             </li>      
+                                            <!--<li class="nav-item">
+                                            <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
+                                            </li>  -->
                                             <li class="nav-item">
-                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Projetos</a>
-                                            </li>  
-                                            <li class="nav-item">
-                                            <a class="nav-link " id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true">Galeria</a>
-                                            </li>  -->                                                                     
+                                            <a class="nav-link " id="pills-galeria-tab" data-toggle="pill" href="#pills-galeria" role="tab" aria-controls="pills-galeria" aria-selected="true"><b class="text-dark" >Galeria</b></a>
+                                            </li>                                                                     
                                     </ul>                                
                                 </div> 
                             </div> 
@@ -64,37 +64,60 @@
             <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">                        
                             <div class="table-responsive m-t-20">
-
-                            <hr>
-                            <h4>Dados Gerais</h4>
-                            <p>{{$osc->nome_fantasia}}</p>
-                            <p>{{$osc->sigla_osc}}</p>
-                            <p>{{$osc->ano_fundacao}}</p>
-                            <p>{{$osc->cnae}}</p>
-                            <hr>                            
-                            <h4>Endereço</h4>
-
-                            
-
-                           <!-- cidade estado -->
-
-                            <p>{{$osc->cnae}}</p>
-                            cidade e estado
-                            <h4>Descrição</h4>    
-                            <h3>O que a OSC faz?</h3> 
-                            <p>{{$osc->descricao_osc}} </p>
-                            <h3>Como surgiu a OSC?</h3> 
-                            <p>{{$osc->descricao_osc}} </p>
-                            <h3>Missão da OSC?</h3> 
-                            <p>{{$osc->missao_osc}} </p>
-                            <h3>Visão da OSC?</h3> 
-                            <p>{{$osc->visao_osc}} </p>
-
-                                  <!--     link do site -->
-                                                        
+                           
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> Cidade - PB</p>
+                                    
+                                    <hr>
+                                    
+                                    <h3>O que a OSC faz?</h3> 
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->descricao_osc}} </p>
+                                    <h3>Como surgiu a OSC?</h3> 
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->descricao_osc}} </p>
+                                    <h3>Missão da OSC?</h3> 
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->missao_osc}} </p>
+                                    <h3>Visão da OSC?</h3> 
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->visao_osc}} </p>
+                                                           
                             </div>
-                    </div>                
+                    </div> 
+
+                    <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                        
+                            <div class="table-responsive m-t-20">
+                           
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    
+                                    Colocar as ODS, objetivos e metas aqui
+                                                           
+                            </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pills-galeria" role="tabpanel" aria-labelledby="pills-galeria-tab">                        
+                            <div class="table-responsive m-t-20">
+                           
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    
+                                    youtube
+
+                            </div>
+                    </div>             
+
+
+
+
+
             </div>
+
+            
+
+
+
+
+
+
                         </div>
                     </div>
                   
@@ -106,8 +129,7 @@
                                 <div class="circular-progress-bar">
                                         <h3 class="entry-title">Logo da OSC</h3>
                                     <div class="circle" id="loader_2">
-                                            <hr>
-
+                                            
                                            
 
                                            
@@ -119,43 +141,34 @@
 
 
                             <div class="card-body">
-                                <div class="circular-progress-bar">
+                                <div class="card-body">
                                 <div class="row">
-                        <div class="form-group col-md-12">
-                                        <input class="form-check-input" type="radio" name=" " id=" " value="OSC">
-                                                <label class="form-check-label" for="">Desejo realizar uma Doação </label>
-                        <div class="form-group col-md-12">
+                                    <div class="form-group col-md-12">
+                                        <input class="form-check-input" type="radio" name=" " id=" " value="OSC" disabled="disabled" checked="checked"  >
+                                        <label class="form-check-label" for="">Desejo realizar uma <strong>Doação</strong> </label>
+                                    </div>
+                                    <!--<div class="form-group col-md-12">
                                         <input class="form-check-input" type="radio" name="" id="" value="PROJETO">
-                                            <label class="form-check-label" for="">Desejo Patrocinar um projeto </label>
-
-                                        </div>
-
-                        <div class="form-group col-md-12">
-                        <label for="">Escolha um Projeto</label>
-                            {{ Form::select('situacao_imovel',[
-                                'Próprio'      => 'Próprio',
-                                'Alugado'       => 'Alugado', 
-                                'Emprestado'       => 'Emprestado',                                
-                                'Outro'    => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select']) 
-                            }}  
-
-                                        </div>
-
-
-
-                                        <div class="form-group col-md-12">
-                        
-
-                        <label for="name"><strong>VALOR (R$)</strong></label>
-                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="">                
-                            <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg">Investir </a>
+                                        <label class="form-check-label" for="">Desejo <strong>Patrocinar</strong> um projeto </label>
+                                    </div> 
+                                    <div class="form-group col-md-12">
+                                        <label for="">Escolha um Projeto</label>
+                                            {{ Form::select('situacao_imovel',[
+                                                'Próprio'      => 'Próprio',
+                                                'Alugado'       => 'Alugado', 
+                                                'Emprestado'       => 'Emprestado',                                
+                                                'Outro'    => 'Outro'                                
+                                                ],null,['class'=>'form-control custom-select']) 
+                                            }}  
+                                    </div>--><center>
+                                    <div class="form-group col-md-8">
+                                       <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
+                                        <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor (R$)"  >                
+                                        <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a></center>
+                                    </div>  </center>
 
 
-                        </div>
-
-                                        </div>
-                                        </div>
+                                </div>
 
                            
                                 </div>  

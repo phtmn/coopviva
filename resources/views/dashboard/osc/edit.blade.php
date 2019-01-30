@@ -34,28 +34,28 @@
           
             <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-dados-tab" data-toggle="pill" href="#pills-dados" role="tab" aria-controls="pills-dados" aria-selected="true">Dados Gerais</a>
+                    <a class="nav-link active" id="pills-dados-tab" data-toggle="pill" href="#pills-dados" role="tab" aria-controls="pills-dados" aria-selected="true"><b class="text-dark" >Dados Gerais</b></a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false">Dados Financeiros</a>
+                    <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false"><b class="text-dark" >Dados Financeiros</b></a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false">Endereço</a>
+                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false"><b class="text-dark" >Endereço</b></a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false">Descrição</a>
+                    <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false"><b class="text-dark" >Descrição</b></a>
                 </li>
                 {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a>--}}
+                    {{--<a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false"><b class="text-dark" >Atuação</b></a>--}}
                 {{--</li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
+                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false"><b class="text-dark" >ODS</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-up-tab" data-toggle="pill" href="#pills-up" role="tab" aria-controls="pills-up" aria-selected="false">Upload</a>
+                    <a class="nav-link" id="pills-up-tab" data-toggle="pill" href="#pills-up" role="tab" aria-controls="pills-up" aria-selected="false"><b class="text-dark" >Upload</b></a>
                 </li>
 
             </ul>
