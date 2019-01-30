@@ -23,6 +23,34 @@
         </div>
     </div>
 </div>-->
+
+<style>
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.btn-p{
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid ;color: #8DDF6A ;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out; background-color :15s ease-in-out;border-color:15s ease-in-out; box-shadow :15s ease-in-out;
+}
+.btn-p- {
+    color: #8DDF6A;
+    border-color: #8DDF6A;
+}
+</style>
                      
 <div class="container">  <!--:::: Formulario :::::-->
 	 <div class="row">
@@ -37,7 +65,7 @@
 				  <input type="search" class="form-control" placeholder="Estado">
 				</div>
 				<div>
-					<button type="button" class="btn btn-outline ">Pesquisar</button>
+					<button type="button" class=" btn-p  flex-end">Pesquisar</button>
 				</div>
 			    </div><!--form-row-->
 			</form>  <!--form-->
@@ -45,24 +73,24 @@
 	 </div>    <!-- row -->
  </div>   <!-- container -->
 	  
-	  <hr>
+	<br>
 <div class="container"> <!--::::::::Lista de Cartões ::::::::::-->
 	 <div class="row">
 	 @foreach($data as $d)
 	    <div class="col-xs-12 col-xl-12">
-	       <ul class="list-unstyled">
+	       
 		    <li class="media bg-light shadow p-3 mb-5">
-			<img src="" class=" mr-3 img-responsive rounded" style="width:80px;" alt="...">
+			<img src="{{asset('/vendor/site/images/agenda2030ODS.png')}}" class=" mr-3 img-responsive rounded" style="width:150px;" alt="...">
 			<div class="media-body">
-			  <h5 class="mt-0 mb-1">{{$d->nome_fantasia}} <small style="color:#99e699;"> São Paulo</small></h5>
-			  {{$d->descricao_osc}}
+			  <h5 class="mt-0 mb-1">{{$d->sigla_osc}} <small style="color:#99e699;"> São Paulo</small></h5>
+			  {{$d->nome_fantasia}}
 				<div class="d-flex justify-content-end">
 				<a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
 				</div>
 			</div><!---media-body-->
 		  </li>  <!-- li-media-->
 		 
-	    </ul>
+	  
 	   </div><!--col-->
     </div><!--row-->
 	@endforeach

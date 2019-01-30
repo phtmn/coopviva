@@ -164,7 +164,7 @@
                                     <div class="form-group col-md-8">
                                        <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
                                         <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor (R$)"  >                
-                                        <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a></center>
+                                        <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a>
                                     </div>  </center>
 
 
