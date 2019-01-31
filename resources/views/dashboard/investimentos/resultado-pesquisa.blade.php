@@ -52,7 +52,7 @@
 }
 </style>
                      
-<div class="container">  <!--:::: Formulario :::::-->
+<!--<div class="container">  
 	 <div class="row">
 	 	<div class="col-xs-12 mx-auto ">
 				<br>
@@ -67,11 +67,11 @@
 				<div>
 					<button type="button" class=" btn-p  flex-end">Pesquisar</button>
 				</div>
-			    </div><!--form-row-->
-			</form>  <!--form-->
-		</div>    <!--col-xs-->
-	 </div>    <!-- row -->
- </div>   <!-- container -->
+			    </div>
+			</form>  
+		</div>   
+	 </div>    
+ </div> -->  <!-- container --> 
 	  
 	<br>
 <div class="container"> <!--::::::::Lista de Cartões ::::::::::-->

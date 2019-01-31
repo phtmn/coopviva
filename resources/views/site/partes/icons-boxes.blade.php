@@ -9,7 +9,7 @@
                         </figure>
 
                         <header class="entry-header">
-                            <h3 class="entry-title">Educação</h3>
+                            <h4 class="entry-title">Educação (Crianças/Jovens)</h4>
                         </header>
 
                         <div class="entry-content">
@@ -21,12 +21,12 @@
                 <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
                     <div class="icon-box">
                         <figure class="d-flex justify-content-center">
-                            <img src="/vendor/site/images/cri1.png" alt="">
-                            <img src="/vendor/site/images/cri2.png" alt="">
+                            <img src="/vendor/site/images/meio1.png" alt="">
+                            <img src="/vendor/site/images/meio2.png" alt="">
                         </figure>
 
                         <header class="entry-header">
-                            <h3 class="entry-title">Crianças e Jovens</h3>
+                            <h3 class="entry-title">Meio Ambiente</h3>
                         </header>
 
                         <div class="entry-content">

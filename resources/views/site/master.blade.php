@@ -12,7 +12,7 @@
 
 				gtag('config', 'UA-110332879-2');
 		</script>
-    <title>COOPVIVA - BETA 1.0</title>
+    <title>COOPVIVA </title>
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
 	 <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -48,7 +48,7 @@
                 <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
                     <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
                         <div class="header-bar-email">
-                                <i class="fa fa-envelope"></i><span> <a href="mailto:contato@rededeconexao.art.br"> contato@rededeconexao.art.br</a></span></li>
+                                <i class="fa fa-envelope"></i><span> <a href="mailto:contato@redeconexao.com.br"> contato@redeconexao.com.br</a></span></li>
                                        
                         </div><!-- .header-bar-email -->
 
@@ -155,7 +155,7 @@
                                   <!--  <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li> -->
                                 @endguest                                                              
                                 <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                                <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
+                                <li class=""><a target=_blank href="http://www.redeconexao.com.br/blog">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
                                        <!-- <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li> -->
@@ -220,7 +220,7 @@
                             <li><a href="{{ route('sobre_nos') }}" >Sobre Nós </a></li>
                          <!--   <li><a href="{{ url('/oscs') }}" >OSC's</a></li> -->
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
-                            <li><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
+                            <li><a target=_blank href="http://www.redeconexao.com.br/blog">Blog</a></li>
 							@if (Route::has('login'))               
                                     @auth
                                     <!--    <li><a href="{{ url('/home') }}">Home</a></li> -->
@@ -265,7 +265,7 @@
 
                             <ul>
                             <li>
-                                <i class="fa fa-envelope"></i><span><a href="mailto:contato@rededeconexao.art.br">contato@rededeconexao.art.br</a></span></li>
+                                <i class="fa fa-envelope"></i><span><a href="mailto:contato@redeconexao.com.br">contato@redeconexao.com.br</a></span></li>
                                 <li><i class="fa fa-phone"></i><span>+55 83 3034-1663</span></li>
 								<li><i class="fa fa-whatsapp"></i><span><a target=_blank href="https://api.whatsapp.com/send?1=pt_BR&phone=558330341663="Olá,%20seja%20bem%20vindo%20a%20REDE%20DE%20CONEXÃO">+55 83 3034-1663</a></span></li>								                                
                                 <li><i class="fa fa-map-marker"></i><span>João Pessoa – Paraíba – Brasil</span></li>

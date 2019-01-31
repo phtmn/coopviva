@@ -36,6 +36,7 @@
                     <label class="form-check-label" for="{{$meta->descricao}}" style="cursor:pointer;">
                     <input class="form-check-input" name="codigos[]" type="checkbox" value="{{$meta->id}}" id="{{$meta->descricao}}" >
                     <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{$meta->codigo}}</b> - {{$meta->descricao}} </p>
+                        <hr>
                     </label>
                 </div>
     

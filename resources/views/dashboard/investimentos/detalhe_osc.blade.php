@@ -44,14 +44,15 @@
                               <div class="ml-auto">
                               <ul class="nav nav-tabs justify-content-center ">
                                             <li class="nav-item">
-                                            <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil da OSC</b></a>
-                                            </li>  
+                                            <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil </b></a>
+                                            </li> 
+                                            <li class="nav-item">
+                                            <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
+                                            </li> 
                                             <li class="nav-item">
                                             <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                             </li>      
-                                            <!--<li class="nav-item">
-                                            <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
-                                            </li>  -->
+                  
                                             <li class="nav-item">
                                             <a class="nav-link " id="pills-galeria-tab" data-toggle="pill" href="#pills-galeria" role="tab" aria-controls="pills-galeria" aria-selected="true"><b class="text-dark" >Galeria</b></a>
                                             </li>                                                                     
@@ -91,6 +92,16 @@
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
                                     
                                     Colocar as ODS, objetivos e metas aqui
+                                                           
+                            </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="pills-projetos" role="tabpanel" aria-labelledby="pills-projetos-tab">                        
+                            <div class="table-responsive m-t-20">
+                           
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    
+                                    Colocar os PRojetos Aqui
                                                            
                             </div>
                     </div>
@@ -143,6 +154,7 @@
                             <div class="card-body">
                                 <div class="card-body">
                                 <div class="row">
+                                @cannot('osc')
                                     <div class="form-group col-md-12">
                                         <input class="form-check-input" type="radio" name=" " id=" " value="OSC" disabled="disabled" checked="checked"  >
                                         <label class="form-check-label" for="">Desejo realizar uma <strong>Doação</strong> </label>
@@ -163,9 +175,13 @@
                                     </div>--><center>
                                     <div class="form-group col-md-8">
                                        <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
+                                       
                                         <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor (R$)"  >                
-                                        <br><a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a>
-                                    </div>  </center>
+                                        <br>
+                                        <a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a>
+                                    </div> 
+                                    @endcannot 
+                                     </center>
 
 
                                 </div>

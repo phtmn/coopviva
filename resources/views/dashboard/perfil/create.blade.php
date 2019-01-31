@@ -41,6 +41,22 @@
                     </div>
 
                     <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="telefone">Telefone </label>
+                           {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Gênero</label>
+                            {{ Form::select('genero',[
+                                'Masculino'      => 'Masculino',
+                                'Feminino'       => 'Feminino',                                
+                                'Outro'         => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true']) 
+                            }}
+                        </div>
+                    </div>
+
+                    <div class="row">
                         @if(Auth::user()->tipo == 'PF')
                             <div class="form-group col-md-6">
                                 <label for="cpf">CPF</label>
@@ -58,21 +74,7 @@
                         @endif
                     </div>
 
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="telefone">Telefone </label>
-                           {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="email">Gênero</label>
-                            {{ Form::select('genero',[
-                                'Masculino'      => 'Masculino',
-                                'Feminino'       => 'Feminino',                                
-                                'Outro'         => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true']) 
-                            }}
-                        </div>
-                    </div>
+               
                     <br>
               
         

@@ -20,7 +20,22 @@
                 <li class="nav-item"><a class="nav-link {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"><i class="fa fa-institution" style="color:#8DDF6A;"></i><b class="text-dark"> Perfil da OSC</b> </a></li>
                 <li class="nav-item"><a class="nav-link {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('listar.oscs')}}"><i class="fa fa-institution" style="color:#8DDF6A;"></i><b class="text-dark"> Landpage </b> </a></li>
                 <!-- <li class="nav-item"><a class="nav-link {{ $tab == 'projetos' ? 'active' : ''}}"  href="{{route('projetos.create')}}">Incluir Projeto</a></li> -->
-                <!-- <li class="nav-item"><a class="nav-link {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"><i class="fa fa-suitcase " style="color:#8DDF6A;"></i><b class="text-dark"> Projetos</b></a></li> -->
+                 <li class="nav-item"><a class="nav-link {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"><i class="fa fa-suitcase " style="color:#8DDF6A;"></i><b class="text-dark"> Projetos</b></a></li> 
+
+                 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-institution" style="color:#8DDF6A;"></i><b class="text-dark"> OSC</b></a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item"  {{ $tab == 'osc' ? 'active' : ''}}"  href="{{route('osc.create')}}"> <b class="text-dark">Perfil</b></a>
+                <a class="dropdown-item" {{ $tab == 'lista-projetos' ? 'active' : ''}}"  href="{{route('projetos.index')}}"> <b class="text-dark">Projetos</b></a>
+                <a class="dropdown-item" {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}" ><b class="text-dark">ODS</b></a>
+                <a class="dropdown-item" href="#"> <b class="text-dark">Galeria</b></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('listar.oscs')}}"> <b class="text-dark">Landing Page</b></a>
+                <a class="dropdown-item" {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('listar.oscs')}}"> <b class="text-dark">Investir</b></a>
+                
+                
+                </div>
+            </li> 
                 
             @endcan
         </ul>

@@ -214,7 +214,10 @@
                     <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
                 
                     @forelse($metas as $meta)
-                        <p>{{ $meta->meta_codigo }} - {{ $meta->meta_descricao }}</p>
+                        <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
+                        <hr>
+
+
                     @empty
                         <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
                     @endforelse

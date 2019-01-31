@@ -110,7 +110,7 @@
     Para você que promove ações de sustentabilidade seja com projetos educacionais, ambientais, sociais, esportivos, culturais de saúde, criança e adolescente ou idoso.
     <p class="text-justify">Para empresas ou pessoa fisica, que incentiva, patrocina, move e gera negócios estratégicos, sustentáveis e criativos.</p>
     <p class="text-justify"> Basta se cadastrar no formulário ao lado e assim que validado seu cadastro entraremos em contato. </p>
-    <p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@rededeconexao.art.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
+    <p class="text-justify"> Quaisquer esclarecimentos entre em contato pelo nosso canal de atendimento  <strong>contato@redeconexao.com.br </strong> ou pelo telefone <strong>+55 83 3034-1663</strong></p>
 
     </div>
 
