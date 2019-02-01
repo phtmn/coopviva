@@ -18,14 +18,13 @@ class OscController extends Controller
     public function create(){
 
         $osc = OSC::where('user_id',Auth::user()->id)->first();
-
         if($osc){
             return view('dashboard.osc.edit',[
                 'tab'       => 'osc',
                 'osc'       => $osc,
-                'endereco'  => $osc->endereco(),
                 'banco'     => $osc->banco(),
-                'metas'     => $osc->metas()
+                'endereco'  => $osc->endereco(),
+                'metas'     => $osc->metas(),
             ]);
         }
         return view('dashboard.osc.create',[
@@ -34,6 +33,12 @@ class OscController extends Controller
     }
 
     public function store(Request $request){
+
+        if($request->file('logo')){
+            dd('upload');
+        }
+
+
 
         $result = DB::transaction(function() use ($request) {
 
@@ -98,9 +103,18 @@ class OscController extends Controller
 
     public function update(Request $request,$id){
 
+        $file_path = null;
+        if($request->logo){
+            $file       = $request->file('logo');
+            $name       = $file->getClientOriginalName();
+            $path       = public_path('uploads/osc');
+            $file_path  = 'uploads/osc/'.$name;
+            $file->move($path,$name);
+        };
+
         $osc = OSC::where('user_id',Auth::user()->id)->first();
         $dados = $request->all();
-        $result = DB::transaction(function() use ($request,$dados,$osc) {
+        $result = DB::transaction(function() use ($request,$dados,$osc,$file_path) {
             try {
                 $osc->endereco()->update($dados);
                 $osc->banco()->update($dados);
@@ -127,6 +141,7 @@ class OscController extends Controller
                 $osc->visao_osc = $request->visao_osc;
                 $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
                 $osc->link_estatuto_osc = $request->link_estatuto_osc;
+                $osc->logo = $file_path ? $file_path : $osc->logo;
 
                 $osc->save();
                 Alert::success('Seus dados foram Salvos', 'Sucesso')->persistent('Ok');

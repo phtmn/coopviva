@@ -40,7 +40,7 @@
                     <div class="form-group col-md-12">
                                     
 
-            {!! Form::open(['route'=>'osc.store']) !!}
+            {!! Form::open(['route'=>'osc.store','enctype'=>'multpart/form-data']) !!}
 
 
     <div class="tab-content" id="pills-tabContent">
@@ -101,7 +101,7 @@
                                 'SA'       => 'Banco Santander',
                                 'IT'       =>  'Banco Itaú',
                                 'Outro'    => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select']) 
+                                ],null,['class'=>'form-control custom-select','placeholder'=> 'Escolha uma opção'])
                             }} 
 
                       </div>
@@ -243,7 +243,8 @@
                 {!! Form::text('abc',null,['class'=>'form-control']) !!}
             </div>  
             <div class="form-group col-md-4">
-                <label for="">UPLOAD LOGO... UPLOAD IMAGEnS</label>
+                <label for="">Logo</label>
+                {!! Form::file('logo',null,['class'=>'form-control']) !!}
                 
             </div>          
         </div>

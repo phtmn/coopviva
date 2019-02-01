@@ -33,6 +33,7 @@ class InvestimentosController extends Controller
         return view('dashboard.investimentos.detalhe_osc',[
             'osc'       => DB::table('oscs')->where('id',$id)->first(),
             'metas'     => DB::table('osc_metas')->where('osc_id',$id)->get(),
+            'galerias'   => DB::table('galerias')->where('osc_id',$id)->get(),
             'tab'       => 'investir'
         ]);
 

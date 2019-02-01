@@ -1,97 +1,86 @@
 
-<!--<div class="album py-4 ">
-    <div class="container">
-        <div class="row">
-            @foreach($data as $d)
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect fill="#55595c" width="100%" height="100%"/><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text></svg>
-                    <div class="card-body">
-                        <h4>{{$d->nome_fantasia}}</h4>
-                       
-                        <p class="card-text">{{$d->descricao_osc}}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                            <a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
-                            </div>
-                            <small class="text-muted">{{$d->ano_fundacao}}</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>-->
-
-<style>
-.shadow {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-}
-.btn-p{
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 2px solid ;color: #8DDF6A ;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out; background-color :15s ease-in-out;border-color:15s ease-in-out; box-shadow :15s ease-in-out;
-}
-.btn-p- {
-    color: #8DDF6A;
-    border-color: #8DDF6A;
-}
-</style>
-                     
-<!--<div class="container">  
+<div class="container">
 	 <div class="row">
 	 	<div class="col-xs-12 mx-auto ">
 				<br>
-		 	<form class="d-flex-end  justify-content-center " >
+		 	<form class="d-flex-end  justify-content-center "  action="{{route('listar.oscs')}}" method="GET">
 			  <div class="form-row ">
 				<div class="col-xs-12 ">
-				  <input type="search" class="form-control" placeholder="Cidade">
+				  <input type="search" class="form-control" name="cidade" placeholder="Cidade">
 				</div>
-				<div class="col-xs-12">
-				  <input type="search" class="form-control" placeholder="Estado">
-				</div>
+				{{--<div class="col-xs-12">--}}
+				  {{--<input type="search" class="form-control" name="estado" placeholder="Estado">--}}
+				{{--</div>--}}
+                <div class="col-xs-12">
+                    <select name="categoria" id="" class="form-control">
+                        <option value="1">Educação</option>
+                        <option value="2">Idoso</option>
+                        <option value="3">Meio Ambiente</option>
+                        <option value="4">Saúde</option>
+                        <option value="5">Esporte</option>
+                        <option value="6">Cultura</option>
+                    </select>
+                </div>
+                  
 				<div>
-					<button type="button" class=" btn-p  flex-end">Pesquisar</button>
+					<button type="submit" class=" btn-p  flex-end">Pesquisar</button>
 				</div>
 			    </div>
-			</form>  
-		</div>   
-	 </div>    
- </div> -->  <!-- container --> 
-	  
-	<br>
-<div class="container"> <!--::::::::Lista de Cartões ::::::::::-->
-	 <div class="row">
-	 @foreach($data as $d)
+			</form>
+		</div>
+	 </div>
+</div>
+<br>
+<div class="container">
+
+    @foreach($data as $d)
+    <div class="row">
+
 	    <div class="col-xs-12 col-xl-12">
-	       
 		    <li class="media bg-light shadow p-3 mb-5">
-			<img src="{{asset('/vendor/site/images/agenda2030ODS.png')}}" class=" mr-3 img-responsive rounded" style="width:150px;" alt="...">
-			<div class="media-body">
-			  <h5 class="mt-0 mb-1">{{$d->sigla_osc}} <small style="color:#99e699;"> São Paulo</small></h5>
-			  {{$d->nome_fantasia}}
-				<div class="d-flex justify-content-end">
-				<a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
-				</div>
-			</div><!---media-body-->
-		  </li>  <!-- li-media-->
-		 
-	  
-	   </div><!--col-->
-    </div><!--row-->
+			    <img src="{{ $d->logo ? asset($d->logo) : asset('/uploads/osc/default-logo.png') }}" class=" mr-3 img-responsive rounded" style="width:150px;" alt="...">
+                <div class="media-body">
+                        <h5 class="mt-0 mb-1">{{$d->sigla_osc}} <small style="color:#99e699;"> São Paulo</small></h5>
+                        {{$d->nome_fantasia}}
+                        <div class="d-flex justify-content-end">
+                            <a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
+                        </div>
+                </div>
+		    </li>
+	   </div>
+    </div>
 	@endforeach
- </div> <!--container--> 
+
+
+ </div>
+
+@section('css')
+    <style>
+        .shadow {
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+        }
+        .btn-p{
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 2px solid ;color: #8DDF6A ;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out; background-color :15s ease-in-out;border-color:15s ease-in-out; box-shadow :15s ease-in-out;
+        }
+        .btn-p- {
+            color: #8DDF6A;
+            border-color: #8DDF6A;
+        }
+    </style>
+
+@stop

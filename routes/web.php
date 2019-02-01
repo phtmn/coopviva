@@ -22,11 +22,13 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
     Route::resource('projetos','Dashboard\ProjetosController');
     Route::resource('perfil','Dashboard\PerfilController');
     Route::resource('investimentos','Dashboard\InvestimentosController');
+    Route::resource('galeria','Dashboard\GaleriaController');
 
     Route::view('/objetivos-ods','dashboard.osc.odsform',['tab'=>'ods'])->name('osc.objetivos');
 
     Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
     Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');
+    Route::get('/meta/remover/{id}','Dashboard\MetasController@removerMeta')->name('meta.remover');
 
     Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');

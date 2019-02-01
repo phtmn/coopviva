@@ -89,9 +89,20 @@
                     <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
-                                    
-                                    Colocar as ODS, objetivos e metas aqui
+                                <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+
+                                @forelse($metas->unique('objetivo_id') as $obj)
+                                    <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                    @empty
+                                        <p>Você não está em nenhum objetivo da ODS</p>
+                                @endforelse
+
+                                @forelse($metas as $meta)
+                                    <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
+                                    <hr>
+                                    @empty
+                                        <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
+                                @endforelse
                                                            
                             </div>
                     </div>
@@ -110,8 +121,12 @@
                             <div class="table-responsive m-t-20">
                            
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
-                                    
-                                    youtube
+
+                                @forelse($galerias as $galeria)
+                                    <a style="cursor: pointer"><img src="{{asset($galeria->url)}}"></a>
+                                @empty
+                                    <p>Você não está em nenhum objetivo da ODS</p>
+                                @endforelse
 
                             </div>
                     </div>             
@@ -138,14 +153,11 @@
                     <div class="card">
                             <div class="card-body">
                                 <div class="circular-progress-bar">
-                                        <h3 class="entry-title">Logo da OSC</h3>
-                                    <div class="circle" id="loader_2">
-                                            
-                                           
-
-                                           
-                                     
-                                    </div>                         
+                                    @if($osc->logo != null)
+                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:150px; height: 150px ">
+                                     @else
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:150px; height: 150px ">
+                                    @endif
                             
                                 </div>  
                             </div>

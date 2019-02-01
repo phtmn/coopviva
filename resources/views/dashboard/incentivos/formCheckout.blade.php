@@ -25,7 +25,7 @@
                             <label class="form-check-label" for="radioPJ">Desejo realizar uma Doação para OSC {{$osc->nome_fantasia}}</label>
                         </div>
                         <br>
-                    <!--  <div class="form-check form-check-inline">
+                        <!--  <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="tipo" id="radioPF" value="OSC">
                             <label class="form-check-label" for="radioPF">Meu investimento sera para projetos</label>
                         </div> -->
