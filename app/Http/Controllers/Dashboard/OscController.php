@@ -90,12 +90,10 @@ class OscController extends Controller
                 $osc->save();
 
                 Alert::success('Os dados da OSC foram salvos', 'Sucesso')->persistent('Ok');
-                //return redirect()->route('investimentos.index');
                 return redirect()->back();
 
             } catch (Throwable $t) {
                 Alert::error('Algum Erro ocorrou'.$t->getMessage(), 'Erro')->persistent('Ok');
-                //return redirect()->route('investimentos.index');
                 return redirect()->back();
             }
         },2); return $result;
@@ -154,5 +152,22 @@ class OscController extends Controller
             }
         },2);
         return $result;
+    }
+
+    public function landingPage(){
+        if(Auth::user()->osc() == null){
+
+            Alert::warning('Você precisa cadastrar sua Osc Primeiro','Keep Calm')->persistent('Entendi');
+            return redirect()->route('osc.create');
+        }else{
+            $osc = Osc::where('user_id',Auth::user()->id)->first();
+            //dd($osc);
+            return view('dashboard.investimentos.detalhe_osc',[
+                'osc'        => $osc,
+                'metas'      => DB::table('osc_metas')->where('osc_id',$osc->id)->get(),
+                'galerias'   => DB::table('galerias')->where('osc_id',$osc->id)->get(),
+                'tab'        => 'investir'
+            ]);
+        }
     }
 }

@@ -38,7 +38,7 @@ class CreateOscsTable extends Migration
             $table->longText('visao_osc')->nullable();
             $table->string('finalidades_estatutarias_ods')->nullable();
             $table->string('link_estatuto_osc')->nullable();
-            $table->string('logo')->nullable();	
+            $table->text('logo')->nullable();
             
             $table->unsignedInteger('banco_doacao_id');
             $table->unsignedInteger('endereco_id');

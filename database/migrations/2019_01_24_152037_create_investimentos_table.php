@@ -16,6 +16,7 @@ class CreateInvestimentosTable extends Migration
         Schema::create('investimentos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo');
+            $table->string('descricao')->nullable();
             $table->decimal('valor_investimento',24,2)->default(0);
             $table->string('status');
             $table->string('formaPagamento')->nullable();
