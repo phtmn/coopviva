@@ -16,11 +16,6 @@ class GaleriaController extends Controller
             Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
             return redirect()->route('osc.create');
         }
-        //dd($osc);
-        return view('dashboard.projetos.index',[
-            'tab'   => 'lista-projetos',
-            'data'  => Projeto::all()
-        ]);
 
         $galerias = Galeria::where('osc_id',Auth::user()->osc()->id)->get();
         return view('dashboard.osc.galeria',[

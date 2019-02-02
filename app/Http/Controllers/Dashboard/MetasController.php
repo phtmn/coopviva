@@ -18,11 +18,6 @@ class MetasController extends Controller
             Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
             return redirect()->route('osc.create');
         }
-        //dd($osc);
-        return view('dashboard.projetos.index',[
-            'tab'   => 'lista-projetos',
-            'data'  => Projeto::all()
-        ]);
         $metas = Meta::where('objetivo_id',$ods)->get();
         return view('dashboard.osc.odsform',[
             'metas' => $metas,
