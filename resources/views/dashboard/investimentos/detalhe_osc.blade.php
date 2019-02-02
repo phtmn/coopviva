@@ -186,11 +186,15 @@
                                             }}  
                                     </div>--><center>
                                     <div class="form-group col-md-8">
-                                       <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
-                                       
-                                        <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor (R$)"  >                
+                                        <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
+                                            @csrf
+
+                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="">
                                         <br>
-                                        <a href="{{route('investir',$osc->id)}}" class="btn gradient-bg" >Investir </a>
+                                            <input type="hidden" name="osc_id" value="{{$osc->id}}">
+                                            <button type="submit" class="btn gradient-bg" >Investir </button>
+
+                                        </form>
                                     </div> 
                                     @endcannot 
                                      </center>

@@ -222,14 +222,15 @@
                  <br><h4>Conta para receber Doações</h4>
                       </div>
                  
-                    <div class="form-group col-md-3">
-                                {!! Form::label('Banco') !!}
-                                    {!! Form::select('banco',[
-                                        'CEF'   =>  "Caixa Economica Federal",
-                                        'BB'    =>  "Banco do Brasil",
-                                        'SA'    =>  "Banco Santander",
-                                        'IT'    =>  "Banco Itaú"
-                                    ],$banco->banco,['class'=>'form-control']) !!}
+                      <div class="form-group col-md-3">
+                            {!! Form::label('Banco') !!}
+                            {!! Form::select('banco',[
+                                'ESC'   =>  "Escolha",
+                                'CEF'   =>  "Caixa Economica Federal",
+                                'BB'    =>  "Banco do Brasil",
+                                'SA'    =>  "Banco Santander",
+                                'IT'    =>  "Banco Itaú"
+                            ],$banco->banco,['class'=>'form-control']) !!}
                       </div>
 
                       <div class="form-group col-md-2">

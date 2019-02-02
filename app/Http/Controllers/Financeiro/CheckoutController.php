@@ -25,47 +25,51 @@ class CheckoutController extends Controller
     }
 
     public function pagar(Request $request){
-        //dd($request->all());
 
+        //dd($request->all());
+        $osc = DB::table('oscs')->where('id',$request->osc_id)->first();
+        //dd($osc);
         $investimento = new Investimento();
+        $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
         $investimento->valor_investimento   = $request->valor;
-        $investimento->tipo                 = $request->tipo;
+        $investimento->tipo                 = 'DOACAO';
         $investimento->user_id              = $request->user()->id;
         $investimento->projeto_id           = $request->projeto_id;
         $investimento->osc_id               = $request->osc_id;
-        $investimento->status               = 'gerado';
+        $investimento->status               = 'Aguardando Pagamento';
         $investimento->save();
 
+
         $pagamento = $this->gerarPagamento($investimento);
-
-
-        Alert::success('para concluir o processo de investimento voce deve clicar no botao','Obrigado')
-                    ->persistent('OK');
-        return view('dashboard.incentivos.pagar',[
-            'url' => $pagamento->init_point,
-            'tab' => 'investir'
-        ]);
+        //dd($pagamento);
+        return redirect()->to($pagamento->init_point);
+        //Alert::success('para concluir o processo de investimento voce deve clicar no botao','Obrigado')->persistent('OK');
+        //return view('dashboard.incentivos.pagar',[
+        //'url' => $pagamento->init_point,
+        //'tab' => 'investir'
+        //]);
     }
 
     public function gerarPagamento($investimento){
         //dd($investimento->usuario()->email);
+
         MP::setClientSecret(env('MP_CLIENT_SECRET'));
         MP::setClientId(env('MP_CLIENT_ID'));
 
         $preference = new \MercadoPago\Preference();
 
         # Create an item object
-        $item = new \MercadoPago\Item();
-        $item->id = "Investimento";
-        $item->title = "Investimento em: $investimento->descricao";
-        $item->quantity = 1;
-        $item->currency_id = "BRL";
-        $item->unit_price = $investimento->valor_investimento;
+        $item               = new \MercadoPago\Item();
+        $item->id           = $investimento->osc_id;
+        $item->title        = $investimento->descricao;
+        $item->quantity     = 1;
+        $item->currency_id  = "BRL";
+        $item->unit_price   = $investimento->valor_investimento;
 
         # Create a payer object
-        $payer = new \MercadoPago\Payer();
-        //$payer->email = $investimento->usuario()->email;
-        $payer->email   = 'test_user_46175882@testuser.com';
+        $payer          = new \MercadoPago\Payer();
+        $payer->email   = $investimento->usuario()->email;
+        $payer->name    = $investimento->usuario()->name;
 
         # Setting preference properties
         $preference->items = array($item);
@@ -77,8 +81,8 @@ class CheckoutController extends Controller
             "failure" => "http://coopviva-2.test/dashboard/investimento/failure",
             "pending" => "http://coopviva-2.test/dashboard/investimento/pending"
         );
-        $preference->auto_return = "approved";
 
+        $preference->auto_return        = "approved";
         $preference->external_reference = $investimento->id;
 
         # Save and posting preference

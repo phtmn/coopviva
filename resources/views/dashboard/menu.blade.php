@@ -19,7 +19,8 @@
                             <a class="dropdown-item {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}" ><b class="text-dark">ODS</b></a>
                             <a class="dropdown-item {{ $tab == 'galeria' ? 'active' : ''}}"  href="{{route('galeria.index')}}"> <b class="text-dark">Galeria</b></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('detalhe.osc',Auth::user()->osc()->id)}}"> <b class="text-dark">Landing Page</b></a>
+
+                            <a class="dropdown-item {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('osc.landingPage')}}"> <b class="text-dark">Landing Page</b></a>
                             <a class="dropdown-item {{ $tab == 'investir' ? 'active' : ''}}"  href="{{route('listar.oscs')}}"> <b class="text-dark">Investir</b></a>
                         </div>
                     </li>
