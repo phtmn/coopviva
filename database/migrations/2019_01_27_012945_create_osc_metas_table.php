@@ -32,6 +32,6 @@ class CreateOscMetasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meta_osc');
+        Schema::dropIfExists('osc_metas');
     }
 }
