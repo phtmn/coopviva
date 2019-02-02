@@ -41,14 +41,14 @@ class OscController extends Controller
 
 
         $result = DB::transaction(function() use ($request) {
-
+                //dd($request->all());
             try {
                 $bancoDoacao = new banco();
-                $bancoDoacao->banco     = $request->banco;
-                $bancoDoacao->conta     = $request->conta;
-                $bancoDoacao->agencia   = $request->agencia;
+                $bancoDoacao->banco         = $request->banco;
+                $bancoDoacao->conta         = $request->conta;
+                $bancoDoacao->agencia       = $request->agencia;
                 $bancoDoacao->tipo_conta    = 'doacao';
-                $bancoDoacao->contaDv   = $request->contaDv;
+                $bancoDoacao->contaDv       = $request->contaDv;
                 $bancoDoacao->save();
 
                 $endereco = new Endereco();

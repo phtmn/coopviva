@@ -101,7 +101,7 @@
                                 'SA'       => 'Banco Santander',
                                 'IT'       =>  'Banco Itaú',
                                 'Outro'    => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select','placeholder'=> 'Escolha uma opção'])
+                                ],null,['class'=>'form-control custom-select','selected'=>'Outro'])
                             }} 
 
                       </div>
