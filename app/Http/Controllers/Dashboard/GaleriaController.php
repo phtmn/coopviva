@@ -11,6 +11,16 @@ use App\Http\Controllers\Controller;
 class GaleriaController extends Controller
 {
     public function index(){
+        $osc = auth()->user()->osc();
+        if(!$osc){
+            Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
+            return redirect()->route('osc.create');
+        }
+        //dd($osc);
+        return view('dashboard.projetos.index',[
+            'tab'   => 'lista-projetos',
+            'data'  => Projeto::all()
+        ]);
 
         $galerias = Galeria::where('osc_id',Auth::user()->osc()->id)->get();
         return view('dashboard.osc.galeria',[
