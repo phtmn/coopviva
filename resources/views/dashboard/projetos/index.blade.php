@@ -1,3 +1,4 @@
+
 @extends('site.master')
 
 @section('content')
