@@ -1,7 +1,6 @@
 @extends('site.master')
     @section('content')
-    @include('dashboard.menu')
-    
+        @include('dashboard.menu')
 
 
     <div class="container" style="margin-top:20px; padding:20px">
@@ -15,7 +14,6 @@
         
                 
                 @can('osc')
-                
                     <h4>Investimentos Recebidos em {{ Auth::user()->name }}  </h4>
                 @endcan
                 @cannot('osc')
@@ -68,4 +66,4 @@
     </div>
     </div>
 
-    @endsection
+    @stop
