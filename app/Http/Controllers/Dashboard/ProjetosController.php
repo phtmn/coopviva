@@ -89,6 +89,13 @@ class ProjetosController extends Controller
         $projeto->num_registro1         = $request->num_registro1;
         $projeto->num_registro2         = $request->num_registro2;
         $projeto->segmento_cultural     = $request->segmento_cultural;
+
+        $projeto->objetivo_geral        = $request->objetivo_geral;
+        $projeto->objetivos_esp         = $request->objetivos_esp;
+        $projeto->justificativa         = $request->justificativa;
+        $projeto->publico_alvo          = $request->publico_alvo;
+        $projeto->impactos_esperados    = $request->impactos_esperados;
+
         $projeto->artigo                = $request->artigo;
         $projeto->valor_meta            = $request->valor_meta;
         $projeto->proponente_id         = $proponente->id;
@@ -130,6 +137,14 @@ class ProjetosController extends Controller
          $projeto->num_registro1         = $request->num_registro1;
          $projeto->num_registro2         = $request->num_registro2;
          $projeto->segmento_cultural     = $request->segmento_cultural;
+
+         $projeto->objetivo_geral        = $request->objetivo_geral;
+         $projeto->objetivos_esp         = $request->objetivos_esp;
+         $projeto->justificativa         = $request->justificativa;
+         $projeto->publico_alvo          = $request->publico_alvo;
+         $projeto->impactos_esperados    = $request->impactos_esperados;
+
+
          $projeto->artigo                = $request->artigo;
          $projeto->valor_meta            = $request->valor_meta;
          $projeto->save();

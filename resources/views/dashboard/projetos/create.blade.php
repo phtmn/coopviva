@@ -224,8 +224,34 @@
                         {{--FimDadosFinaneiros--}}
                 </div>
 
-                <div class="tab-pane fade" id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                                    
-                                               ods
+                <div class="tab-pane fade" id="pills-resumo" role="tabpanel" aria-labelledby="pills-resumo-tab">                                    
+                                             
+                <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="">Objetivo Geral</label>
+                    {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Objetivos Específicos</label>
+                    {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Justificativa</label>
+                    {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Público Alvo</label>
+                    {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Impactos Esperados</label>
+                    {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                
+
+            </div>
+                                             
+                                             
                 </div>
 
                 <div class="tab-pane fade" id="pills-upload" role="tabpanel" aria-labelledby="pills-upload-tab">                                    
