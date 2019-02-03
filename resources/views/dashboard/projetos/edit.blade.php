@@ -81,7 +81,16 @@
                             {!! Form::label('Artigo de Enquadramento') !!}
                             {!! Form::text('artigo',null,['class'=>'form-control', 'required'=>'true']) !!}
                         </div>
-                    </div>
+                        </div>
+
+
+                        <div class="row">
+                                <div class="form-group col-md-6 pull-right">
+                                    {!! Form::label('Valor do Projeto') !!}
+                                    {!! Form::text('valor_meta',$projeto->valor_meta,['class'=>'input input-lg form-control','required'=>'true']) !!}
+                                </div>
+                            </div>
+                  
                 {{--FimDadosGerais--}}
 
                 </div>
@@ -181,12 +190,7 @@
                         </div>
                     </div><!--end-of-row-3-->
 
-                            <div class="row">
-                                <div class="form-group col-md-6 pull-right">
-                                    {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',$projeto->valor_meta,['class'=>'input input-lg form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
+                           
 
                         {{--FimDadosFinaneiros--}}
                 </div>

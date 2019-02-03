@@ -193,20 +193,20 @@
         <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
             <div class="row">
                  <div class="form-group col-md-12">
-                    <label for="">Os 17 Objetivos de Desenvolvimento Sustentável</label>
+                    <label for="">Os 17 Objetivos de Desenvolvimento Sustentável - Qual é o seu ODS?</label>
                     @forelse($metas->unique('objetivo_id') as $obj)
-                         <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                    <br>  <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                     @empty
-                        <p>Você não está em nenhum objetivo ODS</p>
+                        <p style="color:red">Você não está em nenhum objetivo ODS</p>
                      @endforelse
                     @forelse($metas as $meta)
                         <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
-                         <a href="{{route('meta.remover',$meta->id)}}"><i class="fa fa-trash"></i> remover</a>
+                         <a href="{{route('meta.remover',$meta->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover</a>
                          <hr>
 
 
                     @empty
-                        <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
+                        <h4>Você precisa escolher suas metas da agenda 2030 na aba OSC / ODS</h4>
                     @endforelse
                  </div> 
          
@@ -251,11 +251,8 @@
         
         <div class="tab-pane fade " id="pills-up" role="tabpanel" aria-labelledby="pills-up-tab">
         <div class="row">
-            <div class="form-group col-md-4">
-                <label for="">Link para Vídeo do YOUTUBE</label>
-                {!! Form::text('abc',null,['class'=>'form-control']) !!}
-            </div>
-            <div class="form-group col-md-8">
+         
+            <div class="form-group col-md-12">
                 <label for="">Logo</label>
                 {!! Form::file('logo',null,['class'=>'form-control']) !!}
                 <br>

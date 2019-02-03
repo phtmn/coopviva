@@ -1,57 +1,51 @@
 
-<div class="container">
-	 <div class="row">
-	 	<div class="col-xs-12 mx-auto ">
-				<br>
-		 	<form class="d-flex-end  justify-content-center "  action="{{route('listar.oscs')}}" method="GET">
-			  <div class="form-row ">
-				<div class="col-xs-12 ">
-				  <input type="search" class="form-control" name="cidade" placeholder="Cidade">
-				</div>
-				{{--<div class="col-xs-12">--}}
-				  {{--<input type="search" class="form-control" name="estado" placeholder="Estado">--}}
-				{{--</div>--}}
-                <div class="col-xs-12">
-                    <select name="categoria" id="" class="form-control">
-                        <option value="1">Educação</option>
-                        <option value="2">Idoso</option>
-                        <option value="3">Meio Ambiente</option>
-                        <option value="4">Saúde</option>
-                        <option value="5">Esporte</option>
-                        <option value="6">Cultura</option>
-                    </select>
-                </div>
-                  
-				<div>
-					<button type="submit" class=" btn-p  flex-end">Pesquisar</button>
-				</div>
-			    </div>
-			</form>
-		</div>
-	 </div>
-</div>
 <br>
+
+<center>
 <div class="container">
 
     @foreach($data as $d)
     <div class="row">
-
+ 
 	    <div class="col-xs-12 col-xl-12">
-		    <li class="media bg-light shadow p-3 mb-5">
-			    <img src="{{ $d->logo ? asset($d->logo) : asset('/uploads/osc/default-logo.png') }}" class=" mr-3 img-responsive rounded" style="width:150px;" alt="...">
-                <div class="media-body">
-                        <h5 class="mt-0 mb-1">{{$d->sigla_osc}} <small style="color:#99e699;"> São Paulo</small></h5>
-                        {{$d->nome_fantasia}}
-                        <div class="d-flex justify-content-end">
-                            <a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
-                        </div>
+
+
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+
+                <div class="row">
+            
+                
+                <div class="form-group col-md-2">
+                <label for=""> <img src="{{ $d->logo ? asset($d->logo) : asset('/uploads/osc/default-logo.png') }}" class=" mr-3 img-responsive rounded" style="width:75px;" alt="...">
+                </label>
+                </div>   
+                <div class="form-group col-md-6">
+                    <label for=""><b>{{$d->sigla_osc}} - {{$d->nome_fantasia}} </b></label>
+                   <p> <label for=""><strong>Ano de Fundação:</strong> {{$d->ano_fundacao}}</label>
+                    <label for=""><strong>CNAE:</strong> {{$d->cnae}}</label> </p>
+                </div>         
+                <div class="form-group col-md-4">
+                <a href="{{route('detalhe.osc',$d->id)}}" class="btn gradient-bg mr-2">Saiba Mais</a>
+                   
                 </div>
-		    </li>
+                
+            </div>
+
+ 
+  </li>
+  
+ 
+</ul>
+
+
+		   
 	   </div>
     </div>
 	@endforeach
 
-
+    </center>
  </div>
 
 @section('css')

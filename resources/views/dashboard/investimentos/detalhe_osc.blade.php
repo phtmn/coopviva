@@ -46,9 +46,9 @@
                                             <li class="nav-item">
                                             <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil </b></a>
                                             </li> 
-                                            <li class="nav-item">
+                                           <!-- <li class="nav-item">
                                             <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
-                                            </li> 
+                                            </li>  -->
                                             <li class="nav-item">
                                             <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                             </li>      
@@ -70,7 +70,7 @@
                                     
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> Cidade - PB</p>
+                                    <!--<p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> Cidade - PB</p> -->
                                     
                                     <hr>
                                     

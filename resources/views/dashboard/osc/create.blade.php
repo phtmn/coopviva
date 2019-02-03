@@ -238,13 +238,12 @@
         
         <div class="tab-pane fade " id="pills-up" role="tabpanel" aria-labelledby="pills-up-tab">
         <div class="row">
-            <div class="form-group col-md-4">
-                <label for="">Link para Vídeo do YOUTUBE</label>
-                {!! Form::text('abc',null,['class'=>'form-control']) !!}
-            </div>  
-            <div class="form-group col-md-4">
+            
+            <div class="form-group col-md-12">
                 <label for="">Logo</label>
                 {!! Form::file('logo',null,['class'=>'form-control']) !!}
+                <br>
+                <i class="help-block">Se você escolher outra logo, o sistema substituirá pelo imagem escolhida. Se não manterá a logo atual</i>
                 
             </div>          
         </div>

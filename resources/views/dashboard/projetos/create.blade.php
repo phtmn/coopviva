@@ -15,21 +15,21 @@
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dados Gerais</a>
                 </li>
-                <li class="nav-item">
+            <!--    <li class="nav-item">
                     <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true">Resumo</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Responsável</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
                 </li>
-                <li class="nav-item">
+            <!--    <li class="nav-item">
                     <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-upload-tab" data-toggle="pill" href="#pills-upload" role="tab" aria-controls="pills-upload" aria-selected="false">Upload</a>
-                </li>
+                </li> -->
             </ul>
             <br>
                 {{ Form::open(['route'=>'projetos.store']) }}
@@ -40,7 +40,7 @@
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
-                            {!! Form::text('descricao',null,["class"=>"form-control"]) !!}
+                            {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
@@ -86,6 +86,14 @@
                             {!! Form::text('artigo',null,['class'=>'form-control']) !!}
                         </div>
                     </div>
+
+
+                    <div class="row">
+                                <div class="form-group col-md-6 pull-right">
+                                    {!! Form::label('Valor do Projeto') !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true']) !!}
+                                </div>
+                            </div>
                 {{--FimDadosGerais--}}
 
                 </div>
@@ -189,12 +197,7 @@
                         </div>
                     </div><!--end-of-row-3-->
 
-                            <div class="row">
-                                <div class="form-group col-md-6 pull-right">
-                                    {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control']) !!}
-                                </div>
-                            </div>
+                           
 
                         {{--FimDadosFinaneiros--}}
                 </div>

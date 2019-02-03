@@ -39,7 +39,7 @@
                                     {{--@cannot('osc')  <th>{{$d->nome_fantasia}} </th>   @endcannot          --}}
                                     <!--    <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td> -->
                                 @empty
-                                    <p>Nao ha registros</p>
+                                    <p style="color:red">Nao ha registros</p>
                                 @endforelse
                                 </tbody>
                             </table>
