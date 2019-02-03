@@ -9,8 +9,6 @@ use Illuminate\Notifications\Messages\MailMessage;
 class MyResetPasswordNotification extends ResetPassword
 {
 
-
-
     public function toMail($notifiable)
     {
         return (new MailMessage)

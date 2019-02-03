@@ -12,7 +12,7 @@
 
 				gtag('config', 'UA-110332879-2');
 		</script>
-    <title>COOPVIVA</title>
+    <title>COOPVIVA - BETA 1.0</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/vendor/site/images/favicon.ico">
 	 <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -35,6 +35,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/vendor/site/style.css">
+    @yield('css')
 </head>
 <body>
 
@@ -67,9 +68,9 @@
                             </div>
                             @else
 
-                            <!--    <div class="donate-btn">      
+                             <!--   <div class="">      
                                 
-                                    <a href="{{ url('/entrar')}}">Olá, {{ Auth::user()->name }}</a>
+                                <p><span>   Olá, {{ Auth::user()->name }}  </span></p>
                                 </div> -->
 
                                 <div class="donate-btn">
@@ -95,6 +96,47 @@
             </div><!-- .container -->
         </div><!-- .top-header-bar -->
 
+<!--
+        <div class="top-header-bar ">
+            <div class="container">
+                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-3 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                        <a class="d-block" rel="home" href="{{url('/') }}"><img class="d-block" src="{{asset('/vendor/site/images/coopvidapreta_logo.png')}}" alt="logo"></a>
+                                       
+                        </div>
+						
+                    </div>
+ 
+                    <div class="col-12 col-lg-9 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Home</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Sobre Nós</a>
+                            </div>
+                               
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Agenda 2030</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Blog</a>
+                            </div>
+
+                            <div class="donate-btn">                            
+                                <a href="{{ url('/entrar')}}">Dashboard</a>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+-->
+
         <div class="nav-bar">
             <div class="container">
                 <div class="row">
@@ -110,14 +152,14 @@
                                 <li class=""><a href="{{url('/') }}" >Home</a></li>
                                 <li class=""><a href="{{ route('sobre_nos') }}" >Sobre Nós</a></li>
                                 @guest  
-                                    <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li>
+                                  <!--  <li class=""><a href="{{ url('/oscs') }}">OSC's</a></li> -->
                                 @endguest                                                              
                                 <li class=""><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                                 <li class=""><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
                                 @if (Route::has('login'))               
                                     @auth
-                                        <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
-
+                                       <!-- <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li> -->
+                                       <li><a href="{{ route('investimentos.index') }}">Dashboard</a></li>
                                        @else
                                     <!--    <li><a href="{{ url('/cadastro') }}">Login</a></li> -->
                                         @if (Route::has('register'))
@@ -128,13 +170,13 @@
                             </ul>
                           </div>
                         </nav><!-- .site-navigation -->
-
                         <div class="hamburger-menu d-lg-none">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div><!-- .hamburger-menu -->
+
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
@@ -176,7 +218,7 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ route('sobre_nos') }}" >Sobre Nós </a></li>
-                            <li><a href="{{ url('/oscs') }}" >OSC's</a></li>
+                         <!--   <li><a href="{{ url('/oscs') }}" >OSC's</a></li> -->
                             <li><a href="{{ route('agenda_2030') }}">Agenda 2030</a></li>
                             <li><a target=_blank href="https://www.rededeconexao.art.br/blog">Blog</a></li>
 							@if (Route::has('login'))               
@@ -238,6 +280,9 @@
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
 
+
+
+
         <div class="footer-bar">
             <div class="container">
                 <div class="row">
@@ -260,7 +305,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
     <script type='text/javascript' src='/vendor/site/js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='/vendor/site/js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='/vendor/site/js/custom.js'></script>    
+    
+    <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>
 
+    <script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5583994154978" Style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
     @yield('js')
 
 </body>

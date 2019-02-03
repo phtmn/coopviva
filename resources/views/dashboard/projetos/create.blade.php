@@ -4,18 +4,19 @@
     @include('dashboard.menu')
     
     <div class="container" style="margin-top:20px">
-            <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Dados do Projeto</h3>
-                        </div>
 
 
+            <div class="row row justify-content-center">
+                        
                 @csrf
-            <div class="card-body">
+            <div class="col-md-12">
 
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dados Gerais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true">Resumo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Responsável</a>
@@ -23,8 +24,14 @@
                 <li class="nav-item">
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-upload-tab" data-toggle="pill" href="#pills-upload" role="tab" aria-controls="pills-upload" aria-selected="false">Upload</a>
+                </li>
             </ul>
-            <hr>
+            <br>
                 {{ Form::open(['route'=>'projetos.store']) }}
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -33,7 +40,7 @@
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
-                            {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
+                            {!! Form::text('descricao',null,["class"=>"form-control"]) !!}
                         </div>
 
                         <div class="form-group col-md-3">
@@ -81,6 +88,10 @@
                     </div>
                 {{--FimDadosGerais--}}
 
+                </div>
+
+                <div class="tab-pane fade" id="pills-resumo" role="tabpanel" aria-labelledby="pills-resumo-tab">                                    
+                                                teste
                 </div>
 
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -181,11 +192,19 @@
                             <div class="row">
                                 <div class="form-group col-md-6 pull-right">
                                     {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true']) !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control']) !!}
                                 </div>
                             </div>
 
                         {{--FimDadosFinaneiros--}}
+                </div>
+
+                <div class="tab-pane fade" id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                                    
+                                               ods
+                </div>
+
+                <div class="tab-pane fade" id="pills-upload" role="tabpanel" aria-labelledby="pills-upload-tab">                                    
+                                               upload
                 </div>
             </div>
          <center>   <button type="submit" class="btn gradient-bg">Salvar</button> </center>

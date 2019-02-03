@@ -14,8 +14,9 @@ class PerfilController extends Controller
 {
 
     public function create(){
-
-        $perfil = Perfil::first();
+        
+        $perfil = Perfil::where('user_id',Auth::user()->id)->first();
+                
         if($perfil){
             return view('dashboard.perfil.edit',[
                 'tab'       => 'perfil',
@@ -39,7 +40,7 @@ class PerfilController extends Controller
         $perfil->nome_completo      = $request->nome_completo;
         $perfil->data_nascimento    = $request->data_nascimento;
         $perfil->telefone           = $request->telefone;
-        $perfil->email              = $request->email;
+        $perfil->genero              = $request->genero;
         $perfil->cpf                = $request->cpf;
         $perfil->cnpj               = $request->cnpj;
         $perfil->razao_social       = $request->razao_social;
@@ -51,16 +52,16 @@ class PerfilController extends Controller
         $perfil->save();
 
         if($perfil){
-            Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            Alert::success( 'Seus dados foram Salvos','Sucesso')->persistent('Ok');
+            return redirect()->route('investimentos.index');
         }
-        Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-        return redirect()->route('dashboard.index');
+        Alert::warning( 'Não foi possível Salvar seus dados','Erro')->persistent('Ok');
+            return redirect()->route('investimentos.index');
     }
 
     public function update(Request $request,$id){
 
-        $perfil = Perfil::first();
+        $perfil = Perfil::where('user_id',Auth::user()->id)->first();
 
         $dados      = $request->all();
         $endereco   = $perfil->endereco()->update($dados);
@@ -69,7 +70,7 @@ class PerfilController extends Controller
         $perfil->nome_completo      = $request->nome_completo;
         $perfil->data_nascimento    = $request->data_nascimento;
         $perfil->telefone           = $request->telefone;
-        $perfil->email              = $request->email;
+        $perfil->genero             = $request->genero;
         $perfil->cpf                = $request->cpf;
         $perfil->cnpj               = $request->cnpj;
         $perfil->razao_social       = $request->razao_social;
@@ -78,10 +79,10 @@ class PerfilController extends Controller
         $perfil->save();
 
         if($perfil){
-            Alert::success( 'Seus dados foram Atualizados','Sucesso')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            Alert::success( 'Seus dados foram Salvos','Sucesso')->persistent('Ok');
+            return redirect()->route('investimentos.index');
         }
-            Alert::warning( 'Não foi possível atualizar seus dados','Erro')->persistent('Ok');
-            return redirect()->route('dashboard.index');
+            Alert::warning( 'Não foi possível Salvar seus dados','Erro')->persistent('Ok');
+            return redirect()->route('investimentos.index');
     }
 }

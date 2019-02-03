@@ -19,10 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->enum('tipo_usuario',['investidor','osc']);
             $table->enum('tipo',['PF','PJ']);
+            $table->string('termo')->nullable();
             $table->string('password');
             $table->string('sexo')->nullable();
             $table->string('uf')->nullable();
             $table->string('cidade')->nullable();
+            $table->boolean('isAdmin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

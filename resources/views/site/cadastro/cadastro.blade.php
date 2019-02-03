@@ -66,12 +66,12 @@
               @csrf  
               <div class="form-group">
                   <label for="name">Como se chama?</label>
-                  <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome">
+                  <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome" required="true">
               </div>
 
               <div class="form-group">
                   <label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
-                  <select name="tipo_usuario" id="tipo-perfil" class="form-control">
+                  <select name="tipo_usuario" id="tipo-perfil" class="form-control" >
                       <option value="investidor">Perfil Investidor</option>
                       <option value="osc">Perfil OSC (Organização Social Civil)</option>
                   </select>
@@ -80,7 +80,7 @@
               <div class="form-group" id="box-tipo-usuario">
                   <div class="form-group" style="margin-left: 25px">
                       <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="tipo" id="radioPF" value="PF">
+                          <input class="form-check-input" type="radio" name="tipo" id="radioPF" value="PF" checked="checked">
                           <label class="form-check-label" for="radioPF">Pessoa Física</label>
                       </div>
                       <br>
@@ -93,7 +93,7 @@
 
               <div class="form-group">
                   <label for="name"> Selecione o seu Estado?</label>
-                  <select name="uf" id="" class="form-control">
+                  <select name="uf" id="" class="form-control" >
                       <option value="#">...  Selecione um Estado...</option>
                       <option value="AC">AC - Acre</option>
                       <option value="AL">AL - Alagoas</option>
@@ -128,7 +128,7 @@
 
               <div class="form-group">
                   <label for="email">E-mail</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail" required="true">
               </div>
 
               <div class="form-group">
@@ -143,9 +143,11 @@
 
               <div class="form-group">
                   <div class="form-group" style="margin-left: 25px">
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" name="termo_uso" value="termo_uso" disabled="disabled" checked="checked"      >
+                      <div class="form-check form-check-inline">            
+                          <input class="form-check-input" type="checkbox" name="termo" value="ACEITO" disabled="disabled" checked="checked"     >
                           <label class="form-check-label" >Aceito os Termos de Uso</label>
+
+                         
                       </div>
                       <br>
                       

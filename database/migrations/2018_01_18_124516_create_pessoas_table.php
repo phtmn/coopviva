@@ -34,6 +34,6 @@ class CreatePessoasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pesssoas');
+        Schema::dropIfExists('pessoas');
     }
 }

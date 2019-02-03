@@ -15,13 +15,40 @@ class UsersTableSeeder extends Seeder
         User::create([           
                
             'name'          => 'Investidor',
-            'email'         => 'investidor@email.com',
+            'email'         => 'investidorpf@email.com',
             'password'      => bcrypt('123456'),
             'uf'            => 'PB',
             'sexo'          => 'M',
             'cidade'        => 'João Pessoa',
             'tipo_usuario'  => 'investidor',
             'tipo'          => 'PF'
+               
+        ]);
+
+        User::create([           
+               
+            'name'          => 'Investidor',
+            'email'         => 'investidorpj@email.com',
+            'password'      => bcrypt('123456'),
+            'uf'            => 'PB',
+            'sexo'          => 'M',
+            'cidade'        => 'João Pessoa',
+            'tipo_usuario'  => 'investidor',
+            'tipo'          => 'PJ'
+               
+        ]);
+
+        User::create([           
+               
+            'name'          => 'Admin',
+            'email'         => 'admin@admin.com',
+            'password'      => bcrypt('123456'),
+            'uf'            => 'PB',
+            'sexo'          => 'M',
+            'cidade'        => 'João Pessoa',
+            'tipo_usuario'  => 'investidor',
+            'tipo'          => 'PF',
+            'isAdmin'       => 1
                
         ]);
 
