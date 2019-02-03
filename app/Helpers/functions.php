@@ -1,0 +1,25 @@
+<?php
+
+if (! function_exists('removeMaskCpf')) {
+    function removeMaskCpf($cpf) {
+        return preg_replace("/[^\d]+/", "", $cpf);
+    }
+}
+
+if (! function_exists('removeMaskCnpj')) {
+    function removeMaskCnpj($cnpj) {
+        return preg_replace("/[^\d]+/", "", $cnpj);
+    }
+}
+
+function mask($mask,$str){
+
+    $str = str_replace(" ","",$str);
+
+    for($i=0;$i<strlen($str);$i++){
+        $mask[strpos($mask,"#")] = $str[$i];
+    }
+
+    return $mask;
+
+}

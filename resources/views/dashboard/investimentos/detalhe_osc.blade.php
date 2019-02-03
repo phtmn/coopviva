@@ -94,14 +94,14 @@
                                 @forelse($metas->unique('objetivo_id') as $obj)
                                     <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                     @empty
-                                        <p>Você não está em nenhum objetivo da ODS</p>
+                                        
                                 @endforelse
 
                                 @forelse($metas as $meta)
                                     <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
                                     <hr>
                                     @empty
-                                        <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
+                                    <p style="color:red">Nenhuma ODS cadastrada </p>
                                 @endforelse
                                                            
                             </div>
@@ -125,7 +125,7 @@
                                 @forelse($galerias as $galeria)
                                     <a style="cursor: pointer"><img src="{{asset($galeria->url)}}"></a>
                                 @empty
-                                    <p>Você não está em nenhum objetivo da ODS</p>
+                                <p style="color:red">Nenhuma galeria cadastrada </p>
                                 @endforelse
 
                             </div>
@@ -154,9 +154,9 @@
                             <div class="card-body">
                                 <div class="circular-progress-bar">
                                     @if($osc->logo != null)
-                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:150px; height: 150px ">
+                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:200px; height: 200px ">
                                      @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:150px; height: 150px ">
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:200px; height: 200px ">
                                     @endif
                             
                                 </div>  
@@ -189,7 +189,9 @@
                                         <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
                                             @csrf
 
-                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="">
+                                           
+
+                                            <input type="text" name="valor" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Valor R$">
                                         <br>
                                             <input type="hidden" name="osc_id" value="{{$osc->id}}">
                                             <button type="submit" class="btn gradient-bg" >Investir </button>
@@ -225,3 +227,11 @@
 
 @stop
 
+@section('js')
+    <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#valor").mask('#.##0,00', {reverse: true});
+        });
+    </script>
+    @stop
