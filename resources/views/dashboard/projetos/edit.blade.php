@@ -162,7 +162,7 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDV_doacao',$bancoDoacao->contaDV,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDv_doacao',$bancoDoacao->contaDv,['class'=>'form-control']) !!}
                                 </div>
                             </div><!--end-of-row-3-->
 
@@ -186,7 +186,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             {!! Form::label('Dv') !!}
-                            {!! Form::text('contaDv_patrocinio',$bancoPatrocinio->contaDV,['class'=>'form-control']) !!}
+                            {!! Form::text('contaDv_patrocinio',$bancoPatrocinio->contaDv,['class'=>'form-control']) !!}
                         </div>
                     </div><!--end-of-row-3-->
 

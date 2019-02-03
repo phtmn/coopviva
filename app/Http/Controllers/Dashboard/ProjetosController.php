@@ -71,7 +71,7 @@ class ProjetosController extends Controller
         $banco_doacao->tipo_conta   = 'doacao';
         $banco_doacao->agencia      = $request->agencia_doacao;
         $banco_doacao->conta        = $request->conta_doacao;
-        $banco_doacao->contaDV      = $request->contaDV_docao;
+        $banco_doacao->contaDv      = $request->contaDv_doacao;
         $banco_doacao->save();
 
         $banco_patrocinio               = new Banco();
@@ -79,7 +79,7 @@ class ProjetosController extends Controller
         $banco_patrocinio->tipo_conta   = 'patrocinio';
         $banco_patrocinio->agencia      = $request->agencia_patrocinio;
         $banco_patrocinio->conta        = $request->conta_patrocinio;
-        $banco_patrocinio->contaDV      = $request->contaDV_patrocinio;
+        $banco_patrocinio->contaDv      = $request->contaDv_patrocinio;
         $banco_patrocinio->save();
 
         $projeto                        = new Projeto();

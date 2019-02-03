@@ -63,7 +63,7 @@
                     <tr>
                         <td>{{$d->descricao}}</td>
                         <td>{{$d->instancia}}</td>
-                        <td>{{$d->valor_meta}}</td>
+                        <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
                         <td class="text-center ">
                                 <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i></a>
                                 
@@ -71,7 +71,7 @@
                         </td>
                     </tr>
                     @empty
-                        <p>Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                        <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
                     @endforelse
                 </tbody>
                                     </table>

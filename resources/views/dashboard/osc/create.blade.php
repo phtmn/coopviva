@@ -90,7 +90,7 @@
                  <div class="row">
                  
                  <div class="form-group col-md-4">
-                 <br><h4>Conta para receber Doações</h4>
+                 <br><h5 class="text-right">Conta para receber Doações</h5>
                       </div>
                       <div class="form-group col-md-3">
                               {!! Form::label('Banco') !!}
