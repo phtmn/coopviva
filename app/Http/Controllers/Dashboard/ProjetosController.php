@@ -116,6 +116,17 @@ class ProjetosController extends Controller
     public function update(Request $request,$id){
 
          $projeto = Projeto::find($id);
+        
+
+         $proponente                = $projeto->proponente();
+         $proponente->nome       = $request->nome;
+         $proponente->cpf        = $request->cpf;
+         $proponente->cnpj           = $request->cnpj;
+         $proponente->telefone_1 = $request->telefone_1;
+         $proponente->telefone_2 = $request->telefone_2;
+         $proponente->email_1    = $request->email_1;
+         $proponente->email_2    = $request->email_2;
+         $proponente->save();
 
          $bancoPatrocinio                = $projeto->bancoPatrocinio();
          $bancoPatrocinio->banco         = $request->banco_patrocinio;
