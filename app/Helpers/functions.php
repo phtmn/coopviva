@@ -24,4 +24,12 @@ function mask($mask,$str){
 
 }
 
+if(! function_exists('toMoney')){
+    function toMoney($value){
+        $val = str_replace(',','.',str_replace('.','',$value));        
+        return $val;
+    }
+}
+
+
 

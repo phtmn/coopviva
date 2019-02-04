@@ -177,13 +177,13 @@
                                     </div> 
                                     <div class="form-group col-md-12">
                                         <label for="">Escolha um Projeto</label>
-                                            {{ Form::select('situacao_imovel',[
-                                                'Próprio'      => 'Próprio',
-                                                'Alugado'       => 'Alugado', 
-                                                'Emprestado'       => 'Emprestado',                                
-                                                'Outro'    => 'Outro'                                
-                                                ],null,['class'=>'form-control custom-select']) 
-                                            }}  
+                                            {{--{{ Form::select('situacao_imovel',[--}}
+                                                {{--'Próprio'      => 'Próprio',--}}
+                                                {{--'Alugado'       => 'Alugado', --}}
+                                                {{--'Emprestado'       => 'Emprestado',                                --}}
+                                                {{--'Outro'    => 'Outro'                                --}}
+                                                {{--],null,['class'=>'form-control custom-select']) --}}
+                                            {{--}}  --}}
                                     </div>--><center>
                                     <div class="form-group col-md-8">
                                         <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
@@ -191,7 +191,7 @@
 
                                            
 
-                                            <input type="text" name="valor" class="form-control form-control-lg" id="" aria-describedby="emailHelp" placeholder="Valor R$">
+                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor R$">
                                         <br>
                                             <input type="hidden" name="osc_id" value="{{$osc->id}}">
                                             <button type="submit" class="btn gradient-bg" >Investir </button>

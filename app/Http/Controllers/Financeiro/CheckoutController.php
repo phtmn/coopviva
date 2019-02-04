@@ -31,7 +31,7 @@ class CheckoutController extends Controller
         //dd($osc);
         $investimento = new Investimento();
         $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
-        $investimento->valor_investimento   = $request->valor;
+        $investimento->valor_investimento   = toMoney($request->valor);
         $investimento->tipo                 = 'DOACAO';
         $investimento->user_id              = $request->user()->id;
         $investimento->projeto_id           = $request->projeto_id;
@@ -42,7 +42,8 @@ class CheckoutController extends Controller
 
         $pagamento = $this->gerarPagamento($investimento);
         //dd($pagamento);
-        return redirect()->to($pagamento->init_point);
+        //return redirect()->to($pagamento->init_point);
+        return redirect()->to($pagamento->sandbox_init_point);
         //Alert::success('para concluir o processo de investimento voce deve clicar no botao','Obrigado')->persistent('OK');
         //return view('dashboard.incentivos.pagar',[
         //'url' => $pagamento->init_point,

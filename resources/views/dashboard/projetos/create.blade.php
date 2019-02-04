@@ -48,7 +48,7 @@
 
                         <div class="form-group col-md-2 pull-right">
                                     {!! Form::label('Valor (R$)') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'']) !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
                                 </div>
 
                         <div class="form-group col-md-2">

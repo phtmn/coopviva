@@ -97,7 +97,7 @@ class ProjetosController extends Controller
         $projeto->impactos_esperados    = $request->impactos_esperados;
 
         $projeto->artigo                = $request->artigo;
-        $projeto->valor_meta            = $request->valor_meta;
+        $projeto->valor_meta            = toMoney($request->valor_meta);
         $projeto->proponente_id         = $proponente->id;
         $projeto->banco_doacao_id       = $banco_doacao->id;
         $projeto->banco_patrocinio_id   = $banco_patrocinio->id;
@@ -146,7 +146,7 @@ class ProjetosController extends Controller
 
 
          $projeto->artigo                = $request->artigo;
-         $projeto->valor_meta            = $request->valor_meta;
+         $projeto->valor_meta            = toMoney($request->valor_meta);
          $projeto->save();
 
         if($projeto){
