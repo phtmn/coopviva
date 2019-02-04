@@ -31,6 +31,6 @@ class NewUser extends Mailable
     {
         return $this->to('bernardo@redeconexao.com.br')
                      ->subject('Novo usuario')
-                     ->markdown('emails.NewUser');
+                     ->markdown('emails.newUser');
     }
 }
