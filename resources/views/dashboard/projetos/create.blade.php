@@ -15,24 +15,19 @@
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><b class="text-dark" > Dados Gerais </b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><b class="text-dark" > Dados Financeiros </b></a>
-                </li>
+                {{--<li class="nav-item"> --}}
+                    {{--<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><b class="text-dark" > Dados Financeiros </b></a> --}}
+                        {{--</li> --}}
          
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><b class="text-dark" >Responsável </b></a>
-                </li>
+                {{--<li class="nav-item"> --}}
+                    {{--<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><b class="text-dark" >Responsável </b></a> --}}
+                        {{--</li> --}}
 
                     <li class="nav-item">
-                    <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true"><b class="text-dark" >Resumo </b></a>
+                    <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true"><b class="text-dark" >Descrição </b></a>
                 </li> 
                 
-            <!--    <li class="nav-item">
-                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-upload-tab" data-toggle="pill" href="#pills-upload" role="tab" aria-controls="pills-upload" aria-selected="false">Upload</a>
-                </li> -->
+         
             </ul>
             <br>
                 {{ Form::open(['route'=>'projetos.store']) }}
@@ -105,13 +100,15 @@
                  
                 {{--FimDadosGerais--}}
 
-                </div>
+              
 
                      
 
-               
+                <br>
+        <h4>Responsável </h4>
+            <hr>  
 
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+             
                     {{--DadosResponsavel--}}
                         <div class="row"><!--row-4-->
                             <div class="form-group col-md-6">
@@ -155,8 +152,14 @@
 
                         
                     {{--fimDadosResponsavel--}}
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              
+              
+                    <br>
+        <h4>Dados Financeiros </h4>
+            <hr>  
+
+              
+              
                         
                     
                             <div class="row">

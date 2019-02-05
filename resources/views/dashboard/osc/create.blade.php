@@ -14,25 +14,23 @@
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-dados-tab" data-toggle="pill" href="#pills-dados" role="tab" aria-controls="pills-dados" aria-selected="true" ><b class="text-dark" >Dados Gerais</b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false"><b class="text-dark" >Dados Financeiros</b></a>
-                </li>
+                {{-- <li class="nav-item"> --}}
+                    {{--  <a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false"><b class="text-dark" >Dados Financeiros</b></a> --}}
+                        {{--</li> --}}
 
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false"><b class="text-dark" >Endereço</b></a>
-                </li>
+                            {{-- <li class="nav-item"> --}}
+                                {{--   <a class="nav-link" id="pills-end-tab" data-toggle="pill" href="#pills-end" role="tab" aria-controls="pills-end" aria-selected="false"><b class="text-dark" >Endereço</b></a>--}}
+                                    {{--  </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" id="pills-descricao-tab" data-toggle="pill" href="#pills-descricao" role="tab" aria-controls="pills-descricao" aria-selected="false"><b class="text-dark" >Descrição</b></a>
                 </li>
-             <!--   <li class="nav-item">
-                    <a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a>
-                </li> -->
+                {{--  <li class="nav-item"> --}}
+                    {{--  <a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false">Atuação</a> --}}
+                        {{--  </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false"><b class="text-dark" >ODS</b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-up-tab" data-toggle="pill" href="#pills-up" role="tab" aria-controls="pills-up" aria-selected="false"><b class="text-dark" >Upload</b></a>
-                </li>
+            
 
             </ul>
                 <br>
@@ -83,47 +81,10 @@
                     {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                 </div>
             </div>
-        </div>
 
-        <div class="tab-pane fade " id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
-             
-                 <div class="row">
-                 
-                 <div class="form-group col-md-4">
-                 <br><h5 class="text-right">Conta para receber Doações</h5>
-                      </div>
-                      <div class="form-group col-md-3">
-                              {!! Form::label('Banco') !!}
-
-                              {{ Form::select('banco',[
-                                'CEF'      => 'Caixa Economica Federal',
-                                'BB'       => 'Banco do Brasil', 
-                                'SA'       => 'Banco Santander',
-                                'IT'       =>  'Banco Itaú',
-                                'Outro'    => 'Outro'                                
-                                ],null,['class'=>'form-control custom-select','selected'=>'Outro'])
-                            }} 
-
-                      </div>
-
-                      <div class="form-group col-md-2">
-                                {!! Form::label('Agência') !!}
-                                {!! Form::text('agencia',null,['class'=>'form-control']) !!}
-                      </div>
-
-                      <div class="form-group col-md-2">
-                                {!! Form::label('Conta') !!}
-                                {!! Form::text('conta',null,['class'=>'form-control']) !!}
-                      </div> 
-                      <div class="form-group col-md-1">
-                                {!! Form::label('DV') !!}
-                                {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
-                      </div>
-                 </div>
-        </div>
-
-
-        <div class="tab-pane fade " id="pills-end" role="tabpanel" aria-labelledby="pills-end-tab">
+            <br>
+        <h4>Endereço </h4>
+            <hr>
             
             <div class="row">
                         <div class="form-group col-md-3">
@@ -164,7 +125,52 @@
                             }}                             
                         </div>                
             </div>
-        </div>
+    
+        
+            <br>
+        <h4>Dados Financeiros </h4>
+            <hr>
+             
+                 <div class="row">
+                 
+                 <div class="form-group col-md-4">
+                 <br><h5 class="text-right">Conta para receber Doações</h5>
+                      </div>
+                      <div class="form-group col-md-3">
+                              {!! Form::label('Banco') !!}
+
+                              {{ Form::select('banco',[
+                                'CEF'      => 'Caixa Economica Federal',
+                                'BB'       => 'Banco do Brasil', 
+                                'SA'       => 'Banco Santander',
+                                'IT'       =>  'Banco Itaú',
+                                'Outro'    => 'Outro'                                
+                                ],null,['class'=>'form-control custom-select','selected'=>'Outro'])
+                            }} 
+
+                      </div>
+
+                      <div class="form-group col-md-2">
+                                {!! Form::label('Agência') !!}
+                                {!! Form::text('agencia',null,['class'=>'form-control']) !!}
+                      </div>
+
+                      <div class="form-group col-md-2">
+                                {!! Form::label('Conta') !!}
+                                {!! Form::text('conta',null,['class'=>'form-control']) !!}
+                      </div> 
+                      <div class="form-group col-md-1">
+                                {!! Form::label('DV') !!}
+                                {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
+                      </div>
+                 </div>
+                 
+                
+
+                 </div>
+
+
+        
 
 
 
@@ -204,23 +210,7 @@
         </div>
     
 
-     <!--   <div class="tab-pane fade " id="pills-atuacao" role="tabpanel" aria-labelledby="pills-atuacao-tab">
-        <div class="row">
-        <div class="form-group col-md-12">
-                <label for="">Atividade Econômica (CNAE)</label>
-                {!! Form::text('abc',null,['class'=>'form-control']) !!}
-            </div>
-            <div class="form-group col-md-6">
-                <label for="">Área de Atuação 1</label>
-                {!! Form::text('area_atuacao',null,['class'=>'form-control']) !!}
-            </div>
-            <div class="form-group col-md-6">
-                <label for="">Sub-Área</label>
-                {!! Form::text('sub_area1',null,['class'=>'form-control']) !!}
-            </div>
-          
-        </div>
-        </div> -->
+
 
         <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
             <div class="row">
@@ -236,18 +226,7 @@
         </div>
 
         
-        <div class="tab-pane fade " id="pills-up" role="tabpanel" aria-labelledby="pills-up-tab">
-        <div class="row">
-            
-            <div class="form-group col-md-12">
-                <label for="">Logo</label>
-                {!! Form::file('logo',null,['class'=>'form-control']) !!}
-                <br>
-                <i class="help-block">Se você escolher outra logo, o sistema substituirá pelo imagem escolhida. Se não manterá a logo atual</i>
-                
-            </div>          
-        </div>
-        </div>
+  
         <br>
 
        
@@ -278,6 +257,7 @@
 
 @stop
 @section('js')
+<script src="{{asset('js/jquery.mask.min.js')}}"> </script>
 <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');

@@ -117,6 +117,7 @@
     </div>
 </div>
 @section('js')
+<script src="{{asset('js/jquery.mask.min.js')}}"> </script>
 <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');

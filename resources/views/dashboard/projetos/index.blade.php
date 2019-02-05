@@ -53,19 +53,26 @@
                                             <tr>
                                                <!-- <th colspan="2">Investidor</th> -->
                                                <th>Nome do Projeto</th>
-                                               <th>Instância</th>
                                                <th>Valor (R$)</th>                                              
-                                               <th># </th>                                               
+                                               <th> </th>      
+                                               <th> </th>                                            
                                             </tr>
                                         </thead>
                                         <tbody>
                     @forelse($data as $d)
                     <tr>
                         <td>{{$d->descricao}}</td>
-                        <td>{{$d->instancia}}</td>
+
                         <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
                         <td class="text-center ">
                                 <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i></a>
+                              
+                                
+
+                        </td>
+                        <td class="text-center ">
+                             <!--   <a href=""><i class="fa fa-trash" style="color:red"></i></a> -->
+                              
                                 
 
                         </td>
