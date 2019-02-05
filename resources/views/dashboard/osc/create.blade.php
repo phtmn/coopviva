@@ -115,7 +115,7 @@
                             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="">Situação do Imóves</label>
+                            <label for="">Situação do Imóvel</label>
                             {{ Form::select('situacao_imovel',[
                                 'Próprio'      => 'Próprio',
                                 'Alugado'       => 'Alugado', 
