@@ -171,10 +171,37 @@
                       </div>
                  </div>
 
-             
+        
         
 
+               
+                 <br>
+        <h4>Upload da logo </h4>
+            <hr>          
+            <div class="row">
+                 
+                 <div class="form-group col-md-3">
+                
+                      </div>
+                 
+                      <div class="form-group col-md-5">
+                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
+                      </div>
+
+                      <div class="form-group col-md-2">
+                      @if($osc->logo != null)
+                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:100px; height: 100px " >
+                                     @else
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px; height: 100px ">
+                                    @endif
+                      </div>
+                      <div class="form-group col-md-1">
+                
+                </div>
+                     
                  </div>
+                 </div>
+         
 
         <div class="tab-pane fade " id="pills-descricao" role="tabpanel" aria-labelledby="pills-descricao-tab">
             <div class="row">
@@ -233,36 +260,13 @@
                     @endforelse
                  </div> 
          
-  
+              
           
              </div>
+             
         </div>
-        <br>
-        <h4>Upload da logo </h4>
-            <hr>          
-            <div class="row">
-                 
-                 <div class="form-group col-md-3">
-                
-                      </div>
-                 
-                      <div class="form-group col-md-5">
-                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
-                      </div>
-
-                      <div class="form-group col-md-2">
-                      @if($osc->logo != null)
-                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:100px; height: 100px " >
-                                     @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px; height: 100px ">
-                                    @endif
-                      </div>
-                      <div class="form-group col-md-1">
-                
-                </div>
-                     
-                 </div>
-        
+       
+       
        
         <br>
 
