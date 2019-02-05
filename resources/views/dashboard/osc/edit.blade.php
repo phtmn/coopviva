@@ -34,7 +34,7 @@
                     {{--<a class="nav-link" id="pills-atuacao-tab" data-toggle="pill" href="#pills-atuacao" role="tab" aria-controls="pills-atuacao" aria-selected="false"><b class="text-dark" >Atuação</b></a>--}}
                 {{--</li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false"><b class="text-dark" >ODS</b></a>
+                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false"><b class="text-dark" >Remover ODS</b></a>
                 </li>
               
 
@@ -51,28 +51,8 @@
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-dados" role="tabpanel" aria-labelledby="pills-dados-tab">
 
-                           
-            <div class="row">
-                 
-                 <div class="form-group col-md-5">
-                 <br><h5 class="text-right">Upload da Logo</h5>
-                      </div>
-                 
-                      <div class="form-group col-md-5">
-                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
-                      </div>
-
-                      <div class="form-group col-md-2">
-                      @if($osc->logo != null)
-                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:100px; height: 100px " >
-                                     @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px; height: 100px ">
-                                    @endif
-                      </div>
-
-                     
-                 </div>
-            <hr>
+        
+            
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Nome Fantasia</label>
@@ -257,8 +237,31 @@
           
              </div>
         </div>
+        <br>
+        <h4>Upload da logo </h4>
+            <hr>          
+            <div class="row">
+                 
+                 <div class="form-group col-md-3">
+                
+                      </div>
+                 
+                      <div class="form-group col-md-5">
+                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
+                      </div>
 
-       
+                      <div class="form-group col-md-2">
+                      @if($osc->logo != null)
+                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:100px; height: 100px " >
+                                     @else
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px; height: 100px ">
+                                    @endif
+                      </div>
+                      <div class="form-group col-md-1">
+                
+                </div>
+                     
+                 </div>
         
        
         <br>
