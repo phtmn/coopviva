@@ -231,7 +231,7 @@
                                         @endif
                                     @endauth               
                                 @endif
-                            <li><a href="#">Termo de Uso</a></li>                            
+                            <li><a href="{{ route('termo') }}">Termo de Uso</a></li>                            
                         </ul>
                     </div><!-- .col -->
 

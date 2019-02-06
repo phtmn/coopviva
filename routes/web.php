@@ -7,6 +7,7 @@ Route::view('/','site.index', ['active' => 'home']);
 Route::view('/sobre', 'site.paginas.sobre', ['active' => 'sobre'])->name('sobre_nos');
 Route::view('/agenda2030', 'site.paginas.agenda2030', ['active' => 'agenda2030'])->name('agenda_2030');
 Route::view('/oscs','site.osc.index', ['active' => 'oscs'])->name('oscs');
+Route::view('/termodeuso', 'site.paginas.termouso')->name('termo');
 
 //Rotas para manutenção de cadastros-logins
 Route::view('/cadastro','site.cadastro.cadastro',['active'=>'cadastro'])->name('site.cadastro');
