@@ -6,6 +6,9 @@
     @include('dashboard.menu')
 
     <div class="container">
+
+  
+
         <div class="form-group" style="margin-top: 25px">
             <a href="{{ route('galeria.create') }}" class="btn gradient-bg">Incluir foto</a>
         </div>

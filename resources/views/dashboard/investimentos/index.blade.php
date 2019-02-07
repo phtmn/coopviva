@@ -32,14 +32,14 @@
                                 @forelse($data as  $d)
                                     <tr>
                                         <td>{{date('d/m/Y',strtotime($d->created_at))}}</td>
-                                        <td>Doacao</td>
-                                        <td>{{$d->valor_investimento}}</td>
+                                        <td>Doação</td>
+                                        <td>R$ {{ number_format($d->valor_investimento,2,',','.') }} </td>
                                     </tr>
                                     {{--@can('osc')             <td> </td> @endcan--}}
                                     {{--@cannot('osc')  <th>{{$d->nome_fantasia}} </th>   @endcannot          --}}
                                     <!--    <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td> -->
                                 @empty
-                                    <p>Nao ha registros</p>
+                                    <p style="color:red">Não há registros</p>
                                 @endforelse
                                 </tbody>
                             </table>

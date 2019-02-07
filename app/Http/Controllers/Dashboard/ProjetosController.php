@@ -71,7 +71,7 @@ class ProjetosController extends Controller
         $banco_doacao->tipo_conta   = 'doacao';
         $banco_doacao->agencia      = $request->agencia_doacao;
         $banco_doacao->conta        = $request->conta_doacao;
-        $banco_doacao->contaDV      = $request->contaDV_docao;
+        $banco_doacao->contaDv      = $request->contaDv_doacao;
         $banco_doacao->save();
 
         $banco_patrocinio               = new Banco();
@@ -79,7 +79,7 @@ class ProjetosController extends Controller
         $banco_patrocinio->tipo_conta   = 'patrocinio';
         $banco_patrocinio->agencia      = $request->agencia_patrocinio;
         $banco_patrocinio->conta        = $request->conta_patrocinio;
-        $banco_patrocinio->contaDV      = $request->contaDV_patrocinio;
+        $banco_patrocinio->contaDv      = $request->contaDv_patrocinio;
         $banco_patrocinio->save();
 
         $projeto                        = new Projeto();
@@ -89,8 +89,15 @@ class ProjetosController extends Controller
         $projeto->num_registro1         = $request->num_registro1;
         $projeto->num_registro2         = $request->num_registro2;
         $projeto->segmento_cultural     = $request->segmento_cultural;
+
+        $projeto->objetivo_geral        = $request->objetivo_geral;
+        $projeto->objetivos_esp         = $request->objetivos_esp;
+        $projeto->justificativa         = $request->justificativa;
+        $projeto->publico_alvo          = $request->publico_alvo;
+        $projeto->impactos_esperados    = $request->impactos_esperados;
+
         $projeto->artigo                = $request->artigo;
-        $projeto->valor_meta            = $request->valor_meta;
+        $projeto->valor_meta            = toMoney($request->valor_meta);
         $projeto->proponente_id         = $proponente->id;
         $projeto->banco_doacao_id       = $banco_doacao->id;
         $projeto->banco_patrocinio_id   = $banco_patrocinio->id;
@@ -109,6 +116,17 @@ class ProjetosController extends Controller
     public function update(Request $request,$id){
 
          $projeto = Projeto::find($id);
+        
+
+         $proponente                = $projeto->proponente();
+         $proponente->nome       = $request->nome;
+         $proponente->cpf        = $request->cpf;
+         $proponente->cnpj           = $request->cnpj;
+         $proponente->telefone_1 = $request->telefone_1;
+         $proponente->telefone_2 = $request->telefone_2;
+         $proponente->email_1    = $request->email_1;
+         $proponente->email_2    = $request->email_2;
+         $proponente->save();
 
          $bancoPatrocinio                = $projeto->bancoPatrocinio();
          $bancoPatrocinio->banco         = $request->banco_patrocinio;
@@ -130,8 +148,16 @@ class ProjetosController extends Controller
          $projeto->num_registro1         = $request->num_registro1;
          $projeto->num_registro2         = $request->num_registro2;
          $projeto->segmento_cultural     = $request->segmento_cultural;
+
+         $projeto->objetivo_geral        = $request->objetivo_geral;
+         $projeto->objetivos_esp         = $request->objetivos_esp;
+         $projeto->justificativa         = $request->justificativa;
+         $projeto->publico_alvo          = $request->publico_alvo;
+         $projeto->impactos_esperados    = $request->impactos_esperados;
+
+
          $projeto->artigo                = $request->artigo;
-         $projeto->valor_meta            = $request->valor_meta;
+         $projeto->valor_meta            = toMoney($request->valor_meta);
          $projeto->save();
 
         if($projeto){

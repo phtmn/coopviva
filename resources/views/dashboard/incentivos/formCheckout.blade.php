@@ -36,7 +36,7 @@
                 <div class="form-group">
                     <center>  
                     <label for="name"><strong>VALOR (R$)</strong></label>
-                        <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder=""> 
+                        <input type="text" name="valor" class="form-control form-control-lg" id="valor">
                     </center>
 
                 </div>           
@@ -79,8 +79,9 @@
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
     <script>
+        alert('oi')
         $(document).ready(function(){
-            $("#valor").mask('#.##0.00', {reverse: true});
+            $("#valor").mask('#.##0,00', {reverse: true});
         });
 
     </script>

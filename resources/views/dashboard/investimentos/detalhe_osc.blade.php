@@ -46,9 +46,9 @@
                                             <li class="nav-item">
                                             <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil </b></a>
                                             </li> 
-                                            <li class="nav-item">
-                                            <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
-                                            </li> 
+                                           {{--  <li class="nav-item"> --}}
+                                           {{--  <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a> --}}
+                                           {{--  </li>   --}}
                                             <li class="nav-item">
                                             <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                             </li>      
@@ -70,7 +70,7 @@
                                     
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> Cidade - PB</p>
+                                    <!--<p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> Cidade - PB</p> -->
                                     
                                     <hr>
                                     
@@ -94,14 +94,14 @@
                                 @forelse($metas->unique('objetivo_id') as $obj)
                                     <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                     @empty
-                                        <p>Você não está em nenhum objetivo da ODS</p>
+                                        
                                 @endforelse
 
                                 @forelse($metas as $meta)
                                     <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
                                     <hr>
                                     @empty
-                                        <h4>Você precisa escolher suas metas da agenda 2030 na aba Objetivos ODS</h4>
+                                    <p style="color:red">Nenhuma ODS cadastrada </p>
                                 @endforelse
                                                            
                             </div>
@@ -113,6 +113,9 @@
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
                                     
                                     Colocar os PRojetos Aqui
+
+
+                                    
                                                            
                             </div>
                     </div>
@@ -125,7 +128,7 @@
                                 @forelse($galerias as $galeria)
                                     <a style="cursor: pointer"><img src="{{asset($galeria->url)}}"></a>
                                 @empty
-                                    <p>Você não está em nenhum objetivo da ODS</p>
+                                <p style="color:red">Nenhuma galeria cadastrada </p>
                                 @endforelse
 
                             </div>
@@ -154,9 +157,9 @@
                             <div class="card-body">
                                 <div class="circular-progress-bar">
                                     @if($osc->logo != null)
-                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:150px; height: 150px ">
+                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:200px; height: 200px ">
                                      @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:150px; height: 150px ">
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:200px; height: 200px ">
                                     @endif
                             
                                 </div>  
@@ -177,19 +180,21 @@
                                     </div> 
                                     <div class="form-group col-md-12">
                                         <label for="">Escolha um Projeto</label>
-                                            {{ Form::select('situacao_imovel',[
-                                                'Próprio'      => 'Próprio',
-                                                'Alugado'       => 'Alugado', 
-                                                'Emprestado'       => 'Emprestado',                                
-                                                'Outro'    => 'Outro'                                
-                                                ],null,['class'=>'form-control custom-select']) 
-                                            }}  
+                                            {{--{{ Form::select('situacao_imovel',[--}}
+                                                {{--'Próprio'      => 'Próprio',--}}
+                                                {{--'Alugado'       => 'Alugado', --}}
+                                                {{--'Emprestado'       => 'Emprestado',                                --}}
+                                                {{--'Outro'    => 'Outro'                                --}}
+                                                {{--],null,['class'=>'form-control custom-select']) --}}
+                                            {{--}}  --}}
                                     </div>--><center>
                                     <div class="form-group col-md-8">
                                         <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
                                             @csrf
 
-                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="">
+                                           
+
+                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor R$">
                                         <br>
                                             <input type="hidden" name="osc_id" value="{{$osc->id}}">
                                             <button type="submit" class="btn gradient-bg" >Investir </button>
@@ -225,3 +230,11 @@
 
 @stop
 
+@section('js')
+    <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#valor").mask('#.##0,00', {reverse: true});
+        });
+    </script>
+    @stop

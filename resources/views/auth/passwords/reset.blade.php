@@ -1,11 +1,41 @@
 @extends('site.master')
 
 @section('content')
+
+
+
+<div class="swiper-container ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="/vendor/site/images/about-bg.jpg" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h4> Alterar Senha</h4>
+                                    
+                                </header><!-- .entry-header -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+    </div><!-- .hero-slider -->
+
+
+
+
+
+
+    <div class="featured-cause">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+            <div class="cause-wrap  flex-wrap justify-content-between">
+       
+               
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
@@ -28,10 +58,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" >{{ __('Senha') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right" >{{ __('Nova Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Digite sua senha">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Digite sua nova senha">
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -42,17 +72,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" >{{ __('Repita a Senha') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" >{{ __('Repita a nova Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Repita sua senha">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Repita sua nova senha">
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn gradient-bg">
-                                    {{ __('Reset Password') }}
+                                    {{ __('Alterar Senha') }}
                                 </button>
                             </div>
                         </div>
@@ -61,5 +91,7 @@
             </div>
         </div>
     </div>
+  
 </div>
+</br>
 @endsection
