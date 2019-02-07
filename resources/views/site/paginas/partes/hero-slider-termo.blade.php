@@ -8,7 +8,7 @@
                         <div class="row h-100">
                             <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
                                 <header class="entry-header">
-                                    <h4>Termo de Uso</h4>
+                                    <h4>Termos de Uso </h4>
                                     
                                 </header><!-- .entry-header -->
                             </div><!-- .col -->

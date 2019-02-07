@@ -310,12 +310,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> REDE 
     {{--<script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>--}}
     {{--<script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<<<<<<< HEAD
 <a href="https://wa.me/558330341663" Style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
-=======
-
-    <a href="https://wa.me/558330341663" Style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
->>>>>>> master
   z-index:1000;" target="_blank">
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
