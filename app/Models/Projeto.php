@@ -17,6 +17,11 @@ class Projeto extends Model
         'num_registro1',
         'num_registro2',
         'segmento_cultural',
+        'objetivo_geral',
+        'objetivos_esp',
+        'justificativa',
+        'publico_alvo',
+        'impactos_esperados',
         'artigo',
         'valor_meta'
     ];

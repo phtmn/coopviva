@@ -13,23 +13,21 @@
 
             <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dados Gerais</a>
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><b class="text-dark" > Dados Gerais </b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true">Resumo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Responsável</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Financeiro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="false">ODS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-upload-tab" data-toggle="pill" href="#pills-upload" role="tab" aria-controls="pills-upload" aria-selected="false">Upload</a>
-                </li>
+                {{--<li class="nav-item"> --}}
+                    {{--<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><b class="text-dark" > Dados Financeiros </b></a> --}}
+                        {{--</li> --}}
+         
+                {{--<li class="nav-item"> --}}
+                    {{--<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><b class="text-dark" >Responsável </b></a> --}}
+                        {{--</li> --}}
+
+                    <li class="nav-item">
+                    <a class="nav-link " id="pills-resumo-tab" data-toggle="pill" href="#pills-resumo" role="tab" aria-controls="pills-resumo" aria-selected="true"><b class="text-dark" >Descrição </b></a>
+                </li> 
+                
+         
             </ul>
             <br>
                 {{ Form::open(['route'=>'projetos.store']) }}
@@ -40,43 +38,54 @@
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
-                            {!! Form::text('descricao',null,["class"=>"form-control"]) !!}
+                            {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
                         </div>
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-2 pull-right">
+                                    {!! Form::label('Valor (R$)') !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
+                                </div>
+
+                        <div class="form-group col-md-2">
+                            {!! Form::label('Nº de Registro 1') !!}
+                            {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            {!! Form::label('Nº de Registro 2') !!}
+                            {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
+                        </div>
+
+                      
+
+                        
+                    </div><!--endOfRow1-->
+
+                    <div class="row"><!--row-2-->
+                    <div class="form-group col-md-3">
                             {!! Form::label('Instância') !!}
-                            {!! Form::text('instancia',null,['placeholder'=>'Selecione uma opção','class'=>'form-control']) !!}
+                            {!! Form::text('instancia',null,['class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Âmbito') !!}
                             {!! Form::select('ambito',[
-                                            'federal'   =>  "Federal",
-                                            'estadual'  => "Estadual",
-                                            'municipal' => "Municipal"
+                                            'Federal'   =>  "Federal",
+                                            'Estadual'  => "Estadual",
+                                            'Municipal' => "Municipal"
                                             ],null,
                             ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
-                    </div><!--endOfRow1-->
-
-                    <div class="row"><!--row-2-->
-                        <div class="form-group col-md-3">
-                            {!! Form::label('Número de Registro 1') !!}
-                            {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
-                        </div>
 
                         <div class="form-group col-md-3">
-                            {!! Form::label('Número de Registro 2') !!}
-                            {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
-                        </div>
-
-                        <div class="form-group col-md-3">
-                            {!! Form::label('Segmento Cultural') !!}
+                            {!! Form::label('Segmento ') !!}
                             {!! Form::select('segmento_cultural',[
-                                            'esportes'  => "Esportes",
-                                            'cultura'   => "Cultura",
-                                            'educação'  => "Educação",
-                                            'saude'     => "Saúde"
+                                            'Educação'  => "Educação (Crianças/Jovens)",
+                                            'Meio'  => "Meio Ambiente",
+                                            'Idosos'   => "Idosos",
+                                            'Saúde'     => "Saúde",
+                                            'Esportes'  => "Esportes",
+                                            'Cultura'  => "Cultura"
                                             ],null,
                             ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
@@ -86,15 +95,20 @@
                             {!! Form::text('artigo',null,['class'=>'form-control']) !!}
                         </div>
                     </div>
+
+
+                 
                 {{--FimDadosGerais--}}
 
-                </div>
+              
 
-                <div class="tab-pane fade" id="pills-resumo" role="tabpanel" aria-labelledby="pills-resumo-tab">                                    
-                                                teste
-                </div>
+                     
 
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <br>
+        <h4>Responsável </h4>
+            <hr>  
+
+             
                     {{--DadosResponsavel--}}
                         <div class="row"><!--row-4-->
                             <div class="form-group col-md-6">
@@ -104,42 +118,57 @@
 
                             <div class="form-group col-md-3">
                             {!! Form::label('CPF') !!}
-                            {!! Form::text('cpf',null,['class'=>'form-control']) !!}
+                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
                                 {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',null,['class'=>'form-control','placeholder'=>'CPF ou CNPJ']) !!}
+                                {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 
                         <div class="row"><!--row-5-->
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-2">
                             {!! Form::label('Telefone 1') !!}
                             {!! Form::text('telefone_1',null,['class'=>'form-control','id'=>'phone_number']) !!}
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-2">
                             {!! Form::label('Telefone 2') !!}
-                            {!! Form::text('telefone_2',null,['class'=>'form-control','id'=>'phone_number']) !!}
+                            {!! Form::text('telefone_2',null,['class'=>'form-control','id'=>'phone_number2']) !!}
                             </div>
-                        </div><!--end-of-row-5-->
 
-                        <div class="row"><!--row-6-->
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                             {!! Form::label('E-mail Principal') !!}
                             {!! Form::email('email_1',null,['class'=>'form-control']) !!}
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                             {!! Form::label('E-mail Secundário') !!}
                             {!! Form::email('email_2',null,['class'=>'form-control']) !!}
-                            </div>
-                        </div><!--end-of-row-6-->
+                            </div>                    
+
+
+                        </div><!--end-of-row-5-->
+
+                        
                     {{--fimDadosResponsavel--}}
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                        <h5>Conta para receber Doações</h5>
-                            <div class="row"><!--row-3-->
+              
+              
+                    <br>
+        <h4>Dados Financeiros </h4>
+            <hr>  
+
+              
+              
+                        
+                    
+                            <div class="row">
+                            
+                            <div class="form-group col-md-4">
+                 <br><h5 class="text-right">Conta para receber Doações</h5>
+                      </div>
+
+                            <!--row-3-->
                                 <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
                                 {!! Form::select('banco_doacao',[
@@ -150,23 +179,27 @@
                                 ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                                 </div>
 
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                 {!! Form::label('Agência') !!}
                                 {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
                                 </div>
 
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                 {!! Form::label('Conta') !!}
                                 {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-1">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDV_doacao',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDv_doacao',null,['class'=>'form-control']) !!}
                                 </div>
                             </div><!--end-of-row-3-->
 
-                            <h5>Conta para receber Patrocínios</h5>
+                            
                     <div class="row"><!--row-3-->
+
+                    <div class="form-group col-md-4">
+                 <br><h5  class="text-right">Conta para receber Patrocínios</h5>
+                      </div>
                         <div class="form-group col-md-3">
                             {!! Form::label('Banco') !!}
                             {!! Form::select('banco_patrocinio',[                       
@@ -174,33 +207,54 @@
                             ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-2">
                             {!! Form::label('Agência') !!}
                             {!! Form::text('agencia_patrocinio',null,['class'=>'form-control']) !!}
                         </div>
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-2">
                             {!! Form::label('Conta') !!}
                             {!! Form::text('conta_patrocinio',null,['class'=>'form-control']) !!}
                         </div>
-                        <div class="form-group col-md-3">
-                            {!! Form::label('Dv') !!}
+                        <div class="form-group col-md-1">
+                            {!! Form::label('DV') !!}
                             {!! Form::text('contaDv_patrocinio',null,['class'=>'form-control']) !!}
                         </div>
                     </div><!--end-of-row-3-->
 
-                            <div class="row">
-                                <div class="form-group col-md-6 pull-right">
-                                    {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control']) !!}
-                                </div>
-                            </div>
+                           
 
                         {{--FimDadosFinaneiros--}}
                 </div>
 
-                <div class="tab-pane fade" id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                                    
-                                               ods
+                <div class="tab-pane fade" id="pills-resumo" role="tabpanel" aria-labelledby="pills-resumo-tab">                                    
+                                             
+                <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="">Objetivo Geral</label>
+                    {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Objetivos Específicos</label>
+                    {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Justificativa</label>
+                    {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Público Alvo</label>
+                    {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="">Impactos Esperados</label>
+                    {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                </div>
+                
+
+            </div>
+                                             
+                                             
                 </div>
 
                 <div class="tab-pane fade" id="pills-upload" role="tabpanel" aria-labelledby="pills-upload-tab">                                    
@@ -223,6 +277,9 @@
             $("#project_value").mask('#.##0,00', {reverse: true});
             $("#phone_number").mask('(00)00000-0000');
             $("#phone_number2").mask('(00)00000-0000');
+            $("#cpf").mask('000.000.000-00');
+            $("#cnpj").mask('00.000.000/0000-00');
+             
         });
 
     </script>

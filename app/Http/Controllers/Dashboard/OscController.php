@@ -83,7 +83,7 @@ class OscController extends Controller
                 $osc->missao_osc            = $request->missao_osc;
                 $osc->visao_osc             = $request->visao_osc;
                 $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
-                $osc->link_estatuto_osc     = $request->link_estatuso_osc;
+                $osc->link_estatuto_osc     = $request->link_estatuto_osc;
                 $osc->banco_doacao_id       = $bancoDoacao->id;
                 $osc->user_id               = $request->user()->id;
                 $osc->endereco_id           = $endereco->id;

@@ -3,9 +3,31 @@
 
     @include('dashboard.menu')
 
-<div class="container">
-<br>
-      <h4 class="text-center">Qual é o seu ODS?</h4>
+        <div class="container">
+            <br>
+                <div class="row row justify-content-center">
+            
+                    <div class="col-md-12">     
+                        
+                        <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="true"><b class="text-dark" >Adicionar</b></a>
+                            </li>
+                            
+                           {{--  <li class="nav-item"> --}}
+                           {{--    <a class="nav-link" id="pills-remove-tab" data-toggle="pill" href="#pills-remove" role="tab" aria-controls="pills-remove" aria-selected="false"><b class="text-dark" >Remover</b></a> --}}
+                           {{-- </li> --}}
+                        </ul>    
+                        
+
+                        <br>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-add" role="tabpanel" aria-labelledby="pills-add-tab">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                     
+                                <h4 class="text-center">Qual é o seu ODS?</h4>
 
 <center>
       <a href="{{route('metas',1)}}" style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods1.png')}}"></a>
@@ -45,8 +67,6 @@
                 @endforelse
 
 
-                
-
                 <center>
                                     <div class="form-group col-md-8">
                                        <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
@@ -62,8 +82,42 @@
            <center> {!! Form::submit('Salvar',['class'=>'btn gradient-bg']) !!} </center>
             {!! Form::close() !!}
         @endif
-<br>
-</div>
+                                        
+                                        
+                                </div> 
+                            </div> 
+                        </div> 
+
+
+                        <div class="tab-pane fade " id="pills-remove" role="tabpanel" aria-labelledby="pills-remove-tab">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                     <label for="">Os 17 Objetivos de Desenvolvimento Sustentável - Qual é o seu ODS?</label>
+                                    
+                                    
+                                        
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>
+  
+          
+             </div>
+        </div>
+
+            
+                    </div>
+                </div>
+            </div>
+        
+    
+
+
+
+        
+
+
+
 @endsection
 
 

@@ -53,25 +53,32 @@
                                             <tr>
                                                <!-- <th colspan="2">Investidor</th> -->
                                                <th>Nome do Projeto</th>
-                                               <th>Instância</th>
                                                <th>Valor (R$)</th>                                              
-                                               <th># </th>                                               
+                                               <th> </th>      
+                                               <th> </th>                                            
                                             </tr>
                                         </thead>
                                         <tbody>
                     @forelse($data as $d)
                     <tr>
                         <td>{{$d->descricao}}</td>
-                        <td>{{$d->instancia}}</td>
-                        <td>{{$d->valor_meta}}</td>
+
+                        <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
                         <td class="text-center ">
-                                <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil"></i></a>
-                                <a href="{{route('projeto.galeria',$d->id)}}">Galeria</a>
+                                <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i></a>
+                              
+                                
+
+                        </td>
+                        <td class="text-center ">
+                             <!--   <a href=""><i class="fa fa-trash" style="color:red"></i></a> -->
+                              
+                                
 
                         </td>
                     </tr>
                     @empty
-                        <p>Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                        <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
                     @endforelse
                 </tbody>
                                     </table>

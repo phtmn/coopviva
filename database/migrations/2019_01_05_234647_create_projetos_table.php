@@ -23,8 +23,12 @@ class CreateProjetosTable extends Migration
             $table->string('num_registro2')->nullable();
             $table->string('segmento_cultural')->nullable();
             $table->string('artigo')->nullable();
+            $table->longText('objetivo_geral')->nullable();
+            $table->longText('objetivos_esp')->nullable();
+            $table->longText('justificativa')->nullable();
+            $table->longText('publico_alvo')->nullable();
+            $table->longText('impactos_esperados')->nullable();
             $table->decimal('valor_meta',24,2)->default(0);
-
             $table->unsignedInteger('osc_id');
             $table->unsignedInteger('proponente_id');
             $table->unsignedInteger('banco_patrocinio_id');
