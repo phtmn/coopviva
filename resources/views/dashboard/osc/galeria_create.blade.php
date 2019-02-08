@@ -19,7 +19,7 @@
                 {!! Form::file('img',null,['class'=>'form-control']) !!}
             </div>
 
-
+                  
 
 
 

@@ -10,24 +10,26 @@
   
 
         <div class="form-group" style="margin-top: 25px">
-            <a href="{{ route('galeria.create') }}" class="btn btn-primary">Incluir foto</a>
+            <a href="{{ route('galeria.create') }}" class="btn gradient-bg">Incluir foto</a>
         </div>
+        <div class="container ">
         <h2>Galerias de Imagens</h2>
-        <div class="portfolio-wrap">
+        <div class="portfolio-wrap ">
             <div class="container">
-                <div class="row portfolio-container">
+                <div class="row  ">
                     @forelse($galerias as $g)
-                    <div class="col-12 col-md-6 col-lg-4 portfolio-item">
-                        <div class="portfolio-cont">
-                            <a href="#"><img src="{{asset($g->url)}}" alt=""></a>
+                    <div class="col-xs-12 ">
+                        <div class="portfolio-cont text-center">
+                            <a href="#"><img src="{{asset($g->url)}}" alt="" class="img-responsive border" style="width:200px; height:200px; margin-left:4px"></a>
                             <h3 class="entry-title"><a href="#">{{$g->descricao}}</a></h3>
                         </div>
                     </div>
                     @empty
-                    @endforelse
+                    @endforelse 
                 </div>
             </div>
         </div>
+        </div><!--jumbotrin-->
     </div>
 
 
