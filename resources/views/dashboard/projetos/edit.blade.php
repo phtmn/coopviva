@@ -61,7 +61,12 @@
 
                         <div class="form-group col-md-3">
                             {!! Form::label('Instância') !!}
-                            {!! Form::text('instancia',null,['class'=>'form-control']) !!}
+                            {!! Form::select('instancia',[
+                                            'Rouanet'   =>  "Lei Rouanet",
+                                            'Esporte'  => "Lei Incentivo ao Esporte",
+                                            'Criaca_Adolescente' => "Lei Incentivo a Criança e Adolescente"
+                                            ],null,
+                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
@@ -114,7 +119,16 @@
                             {!! Form::text('nome',$proponente->nome,['class'=>'form-control']) !!}
                             </div>
 
-                            <div class="form-group col-md-3">
+                         {{--   <div class="form-group col-md-3"> --}}
+                         {{--     {!! Form::label('Documento') !!} --}}
+                         {{--     {!! Form::select('documento',[ --}}
+                         {{--                   'CPF'  => "CPF", --}}
+                         {{--                   'CNPJ'  => "CNPJ"        --}}                                  
+                         {{--                   ],null, --}}
+                         {{--  ['class'=>'form-control','id'=>'tipo']) !!} --}}
+                         {{--   </div> --}}
+
+                            <div class="form-group col-md-3 ">
                             {!! Form::label('CPF') !!}
                             {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control','id'=>'cpf']) !!}
                             </div>
@@ -272,3 +286,6 @@
     </script>
 
 @stop
+
+
+

@@ -47,7 +47,7 @@ class GaleriaController extends Controller
             $galeria->osc_id        = $osc;
             $galeria->descricao     = $request->legenda;
             $galeria->url           = $file_path;
-            $galeria->tipo          = $request->tipo;
+           // $galeria->tipo          = $request->tipo;
             $galeria->ativo         = 1;
             $galeria->save();
         }

@@ -23,13 +23,13 @@
 
 
 
-            <div class="form-group col-md-6">
-                <label for="email">Escolha um Album</label>
-                {!! Form::select('tipo',[
-                    'osc'   => 'Album da Osc',
-                    'projetos'  => 'Album de Projetos'
-                ],null,['class'=>'form-control']) !!}
-            </div>
+             <div class="form-group col-md-6"> 
+              <label for="email">Escolha um Album</label> 
+               {!! Form::select('tipo',[  
+                 'osc'   => 'Album da Osc', 
+                  'projetos'  => 'Album de Projetos' 
+              ],null,['class'=>'form-control']) !!} 
+           </div> 
 
 
 

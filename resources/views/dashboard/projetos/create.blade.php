@@ -64,7 +64,12 @@
                     <div class="row"><!--row-2-->
                     <div class="form-group col-md-3">
                             {!! Form::label('Instância') !!}
-                            {!! Form::text('instancia',null,['class'=>'form-control']) !!}
+                            {!! Form::select('instancia',[
+                                            'Rouanet'   =>  "Lei Rouanet",
+                                            'Esporte'  => "Lei Incentivo ao Esporte",
+                                            'Criaca_Adolescente' => "Lei Incentivo a Criança e Adolescente"
+                                            ],null,
+                            ['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                         </div>
 
                         <div class="form-group col-md-3">
