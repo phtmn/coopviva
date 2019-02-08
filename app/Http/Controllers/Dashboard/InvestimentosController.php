@@ -40,23 +40,24 @@ class InvestimentosController extends Controller
 
     public function callback(Request $request){
 
-        //dd($request->all());
-        $investimento = Investimento::find($request->external_reference);
-        $novoStatus = null;
+        $investimento = Investimento::find($request->external_reference);       
 
         switch ($request->collection_status){
-            case 'pending' : $novoStatus = 'Aguardando Pagamento'; break;
-            case 'success' : $novoStatus = 'Investimento Realizado'; break;
-            case 'failure' : $novoStatus = 'Investimento não Realizado'; break;            
+            case 'pending' : 
+                    $novoStatus = 'Aguardando Pagamento';
+                    $investimento->status           = $novoStatus;
+                    $investimento->formaPagamento   = $request->payment_type;
+                    $investimento->save();
+                    break;
+            case 'success' :                     
+                    $investimento->status           = 'Investimento Realizado';
+                    $investimento->mp_codigo        = $request->merchant_order_id;
+                    $investimento->mp_pagamento     = $request->preference_id;
+                    $investimento->mp_status        = $request->collection_status;
+                    $investimento->formaPagamento   = $request->payment_type;
+                    $investimento->save();
+                    break;            
         }
-        
-        $investimento->mp_codigo        = $request->merchant_order_id;
-        $investimento->mp_pagamento     = $request->preference_id;
-        $investimento->mp_status        = $request->collection_status;
-        $investimento->status           = $novoStatus;
-        $investimento->formaPagamento   = $request->payment_type;
-        $investimento->save();
-
         Alert::success('Atualizamos seu Investimento','Genial')->persistent('OK');
         return redirect()->route('investimentos.index');
     }
