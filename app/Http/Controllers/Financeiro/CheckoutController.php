@@ -26,9 +26,8 @@ class CheckoutController extends Controller
 
     public function pagar(Request $request){
 
-        //dd($request->all());
         $osc = DB::table('oscs')->where('id',$request->osc_id)->first();
-        //dd($osc);
+        
         $investimento = new Investimento();
         $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
         $investimento->valor_investimento   = toMoney($request->valor);
@@ -39,20 +38,18 @@ class CheckoutController extends Controller
         $investimento->status               = 'Aguardando Pagamento';
         $investimento->save();
 
-
         $pagamento = $this->gerarPagamento($investimento);
-        //dd($pagamento);
+
+        $investimento = Investimento::find($investimento->id);
+        $investimento->url = $pagamento->init_point;
+        $investimento->save();
+
         return redirect()->to($pagamento->init_point);
         //return redirect()->to($pagamento->sandbox_init_point);
-        //Alert::success('para concluir o processo de investimento voce deve clicar no botao','Obrigado')->persistent('OK');
-        //return view('dashboard.incentivos.pagar',[
-        //'url' => $pagamento->init_point,
-        //'tab' => 'investir'
-        //]);
+        
     }
 
-    public function gerarPagamento($investimento){
-        //dd($investimento->usuario()->email);
+    public function gerarPagamento($investimento){       
 
         MP::setClientSecret('KDHCM0emBn1CfV64ShWWdcugTYd3nCIZ');
         MP::setClientId('5442329168530937');
@@ -84,6 +81,11 @@ class CheckoutController extends Controller
         );
 
         $preference->auto_return        = "approved";
+        $preference->payment_methods = array(
+            "excluded_payment_types" => array(
+              array("id" => "ticket")
+            ),            
+          );
         $preference->external_reference = $investimento->id;
 
         # Save and posting preference

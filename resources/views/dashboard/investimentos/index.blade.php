@@ -22,9 +22,8 @@
                                     <th>Data</th>
                                     <th>Tipo</th>
                                     <th>Valor (R$)</th>
-                                    <th>Status</th>                              
-                                <!--     <th>Projeto</th> -->
-                                    <!--    <th>Recibo </th> -->
+                                    <th>Status</th>
+                                    <th></th>                                                                                                  
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -33,12 +32,13 @@
                                         <td>{{date('d/m/Y',strtotime($d->created_at))}}</td>
                                         <td>Doação</td>
                                         <td>R$ {{ number_format($d->valor_investimento,2,',','.') }} </td>
-                                        <td>{{$d->status}}</td>
+                                        <td>{{$d->status}}</td>                                        
                                         <td>
                                             @if($d->status == 'Aguardando Pagamento')
-                                            <a href="{{route('investimento.cancelar',$d->id)}}"><i class="fa fa-trash"></i> Cancelar</a>
-                                            @else
-                                            <a href=""><i class="fa fa-print"></i> Recibo</a>
+                                                <a href="{{ $d->url }}" target="_blank">Novo Pagamento</a>                                        
+                                                <a href="{{route('investimento.cancelar',$d->id)}}"><i class="fa fa-trash"></i></a>                                                 
+                                            @elseif($d->status == 'Investimento Realizado')
+                                                <a href=""><i class="fa fa-print"></i> Recibo</a>
                                             @endif
                                         </td>
                                     </tr>                                   
