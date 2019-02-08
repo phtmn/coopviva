@@ -126,8 +126,12 @@
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
 
                                 @forelse($galerias as $galeria)
-                                    <a style="cursor: pointer"><img src="{{asset($galeria->url)}}"></a>
+                                
+    
+                                    <a style="cursor: pointer"><img src="{{asset($galeria->url)}}" class="img-responsive border " style="width:162px; height:162px; margin-left:4px"></a>
+                                
                                 @empty
+                                
                                 <p style="color:red">Nenhuma galeria cadastrada </p>
                                 @endforelse
 
@@ -157,7 +161,7 @@
                             <div class="card-body">
                                 <div class="circular-progress-bar">
                                     @if($osc->logo != null)
-                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:200px; height: 200px ">
+                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="img rounded-circle" style="width:200px; height: 200px ">
                                      @else
                                          <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:200px; height: 200px ">
                                     @endif

@@ -190,9 +190,9 @@
 
                       <div class="form-group col-md-2">
                       @if($osc->logo != null)
-                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" style="width:100px; height: 100px " >
+                                        <img  src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="img rounded-circle" style="width:100px; height: 100px " >
                                      @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px; height: 100px ">
+                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" class="img rounded-circle" style="width:100px; height: 100px ">
                                     @endif
                       </div>
                       <div class="form-group col-md-1">
