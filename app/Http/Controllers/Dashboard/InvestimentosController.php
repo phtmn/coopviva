@@ -40,15 +40,17 @@ class InvestimentosController extends Controller
 
     public function callback(Request $request){
 
-        $investimento = Investimento::find($request->external_reference);       
+        
 
         switch ($request->collection_status){
             case 'pending' :                     
+                    $investimento = Investimento::find($request->external_reference);       
                     $investimento->status           = 'Aguardando Pagamento';
                     $investimento->formaPagamento   = $request->payment_type;
                     $investimento->save();
                     break;
             case 'success' :                     
+                    $investimento = Investimento::find($request->external_reference);       
                     $investimento->status           = 'Investimento Realizado';
                     $investimento->mp_codigo        = $request->merchant_order_id;
                     $investimento->mp_pagamento     = $request->preference_id;
