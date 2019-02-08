@@ -43,9 +43,8 @@ class InvestimentosController extends Controller
         $investimento = Investimento::find($request->external_reference);       
 
         switch ($request->collection_status){
-            case 'pending' : 
-                    $novoStatus = 'Aguardando Pagamento';
-                    $investimento->status           = $novoStatus;
+            case 'pending' :                     
+                    $investimento->status           = 'Aguardando Pagamento';
                     $investimento->formaPagamento   = $request->payment_type;
                     $investimento->save();
                     break;
