@@ -25,7 +25,7 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
     Route::resource('investimentos','Dashboard\InvestimentosController');
     Route::resource('galeria','Dashboard\GaleriaController');
 
-    Route::view('/objetivos-ods','dashboard.osc.odsform',['tab'=>'ods'])->name('osc.objetivos');
+    Route::get('/objetivos-ods','Dashboard\MetasController@metas')->name('osc.objetivos');
 
     Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
     Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');
@@ -33,6 +33,7 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
 
     Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
+    Route::get('projeto/i/{id}','Dashboard\ProjetosController@mudarInativo')->name('projeto.inativo');
 
     Route::get('/investir/{id}','Financeiro\CheckoutController@formIncentivar')->name('investir');
     Route::post('/pagar','Financeiro\CheckoutController@pagar')->name('pagar');
@@ -41,6 +42,7 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
 
     Route::get('/quero_investir','Dashboard\InvestimentosController@oscs')->name('listar.oscs');
     Route::get('/detalhes/{id}','Dashboard\InvestimentosController@detalhe')->name('detalhe.osc');
+    Route::get('/investimento/d/{id}','Dashboard\InvestimentosController@cancelar')->name('investimento.cancelar');
     Route::get('/investimento/{status}','Dashboard\InvestimentosController@callback');
 
 });

@@ -33,14 +33,19 @@ class OscController extends Controller
     }
 
     public function store(Request $request){
+            //dd($request->all());
+        $file_path = null;
+        if($request->logo){
+            $file       = $request->file('logo');
+            $name       = $file->getClientOriginalName();
+            $path       = public_path('uploads/osc');
+            $file_path  = 'uploads/osc/'.$name;
+            $file->move($path,$name);
+        };
 
-        if($request->file('logo')){
-            dd('upload');
-        }
 
 
-
-        $result = DB::transaction(function() use ($request) {
+        $result = DB::transaction(function() use ($request,$file_path) {
                 //dd($request->all());
             try {
                 $bancoDoacao = new banco();
@@ -84,6 +89,7 @@ class OscController extends Controller
                 $osc->visao_osc             = $request->visao_osc;
                 $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
                 $osc->link_estatuto_osc     = $request->link_estatuto_osc;
+                $osc->logo                  = $file_path ? $file_path : $osc->logo;
                 $osc->banco_doacao_id       = $bancoDoacao->id;
                 $osc->user_id               = $request->user()->id;
                 $osc->endereco_id           = $endereco->id;

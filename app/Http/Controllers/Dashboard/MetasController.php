@@ -12,15 +12,18 @@ use Alert;
 use Auth;
 class MetasController extends Controller
 {
-    public function metas($ods){
-        $osc = auth()->user()->osc();
+    public function metas($ods = null){
+        $osc = auth()->user()->osc();        
         if(!$osc){
             Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
             return redirect()->route('osc.create');
         }
-        $metas = Meta::where('objetivo_id',$ods)->get();
+        $metas      = Meta::where('objetivo_id',$ods)->get();
+        $metas_osc  = Osc_Metas::where('osc_id',$osc->id)->get();
+        //dd($metas_osc);
         return view('dashboard.osc.odsform',[
-            'metas' => $metas,
+            'metas'         => $metas,
+            'metas_osc'     => $metas_osc, 
             'tab'   => 'ods'
         ]);
     }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Alert;
 use Illuminate\Support\Facades\DB;
+use App\Models\Osc;
 
 class InvestimentosController extends Controller
 {
@@ -30,7 +31,7 @@ class InvestimentosController extends Controller
     public function detalhe($id){
 
         return view('dashboard.investimentos.detalhe_osc',[
-            'osc'       => DB::table('oscs')->where('id',$id)->first(),
+            'osc'       => Osc::find($id),
             'metas'     => DB::table('osc_metas')->where('osc_id',$id)->get(),
             'galerias'   => DB::table('galerias')->where('osc_id',$id)->get(),
             'tab'       => 'investir'
@@ -41,15 +42,30 @@ class InvestimentosController extends Controller
 
         //dd($request->all());
         $investimento = Investimento::find($request->external_reference);
+        $novoStatus = null;
 
+        switch ($request->collection_status){
+            case 'pending' : $novoStatus = 'Aguardando Pagamento'; break;
+            case 'success' : $novoStatus = 'Investimento Realizado'; break;
+            case 'failure' : $novoStatus = 'Investimento não Realizado'; break;            
+        }
+        
         $investimento->mp_codigo        = $request->merchant_order_id;
         $investimento->mp_pagamento     = $request->preference_id;
-        $investimento->status           = $request->collection_status;
+        $investimento->mp_status        = $request->collection_status;
+        $investimento->status           = $novoStatus;
         $investimento->formaPagamento   = $request->payment_type;
         $investimento->save();
 
-        Alert::success('Atualizamos seu Pedido','Genial')->persistent('OK');
+        Alert::success('Atualizamos seu Investimento','Genial')->persistent('OK');
         return redirect()->route('investimentos.index');
+    }
 
+    public function cancelar($id){
+        $investimento = Investimento::find($id)->update(['status' => 'Cancelado']);
+        Investimento::find($id)->delete();
+
+        Alert::warning('Você Cancelou esse investimento','Tenso!')->persistent('Ok');
+        return redirect()->back();
     }
 }

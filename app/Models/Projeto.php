@@ -5,9 +5,11 @@ namespace App\Models;
 use App\Scopes\Osc\OscScope;
 use App\Scopes\User\UserScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Projeto extends Model
 {
+    use SoftDeletes;
     protected $fillable = [
         'user_id',
         'descricao',

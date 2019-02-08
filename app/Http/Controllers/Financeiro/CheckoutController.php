@@ -42,8 +42,8 @@ class CheckoutController extends Controller
 
         $pagamento = $this->gerarPagamento($investimento);
         //dd($pagamento);
-        //return redirect()->to($pagamento->init_point);
-        return redirect()->to($pagamento->sandbox_init_point);
+        return redirect()->to($pagamento->init_point);
+        //return redirect()->to($pagamento->sandbox_init_point);
         //Alert::success('para concluir o processo de investimento voce deve clicar no botao','Obrigado')->persistent('OK');
         //return view('dashboard.incentivos.pagar',[
         //'url' => $pagamento->init_point,
@@ -54,8 +54,8 @@ class CheckoutController extends Controller
     public function gerarPagamento($investimento){
         //dd($investimento->usuario()->email);
 
-        MP::setClientSecret(env('MP_CLIENT_SECRET'));
-        MP::setClientId(env('MP_CLIENT_ID'));
+        MP::setClientSecret('KDHCM0emBn1CfV64ShWWdcugTYd3nCIZ');
+        MP::setClientId('5442329168530937');
 
         $preference = new \MercadoPago\Preference();
 

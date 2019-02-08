@@ -14,9 +14,9 @@
                                 <a class="nav-link active" id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="true"><b class="text-dark" >Adicionar</b></a>
                             </li>
                             
-                           {{--  <li class="nav-item"> --}}
-                           {{--    <a class="nav-link" id="pills-remove-tab" data-toggle="pill" href="#pills-remove" role="tab" aria-controls="pills-remove" aria-selected="false"><b class="text-dark" >Remover</b></a> --}}
-                           {{-- </li> --}}
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-remove-tab" data-toggle="pill" href="#pills-remove" role="tab" aria-controls="pills-remove" aria-selected="false"><b class="text-dark" >Remover</b></a>
+                           </li> 
                         </ul>    
                         
 
@@ -93,9 +93,19 @@
                             <div class="row">
                                 <div class="form-group col-md-12">
                                      <label for="">Os 17 Objetivos de Desenvolvimento Sustentável - Qual é o seu ODS?</label>
+                                    @forelse($metas_osc->unique('objetivo_id') as $obj)
+                                        <br>  <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                        @empty
+                                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
+                                    @endforelse
                                     
-                                    
-                                        
+                                    @forelse($metas_osc as $meta)
+                                            <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
+                                            <a href="{{route('meta.remover',$meta->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover</a>
+                                            <hr>
+                                        @empty
+                                            <h4>Você precisa escolher suas metas da agenda 2030 na aba OSC / ODS</h4>
+                                    @endforelse
                                 </div> 
                             </div> 
                         </div> 

@@ -22,8 +22,7 @@
                                     <th>Data</th>
                                     <th>Tipo</th>
                                     <th>Valor (R$)</th>
-                                {{--@can('osc')    <th> Investidor </th> @endcan--}}
-                                {{--@cannot('osc')                <th>OSC </th>   @endcannot--}}
+                                    <th>Status</th>                              
                                 <!--     <th>Projeto</th> -->
                                     <!--    <th>Recibo </th> -->
                                 </tr>
@@ -34,10 +33,16 @@
                                         <td>{{date('d/m/Y',strtotime($d->created_at))}}</td>
                                         <td>Doação</td>
                                         <td>R$ {{ number_format($d->valor_investimento,2,',','.') }} </td>
-                                    </tr>
-                                    {{--@can('osc')             <td> </td> @endcan--}}
-                                    {{--@cannot('osc')  <th>{{$d->nome_fantasia}} </th>   @endcannot          --}}
-                                    <!--    <td> <a href=""><i class="fas fa-file-alt" data-position="top"></i></a></td> -->
+                                        <td>{{$d->status}}</td>
+                                        <td>
+                                            @if($d->status == 'Aguardando Pagamento')
+                                            <a href="{{route('investimento.cancelar',$d->id)}}"><i class="fa fa-trash"></i> Cancelar</a>
+                                            @else
+                                            <a href=""><i class="fa fa-print"></i> Recibo</a>
+                                            @endif
+                                        </td>
+                                    </tr>                                   
+                                    
                                 @empty
                                     <p style="color:red">Não há registros</p>
                                 @endforelse

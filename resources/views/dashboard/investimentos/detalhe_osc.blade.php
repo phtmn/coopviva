@@ -70,7 +70,7 @@
                                     
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> {{$osc->endereco_id}} <strong>Estado:</strong></p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> {{ $osc->endereco()->cidade}} <strong>Estado:</strong> {{ $osc->endereco()->uf}}</p>
                                     
                                     <hr>
                                     

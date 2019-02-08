@@ -49,7 +49,7 @@ class ProjetosController extends Controller
             'proponente'        => $projeto->proponente(),
             'bancoPatrocinio'   => $projeto->bancoPatrocinio(),
             'bancoDoacao'       => $projeto->bancoDoacao(),
-            'tab'       => 'projeto'
+            'tab'               => 'projeto'
         ]);
     }
 
@@ -179,6 +179,13 @@ class ProjetosController extends Controller
         $imageName = time().$image->getClientOriginalName();
         $image->move(public_path('images'),$imageName);
         return response()->json(['success'=>$imageName]);
+    }
+
+    public function mudarInativo($id){
+
+        $projeto = Projeto::find($id)->delete();
+        Alert::warning('Você Acabou de deletar esse projeto','Que pena')->persistent('OK');
+        return redirect()->back();
     }
     
 }

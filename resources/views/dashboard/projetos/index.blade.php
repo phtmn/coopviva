@@ -36,17 +36,7 @@
                     <div class="col-lg-12">
                         <div class="">
                              <div class="card-body">
-                             <!--  <div class="d-flex no-block">
-                                   <h4 class="card-title">Doação - Patrocínio</h4> 
-                                  <div class="ml-auto">
-                                        <select class="custom-select">
-                                            <option selected="">January</option>
-                                            <option value="1">February</option>
-                                            <option value="2">March</option>
-                                            <option value="3">April</option>
-                                        </select>
-                                    </div> 
-                                </div>  -->
+                            
                                 <div class="table-responsive m-t-20">
                                     <table class="table stylish-table">
                                         <thead>
@@ -59,28 +49,19 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                    @forelse($data as $d)
-                    <tr>
-                        <td>{{$d->descricao}}</td>
-
-                        <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
-                        <td class="text-center ">
-                                <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i></a>
-                              
-                                
-
-                        </td>
-                        <td class="text-center ">
-                             <!--   <a href=""><i class="fa fa-trash" style="color:red"></i></a> -->
-                              
-                                
-
-                        </td>
-                    </tr>
-                    @empty
-                        <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
-                    @endforelse
-                </tbody>
+                                            @forelse($data as $d)
+                                            <tr>
+                                                <td>{{$d->descricao}}</td>
+                                                <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
+                                                <td class="text-center ">
+                                                        <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i> Editar </a>                                
+                                                        <a href="{{route('projeto.inativo',$d->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover </a>
+                                                </td>                        
+                                            </tr>
+                                            @empty
+                                                <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                                            @endforelse
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
