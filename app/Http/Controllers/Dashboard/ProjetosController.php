@@ -18,7 +18,7 @@ class ProjetosController extends Controller
     }
 
     public function index(){
-        $osc = auth()->user()->osc();
+        $osc = auth()->user()->osc();        
         if(!$osc){
             Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
             return redirect()->route('osc.create');
@@ -26,7 +26,7 @@ class ProjetosController extends Controller
         //dd($osc);
         return view('dashboard.projetos.index',[
             'tab'   => 'lista-projetos',
-            'data'  => Projeto::all()
+            'data'  => $osc->projetos()->get()
         ]);
     }
 
