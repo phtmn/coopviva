@@ -61,4 +61,19 @@ class GaleriaController extends Controller
         }
 
     }
+
+    public function removerGaleria($id){
+
+        $osc_id = Auth::user()->osc()->id;
+        $galeria   = Galeria::findOrFail($id)->where('osc_id',$osc_id);
+        $galeria->delete();
+        if($galeria){
+            Alert::warning('Você removeu esta imagem')->persistent('OK');
+            return redirect()->back();
+        }else{
+            Alert::error('Não foi possível remover essa imagem')->persistent('OK');
+            return redirect()->back();
+        }
+
+    }
 }

@@ -87,6 +87,7 @@ class OscController extends Controller
                 $osc->banco_doacao_id       = $bancoDoacao->id;
                 $osc->user_id               = $request->user()->id;
                 $osc->endereco_id           = $endereco->id;
+                
                 $osc->save();
 
                 Alert::success('Os dados da OSC foram salvos', 'Sucesso')->persistent('Ok');
