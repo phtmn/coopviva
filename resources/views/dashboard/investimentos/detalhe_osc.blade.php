@@ -6,6 +6,9 @@
 
 
 
+    
+
+
     <div class="container" style="margin-top:20px; padding:20px">
 
 
@@ -126,17 +129,27 @@
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
 
                                 @forelse($galerias as $galeria)
-                                
+                                <div class="thumbnail-* wow fadeInLeft ">
+                                    <img src="{{asset($galeria->url)}}" alt="" />
+                                     
+                                  </div>
+
+                                  <div class="large-* wow bounceInLeft ">
+                                       <img src="{{asset($galeria->url)}}" class="img rounded " alt="" />
+                                       <span class="close"><h1>✕</h1></span>
+                                     </div>
     
-                                    <a style="cursor: pointer"><img src="{{asset($galeria->url)}}" class="img-responsive border " style="width:162px; height:162px; margin-left:4px"></a>
+                                    <!--  <a style="cursor: pointer"><img src="{{asset($galeria->url)}}" class="img-responsive border " style="width:162px; height:162px; margin-left:4px"></a>  -->
                                 
                                 @empty
                                 
                                 <p style="color:red">Nenhuma galeria cadastrada </p>
                                 @endforelse
 
-                            </div>
-                    </div>             
+
+
+                            </div><!--table-responsive-->
+                    </div><!--tabe-pane-->             
 
 
 
@@ -242,3 +255,90 @@
         });
     </script>
     @stop
+
+<script> /* ----::::::::::::: Script javaScript da galeria ::::::::::::------*/
+         $(document).ready(function(){
+         $("[class^='thumbnail-']").click(function(){
+         $("[class^='thumbnail-']").slideToggle("fast");
+         $(this).next("[class^='large-']").slideToggle();
+         });
+         
+         $(".close").click(function(){
+         $("[class^='large-']:visible").toggle();
+         $("[class^='thumbnail-']").fadeToggle("fast");; 
+         }); 
+         
+      });
+      
+      new WOW().init();
+</script>  
+<style>  /*---:::::::::: CSS da galeria :::::::::::--*/
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+[class*='thumbnail-']{
+  
+  width: 169px;
+  height: 169px;
+  float: left;
+  cursor: zoom-in;
+  margin-left:4px;
+ 
+}
+
+[class*='thumbnail-'] img{
+  max-width: 100%;
+}
+
+[class*='large-']{
+  background: #fff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+ 
+}
+
+[class*='large-'] img{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.close{
+  color: #000000;
+  font-size: 50px;
+  position: absolute;
+  top: 100px;
+  right: 135px;
+  float: right;
+  font-size: 14px;
+}
+
+[class*='thumbnail-']{
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  cursor: zoom-in;
+}
+
+[class*='thumbnail-']:hover img{
+  transition: .3s linear;
+  transition-delay: 300ms;
+  transform: /* rotate(5deg) */ scale(1.1);
+}
+
+</style>
+
+<!--::::::::::::: bibliotecas da galeria :::::::::::::::::-->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

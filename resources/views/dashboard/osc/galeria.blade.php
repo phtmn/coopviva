@@ -56,7 +56,7 @@
                     <div class="col-xs-12 ">
                         <div class="portfolio-cont text-center">
                         
-                            <a href="#"><img src="{{asset($g->url)}}" alt="" class="img-responsive border" style="width:150px; height:150px; margin-left:4px" data-toggle="tooltip" data-placement="top" title="{{$g->descricao}}"></a>
+                            <a href="#"><img src="{{asset($g->url)}}" alt="" class="img-responsive border-light" style="width:150px; height:150px; margin-left:4px" data-toggle="tooltip" data-placement="top" title="{{$g->descricao}}"></a>
                             <h3 class="entry-title"><a href="#"></a></h3>
                         </div>
                     </div>
