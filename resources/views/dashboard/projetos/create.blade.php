@@ -121,15 +121,31 @@
                             {!! Form::text('nome',null,['class'=>'form-control']) !!}
                             </div>
 
-                            <div class="form-group col-md-3">
-                            {!! Form::label('CPF') !!}
-                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf']) !!}
-                            </div>
 
                             <div class="form-group col-md-3">
-                                {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj']) !!}
+                            {!! Form::label('Documento') !!}
+                            {!! Form::select('documento',[
+                                            'CPF'  => "CPF",                                         
+                                            'CNPJ' => "CNPJ"
+                                            ],null,
+                            ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!}
                             </div>
+
+                            
+
+
+                            <div class="form-group col-md-3" id="tipo-perfil">
+                            {!! Form::label('Nº') !!}
+                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf', 'placeholder'=> 'Número do CPF']) !!}
+                         
+                            {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj', 'placeholder'=> 'Número do CNPJ']) !!}
+                            </div>
+
+                           
+                                                 
+                            
+
+                           
                         </div><!--end-of-row-4-->
 
                         <div class="row"><!--row-5-->
@@ -286,6 +302,34 @@
             $("#cnpj").mask('00.000.000/0000-00');
              
         });
+
+        $(document).ready(function(){
+            let tipoPerfil      = $('#tipo-perfil');
+            let boxTipoDoc  = $('#box-tipo-doc');
+            let cpf         = $('#cpf');
+            let cnpj         = $('#cnpj');
+            tipoPerfil.change(function(){
+             
+               
+                
+                if(tipoPerfil.val() === 'CNPJ'){
+
+                   
+                 
+
+                    cpf.css({'display':'none'});
+                    cnpj.css({'display':'block'});
+                    
+                }else{
+               
+                    cnpj.css({'display':'none'});
+                    cpf.css({'display':'block'});
+                    
+                }
+            })
+        });
+
+           
 
     </script>
 
