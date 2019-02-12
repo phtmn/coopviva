@@ -62,6 +62,8 @@ class ProjetosController extends Controller
         $proponente->cpf        = $request->cpf;
         $proponente->cnpj       = $request->cnpj;
         
+        $proponente->documento        = $request->documento;
+        $proponente->num       = $request->num;
 
         $proponente->telefone_1 = $request->telefone_1;
         $proponente->telefone_2 = $request->telefone_2;

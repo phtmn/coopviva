@@ -18,6 +18,8 @@ class CreatePessoasTable extends Migration
             $table->string('nome')->nullable();
             $table->string('cpf')->nullable();
             $table->string('cnpj')->nullable();
+            $table->string('documento')->nullable();
+            $table->string('num')->nullable();
             $table->string('telefone_1')->nullable();
             $table->string('telefone_2')->nullable();
             $table->string('email_1')->nullable();

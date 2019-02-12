@@ -119,23 +119,19 @@
                             {!! Form::text('nome',$proponente->nome,['class'=>'form-control']) !!}
                             </div>
 
-                         {{--   <div class="form-group col-md-3"> --}}
-                         {{--     {!! Form::label('Documento') !!} --}}
-                         {{--     {!! Form::select('documento',[ --}}
-                         {{--                   'CPF'  => "CPF", --}}
-                         {{--                   'CNPJ'  => "CNPJ"        --}}                                  
-                         {{--                   ],null, --}}
-                         {{--  ['class'=>'form-control','id'=>'tipo']) !!} --}}
-                         {{--   </div> --}}
+                            <div class="form-group col-md-3"> 
+                              {!! Form::label('Documento') !!} 
+                              {!! Form::select('documento',[ 
+                                            'CPF'  => "CPF", 
+                                            'CNPJ'  => "CNPJ"                                          
+                                            ],$proponente->documento,['class'=>'form-control','id'=>'tipo']) !!} 
+                            </div> 
 
-                            <div class="form-group col-md-3 ">
-                            {!! Form::label('Nº do CPF') !!}
-                            {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control','id'=>'cpf']) !!}
-                            </div>
+                           
 
                             <div class="form-group col-md-3">
-                                {!! Form::label('Nº do CNPJ') !!}
-                                {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','id'=>'cnpj']) !!}
+                                {!! Form::label('Nº do Documento') !!}
+                                {!! Form::text('num',$proponente->num,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 
@@ -283,30 +279,29 @@
             $("#cnpj").mask('00.000.000/0000-00');
         });
 
-        $(document).ready(function(){
-            let tipoPerfil      = $('#tipo-perfil');
-            let boxTipoDoc  = $('#box-tipo-doc');
-            let cpf         = $('#cpf');
-            let cnpj         = $('#cnpj');
-            tipoPerfil.change(function(){
-             
-                
-                
-                if(tipoPerfil.val() === 'CNPJ'){
-
-                   
-                    cnpj.css({'display':'block'});
-
-                    cpf.css({'display':'none'});
-                    
-                    
-                }else{
-                    cpf.css({'display':'block'});
-                    cnpj.css({'display':'none'});
-                   
-                    
-                }
-            })
+        $("#cpfcnpj").keydown(function(){
+            try {
+                $("#cpfcnpj").unmask();
+            } catch (e) {}
+            
+            var tamanho = $("#cpfcnpj").val().length;
+            
+            if(tamanho < 11){
+                $("#cpfcnpj").mask("999.999.999-99");
+            } else if(tamanho >= 11){
+                $("#cpfcnpj").mask("99.999.999/9999-99");
+            }
+            
+            // ajustando foco
+            var elem = this;
+            setTimeout(function(){
+                // mudo a posição do seletor
+                elem.selectionStart = elem.selectionEnd = 10000;
+            }, 0);
+            // reaplico o valor para mudar o foco
+            var currentValue = $(this).val();
+            $(this).val('');
+            $(this).val(currentValue);
         });
 
     </script>
