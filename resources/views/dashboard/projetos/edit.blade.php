@@ -129,12 +129,12 @@
                          {{--   </div> --}}
 
                             <div class="form-group col-md-3 ">
-                            {!! Form::label('CPF') !!}
+                            {!! Form::label('Nº do CPF') !!}
                             {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control','id'=>'cpf']) !!}
                             </div>
 
                             <div class="form-group col-md-3">
-                                {!! Form::label('CNPJ') !!}
+                                {!! Form::label('Nº do CNPJ') !!}
                                 {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','id'=>'cnpj']) !!}
                             </div>
                         </div><!--end-of-row-4-->
@@ -281,6 +281,32 @@
             $("#phone_number2").mask('(00)00000-0000');
             $("#cpf").mask('000.000.000-00');
             $("#cnpj").mask('00.000.000/0000-00');
+        });
+
+        $(document).ready(function(){
+            let tipoPerfil      = $('#tipo-perfil');
+            let boxTipoDoc  = $('#box-tipo-doc');
+            let cpf         = $('#cpf');
+            let cnpj         = $('#cnpj');
+            tipoPerfil.change(function(){
+             
+                
+                
+                if(tipoPerfil.val() === 'CNPJ'){
+
+                   
+                    cnpj.css({'display':'block'});
+
+                    cpf.css({'display':'none'});
+                    
+                    
+                }else{
+                    cpf.css({'display':'block'});
+                    cnpj.css({'display':'none'});
+                   
+                    
+                }
+            })
         });
 
     </script>

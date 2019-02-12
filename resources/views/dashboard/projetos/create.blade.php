@@ -122,26 +122,31 @@
                             </div>
 
 
-                            <div class="form-group col-md-3">
-                            {!! Form::label('Documento') !!}
-                            {!! Form::select('documento',[
-                                            'CPF'  => "CPF",                                         
-                                            'CNPJ' => "CNPJ"
-                                            ],null,
-                            ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!}
-                            </div>
+                            {{-- <div class="form-group col-md-3"> --}}
+                                {{-- {!! Form::label('Documento') !!} --}}
+                                {{--{!! Form::select('documento',[ --}}
+                                    {{-- 'CPF'  => "CPF",               --}}                           
+                                        {{--    'CNPJ' => "CNPJ" --}}
+                                            {{-- ],null, --}}
+                                                {{--['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!} --}}
+                                                {{-- </div> --}}
 
                             
 
 
                             <div class="form-group col-md-3" id="tipo-perfil">
-                            {!! Form::label('Nº') !!}
-                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf', 'placeholder'=> 'Número do CPF']) !!}
+                            {!! Form::label('Nº do CPF') !!}
+                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf']) !!}
                          
-                            {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj', 'placeholder'=> 'Número do CNPJ']) !!}
+                           
                             </div>
 
+                            <div class="form-group col-md-3" id="tipo-perfil">
+                            {!! Form::label('Nº do CNPJ') !!}
                            
+                         
+                            {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj']) !!}
+                            </div>
                                                  
                             
 
@@ -310,20 +315,20 @@
             let cnpj         = $('#cnpj');
             tipoPerfil.change(function(){
              
-               
+                
                 
                 if(tipoPerfil.val() === 'CNPJ'){
 
                    
-                 
+                    cnpj.css({'display':'block'});
 
                     cpf.css({'display':'none'});
-                    cnpj.css({'display':'block'});
+                    
                     
                 }else{
-               
-                    cnpj.css({'display':'none'});
                     cpf.css({'display':'block'});
+                    cnpj.css({'display':'none'});
+                   
                     
                 }
             })
