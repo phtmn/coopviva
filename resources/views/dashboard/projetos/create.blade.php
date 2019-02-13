@@ -121,15 +121,28 @@
                             {!! Form::text('nome',null,['class'=>'form-control']) !!}
                             </div>
 
-                            <div class="form-group col-md-3">
-                            {!! Form::label('CPF') !!}
-                            {!! Form::text('cpf',null,['class'=>'form-control','id'=>'cpf']) !!}
-                            </div>
 
-                            <div class="form-group col-md-3">
-                                {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj']) !!}
+                             <div class="form-group col-md-3"> 
+                                {!! Form::label('Documento') !!} 
+                               {!! Form::select('documento',[ 
+                                     'CPF'  => "CPF",                                          
+                                            'CNPJ' => "CNPJ" 
+                                            ],null,
+                                             ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!} 
+                                                </div> 
+
+                            
+
+                            <div class="form-group col-md-3" id="tipo-perfil">
+                            {!! Form::label('Nº do Documento') !!}
+                           
+                         
+                            {!! Form::text('num',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
+                                                 
+                            
+
+                           
                         </div><!--end-of-row-4-->
 
                         <div class="row"><!--row-5-->
@@ -286,6 +299,33 @@
             $("#cnpj").mask('00.000.000/0000-00');
              
         });
+
+                $("#cpfcnpj").keydown(function(){
+            try {
+                $("#cpfcnpj").unmask();
+            } catch (e) {}
+            
+            var tamanho = $("#cpfcnpj").val().length;
+            
+            if(tamanho < 11){
+                $("#cpfcnpj").mask("999.999.999-99");
+            } else if(tamanho >= 11){
+                $("#cpfcnpj").mask("99.999.999/9999-99");
+            }
+            
+            // ajustando foco
+            var elem = this;
+            setTimeout(function(){
+                // mudo a posição do seletor
+                elem.selectionStart = elem.selectionEnd = 10000;
+            }, 0);
+            // reaplico o valor para mudar o foco
+            var currentValue = $(this).val();
+            $(this).val('');
+            $(this).val(currentValue);
+        });
+
+           
 
     </script>
 

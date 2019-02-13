@@ -119,23 +119,19 @@
                             {!! Form::text('nome',$proponente->nome,['class'=>'form-control']) !!}
                             </div>
 
-                         {{--   <div class="form-group col-md-3"> --}}
-                         {{--     {!! Form::label('Documento') !!} --}}
-                         {{--     {!! Form::select('documento',[ --}}
-                         {{--                   'CPF'  => "CPF", --}}
-                         {{--                   'CNPJ'  => "CNPJ"        --}}                                  
-                         {{--                   ],null, --}}
-                         {{--  ['class'=>'form-control','id'=>'tipo']) !!} --}}
-                         {{--   </div> --}}
+                            <div class="form-group col-md-3"> 
+                              {!! Form::label('Documento') !!} 
+                              {!! Form::select('documento',[ 
+                                            'CPF'  => "CPF", 
+                                            'CNPJ'  => "CNPJ"                                          
+                                            ],$proponente->documento,['class'=>'form-control','id'=>'tipo']) !!} 
+                            </div> 
 
-                            <div class="form-group col-md-3 ">
-                            {!! Form::label('CPF') !!}
-                            {!! Form::text('cpf',$proponente->cpf,['class'=>'form-control','id'=>'cpf']) !!}
-                            </div>
+                           
 
                             <div class="form-group col-md-3">
-                                {!! Form::label('CNPJ') !!}
-                                {!! Form::text('cnpj',$proponente->cnpj,['class'=>'form-control','id'=>'cnpj']) !!}
+                                {!! Form::label('Nº do Documento') !!}
+                                {!! Form::text('num',$proponente->num,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 
@@ -281,6 +277,31 @@
             $("#phone_number2").mask('(00)00000-0000');
             $("#cpf").mask('000.000.000-00');
             $("#cnpj").mask('00.000.000/0000-00');
+        });
+
+        $("#cpfcnpj").keydown(function(){
+            try {
+                $("#cpfcnpj").unmask();
+            } catch (e) {}
+            
+            var tamanho = $("#cpfcnpj").val().length;
+            
+            if(tamanho < 11){
+                $("#cpfcnpj").mask("999.999.999-99");
+            } else if(tamanho >= 11){
+                $("#cpfcnpj").mask("99.999.999/9999-99");
+            }
+            
+            // ajustando foco
+            var elem = this;
+            setTimeout(function(){
+                // mudo a posição do seletor
+                elem.selectionStart = elem.selectionEnd = 10000;
+            }, 0);
+            // reaplico o valor para mudar o foco
+            var currentValue = $(this).val();
+            $(this).val('');
+            $(this).val(currentValue);
         });
 
     </script>

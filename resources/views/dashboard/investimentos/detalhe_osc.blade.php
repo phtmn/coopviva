@@ -151,11 +151,26 @@
                             </div><!--table-responsive-->
                     </div><!--tabe-pane-->             
 
+<script> /* ----::::::::::::: Script javaScript da galeria ::::::::::::------*/
+         $(document).ready(function(){
+         $("[class^='thumbnail-']").click(function(){
+         $("[class^='thumbnail-']").slideToggle("fast");
+         $(this).next("[class^='large-']").slideToggle();
+         });
+         
+         $(".close").click(function(){
+         $("[class^='large-']:visible").toggle();
+         $("[class^='thumbnail-']").fadeToggle("fast");; 
+         }); 
+         
+      });
+      
+      new WOW().init();
+</script> 
 
 
 
-
-            </div>
+            </div> <!---tab-content--->
 
             
 
@@ -256,22 +271,7 @@
     </script>
     @stop
 
-<script> /* ----::::::::::::: Script javaScript da galeria ::::::::::::------*/
-         $(document).ready(function(){
-         $("[class^='thumbnail-']").click(function(){
-         $("[class^='thumbnail-']").slideToggle("fast");
-         $(this).next("[class^='large-']").slideToggle();
-         });
-         
-         $(".close").click(function(){
-         $("[class^='large-']:visible").toggle();
-         $("[class^='thumbnail-']").fadeToggle("fast");; 
-         }); 
-         
-      });
-      
-      new WOW().init();
-</script>  
+ 
 <style>  /*---:::::::::: CSS da galeria :::::::::::--*/
     *{
   margin: 0;
