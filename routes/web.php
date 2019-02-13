@@ -39,6 +39,7 @@ Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(
     Route::post('/pagar','Financeiro\CheckoutController@pagar')->name('pagar');
 
     Route::get('/landingPage','Dashboard\OscController@landingPage')->name('osc.landingPage');
+    Route::get('/landingPage/projeto/{id}','Dashboard\OscController@landingPageProjeto')->name('projeto.landingPage');
 
     Route::get('/quero_investir','Dashboard\InvestimentosController@oscs')->name('listar.oscs');
     Route::get('/detalhes/{id}','Dashboard\InvestimentosController@detalhe')->name('detalhe.osc');

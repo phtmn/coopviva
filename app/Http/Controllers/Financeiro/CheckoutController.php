@@ -44,8 +44,8 @@ class CheckoutController extends Controller
         $investimento->url = $pagamento->init_point;
         $investimento->save();
 
-        return redirect()->to($pagamento->init_point);
-        //return redirect()->to($pagamento->sandbox_init_point);
+        //return redirect()->to($pagamento->init_point);
+        return redirect()->to($pagamento->sandbox_init_point);
         
     }
 
@@ -75,9 +75,9 @@ class CheckoutController extends Controller
 
         # callbacks urls
         $preference->back_urls = array(
-            "success" => "http://coopviva-2.test/dashboard/investimento/success",
-            "failure" => "http://coopviva-2.test/dashboard/investimento/failure",
-            "pending" => "http://coopviva-2.test/dashboard/investimento/pending"
+            "success" => env('APP_URL').'/dashboard/investimento/success',
+            "failure" => env('APP_URL').'/dashboard/investimento/failure',
+            "pending" => env('APP_URL').'/dashboard/investimento/pending'
         );
 
         $preference->auto_return        = "approved";

@@ -49,9 +49,9 @@
                                             <li class="nav-item">
                                             <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil </b></a>
                                             </li> 
-                                           {{--  <li class="nav-item"> --}}
-                                           {{--  <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a> --}}
-                                           {{--  </li>   --}}
+                                             <li class="nav-item">
+                                             <a class="nav-link " id="pills-projetos-tab" data-toggle="pill" href="#pills-projetos" role="tab" aria-controls="pills-projetos" aria-selected="true"><b class="text-dark" >Projetos</b></a>
+                                             </li>
                                             <li class="nav-item">
                                             <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                             </li>      
@@ -113,9 +113,9 @@
                     <div class="tab-pane fade " id="pills-projetos" role="tabpanel" aria-labelledby="pills-projetos-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    {{--<p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>--}}
                                     
-                                    Colocar os PRojetos Aqui
+                                    @include('dashboard.investimentos.projetos')
 
 
                                     

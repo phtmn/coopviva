@@ -121,17 +121,17 @@
 
                             <div class="form-group col-md-3"> 
                               {!! Form::label('Documento') !!} 
-                              {!! Form::select('documento',[ 
+                              {!! Form::select('tipo_documento',[
                                             'CPF'  => "CPF", 
                                             'CNPJ'  => "CNPJ"                                          
-                                            ],$proponente->documento,['class'=>'form-control','id'=>'tipo']) !!} 
+                                            ],$proponente->tipo_documento,['class'=>'form-control','id'=>'tipo']) !!}
                             </div> 
 
                            
 
                             <div class="form-group col-md-3">
                                 {!! Form::label('Nº do Documento') !!}
-                                {!! Form::text('num',$proponente->num,['class'=>'form-control','id'=>'cpfcnpj']) !!}
+                                {!! Form::text('documento',$proponente->documento,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
                         </div><!--end-of-row-4-->
 

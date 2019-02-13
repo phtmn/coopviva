@@ -173,8 +173,20 @@ class OscController extends Controller
                 'osc'        => $osc,
                 'metas'      => DB::table('osc_metas')->where('osc_id',$osc->id)->get(),
                 'galerias'   => DB::table('galerias')->where('osc_id',$osc->id)->get(),
+                'projetos'   => DB::table('projetos')->where('osc_id',$osc->id)->get(),
                 'tab'        => 'investir'
             ]);
         }
+    }
+
+    public function landingPageProjeto($id){
+
+        $projeto = DB::table('projetos')->where('id',$id)->first();
+        return view('dashboard.investimentos.detalhe_projeto',[
+            'projeto'    => $projeto,
+            'galerias'   => DB::table('galerias')->where('osc_id',$projeto->osc_id)->get(),
+            'metas'      => DB::table('osc_metas')->where('osc_id',$projeto->osc_id)->get(),
+            'tab'        => 'investir'
+        ]);
     }
 }

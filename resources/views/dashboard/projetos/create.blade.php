@@ -121,23 +121,17 @@
                             {!! Form::text('nome',null,['class'=>'form-control']) !!}
                             </div>
 
-
                              <div class="form-group col-md-3"> 
                                 {!! Form::label('Documento') !!} 
-                               {!! Form::select('documento',[ 
+                                {!! Form::select('tip_documento',[
                                      'CPF'  => "CPF",                                          
-                                            'CNPJ' => "CNPJ" 
-                                            ],null,
-                                             ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!} 
-                                                </div> 
-
-                            
+                                     'CNPJ' => "CNPJ"],null,
+                                 ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!}
+                            </div>
 
                             <div class="form-group col-md-3" id="tipo-perfil">
                             {!! Form::label('Nº do Documento') !!}
-                           
-                         
-                            {!! Form::text('num',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
+                            {!! Form::text('documento',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
                                                  
                             
