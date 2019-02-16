@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 
 use App\Models\Osc_Metas;
-use Illuminate\Http\Request;
 use App\Models\Meta;
+use App\Models\Projeto;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Alert;
@@ -20,24 +21,28 @@ class MetasController extends Controller
         }
         $metas      = Meta::where('objetivo_id',$ods)->get();
         $metas_osc  = Osc_Metas::where('osc_id',$osc->id)->get();
-        //dd($metas_osc);
+        $projetos   = Projeto::where('osc_id',$osc->id)->pluck('descricao','id');
+        //dd($projetos);
         return view('dashboard.osc.odsform',[
             'metas'         => $metas,
-            'metas_osc'     => $metas_osc, 
+            'metas_osc'     => $metas_osc,
+            'projetos'      => $projetos,
             'tab'   => 'ods'
         ]);
     }
 
     public function gravar(Request $request){
+        //dd($request->all());
 
-        $metas = DB::table('metas')->whereIn('id',$request->codigos)->get();
-
+        $metas = DB::table('metas')->whereIn('id',$request->codigos)->toSql();
+        dd($metas);
         foreach ($metas as $meta){
 
             Osc_Metas::forceCreate([
                 'osc_id'        => $request->user()->osc()->id,
                 'meta_id'       => $meta->id,
                 'objetivo_id'   => $meta->objetivo_id,
+                'projeto_id'    => $request->opcao == 'PROJETO' ? $request->projeto_id : null,
                 'meta_codigo'   => $meta->codigo,
                 'meta_descricao'=> $meta->descricao
             ]);

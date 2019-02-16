@@ -48,6 +48,9 @@ class OscController extends Controller
         $result = DB::transaction(function() use ($request,$file_path) {
                 //dd($request->all());
             try {
+
+
+
                 $bancoDoacao = new banco();
                 $bancoDoacao->banco         = $request->banco;
                 $bancoDoacao->conta         = $request->conta;

@@ -116,7 +116,7 @@ class ProjetosController extends Controller
 
     public function update(Request $request,$id){
 
-         $projeto = Projeto::find($id);
+         $projeto = Projeto::find($id)->update($request->all());
 
          $proponente                = $projeto->proponente();
          $proponente->nome       = $request->nome;

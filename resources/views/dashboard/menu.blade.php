@@ -26,7 +26,6 @@
                         <li class="nav-item"> <a class="nav-link {{ $tab == 'ods' ? 'active' : ''}}"  href="{{route('osc.objetivos')}}" ><b class="text-dark">ODS</b></a> </li>
                         
 
-               
 
 
 

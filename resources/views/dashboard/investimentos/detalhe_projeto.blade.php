@@ -66,13 +66,13 @@
 
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$projeto->descricao}}</strong></h4></p>
 
-                                    @forelse($metas->unique('objetivo_id') as $obj)
+                                    @forelse($metas->unique('objetivo_id')->where('projeto_id',$projeto->id) as $obj)
                                         <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                     @empty
 
                                     @endforelse
 
-                                    @forelse($metas as $meta)
+                                    @forelse($metas->where('projeto_id',$projeto->id) as $meta)
                                         <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
                                         <hr>
                                     @empty

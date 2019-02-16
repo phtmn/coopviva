@@ -70,11 +70,17 @@
                 <center>
                                     <div class="form-group col-md-8">
                                        <!-- <label for="name"><strong>VALOR (R$)</strong></label> -->                                        
-                                       <input class="form-check-input" type="radio" name=" " id=" " value="OSC" disabled="disabled" checked="checked"  >
-                                        <b><label class="form-check-label" for="">Desejo adicionar essa(s) ODS em minha OSC </label> </b>
-                                        
-                                        
-                                       
+                                        <input class="form-check-input" type="radio" name="opcao" id="osc" value="OSC"  onclick="radioEscolhido()" required>
+                                        <b><label class="form-check-label" for="osc">Desejo adicionar essa(s) ODS em minha OSC </label> </b>
+                                        <br>
+                                        <input class="form-check-input" type="radio" name="opcao" id="projeto" value="PROJETO" onclick="radioEscolhido()" required>
+                                        <b><label class="form-check-label" for="projeto">Desejo adicionar essa(s) ODS no Projeto </label> </b>
+
+                                        <br>
+                                        <div id="projetos" style="display: none;">
+                                            {!! Form::select('projeto_id',$projetos,null,['class'=>'form-control','placeholder'=>'Selecione seu Projeto']) !!}
+                                        </div>
+
                                         <br>
                                     </div>  </center>
 
@@ -94,7 +100,7 @@
                                 <div class="form-group col-md-12">
                                      <label for="">Os 17 Objetivos de Desenvolvimento Sustentável - Qual é o seu ODS?</label>
                                     @forelse($metas_osc->unique('objetivo_id') as $obj)
-                                        <br>  <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                            <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                         @empty
                                             <p style="color:red">Você não está em nenhum objetivo ODS</p>
                                     @endforelse
@@ -119,15 +125,27 @@
                     </div>
                 </div>
             </div>
-        
-    
 
+@stop
+@section('js')
 
+@section('js')
+    <script>
 
-        
+        function radioEscolhido(){
+            let divProjetos = $('#projetos')
+            let Opcao = $('input:radio[name=opcao]:checked').val()
 
+            if(Opcao === 'PROJETO'){
+                divProjetos.css({'display':'block'})
+            }else{
+                divProjetos.css({'display':'none'})
+            }
+            //alert($('input:radio[name=opcao]:checked').val());
+        }
 
-
-@endsection
+    </script>
+@stop
+@stop
 
 

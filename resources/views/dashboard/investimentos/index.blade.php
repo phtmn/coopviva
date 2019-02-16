@@ -36,7 +36,7 @@
                                         <td>
                                             @if($d->status == 'Aguardando Pagamento')
                                                 <a href="{{ $d->url }}" target="_blank">Novo Pagamento</a>                                        
-                                                <a href="{{route('investimento.cancelar',$d->id)}}"><i class="fa fa-trash"></i></a>                                                 
+                                                <a href="{{ route('investimento.cancelar',$d->id) }}"><i class="fa fa-trash"></i></a>
                                             @elseif($d->status == 'Investimento Realizado')
                                                 <a href=""><i class="fa fa-print"></i> Recibo</a>
                                             @endif

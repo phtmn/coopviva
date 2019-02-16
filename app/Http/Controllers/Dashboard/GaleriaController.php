@@ -35,31 +35,26 @@ class GaleriaController extends Controller
         $osc = $request->user()->osc()->id;
 
         if ($request->hasFile('img') && $request->file('img')->isValid()) {
-            $file       = $request->file('img');
-            $name       = $file->getClientOriginalName();
-            $path       = public_path('galeria/osc');
-            $file_path  = 'galeria/osc/'.$name;
-            $upload     = $file->move($path,$name);
-        }
+            $file = $request->file('img');
+            $name = $file->getClientOriginalName();
+            $path = public_path('galeria/osc');
+            $file_path = 'galeria/osc/' . $name;
+            $upload = $file->move($path, $name);
 
-        if($upload){
-            $galeria = new Galeria();
-            $galeria->osc_id        = $osc;
-            $galeria->descricao     = $request->legenda;
-            $galeria->url           = $file_path;
-           // $galeria->tipo          = $request->tipo;
-            $galeria->ativo         = 1;
-            $galeria->save();
-        }
-
-        if($galeria){
+            if($upload){
+                $galeria = new Galeria();
+                $galeria->osc_id        = $osc;
+                $galeria->descricao     = $request->legenda;
+                $galeria->url           = $file_path;
+                $galeria->ativo         = 1;
+                $galeria->save();
+            }
             Alert::success('Sua foto foi salva na galeria','OBG')->persistent('OK');
             return redirect()->route('galeria.index');
         }else{
-            Alert::error('Algo Inesperado Aconteceu','Eita!')->persistent('OK');
-            return redirect()->route('galeria.create');
+            Alert::error('Não foi possivel enviar sua foto','OBG')->persistent('OK');
+            return redirect()->route('galeria.index');
         }
-
     }
 
     public function removerGaleria($id){

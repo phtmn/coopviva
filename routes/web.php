@@ -15,7 +15,7 @@ Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.log
 Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
 
 //Rotas para dashboards do site
-Route::group(['middleware'=>['auth','verified'],'prefix'=>'dashboard'],function(){
+Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'dashboard'],function(){
 
     Route::get('/','Dashboard\DashboardController@index')->name('dashboard.index'); 
     
