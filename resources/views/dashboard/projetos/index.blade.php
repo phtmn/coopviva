@@ -55,7 +55,7 @@
                                                 <td>R$ {{ number_format($d->valor_meta,2,',','.') }} </td>
                                                 <td class="text-center ">
                                                         <a href="{{route('projetos.edit',$d->id)}}"><i class="fa fa-pencil" style="color:red"></i> Editar </a>                                
-                                                        <a href="{{route('projeto.inativo',$d->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover </a>
+                                                     <!--    <a href="{{route('projeto.inativo',$d->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover </a> -->
                                                 </td>                        
                                             </tr>
                                             @empty

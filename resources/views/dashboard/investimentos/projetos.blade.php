@@ -1,10 +1,12 @@
+
+
 <div class="projetos mt-2">
-    <table class="table table-bordered table-condensed">
+    <table class="table  table-condensed">
         <thead>
             <tr>
                 <th>Nome do Projeto</th>
-                <th>Valor</th>
-                <th>Categoria</th>
+                <th>Valor (R$)</th>
+                
                 <th></th>
             </tr>
         </thead>
@@ -14,8 +16,8 @@
             <tr>
                 <td>{{$p->descricao}}</td>
                 <td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
-                <td>{{$p->segmento_cultural}}</td>
-                <th><a href="{{route('projeto.landingPage',$p->id)}}"> Investir nesse Projeto</a></th>
+                
+                <th><a href="{{route('projeto.landingPage',$p->id)}}"> Saiba mais</a></th>
             </tr>
                 @empty
             <p>Não há projetos cadastrados e/ou ativos</p>

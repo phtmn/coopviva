@@ -169,7 +169,27 @@
                  
                 
 
+                 <br>
+        <h4>Upload da logo </h4>
+            <hr>          
+            <div class="row">
+                 
+                 <div class="form-group col-md-3">
+                
+                      </div>
+                 
+                      <div class="form-group col-md-5">
+                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
+                      </div>
+
+                     
+                      <div class="form-group col-md-1">
+                
+                </div>
+                     
                  </div>
+                 </div>
+       
 
 
         
@@ -229,28 +249,8 @@
 
         
   
-        <br>
-        <br>
-        <h4>Upload da logo </h4>
-            <hr>          
-            <div class="row">
-                 
-                 <div class="form-group col-md-3">
-                
-                      </div>
-                 
-                      <div class="form-group col-md-5">
-                     <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
-                      </div>
-
-                     
-                      <div class="form-group col-md-1">
-                
-                </div>
-                     
-                 </div>
-                 </div>
-       
+        
+        
 
         
      

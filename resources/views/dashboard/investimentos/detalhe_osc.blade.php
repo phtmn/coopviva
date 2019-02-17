@@ -39,11 +39,11 @@
 
 
     <div class="row">
-        <div class="col-lg-8  col-md-12">
-                    <div class="card card-inverse card-primary">
+        <div class="col-lg-9  col-md-12">
+                    <div class="">
                         <div class="card-body">
                         <div class="d-flex no-block">
-                               <h2 class="card-title"> <p>{{$osc->sigla_osc}}</p></h2> 
+                               <h2 class="card-title"> </h2> 
                               <div class="ml-auto">
                               <ul class="nav nav-tabs justify-content-center ">
                                             <li class="nav-item">
@@ -69,11 +69,11 @@
                     <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong> <br>{{$osc->sigla_osc}} - {{$osc->nome_fantasia}} </strong></h3></p>
                                     
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> {{ $osc->endereco()->cidade}} <strong>Estado:</strong> {{ $osc->endereco()->uf}}</p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> {{ $osc->endereco()->cidade}} - {{ $osc->endereco()->uf}}</p>
                                     
                                     <hr>
                                     
@@ -92,7 +92,7 @@
                     <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                            <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong> <br>{{$osc->sigla_osc}} - {{$osc->nome_fantasia}} </strong></h3></p>
 
                                 @forelse($metas->unique('objetivo_id') as $obj)
                                     <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
@@ -113,7 +113,7 @@
                     <div class="tab-pane fade " id="pills-projetos" role="tabpanel" aria-labelledby="pills-projetos-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                    {{--<p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>--}}
+                            <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong> <br>{{$osc->sigla_osc}} - {{$osc->nome_fantasia}} </strong></h3></p>
                                     
                                     @include('dashboard.investimentos.projetos')
 
@@ -126,7 +126,7 @@
                     <div class="tab-pane fade " id="pills-galeria" role="tabpanel" aria-labelledby="pills-galeria-tab">                        
                             <div class="table-responsive m-t-20">
                            
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$osc->nome_fantasia}}</strong></h4></p>
+                            <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong> <br>{{$osc->sigla_osc}} - {{$osc->nome_fantasia}} </strong></h3></p>
 
                                 @forelse($galerias as $galeria)
                                 <div class="thumbnail-* wow fadeInLeft ">
@@ -184,14 +184,14 @@
                   
                 </div>
      
-            <div class="col-lg-4 col-md-12">
-                    <div class="card">
+            <div class="col-lg-3 col-md-12">
+                    <div class="">
                             <div class="card-body">
                                 <div class="circular-progress-bar">
                                     @if($osc->logo != null)
-                                        <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="img rounded-circle" style="width:200px; height: 200px ">
+                                      <center>  <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="mr-3 img-responsive rounded" style="width:100px;"> </center>
                                      @else
-                                         <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:200px; height: 200px ">
+                                     <center>  <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px;">  </center>
                                     @endif
                             
                                 </div>  
@@ -202,39 +202,28 @@
                                 <div class="card-body">
                                 <div class="row">
                                 @cannot('osc')
+
+                                
                                     <div class="form-group col-md-12">
                                         <input class="form-check-input" type="radio" name=" " id=" " value="OSC" disabled="disabled" checked="checked"  >
-                                        <label class="form-check-label" for="">Desejo realizar uma <strong>Doação</strong> </label>
+                                        <label class="form-check-label" for=""><H4 align="justify" class="sample-text" style="text-indent: 15px;"> Desejo <strong>Doar</strong> para OSC <b>{{$osc->sigla_osc}} - {{$osc->nome_fantasia}}</b></H4> </label>
                                     </div>
-                                    <!--<div class="form-group col-md-12">
-                                        <input class="form-check-input" type="radio" name="" id="" value="PROJETO">
-                                        <label class="form-check-label" for="">Desejo <strong>Patrocinar</strong> um projeto </label>
-                                    </div> 
-                                    <div class="form-group col-md-12">
-                                        <label for="">Escolha um Projeto</label>
-                                            {{--{{ Form::select('situacao_imovel',[--}}
-                                                {{--'Próprio'      => 'Próprio',--}}
-                                                {{--'Alugado'       => 'Alugado', --}}
-                                                {{--'Emprestado'       => 'Emprestado',                                --}}
-                                                {{--'Outro'    => 'Outro'                                --}}
-                                                {{--],null,['class'=>'form-control custom-select']) --}}
-                                            {{--}}  --}}
-                                    </div>--><center>
-                                    <div class="form-group col-md-8">
+                                   
+                                    <div class="form-group col-md-8" align="center" >
                                         <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
                                             @csrf
 
                                            
 
-                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor R$">
+                                            <input type="text" name="valor" class="form-control form-control-lg" id="valor" aria-describedby="emailHelp" placeholder="Valor R$" >
                                         <br>
                                             <input type="hidden" name="osc_id" value="{{$osc->id}}">
-                                            <button type="submit" class="btn gradient-bg" >Investir </button>
+                                               <button type="submit" class="btn gradient-bg">Investir </button>  
 
                                         </form>
                                     </div> 
                                     @endcannot 
-                                     </center>
+                                     
 
 
                                 </div>

@@ -34,8 +34,8 @@ class MetasController extends Controller
     public function gravar(Request $request){
         //dd($request->all());
 
-        $metas = DB::table('metas')->whereIn('id',$request->codigos)->toSql();
-        dd($metas);
+        $metas = DB::table('metas')->whereIn('id',$request->codigos)->get();
+       // dd($metas);
         foreach ($metas as $meta){
 
             Osc_Metas::forceCreate([

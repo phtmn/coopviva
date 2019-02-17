@@ -123,7 +123,7 @@
 
                              <div class="form-group col-md-3"> 
                                 {!! Form::label('Documento') !!} 
-                                {!! Form::select('tip_documento',[
+                                {!! Form::select('tipo_documento',[
                                      'CPF'  => "CPF",                                          
                                      'CNPJ' => "CNPJ"],null,
                                  ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!}

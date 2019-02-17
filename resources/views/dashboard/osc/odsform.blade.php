@@ -98,7 +98,7 @@
                         <div class="tab-pane fade " id="pills-remove" role="tabpanel" aria-labelledby="pills-remove-tab">
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                     <label for="">Os 17 Objetivos de Desenvolvimento Sustentável - Qual é o seu ODS?</label>
+                                     
                                     @forelse($metas_osc->unique('objetivo_id') as $obj)
                                             <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                         @empty
@@ -110,7 +110,7 @@
                                             <a href="{{route('meta.remover',$meta->id)}}"><i class="fa fa-trash" style="color:red"></i> Remover</a>
                                             <hr>
                                         @empty
-                                            <h4>Você precisa escolher suas metas da agenda 2030 na aba OSC / ODS</h4>
+                                            <h4>Você precisa Adicionar suas metas da Agenda 2030 na aba ODS </h4>
                                     @endforelse
                                 </div> 
                             </div> 

@@ -16,7 +16,7 @@
             </div>
 
             <div class="form-group col-md-6">
-                {!! Form::file('img',null,['class'=>'form-control']) !!}
+                {!! Form::file('img',null,['class'=>'form-control','required'=>'true']) !!}
             </div>
 
                   

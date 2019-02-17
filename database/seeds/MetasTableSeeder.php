@@ -650,7 +650,7 @@ class MetasTableSeeder extends Seeder
             ],
             [
                 'objetivo_id'   => 13,
-                'codigo'        => '12.b',
+                'codigo'        => '13.b',
                 'descricao'     => 'Promover mecanismos para a criação de capacidades para o planejamento relacionado à mudança do clima e à gestão eficaz, nos países menos desenvolvidos, inclusive com foco em mulheres, jovens, comunidades locais e marginalizadas'
             ]
                                    

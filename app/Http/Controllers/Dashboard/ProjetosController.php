@@ -157,7 +157,7 @@ class ProjetosController extends Controller
 
 
          $projeto->artigo                = $request->artigo;
-         $projeto->valor_meta            = toMoney($request->valor_meta);
+         $projeto->valor_meta            = $request->valor_meta;
          $projeto->save();
 
         if($projeto){

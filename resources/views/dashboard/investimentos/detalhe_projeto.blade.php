@@ -14,23 +14,20 @@
 
 
         <div class="row">
-            <div class="col-lg-8  col-md-12">
-                <div class="card card-inverse card-primary">
+            <div class="col-lg-9  col-md-12">
+                <div class="">
                     <div class="card-body">
                         <div class="d-flex no-block">
-                            <h2 class="card-title"> <p>{{$projeto->descricao}}</p></h2>
+                            <h2 class="card-title"> </h2>
                             <div class="ml-auto">
                                 <ul class="nav nav-tabs justify-content-center ">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Perfil </b></a>
+                                        <a class="nav-link active" id="pills-osc-tab" data-toggle="pill" href="#pills-osc" role="tab" aria-controls="pills-osc" aria-selected="true"><b class="text-dark" >Descrição </b></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link " id="pills-ods-tab" data-toggle="pill" href="#pills-ods" role="tab" aria-controls="pills-ods" aria-selected="true"><b class="text-dark" >ODS</b></a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link " id="pills-galeria-tab" data-toggle="pill" href="#pills-galeria" role="tab" aria-controls="pills-galeria" aria-selected="true"><b class="text-dark" >Galeria</b></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -41,21 +38,23 @@
                             <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">
                                 <div class="table-responsive m-t-20">
 
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$projeto->descricao}}</strong></h4></p>
-
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>XX</strong> {{$projeto->instancia}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>XX:</strong> {{$projeto->ambito}}</p>
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>XXX:</strong> {{ $projeto->segmento_cultural}} <strong>XXX:</strong></p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong> <br> {{$projeto->descricao}}</strong></h3></p>
+                                    
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Valor (R$):</strong> R$ {{ number_format($projeto->valor_meta,2,',','.') }}</p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Instância:</strong> {{ $projeto->instancia}}</p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Segmento:</strong> {{ $projeto->segmento_cultural}} </p>
 
                                     <hr>
 
-                                    <h3>O que a OSC faz?</h3>
+                                    <h3>Objetivo Geral</h3>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->objetivo_geral}} </p>
-                                    <h3>Como surgiu a OSC?</h3>
+                                    <h3>Objetivos Específicos</h3>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->objetivos_esp}} </p>
-                                    <h3>Missão da OSC?</h3>
+                                    <h3>Justificativa</h3>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->justificativa}} </p>
-                                    <h3>Visão da OSC?</h3>
+                                    <h3>Público Alvo</h3>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->publico_alvo}} </p>
+                                    <h3>Impactos Esperados</h3>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->publico_alvo}} </p>
 
                                 </div>
@@ -64,7 +63,7 @@
                             <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
                                 <div class="table-responsive m-t-20">
 
-                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h4><strong> {{$projeto->descricao}}</strong></h4></p>
+                                    <p align="justify" class="sample-text" style="text-indent: 15px;"><h3><strong><br> {{$projeto->descricao}}</strong></h3></p>
 
                                     @forelse($metas->unique('objetivo_id')->where('projeto_id',$projeto->id) as $obj)
                                         <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
@@ -156,8 +155,8 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-12">
-                <div class="card">
+            <div class="col-lg-3 col-md-12">
+                <div class="">
                     <div class="card-body">
                         <div class="circular-progress-bar">
                             {{--@if($osc->logo != null)--}}
@@ -175,7 +174,14 @@
                             <div class="row">
 
                                     <div class="form-group col-md-12">
-                                        <label class="form-check-label" for="">Ivestir nesse projeto</label>
+                                    <input class="form-check-input" type="radio" name=" " id=" " value="OSC"  checked="checked"  >
+                                        <label class="form-check-label" for=""><H4 align="justify" class="sample-text" style="text-indent: 15px;"> Desejo <strong>Patrocinar</strong> o projeto <b>{{$projeto->descricao}} </b></H4> </label>
+                                        <br>
+                                        <br>
+                                    <input class="form-check-input" type="radio" name=" " id=" " value="OSC"  >
+                                        <label class="form-check-label" for=""><H4 align="justify" class="sample-text" style="text-indent: 15px;"> Desejo <strong>Doar</strong> para o projeto <b>{{$projeto->descricao}} </b></H4> </label>
+                                        
+                                        
                                     </div>
                                         <div class="form-group col-md-8">
                                             <form class="form form-investidor" action="{{route('pagar')}}" method="POST">
