@@ -16,6 +16,7 @@ class CreateInvestimentosTable extends Migration
         Schema::create('investimentos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo');
+            $table->string('operacao');
             $table->string('descricao')->nullable();
             $table->decimal('valor_investimento',24,2)->default(0);
             $table->string('status');
@@ -26,6 +27,7 @@ class CreateInvestimentosTable extends Migration
             $table->unsignedInteger('projeto_id')->nullable();
             $table->unsignedInteger('osc_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -26,12 +26,15 @@ class CheckoutController extends Controller
 
     public function pagar(Request $request){
 
+        //dd($request->all());
+
         $osc = DB::table('oscs')->where('id',$request->osc_id)->first();
         
         $investimento = new Investimento();
         $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
         $investimento->valor_investimento   = toMoney($request->valor);
-        $investimento->tipo                 = 'DOACAO';
+        $investimento->tipo                 = $request->tipo ? $request->tipo : 'Investimento';
+        $investimento->operacao             = $request->operacao;
         $investimento->user_id              = $request->user()->id;
         $investimento->projeto_id           = $request->projeto_id;
         $investimento->osc_id               = $request->osc_id;
@@ -68,6 +71,7 @@ class CheckoutController extends Controller
         $payer          = new \MercadoPago\Payer();
         $payer->email   = $investimento->usuario()->email;
         $payer->name    = $investimento->usuario()->name;
+        $payer->
 
         # Setting preference properties
         $preference->items = array($item);

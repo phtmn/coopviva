@@ -35,6 +35,7 @@ class CreateProjetosTable extends Migration
             $table->unsignedInteger('banco_doacao_id');
 
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('osc_id')->references('id')->on('oscs')->onDelete('cascade');
             $table->foreign('proponente_id')->references('id')->on('pessoas')->onDelete('cascade');

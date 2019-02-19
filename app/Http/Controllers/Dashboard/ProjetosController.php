@@ -116,16 +116,16 @@ class ProjetosController extends Controller
 
     public function update(Request $request,$id){
 
-         $projeto = Projeto::find($id)->update($request->all());
+         $projeto = Projeto::find($id);
 
          $proponente                = $projeto->proponente();
-         $proponente->nome       = $request->nome;
-         $proponente->documento  = $request->documento;
+         $proponente->nome          = $request->nome;
+         $proponente->documento     = $request->documento;
          $proponente->tipo_documento = $request->tipo_documento;
-         $proponente->telefone_1 = $request->telefone_1;
-         $proponente->telefone_2 = $request->telefone_2;
-         $proponente->email_1    = $request->email_1;
-         $proponente->email_2    = $request->email_2;
+         $proponente->telefone_1    = $request->telefone_1;
+         $proponente->telefone_2    = $request->telefone_2;
+         $proponente->email_1       = $request->email_1;
+         $proponente->email_2       = $request->email_2;
          $proponente->save();
 
          $bancoPatrocinio                = $projeto->bancoPatrocinio();
@@ -157,7 +157,7 @@ class ProjetosController extends Controller
 
 
          $projeto->artigo                = $request->artigo;
-         $projeto->valor_meta            = $request->valor_meta;
+         //$projeto->valor_meta            = toMoney($request->valor_meta);
          $projeto->save();
 
         if($projeto){
