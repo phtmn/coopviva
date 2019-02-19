@@ -24,7 +24,7 @@
                                 @forelse($data as  $d)
                                     <tr>
                                         <td>{{date('d/m/Y',strtotime($d->created_at))}}</td>
-                                        <td>Doação</td>
+                                        <td>{{ $d->operacao }}</td>
                                         <td>R$ {{ number_format($d->valor_investimento,2,',','.') }} </td>
                                         <td>{{$d->status}}</td>
                                     </tr>
@@ -33,6 +33,7 @@
                                 @endforelse
                                 </tbody>
                             </table>
+                            {!! $data->links() !!}
                         </div>
                     </div>
                 </div>

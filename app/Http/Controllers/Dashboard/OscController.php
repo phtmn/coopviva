@@ -196,7 +196,9 @@ class OscController extends Controller
     }
 
     public function getInvestimentos(){
-        $data = DB::table('investimentos')->where('osc_id',auth()->user()->osc()->id)->get();
+        $data = DB::table('investimentos')
+                    ->where('osc_id',auth()->user()->osc()->id)
+                    ->paginate(8);
 
         return view('dashboard.osc.investimentos',[
             'data' => $data,
