@@ -46,7 +46,7 @@
                        
                      <div class="form-group col-md-2 pull-right">
                                 {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',$projeto->valor_meta,['class'=>'input input-lg form-control','required'=>'true','id'=>'project_value']) !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true','id'=>'project_value']) !!}
                                 </div>
 
                     <div class="form-group col-md-2">

@@ -159,12 +159,7 @@
                 <div class="">
                     <div class="card-body">
                         <div class="circular-progress-bar">
-                            {{--@if($osc->logo != null)--}}
-                                {{--<img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="img rounded-circle" style="width:200px; height: 200px ">--}}
-                            {{--@else--}}
-                                {{--<img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:200px; height: 200px ">--}}
-                            {{--@endif--}}
-
+                       
                         </div>
                     </div>
 
