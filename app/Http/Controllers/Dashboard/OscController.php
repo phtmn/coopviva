@@ -185,11 +185,22 @@ class OscController extends Controller
     public function landingPageProjeto($id){
 
         $projeto = DB::table('projetos')->where('id',$id)->first();
+
         return view('dashboard.investimentos.detalhe_projeto',[
             'projeto'    => $projeto,
             'galerias'   => DB::table('galerias')->where('osc_id',$projeto->osc_id)->get(),
             'metas'      => DB::table('osc_metas')->where('osc_id',$projeto->osc_id)->get(),
+            'osc'        => DB::table('oscs')->where('id',$projeto->osc_id)->first(),
             'tab'        => 'investir'
+        ]);
+    }
+
+    public function getInvestimentos(){
+        $data = DB::table('investimentos')->where('osc_id',auth()->user()->osc()->id)->get();
+
+        return view('dashboard.osc.investimentos',[
+            'data' => $data,
+            'tab'   => 'investir'
         ]);
     }
 }

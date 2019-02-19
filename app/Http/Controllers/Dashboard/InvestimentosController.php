@@ -14,11 +14,11 @@ class InvestimentosController extends Controller
     public function index(){
 
         $data = Investimento::all();
-        
         return view('dashboard.investimentos.index',[
             'data'=> $data,
             'tab' => 'investimentos'
         ]);
+
     }
 
     public function oscs(){
@@ -41,7 +41,7 @@ class InvestimentosController extends Controller
     }
 
     public function callback(Request $request){
-                
+
         $investimento = Investimento::find($request->external_reference);
         $novoStatus = null;
 
@@ -59,12 +59,12 @@ class InvestimentosController extends Controller
         $investimento->formaPagamento   = $request->payment_type;
         $investimento->save();
 
-        Alert::success('Atualizamos seu Investimento','Genial')->persistent('OK');
+        Alert::info('Atualizamos seu Investimento','Genial')->persistent('OK');
         return redirect()->route('investimentos.index');
     }
 
     public function cancelar($id){
-        $investimento = Investimento::find($id)->update(['status' => 'Cancelado']);
+        Investimento::find($id)->update(['status' => 'Cancelado']);
         Investimento::find($id)->delete();
 
         Alert::warning('Você Cancelou esse investimento','Tenso!')->persistent('Ok');
