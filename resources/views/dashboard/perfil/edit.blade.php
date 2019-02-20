@@ -99,7 +99,7 @@
                     <div class="row">
                     <div class="form-group col-md-2">
                             <label for="numero">Número</label>
-                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}                            
+                            {!! Form::text('numero',$endereco->numero,['class'=> 'form-control']) !!}                            
                         </div>
                         <div class="form-group col-md-5">
                             <label for="cidade">Cidade</label>

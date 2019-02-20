@@ -10,7 +10,7 @@
 
             <div class="card-body">
                 <div class="d-flex no-block">
-                       <h2 class="card-title">{{$osc->sigla_osc}} - {{$osc->nome_fantasia}}  </h2>
+                       
                           <div class="ml-auto">
                                 <ul class="nav nav-tabs justify-content-center ">
                                     <li class="nav-item">
@@ -32,7 +32,7 @@
 
             <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">
-
+                    <h1 class="card-title">{{$osc->sigla_osc}} - {{$osc->nome_fantasia}}  </h1>
                         <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
                         <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>CNAE:</strong> {{$osc->cnae}}</p>
                         <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Cidade:</strong> {{ $osc->endereco()->cidade}} - {{ $osc->endereco()->uf}}</p>
@@ -46,6 +46,7 @@
                             <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->missao_osc}} </p>
                         <h3>Visão da OSC?</h3>
                             <p align="justify" class="sample-text" style="text-indent: 15px;">{{$osc->visao_osc}} </p>
+                   <br>
                     </div>
 
 
@@ -83,30 +84,33 @@
                         @endforelse
                     </div>
             </div>
+            <br>
         </div>
 
             <div class="col-lg-4 col-md-12">
                 <div class="card-body">
                     <div class="circular-progress-bar">
                         @if($osc->logo != null)
-                          <center>  <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="mr-3 img-responsive rounded img-thumbnail" style="width:100px;"> </center>
+                          <center>  <img src="{{asset($osc->logo)}}" alt="{{$osc->logo}}" class="mr-3 img-responsive rounded" style="width:100px;"> </center>
                          @else
                          <center>  <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px;">  </center>
                         @endif
 
                     </div>
+                    
                 </div>
 
                 @cannot('osc')
-                <div class="card-body bg-success text-white mt-4 mb-3">
+                <div class="card-body mt-4 ">
 
 
                         <form action="{{route('pagar')}}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="">Quando você deseja investir?</label>
-                                <div class="form-group">
-                                    <input type="text" class="input-lg" name="valor" placeholder="Digite um valor" id="valor" required>
+                                <label for="">Desejo Doar para {{$osc->sigla_osc}} - {{$osc->nome_fantasia}} </label>
+                                <div class="form-group ">
+                                    
+                                <center>     <input type="text" class="input-lg" name="valor" placeholder="Valor (R$) " id="valor" required> </center>
                                 </div>
 
                             </div>
@@ -114,7 +118,7 @@
 
                                 <input type="hidden" name="osc_id" value="{{$osc->id}}">
                                 <input type="hidden"  name="operacao" value="Investimento em OSC">
-                                <button type="submit" class="btn gradient-bg">Investir </button>
+                             <center>   <button type="submit" class="btn gradient-bg">Investir </button> </center>
                         </form>
 
                 </div>

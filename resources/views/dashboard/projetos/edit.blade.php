@@ -46,7 +46,7 @@
                        
                      <div class="form-group col-md-2 pull-right">
                                 {!! Form::label('Valor do Projeto') !!}
-                                    {!! Form::text('valor_meta',$projeto->valor_meta,['class'=>'input input-lg form-control','required'=>'true','id'=>'project_value']) !!}
+                                    {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true','id'=>'project_value']) !!}
                                 </div>
 
                     <div class="form-group col-md-2">
@@ -234,23 +234,23 @@
                 <div class="row">
                 <div class="form-group col-md-12">
                     <label for="">Objetivo Geral</label>
-                    {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                    {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Objetivos Específicos</label>
-                    {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                    {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Justificativa</label>
-                    {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                    {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Público Alvo</label>
-                    {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                    {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Impactos Esperados</label>
-                    {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                    {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 
 

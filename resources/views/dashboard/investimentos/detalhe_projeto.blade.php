@@ -3,12 +3,12 @@
 @section('content')
 
     @include('dashboard.menu')
-    <div class="container mt-3 mb-4">
+    <div class="container mt-4 ">
         <div class="row">
             <div class="col-lg-8  col-md-12">
                     <div class="card-body">
                         <div class="d-flex no-block">
-                            <h2 class="card-title"> {{$projeto->descricao}}</h2>
+                           
                             <div class="ml-auto">
                                 <ul class="nav nav-tabs justify-content-center ">
                                     <li class="nav-item">
@@ -20,9 +20,11 @@
                                 </ul>
                             </div>
                         </div>
+                            
 
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">
+                            <h1 class="card-title"> {{$projeto->descricao}}  </h1>
                                 <div class="table-responsive m-t-20">
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Valor (R$):</strong> R$ {{ number_format($projeto->valor_meta,2,',','.') }}</p>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Instância:</strong> {{ $projeto->instancia}}</p>
@@ -40,6 +42,7 @@
                                     <h3>Impactos Esperados</h3>
                                     <p align="justify" class="sample-text" style="text-indent: 15px;">{{$projeto->publico_alvo}} </p>
                                 </div>
+                                <br>
                             </div>
 
                             <div class="tab-pane fade " id="pills-ods" role="tabpanel" aria-labelledby="pills-ods-tab">
@@ -65,57 +68,57 @@
             </div> <!--fim-coluna-col-9-->
 
             <div class="col-lg-4 col-md-12">
-
-                    @cannot('osc')
-                    <div class="card bg-success text-white">
-                        <div class="card-body">
-                            <form action="{{route('pagar')}}" method="POST">
-                                @csrf
-
-                                <div class="form-check ml-3">
-                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios1" value="Patrocinio" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Quero fazer um Patrocinio
-                                        <span data-toggle="tooltip" data-placement="top"
-                                            title="Um patrocinio é amparado pela lei e possui incentivos fiscais">
-                                            <i class="fa fa-question" style="cursor: pointer"></i>
-                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="form-check ml-3">
-                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios2" value="Doacao">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                       Quero fazer uma Doação
-                                            <span data-toggle="tooltip" data-placement="top"
-                                              title="Uma doação é feita sem beneficios fiscais">
-                                                <i class="fa fa-question" style="cursor: pointer"></i>
-                                            </span>
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" class="form-control input-lg" name="valor" placeholder="Digite um valor" id="valor" required>
-                                </div>
-
-                                <input type="hidden" name="projeto_id" value="{{$projeto->id}}">
-                                <input type="hidden" name="osc_id" value="{{$projeto->osc_id}}">
-                                <input type="hidden" name="operacao"  value="Investimento em Projeto">
-                                <button type="submit" class="btn gradient-bg" >Investir </button>
-                            </form>
-                        </div>
-                    </div>
-                        @endcannot
-                        <div class="card-body">
+            <div class="card-body">
                             <div class="circular-progress-bar">
                                 @if( $osc->logo != null)
-                                    <center>  <img src="{{ asset($osc->logo) }}" alt="{{$osc->logo}}" class="mr-3 img-responsive rounded img-thumbnail" style="width:100px;"> </center>
+                                    <center>  <img src="{{ asset($osc->logo) }}" alt="{{$osc->logo}}" class="mr-3 img-responsive rounded" style="width:100px;"> </center>
                                 @else
                                     <center>  <img src="{{asset('/uploads/osc/default-logo.png')}}" alt="Osc sem logo" style="width:100px;">  </center>
                                 @endif
 
                             </div>
                         </div>
+
+
+
+
+
+
+                    @cannot('osc')
+                    <div class="card-body mt-4">
+                     
+                            <form action="{{route('pagar')}}" method="POST">
+                                @csrf
+
+                                <div class="form-check ml-5">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios1" value="Patrocinio" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                         Desejo Patrocinar o projeto
+                                     
+                                    </label>
+                                </div>
+
+                                <div class="form-check ml-5">
+                                    <input class="form-check-input" type="radio" name="tipo" id="exampleRadios2" value="Doacao">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                         Desejo Doar para o projeto
+                                          
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                <center>   <input type="text" class=" input-lg" name="valor" placeholder="Valor (R$)" id="valor" required>   </center>  
+                                </div>
+
+                                <input type="hidden" name="projeto_id" value="{{$projeto->id}}">
+                                <input type="hidden" name="osc_id" value="{{$projeto->osc_id}}">
+                                <input type="hidden" name="operacao"  value="Investimento em Projeto">
+                              <center>  <button type="submit" class="btn gradient-bg" >Investir </button> </center>
+                            </form>
+                     
+                    </div>
+                        @endcannot
+                        
 
 
             </div>

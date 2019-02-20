@@ -5,7 +5,7 @@
     <div class="container" style="margin-top:20px; padding:20px">
         <div class="row row justify-content-center">
             <div class="col-md-12">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card mb-3" style="max-width: 18rem;">
                     <div class="card-header">Total Investido: R$ {{ $data->where('mp_status','==','approved')->sum('valor_investimento') }}</div>
                 </div>
 
