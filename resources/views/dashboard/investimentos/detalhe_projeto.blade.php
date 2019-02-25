@@ -106,6 +106,13 @@
                                     </label>
                                 </div>
 
+
+            <div class="col-lg-3 col-md-12">
+                <div class="">
+                    <div class="card-body">
+                        <div class="circular-progress-bar">
+                       
+
                                 <div class="form-group">
                                 <center>   <input type="text" class=" input-lg" name="valor" placeholder="Valor (R$)" id="valor" required>   </center>  
                                 </div>
@@ -114,11 +121,10 @@
                                 <input type="hidden" name="osc_id" value="{{$projeto->osc_id}}">
                                 <input type="hidden" name="operacao"  value="Investimento em Projeto">
                               <center>  <button type="submit" class="btn gradient-bg" >Investir </button> </center>
-                            </form>
-                     
+                            </form>                     
+                        </div>
                     </div>
-                        @endcannot
-                        
+                        @endcannot                      
 
 
             </div>

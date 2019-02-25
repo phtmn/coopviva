@@ -70,8 +70,7 @@ class CheckoutController extends Controller
         # Create a payer object
         $payer          = new \MercadoPago\Payer();
         $payer->email   = $investimento->usuario()->email;
-        $payer->name    = $investimento->usuario()->name;
-        $payer->
+        $payer->name    = $investimento->usuario()->name;        
 
         # Setting preference properties
         $preference->items = array($item);

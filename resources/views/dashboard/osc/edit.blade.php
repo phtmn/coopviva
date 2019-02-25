@@ -11,7 +11,7 @@
     
     <div class="col-md-12">
      
-        
+    
           
           
             <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
@@ -202,8 +202,15 @@
                 </div>
                      
                  </div>
+
+
+              
                  </div>
          
+               
+               
+                
+
 
         <div class="tab-pane fade " id="pills-descricao" role="tabpanel" aria-labelledby="pills-descricao-tab">
             <div class="row">
