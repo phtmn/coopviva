@@ -1,13 +1,9 @@
 <?php
-Auth::routes(['verify'=>true]);
-Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
-//Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW
-Route::view('/','site.index', ['active' => 'home']);
-Route::view('/sobre', 'site.paginas.sobre', ['active' => 'sobre'])->name('sobre_nos');
-Route::view('/agenda2030', 'site.paginas.agenda2030', ['active' => 'agenda2030'])->name('agenda_2030');
-Route::view('/oscs','site.osc.index', ['active' => 'oscs'])->name('oscs');
-Route::view('/termodeuso', 'site.paginas.termouso')->name('termo');
+Auth::routes(['verify'=>true]);
+
+Route::view('/','site.index');
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 //Rotas para manutenção de cadastros-logins
 Route::view('/cadastro','site.cadastro.cadastro',['active'=>'cadastro'])->name('site.cadastro');
