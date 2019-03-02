@@ -1,7 +1,6 @@
-@extends('site.master')
+@extends('layouts.site')
 
-
-@section('content')
+@section('conteudo_principal')
 
 <div class="swiper-container ">
         <div class="swiper-wrapper">

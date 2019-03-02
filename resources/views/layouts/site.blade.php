@@ -25,7 +25,7 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
             <a class="navbar-brand mr-lg-5" href="{{url('/')}}">
-                <img src="{{asset('vendor/argon-site/assets/img/brand/white.png')}}">
+                <img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 108px; height: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -101,7 +101,7 @@
                 <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                     <li class="nav-item">
                         <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
-                            <i class="fa fa-facebook-square"></i>
+                            <i class="fa fa-facebook"></i>
                             <span class="nav-link-inner--text d-lg-none">Facebook</span>
                         </a>
                     </li>
@@ -113,23 +113,37 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
-                            <i class="fa fa-twitter-square"></i>
+                            <i class="fa fa-whatsapp"></i>
                             <span class="nav-link-inner--text d-lg-none">Twitter</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Star us on Github">
-                            <i class="fa fa-github"></i>
-                            <span class="nav-link-inner--text d-lg-none">Github</span>
+                        <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                            <i class="fa fa-envelope"></i>
+                            <span class="nav-link-inner--text d-lg-none">Twitter</span>
                         </a>
                     </li>
+     
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                            <i class="fa fa-map-pin"></i>
+                            <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                        </a>
+                    </li>
+                   
                     <li class="nav-item d-none d-lg-block ml-lg-4">
                         @guest
+                            
                             <a href="{{route('login')}}"class="btn btn-neutral btn-icon">
-                                <span class="btn-inner--icon">
-                                  <i class="fa fa-sign-in mr-2"></i>
-                                </span>
-                                <span class="nav-link-inner--text">Entrar</span>
+                                
+                                <span class="nav-link-inner--text">ENTRAR</span>
+                            </a>
+
+                            
+
+                            <a href="{{route('register')}}"class="btn btn-neutral btn-icon">
+                               
+                                <span class="nav-link-inner--text">Cadastre-se</span>
                             </a>
                         @else
                             <a href="{{route('dashboard.index')}}" target="_blank" class="btn btn-neutral btn-icon">

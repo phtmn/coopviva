@@ -1,7 +1,7 @@
 <div class="position-relative">
     <!-- shape Hero -->
     <section class="section section-lg section-shaped pb-250">
-        <div class="shape shape-style-1 shape-default">
+	<div class="shape shape-style-1 bg-gradient-success">
             <span></span>
             <span></span>
             <span></span>
@@ -16,19 +16,19 @@
             <div class="col px-0">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="display-3  text-white">A beautiful Design System
-                            <span>completed with examples</span>
+                        <h1 class="display-3  text-white">Venha vivenciar...
+                        <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
-                        <p class="lead  text-white">The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+                        <p class="lead  text-white">O <b>Coopviva</b> é uma ferramenta inovadora que reúne técnicas especificas de monitoramento de dados e conexão entre os stakeholders.</p>
                         <div class="btn-wrapper">
                             <a href="{{route('register')}}" class="btn btn-info btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-handshake-o"></i></span>
                                 <span class="btn-inner--text">Seja um investidor</span>
                             </a>
-                            <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                           <!-- <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-registered"></i></span>
-                                <span class="btn-inner--text">Cadastre-se</span>
-                            </a>
+                                <span class="nav-link-inner--text">Cadastre-se</span>
+                            </a> -->
                         </div>
                     </div>
                 </div>
