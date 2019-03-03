@@ -29,7 +29,7 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle">
+                                     <!--   <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle"> -->
                                     </a>
                                 </div>
                             </div>
@@ -42,12 +42,12 @@
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading">$ 22</span>
+                                        <span class="heading">R$ 22</span>
                                         <span class="description">Investimentos</span>
                                     </div>
                                     <div>
                                         <span class="heading">10</span>
-                                        <span class="description">Osc</span>
+                                        <span class="description">OSC's</span>
                                     </div>
                                     <div>
                                         <span class="heading">89</span>
@@ -146,8 +146,8 @@
                                 {!! Form::text('complemento',$endereco->complemento,['class'=> 'form-control']) !!}
                             </div>
                         </div>
-                        <div class="form-group mb-5 pull-right">
-                            <input type="submit" value="Salvar" class="btn gradient-bg">
+                        <div class="form-group mb-5 pull-center">
+                        <center>  <input type="submit" value="Salvar" class="btn gradient-bg"> </center>
                         </div>
                     </div>
                     {!! Form::close() !!}

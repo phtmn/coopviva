@@ -2,15 +2,13 @@
     <div class="container">
         <div class="row row-grid align-items-center">
             <div class="col-md-6 order-md-2">
-                <img src="../assets/img/theme/promo-1.png" class="img-fluid floating">
+                <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="img-fluid floating">
             </div>
             <div class="col-md-6 order-md-1">
                 <div class="pr-md-5">
-                    <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                        <i class="ni ni-settings-gear-65"></i>
-                    </div>
-                    <h3>Awesome features</h3>
-                    <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+                    
+                    <h3>Sobre Nós</h3>
+                    <p>A Rede de Conexão é uma agência, que tem como foco principal a valorização de ações sustentáveis pautada na criatividade, empreendedorismo e na transformação social. Atuamos com uma equipe multidisciplinar, há 16 anos e oportunizamos às pessoas, organizações das mais diversas esferas e a quem mais se interessar um encontro estratégico que possibilite a todos os envolvidos o desenvolvimento de projetos inovadores e singulares.</p>
                     <ul class="list-unstyled mt-5">
                         <li class="py-2">
                             <div class="d-flex align-items-center">
@@ -20,7 +18,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h6 class="mb-0">Carefully crafted components</h6>
+                                    <h6 class="mb-0">Lei Rouanet - Ministério da Cultura</h6>
                                 </div>
                             </div>
                         </li>
@@ -32,22 +30,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h6 class="mb-0">Amazing page examples</h6>
+                                    <h6 class="mb-0">Pronon e Pronas - Ministério da Saúde</h6>
                                 </div>
                             </div>
                         </li>
-                        <li class="py-2">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <div class="badge badge-circle badge-success mr-3">
-                                        <i class="ni ni-satisfied"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Super friendly support team</h6>
-                                </div>
-                            </div>
-                        </li>
+                       
+                       
                     </ul>
                 </div>
             </div>

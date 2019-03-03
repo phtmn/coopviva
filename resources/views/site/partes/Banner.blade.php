@@ -15,17 +15,17 @@
         <div class="container py-lg-md d-flex">
             <div class="col px-0">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-10">
                         <h1 class="display-3  text-white">Venha vivenciar...
                         <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
-                        <p class="lead  text-white">O <b>Coopviva</b> é uma ferramenta inovadora que reúne técnicas especificas de monitoramento de dados e conexão entre os stakeholders.</p>
+                        <p class="lead  text-white">O <strong><b>COOPVIVA</b></strong> é uma ferramenta de colaboração viva e transversal. Seus stakeholders estarão, ainda mais, engajados e alinhados em seus projetos ou causa, de forma planejada, estruturada e transparente.</p>
                         <div class="btn-wrapper">
-                            <a href="{{route('register')}}" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                          <!--  <a href="{{route('register')}}" class="btn btn-success btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-handshake-o"></i></span>
                                 <span class="btn-inner--text">Seja um investidor</span>
                             </a>
-                           <!-- <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                          <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-registered"></i></span>
                                 <span class="nav-link-inner--text">Cadastre-se</span>
                             </a> -->

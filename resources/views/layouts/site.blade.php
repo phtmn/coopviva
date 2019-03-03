@@ -8,7 +8,7 @@
     <meta name="author" content="Creative Tim">
     <title>{{ env('APP_NAME') ?? 'Coopviva' }}</title>
     <!-- Favicon -->
-    <link href="{{asset('vendor/argon-site/assets/img/brand/favicon.png')}}" rel="icon" type="image/png">
+    <link href="{{asset('vendor/site/images/favicon.png')}}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -25,7 +25,7 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
             <a class="navbar-brand mr-lg-5" href="{{url('/')}}">
-                <img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 108px; height: auto;">
+                <img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="{{url('/')}}">
-                                <img src="{{asset('vendor/argon-site/assets/img/brand/blue.png')}}">
+                            <img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -55,21 +55,17 @@
                         <div class="dropdown-menu dropdown-menu-xl">
                             <div class="dropdown-menu-inner">
                                 <a href="#" class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                                        <i class="ni ni-spaceship"></i>
-                                    </div>
+                                <img src="{{asset('vendor/argon-site/assets/img/brand/agenda2030.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
                                     <div class="media-body ml-3">
-                                        <h6 class="heading text-primary mb-md-1">Agenda 2030</h6>
-                                        <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss, change brand colors and more.</p>
+                                        <h6 class="heading text-primary mb-md-1">Plataforma Agenda 2030</h6>
+                                        <p class="description d-none d-md-inline-block mb-0">Acelerando as transformações para a Agenda 2030 no Brasil.</p>
                                     </div>
                                 </a>
                                 <a href="#" class="media d-flex align-items-center">
-                                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                                        <i class="ni ni-palette"></i>
-                                    </div>
+                                <img src="{{asset('vendor/argon-site/assets/img/brand/agenda2030.png')}}" alt="..:: COOPVIVA ::.." style="width: 108px; height: auto;">
                                     <div class="media-body ml-3">
-                                        <h6 class="heading text-primary mb-md-1">Sobre nós</h6>
-                                        <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons and the grid system we used for Argon.</p>
+                                        <h6 class="heading text-primary mb-md-1">Rede de Conexão</h6>
+                                        <p class="description d-none d-md-inline-block mb-0">Inpiramos e geramos conexões sustentáveis.</p>
                                     </div>
                                 </a>
                                 <a href="#" class="media d-flex align-items-center">
@@ -77,7 +73,7 @@
                                         <i class="ni ni-ui-04"></i>
                                     </div>
                                     <div class="media-body ml-3">
-                                        <h5 class="heading text-warning mb-md-1">Blog</h5>
+                                        <h5 class="heading text-warning mb-md-1"> Sim eu Quero</h5>
                                         <p class="description d-none d-md-inline-block mb-0">Browse our 50 beautiful handcrafted components offered in the Free version.</p>
                                     </div>
                                 </a>
@@ -90,10 +86,8 @@
                             <span class="nav-link-inner--text">Saiba Mais</span>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="../examples/landing.html" class="dropdown-item">Landing</a>
-                            <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-                            <a href="../examples/login.html" class="dropdown-item">Login</a>
-                            <a href="../examples/register.html" class="dropdown-item">Register</a>
+                            <a href="../examples/landing.html" class="dropdown-item">Sobre Nós</a>
+                            <a href="../examples/profile.html" class="dropdown-item">Termo de Uso</a>                        
                         </div>
                     </li>
                 </ul>
@@ -134,7 +128,7 @@
                     <li class="nav-item d-none d-lg-block ml-lg-4">
                         @guest
                             
-                            <a href="{{route('login')}}"class="btn btn-neutral btn-icon">
+                            <a href="{{route('login')}}"class="btn btn-success btn-icon">
                                 
                                 <span class="nav-link-inner--text">ENTRAR</span>
                             </a>
@@ -151,7 +145,7 @@
                                     <span class="btn-inner--icon">
                                       <i class="fa fa-dashboard mr-2"></i>
                                     </span>
-                                    <span class="nav-link-inner--text">Painel Investidor</span>
+                                    <span class="nav-link-inner--text">Painel do Investidor</span>
                                 </a>
                             @else
                                 <a href="{{route('osc.dashboard')}}" class="btn btn-outline-neutral btn-icon">
@@ -186,7 +180,7 @@
 
 </main>
 <footer class="footer has-cards">
-    <div class="container container-lg">
+ <!--   <div class="container container-lg">
         <div class="row">
             <div class="col-md-6 mb-5 mb-md-0">
                 <div class="card card-lift--hover shadow border-0">
@@ -195,7 +189,14 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6 mb-5 mb-lg-0">
+            <div class="col-md-3 mb-5 mb-lg-0">
+                <div class="card card-lift--hover shadow border-0">
+                    <a href="#" title="Profile Page">
+                        <img src="{{asset('vendor/argon-site/assets/img/theme/profile.jpg')}}" class="card-img">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5 mb-lg-0">
                 <div class="card card-lift--hover shadow border-0">
                     <a href="#" title="Profile Page">
                         <img src="{{asset('vendor/argon-site/assets/img/theme/profile.jpg')}}" class="card-img">
@@ -203,9 +204,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="container">
-        <div class="row row-grid align-items-center my-md">
+      <!--  <div class="row row-grid align-items-center my-md">
             <div class="col-lg-6">
                 <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
                 <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
@@ -224,28 +225,31 @@
                     <i class="fa fa-github"></i>
                 </a>
             </div>
-        </div>
+        </div> -->
         <hr>
         <div class="row align-items-center justify-content-md-between">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="copyright">
-                    &copy; 2018
-                    <a href="#" target="_blank">Creative Tim</a>.
+                    &copy; 2019
+                    <a href="#" target="_blank">COOPVIVA</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <ul class="nav nav-footer justify-content-end">
                     <li class="nav-item">
-                        <a href="#" class="nav-link" target="_blank">Creative Tim</a>
+                        <a href="#" class="nav-link" target="_blank">Rede de Conexão</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" target="_blank">About Us</a>
+                        <a href="#" class="nav-link" target="_blank">Agenda 2030</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" target="_blank">Blog</a>
+                        <a href="#" class="nav-link" target="_blank">Sim EU QUERO</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" target="_blank">MIT License</a>
+                        <a href="#" class="nav-link" target="_blank">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" target="_blank">Termo de Uso</a>
                     </li>
                 </ul>
             </div>
