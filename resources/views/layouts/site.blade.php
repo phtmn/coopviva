@@ -146,12 +146,21 @@
                                 <span class="nav-link-inner--text">Cadastre-se</span>
                             </a>
                         @else
-                            <a href="{{route('dashboard.index')}}" target="_blank" class="btn btn-neutral btn-icon">
+                            @if(auth()->user()->tipo_usuario == 'investidor')
+                                <a href="{{route('perfil.index')}}" class="btn btn-neutral btn-icon">
+                                    <span class="btn-inner--icon">
+                                      <i class="fa fa-dashboard mr-2"></i>
+                                    </span>
+                                    <span class="nav-link-inner--text">Painel Investidor</span>
+                                </a>
+                            @else
+                                <a href="{{route('osc.dashboard')}}" class="btn btn-outline-neutral btn-icon">
                                 <span class="btn-inner--icon">
                                   <i class="fa fa-dashboard mr-2"></i>
                                 </span>
-                                <span class="nav-link-inner--text">Painel Investidor</span>
-                            </a>
+                                    <span class="nav-link-inner--text">Painel Osc</span>
+                                </a>
+                            @endif
                             <a href="{{route('logout')}}" target="_blank" class="btn btn-neutral btn-icon"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" data-toggle="tooltip" title="Sair do Sistema">
@@ -250,6 +259,7 @@
 <script src="{{asset('vendor/argon-site/assets/vendor/headroom/headroom.min.js')}}"></script>
 <!-- Argon JS -->
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
+@yield('js')
 </body>
 
 </html>
