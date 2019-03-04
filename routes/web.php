@@ -34,12 +34,11 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
     Route::view('/','layouts.dashboard')->name('osc.dashboard');
 
-    
-
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
     Route::resource('galeria','GaleriaController');
     Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
+
     Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');
     Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
     Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');

@@ -15,22 +15,28 @@ use Illuminate\Support\Facades\DB;
 class OscController extends Controller
 {
 
-    public function create(){
+    public function index(){
 
+        $osc = OSC::where('user_id',Auth::user()->id)->count();
+        if($osc > 0){
+            return view('osc.painel');
+        }
+        return view('osc.bemvindo');
+    }
+
+
+    public function create(){
         $osc = OSC::where('user_id',Auth::user()->id)->first();
         if($osc){
-            return view('dashboard.osc.edit',[
-                'tab'       => 'osc',
+            return view('osc.edit',[
                 'osc'       => $osc,
-                'banco'     => $osc->banco(),
                 'endereco'  => $osc->endereco(),
-                'metas'     => $osc->metas(),
+                'banco'     => $osc->banco(),
             ]);
         }
-        return view('dashboard.osc.create',[
-            'tab'       => 'osc',
-        ]);
+        return view('osc.create');
     }
+
 
     public function store(Request $request){
             //dd($request->all());

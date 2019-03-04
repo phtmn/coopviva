@@ -24,8 +24,7 @@ class ProjetosController extends Controller
             return redirect()->route('osc.create');
         }
         //dd($osc);
-        return view('dashboard.projetos.index',[
-            'tab'   => 'lista-projetos',
+        return view('osc.projetos.index',[
             'data'  => $osc->projetos()->get()
         ]);
     }
@@ -37,7 +36,7 @@ class ProjetosController extends Controller
             return redirect()->route('osc.create');
         }
 
-        return view('dashboard.projetos.create',[
+        return view('osc.projetos.create',[
             'tab'   =>  'projetos'
         ]);
     }

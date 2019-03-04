@@ -149,7 +149,7 @@
                                     <span class="nav-link-inner--text">Painel do Investidor</span>
                                 </a>
                             @else
-                                <a href="{{route('osc.dashboard')}}" class="btn btn-neutral btn-icon">
+                                <a href="{{route('osc.index')}}" class="btn btn-neutral btn-icon">
                                 <span class="btn-inner--icon">
                                   <i class="ni ni-tv-2 mr-2"></i>
                                 </span>
