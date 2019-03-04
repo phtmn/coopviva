@@ -21,11 +21,11 @@
                         </h1>
                         <p class="lead  text-white">O <strong><b>COOPVIVA</b></strong> é uma ferramenta de colaboração viva e transversal. Seus stakeholders estarão, ainda mais, engajados e alinhados em seus projetos ou causa, de forma planejada, estruturada e transparente.</p>
                         <div class="btn-wrapper">
-                            <a href="{{route('quero_investir')}}" class="btn btn-dark btn-icon mb-3 mb-sm-0">
+                            <!--  <a href="{{route('quero_investir')}}" class="btn btn-dark btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-handshake-o"></i></span>
                                 <span class="btn-inner--text">Investir Agora</span>
                             </a>
-                            <!--
+                           
                           <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-registered"></i></span>
                                 <span class="nav-link-inner--text">Cadastre-se</span>

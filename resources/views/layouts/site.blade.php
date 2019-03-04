@@ -129,7 +129,7 @@
                     <li class="nav-item d-none d-lg-block ml-lg-4">
                         @guest
                             
-                            <a href="{{route('login')}}"class="btn btn-success btn-icon">
+                            <a href="{{url('entrar')}}"class="btn btn-success btn-icon">
                                 
                                 <span class="nav-link-inner--text">ENTRAR</span>
                             </a>
