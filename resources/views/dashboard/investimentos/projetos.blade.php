@@ -1,12 +1,8 @@
-
-
-<div class="projetos mt-2">
-    <table class="table  table-condensed">
+    <table class="table">
         <thead>
             <tr>
                 <th>Nome do Projeto</th>
                 <th>Valor (R$)</th>
-                
                 <th></th>
             </tr>
         </thead>
@@ -24,5 +20,3 @@
             @endforelse
         </tbody>
     </table>
-
-</div>

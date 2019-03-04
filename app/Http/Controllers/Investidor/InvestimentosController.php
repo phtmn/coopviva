@@ -14,29 +14,27 @@ class InvestimentosController extends Controller
     public function index(){
 
         $data = Investimento::all();
-        return view('dashboard.investimentos.index',[
-            'data'=> $data,
-            'tab' => 'investimentos'
+
+        return view('investidor.investimentos.index',[
+            'data'=> $data
         ]);
 
     }
 
-    public function oscs(){
+    public function lista_oscs(){
         $data = DB::table('oscs')->get();
-        return view('dashboard.investimentos.lista_oscs',[
-            'data' => $data,
-            'tab' => 'investir'
+        return view('investidor.investimentos.lista_oscs',[
+            'data' => $data
         ]);
     }
 
-    public function detalhe($id){
+    public function detalhe_oscs($id){
 
-        return view('dashboard.investimentos.detalhe_osc',[
+        return view('investidor.investimentos.landing_osc',[
             'osc'       => Osc::find($id),
             'metas'     => DB::table('osc_metas')->where('osc_id',$id)->get(),
             'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
-            'projetos'  => DB::table('projetos')->where('osc_id',$id)->get(),
-            'tab'       => 'investir'
+            'projetos'  => DB::table('projetos')->where('osc_id',$id)->get()
         ]);
     }
 

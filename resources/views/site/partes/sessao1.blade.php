@@ -1,4 +1,5 @@
-<section class="section section-lg pt-lg-0 mt--200">
+<section class="section section-lg pt-lg-0 mt--300">
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12">

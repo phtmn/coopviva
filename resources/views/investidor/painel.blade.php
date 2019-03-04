@@ -28,14 +28,34 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                     <!--   <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle"> -->
+                                     <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    <a href="{{route('perfil.create')}}" class="btn btn-sm btn-info mr-4">Perfil</a>
-                                    <a href="{{ route('listar.oscs') }}" class="btn btn-sm btn-success float-right">Investir</a>
+                                    <a href="{{ route('perfil.create') }}" class="btn btn-sm btn-info">Perfil</a>
+                                    <a href="{{ route('quero_investir')  }}" class="btn btn-sm btn-success ">Investir</a>
+                                    <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
+
+                                    <!--Icones como menus -->
+                                    {{--<ul class="nav nav-pills nav-pills-circle mb-3" id="tabs_2" role="tablist">--}}
+                                        {{--<li class="nav-item">--}}
+                                            {{--<a class="nav-link rounded-circle active" id="home-tab" data-toggle="tooltip" data-title="teste" href="#tabs_2_1" role="tab" aria-controls="home" aria-selected="true">--}}
+                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-money-coins"></i></span>--}}
+                                            {{--</a>--}}
+                                        {{--</li>--}}
+                                        {{--<li class="nav-item">--}}
+                                            {{--<a class="nav-link" id="profile-tab" data-toggle="tab" href="#tabs_2_2" role="tab" aria-controls="profile" aria-selected="false">--}}
+                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-chat-round"></i></span>--}}
+                                            {{--</a>--}}
+                                        {{--</li>--}}
+                                        {{--<li class="nav-item">--}}
+                                            {{--<a class="nav-link" id="contact-tab" data-toggle="tab" href="#tabs_2_3" role="tab" aria-controls="contact" aria-selected="false">--}}
+                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-cloud-download-95"></i></span>--}}
+                                            {{--</a>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
@@ -55,13 +75,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-5">
-                            <h3>{{ auth()->user()->name }}
-                                <span class="font-weight-light">, 27</span>
-                            </h3>
-                            <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>João Pessoa, Paraíba</div>
-                            <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>Desenvolvedor - {{auth()->user()->email}}</div>
-                            <div><i class="ni education_hat mr-2"></i>Investidor PJ</div>
+                        <div class="mt-5">
+                            @yield('conteudo_painel')
                         </div>
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">

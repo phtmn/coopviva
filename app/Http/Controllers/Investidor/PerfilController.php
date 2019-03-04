@@ -15,7 +15,7 @@ class PerfilController extends Controller
 
     public function index(){
 
-       return view('dashboard.perfil.index');
+       return view('investidor.perfil.index');
     }
 
     public function create(){
@@ -23,14 +23,14 @@ class PerfilController extends Controller
         $perfil = Perfil::where('user_id',Auth::user()->id)->first();
 
         if($perfil){
-            return view('dashboard.perfil.edit',[
+            return view('investidor.perfil.edit',[
                 'tab'       => 'perfil',
                 'perfil'    => $perfil,
                 'endereco'  => $perfil->endereco(),
                 'banco'     => $perfil->banco()
             ]);
         }
-        return view('dashboard.perfil.create',[
+        return view('investidor.perfil.create',[
             'tab'       => 'perfil',
         ]);
     }

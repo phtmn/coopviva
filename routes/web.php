@@ -9,10 +9,8 @@ Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 Route::view('/cadastro','site.cadastro.cadastro',['active'=>'cadastro'])->name('site.cadastro');
 Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.login');
 Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
-
-
-
-
+Route::view('/quero_inv','investidor.investimentos.lista_oscs')->name('quero_investir')->middleware('auth');
+Route::view('/landing_osc','investidor.investimentos.landing_osc')->name('landing');
 
 //Grupo de Rotas para Investidor
 Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
@@ -20,13 +18,12 @@ Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor',
     Route::resource('perfil','PerfilController');
     Route::resource('investimentos','InvestimentosController');
 
-    Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
+    Route::get('/quero_investir','InvestimentosController@lista_oscs')->name('quero_investir');
+    Route::get('/quero_investir/{id}','InvestimentosController@detalhe_oscs')->name('detalhe.osc');
+
+
     Route::get('/investir/{id}','Financeiro\CheckoutController@formIncentivar')->name('investir');
     Route::post('/pagar','Financeiro\CheckoutController@pagar')->name('pagar');
-
-    Route::get('/quero_investir','InvestimentosController@oscs')->name('listar.oscs');
-    Route::get('/detalhes/{id}','InvestimentosController@detalhe')->name('detalhe.osc');
-
     Route::get('/investimento/d/{id}','InvestimentosController@cancelar')->name('investimento.cancelar');
     Route::get('/investimento/{status}','InvestimentosController@callback');
 
@@ -42,7 +39,7 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
     Route::resource('galeria','GaleriaController');
-
+    Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
     Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');
     Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
     Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');

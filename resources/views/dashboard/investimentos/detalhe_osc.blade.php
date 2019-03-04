@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo_principal')
-    
+
     @include('layouts.menu_lateral')
 
 <div class="container mt-4">
