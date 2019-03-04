@@ -9,11 +9,11 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                 <div class="px-4">
-                    <img src="../assets/img/theme/team-1-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+                    <img src="{{asset('vendor/site/images/alessandra.jpg')}}" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                     <div class="pt-4 text-center">
                         <h5 class="title">
-                            <span class="d-block mb-1">Ryan Tompson</span>
-                            <small class="h6 text-muted">Web Developer</small>
+                            <span class="d-block mb-1">Alessandra Santos</span>
+                            <small class="h6 text-muted">Fundadora Rede de Conexão</small>
                         </h5>
                         <div class="mt-3">
                             <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
@@ -31,11 +31,11 @@
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                 <div class="px-4">
-                    <img src="../assets/img/theme/team-2-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+                    <img src="{{asset('vendor/site/images/bernardo.jpg')}}" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                     <div class="pt-4 text-center">
                         <h5 class="title">
-                            <span class="d-block mb-1">Romina Hadid</span>
-                            <small class="h6 text-muted">Marketing Strategist</small>
+                            <span class="d-block mb-1">Bernardo Lopes</span>
+                            <small class="h6 text-muted">Co-Fundador Rede de Conexão</small>
                         </h5>
                         <div class="mt-3">
                             <a href="#" class="btn btn-primary btn-icon-only rounded-circle">

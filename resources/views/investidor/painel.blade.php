@@ -28,15 +28,17 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                     <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle">
+                                    <!-- <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle"> -->
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
+                                    
+                                
                                     <a href="{{ route('perfil.create') }}" class="btn btn-sm btn-info">Perfil</a>
                                     <a href="{{ route('quero_investir')  }}" class="btn btn-sm btn-success ">Investir</a>
-                                    <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
+                                  
 
                                     <!--Icones como menus -->
                                     {{--<ul class="nav nav-pills nav-pills-circle mb-3" id="tabs_2" role="tablist">--}}
@@ -60,9 +62,13 @@
                             </div>
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
-                                    <div>
+                                <div> 
+                                    {{--   <span class="heading">0%</span> --}}
+                                        {{--  <a href="{{ route('perfil.create') }}" class="btn btn-sm btn-info">Perfil</a> --}}
+                                        {{-- </div> --}}
+                                            {{-- <div> --}}
                                         <span class="heading">R$ 22</span>
-                                        <span class="description text-success">Investimentos</span>
+                                        <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
                                     </div>
                                     <div>
                                         <span class="heading">10</span>
@@ -80,8 +86,8 @@
                         </div>
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
-                                <div class="col-lg-9">
-                                    <p>An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</p>
+                                <div class="col-lg-6">
+                                    <p>Aqui você tem a oportunidade de participar do maior programa de VOLUNTARIADO para ações sustentáveis.</p>
                                 </div>
                             </div>
                         </div>
