@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Investidor;
+namespace App\Http\Controllers\Osc;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

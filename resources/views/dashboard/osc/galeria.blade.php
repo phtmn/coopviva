@@ -1,9 +1,9 @@
-@extends('site.master')
+@extends('layouts.site')
 
 
-@section('content')
+@section('conteudo_principal')
 
-    @include('dashboard.menu')
+@include('layouts.menu_lateral')
 
     <div class="container" style="margin-top:20px; padding:20px">
     <div class="row row justify-content-center">

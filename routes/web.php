@@ -11,6 +11,9 @@ Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.log
 Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
 
 
+
+
+
 //Grupo de Rotas para Investidor
 Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
 
@@ -34,11 +37,13 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
     Route::view('/','layouts.dashboard')->name('osc.dashboard');
 
-    Route::resource('osc','Dashboard\OscController');
-    Route::resource('projetos','Dashboard\ProjetosController');
-    Route::resource('galeria','Dashboard\GaleriaController');
+    
 
-    Route::get('/objetivos-ods','Dashboard\MetasController@metas')->name('osc.objetivos');
+    Route::resource('osc','OscController');
+    Route::resource('projetos','ProjetosController');
+    Route::resource('galeria','GaleriaController');
+
+    Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');
     Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
     Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');
     Route::get('/meta/remover/{id}','Dashboard\MetasController@removerMeta')->name('meta.remover');
@@ -47,7 +52,7 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
     Route::get('projeto/i/{id}','Dashboard\ProjetosController@mudarInativo')->name('projeto.inativo');
 
-    Route::get('/detalhe','Dashboard\OscController@landingPage')->name('osc.landingPage');
+    Route::get('/detalhe','OscController@landingPage')->name('osc.landingPage');
     Route::get('/detalhe/projeto/{id}','Dashboard\OscController@landingPageProjeto')->name('projeto.landingPage');
 
 });

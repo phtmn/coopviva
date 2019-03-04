@@ -1,8 +1,8 @@
-@extends('site.master')
+@extends('layouts.site')
 
-@section('content')
-
-    @include('dashboard.menu')
+@section('conteudo_principal')
+    
+    @include('layouts.menu_lateral')
 
 <div class="container mt-4">
     <div class="row">

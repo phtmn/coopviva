@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Investidor;
+namespace App\Http\Controllers\Osc;
 
 
 use App\Models\Osc_Metas;

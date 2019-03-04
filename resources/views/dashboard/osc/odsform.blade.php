@@ -1,5 +1,5 @@
-@extends('site.master')
-@section('content')
+@extends('layouts.site')    
+@section('conteudo_principal')
 
     @include('dashboard.menu')
 

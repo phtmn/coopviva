@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>{{ env('APP_NAME') ?? 'Coopviva' }}</title>
+    <title>.:: COOPVIVA ::. </title>
     <!-- Favicon -->
-    <link href="{{asset('vendor/site/images/favicon.png')}}" rel="icon" type="image/png">
+    <link href="{{asset('vendor/site/images/favicon.ico')}}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Icons -->
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="{{url('/')}}">
-                            <img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
+                            <img src="{{ asset('vendor/site/images/coopvidapreta_logo.png') }}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -55,19 +55,20 @@
                         <div class="dropdown-menu dropdown-menu-xl">
                             <div class="dropdown-menu-inner">
                                 <a href="#" class="media d-flex align-items-center">
+                                <img src="{{asset('vendor/argon-site/assets/img/brand/rede_c.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
+                                    <div class="media-body ml-3">
+                                        <h6 class="heading text-default mb-md-1">Rede de Conexão</h6>
+                                        <p class="description d-none d-md-inline-block mb-0">Inpiramos e geramos conexões sustentáveis.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media d-flex align-items-center">
                                 <img src="{{asset('vendor/argon-site/assets/img/brand/agenda2030.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
                                     <div class="media-body ml-3">
                                         <h6 class="heading text-primary mb-md-1">Plataforma Agenda 2030</h6>
                                         <p class="description d-none d-md-inline-block mb-0">Acelerando as transformações para a Agenda 2030 no Brasil.</p>
                                     </div>
                                 </a>
-                                <a href="#" class="media d-flex align-items-center">
-                                <img src="{{asset('vendor/argon-site/assets/img/brand/agenda2030.png')}}" alt="..:: COOPVIVA ::.." style="width: 108px; height: auto;">
-                                    <div class="media-body ml-3">
-                                        <h6 class="heading text-primary mb-md-1">Rede de Conexão</h6>
-                                        <p class="description d-none d-md-inline-block mb-0">Inpiramos e geramos conexões sustentáveis.</p>
-                                    </div>
-                                </a>
+                              
                                 <a href="#" class="media d-flex align-items-center">
                                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                                         <i class="ni ni-ui-04"></i>
@@ -83,12 +84,12 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                             <i class="ni ni-collection d-lg-none"></i>
-                            <span class="nav-link-inner--text">Saiba Mais</span>
+                            <span class="nav-link-inner--text">Termo de Uso</span>
                         </a>
-                        <div class="dropdown-menu">
+                        <!--<div class="dropdown-menu">
                             <a href="../examples/landing.html" class="dropdown-item">Sobre Nós</a>
                             <a href="../examples/profile.html" class="dropdown-item">Termo de Uso</a>                        
-                        </div>
+                        </div> -->
                     </li>
                 </ul>
 
@@ -120,7 +121,7 @@
      
                     <li class="nav-item">
                         <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
-                            <i class="fa fa-map-pin"></i>
+                            <i class="ni ni-pin-3"></i>
                             <span class="nav-link-inner--text d-lg-none">Twitter</span>
                         </a>
                     </li>
@@ -143,16 +144,16 @@
                             @if(auth()->user()->tipo_usuario == 'investidor')
                                 <a href="{{route('perfil.index')}}" class="btn btn-neutral btn-icon">
                                     <span class="btn-inner--icon">
-                                      <i class="fa fa-dashboard mr-2"></i>
+                                      <i class="ni ni-tv-2 mr-2"></i>
                                     </span>
                                     <span class="nav-link-inner--text">Painel do Investidor</span>
                                 </a>
                             @else
-                                <a href="{{route('osc.dashboard')}}" class="btn btn-outline-neutral btn-icon">
+                                <a href="{{route('osc.dashboard')}}" class="btn btn-neutral btn-icon">
                                 <span class="btn-inner--icon">
-                                  <i class="fa fa-dashboard mr-2"></i>
+                                  <i class="ni ni-tv-2 mr-2"></i>
                                 </span>
-                                    <span class="nav-link-inner--text">Painel Osc</span>
+                                    <span class="nav-link-inner--text">Painel da OSC</span>
                                 </a>
                             @endif
                             <a href="{{route('logout')}}" target="_blank" class="btn btn-neutral btn-icon"
@@ -228,8 +229,8 @@
         </div> -->
         <hr>
         <div class="row align-items-center justify-content-md-between">
-            <div class="col-md-5">
-                <div class="copyright">
+            <div class="col-md-5 ">
+                <div class="copyright text-center text-primary text-xl-left text-muted">
                     &copy; 2019
                     <a href="#" target="_blank">COOPVIVA</a>
                 </div>
@@ -245,9 +246,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" target="_blank">Sim EU QUERO</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" target="_blank">Sobre Nós</a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a href="#" class="nav-link" target="_blank">Termo de Uso</a>
                     </li>

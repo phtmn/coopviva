@@ -35,14 +35,14 @@
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     <a href="{{route('perfil.create')}}" class="btn btn-sm btn-info mr-4">Perfil</a>
-                                    <a href="#" class="btn btn-sm btn-success float-right">Investir</a>
+                                    <a href="{{ route('listar.oscs') }}" class="btn btn-sm btn-success float-right">Investir</a>
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
                                         <span class="heading">R$ 22</span>
-                                        <span class="description">Investimentos</span>
+                                        <span class="description text-success">Investimentos</span>
                                     </div>
                                     <div>
                                         <span class="heading">10</span>

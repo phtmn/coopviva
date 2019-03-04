@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Investidor;
+namespace App\Http\Controllers\Osc;
 
 use App\Models\Endereco;
 use App\Models\Osc;
@@ -103,7 +103,7 @@ class OscController extends Controller
                 return redirect()->back();
 
             } catch (Throwable $t) {
-                Alert::error('Algum Erro ocorrou'.$t->getMessage(), 'Erro')->persistent('Ok');
+                Alert::error('Algum Erro ocorreu'.$t->getMessage(), 'Erro')->persistent('Ok');
                 return redirect()->back();
             }
         },2); return $result;

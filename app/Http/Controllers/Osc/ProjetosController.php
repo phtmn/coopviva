@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Investidor;
+namespace App\Http\Controllers\Osc;
 
 use App\Models\Banco;
 use App\Models\Endereco;
@@ -157,11 +157,7 @@ class ProjetosController extends Controller
 
 
          $projeto->artigo                = $request->artigo;
-<<<<<<< HEAD
          $projeto->valor_meta            = toMoney($request->valor_meta);
-=======
-         //$projeto->valor_meta            = toMoney($request->valor_meta);
->>>>>>> dfac9304ea00501c8f03452f9dc101dabc2d2055
          $projeto->save();
 
         if($projeto){
