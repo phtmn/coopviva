@@ -3,7 +3,7 @@
 
 @section('cabecalho')
 
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
+       <div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
         <!-- Mask -->
         <span class="mask bg-gradient-default opacity-8"></span>
         <!-- Header container -->
@@ -14,11 +14,11 @@
                         <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">
-                                    <i class="ni ni-cloud-upload-96 mr-2"></i>Cadastro</a>
+                                    <i class=" mr-2"></i>Dados Gerais</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">
-                                    <i class="ni ni-bell-55 mr-2"></i>Dados Informativos</a>
+                                    <i class=" mr-2"></i>Descrição</a>
                             </li>
 
                         </ul>
@@ -30,8 +30,7 @@
                         <div class="card-body bg-transparent">
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-                                    <p>Dados Gerais</p>
-                                    <hr>
+                                    
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label for="">Nome Fantasia</label>
@@ -57,11 +56,11 @@
                                             {!! Form::text('cnae',null,['class'=>'form-control','id'=>'cnae']) !!}
                                         </div>
 
-                                        <div class="form-group col-md-5">
+                                        <div class="form-group col-md-4">
                                             <label for="">Responsável Legal</label>
                                             {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
                                         </div>
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-4">
                                             <label for="">E-mail </label>
                                             {!! Form::text('email',null,['class'=>'form-control']) !!}
                                         </div>
@@ -70,7 +69,7 @@
                                             {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                                         </div>
                                     </div>
-                                    <p>Localização e Endereço</p>
+                                    <p class="text-primary">Localização e Endereço</p>
                                     <hr>
                                     <div class="row">
                                         <div class="form-group col-md-3">
@@ -116,7 +115,7 @@
                                         </div>
                                     </div>
 
-                                    <p>Dados Bancários</p>
+                                    <p class="text-primary">Dados Bancários</p>
                                     <hr>
 
                                     <div class="row">
@@ -196,7 +195,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-outline-success">Salvar Dados</button>
+                           <center> <button type="submit" class="btn btn-outline-success">Salvar</button> </center>
                         </div>
                     </div>
                 </div>

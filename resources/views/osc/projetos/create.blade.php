@@ -1,29 +1,17 @@
 @extends('osc.painel')
 
 @section('cabecalho')
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">        <!-- Mask -->
-        <span class="mask bg-gradient-default opacity-8"></span>
+    <div class="header bg-gradient-success pb-8 pt-5 pt-md-8">        <!-- Mask -->
+        
         <div class="container-fluid align-items-center">
-            <div class="col-md-12">
-                <div class="nav-wrapper">
-                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">
-                                <i class="ni ni-cloud-upload-96 mr-2"></i>Cadastro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">
-                                <i class="ni ni-bell-55 mr-2"></i>Dados Informativos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
             {!! Form::open(['route'=>'projetos.store']) !!}
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body bg-transparent">
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                        <p class="text-success">Dados Gerais</p>
+                            <hr>
                                 <div class="row"> <!--row-1-->
                                     <div class="form-group col-md-6">
                                         {!! Form::label('Nome do Projeto') !!}
@@ -130,7 +118,7 @@
                                 <div class="row">
 
                                     <div class="form-group col-md-4">
-                                        <br><h5 class="text-right">Conta para receber Doações</h5>
+                                        <br><h5 class="text-right text-success">Conta para receber Doações</h5>
                                     </div>
 
                                     <!--row-3-->
@@ -161,7 +149,7 @@
 
                                 <div class="row"><!--row-3-->
                                     <div class="form-group col-md-4">
-                                        <br><h5  class="text-right">Conta para receber Patrocínios</h5>
+                                        <br><h5  class="text-right text-success">Conta para receber Patrocínios</h5>
                                     </div>
                                     <div class="form-group col-md-3">
                                         {!! Form::label('Banco') !!}
@@ -185,34 +173,35 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade show " id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                            <p class="text-success">Descrição</p>
+                            <hr>
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label for="">Objetivo Geral</label>
-                                        {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                                        {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Objetivos Específicos</label>
-                                        {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                                        {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Justificativa</label>
-                                        {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                                        {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Público Alvo</label>
-                                        {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                                        {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Impactos Esperados</label>
-                                        {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'3']) !!}
+                                        {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                     
+                   
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                       <center> <button type="submit" class="btn btn-outline-success">Salvar</button> </center>
                     </div>
                 </div>
             </div>

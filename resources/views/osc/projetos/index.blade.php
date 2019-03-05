@@ -6,14 +6,14 @@
         <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-header border-0">
-                    <a href="{{route('projetos.create')}}" class="btn btn-outline-success pull-left">Incluir projeto</a>
+                    <a href="{{route('projetos.create')}}" class="btn btn-outline-success pull-left">Novo Projeto</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">Projeto</th>
-                                <th scope="col">Valor Meta</th>
+                                <th scope="col">Valor (R$)</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Completion</th>
                                 <th scope="col"></th>

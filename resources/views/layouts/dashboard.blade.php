@@ -28,7 +28,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{route('osc.index')}}">
-            <img src="{{asset('vendor/argon-dash/assets/img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
+            <img src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{route('osc.index')}}">
-                            <img src="{{asset('vendor/argon-dash/assets/img/brand/blue.png')}}">
+                        <img src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" class="navbar-brand-img" alt="...">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -120,18 +120,9 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html"><i class="ni ni-world-2 "></i> Landing Page - http://coopviva.com.br/ponto/ (modal)</a>
             <!-- Form -->
-            <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-                <div class="form-group mb-0">
-                    <div class="input-group input-group-alternative">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                        </div>
-                        <input class="form-control" placeholder="Search" type="text">
-                    </div>
-                </div>
-            </form>
+            
             <!-- User -->
             <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">
@@ -147,29 +138,38 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                         <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome!</h6>
+                            <h6 class="text-overflow m-0">Olá!</h6>
                         </div>
                         <a href="./examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
+                        <i class="ni ni-tv-2 text-primary"></i> 
+                            <span>Dashboard</span>
                         </a>
                         <a href="./examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-settings-gear-65"></i>
-                            <span>Settings</span>
+                        <i class="ni ni-settings-gear-65 text-blue"></i> 
+                            <span>Perfil</span>
                         </a>
                         <a href="./examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-calendar-grid-58"></i>
-                            <span>Activity</span>
+                        <i class="ni ni-collection text-success"></i> 
+                            <span>Projetos</span>
                         </a>
                         <a href="./examples/profile.html" class="dropdown-item">
-                            <i class="ni ni-support-16"></i>
-                            <span>Support</span>
+                        <i class=""><img src="{{asset('vendor/site/images/agenda_ico.png')}}" class="navbar-brand-img" alt="..."></i>
+                            <span>ODS</span>
+                        </a>
+                        <a href="./examples/profile.html" class="dropdown-item">
+                        <i class="ni ni-album-2 text-red"></i> 
+                            <span>Galeria</span>
+                        </a>
+
+                        <a href="./examples/profile.html" class="dropdown-item">
+                        <i class="ni ni-chart-bar-32 text-info"></i> 
+                            <span>Relatórios</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
+                           
+                            <span>Sair</span>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
@@ -190,22 +190,22 @@
             <div class="row align-items-center justify-content-xl-between">
                 <div class="col-xl-6">
                     <div class="copyright text-center text-xl-left text-muted">
-                        &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+                        &copy; 2019 <a href="#" class="font-weight-bold ml-1" target="_blank">COOPVIVA</a>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                            <a href="#" class="nav-link" target="_blank">Rede de Conexão</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                            <a href="#" class="nav-link" target="_blank">Agenda 2030</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                            <a href="#" class="nav-link" target="_blank">Sim EU QUERO</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+                            <a href="#" class="nav-link" target="_blank">Termo de Uso</a>
                         </li>
                     </ul>
                 </div>
