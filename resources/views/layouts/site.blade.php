@@ -262,6 +262,7 @@
 <script src="{{asset('vendor/argon-site/assets/vendor/headroom/headroom.min.js')}}"></script>
 <!-- Argon JS -->
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
+<iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=cc90179e0f&tl=NTU4Mzk5NDE1NDk3OA==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
 @yield('js')
 </body>
 
