@@ -15,7 +15,7 @@
                                 <th scope="col">Projeto</th>
                                 <th scope="col">Valor (R$)</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Completion</th>
+                                <th scope="col"></th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -30,26 +30,22 @@
                                         </div>
                                     </th>
                                     <td>
-                                        {{ $d->valor_meta }}
+                                        R$ {{ number_format($d->valor_meta,2,',','.') }}
                                     </td>
                                     <td>
                                       <span class="badge badge-dot mr-4">
-                                        <i class="bg-warning"></i> pending
+                                        <i class="bg-success"></i> Publicado
                                       </span>
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <span class="mr-2">60%</span>
-                                            <div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                                </div>
-                                            </div>
+                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar </a>                                
+                                           
                                         </div>
                                     </td>
                                 </tr>
                             @empty
-                                <p>Não há dados</p>
+                                <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
                             @endforelse
                         </tbody>
                     </table>

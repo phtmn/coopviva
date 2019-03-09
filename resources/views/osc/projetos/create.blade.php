@@ -14,7 +14,7 @@
                             <hr>
                                 <div class="row"> <!--row-1-->
                                     <div class="form-group col-md-6">
-                                        {!! Form::label('Nome do Projeto') !!}
+                                        <label for="">Nome do Projeto</label>
                                         {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
                                     </div>
 
@@ -24,12 +24,14 @@
                                     </div>
 
                                     <div class="form-group col-md-2">
-                                        {!! Form::label('Nº de Registro 1') !!}
+									<label for="">Nº de Registro 1</label>
+                                        
                                         {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
                                     </div>
 
                                     <div class="form-group col-md-2">
-                                        {!! Form::label('Nº de Registro 2') !!}
+									<label for="">Nº de Registro 2</label>
+                                        
                                         {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
                                     </div>
                                 </div>
@@ -69,14 +71,15 @@
                                     </div>
 
                                     <div class="form-group col-md-3">
-                                        {!! Form::label('Artigo de Enquadramento') !!}
+										<label for="">Artigo de Enquadramento</label> 
+                                    
                                         {!! Form::text('artigo',null,['class'=>'form-control']) !!}
                                     </div>
                                 </div>
 
                                 <div class="row"><!--row-4-->
                                     <div class="form-group col-md-6">
-                                        {!! Form::label('Nome do Proponente') !!}
+                                       	<label for="">Nome do Proponente</label> 
                                         {!! Form::text('nome',null,['class'=>'form-control']) !!}
                                     </div>
 
@@ -89,7 +92,8 @@
                                     </div>
 
                                     <div class="form-group col-md-3" id="tipo-perfil">
-                                        {!! Form::label('Nº do Documento') !!}
+										<label for="">Nº do Documento</label> 
+                                        
                                         {!! Form::text('documento',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                                     </div>
                                 </div>
@@ -178,23 +182,23 @@
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label for="">Objetivo Geral</label>
-                                        {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
+                                        {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Objetivos Específicos</label>
-                                        {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
+                                        {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Justificativa</label>
-                                        {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
+                                        {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Público Alvo</label>
-                                        {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
+                                        {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="">Impactos Esperados</label>
-                                        {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'4']) !!}
+                                        {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     </div>
                                 </div>
                             </div>

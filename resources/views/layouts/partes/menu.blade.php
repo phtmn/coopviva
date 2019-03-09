@@ -22,7 +22,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('galeria.index')}}">
             <i class="ni ni-album-2 text-red"></i> Galeria
         </a>
     </li>
