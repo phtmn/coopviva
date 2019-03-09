@@ -8,28 +8,15 @@
         <span class="mask bg-gradient-default opacity-8"></span>
         <!-- Header container -->
         <div class="container-fluid align-items-center">
-            <div class="col-md-12">
-                <div class="nav-wrapper">
-                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">
-                                <i class=" mr-2"></i>Dados Gerais</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">
-                                <i class=" mr-2"></i>Descrição</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+           
             {!! Form::model($osc,['route'=> ['osc.update',$osc->id],'enctype'=>'multipart/form-data']) !!}
                   @method('PUT')
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body bg-transparent">
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                              <p class="text-primary">Dados Gerais</p>
+                            <hr>
                             
                                 <div class="row">
                                     <div class="form-group col-md-6">
@@ -69,6 +56,27 @@
                                         {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                                     </div>
                                 </div>
+								
+								 <p class="text-primary">Upload da Logo</p>
+                                <hr>
+                               <div class="row">
+                 
+								  <div class="form-group col-md-3">
+								
+								  </div>
+
+								  <div class="form-group col-md-5">
+									 <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
+								  </div>
+
+									 
+								  <div class="form-group col-md-1">
+								
+								  </div>
+									 
+							 </div>
+								 </div>
+								
                                 <p class="text-primary">Localização e Endereço</p> 
                                 <hr>
                                 <div class="row">
@@ -120,7 +128,7 @@
 
                                 <div class="row">
                                     <div class="form-group col-md-4">
-                                        <br><h5 class="text-right">Conta para receber Doações</h5>
+                                        <br><h5 class="text-right text-primary">Conta para receber Doações</h5>
                                     </div>
                                     <div class="form-group col-md-3">
                                         {!! Form::label('Banco') !!}
@@ -151,15 +159,11 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="form-group col-md-5">
-                                        {!! Form::file('logo',null,['class'=>'form-control']) !!}
-                                    </div>
-                                </div>
+								
 
-
-                            </div>
-                            <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+								  <p class="text-primary">Descrição</p>
+                            <hr>
+                           
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label for="">O que a OSC faz?</label>
@@ -191,9 +195,9 @@
                                     </div>
 
                                 </div>
-                            </div>
+                           
                         </div>
-                    </div>
+              
                     <div class="card-footer">
                     <center>   <button type="submit" class="btn btn-outline-success">Salvar </button> </center>
                     </div>
