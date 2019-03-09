@@ -24,7 +24,7 @@
 								 
 								  <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active " id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="true"><p class="text-danger" >Adicionar</p></a>
+                                <a class="nav-link active " id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="true"><p class="text-danger" >Adicionaaaaar</p></a>
                             </li>
                             
                             <li class="nav-item">
