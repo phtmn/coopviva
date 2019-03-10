@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Osc;
 
 use App\Models\Galeria;
+use App\Models\Projeto;
+use Aws\Glacier\GlacierClient;
 use Illuminate\Http\Request;
 use Auth;
 use Alert;
 use App\Http\Controllers\Controller;
-
+use Storage;
 class GaleriaController extends Controller
 {
     public function index(){
@@ -16,11 +18,10 @@ class GaleriaController extends Controller
             Alert::warning('Você precisa cadastrar sua OSC Primeiro','Vish!')->persistent('OK');
             return redirect()->route('osc.create');
         }
-
-        $galerias = Galeria::where('osc_id',Auth::user()->osc()->id)->get();
         return view('dashboard.osc.galeria',[
-            'galerias' => $galerias,
-            'tab'       => 'galeria'
+            'galerias'      => Galeria::where('osc_id',Auth::user()->osc()->id)->get(),
+            'projetos'      => Projeto::where('osc_id',$osc->id)->get()->pluck('descricao','id')
+
         ]);
     }
 
@@ -34,41 +35,35 @@ class GaleriaController extends Controller
 
         $osc = $request->user()->osc()->id;
 
-        if ($request->hasFile('img') && $request->file('img')->isValid()) {
-            $file = $request->file('img');
-            $name = $file->getClientOriginalName();
-            $path = public_path('galeria/osc');
-            $file_path = 'galeria/osc/' . $name;
-            $upload = $file->move($path, $name);
+        $image = $request->file('file');
+        $imageName = $image->getClientOriginalName();
 
-            if($upload){
-                $galeria = new Galeria();
-                $galeria->osc_id        = $osc;
-                $galeria->descricao     = $request->legenda;
-                $galeria->url           = $file_path;
-                $galeria->ativo         = 1;
-                $galeria->save();
-            }
-            Alert::success('Sua foto foi salva na galeria','OBG')->persistent('OK');
+        Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
+        $imageNameAWS  = Storage::disk('s3')->url($imageName);
+
+        if($imageNameAWS != null){
+            $galeria = new Galeria();
+            $galeria->osc_id        = $osc;
+            $galeria->projeto_id    = isset($request->projeto_id) ? $request->projeto_id : null;
+            $galeria->descricao     = $request->legenda;
+            $galeria->album         = $request->album;
+            $galeria->url           = $imageNameAWS;
+            $galeria->imageName     = $imageName;
+            $galeria->ativo         = 1;
+            $galeria->save();
+
             return redirect()->route('galeria.index');
-        }else{
-            Alert::error('Não foi possivel enviar sua foto','OBG')->persistent('OK');
-            return redirect()->route('galeria.index');
+        } else{
+            return redirect()->route('galeria.index')->with('msg','Erro');
         }
     }
 
-    public function removerGaleria($id){
+    public function show($id){
 
-        $osc_id = Auth::user()->osc()->id;
-        $galeria   = Galeria::findOrFail($id)->where('osc_id',$osc_id);
+        $galeria = Galeria::find($id);
+        Storage::disk('s3')->delete($galeria->imageName);
         $galeria->delete();
-        if($galeria){
-            Alert::warning('Você removeu esta imagem')->persistent('OK');
-            return redirect()->back();
-        }else{
-            Alert::error('Não foi possível remover essa imagem')->persistent('OK');
-            return redirect()->back();
-        }
 
+        return redirect()->route('galeria.index');
     }
 }

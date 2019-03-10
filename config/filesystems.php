@@ -57,11 +57,11 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
+            'key' => 'AKIAJ2YA3RHHGJGUVLAQ',
+            'secret' => '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',
+            'region' => 'sa-east-1',
+            'bucket' => 'coopviva-storage'
+//            'url' => env('AWS_URL'),
         ],
 
     ],

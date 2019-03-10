@@ -2,6 +2,8 @@
 
 Auth::routes(['verify'=>true]);
 
+
+
 Route::view('/','site.index');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
@@ -36,7 +38,12 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
+
     Route::resource('galeria','GaleriaController');
+
+    Route::get('s3-remover','GaleriaController@removerGaleria')->name('s3-remover');
+
+
     Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
 
     Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');

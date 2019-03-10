@@ -43,7 +43,7 @@ class ProjetosController extends Controller
 
     public function edit($id){
         $projeto  = Projeto::find($id);
-        return view('dashboard.projetos.edit',[
+        return view('osc.projetos.edit',[
             'projeto'           => $projeto,
             'proponente'        => $projeto->proponente(),
             'bancoPatrocinio'   => $projeto->bancoPatrocinio(),
