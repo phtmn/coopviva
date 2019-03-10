@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row row-grid align-items-center">
             <div class="col-md-6 order-md-2">
-                <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="img-fluid floating">
+                <img src="{{asset('vendor/site/images/Azul.jpeg')}}" class="img-fluid floating">
                 <!-- <img src="{{asset('vendor/site/images/tmp.png')}}" class="img-fluid floating"> -->
             </div>
             <div class="col-md-6 order-md-1">
