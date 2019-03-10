@@ -762,6 +762,12 @@ pre code
     {
         max-width: 720px;
     }
+    main.coopviva{
+        background-image: url(../../assets/img/coopviva/jacareCoopViva.png);
+        background-repeat: no-repeat;
+        background-position: 50% 6%;
+        background-size: 50%;
+    }
 }
 @media (min-width: 992px)
 {
@@ -770,11 +776,41 @@ pre code
         max-width: 960px;
     }
 }
+@media (min-width: 1024px){
+    main.coopviva{
+        background-image: url(../../assets/img/coopviva/jacareCoopViva.png);
+        background-repeat: no-repeat;
+        background-position: 50% 5%;
+        background-size: 50%;
+    }
+}
+@media (min-width: 1280px){
+    main.coopviva{
+        background-image: url(../../assets/img/coopviva/jacareCoopViva.png);
+        background-repeat: no-repeat;
+        background-position: 50% 5%;
+        background-size: 50%;
+    }
+}
 @media (min-width: 1200px)
 {
     .container
     {
         max-width: 1040px;
+    }
+    main.coopviva{
+        background-image: url(../../assets/img/coopviva/jacareCoopViva.png);
+        background-repeat: no-repeat;
+        background-position: 50% 3%;
+        background-size: 50%;
+    }
+}
+@media (min-width: 1600px){
+    main.coopviva{
+        background-image: url(../../assets/img/coopviva/jacareCoopViva.png);
+        background-repeat: no-repeat;
+        background-position: 50% 3%;
+        background-size: 50%;
     }
 }
 
@@ -7302,7 +7338,8 @@ button.close
     top: 0;
 
     border-width: .4rem .4rem 0;
-    border-top-color: #000;
+    border-top-color: #1a651b;
+    /* border-top-color: #000; */
 }
 
 .bs-tooltip-right,
@@ -7324,7 +7361,8 @@ button.close
     right: 0;
 
     border-width: .4rem .4rem .4rem 0;
-    border-right-color: #000;
+    border-right-color: #1a651b;
+    /* border-right-color: #000; */
 }
 
 .bs-tooltip-bottom,
@@ -7343,7 +7381,8 @@ button.close
     bottom: 0;
 
     border-width: 0 .4rem .4rem;
-    border-bottom-color: #000;
+    border-bottom-color: #1a651b;
+    /* border-bottom-color: #000; */
 }
 
 .bs-tooltip-left,
@@ -7365,7 +7404,8 @@ button.close
     left: 0;
 
     border-width: .4rem 0 .4rem .4rem;
-    border-left-color: #000;
+    border-left-color: #1a651b;
+    /* border-left-color: #000; */
 }
 
 .tooltip-inner
@@ -7377,7 +7417,9 @@ button.close
 
     color: #fff;
     border-radius: .25rem; 
-    background-color: #000;
+    /* background-color: #000; */
+    background-color: #015402;
+    box-shadow: 0 0rem 0.5rem 0 rgba(0, 0, 0, 0.5);
 }
 
 .popover
@@ -13027,7 +13069,7 @@ button.bg-lighter:focus
 
 .bg-gradient-default
 {
-    background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+    background: linear-gradient(87deg, #2dce89 0, #1a174d 100%) !important;
 }
 
 .bg-gradient-white
@@ -13227,7 +13269,7 @@ button.section-darker:focus
 
 .bg-gradient-default
 {
-    background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+    background: linear-gradient(87deg, #2dce89 0, #1a174d 100%) !important;
 }
 
 .bg-gradient-white

@@ -1,7 +1,7 @@
 <div class="position-relative">
     <!-- shape Hero -->
     <section class="section section-lg section-shaped pb-250">
-	<div class="shape shape-style-1 bg-gradient-success">
+	   <div class="shape shape-style-1 bg-gradient-success">
             <span></span>
             <span></span>
             <span></span>
@@ -15,7 +15,7 @@
         <div class="container py-lg-md d-flex">
             <div class="col px-0">
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <h1 class="display-3  text-white">Venha vivenciar...
                         <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
@@ -43,5 +43,4 @@
         </div>
     </section>
     <!-- 1st Hero Variation -->
-
 </div>
