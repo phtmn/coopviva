@@ -30,87 +30,82 @@ class OscController extends Controller
         if($osc){
             return view('osc.edit',[
                 'osc'       => $osc,
-                'endereco'  => $osc->endereco(),
                 'banco'     => $osc->banco(),
+                'ae'        => DB::table('atividades_economicas')->pluck('descricao','id'),
+                'si'        => DB::table('imoveis_situacoes')->pluck('descricao','id'),
+                'projetos'  => $osc->projetos()->count(),
+                'metas'     => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
+
             ]);
         }
-        return view('osc.create');
+
+        return view('osc.create',[
+            'ae'        => DB::table('atividades_economicas')->pluck('descricao','id'),
+            'si'        => DB::table('imoveis_situacoes')->pluck('descricao','id'),
+            'bancos'    => DB::table('bancos')->pluck('banco','id')
+        ]);
     }
 
 
     public function store(Request $request){
-            //dd($request->all());
-        $file_path = null;
-        if($request->logo){
-            $file       = $request->file('logo');
-            $name       = $file->getClientOriginalName();
-            $path       = public_path('uploads/osc');
-            $file_path  = 'uploads/osc/'.$name;
-            $file->move($path,$name);
-        };
 
-
-
-        $result = DB::transaction(function() use ($request,$file_path) {
-                //dd($request->all());
+        $result = DB::transaction(function() use ($request) {
             try {
 
+                $banco              = new Banco();
+                $banco->banco       = $request->banco;
+                $banco->agencia     = $request->agencia;
+                $banco->conta       = $request->conta;
+                $banco->contaDV     = $request->contaDv;
+                $banco->tipo_conta  = 3;
+                $banco->save();
+
+                OSC::updateOrCreate(
+                    ['user_id' => auth()->user()->id],
+                    [
+                       'nome_fantasia'         => $request->nome_fantasia,
+                       'cnpj'                  => $request->cnpj,
+                       'ano_inscricao_cnpj'    => $request->ano_inscricao_cnpj,
+                       'ano_fundacao'          => $request->ano_fundacao,
+                       'sigla '                => $request->sigla,
+                       'cnae '                 => $request->cnae,
+                       'responsavel_legal'     => $request->responsavel_legal,
+                       'situacao_imovel_id'    => $request->situacao_imovel_id,
+                       'email '                => $request->email,
+                       'site'                  => $request->site,
+                       'descricao'             => $request->descricao,
+                       'telefone'              => $request->telefone,
+                            'cep'                   => $request->cep,
+                            'logradouro'            => $request->logradouro,
+                            'numero'                => $request->numero,
+                            'complemento'           => $request->complemento,
+                            'bairro'                => $request->bairro,
+                            'cidade'                => $request->cidade,
+                            'uf'                    => $request->uf,
+                       'atividades_economicas_id'   => $request->atividades_economicas_id,
+                       'area_atuacao'          => $request->area_atuacao,
+                       'sub_area1'             => $request->sub_area1,
+                       'sub_area2'             => $request->sub_area2,
+                       'surgimento_osc'        => $request->surgimento_osc,
+                       'missao_osc'            => $request->missao_osc,
+                       //'objetivo_ods'          => $request->objetivo_ods,
+                       'visao_osc'            => $request->visao_osc,
+                       'finalidades_estatutarias_ods' => $request->finalidades_estatutarias_ods,
+                       'link_estatuto_osc'     => $request->link_estatuto_osc,
+                       //'metas_ods'             => $request->metas_ods,
+                       'user_id'               => $request->user()->id,
+                        'banco_id'              => $banco->id
+
+                    ]);
 
 
-                $bancoDoacao = new banco();
-                $bancoDoacao->banco         = $request->banco;
-                $bancoDoacao->conta         = $request->conta;
-                $bancoDoacao->agencia       = $request->agencia;
-                $bancoDoacao->tipo_conta    = 'doacao';
-                $bancoDoacao->contaDv       = $request->contaDv;
-                $bancoDoacao->save();
-
-                $endereco = new Endereco();
-                $endereco->cep = $request->cep;
-                $endereco->rua = $request->rua;
-                $endereco->numero = $request->numero;
-                $endereco->cidade = $request->cidade;
-                $endereco->bairro = $request->bairro;
-                $endereco->uf = $request->uf;
-                $endereco->complemento = $request->complemento;
-                $endereco->save();
-
-                $osc = new Osc();
-                $osc->nome_fantasia         = $request->nome_fantasia;
-                $osc->sigla_osc             = $request->sigla_osc;
-                $osc->cnae                  = $request->cnae;
-                $osc->responsavel_legal     = $request->responsavel_legal;
-                $osc->situacao_imovel       = $request->situacao_imovel;
-                $osc->ano_inscricao_cnpj    = $request->ano_inscricao_cnpj;
-                $osc->ano_fundacao          = $request->ano_fundacao;
-                $osc->email                 = $request->email;
-                $osc->site                  = $request->site;
-                $osc->descricao_osc         = $request->descricao_osc;
-                $osc->telefone              = $request->telefone;
-                $osc->objetivo_ods          = $request->objetivo_ods;
-                $osc->metas_ods             = $request->metas_ods;
-                $osc->atividade_economica   = $request->atividade_economica;
-                $osc->area_atuacao          = $request->area_atuacao;
-                $osc->sub_area1             = $request->sub_area1;
-                $osc->sub_area2             = $request->sub_area2;
-                $osc->surgimento_osc        = $request->surgimento_osc;
-                $osc->missao_osc            = $request->missao_osc;
-                $osc->visao_osc             = $request->visao_osc;
-                $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
-                $osc->link_estatuto_osc     = $request->link_estatuto_osc;
-                $osc->logo                  = $file_path ? $file_path : $osc->logo;
-                $osc->banco_doacao_id       = $bancoDoacao->id;
-                $osc->user_id               = $request->user()->id;
-                $osc->endereco_id           = $endereco->id;
-                
-                $osc->save();
 
                 Alert::success('Os dados da OSC foram salvos', 'Sucesso')->persistent('Ok');
                 return redirect()->back();
 
             } catch (Throwable $t) {
                 Alert::error('Algum Erro ocorreu'.$t->getMessage(), 'Erro')->persistent('Ok');
-                return redirect()->back();
+                return redirect()->back()->withInput();
             }
         },2); return $result;
     }

@@ -17,6 +17,8 @@
     <link href="{{ asset('vendor/argon-dash/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!-- Argon CSS -->
     <link type="text/css" href="{{ asset('vendor/argon-dash/assets/css/argon.css?v=1.0.0') }}" rel="stylesheet">
+
+
     @yield('css')
 </head>
 
@@ -53,33 +55,33 @@
               </span>
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                    <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcomesss!</h6>
-                    </div>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-single-02"></i>
-                        <span>My profile</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-settings-gear-65"></i>
-                        <span>Settings</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-calendar-grid-58"></i>
-                        <span>Activity</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-support-16"></i>
-                        <span>Support</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#!" class="dropdown-item">
-                        <i class="ni ni-user-run"></i>
-                        <span>Logousst</span>
-                    </a>
+                {{--<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">--}}
+                    {{--<div class=" dropdown-header noti-title">--}}
+                        {{--<h6 class="text-overflow m-0">Welcomesss!</h6>--}}
+                    {{--</div>--}}
+                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-single-02"></i>--}}
+                        {{--<span>My profile</span>--}}
+                    {{--</a>--}}
+                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-settings-gear-65"></i>--}}
+                        {{--<span>Settings</span>--}}
+                    {{--</a>--}}
+                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-calendar-grid-58"></i>--}}
+                        {{--<span>Activity</span>--}}
+                    {{--</a>--}}
+                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-support-16"></i>--}}
+                        {{--<span>Support</span>--}}
+                    {{--</a>--}}
+                    {{--<div class="dropdown-divider"></div>--}}
+                    {{--<a href="#!" class="dropdown-item">--}}
+                        {{--<i class="ni ni-user-run"></i>--}}
+                        {{--<span>Logousst</span>--}}
+                    {{--</a>--}}
 
-                </div>
+                {{--</div>--}}
             </li>
         </ul>
         <!-- Collapse -->
@@ -142,31 +144,31 @@
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Olá!</h6>
                         </div>
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-tv-2 text-primary"></i> 
-                            <span>Dashboard</span>
-                        </a>
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-settings-gear-65 text-blue"></i> 
-                            <span>Perfil</span>
-                        </a>
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-collection text-success"></i> 
-                            <span>Projetos</span>
-                        </a>
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class=""><img src="{{asset('vendor/site/images/agenda_ico.png')}}" class="navbar-brand-img" alt="..."></i>
-                            <span>ODS</span>
-                        </a>
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-album-2 text-red"></i> 
-                            <span>Galeria</span>
-                        </a>
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-tv-2 text-primary"></i> --}}
+                            {{--<span>Dashboard</span>--}}
+                        {{--</a>--}}
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-settings-gear-65 text-blue"></i> --}}
+                            {{--<span>Perfil</span>--}}
+                        {{--</a>--}}
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-collection text-success"></i> --}}
+                            {{--<span>Projetos</span>--}}
+                        {{--</a>--}}
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class=""><img src="{{asset('vendor/site/images/agenda_ico.png')}}" class="navbar-brand-img" alt="..."></i>--}}
+                            {{--<span>ODS</span>--}}
+                        {{--</a>--}}
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-album-2 text-red"></i> --}}
+                            {{--<span>Galeria</span>--}}
+                        {{--</a>--}}
 
-                        <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-chart-bar-32 text-info"></i> 
-                            <span>Relatórios</span>
-                        </a>
+                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
+                        {{--<i class="ni ni-chart-bar-32 text-info"></i> --}}
+                            {{--<span>Relatórios</span>--}}
+                        {{--</a>--}}
                         <div class="dropdown-divider"></div>
                         <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -225,6 +227,8 @@
 <!-- Argon JS -->
 <script src="{{ asset('vendor/argon-dash/assets/js/argon.js?v=1.0.0') }}"></script>
 <script src="{{ asset('js/dropzone.js') }}"></script>
+<script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
+@include('sweet::alert')
 @yield('js')
 </body>
 

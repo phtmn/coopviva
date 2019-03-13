@@ -3,208 +3,287 @@
 
 @section('cabecalho')
 
-       <div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+    <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
         <!-- Mask -->
         <span class="mask bg-gradient-default opacity-8"></span>
         <!-- Header container -->
-        <div class="container-fluid align-items-center">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-12 col-md-10">
+                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->nome_social}}</h1>
+                    <p class="text-white mt-0 mb-2">Precisamos de algumas informações sobre sua Instiuição, preencha o formulario abaixo. Ele é
+                        Pouco grande, mas vas nos ajudar!
+                    </p>
+                    <p><b>Campos com * são obrigatórios</b></p>
 
-                
-        {!! Form::open(['route'=>'osc.store','enctype'=>'multipart/form-data']) !!}
+                </div>
+            </div>
+        </div>
+    </div>
+@stop
+
+@section('conteudo')
+    <div class="container mt--7">
+        <div class="row">
+            <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+                <div class="card card-profile shadow">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <a href="#">
+                                    <img src="{{asset('vendor/argon-dash/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Abrir modal para ulpoad de logo">Alterar Foto</a>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0 pt-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                                    <div>
+                                        <span class="heading">22</span>
+                                        <span class="description">Metas</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">10</span>
+                                        <span class="description">Objetivos</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Projetos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3>
+                                {{auth()->user()->nome_social}}<span class="font-weight-light"></span>
+                            </h3>
+                            <div class="h5 font-weight-300">
+                                <i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}}
+                            </div>
+                            <div>
+                                <i class="ni education_hat mr-2"></i>Outra Informação ??
+                            </div>
+                            <hr class="my-4" />
+                            <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
+                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-8 order-xl-1">
+                {!! Form::open(['route'=>'osc.store','enctype'=>'multipart/form-data']) !!}
                 <div class="col-md-12">
                     <div class="card shadow">
                         <div class="card-body bg-transparent">
-                            <div class="tab-content" id="myTabContent">
                                 <p class="text-primary">Dados Gerais</p>
-                            <hr>
-                                    
-                                    <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label for="">Nome Fantasia</label>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="">Sigla OSC</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
+                                        <div class="col-sm-4">
                                             {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <label for=""> <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">
+                                                <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação
+                                        </label>
+                                        <div class="col-sm-3">
                                             {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="">  <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">
+                                            <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ
+                                        </label>
+                                        <div class="col-sm-3">
                                             {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control','id'=>'ano','placeholder' => 'Ano']) !!}
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="form-group col-md-2">
-                                            <label for=""><strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE</label>
-                                            {!! Form::text('cnae',null,['class'=>'form-control','id'=>'cnae']) !!}
-                                        </div>
 
-                                        <div class="form-group col-md-4">
-                                            <label for="">Responsável Legal</label>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">
+                                            <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
                                         </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="">E-mail </label>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">E-mail </label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('email',null,['class'=>'form-control']) !!}
                                         </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="">Telefone</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">Telefone</label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                                         </div>
                                     </div>
-									
-									 <p class="text-primary">Upload da Logo</p>
-                                <hr>
-                               <div class="row">
-                 
-								  <div class="form-group col-md-3">
-								
-								  </div>
 
-								  <div class="form-group col-md-5">
-									 <br>  {!! Form::file('logo',null,['class'=>'form-control']) !!}
-								  </div>
-
-									 
-								  <div class="form-group col-md-1">
-								
-								  </div>
-									 
-							 </div>
-								 </div>
-									
-                                    <p class="text-primary">Localização e Endereço</p>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="form-group col-md-3">
-                                            <label for="cep">CEP</label>
+                                    <div class="form-group row">
+                                        <label for="cep" class="col-sm-4 col-form-label text-right">CEP</label>
+                                        <div class="col-sm-3">
                                             {!! Form::text('cep',null,['class'=> 'form-control','id'=>'cep']) !!}
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="rua">Rua/Logradouro</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="rua" class="col-sm-4 col-form-label text-right">Rua/Logradouro</label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('rua',null,['class'=> 'form-control','id'=>'endereco']) !!}
                                         </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="numero">Bairro</label>
+
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="Bairro" class="col-sm-4 col-form-label text-right">Bairro</label>
+                                        <div class="col-sm-8">
                                             {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="form-group col-md-2">
-                                            <label for="numero">Número</label>
-                                            {!! Form::text('numero',null,['class'=> 'form-control']) !!}
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="cidade">Cidade</label>
-                                            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="uf">Estado</label>
-                                            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="complemento">Complemento</label>
-                                            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="">Tipo Imóvel</label>
-                                            {{ Form::select('situacao_imovel',[
-                                                'Próprio'      => 'Próprio',
-                                                'Alugado'       => 'Alugado',
-                                                'Emprestado'       => 'Emprestado',
-                                                'Outro'    => 'Outro'
-                                                ],null,['class'=>'form-control custom-select'])
-                                            }}
-                                        </div>
+
+
+                                <div class="form-group row">
+                                    <label for="numero" class="col-sm-4 col-form-label text-right">Número</label>
+                                    <div class="col-sm-3">
+                                        {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="cidade" class="col-sm-4 col-form-label text-right">Cidade</label>
+                                    <div class="col-sm-8">
+                                        {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="uf" class="col-sm-4 col-form-label text-right">Estado</label>
+                                    <div class="col-sm-3">
+                                        {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="complemento" class="col-sm-4 col-form-label text-right">Complemento</label>
+                                    <div class="col-sm-8">
+                                        {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
+                                    <div class="col-sm-3">
+                                        {{ Form::select('situacao_imovel',$si,null,['class'=>'form-control']) }}
+                                    </div>
+                                </div>
+
+
+                                <p class="text-primary ">Dados Bancários</p>
+                                <label>Conta para receber Doações</label>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        {!! Form::label('Banco') !!}
+                                        {{ Form::select('banco',['CEF'=>'Caixa Economica','BB'=>'Banco do Brasil','BA'=>'Bradesco'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        {!! Form::label('Agência') !!}
+                                        {!! Form::text('agencia',null,['class'=>'form-control']) !!}
                                     </div>
 
-                                    <p class="text-primary ">Dados Bancários</p>
-                                    <hr>
-
-                                    <div class="row">
-                                        <div class="form-group col-md-4">
-                                            <br><h5 class="text-right text-primary">Conta para receber Doações</h5>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            {!! Form::label('Banco') !!}
-
-                                            {{ Form::select('banco',[
-                                              'CEF'      => 'Caixa Economica Federal',
-                                              'BB'       => 'Banco do Brasil',
-                                              'SA'       => 'Banco Santander',
-                                              'IT'       =>  'Banco Itaú',
-                                              'Outro'    => 'Outro'
-                                              ],null,['class'=>'form-control custom-select','selected'=>'Outro'])
-                                          }}
-                                        </div>
-
-                                        <div class="form-group col-md-2">
-                                            {!! Form::label('Agência') !!}
-                                            {!! Form::text('agencia',null,['class'=>'form-control']) !!}
-                                        </div>
-
-                                        <div class="form-group col-md-2">
-                                            {!! Form::label('Conta') !!}
-                                            {!! Form::text('conta',null,['class'=>'form-control']) !!}
-                                        </div>
-
-                                        <div class="form-group col-md-1">
-                                            {!! Form::label('DV') !!}
-                                            {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
-                                        </div>
+                                    <div class="form-group col-md-3">
+                                        {!! Form::label('Conta') !!}
+                                        {!! Form::text('conta',null,['class'=>'form-control']) !!}
                                     </div>
 
-                                 							
-							<p class="text-primary">Descrição</p>
-                            <hr>
-                           
-
-                                    <div class="row">
-                                        <div class="form-group col-md-12">
-                                            <label for="">O que a OSC faz?</label>
-                                            {!! Form::textarea('descricao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label for="">Como surgiu a OSC?</label>
-                                            {!! Form::textarea('surgimento_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label for="">Missão da OSC?</label>
-                                            {!! Form::textarea('missao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                                        </div>
-                                        <div class="form-group col-md-12">
-                                            <label for="">Visão da OSC?</label>
-                                            {!! Form::textarea('visao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="">Link do Site </label>
-                                            {!! Form::text('site',null,['class'=>'form-control']) !!}
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="">Link do Estatuto </label>
-                                            {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="">Link da Finalidade Estatutária</label>
-                                            {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
-                                        </div>
-
+                                    <div class="form-group col-md-2">
+                                        {!! Form::label('DV') !!}
+                                        {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
                                     </div>
-                              
+                                </div>
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="" >O que a OSC faz?</label>
+                                    {!! Form::textarea('descricao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="">Como surgiu a OSC?</label>
+                                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="">Missão da OSC?</label>
+                                    {!! Form::textarea('missao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="">Visão da OSC?</label>
+                                    {!! Form::textarea('visao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                </div>
+
                             </div>
-                  
-                        <div class="card-footer">
-                           <center> <button type="submit" class="btn btn-outline-success">Salvar</button> </center>
+
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Link do Site </label>
+                                <div class="col-md-8">
+                                    {!! Form::text('site',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>
+                                <div class="col-md-8">
+                                    {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer text-center">
+                            <button type="submit" class="btn btn-outline-success">Salvar</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            {!! Form::close() !!}
         </div>
-        {!! Form::close() !!}
     </div>
 @stop
 

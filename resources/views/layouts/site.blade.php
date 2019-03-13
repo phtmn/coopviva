@@ -130,7 +130,7 @@
 								<span class="nav-link-inner--text">Cadastre-se</span>
 							</a>
 						@else
-							@if(auth()->user()->tipo_usuario == 'investidor')
+							@if(auth()->user()->perfil_id == 1)
 								<a href="{{route('perfil.index')}}" class="btn btn-neutral btn-icon">
 									<span class="btn-inner--icon">
 									  <i class="ni ni-tv-2 mr-2"></i>
@@ -211,14 +211,15 @@
 					<div class="text-center text-muted mb-4">
 						<small>Entre no sistema preenchendo corretamente os campos abaixo.</small>
 					</div>
-					<form id="form-login" name="form-login" action="" method="post" role="form" class="form-validate" novalidate>
+					<form id="form-login" name="form-login" action="{{route('login')}}" method="post" role="form" class="form-validate" novalidate>
+						@csrf
 						<input type="hidden" id="input-login" name="input-login" value="login">
 						<div class="form-group mb-3">
 							<div class="input-group input-group-alternative">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="ni ni-email-83"></i></span>
 								</div>
-								<input id="login-email" name="login-email" class="form-control" placeholder="E-mail" type="email" required>
+								<input id="login-email" name="email" class="form-control" placeholder="E-mail" type="email" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -226,7 +227,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
 								</div>
-								<input id="login-senha" name="login-senha" class="form-control" placeholder="Senha" type="password" required>
+								<input id="login-senha" name="password" class="form-control" placeholder="Senha" type="password" required>
 							</div>
 						</div>
 						<div class="custom-control custom-control-alternative custom-checkbox">

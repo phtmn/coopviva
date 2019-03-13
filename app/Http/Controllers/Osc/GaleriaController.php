@@ -20,7 +20,7 @@ class GaleriaController extends Controller
         }
         return view('dashboard.osc.galeria',[
             'galerias'      => Galeria::where('osc_id',Auth::user()->osc()->id)->get(),
-            'projetos'      => Projeto::where('osc_id',$osc->id)->get()->pluck('descricao','id')
+            'projetos'      => Projeto::where('osc_id',$osc->id)->get()->pluck('nome','id')
 
         ]);
     }
@@ -39,16 +39,17 @@ class GaleriaController extends Controller
         $imageName = $image->getClientOriginalName();
 
         Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
+
         $imageNameAWS  = Storage::disk('s3')->url($imageName);
 
         if($imageNameAWS != null){
             $galeria = new Galeria();
             $galeria->osc_id        = $osc;
             $galeria->projeto_id    = isset($request->projeto_id) ? $request->projeto_id : null;
-            $galeria->descricao     = $request->legenda;
+            $galeria->legenda       = $request->legenda;
             $galeria->album         = $request->album;
-            $galeria->url           = $imageNameAWS;
-            $galeria->imageName     = $imageName;
+            $galeria->aws_url       = $imageNameAWS;
+            $galeria->aws_name      = $imageName;
             $galeria->ativo         = 1;
             $galeria->save();
 
@@ -60,8 +61,11 @@ class GaleriaController extends Controller
 
     public function show($id){
 
+
         $galeria = Galeria::find($id);
+
         Storage::disk('s3')->delete($galeria->imageName);
+
         $galeria->delete();
 
         return redirect()->route('galeria.index');

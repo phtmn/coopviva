@@ -15,18 +15,34 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->enum('tipo_usuario',['investidor','osc']);
-            $table->enum('tipo',['PF','PJ']);
-            $table->string('termo')->nullable();
+            $table->string('email')->index('email')->unique();
             $table->string('password');
-            $table->string('sexo')->nullable();
-            $table->string('uf')->nullable();
-            $table->string('cidade')->nullable();
-            $table->boolean('isAdmin')->default(0);
+            $table->string('nome_social', 100)->nullable()->index('nome');
+            $table->string('nome_completo', 100)->nullable();
+            $table->string('tipo_pessoa',2);
+            $table->date('dt_nascimento')->nullable();
+            $table->enum('genero', ['M','F'])->nullable();
+            $table->string('cpf_cnpj', 50)->nullable();
+            $table->string('razao_social', 100)->nullable();
+            $table->string('nome_fantasia', 100)->nullable();
+            $table->string('cep')->nullable();
+            $table->string('logradouro', 200)->nullable();
+            $table->string('numero', 50)->nullable();
+            $table->string('complemento', 200)->nullable();
+            $table->string('bairro', 200)->nullable();
+            $table->string('cidade', 200)->nullable();
+            $table->string('uf', 2)->nullable();
+            $table->string('telefone')->nullable();
+            $table->string('celular')->nullable();
+            $table->string('banco_id', 2)->nullable();
+            $table->boolean('ativo')->default(0);
+            $table->text('imagem')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->unsignedInteger('perfil_id')->index('perfil_id');
+
         });
     }
 
