@@ -88,7 +88,8 @@
             </div>
 
             <div class="col-xl-8 order-xl-1">
-                {!! Form::open(['route'=>'osc.store','enctype'=>'multipart/form-data']) !!}
+                {!! Form::model($osc,['route'=> ['osc.update',$osc->id],'enctype'=>'multipart/form-data']) !!}
+                @method('PUT')
                 <div class="col-md-12">
                     <div class="card shadow">
                         <div class="card-body bg-transparent">
@@ -218,21 +219,21 @@
                             <div class="row">
                                 <div class="form-group col-md-5">
                                     {!! Form::label('Banco') !!}
-                                    {{ Form::select('banco',['CEF'=>'Caixa Economica','BB'=>'Banco do Brasil','BA'=>'Bradesco'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                    {{ Form::select('banco',['CEF'=>'Caixa Economica','BB'=>'Banco do Brasil','BA'=>'Bradesco'],$banco->banco,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                 </div>
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}
-                                    {!! Form::text('agencia',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('agencia',$banco->agencia,['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     {!! Form::label('Conta') !!}
-                                    {!! Form::text('conta',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('conta',$banco->conta,['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-2">
                                     {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('contaDv',$banco->contaDv,['class'=>'form-control']) !!}
                                 </div>
                             </div>
 

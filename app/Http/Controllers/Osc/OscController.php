@@ -112,53 +112,50 @@ class OscController extends Controller
 
     public function update(Request $request,$id){
 
-        $file_path = null;
-        if($request->logo){
-            $file       = $request->file('logo');
-            $name       = $file->getClientOriginalName();
-            $path       = public_path('uploads/osc');
-            $file_path  = 'uploads/osc/'.$name;
-            $file->move($path,$name);
-        };
-
-        $osc = OSC::where('user_id',Auth::user()->id)->first();
-        $dados = $request->all();
-        $result = DB::transaction(function() use ($request,$dados,$osc,$file_path) {
+        $osc = OSC::find($id);
+        $result = DB::transaction(function() use ($request,$osc) {
             try {
-                $osc->endereco()->update($dados);
-                $osc->banco()->update($dados);
 
-                $osc->nome_fantasia = $request->nome_fantasia;
-                $osc->sigla_osc = $request->sigla_osc;
-                $osc->cnae = $request->cnae;
-                $osc->responsavel_legal = $request->responsavel_legal;
-                $osc->situacao_imovel = $request->situacao_imovel;
-                $osc->ano_inscricao_cnpj = $request->ano_inscricao_cnpj;
-                $osc->ano_fundacao = $request->ano_fundacao;
-                $osc->email = $request->email;
-                $osc->site = $request->site;
-                $osc->descricao_osc = $request->descricao_osc;
-                $osc->telefone = $request->telefone;
-                $osc->objetivo_ods = $request->objetivo_ods;
-                $osc->metas_ods = $request->metas_ods;
-                $osc->atividade_economica = $request->atividade_economica;
-                $osc->area_atuacao = $request->area_atuacao;
-                $osc->sub_area1 = $request->sub_area1;
-                $osc->sub_area2 = $request->sub_area2;
-                $osc->surgimento_osc = $request->surgimento_osc;
-                $osc->missao_osc = $request->missao_osc;
-                $osc->visao_osc = $request->visao_osc;
-                $osc->finalidades_estatutarias_ods = $request->finalidades_estatutarias_ods;
-                $osc->link_estatuto_osc = $request->link_estatuto_osc;
-                $osc->logo = $file_path ? $file_path : $osc->logo;
+                $banco              = $osc->banco();
+                $banco->banco       = $request->banco;
+                $banco->agencia     = $request->agencia;
+                $banco->conta       = $request->conta;
+                $banco->contaDV     = $request->contaDv;
+                $banco->tipo_conta  = 3;
+                $banco->save();
 
+                       $osc->nome_fantasia                = $request->nome_fantasia;
+                       $osc->cnpj                           = $request->cnpj;
+                       $osc->ano_inscricao_cnpj   = $request->ano_inscricao_cnpj;
+                       $osc->ano_fundacao          = $request->ano_fundacao;
+                       $osc->sigla                = $request->sigla;
+                       $osc->cnae                = $request->cnae;
+                       $osc->responsavel_legal   = $request->responsavel_legal;
+                       $osc->situacao_imovel_id   = $request->situacao_imovel_id;
+                       $osc->email            = $request->email;
+                       $osc->site                = $request->site;
+                       $osc->descricao            = $request->descricao;
+                       $osc->telefone           = $request->telefone;
+                            $osc->cep                  = $request->cep;
+                            $osc->logradouro        = $request->logradouro;
+                            $osc->numero             = $request->numero;
+                            $osc->complemento          = $request->complemento;
+                            $osc->bairro               = $request->bairro;
+                            $osc->cidade                = $request->cidade;
+                            $osc->uf                    = $request->uf;
+                       $osc->atividades_economicas_id   = $request->atividades_economicas_id;
+                       $osc->area_atuacao       = $request->area_atuacao;
+                       $osc->sub_area1           = $request->sub_area1;
+                       $osc->sub_area2            = $request->sub_area2;
+                       $osc->surgimento_osc    = $request->surgimento_osc;
+                       $osc->missao_osc          = $request->missao_osc;
+                       
                 $osc->save();
+
                 Alert::success('Seus dados foram Salvos', 'Sucesso')->persistent('Ok');
-                //return redirect()->route('investimentos.index');
                 return redirect()->back();
             } catch (Throwable $t) {
                 Alert::warning('Não foi possível Salvar seus dados' . $t->getMessage(), 'Erro')->persistent('Ok');
-                //return redirect()->route('investimentos.index');
                 return redirect()->back();
             }
         },2);
