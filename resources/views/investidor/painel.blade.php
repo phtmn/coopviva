@@ -36,7 +36,7 @@
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     
                                 
-                                    <a href="{{ route('perfil.create') }}" class="btn btn-sm btn-info">Perfil</a>
+                                    <a href="{{ route('perfil.show') }}" class="btn btn-sm btn-info">Perfil</a>
                                     <a href="{{ route('quero_investir')  }}" class="btn btn-sm btn-success ">Investir</a>
                                   
 

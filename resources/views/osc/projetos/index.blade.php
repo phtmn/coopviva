@@ -1,6 +1,22 @@
 @extends('osc.painel')
 
+@section('cabecalho')
+    <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
+        <!-- Mask -->
+        <span class="mask bg-gradient-default opacity-8"></span>
+        <!-- Header container -->
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-12 col-md-10">
+                    <h1 class="display-2 text-white">Cadastre seus Projetos</h1>
+                    <p class="text-white mt-0 mb-2">Receba investimentos e Doações de Grandes Investidores</p>
+                    <p class="text-success">#SimEuQuero</p>
 
+                </div>
+            </div>
+        </div>
+    </div>
+@stop
 @section('conteudo')
     <div class="row">
         <div class="col-md-12">
@@ -25,7 +41,7 @@
                                     <th scope="row">
                                         <div class="media align-items-center">
                                             <div class="media-body">
-                                                <span class="mb-0 text-sm">{{$d->descricao}}</span>
+                                                <span class="mb-0 text-sm">{{$d->nome}}</span>
                                             </div>
                                         </div>
                                     </th>
@@ -34,12 +50,12 @@
                                     </td>
                                     <td>
                                       <span class="badge badge-dot mr-4">
-                                        <i class="bg-success"></i> Publicado
+                                        <i class="bg-success"></i> {{$d->status}}
                                       </span>
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar </a>                                
+                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar esse projeto </a>
                                            
                                         </div>
                                     </td>

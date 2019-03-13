@@ -11,21 +11,10 @@ class Projeto extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'user_id',
-        'descricao',
-        'imagem',
-        'instancia',
-        'ambito',
-        'num_registro1',
-        'num_registro2',
-        'segmento_cultural',
-        'objetivo_geral',
-        'objetivos_esp',
-        'justificativa',
-        'publico_alvo',
-        'impactos_esperados',
-        'artigo',
-        'valor_meta'
+        'user_id','descricao','nome','imagem','instancia_id','ambito_id','num_registro1','num_registro2',
+        'segmento_id','objetivo_geral','objetivos_especificos','justificativa','publico_alvo','impactos_esperados',
+        'artigo','valor_meta','responsavel_nome','responsavel_cpf_cnpj','responsavel_telefone1','responsavel_telefone2',
+        'responsavel_email1','responsavel_email2','banco_patrocinio_id','banco_doacao_id'
     ];
 
 //    public static function boot()

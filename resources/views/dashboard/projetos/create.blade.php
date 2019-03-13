@@ -38,7 +38,7 @@
                     <div class="row"> <!--row-1-->
                         <div class="form-group col-md-6">
                             {!! Form::label('Nome do Projeto') !!}
-                            {!! Form::text('descricao',null,["class"=>"form-control",'required'=>'true']) !!}
+                            {!! Form::text('nome',null,["class"=>"form-control",'required'=>'true']) !!}
                         </div>
 
                         <div class="form-group col-md-2 pull-right">

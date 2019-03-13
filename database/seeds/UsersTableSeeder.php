@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,59 +11,92 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::create([           
-               
-            'name'          => 'Investidor',
-            'email'         => 'investidorpf@email.com',
-            'password'      => bcrypt('123456'),
-            'uf'            => 'PB',
-            'sexo'          => 'M',
-            'cidade'        => 'João Pessoa',
-            'tipo_usuario'  => 'investidor',
-            'tipo'          => 'PF'
-               
+
+        DB::table('perfis')->insert([
+            ['nome'=>'Investidor'],
+            ['nome'=>'Osc (Organizacao da Sociedade Civil)'],
+            ['nome'=>'Administrador'],
         ]);
 
-        User::create([           
-               
-            'name'          => 'Investidor',
-            'email'         => 'investidorpj@email.com',
-            'password'      => bcrypt('123456'),
-            'uf'            => 'PB',
-            'sexo'          => 'M',
-            'cidade'        => 'João Pessoa',
-            'tipo_usuario'  => 'investidor',
-            'tipo'          => 'PJ'
-               
-        ]);
+        DB::table('users')->insert([
+            [
+                'nome_social'   => 'Fisica - Investidor',
+                'nome_completo' => 'Pessoa Fisica',
+                'email'         => 'pessoafisica@email.com',
+                'password'      => bcrypt('123456'),
+                'tipo_pessoa'   => 'F',
+                'perfil_id'     => 1,
+                'dt_nascimento' => \Carbon\Carbon::now(),
+                'genero'        => 'M',
+                'cpf_cnpj'      => '000.000.000-00',
+                'cep'           => '58300-000',
+                'logradouro'    => 'Rua sem nome',
+                'numero'        => 'S/N',
+                'bairro'        => 'Bairro',
+                'cidade'        => 'Cidade',
+                'uf'            => 'PB',
+                'ativo'         => 1,
+                'verified'      => 1
+            ],
+            [
+                'nome_social'   => 'Juridica - Investidor',
+                'nome_completo' => 'Pessoa juridica',
+                'email'         => 'pessoajuridica@email.com',
+                'password'      => bcrypt('123456'),
+                'tipo_pessoa'   => 'J',
+                'perfil_id'     => 1,
+                'dt_nascimento' => \Carbon\Carbon::now(),
+                'genero'        => 'F',
+                'cpf_cnpj'      => '00.000.000/0001-00',
+                'cep'           => '58300-000',
+                'logradouro'    => 'Rua sem nome',
+                'numero'        => 'S/N',
+                'bairro'        => 'Bairro',
+                'cidade'        => 'Cidade',
+                'uf'            => 'PB',
+                'ativo'         => 1,
+                'verified'      => 1
 
-        User::create([           
-               
-            'name'          => 'Admin',
-            'email'         => 'admin@admin.com',
-            'password'      => bcrypt('123456'),
-            'uf'            => 'PB',
-            'sexo'          => 'M',
-            'cidade'        => 'João Pessoa',
-            'tipo_usuario'  => 'investidor',
-            'tipo'          => 'PF',
-            'isAdmin'       => 1
-               
+            ],
+            [
+                'nome_social'   => 'OSC - Usuario',
+                'nome_completo' => 'Osc Usuário',
+                'email'         => 'osc@email.com',
+                'password'      => bcrypt('123456'),
+                'tipo_pessoa'   => 'F',
+                'perfil_id'     => 2,
+                'dt_nascimento' => \Carbon\Carbon::now(),
+                'genero'        => 'M',
+                'cpf_cnpj'      => '000.000.000-00',
+                'cep'           => '58200-000',
+                'logradouro'    => 'Rua sem nome',
+                'numero'        => 'S/N',
+                'bairro'        => 'Bairro',
+                'cidade'        => 'Cidade',
+                'uf'            => 'PB',
+                'ativo'         => 1,
+                'verified'      => 1
+            ],
+            [
+                'nome_social'   => 'Administrador',
+                'nome_completo' => 'Administrador',
+                'email'         => 'administrador@email.com',
+                'password'      => bcrypt('secret'),
+                'tipo_pessoa'   => 'M',
+                'perfil_id'     => 3,
+                'dt_nascimento' => \Carbon\Carbon::now(),
+                'genero'        => 'M',
+                'cpf_cnpj'      => '000.000.000-00',
+                'cep'           => '58300-000',
+                'logradouro'    => 'Rua sem nome',
+                'numero'        => 'S/N',
+                'bairro'        => 'Bairro',
+                'cidade'        => 'Cidade',
+                'uf'            => 'PB',
+                'ativo'         => 1,
+                'verified'      => 1
+            ]
         ]);
-
-        User::create([           
-               
-            'name'          => 'Osc',
-            'email'         => 'osc@email.com',
-            'password'      => bcrypt('123456'),
-            'uf'            => 'PB',
-            'sexo'          => 'M',
-            'cidade'        => 'João Pessoa',
-            'tipo_usuario'  => 'osc',
-            'tipo'          => 'PJ'
-               
-        ]);
-
 
     }
 }

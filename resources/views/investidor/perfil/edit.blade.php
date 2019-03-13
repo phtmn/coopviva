@@ -1,8 +1,7 @@
 @extends('investidor.painel')
 
 @section('conteudo_painel')
-    {!! Form::model($perfil,['route'=> ['perfil.update',$perfil->id] ]) !!}
-    @method('PUT')
+    {!! Form::model($perfil,['route'=> ['perfil.update'] ]) !!}
     <h4>Dados Pessoais</h4>
     <hr>
     <div class="row">
@@ -12,7 +11,7 @@
         </div>
         <div class="form-group col-md-4">
             <label for="data_nascimento">Data Nascimento</label>
-            {!! Form::date('data_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
+            {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
         </div>
     </div>
 
@@ -24,8 +23,8 @@
         <div class="form-group col-md-6">
             <label for="email">Gênero</label>
             {{ Form::select('genero',[
-                'Masculino'      => 'Masculino',
-                'Feminino'       => 'Feminino',
+                'M'             => 'Masculino',
+                'F'             => 'Feminino',
                 'Outro'         => 'Outro'
                 ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true'])
             }}
@@ -33,15 +32,15 @@
     </div>
 
     <div class="row">
-        @if(Auth::user()->tipo == 'PF')
+        @if(Auth::user()->tipo_pessoa == 'F')
             <div class="form-group col-md-6">
                 <label for="cpf">CPF</label>
-                {!! Form::text('cpf',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
+                {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
             </div>
         @else
             <div class="form-group col-md-6">
                 <label for="cnpj">CNPJ</label>
-                {!! Form::text('cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
+                {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
             </div>
             <div class="form-group col-md-6">
                 <label for="razao_social">Razão Social</label>
@@ -59,16 +58,16 @@
     <div class="row">
         <div class="form-group col-md-3">
             <label for="cep">CEP</label>
-            {!! Form::text('cep',$endereco->cep,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
+            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
         </div>
         <div class="form-group col-md-6">
             <label for="rua">Rua/Logradouro</label>
-            {!! Form::text('rua',$endereco->rua,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
+            {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
         </div>
 
         <div class="form-group col-md-3">
             <label for="numero">Bairro</label>
-            {!! Form::text('bairro',$endereco->bairro,['class'=> 'form-control','id'=>'bairro']) !!}
+            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
         </div>
 
     </div>
@@ -76,19 +75,19 @@
     <div class="row">
         <div class="form-group col-md-2">
             <label for="numero">Número</label>
-            {!! Form::text('numero',$endereco->numero,['class'=> 'form-control']) !!}
+            {!! Form::text('numero',null,['class'=> 'form-control']) !!}
         </div>
         <div class="form-group col-md-5">
             <label for="cidade">Cidade</label>
-            {!! Form::text('cidade',$endereco->cidade,['class'=> 'form-control','id'=>'cidade']) !!}
+            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
         </div>
         <div class="form-group col-md-2">
             <label for="uf">Estado</label>
-            {!! Form::text('uf',$endereco->uf,['class'=> 'form-control','id'=>'estado']) !!}
+            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
         </div>
         <div class="form-group col-md-3">
             <label for="complemento">Complemento</label>
-            {!! Form::text('complemento',$endereco->complemento,['class'=> 'form-control']) !!}
+            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
     </div>
     <div class="form-group mb-5 pull-center">

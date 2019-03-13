@@ -17,7 +17,10 @@ Route::view('/landing_osc','investidor.investimentos.landing_osc')->name('landin
 //Grupo de Rotas para Investidor
 Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
 
-    Route::resource('perfil','PerfilController');
+    Route::get('/perfil','PerfilController@index')->name('perfil.index');
+    Route::get('/meus-dados','PerfilController@perfil')->name('perfil.show');
+    Route::post('/perfil/atualiza','PerfilController@update')->name('perfil.update');
+
     Route::resource('investimentos','InvestimentosController');
 
     Route::get('/quero_investir','InvestimentosController@lista_oscs')->name('quero_investir');
@@ -47,9 +50,9 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
     Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
 
     Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');
-    Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
-    Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');
-    Route::get('/meta/remover/{id}','Dashboard\MetasController@removerMeta')->name('meta.remover');
+    Route::get('/metas/{ods}', 'MetasController@metas')->name('metas');
+    Route::post('/metas', 'MetasController@gravar')->name('metas.salvar');
+    Route::get('/meta/remover/{id}','MetasController@removerMeta')->name('meta.remover');
 
     Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
