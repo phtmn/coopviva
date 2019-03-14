@@ -37,14 +37,14 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="{{asset('vendor/argon-dash/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle">
+                                    <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Abrir modal para ulpoad de logo">Alterar Foto</a>
+                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
                         </div>
                     </div>
                     <div class="card-body pt-0 pt-md-4">
@@ -128,7 +128,7 @@
 
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE
+                                    <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Principal
                                 </label>
                                 <div class="col-sm-8">
                                     {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}

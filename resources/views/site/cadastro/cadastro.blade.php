@@ -151,6 +151,7 @@
 					</div>
 				</div> 
 			</div><!-- .row -->
+			
 			@section('js')
 				<script>
 					$(document).ready(function(){

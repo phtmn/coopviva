@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-lg-7 col-md-10">
                     <h1 class="display-2 text-white">Bem Vindo(a), {{auth()->user()->nome_social}}</h1>
-                    <p class="text-white mt-0 mb-5">Estamos Felizes por chegar até aqui, para continuar preenchar algumas informações sobre sua OSC.</p>
+                    <p class="text-white mt-0 mb-5">Estamos Felizes por chegar até aqui, para continuar preencha algumas informações sobre sua OSC.</p>
                     <a href="{{ route('osc.create') }}" class="btn btn-outline-success">Preencher Dados</a>
                 </div>
             </div>

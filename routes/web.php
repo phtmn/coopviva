@@ -5,6 +5,7 @@ Auth::routes(['verify'=>true]);
 
 
 Route::view('/','site.index');
+Route::view('/termodeuso','site.termodeuso');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 //Rotas para manutenção de cadastros-logins
