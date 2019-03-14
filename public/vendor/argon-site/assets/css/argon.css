@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Argon Design System - v1.0.1
+*  rgon Design System - v1.0.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-design-system
@@ -228,7 +228,7 @@ a
 {
     text-decoration: none;
 
-    color: #5e72e4;
+    color: #2dce89;
     background-color: transparent;
 
     -webkit-text-decoration-skip: objects;
@@ -17296,7 +17296,7 @@ textarea[resize='horizontal']
 }
 .section-shaped .shape-default :nth-child(1)
 {
-    background: #7795f8;
+    background: #90ca93;
 }
 .section-shaped .shape-default :nth-child(2)
 {

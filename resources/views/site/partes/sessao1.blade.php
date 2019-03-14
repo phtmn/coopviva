@@ -8,14 +8,14 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-5">
                                 <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                    <i class="ni ni-check-bold"></i>
+                                    <i class="ni ni-building"></i>
                                 </div>
-                                <h6 class="text-primary text-uppercase">COOPVIVA para Investidores P.F.</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-primary text-uppercase">SOU UMA EMPRESA POSITIVA</h6>
+                                <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-primary">design</span>
-                                    <span class="badge badge-pill badge-primary">system</span>
-                                    <span class="badge badge-pill badge-primary">creative</span>
+									
+                                    <span class="badge badge-pill badge-primary">#SIMEUQUERO </span>
+                                   
                                 </div>
                                 
                             </div>
@@ -25,14 +25,13 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-5">
                                 <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                    <i class="ni ni-istanbul"></i>
+                                    <i class="ni ni-satisfied"></i>
                                 </div>
-                                <h6 class="text-success text-uppercase">COOPVIVA para Investidores P.J.</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-success text-uppercase">SOU UM CIDADÃO COMPROMETIDO</h6>
+                                <p class="description mt-3">Se você quer apoiar, investIr, trocar informações, divulgar  conteúdos por simpátia afinidade ou estilo de vida.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-success">business</span>
-                                    <span class="badge badge-pill badge-success">vision</span>
-                                    <span class="badge badge-pill badge-success">success</span>
+                                                           
+									<span class="badge badge-pill badge-success">#SIMEUQUERO </span>
                                 </div>
                                 
                             </div>
@@ -42,14 +41,13 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-5">
                                 <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                                    <i class="ni ni-planet"></i>
+                                    <i class="ni ni-istanbul"></i>
                                 </div>
-                                <h6 class="text-warning text-uppercase">COOPVIVA para OSC's</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-warning text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h6>
+                                <p class="description mt-3">Se você faz parte de uma organização do terceiro setor que produza sempre um bem comum, com alto valor socioambiental agregado..</p>
                                 <div>
-                                    <span class="badge badge-pill badge-warning">marketing</span>
-                                    <span class="badge badge-pill badge-warning">product</span>
-                                    <span class="badge badge-pill badge-warning">launch</span>
+                                    
+                                    <span class="badge badge-pill badge-warning">#SIMEUQUERO </span>
                                 </div>
                                 
                             </div>

@@ -7,9 +7,10 @@
 			<div class="hero-content-overlay position-absolute w-100 h-100">
 				<div class="container h-100">
 					<div class="row h-100">
+					
 						<div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
 							<header class="entry-header">
-								<h4> Cadastro no Sistema</h4>
+								 <h4> Cadastro no Sistema</h4>
 							</header><!-- .entry-header -->
 						</div><!-- .col -->
 					</div><!-- .row -->
@@ -24,6 +25,7 @@
 	<div class="featured-cause">
 		<div class="container">
 			<div class="row">
+			
 				<div class="col-12 col-lg-6">
 					<div class="cause-wrap  flex-wrap justify-content-between">
 						<header class="entry-header  flex-wrap align-items-center">

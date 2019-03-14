@@ -34,6 +34,7 @@
 											{{ session('success') }}
 										</div>
 									@endif
+									<br>
 									<h3 class="entry-title w-100 m-0 text-center">Não tenho cadastro!</h3>
 								</header><!-- .entry-header -->
 								<div class="card-body">
@@ -115,12 +116,12 @@
 											<div class="form-group" style="margin-left: 25px">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO" disabled="disabled" checked="checked"     >
-													<label class="form-check-label" >Aceito os <a href="#"> Termos de Uso </a></label>
+													<label class="form-check-label" >Aceito os <a href="{{url('/termodeuso')}}"> Termos de Uso </a></label>
 												</div>
 											</div>
 										</div>
 										<div class="form-group">
-											<center>  <button type="submit" class="btn gradient-bg">Cadastrar</button> </center>
+											<center>  <button type="submit" class="btn btn-outline-success">Cadastrar</button> </center>
 										</div>
 									</form>
 								</div>
@@ -128,17 +129,21 @@
 						</div><!-- .col -->
 						<div class="col-12 col-lg-6">
 						<div class="cause-wrap d-flex flex-wrap justify-content-between">
-							<header class="entry-header  flex-wrap align-items-center">
-								<h3 class="entry-title w-100 m-0">Perfis de Acesso!</h3>
+							<header class="entry-header  flex-wrap align-items-center ">
+							<br>
+							<h3 class="entry-title w-100 m-0 text-center">Perfis de Acesso!</h3>
+								
 							</header><!-- .entry-header -->
 							<div class="card-body">
 								<div class="form-group">
 									<label for="name"><strong>Perfil Investidor</strong></label>
-									<p class="text-justify">O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base.</p>
+									<p class="text-justify class="sample-text" style="text-indent: 20px;">O cadastro como investidor é possivel realizar investimentos (doação/patrocínio) em instituições cadastradas em nossa base.</p>
 								</div>
+								
+								<hr>
 								<div class="form-group">
 									<label for="name"><strong>Perfil OSC</strong></label>
-									<p class="text-justify">Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados.</p>
+									<p class="text-justify" class="sample-text" style="text-indent: 20px;">Com esse cadastro sua instituição terá a possibilidade de receber investimentos (doação/patrocinio) de pessoa física e jurídica em seus projetos cadastrados e aprovados.</p>
 								</div>
 							</div>
 						</div>

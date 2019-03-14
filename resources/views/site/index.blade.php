@@ -5,5 +5,5 @@
     @include('site.partes.sessao2')
     @include('site.partes.sessao3')
     @include('site.partes.sessaoFinal')
-    @include('site.partes.sessao5')
+    
 @endsection

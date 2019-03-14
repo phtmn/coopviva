@@ -91,7 +91,7 @@
         </div>
     </div>
     <div class="form-group mb-5 pull-center">
-        <center>   <input type="submit" value="Salvar" class="btn gradient-bg">   </center>
+        <center>   <input type="submit" value="Salvar" class="btn btn-outline-success">   </center>
     </div>
 
     </div>

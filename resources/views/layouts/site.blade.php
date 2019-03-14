@@ -83,29 +83,7 @@ Sim, eu quero!</p>
 							</div>
 						</div>
 					</li>
-					<li class="nav-item dropdown">
-						<a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-							
-							<span class="nav-link-inner--text">Parceiros</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-xl">
-							<div class="dropdown-menu-inner">
-								
-								<img src="{{asset('vendor/site/images/amazons3.png')}}"  style="width: 108px; height: auto;">
-									
-								</a>
-								
-								<img src="{{asset('vendor/site/images/mercadopago.png')}}"  style="width: 108px; height: auto;">
-									
-								</a>
-							  
-								
-								
-										
-								</a>
-							</div>
-						</div>
-					</li>
+					
 					<li class="nav-item dropdown">
 						<a href="{{url('/termodeuso')}}" class="nav-link" >
 							
@@ -193,12 +171,35 @@ Sim, eu quero!</p>
 </main>
 <footer class="footer has-cards">
 	<div class="container">
+	<div class="row row-grid align-items-center my-md">
+					<div class="col-lg-6">
+						<h3 class="text-primary font-weight-light mb-2">Agradecemos sua visita!</h3>
+						<h4 class="mb-0 font-weight-light">Junte-se a nós por um mundo sustentável.</h4>
+					</div>
+						<div class="col-lg-6 text-lg-center btn-wrapper">
+						
+							<img src="{{asset('vendor/site/images/amazons3.png')}}"  style="width: 128px; height: auto;">
+						
+						
+							<img src="{{asset('vendor/site/images/mercadopago.png')}}"  style="width: 128px; height: auto;">
+						
+						
+							<img src="{{asset('vendor/site/images/hostgator.png')}}"  style="width: 128px; height: auto;">
+					
+					</div>
+					
+						
+							
+				
+				
+				</div>
 		<hr>
 		<div class="row align-items-center justify-content-md-between">
+		
 			<div class="col-md-5 ">
 				<div class="copyright text-center text-primary text-xl-left text-muted">
 					&copy; 2019
-					<a href="#" target="_blank">COOPVIVA</a>
+					<a href="{{url('/')}}" target="_blank">COOPVIVA</a>
 				</div>
 			</div>
 			<div class="col-md-7">
