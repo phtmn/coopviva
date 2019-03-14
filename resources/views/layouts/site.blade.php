@@ -287,6 +287,8 @@ Sim, eu quero!</p>
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
 <script src="{{asset('vendor/site/js/coopviva.js')}}"></script>
 <iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=cc90179e0f&tl=NTU4Mzk5NDE1NDk3OA==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
+<script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
+@include('sweet::alert')
 @yield('js')
 </body>
 

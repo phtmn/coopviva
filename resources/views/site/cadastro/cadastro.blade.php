@@ -122,7 +122,7 @@
 									<div class="form-group" style="margin-left: 25px">
 										<div class="form-check form-check-inline">            
 											<input class="form-check-input" type="checkbox" name="termo" value="ACEITO" disabled="disabled" checked="checked"     >
-											<label class="form-check-label" >Aceito os <a href="{{ route('termo') }}"> Termos de Uso </a></label>
+											<label class="form-check-label" >Aceito os <a href="#"> Termos de Uso </a></label>
 										</div>
 									</div>
 								</div>
@@ -152,27 +152,7 @@
 				</div> 
 			</div><!-- .row -->
 			
-			@section('js')
-				<script>
-					$(document).ready(function(){
-						let tipoPerfil      = $('#tipo-perfil');
-						let boxTipoUsuario  = $('#box-tipo-usuario');
-						let radioPJ         = $('#radioPJ');
-						tipoPerfil.change(function(){
-							if(tipoPerfil.val() === 'osc'){
-									boxTipoUsuario.css({'display':'none'});
-									radioPJ.attr('checked', true);
-							}else{
-									boxTipoUsuario.css({'display':'block'});
-									radioPJ.attr('checked', false);
-							}
-						});
-					});
-					window.onload = function(){
-						$('main').removeClass('coopviva');
-					}
-				</script>
-			@stop
+
 		</div><!-- .row -->
 	</div><!-- .container -->
 	</div>
