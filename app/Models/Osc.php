@@ -25,7 +25,7 @@ class Osc extends Model
     }
 
     public function metas(){
-        return $this->hasMany(_MetasOsc::class)->get();
+        return $this->hasMany(Metas_Oscs::class)->get();
     }
 
 

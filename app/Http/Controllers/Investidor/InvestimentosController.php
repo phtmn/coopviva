@@ -22,7 +22,7 @@ class InvestimentosController extends Controller
     }
 
     public function lista_oscs(){
-        $data = DB::table('oscs')->get();
+        $data = Osc::paginate(12);
         return view('investidor.investimentos.lista_oscs',[
             'data' => $data
         ]);
@@ -32,7 +32,7 @@ class InvestimentosController extends Controller
 
         return view('investidor.investimentos.landing_osc',[
             'osc'       => Osc::find($id),
-            'metas'     => DB::table('osc_metas')->where('osc_id',$id)->get(),
+            'metas'     => DB::table('metas_oscs')->where('osc_id',$id)->get(),
             'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
             'projetos'  => DB::table('projetos')->where('osc_id',$id)->get()
         ]);

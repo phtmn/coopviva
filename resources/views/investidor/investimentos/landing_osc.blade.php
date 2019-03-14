@@ -28,7 +28,7 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="{{asset('uploads/osc/cause-4.jpg')}}" class="rounded-circle">
+                                        <img src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" class="rounded-circle">
                                     </a>
                                 </div>
                             </div>
@@ -42,10 +42,10 @@
                             </div>
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
-                                    <div>
-                                        <span class="heading">R$ 22 k</span> <!-- TODO :Falta calcular valor recebido e investimentos -->
-                                        <span class="description text-success">Investimentos</span>
-                                    </div>
+                                    {{--<div>--}}
+                                        {{--<span class="heading">R$ 22 k</span> <!-- TODO :Falta calcular valor recebido e investimentos -->--}}
+                                        {{--<span class="description text-success">Investimentos</span>--}}
+                                    {{--</div>--}}
                                     <div>
                                         <span class="heading">{{ $metas->count() }}</span>
                                         <span class="description">Metas</span>
@@ -57,45 +57,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-5">
-                            <div class="text-center mt-5">
-                                <h3>{{$osc->nome_fantasia}}
-                                    <span class="font-weight-light">, {{$osc->sigla_osc}}</span>
-                                </h3>
-                                <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>{{$osc->responsavel_legal}}, Responsável Legal</div>
-                                <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>Ano Fundação: {{$osc->ano_fundacao}}</div>
-                                <div><i class="ni education_hat mr-2"></i>Outro texto</div>
+                        <div class="mt-2">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="">
+                                        <h3>{{$osc->nome_fantasia}}
+                                            <span class="font-weight-light">, {{$osc->sigla}}</span>
+                                        </h3>
+                                    </div>
+                                    <div class="h6 font-weight-300">{{$osc->responsavel_legal}}, Responsável Legal</div>
+                                    <div class="h6 mt-4">Ano Fundação {{$osc->ano_fundacao}}</div>
+                                    <div>Outro texto</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="ods pull-right">
+                                        <label for="" class="display-4">Objetivos agenda 2030</label>
+                                        @forelse($metas->unique('objetivo_id') as $obj)
+                                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                        @empty
+                                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
+                                        @endforelse
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
-                        <div class="border-top mt-5">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h4 class="display-4 text-center">Projetos</h4>
-                                        @include('dashboard.investimentos.projetos')
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="border-top">
-                            <div class="row">
-                                <div class="col-lg-12 mb-2">
-                                    <h4 class="display-4 text-center">Objetivos e metas da Agenda 2030</h4>
-                                    @forelse($metas->unique('objetivo_id') as $obj)
-                                        <a style="cursor: pointer"><img src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
-                                    @empty
-                                    @endforelse
-                                </div>
-
-                                <div class="col-lg-12">
-                                    @forelse($metas as $meta)
-                                        <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
-
-                                    @empty
-                                        <p style="color:red">Nenhuma ODS cadastrada </p>
-                                    @endforelse
-                                </div>
+                        <div class=" m-5">
+                            <div class="row row-grid">
+                                    @include('dashboard.investimentos.projetos')
                             </div>
                         </div>
                     </div>

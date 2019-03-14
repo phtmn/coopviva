@@ -31,6 +31,7 @@
             </div>
 
             <div class="tab-content" id="pills-tabContent">
+
                     <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">
 
                         <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
@@ -55,12 +56,12 @@
                             @empty
                         @endforelse
 
-                        @forelse($metas as $meta)
-                            <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
-                            <hr>
-                            @empty
-                            <p style="color:red">Nenhuma ODS cadastrada </p>
-                        @endforelse
+                        {{--@forelse($metas as $meta)--}}
+                            {{--<p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>--}}
+                            {{--<hr>--}}
+                            {{--@empty--}}
+                            {{--<p style="color:red">Nenhuma ODS cadastrada </p>--}}
+                        {{--@endforelse--}}
                     </div>
 
 

@@ -52,187 +52,73 @@
 
     <div class="container">
 
-        <div class="row m-3 text-center">
+        <div class="row m-3">
             <div class="col-md-12">
-                <form action="#" class="form form-inline">
-                    @csrf
-                    <div class="form-group p-2">
-                        <input type="text" name="pesquisa" class="form-control" placeholder="Digite algo...">
+                <form action="#" class="form">
+                    <div class="row">
+                        <div class="form-group col-md-4 p-2 m-1">
+                            <label for="" class="text-white">Objetivo 2030</label>
+                            <select  name="ods" id="ods" class="form-control">
+                                <option> 1 - Erradicação da Pobreza</option>
+                                <option> 2 - Erradicação da Fome</option>
+                                <option> 3 - Saúde e Qualidade</option>
+                                <option> 4 - Educação de Qualidade</option>
+                                <option> 5 - Igualdade de Genero</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-4 p-2 m-1">
+                            <label for="" class="text-white">Segmento</label>
+                            <select  name="ods" id="ods" class="form-control">
+                                <option> Idoso </option>
+                                <option> Meio Ambiente </option>
+                                <option> </option>
+                                <option> 4 - Educação de Qualidade</option>
+                                <option> 5 - Igualdade de Genero</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-2 p-2 m-1">
+                            <label for=""></label>
+                            <button class="btn btn-default form-control mt-2" type="button">Pesquisar</button>
+                        </div>
                     </div>
-
-                    <div class="form-group p-2">
-                        <select  name="ods" id="ods" class="form-control">
-                            <option> 1 - Erradicação da Pobreza</option>
-                            <option> 2 - Erradicação da Fome</option>
-                            <option> 3 - Saúde e Qualidade</option>
-                            <option> 4 - Educação de Qualidade</option>
-                            <option> 5 - Igualdade de Genero</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group p-2">
-                        <select  name="ods" id="ods" class="form-control">
-                            <option> Idoso </option>
-                            <option> Meio Ambiente </option>
-                            <option> </option>
-                            <option> 4 - Educação de Qualidade</option>
-                            <option> 5 - Igualdade de Genero</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group p2">
-
-                        <button type="submit" class="btn btn-primary">Procurar</button>
-                    </div>
-
-
                 </form>
 
             </div>
-
-
         </div>
 
 
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <div class="row row-grid">
-                    <div class="col-lg-4">
-                        <a href="{{url('painel-investidor/quero_investir/1')}}" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0 bg-gradient-dark">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold text-white"></i>
+                @foreach($data->chunk(3) as $d)
+                    <div class="row row-grid">
+                        @foreach($d as $osc)
+                            <div class="col-lg-4">
+                                <a href="{{route('detalhe.osc',$osc->id)}}" style="cursor: pointer;">
+                                    <div class="card card-lift--hover shadow border-0 bg-gradient-dark">
+                                        <div class="card-body py-5">
+                                            <img  class="card-img-top" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" alt="">
+                                            <h6 class="text-success text-uppercase">{{$osc->nome_fantasia}}</h6>
+                                            <p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>
+                                            <div>
+                                                <span class="badge badge-pill badge-success text-white">{{ $osc->projetos()->count() }} projetos</span>
+                                                <span class="badge badge-pill badge-success text-white">{{$osc->metas()->count() }} Metas</span>
+                                                {{--<span class="badge badge-pill badge-success text-white">2 ODS</span>--}}
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-center">
+                                            <a href="{{route('detalhe.osc',$osc->id)}}" class="btn btn-success btn-xs">#SimEuQuero</a>
+                                        </div>
                                     </div>
-                                    <h6 class="text-success text-uppercase">Nome da OSC</h6>
-                                    <p class="description mt-3 text-white">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success text-white">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success text-white">20 Metas</span>
-                                        <span class="badge badge-pill badge-success text-white">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="{{url('painel-investidor/quero_investir/1')}}" class="btn btn-primary btn-xs">Investir</a>
-                                </div>
+                                </a>
                             </div>
-                        </a>
+                        @endforeach
                     </div>
-                    <div class="col-lg-4">
-                        <a href="{{url('painel-investidor/quero_investir/1')}}" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0 bg-gradient-gray-dark">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold text-white"></i>
-                                    </div>
-                                    <h6 class="text-success text-uppercase text-white">Nome da OSC</h6>
-                                    <p class="description mt-3 text-white">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success text-white">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success text-white">20 Metas</span>
-                                        <span class="badge badge-pill badge-success text-white">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="{{url('painel-investidor/quero_investir/1')}}" class="btn btn-success btn-xs">Investir</a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="{{url('painel-investidor/quero_investir/1')}}" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold"></i>
-                                    </div>
-                                    <h6 class="text-success text-uppercase">Nome da OSC</h6>
-                                    <p class="description mt-3">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success">20 Metas</span>
-                                        <span class="badge badge-pill badge-success">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="{{url('painel-investidor/quero_investir/1')}}" class="btn btn-success btn-xs">Investir</a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row row-grid">
-                    <div class="col-lg-4">
-                        <a href="" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold"></i>
-                                    </div>
-                                    <h6 class="text-success text-uppercase">Nome da OSC</h6>
-                                    <p class="description mt-3">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success">20 Metas</span>
-                                        <span class="badge badge-pill badge-success">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="" class="btn btn-success btn-xs">Investir</a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold"></i>
-                                    </div>
-                                    <h6 class="text-success text-uppercase">Nome da OSC</h6>
-                                    <p class="description mt-3">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success">20 Metas</span>
-                                        <span class="badge badge-pill badge-success">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="" class="btn btn-warning btn-xs">Investir</a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="" style="cursor: pointer;">
-                            <div class="card card-lift--hover shadow border-0">
-                                <div class="card-body py-5">
-                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                                        <i class="ni ni-check-bold"></i>
-                                    </div>
-                                    <h6 class="text-success text-uppercase">Nome da OSC</h6>
-                                    <p class="description mt-3">Breve descricao da OSC</p>
-                                    <div>
-                                        <span class="badge badge-pill badge-success">6 Projetos</span>
-                                        <span class="badge badge-pill badge-success">20 Metas</span>
-                                        <span class="badge badge-pill badge-success">2 ODS</span>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer">
-                                    <a href="" class="btn btn-default btn-xs">Investir</a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
+            {{$data->links()}}
         </div>
     </div>
 </section>
