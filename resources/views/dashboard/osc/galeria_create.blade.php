@@ -6,7 +6,10 @@
     @include('dashboard.menu')
 
     <div class="container">
+        <form action="{{route('galeria.store')}}" method="POST" enctype="multipart/form-data" class="dropzone" id="dropzone">
+            @csrf
 
+        </form>
 
         <form class="form form-investidor" action="{{route('galeria.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -26,7 +29,7 @@
              <div class="form-group col-md-6"> 
               <label for="email">Escolha um Album</label> 
                {!! Form::select('tipo',[  
-                 'osc'   => 'Album da Osc', 
+                  'osc'   => 'Album da Osc',
                   'projetos'  => 'Album de Projetos' 
               ],null,['class'=>'form-control']) !!} 
            </div> 
@@ -40,4 +43,4 @@
             </div>
         </form>
     </div>
-@endsection
+@stop

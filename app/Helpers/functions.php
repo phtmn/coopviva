@@ -12,6 +12,14 @@ if (! function_exists('removeMaskCnpj')) {
     }
 }
 
+if (! function_exists('removeMask')) {
+    function removeMask($string) {
+        return preg_replace("/[^\d]+/", "", $string);
+    }
+}
+
+
+
 function mask($mask,$str){
 
     $str = str_replace(" ","",$str);

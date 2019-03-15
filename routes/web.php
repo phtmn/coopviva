@@ -1,58 +1,61 @@
 <?php
+
 Auth::routes(['verify'=>true]);
+
+
+
+Route::view('/','site.index');
+Route::view('/termodeuso','site.termodeuso');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
-//Rotas para paginas do site NAO PRECISA USAR CONTROLLER USE ROUTE::VIEW
-Route::view('/','site.index', ['active' => 'home']);
-Route::view('/sobre', 'site.paginas.sobre', ['active' => 'sobre'])->name('sobre_nos');
-Route::view('/agenda2030', 'site.paginas.agenda2030', ['active' => 'agenda2030'])->name('agenda_2030');
-Route::view('/oscs','site.osc.index', ['active' => 'oscs'])->name('oscs');
-Route::view('/termodeuso', 'site.paginas.termouso')->name('termo');
+Route::get('/quero_investir','Investidor\InvestimentosController@lista_oscs')->name('quero_investir');
+Route::get('/quero_investir/{id}','Investidor\InvestimentosController@detalhe_oscs')->name('detalhe.osc');
 
-//Rotas para manutenção de cadastros-logins
-Route::view('/cadastro','site.cadastro.cadastro',['active'=>'cadastro'])->name('site.cadastro');
-Route::view('/entrar','site.cadastro.login',['active'=>'login'])->name('site.login');
-Route::view('/perfil','site.cadastro.perfil',['active'=>'login'])->name('site.perfil');
+//Grupo de Rotas para Investidor
+Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
 
-//Rotas para dashboards do site
-Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'dashboard'],function(){
+    Route::get('/perfil','PerfilController@index')->name('perfil.index');
+    Route::get('/meus-dados','PerfilController@perfil')->name('perfil.show');
+    Route::post('/perfil/atualiza','PerfilController@update')->name('perfil.update');
 
-    Route::get('/','Dashboard\DashboardController@index')->name('dashboard.index'); 
-    
-    Route::resource('osc','Dashboard\OscController');
-    Route::get('/meus-investimentos','Dashboard\OscController@getInvestimentos')->name('investimentos');
+    Route::resource('investimentos','InvestimentosController');
 
 
-    Route::resource('projetos','Dashboard\ProjetosController');
-    Route::resource('perfil','Dashboard\PerfilController');
-    Route::resource('investimentos','Dashboard\InvestimentosController');
-    Route::resource('galeria','Dashboard\GaleriaController');
+    Route::get('/investir/{id}','CheckoutController@formIncentivar')->name('investir');
+    Route::post('/pagar','CheckoutController@pagar')->name('pagar');
+    Route::get('/investimento/d/{id}','InvestimentosController@cancelar')->name('investimento.cancelar');
+    Route::get('/investimento/{status}','InvestimentosController@callback');
 
-    Route::get('/objetivos-ods','Dashboard\MetasController@metas')->name('osc.objetivos');
+});
 
-    Route::get('/metas/{ods}', 'Dashboard\MetasController@metas')->name('metas');
-    Route::post('/metas', 'Dashboard\MetasController@gravar')->name('metas.salvar');
-    Route::get('/meta/remover/{id}','Dashboard\MetasController@removerMeta')->name('meta.remover');
+//Grupo de Rotas para OSC
+Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-osc','namespace'=>'Osc'],function() {
+
+    Route::view('/','layouts.dashboard')->name('osc.dashboard');
+
+    Route::resource('osc','OscController');
+    Route::resource('projetos','ProjetosController');
+
+    Route::resource('galeria','GaleriaController');
+
+    Route::get('s3-remover','GaleriaController@removerGaleria')->name('s3-remover');
+
+
+    Route::get('/meus-investimentos','OscController@getInvestimentos')->name('investimentos');
+
+    Route::get('/objetivos-ods','MetasController@metas')->name('osc.objetivos');
+    Route::get('/metas/{ods}', 'MetasController@metas')->name('metas');
+    Route::post('/metas', 'MetasController@gravar')->name('metas.salvar');
+    Route::get('/meta/remover/{id}','MetasController@removerMeta')->name('meta.remover');
 
     Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
     Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
     Route::get('projeto/i/{id}','Dashboard\ProjetosController@mudarInativo')->name('projeto.inativo');
 
-    Route::get('/investir/{id}','Financeiro\CheckoutController@formIncentivar')->name('investir');
-    Route::post('/pagar','Financeiro\CheckoutController@pagar')->name('pagar');
-
-    Route::get('/detalhe','Dashboard\OscController@landingPage')->name('osc.landingPage');
+    Route::get('/detalhe','OscController@landingPage')->name('osc.landingPage');
     Route::get('/detalhe/projeto/{id}','Dashboard\OscController@landingPageProjeto')->name('projeto.landingPage');
 
-    Route::get('/quero_investir','Dashboard\InvestimentosController@oscs')->name('listar.oscs');
-    Route::get('/detalhes/{id}','Dashboard\InvestimentosController@detalhe')->name('detalhe.osc');
-
-    Route::get('/investimento/d/{id}','Dashboard\InvestimentosController@cancelar')->name('investimento.cancelar');
-    Route::get('/investimento/{status}','Dashboard\InvestimentosController@callback');
-
 });
-
-
 
 //# ROTAS PARA A AREA ADMINISTRATIVA
 Route::group(['prefix'=>'sistema','middleware'=>['auth','isAdmin']],function(){

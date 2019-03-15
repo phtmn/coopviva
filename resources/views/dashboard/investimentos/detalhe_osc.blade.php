@@ -1,8 +1,8 @@
-@extends('site.master')
+@extends('layouts.site')
 
-@section('content')
+@section('conteudo_principal')
 
-    @include('dashboard.menu')
+    @include('layouts.menu_lateral')
 
 <div class="container mt-4">
     <div class="row">
@@ -31,6 +31,7 @@
             </div>
 
             <div class="tab-content" id="pills-tabContent">
+
                     <div class="tab-pane fade show active" id="pills-osc" role="tabpanel" aria-labelledby="pills-osc-tab">
                     <h1 class="card-title">{{$osc->sigla_osc}} - {{$osc->nome_fantasia}}  </h1>
                         <p align="justify" class="sample-text" style="text-indent: 15px;"><strong>Ano de Fundação:</strong> {{$osc->ano_fundacao}}</p>
@@ -56,12 +57,12 @@
                             @empty
                         @endforelse
 
-                        @forelse($metas as $meta)
-                            <p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>
-                            <hr>
-                            @empty
-                            <p style="color:red">Nenhuma ODS cadastrada </p>
-                        @endforelse
+                        {{--@forelse($metas as $meta)--}}
+                            {{--<p align="justify" class="sample-text" style="text-indent: 5px;"><b >{{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }}</p>--}}
+                            {{--<hr>--}}
+                            {{--@empty--}}
+                            {{--<p style="color:red">Nenhuma ODS cadastrada </p>--}}
+                        {{--@endforelse--}}
                     </div>
 
 
