@@ -173,19 +173,19 @@ Sim, eu quero!</p>
 	<div class="container">
 	<div class="row row-grid align-items-center my-md">
 					<div class="col-lg-6">
-						<h3 class="text-primary font-weight-light mb-2">Agradecemos sua visita!</h3>
+						<h3 class="text-primary font-weight-light mb-2"><b>Agradecemos sua visita!</b></h3>
 						<h4 class="mb-0 font-weight-light">Junte-se a nós por um mundo sustentável.</h4>
 					</div>
 						<div class="col-lg-6 text-lg-center btn-wrapper">
 						
-							<img src="{{asset('vendor/site/images/amazons3.png')}}"  style="width: 128px; height: auto;">
+						<!--	<img src="{{asset('vendor/site/images/amazons3.png')}}"  style="width: 128px; height: auto;">
 						
 						
 							<img src="{{asset('vendor/site/images/mercadopago.png')}}"  style="width: 128px; height: auto;">
 						
 						
 							<img src="{{asset('vendor/site/images/hostgator.png')}}"  style="width: 128px; height: auto;">
-					
+					-->
 					</div>
 					
 						

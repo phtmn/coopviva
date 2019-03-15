@@ -10,7 +10,8 @@
                                 <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                     <i class="ni ni-building"></i>
                                 </div>
-                                <h6 class="text-primary text-uppercase">SOU UMA EMPRESA POSITIVA</h6>
+                                <h5 class="text-primary text-uppercase">SOU UMA EMPRESA POSITIVA</h5>
+								
                                 <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
                                 <div>
 									
@@ -27,7 +28,7 @@
                                 <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
                                     <i class="ni ni-satisfied"></i>
                                 </div>
-                                <h6 class="text-success text-uppercase">SOU UM CIDADÃO COMPROMETIDO</h6>
+                                <h5 class="text-success text-uppercase">SOU UM CIDADÃO COMPROMETIDO</h5>
                                 <p class="description mt-3">Se você quer apoiar, investIr, trocar informações, divulgar  conteúdos por simpátia afinidade ou estilo de vida.</p>
                                 <div>
                                                            
@@ -43,7 +44,7 @@
                                 <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
                                     <i class="ni ni-istanbul"></i>
                                 </div>
-                                <h6 class="text-warning text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h6>
+                                <h5 class="text-warning text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
                                 <p class="description mt-3">Se você faz parte de uma organização do terceiro setor que produza sempre um bem comum, com alto valor socioambiental agregado..</p>
                                 <div>
                                     
