@@ -52,44 +52,44 @@
 
     <div class="container">
 
-        <div class="row m-3">
-            <div class="col-md-12">
-                <form action="#" class="form">
-                    <div class="row">
-                        <div class="form-group col-md-4 p-2 m-1">
-                            <label for="" class="text-white">Objetivo 2030</label>
-                            <select  name="ods" id="ods" class="form-control">
-                                <option> 1 - Erradicação da Pobreza</option>
-                                <option> 2 - Erradicação da Fome</option>
-                                <option> 3 - Saúde e Qualidade</option>
-                                <option> 4 - Educação de Qualidade</option>
-                                <option> 5 - Igualdade de Genero</option>
-                            </select>
-                        </div>
+        {{--<div class="row m-3">--}}
+            {{--<div class="col-md-12">--}}
+                {{--<form action="#" class="form">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="form-group col-md-4 p-2 m-1">--}}
+                            {{--<label for="" class="text-white">Objetivo 2030</label>--}}
+                            {{--<select  name="ods" id="ods" class="form-control">--}}
+                                {{--<option> 1 - Erradicação da Pobreza</option>--}}
+                                {{--<option> 2 - Erradicação da Fome</option>--}}
+                                {{--<option> 3 - Saúde e Qualidade</option>--}}
+                                {{--<option> 4 - Educação de Qualidade</option>--}}
+                                {{--<option> 5 - Igualdade de Genero</option>--}}
+                            {{--</select>--}}
+                        {{--</div>--}}
 
-                        <div class="form-group col-md-4 p-2 m-1">
-                            <label for="" class="text-white">Segmento</label>
-                            <select  name="ods" id="ods" class="form-control">
-                                <option> Idoso </option>
-                                <option> Meio Ambiente </option>
-                                <option> </option>
-                                <option> 4 - Educação de Qualidade</option>
-                                <option> 5 - Igualdade de Genero</option>
-                            </select>
-                        </div>
+                        {{--<div class="form-group col-md-4 p-2 m-1">--}}
+                            {{--<label for="" class="text-white">Segmento</label>--}}
+                            {{--<select  name="ods" id="ods" class="form-control">--}}
+                                {{--<option> Idoso </option>--}}
+                                {{--<option> Meio Ambiente </option>--}}
+                                {{--<option> </option>--}}
+                                {{--<option> 4 - Educação de Qualidade</option>--}}
+                                {{--<option> 5 - Igualdade de Genero</option>--}}
+                            {{--</select>--}}
+                        {{--</div>--}}
 
-                        <div class="form-group col-md-2 p-2 m-1">
-                            <label for=""></label>
-                            <button class="btn btn-default form-control mt-2" type="button">Pesquisar</button>
-                        </div>
-                    </div>
-                </form>
+                        {{--<div class="form-group col-md-2 p-2 m-1">--}}
+                            {{--<label for=""></label>--}}
+                            {{--<button class="btn btn-default form-control mt-2" type="button">Pesquisar</button>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</form>--}}
 
-            </div>
-        </div>
+            {{--</div>--}}
+        {{--</div>--}}
 
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5">
             <div class="col-lg-12">
                 @foreach($data->chunk(3) as $d)
                     <div class="row row-grid">
