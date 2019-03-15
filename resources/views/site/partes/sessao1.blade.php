@@ -14,8 +14,8 @@
 								
                                 <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
                                 <div>
-									
-                                    <span class="badge badge-pill badge-primary">#SIMEUQUERO </span>
+
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-primary">#SIMEUQUERO </span></a>
                                    
                                 </div>
                                 
@@ -31,8 +31,8 @@
                                 <h5 class="text-success text-uppercase">SOU UM CIDADÃO COMPROMETIDO</h5>
                                 <p class="description mt-3">Se você quer apoiar, investIr, trocar informações, divulgar  conteúdos por simpátia afinidade ou estilo de vida.</p>
                                 <div>
-                                                           
-									<span class="badge badge-pill badge-success">#SIMEUQUERO </span>
+
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-success">#SIMEUQUERO </span></a>
                                 </div>
                                 
                             </div>
@@ -47,8 +47,8 @@
                                 <h5 class="text-warning text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
                                 <p class="description mt-3">Se você faz parte de uma organização do terceiro setor que produza sempre um bem comum, com alto valor socioambiental agregado..</p>
                                 <div>
-                                    
-                                    <span class="badge badge-pill badge-warning">#SIMEUQUERO </span>
+
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-warning">#SIMEUQUERO </span></a>
                                 </div>
                                 
                             </div>

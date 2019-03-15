@@ -165,6 +165,9 @@ DISPOSIÇÕES GERAIS<br>
 </b>
 
                             </div>
+                                <div class="modal-footer">
+                                    <a href="{{route('register')}}" class="btn btn-success">Voltar</a>
+                                </div>
                         </div>
                        
                     </div>

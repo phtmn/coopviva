@@ -8,7 +8,7 @@
 						
 					</div>
 					<div class="col-lg-3 ml-lg-auto">
-						<a href="{{route('register')}}" class="btn btn-lg btn-block btn-white">#SIMEUQUERO</a>
+						<a href="{{route('quero_investir')}}" class="btn btn-lg btn-block btn-white">#SIMEUQUERO</a>
 					</div>
 				</div>
 			</div>

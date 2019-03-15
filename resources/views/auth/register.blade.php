@@ -59,7 +59,7 @@
 												</div>
 												<br>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="tipo_pesssoa" id="radioPJ" value="J">
+													<input class="form-check-input" type="radio" name="tipo_pessoa" id="radioPJ" value="J">
 													<label class="form-check-label" for="radioPJ">Pessoa Jurídica</label>
 												</div>
 											</div>
@@ -163,6 +163,7 @@
 			let radioPJ         = $('#radioPJ');
 
 			tipoUsuario.change(function(){
+
 				console.log(tipoUsuario.val())
 				if(tipoUsuario.val() == 2){
 					boxTipoUsuario.css({'display':'none'});

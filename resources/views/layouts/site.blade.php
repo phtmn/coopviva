@@ -57,6 +57,13 @@
 						</a>
 						<div class="dropdown-menu dropdown-menu-xl">
 							<div class="dropdown-menu-inner">
+								<a href="http://simeuquero.org/" class="media d-flex align-items-center" target="_blank">
+									<img src="{{asset('vendor/argon-site/assets/img/brand/SimEuQuero_logo.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
+									<div class="media-body ml-3">
+										<h5 class="heading text-success mb-md-1"> Sim eu Quero</h5>
+										<p class="description d-none d-md-inline-block mb-0">Banhe-se em um mundo mais sustentável.Sim, eu quero!</p>
+									</div>
+								</a>
 								<a href="http://www.redeconexao.com.br/" class="media d-flex align-items-center" target="_blank">
 								<img src="{{asset('vendor/argon-site/assets/img/brand/rede_c.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
 									<div class="media-body ml-3">
@@ -69,15 +76,6 @@
 									<div class="media-body ml-3">
 										<h6 class="heading text-warning mb-md-1">Plataforma Agenda 2030</h6>
 										<p class="description d-none d-md-inline-block mb-0">Acelerando as transformações para a Agenda 2030 no Brasil.</p>
-									</div>
-								</a>
-							  
-								<a href="http://simeuquero.org/" class="media d-flex align-items-center" target="_blank">
-										<img src="{{asset('vendor/argon-site/assets/img/brand/SimEuQuero_logo.png')}}" alt="..:: COOPVIVA ::.." style="width: 88px; height: auto;">
-										<div class="media-body ml-3">
-										<h5 class="heading text-success mb-md-1"> Sim eu Quero</h5>
-										<p class="description d-none d-md-inline-block mb-0">Banhe-se em um mundo mais sustentável. 
-Sim, eu quero!</p>
 									</div>
 								</a>
 							</div>

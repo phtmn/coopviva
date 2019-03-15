@@ -74,19 +74,21 @@ class RegisterController extends Controller
             'nome_social'   => $data['name'],
             'email'         => $data['email'],
             'tipo_pessoa'   => $data['tipo_pessoa'],
-            'perfil_id'  => $data['tipo_usuario'],
+            'perfil_id'     => $data['tipo_usuario'],
+            'verified'      => 1,
             'password'      => Hash::make($data['password']),
         ]);
 
 
-        VerifyUser::create([
-            'user_id'   => $user->id,
-            'token'     => sha1(time()),
-        ]);
+        //VerifyUser::create([
+        //    'user_id'   => $user->id,
+        //    'token'     => sha1(time()),
+        //]);
 
-        Mail::to($user->email)->send(new VerifyMail($user));
-        Mail::send(new NewUser($user));
-        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+        //Mail::to($user->email)->send(new VerifyMail($user));
+        //Mail::send(new NewUser($user));
+        //Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+        Alert::success( 'Seu cadastro foi Efetuado, você ja pode fazer login','Muito Bom')->persistent('Ok');
 
         return $user;
 
