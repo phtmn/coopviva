@@ -1,50 +1,48 @@
 <?php
 
-namespace App\Http\Controllers\Financeiro;
+namespace App\Http\Controllers\Investidor;
 
 use App\Models\Investimento;
-use App\Models\Projeto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use MercadoPago\SDK as MP;
-use App\Models\Osc;
+
 use Auth;
 use Alert;
 
 class CheckoutController extends Controller
 {
-    public function formIncentivar($id){
-        $osc = DB::table('oscs')->find($id);
-        return view('dashboard.incentivos.formCheckout',[
-            'osc'       => $osc,
-            //'projetos'  => $osc->projetos->pluck('descricao','id'),
-            'tab'       => 'investir'
-        ]);
-
-    }
+//    public function formIncentivar($id){
+//        $osc = DB::table('oscs')->find($id);
+//        return view('dashboard.incentivos.formCheckout',[
+//            'osc'       => $osc,
+//            //'projetos'  => $osc->projetos->pluck('descricao','id'),
+//            'tab'       => 'investir'
+//        ]);
+//
+//    }
 
     public function pagar(Request $request){
 
         //dd($request->all());
-
+        //dd(toMoney($request->valor));
         $osc = DB::table('oscs')->where('id',$request->osc_id)->first();
         
         $investimento = new Investimento();
         $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
-        $investimento->valor_investimento   = toMoney($request->valor);
-        $investimento->tipo                 = $request->tipo ? $request->tipo : 'Investimento';
-        $investimento->operacao             = $request->operacao;
+        $investimento->valor                = toMoney($request->valor);
+        $investimento->investimento_tipo_id = 3;
+        $investimento->status_interno       = 'Aguardando Pagamento';
         $investimento->user_id              = $request->user()->id;
         $investimento->projeto_id           = $request->projeto_id;
         $investimento->osc_id               = $request->osc_id;
-        $investimento->status               = 'Aguardando Pagamento';
         $investimento->save();
 
         $pagamento = $this->gerarPagamento($investimento);
 
         $investimento = Investimento::find($investimento->id);
-        $investimento->url = $pagamento->init_point;
+        $investimento->mp_url = $pagamento->init_point;
         $investimento->save();
 
         //return redirect()->to($pagamento->init_point);
@@ -65,13 +63,12 @@ class CheckoutController extends Controller
         $item->title        = $investimento->descricao;
         $item->quantity     = 1;
         $item->currency_id  = "BRL";
-        $item->unit_price   = $investimento->valor_investimento;
+        $item->unit_price   = $investimento->valor;
 
         # Create a payer object
         $payer          = new \MercadoPago\Payer();
         $payer->email   = $investimento->usuario()->email;
         $payer->name    = $investimento->usuario()->name;
-        $payer->
 
         # Setting preference properties
         $preference->items = array($item);
@@ -79,9 +76,9 @@ class CheckoutController extends Controller
 
         # callbacks urls
         $preference->back_urls = array(
-            "success" => env('APP_URL').'/dashboard/investimento/success',
-            "failure" => env('APP_URL').'/dashboard/investimento/failure',
-            "pending" => env('APP_URL').'/dashboard/investimento/pending'
+            "success" => env('APP_URL').'painel-investidor/investimento/success',
+            "failure" => env('APP_URL').'painel-investidor/investimento/failure',
+            "pending" => env('APP_URL').'painel-investidor/investimento/pending'
         );
 
         $preference->auto_return        = "approved";

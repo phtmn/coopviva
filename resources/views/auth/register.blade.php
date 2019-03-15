@@ -46,7 +46,7 @@
 										</div>
 										<div class="form-group">
 											<label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
-											<select name="tipo_usuario" id="tipo-perfil" class="form-control" >
+											<select name="tipo_usuario" id="tipo_usuario" class="form-control" >
 												<option value="1">Perfil Investidor</option>
 												<option value="2">Perfil OSC (Organização Social Civil)</option>
 											</select>
@@ -158,11 +158,13 @@
 @section('js')
 	<script>
 		$(document).ready(function(){
-			let tipoPerfil      = $('#tipo-perfil');
+			let tipoUsuario      = $('#tipo_usuario');
 			let boxTipoUsuario  = $('#box-tipo-usuario');
 			let radioPJ         = $('#radioPJ');
-			tipoPerfil.change(function(){
-				if(tipoPerfil.val() === 'osc'){
+
+			tipoUsuario.change(function(){
+				console.log(tipoUsuario.val())
+				if(tipoUsuario.val() == 2){
 					boxTipoUsuario.css({'display':'none'});
 					radioPJ.attr('checked', true);
 				}else{
@@ -171,8 +173,5 @@
 				}
 			});
 		});
-		window.onload = function(){
-			$('main').removeClass('coopviva');
-		}
 	</script>
 @stop

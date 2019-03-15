@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    <a href="#" class="btn btn-outline-success" data-togle="tooltip" title="Abrir modal?">Investir</a>
+                                    <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
                                     <a href="#" class="btn btn-danger pull-right" data-togle="tooltip" title="Add Favoritos versoes futuras">
                                         <i class="fa fa-heart"></i>
                                     </a>
@@ -90,7 +90,68 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                    <div class="modal-dialog"  role="document">
+                        {!! Form::open(['route'=>'pagar']) !!}
+                        @csrf
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title" id="modal-title-default">Carregue sua Foto</h6>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir','id'=>'valor']) !!}
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Onde deseja Investir?</label>
+                                    <select name="escolha" id="OndeInvestir" class="form-control custom-select" required>
+                                        <option value="osc" selected>Investir em: {{$osc->nome_fantasia}}</option>
+                                        <option value="projetos">Investir em Projetos</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="box-projetos" style="display: none">
+                                    {!! Form::select('projeto_id',$projetos->pluck('nome','id'),null,['class'=>'form-control','placeholder'=>'Selecione o Projeto']) !!}
+                                </div>
+                                <input type="hidden" name="osc_id" value="{{$osc->id}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                        {!! Form::close() !!}
+                    </div>
+                </div>
             </div>
+
+
         </section>
     </main>
-@endsection
+@stop
+
+@section('js')
+    <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script>
+        $(document).ready(function(){
+            let Ondeinvestir      = $('#OndeInvestir');
+            let boxOndeInvestir   = $('#box-projetos');
+
+            Ondeinvestir.change(function(){
+                console.log(Ondeinvestir.val())
+                if(Ondeinvestir.val() == 'osc'){
+                    boxOndeInvestir.css({'display':'none'});
+                }else{
+                    boxOndeInvestir.css({'display':'block'});
+                    //radioPJ.attr('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $("#valor").mask('#.##0,00', {reverse: true});
+        });
+    </script>
+@stop

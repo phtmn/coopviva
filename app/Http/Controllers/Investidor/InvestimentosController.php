@@ -53,16 +53,16 @@ class InvestimentosController extends Controller
         $investimento->mp_codigo        = $request->merchant_order_id;
         $investimento->mp_pagamento     = $request->preference_id;
         $investimento->mp_status        = $request->collection_status;
-        $investimento->status           = $novoStatus;
-        $investimento->formaPagamento   = $request->payment_type;
+        $investimento->status_interno   = $novoStatus;
+        $investimento->forma_pagamento  = $request->payment_type;
         $investimento->save();
 
-        Alert::info('Atualizamos seu Investimento','Genial')->persistent('OK');
+        Alert::info('Seu Investimento foi Atualizado!','Genial')->persistent('OK');
         return redirect()->route('investimentos.index');
     }
 
     public function cancelar($id){
-        Investimento::find($id)->update(['status' => 'Cancelado']);
+        Investimento::find($id)->update(['status_interno' => 'Cancelado']);
         Investimento::find($id)->delete();
 
         Alert::warning('Você Cancelou esse investimento','Tenso!')->persistent('Ok');

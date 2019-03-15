@@ -19,18 +19,10 @@
                         <h1 class="display-3  text-white">Venha vivenciar...
                         <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
-                        <p class="lead  text-white">Aqui no <strong><b>COOPVIVA</b></strong>, você pode engajar com projetos ou causas que estão de acordo com seus propósitos, de forma planejada, estruturada e transparente. </p>
-                        <div class="btn-wrapper">
-                            <!--  <a href="{{route('quero_investir')}}" class="btn btn-dark btn-icon mb-3 mb-sm-0">
-                                <span class="btn-inner--icon"><i class="fa fa-handshake-o"></i></span>
-                                <span class="btn-inner--text">Investir Agora</span>
-                            </a>
-                           
-                          <a href="{{route('register')}}" class="btn btn-white btn-icon mb-3 mb-sm-0">
-                                <span class="btn-inner--icon"><i class="fa fa-registered"></i></span>
-                                <span class="nav-link-inner--text">Cadastre-se</span>
-                            </a> -->
-                        </div>
+                        <p class="lead  text-white">Aqui no <strong><b>COOPVIVA</b></strong>, você pode engajar com projetos ou causas que estão de acordo com seus propósitos,
+                            de forma planejada, estruturada e transparente. <a href="{{route('quero_investir')}}" class="text-white"> <strong><b>#SimEuQuero</b></strong> </a> </p>
+
+
                     </div>
                 </div>
             </div>

@@ -21,7 +21,8 @@ class CreateInvestimentosTable extends Migration {
 			$table->unsignedInteger('osc_id')->nullable()->index('osc_id');
 			$table->text('descricao')->nullable();
 			$table->decimal('valor', 15,2);
-			$table->string('mp_url');
+			$table->string('status_interno')->nullable();
+			$table->string('mp_url')->nullable();
 			$table->string('mp_status', 50)->nullable()->index('mp_status');
 			$table->string('forma_pagamento', 50)->nullable()->index('forma_pagamento');
 			$table->string('mp_codigo', 50)->nullable()->index('mp_codigo');

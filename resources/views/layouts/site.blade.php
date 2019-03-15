@@ -118,17 +118,17 @@ Sim, eu quero!</p>
 							<span class="nav-link-inner--text d-lg-none">E-mail</span>
 						</a>
 					</li>
-					<!--<li class="nav-item">
-						<a class="nav-link nav-link-icon"  data-toggle="tooltip" title="João Pessoa - Paraíba - Brasil">
-							<i class="ni ni-pin-3"></i>
-							<span class="nav-link-inner--text d-lg-none">Endereço</span>
-						</a>
-					</li> -->
+					{{--<!--<li class="nav-item">--}}
+						{{--<a class="nav-link nav-link-icon"  data-toggle="tooltip" title="João Pessoa - Paraíba - Brasil">--}}
+							{{--<i class="ni ni-pin-3"></i>--}}
+							{{--<span class="nav-link-inner--text d-lg-none">Endereço</span>--}}
+						{{--</a>--}}
+					{{--</li> -->--}}
 					<li class="nav-item ">
 						@guest
-							<!-- <a href="{{url('entrar')}}"class="btn btn-success btn-icon">
-								<span class="nav-link-inner--text">ENTRAR</span>
-							</a> -->
+							{{--<!-- <a href="{{url('entrar')}}"class="btn btn-success btn-icon">--}}
+								{{--<span class="nav-link-inner--text">ENTRAR</span>--}}
+							{{--</a> -->--}}
 							<button type="button" class="btn btn-success btn-icon mb-3 mb-sm-0" data-toggle="modal" data-target="#modal-login">ENTRAR</button>
 							<a href="{{route('register')}}"class="btn btn-neutral btn-icon">
 								<span class="nav-link-inner--text">Cadastre-se</span>

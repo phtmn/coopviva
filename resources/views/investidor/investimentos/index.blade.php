@@ -16,7 +16,6 @@
                                 <tr>
                                     <th>Data</th>
                                     <th>Tipo</th>
-                                    <th>Valor (R$)</th>
                                     <th>Status</th>
                                     <th></th>
                                 </tr>
@@ -25,16 +24,14 @@
                                 @forelse($data as  $d)
                                     <tr>
                                         <td>{{date('d/m/Y',strtotime($d->created_at))}}</td>
-                                        <td>{{ $d->operacao }}</td>
                                         <td>R$ {{ number_format($d->valor_investimento,2,',','.') }} </td>
-                                        <td>{{ $d->status ?? 'Cancelado pelo Usuário'}}</td>
+                                        <td>{{ $d->status_interno ?? 'Cancelado pelo Usuário'}}</td>
                                         <td>
                                             @if( $d->status == null || $d->status == 'Aguardando Pagamento')
-                                                <a href="{{ $d->url }}" target="_blank">Novo Pagamento</a>
-                                                <a href="{{ route('investimento.cancelar',$d->id) }}"><i class="fa fa-trash"></i></a>
+                                                <a href="{{ $d->mp_url }}" class="btn btn-outline-success btn-sm" target="_blank">Novo Pagamento</a>
+                                                <a href="{{ route('investimento.cancelar',$d->id) }}" class="btn btn-sm btn-danger ml-3"><i class="fa fa-trash"></i></a>
                                             @elseif($d->status == 'Investimento Realizado')
                                                 <a href=""><i class="fa fa-print"></i> Recibo</a>
-
                                             @endif
                                         </td>
                                     </tr>
