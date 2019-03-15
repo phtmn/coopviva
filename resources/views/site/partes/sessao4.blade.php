@@ -14,8 +14,8 @@
                         </div>
                     </div>
                     <div class="pl-4">
-                        <h4 class="display-3 text-white">Modern Interface</h4>
-                        <p class="text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
+                        <h4 class="display-3 text-white">E como funciona?</h4>
+                        
                     </div>
                 </div>
                 <div class="card shadow shadow-lg--hover mt-5">
@@ -27,9 +27,9 @@
                                 </div>
                             </div>
                             <div class="pl-4">
-                                <h5 class="title text-success">Awesome Support</h5>
-                                <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                                <a href="#" class="text-success">Learn more</a>
+                                
+                                <p>Aqui todas as instituições com seus respectivos projetos se inscrevem através de um cadastro completo e parametrizado conforme exigências de organismos internacionais de sustentabilidade. Isso significa que você pode facilmente capturar informações para investir de forma mais acertada.</p>
+                                
                             </div>
                         </div>
                     </div>

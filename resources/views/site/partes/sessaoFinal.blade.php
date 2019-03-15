@@ -6,8 +6,11 @@
 					<span class="text-success">Nosso plano de ação para mudar o mundo.</span>
 				</h2>
 				<p class="lead">Através da ideia central de gerar uma rede de cooperação viva e cidadã por meio do fomento de negócios de impactos sociais, cumprimos nosso objetivo principal de construir um futuro melhor para todas as pessoas. 
-				<p class="lead"> A plataforma COOPVIVA é um instrumento aglutinador de agentes da sociedade que esteja dispostos a cumprir de forma objetiva com a agenda 2030 e seus respectivos 17 objetivos e metas para um desenvolvimento sustentável. </p>
+				<hr>
+				<p class="lead"> A plataforma <b class="text-success">COOPVIVA</b> é um instrumento aglutinador de agentes da sociedade que esteja dispostos a cumprir de forma objetiva com a agenda 2030 e seus respectivos 17 objetivos e metas para um desenvolvimento sustentável. </p>
+				<hr>
 				<p class="lead"> Estamos nos empenhando para transformar este ambiente em uma experiência única e exclusiva para que juntos, cada um contribuindo como pode, chegar daqui 11 anos em 2030 com a sensação de dever cumprido e com a certeza que juntos construímos uma sociedade mais justa, viva, cooperativa e prospera.</p>
+				<hr>
 				<p class="lead">Já estamos engajados no cumprimento de 9 objetivos para o desenvolvimento sustentável em consonância com suas respectivas metas. Venha conosco nesta jornada! </p>
 				<div class="btn-wrapper">
 				   
