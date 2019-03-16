@@ -10,12 +10,12 @@
                                 <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                     <i class="ni ni-building"></i>
                                 </div>
-                                <h5 class="text-primary text-uppercase">SOU UMA EMPRESA POSITIVA</h5>
+                                <h5 class="text-primary text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
 								
-                                <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
+                                <p class="description mt-3">Se você é uma organização sem fins lucrativos e produz o bem comum, com alto valor socioambiental agregado.</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-primary">#SIMEUQUERO </span></a>
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-primary"><u>#SIMEUQUERO</u></span></a>
                                    
                                 </div>
                                 
@@ -29,10 +29,10 @@
                                     <i class="ni ni-satisfied"></i>
                                 </div>
                                 <h5 class="text-success text-uppercase">SOU UM CIDADÃO COMPROMETIDO</h5>
-                                <p class="description mt-3">Se você quer apoiar, investIr, trocar informações, divulgar  conteúdos por simpátia afinidade ou estilo de vida.</p>
+                                <p class="description mt-3">Se você quer apoiar, investir, trocar informações, divulgar conteúdos por simpatia, afinidade ou estilo de vida.</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-success">#SIMEUQUERO </span></a>
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-success"><u>#SIMEUQUERO</u></span></a>
                                 </div>
                                 
                             </div>
@@ -44,11 +44,11 @@
                                 <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
                                     <i class="ni ni-istanbul"></i>
                                 </div>
-                                <h5 class="text-warning text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
-                                <p class="description mt-3">Se você faz parte de uma organização do terceiro setor que produza sempre um bem comum, com alto valor socioambiental agregado..</p>
+                                <h5 class="text-warning text-uppercase">SOU UMA EMPRESA POSITIVA</h5>
+                                <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-warning">#SIMEUQUERO </span></a>
+                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-warning"><u>#SIMEUQUERO</u></span></a>
                                 </div>
                                 
                             </div>

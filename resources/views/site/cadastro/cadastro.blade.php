@@ -43,7 +43,7 @@
 									{{ session('success') }}
 								</div>
 							@endif
-							<h3 class="entry-title w-100 m-0">Não tenho cadastro!</h3>
+							<h3 class="entry-title w-100 m-0">Faça seu cadastro aqui!</h3>
 						</header><!-- .entry-header -->
 						<div class="card-body">  
 							<form class="form form-investidor" action="{{route('register')}}" method="POST">

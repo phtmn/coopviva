@@ -93,19 +93,19 @@
 
 				<ul class="navbar-nav align-items-lg-center ml-lg-auto">
 					<li class="nav-item">
-						<a class="nav-link nav-link-icon" href="https://www.facebook.com/rededeconexao" target="_blank" data-toggle="tooltip" title="Facebook">
+						<a class="nav-link nav-link-icon" href="https://www.facebook.com/coopviva/" target="_blank" data-toggle="tooltip" title="Facebook">
 							<i class="fa fa-facebook"></i>
 							<span class="nav-link-inner--text d-lg-none">Facebook</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link nav-link-icon" href="https://www.instagram.com/rededeconexaooficial/" target="_blank" data-toggle="tooltip" title="Instagram">
+						<a class="nav-link nav-link-icon" href="https://www.instagram.com/coopviva/" target="_blank" data-toggle="tooltip" title="Instagram">
 							<i class="fa fa-instagram"></i>
 							<span class="nav-link-inner--text d-lg-none">Instagram</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link nav-link-icon" href="https://api.whatsapp.com/send?1=pt_BR&phone=5583994154978" target="_blank" data-toggle="tooltip" title=" Whatsapp">
+						<a class="nav-link nav-link-icon" href="https://api.whatsapp.com/send?1=pt_BR&phone=558330341663" target="_blank" data-toggle="tooltip" title=" Whatsapp">
 							<i class="fa fa-whatsapp"></i>
 							<span class="nav-link-inner--text d-lg-none">Whatsapp</span>
 						</a>
@@ -285,7 +285,7 @@
 <!-- Argon JS -->
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
 <script src="{{asset('vendor/site/js/coopviva.js')}}"></script>
-<iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=cc90179e0f&tl=NTU4Mzk5NDE1NDk3OA==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
+<iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=c64f2b69cf&tl=NTUwODMzMDM0MTY2Mw==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
 <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
 @include('sweet::alert')
 @yield('js')
