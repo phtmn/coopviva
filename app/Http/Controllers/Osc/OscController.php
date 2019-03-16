@@ -49,6 +49,11 @@ class OscController extends Controller
 
     public function store(Request $request){
 
+        if($request->banco == null){
+            Alert::warning('você precisa inserir dados bancários','Eita')->persistent('ok');
+            return redirect()->back()->withInput($request->all());
+        }
+
         $result = DB::transaction(function() use ($request) {
             try {
 
@@ -60,8 +65,7 @@ class OscController extends Controller
                 $banco->tipo_conta  = 3;
                 $banco->save();
 
-                OSC::updateOrCreate(
-                    ['user_id' => auth()->user()->id],
+                OSC::Create(
                     [
                        'nome_fantasia'         => $request->nome_fantasia,
                        'cnpj'                  => $request->cnpj,

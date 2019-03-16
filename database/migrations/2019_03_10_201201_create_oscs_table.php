@@ -25,9 +25,9 @@ class CreateOscsTable extends Migration {
 			$table->string('responsavel_legal', 200)->nullable();
 			$table->unsignedInteger('banco_id')->nullable();
 			$table->unsignedInteger('situacao_imovel_id')->nullable();
+			$table->unsignedInteger('atividades_economicas_id')->nullable();
 			$table->string('email', 200)->nullable();
 			$table->string('site', 200)->nullable();
-			$table->text('descricao')->nullable();
 			$table->string('telefone', 20)->nullable();
 			$table->string('cep')->nullable();
 			$table->string('logradouro', 200)->nullable();
@@ -36,10 +36,10 @@ class CreateOscsTable extends Migration {
 			$table->string('complemento', 200)->nullable();
 			$table->string('cidade', 200)->nullable();
 			$table->string('uf', 2)->nullable();
-			$table->unsignedInteger('atividades_economicas_id')->nullable()->index('ce_atividade_economica');
 			$table->string('area_atuacao', 200)->nullable();
 			$table->string('sub_area1', 200)->nullable();
 			$table->string('sub_area2', 200)->nullable();
+			$table->text('descricao')->nullable();
 			$table->text('surgimento_osc')->nullable();
 			$table->text('missao_osc')->nullable();
 			$table->text('visao_osc')->nullable();

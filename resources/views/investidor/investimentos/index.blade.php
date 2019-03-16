@@ -4,10 +4,6 @@
     <div class="container" style="margin-top:20px; padding:20px">
         <div class="row row justify-content-center">
             <div class="col-md-12">
-                <div class="card mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Total Investido: R$ {{ $data->where('mp_status','==','approved')->sum('valor_investimento') }}</div>
-                </div>
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="table-responsive table-hover m-t-20">
@@ -15,7 +11,7 @@
                                 <thead>
                                 <tr>
                                     <th>Data</th>
-                                    <th>Tipo</th>
+                                    <th>Valor</th>
                                     <th>Status</th>
                                     <th></th>
                                 </tr>

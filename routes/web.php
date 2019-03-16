@@ -12,7 +12,7 @@ Route::get('/quero_investir','Investidor\InvestimentosController@lista_oscs')->n
 Route::get('/quero_investir/{id}','Investidor\InvestimentosController@detalhe_oscs')->name('detalhe.osc');
 
 //Grupo de Rotas para Investidor
-Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
+Route::group( ['middleware'=> ['auth','verified','perfil'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
 
     Route::get('/perfil','PerfilController@index')->name('perfil.index');
     Route::get('/meus-dados','PerfilController@perfil')->name('perfil.show');
@@ -29,7 +29,7 @@ Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-investidor',
 });
 
 //Grupo de Rotas para OSC
-Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-osc','namespace'=>'Osc'],function() {
+Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-osc','namespace'=>'Osc'],function() {
 
     Route::view('/','layouts.dashboard')->name('osc.dashboard');
 

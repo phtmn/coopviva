@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 use Auth;
 use Closure;
 
-class IsAdmin
+class CheckPerfil
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,9 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->isAdmin != 1){
-            return redirect()->route('dashboard.index');
-        }
-        return $next($request);
+        return (auth()->user()->perfil_id == 1)
+            ? $next($request)
+            : redirect()->route('osc.dashboard');
+
     }
 }
