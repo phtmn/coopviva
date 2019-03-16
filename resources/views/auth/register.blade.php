@@ -116,7 +116,7 @@
 											<div class="form-group" style="margin-left: 25px">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO" disabled="disabled" checked="checked"     >
-													<label class="form-check-label" >Aceito os <a href="{{url('/termodeuso')}}"> Termos de Uso </a></label>
+													<label class="form-check-label" >Aceito os <a href="{{url('/termo-de-uso')}}" target="_blank"> Termos de Uso </a></label>
 												</div>
 											</div>
 										</div>

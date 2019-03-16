@@ -5,7 +5,7 @@ Auth::routes(['verify'=>true]);
 
 
 Route::view('/','site.index');
-Route::view('/termodeuso','site.termodeuso');
+Route::view('/termo-de-uso','site.termodeuso');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 Route::get('/quero_investir','Investidor\InvestimentosController@lista_oscs')->name('quero_investir');
