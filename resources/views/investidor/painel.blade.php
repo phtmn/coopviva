@@ -25,48 +25,31 @@
                 <div class="card card-profile shadow mt--500">
                     <div class="px-4">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3 order-lg-2">
+                            <div class="col-lg-0 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
                                     <!-- <img src="{{asset('vendor/argon-site/assets/img/theme/team-4-800x800.jpg')}}" class="rounded-circle"> -->
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+                            <div class="col-lg-6 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     
                                 
-                                    <a href="{{ route('perfil.show') }}" class="btn btn-sm btn-info">Perfil</a>
-                                    <a href="{{ route('quero_investir')  }}" class="btn btn-sm btn-success ">Investir</a>
-                                  
-
+                                    <a href="{{ route('perfil.show') }}" class="btn btn-sm btn-primary">Meu Perfil</a>
+                                    <a href="{{ route('quero_investir')  }}" data-toggle="tooltip" data-title="Doação e/ou Patrocínio"class="btn btn-sm btn-success ">Quero Investir</a>
+									<a href="#" class="btn btn-sm btn-info " data-toggle="tooltip" data-title="Em breve">O que me inspira</a>
+									<a href="#" class="btn btn-sm btn-danger" data-toggle="tooltip" data-title="Em breve">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
                                     <!--Icones como menus -->
-                                    {{--<ul class="nav nav-pills nav-pills-circle mb-3" id="tabs_2" role="tablist">--}}
-                                        {{--<li class="nav-item">--}}
-                                            {{--<a class="nav-link rounded-circle active" id="home-tab" data-toggle="tooltip" data-title="teste" href="#tabs_2_1" role="tab" aria-controls="home" aria-selected="true">--}}
-                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-money-coins"></i></span>--}}
-                                            {{--</a>--}}
-                                        {{--</li>--}}
-                                        {{--<li class="nav-item">--}}
-                                            {{--<a class="nav-link" id="profile-tab" data-toggle="tab" href="#tabs_2_2" role="tab" aria-controls="profile" aria-selected="false">--}}
-                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-chat-round"></i></span>--}}
-                                            {{--</a>--}}
-                                        {{--</li>--}}
-                                        {{--<li class="nav-item">--}}
-                                            {{--<a class="nav-link" id="contact-tab" data-toggle="tab" href="#tabs_2_3" role="tab" aria-controls="contact" aria-selected="false">--}}
-                                                {{--<span class="nav-link-icon d-block"><i class="ni ni-cloud-download-95"></i></span>--}}
-                                            {{--</a>--}}
-                                        {{--</li>--}}
-                                    {{--</ul>--}}
+                                  
                                 </div>
                             </div>
-                            <div class="col-lg-4 order-lg-1">
+                            <div class="col-lg-6 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                 <div> 
-                                    {{--   <span class="heading">0%</span> --}}
-                                        {{--  <a href="{{ route('perfil.create') }}" class="btn btn-sm btn-info">Perfil</a> --}}
-                                        {{-- </div> --}}
-                                            {{-- <div> --}}
+                                  
                                         <span class="heading">R$ 22</span>
                                         <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
                                     </div>
@@ -75,6 +58,14 @@
                                         <span class="description">OSC's</span>
                                     </div>
                                     <div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Metas</span>
+                                    </div>
+									<div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Objetivos</span>
+                                    </div>
+									<div>
                                         <span class="heading">89</span>
                                         <span class="description">Projetos</span>
                                     </div>
@@ -87,7 +78,7 @@
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
                                 <div class="col-lg-6">
-                                    <p>Aqui você tem a oportunidade de participar do maior programa de VOLUNTARIADO para ações sustentáveis.</p>
+                                    <p>Aqui você tem a oportunidade de participar do maior programa de <strong class="text-info">COOPERAÇÃO</strong> para ações sustentáveis.</p>
                                 </div>
                             </div>
                         </div>

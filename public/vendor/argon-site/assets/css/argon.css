@@ -9786,7 +9786,7 @@ button.bg-darker:focus
 .mt-md,
 .my-md
 {
-    margin-top: 4rem !important;
+    margin-top: 0rem !important;
 }
 
 .mr-md,
@@ -9798,7 +9798,7 @@ button.bg-darker:focus
 .mb-md,
 .my-md
 {
-    margin-bottom: 4rem !important;
+    margin-bottom: 8rem !important;
 }
 
 .ml-md,

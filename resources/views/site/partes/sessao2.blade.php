@@ -1,9 +1,56 @@
+
+
+<section class="section section-lg">
+	<div class="container">
+		<div class="row row-grid justify-content-center">
+			<div class="col-lg-12 text-center">
+				
+				<div class="text-center">
+					<h3 class="display-4 mb-5 mt-5">Nossos parceiros</h3>
+					<div class="row justify-content-center">
+						<div class="col-lg-3 col-3">
+							<button  class="btn btn-sm btn-white">
+							<img src="{{asset('vendor/site/images/amazons3.png')}}" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-lg-3 col-3">
+						<button  class="btn btn-sm btn-white" >
+							<img src="{{asset('vendor/site/images/mercadopago.png')}}" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-lg-3 col-3">
+						<button  class="btn btn-sm btn-white">
+							<img src="{{asset('vendor/site/images/hostgator.png')}}" class="img-fluid">
+							</button>
+						</div>
+						
+						<div class="col-lg-3 col-3">
+						<button  class="btn btn-sm btn-white">
+							<img src="{{asset('vendor/site/images/hyb.png')}}" class="img-fluid">
+							</button>
+						</div>
+					</div>  
+					
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+
+
+
+
+<!--
 <section class="section section-lg">
     <div class="container">
         <div class="row row-grid align-items-center">
             <div class="col-md-6 order-md-2">
                 <img src="{{asset('vendor/site/images/Azul.jpeg')}}" class="img-fluid floating">
-                <!-- <img src="{{asset('vendor/site/images/tmp.png')}}" class="img-fluid floating"> -->
+                
             </div>
             <div class="col-md-6 order-md-1">
                 <div class="pr-md-5">
@@ -42,3 +89,4 @@
     </div>
 </section>
 
+-->

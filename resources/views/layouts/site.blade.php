@@ -83,7 +83,7 @@
 					</li>
 					
 					<li class="nav-item dropdown">
-						<a href="{{url('/termodeuso')}}" class="nav-link" >
+						<a href="{{url('/termo-de-uso')}}" class="nav-link" >
 							
 							<span class="nav-link-inner--text">Termo de Uso</span>
 						</a>
@@ -168,12 +168,13 @@
 	@yield('conteudo_principal')
 </main>
 <footer class="footer has-cards">
+
 	<div class="container">
 	<div class="row row-grid align-items-center my-md">
 					<div class="col-lg-6">
 						<h3 class="text-primary font-weight-light mb-2"><b>Agradecemos sua visita!</b></h3>
 						<h4 class="mb-0 font-weight-light">Junte-se a nós por um mundo sustentável.</h4>
-					</div>
+					</div> 
 						<div class="col-lg-6 text-lg-center btn-wrapper">
 						
 						<!--	<img src="{{asset('vendor/site/images/amazons3.png')}}"  style="width: 128px; height: auto;">
@@ -202,20 +203,22 @@
 			</div>
 			<div class="col-md-7">
 				<ul class="nav nav-footer justify-content-end">
+				<li class="nav-item">
+						<a href="http://simeuquero.org/" class="nav-link" target="_blank">SIM EU QUERO</a>
+					</li>
 					<li class="nav-item">
 						<a href="http://www.redeconexao.com.br/" class="nav-link" target="_blank">Rede de Conexão</a>
 					</li>
 					<li class="nav-item">
 						<a href="http://www.agenda2030.com.br/" class="nav-link" target="_blank">Agenda 2030</a>
 					</li>
-					<li class="nav-item">
-						<a href="http://simeuquero.org/" class="nav-link" target="_blank">SIM EU QUERO</a>
-					</li>
+					
 				   
 					<li class="nav-item">
-						<a href="{{url('/termodeuso')}}" class="nav-link" >Termo de Uso</a>
+						<a href="{{url('/termo-de-uso')}}" class="nav-link" >Termo de Uso</a>
 					</li>
 				</ul>
+				
 			</div>
 		</div>
 	</div>
