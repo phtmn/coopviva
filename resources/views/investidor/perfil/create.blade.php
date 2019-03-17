@@ -2,7 +2,7 @@
 
 @section('conteudo_painel')
     {!! Form::open(['route'=>'perfil.store']) !!}
-    <h4>Dados Pessoais</h4>
+    <h4 class="text-primary">Dados Pessoais</h4>
     <hr>
     <div class="row">
         <div class="form-group col-md-8">
@@ -53,7 +53,7 @@
     <br>
 
 
-    <h4>Endereço </h4>
+    <h4 class="text-primary">Endereço </h4>
     <hr>
     <div class="row">
         <div class="form-group col-md-3">
@@ -90,9 +90,8 @@
             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
     </div>
-    <div class="form-group mb-5 pull-center">
-        <center>   <input type="submit" value="Salvar" class="btn btn-outline-success">   </center>
-    </div>
+   <br>
+        <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
 
     </div>
     {!! Form::close() !!}

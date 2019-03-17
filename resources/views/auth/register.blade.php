@@ -136,19 +136,19 @@
 							</header><!-- .entry-header -->
 							<div class="card-body">
 								<div class="form-group">
-									<label for="name"><strong>Investidor Social</strong></label>
+									<label for="name"><strong class="text-info">Investidor Social</strong></label>
 									<p class="text-justify class="sample-text" style="text-indent: 20px;">O cadastro como investidor é possivel realizar investimentos (doação ou patrocínio / pessoa física ou jurídica) em instituições ou projetos cadastradas em nossa base. Ou você pode, também, tornar-se um voluntário.</p>
 								</div>
 								
 								<hr>
 								<div class="form-group">
-									<label for="name"><strong>Voluntário Ativo</strong></label>
+									<label for="name"><strong class="text-info">Voluntário Ativo</strong></label>
 									<p class="text-justify" class="sample-text" style="text-indent: 20px;">	Contabilizar suas horas dedicadas a instituição. Registrar sua ações e resultados. Consultar instituições que comunguem com seus valores e necessitam de suas habilidades . Participar do banco de ações positivas. Fazer doações de bens e serviços</p>
 								</div>
 
 								<hr>
 								<div class="form-group">
-									<label for="name"><strong>Voluntário Passivo</strong></label>
+									<label for="name"><strong class="text-info">Voluntário Passivo</strong></label>
 									<p class="text-justify" class="sample-text" style="text-indent: 20px;"> Pesquisar Organizações no mundo inteiro. Contribuir  com uma causa sem sair de casa e que encaixe com seu tempo disponível . Contabilizar sua dedicação a organização ou projeto especifico. Trocar experiências e expertise. Gerar uma rede de relacionamento para o bem. Divulgar para seus familiares, amigos, empresas e pontuar  por engajamento.</p>
 								</div>
 							</div>

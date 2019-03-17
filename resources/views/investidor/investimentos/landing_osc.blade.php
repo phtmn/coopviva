@@ -35,7 +35,7 @@
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
-                                    <a href="#" class="btn btn-danger pull-right" data-togle="tooltip" title="Add Favoritos versoes futuras">
+                                    <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
                                         <i class="fa fa-heart"></i>
                                     </a>
                                 </div>
