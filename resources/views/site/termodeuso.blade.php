@@ -18,7 +18,7 @@
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-header bg-white pb-5">
                             <div class="text-muted text-center mb-3">
-                                <small>Termos de uso e Política de Privacidade</small>
+                                <small><b>Termos de uso e Política de Privacidade</b></small>
                             </div>
                             <div class="text-center">
                                
