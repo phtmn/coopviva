@@ -41,14 +41,22 @@
 									<form class="form form-investidor" action="{{route('register')}}" method="POST">
 										@csrf
 										<div class="form-group">
-											<label for="name">Como se chama?</label>
+											<label for="name">Nome</label>
 											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome" required="true">
 										</div>
 										<div class="form-group">
-											<label for="tipo_usuario">Como você deseja usar o Coopviva?</label>
-											<select name="tipo_usuario" id="tipo_usuario" class="form-control" >
-												<option value="1">Perfil Investidor</option>
-												<option value="2">Perfil OSC (Organização Social Civil)</option>
+											<label for="name">Sobrenome</label>
+											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu sobrenome" required="true">
+										</div>
+										<div class="form-group">
+											<label for="name">Como gosta de ser chamado?</label>
+											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite como gosta de ser chamado" required="true">
+										</div>
+										<div class="form-group">
+											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
+											<select name="tipo_usuario" id="tipo_usuario" class="form-control" >												
+												<option value="1">Perfil OSC (Organização Social Civil)</option>	
+												<option value="2">Perfil Investidor</option>
 											</select>
 										</div>
 										<div class="form-group" id="box-tipo-usuario">
@@ -115,7 +123,7 @@
 										<div class="form-group">
 											<div class="form-group" style="margin-left: 25px">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO" disabled="disabled" checked="checked"     >
+													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO"  checked="checked"     >
 													<label class="form-check-label" >Aceito os <a href="{{url('/termo-de-uso')}}" target="_blank"> Termos de Uso </a></label>
 												</div>
 											</div>
@@ -134,23 +142,32 @@
 							<h3 class="entry-title w-100 m-0 text-center">Perfis de Acesso</h3>
 								
 							</header><!-- .entry-header -->
+							
 							<div class="card-body">
+							<div class="form-group">
+									<label for="name"><strong class="text-primary"><i class="ni ni-building"></i> Perfil OSC (Organização Social Civil)</strong></label>
+									<p class="text-justify" class="sample-text" style="text-indent: 20px;"> Se você é uma organização sem fins lucrativos e produz o bem comum, com alto valor socioambiental agregado.</p>
+								</div>
+								<hr>
 								<div class="form-group">
-									<label for="name"><strong class="text-info">Investidor Social</strong></label>
-									<p class="text-justify class="sample-text" style="text-indent: 20px;">O cadastro como investidor é possivel realizar investimentos (doação ou patrocínio / pessoa física ou jurídica) em instituições ou projetos cadastradas em nossa base. Ou você pode, também, tornar-se um voluntário.</p>
+									<label for="name"><strong class="text-success">  <i class="ni ni-satisfied"></i> Perfil Investidor Pessoa Física</strong></label>
+									<p class="text-justify class="sample-text" style="text-indent: 20px;">Se você quer apoiar, investir, trocar informações, divulgar conteúdos por simpatia, afinidade ou estilo de vida.</p>
+									 <h5 ><span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="left" title="- É possível realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base." >Investidor Social</span></a>
+									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="bottom" title="- Contabilizar suas horas dedicadas a instituição. - Registrar sua ações e resultados. - Consultar instituições que comunguem com seus valores e necessitam de suas habilidades. - Participar do banco de ações positivas. - Fazer doações de bens e serviços.">Volutário Ativo</span></a>
+									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="right" title="Pesquisar Organizações no mundo inteiro. - Contribuir com uma causa sem sair de casa e que encaixe com seu tempo disponível. - Contabilizar sua dedicação a organização ou projeto especifico. - Trocar experiências e expertise. - Gerar uma rede de relacionamento para o bem. - Divulgar para seus familiares, amigos, empresas e pontuar por engajamento.">Volutário Passivo</span></a></h5>
 								</div>
 								
 								<hr>
 								<div class="form-group">
-									<label for="name"><strong class="text-info">Voluntário Ativo</strong></label>
-									<p class="text-justify" class="sample-text" style="text-indent: 20px;">	Contabilizar suas horas dedicadas a instituição. Registrar sua ações e resultados. Consultar instituições que comunguem com seus valores e necessitam de suas habilidades . Participar do banco de ações positivas. Fazer doações de bens e serviços</p>
+									<label for="name"><strong class="text-warning"><i class="ni ni-istanbul"></i> Perfil Investidor Pessoa Jurídica</strong></label>
+									<p class="text-justify" class="sample-text" style="text-indent: 20px;">	Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
+									<h5 ><span class="badge badge-pill badge-warning" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="left" title="É possível realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base.">Investidor Social</span></a>
+									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; " data-toggle="tooltip" data-placement="bottom" title="- Contabilizar suas horas dedicadas a instituição. - Registrar sua ações e resultados. - Consultar instituições que comunguem com seus valores e necessitam de suas habilidades. - Participar do banco de ações positivas. - Fazer doações de bens e serviços.">Volutário Ativo</span></a>
+									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; "data-toggle="tooltip" data-placement="right" title="Pesquisar Organizações no mundo inteiro. - Contribuir com uma causa sem sair de casa e que encaixe com seu tempo disponível. - Contabilizar sua dedicação a organização ou projeto especifico. - Trocar experiências e expertise. - Gerar uma rede de relacionamento para o bem. - Divulgar para seus familiares, amigos, empresas e pontuar por engajamento." >Volutário Passivo</span></a></h5>
 								</div>
 
-								<hr>
-								<div class="form-group">
-									<label for="name"><strong class="text-info">Voluntário Passivo</strong></label>
-									<p class="text-justify" class="sample-text" style="text-indent: 20px;"> Pesquisar Organizações no mundo inteiro. Contribuir  com uma causa sem sair de casa e que encaixe com seu tempo disponível . Contabilizar sua dedicação a organização ou projeto especifico. Trocar experiências e expertise. Gerar uma rede de relacionamento para o bem. Divulgar para seus familiares, amigos, empresas e pontuar  por engajamento.</p>
-								</div>
+								
+								
 							</div>
 						</div>
 					</div>
