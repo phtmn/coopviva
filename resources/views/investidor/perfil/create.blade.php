@@ -2,8 +2,10 @@
 
 @section('conteudo_painel')
     {!! Form::open(['route'=>'perfil.store']) !!}
-    <h4>Dados Pessoais</h4>
-    <hr>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-dados" role="tabpanel" aria-labelledby="pills-dados-tab">
+        <h4>Dados Pessoais</h4>
+        <hr>
     <div class="row">
         <div class="form-group col-md-8">
             <label for="nome_completo">Nome do Contato</label>
@@ -94,6 +96,8 @@
         <center>   <input type="submit" value="Salvar" class="btn btn-outline-success">   </center>
     </div>
 
+    </div>
+    </div>
     </div>
     {!! Form::close() !!}
 @stop

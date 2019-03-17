@@ -9,7 +9,7 @@
             <label for="nome_completo">Nome do Contato</label>
             {!! Form::text('nome_completo',null,['class'=> 'form-control','required'=>'true']) !!}
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="data_nascimento">Data Nascimento</label>
             {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
         </div>
@@ -20,7 +20,7 @@
             <label for="telefone">Telefone </label>
             {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8">
             <label for="email">Gênero</label>
             {{ Form::select('genero',[
                 'M'             => 'Masculino',
@@ -56,16 +56,16 @@
     <h4>Endereço </h4>
     <hr>
     <div class="row">
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-5">
             <label for="cep">CEP</label>
             {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8">
             <label for="rua">Rua/Logradouro</label>
             {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-5">
             <label for="numero">Bairro</label>
             {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
         </div>
@@ -73,19 +73,19 @@
     </div>
 
     <div class="row">
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-6">
             <label for="numero">Número</label>
             {!! Form::text('numero',null,['class'=> 'form-control']) !!}
         </div>
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-8">
             <label for="cidade">Cidade</label>
             {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-6">
             <label for="uf">Estado</label>
             {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-7">
             <label for="complemento">Complemento</label>
             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
