@@ -15,7 +15,7 @@
                                 <p class="description mt-3">Se você é uma organização sem fins lucrativos e produz o bem comum, com alto valor socioambiental agregado.</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-primary"><u>#SIMEUQUERO</u></span></a>
+                                    <h4><a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-primary"><u style="text-transform: capitalize;">#SimEuQuero</u></span></a></h4>
                                    
                                 </div>
                                 
@@ -32,7 +32,7 @@
                                 <p class="description mt-3">Se você quer apoiar, investir, trocar informações, divulgar conteúdos por simpatia, afinidade ou estilo de vida.</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-success"><u>#SIMEUQUERO</u></span></a>
+                                     <h4 ><a href="{{route('quero_investir')}}" ><span class="badge badge-pill badge-success" ><u style="text-transform: capitalize;">#SimEuQuero</u></span></a></h4>
                                 </div>
                                 
                             </div>
@@ -45,10 +45,10 @@
                                     <i class="ni ni-istanbul"></i>
                                 </div>
                                 <h5 class="text-warning text-uppercase">SOU UMA EMPRESA POSITIVA</h5>
-                                <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social</p>
+                                <p class="description mt-3">Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
                                 <div>
 
-                                    <a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-warning"><u>#SIMEUQUERO</u></span></a>
+                                    <h4><a href="{{route('quero_investir')}}"><span class="badge badge-pill badge-warning"><u style="text-transform: capitalize;">#SimEuQuero</u></span></a></h4>
                                 </div>
                                 
                             </div>
