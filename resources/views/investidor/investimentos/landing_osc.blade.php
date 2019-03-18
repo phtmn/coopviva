@@ -88,6 +88,44 @@
                                     @include('dashboard.investimentos.projetos')
                             </div>
                         </div>
+                        <div id="carouselGaleria" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselGaleiraIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselGaleiraIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselGaleriaIndicators" data-slide-to="2"></li>
+                            </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                     <div class="carousel-caption d-none d-md-block">
+                                        <h3></h3>
+                                        <p></p>
+                                    </div>
+                                 </div>
+                                 <div class="carousel-item">
+                                     <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3></h3>
+                                         <p></p>
+                                     </div>
+                                 </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                     <div class="carousel-caption d-none d-md-block">
+                                         <h3></h3>
+                                         <p></p>
+                                     </div>
+                                </div>
+                            </div>
+                                <a class="carousel-control-prev" href="#carouselGaleriaIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselGaleriaIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
+                                </div>
                     </div>
                 </div>
                 <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
