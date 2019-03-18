@@ -96,21 +96,21 @@
                             </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                        <img class="d-block w-100" src="" >
                                      <div class="carousel-caption d-none d-md-block">
                                         <h3></h3>
                                         <p></p>
                                     </div>
                                  </div>
                                  <div class="carousel-item">
-                                     <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                     <img class="d-block w-100" src="" >
                                     <div class="carousel-caption d-none d-md-block">
                                         <h3></h3>
                                          <p></p>
                                      </div>
                                  </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{asset($g->aws_url)}}" >
+                                    <img class="d-block w-100" src="" >
                                      <div class="carousel-caption d-none d-md-block">
                                          <h3></h3>
                                          <p></p>
