@@ -2,15 +2,10 @@
 
 @section('conteudo_painel')
     {!! Form::open(['route'=>'perfil.store']) !!}
-<<<<<<< HEAD
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-dados" role="tabpanel" aria-labelledby="pills-dados-tab">
         <h4>Dados Pessoais</h4>
         <hr>
-=======
-    <h4 class="text-primary">Dados Pessoais</h4>
-    <hr>
->>>>>>> 93d640be810abb2f6bcaff5e96bfd3e71730bd77
     <div class="row">
         <div class="form-group col-md-8">
             <label for="nome_completo">Nome do Contato</label>
