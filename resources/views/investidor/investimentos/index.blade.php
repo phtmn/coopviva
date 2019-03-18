@@ -11,7 +11,7 @@
                                 <thead>
                                 <tr>
                                     <th>Data</th>
-                                    <th>Valor</th>
+                                    <th>Valor (R$)</th>
                                     <th>Status</th>
                                     <th></th>
                                 </tr>

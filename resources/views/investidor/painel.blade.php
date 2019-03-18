@@ -50,24 +50,24 @@
                                 <div class="card-profile-stats d-flex justify-content-center">
                                 <div> 
                                   
-                                        <span class="heading">R$ 22</span>
+                                        <span class="heading">R$ {{ DB::table('investimentos')->count( ) }}</span>
                                         <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
                                     </div>
                                     <div>
-                                        <span class="heading">10</span>
+                                        <span class="heading">{{ DB::table('oscs')->count( ) }}</span>
                                         <span class="description">OSC's</span>
                                     </div>
                                     <div>
-                                        <span class="heading">89</span>
-                                        <span class="description">Metas</span>
+                                        <span class="heading">{{ DB::table('projetos')->count( ) }}</span>
+                                        <span class="description">Projetos</span>
                                     </div>
 									<div>
-                                        <span class="heading">89</span>
+                                        <span class="heading">{{ DB::table('objetivos')->count( ) }}</span>
                                         <span class="description">Objetivos</span>
                                     </div>
 									<div>
-                                        <span class="heading">89</span>
-                                        <span class="description">Projetos</span>
+                                        <span class="heading">{{ DB::table('metas_oscs')->count( ) }}</span>
+                                        <span class="description">Metas</span>
                                     </div>
                                 </div>
                             </div>
