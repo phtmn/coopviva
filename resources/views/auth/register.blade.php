@@ -42,25 +42,25 @@
 										@csrf
 										<div class="form-group">
 											<label for="name">Nome</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome" required="true">
+											<input type="text" name="name" class="form-control" placeholder="Digite seu nome" required="true" value="{{ old('name') }}">
 										</div>
 										<div class="form-group">
 											<label for="name">Sobrenome</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu sobrenome" required="true">
+											<input type="text" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required="true" value="{{ old('sobrenome') }}">
 										</div>
 										<div class="form-group">
 											<label for="name">Como gosta de ser chamado?</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite como gosta de ser chamado" required="true">
+											<input type="text" name="apelido" class="form-control" placeholder="Digite como gosta de ser chamado" required="true" value="{{old('apelido')}}">
 										</div>
 										<div class="form-group">
 											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
 											<select name="tipo_usuario" id="tipo_usuario" class="form-control" >												
-												<option value="1">Perfil OSC (Organização Social Civil)</option>	
-												<option value="2">Perfil Investidor</option>
+												<option value="2">Perfil OSC (Organização Social Civil)</option>
+												<option value="1">Perfil Investidor</option>
 											</select>
 										</div>
-										<div class="form-group" id="box-tipo-usuario">
-											<div class="form-group" style="margin-left: 25px">
+										<div class="form-group" id="box-tipo-usuario" style="display: none;">
+											<div class="form-group">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="radio" name="tipo_pessoa" id="radioPF" value="F" checked="checked">
 													<label class="form-check-label" for="radioPF">Pessoa Física</label>
@@ -108,7 +108,7 @@
 
 										<div class="form-group">
 											<label for="email">E-mail</label>
-											<input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail" required="true">
+											<input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail" required="true" value="{{old('email')}}">
 										</div>
 
 										<div class="form-group">
@@ -183,17 +183,15 @@
 		$(document).ready(function(){
 			let tipoUsuario      = $('#tipo_usuario');
 			let boxTipoUsuario  = $('#box-tipo-usuario');
-			let radioPJ         = $('#radioPJ');
 
 			tipoUsuario.change(function(){
 
-				console.log(tipoUsuario.val())
-				if(tipoUsuario.val() == 2){
-					boxTipoUsuario.css({'display':'none'});
-					radioPJ.attr('checked', true);
-				}else{
+				if(tipoUsuario.val() == 1){
+
 					boxTipoUsuario.css({'display':'block'});
-					radioPJ.attr('checked', false);
+
+				}else{
+					boxTipoUsuario.css({'display':'none'});
 				}
 			});
 		});

@@ -57,7 +57,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name'          => ['required', 'string', 'max:255'],
             'email'         => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password'      => ['required', 'string', 'min:6', 'confirmed']
+            'password'      => ['required', 'string', 'min:6', 'confirmed'],
+            'termo'         => ['required']
         ]);
     }
 
@@ -88,6 +89,7 @@ class RegisterController extends Controller
         //Mail::to($user->email)->send(new VerifyMail($user));
         //Mail::send(new NewUser($user));
         //Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+
         Alert::success( 'Seu cadastro foi Efetuado, você ja pode fazer login','Muito Bom')->persistent('Ok');
 
         return $user;
@@ -122,7 +124,7 @@ class RegisterController extends Controller
     {
         $this->guard()->logout();
         //We sent you an activation code. Check your email and click on the link to verify.
-        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+        Alert::success( 'Obrigado por se registrar, você ja pode realizar o login','Obrigado(a)')->persistent('Ok');
         return redirect('/');
     }
 }

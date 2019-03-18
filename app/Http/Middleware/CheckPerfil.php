@@ -17,7 +17,7 @@ class CheckPerfil
     {
         return (auth()->user()->perfil_id == 1)
             ? $next($request)
-            : redirect()->route('osc.dashboard');
+            : redirect()->route('osc.index');
 
     }
 }

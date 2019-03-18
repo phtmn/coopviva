@@ -58,6 +58,11 @@ class ProjetosController extends Controller
 
     public function store(Request $request){
 
+        if( ($request->banco_docacao == null) && ($request->banco_patrocinio == null) ){
+            Alert::warning('Voce Precisa inserir dados bancários','Ops')->persistent('ok');
+            return redirect()->back()->withInput($request->all());
+        }
+
         $result = DB::transaction(function() use($request){
             try{
                 $banco_doacao               = new Banco();
