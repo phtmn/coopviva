@@ -48,12 +48,12 @@ Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-osc','namesp
     Route::post('/metas', 'MetasController@gravar')->name('metas.salvar');
     Route::get('/meta/remover/{id}','MetasController@removerMeta')->name('meta.remover');
 
-    Route::get('projeto/{id}/galeria','Dashboard\ProjetosController@galeria')->name('projeto.galeria');
-    Route::post('galeria.save','Dashboard\ProjetosController@save')->name('galeria.save');
-    Route::get('projeto/i/{id}','Dashboard\ProjetosController@mudarInativo')->name('projeto.inativo');
+    Route::get('projeto/{id}/galeria','ProjetosController@galeria')->name('projeto.galeria');
+    Route::post('galeria.save','ProjetosController@save')->name('galeria.save');
+    Route::get('projeto/i/{id}','ProjetosController@mudarInativo')->name('projeto.inativo');
 
     Route::get('/detalhe','OscController@landingPage')->name('osc.landingPage');
-    Route::get('/detalhe/projeto/{id}','Dashboard\OscController@landingPageProjeto')->name('projeto.landingPage');
+    Route::get('/detalhe/projeto/{id}','OscController@landingPageProjeto')->name('projeto.landingPage');
 
 });
 

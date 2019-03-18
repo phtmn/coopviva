@@ -1,57 +1,133 @@
 @extends('investidor.painel')
 
 @section('conteudo_painel')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     {!! Form::model($perfil,['route'=> ['perfil.update'] ]) !!}
     <h4 class="text-primary">Dados Pessoais</h4>
     <hr>
-    <div class="row">
-        <div class="form-group col-md-8">
-            <label for="nome_completo">Nome do Contato</label>
-            {!! Form::text('nome_completo',null,['class'=> 'form-control','required'=>'true']) !!}
-        </div>
-        <div class="form-group col-md-6">
-            <label for="data_nascimento">Data Nascimento</label>
-            {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="telefone">Telefone </label>
-            {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
+        <div class="form-group row">
+            <label for="nome_completo" class="col-sm-3 col-form-label text-right">Nome Completo</label>
+            <div class="col-md-8">
+                {!! Form::text('nome_completo',$perfil->nome_social,['class'=> 'form-control','required'=>'true']) !!}
+            </div>
         </div>
-        <div class="form-group col-md-8">
-            <label for="email">Gênero</label>
-            {{ Form::select('genero',[
+
+        <div class="form-group row">
+            <label for="data_nascimento" class="col-sm-3 col-form-label text-right">Data Nascimento</label>
+            <div class="col-md-4">
+                {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Telefone </label>
+            <div class="col-md-4">
+                {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="email" class="col-sm-3 col-form-label text-right">Gênero</label>
+            <div class="col-md-3">
+                {{ Form::select('genero',[
                 'M'             => 'Masculino',
                 'F'             => 'Feminino',
                 'Outro'         => 'Outro'
                 ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true'])
             }}
+            </div>
         </div>
-    </div>
 
-    <div class="row">
         @if(Auth::user()->tipo_pessoa == 'F')
-            <div class="form-group col-md-6">
-                <label for="cpf">CPF</label>
-                {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
+            <div class="form-group row">
+                <label for="cpf" class="col-sm-3 col-form-label text-right">CPF</label>
+                <div class="col-md-5">
+                    {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
+                </div>
             </div>
         @else
-            <div class="form-group col-md-6">
-                <label for="cnpj">CNPJ</label>
-                {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
+            <div class="form-group row">
+                <label for="cnpj" class="col-sm-3 col-form-label text-right">CNPJ</label>
+                <div class="col-md-4">
+                    {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
+                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="razao_social">Razão Social</label>
-                {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
+
+            <div class="form-group row">
+                <label for="razao_social" class="col-sm-3 col-form-label text-right">Razão Social</label>
+                <div class="col-md-8">
+                    {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Fantasia</label>
+                <div class="col-md-8">
+                    {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cnpj" class="col-sm-3 col-form-label text-right">Número aprox. de funcionários</label>
+                <div class="col-md-3">
+                    {{ Form::select('qtd_funcionarios',[
+                        'A'    => 'de 1 a 3',
+                        'B'    => 'de 3 a 8',
+                        'C'    => 'acima de 10',
+                        'D'    => 'acima de 50',
+                        'E'    => 'acima de 100',
+                        'F'    => 'acima de 500',
+                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
+                    }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cnpj" class="col-sm-3 col-form-label text-right">Faturamento Mensal</label>
+                <div class="col-md-3">
+                    {{ Form::select('faturamento_mensal',[
+                        'F1'    => 'entre R$ 10.000,00 e R$ 15.000,00',
+                        'F2'    => 'entre R$ 15.000,00 e R$ 30.000,00',
+                        'F3'    => 'entre R$ 30.000,00 e R$ 50.000,00',
+                        'F4'    => 'entre R$ 50.000,00 e R$ 100.000,00',
+                        'F5'    => 'entre R$ 100.000,00 e R$ 200.000,00',
+                        'F6'    => 'acima de R$ 500.000,00',
+                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
+                    }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
+                <div class="col-md-3">
+                    {{ Form::select('cargo',[
+                                'Analista'      => 'Analista',
+                                'Auditor'       => 'Auditor',
+                                'Ceo'           => 'CEO',
+                                'Conselheiro'   => 'Conselheiro',
+                                'Diretor'       => 'Diretor',
+                                'Empresário'    => 'Empresário',
+                                'Estagiário'    => 'Estagiário',
+                                'Gerente'       => 'Gerente',
+                                'Supervisor'    => 'Supervisor',
+                                'Outro'         => 'Outro'
+                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
+                    }}
+                </div>
             </div>
         @endif
-    </div>
-
-
-    <br>
-
 
     <h4 class="text-primary">Endereço </h4>
     <hr>

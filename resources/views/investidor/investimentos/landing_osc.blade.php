@@ -34,18 +34,24 @@
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
-                                    <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
+                                    @if($osc->e_fins_lucrativos)
+                                        <p> Essa Organização só pode receber verbas através de seus projetos. Escolha o projeto de sua preferência.</p>
+
+                                    @else
+                                        <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
+                                        <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    @endif
+
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
-                                    {{--<div>--}}
-                                        {{--<span class="heading">R$ 22 k</span> <!-- TODO :Falta calcular valor recebido e investimentos -->--}}
-                                        {{--<span class="description text-success">Investimentos</span>--}}
-                                    {{--</div>--}}
+                                    <div>
+                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
+
+                                    </div>
                                     <div>
                                         <span class="heading">{{ $metas->count() }}</span>
                                         <span class="description">Metas</span>

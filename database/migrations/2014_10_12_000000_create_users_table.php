@@ -25,6 +25,9 @@ class CreateUsersTable extends Migration
             $table->string('cpf_cnpj', 50)->nullable();
             $table->string('razao_social', 100)->nullable();
             $table->string('nome_fantasia', 100)->nullable();
+            $table->string('qtd_funcionarios')->nullable();
+            $table->string('faturamento_mensal')->nullable();
+            $table->string('cargo')->nullable();
             $table->string('cep')->nullable();
             $table->string('logradouro', 200)->nullable();
             $table->string('numero', 50)->nullable();
