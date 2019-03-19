@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Alert;
 use Throwable;
+use Storage;
 use Illuminate\Support\Facades\DB;
 
 class OscController extends Controller
@@ -204,5 +205,29 @@ class OscController extends Controller
             'data' => $data,
             'tab'   => 'investir'
         ]);
+    }
+
+    public function uploadFoto(Request $request){
+
+        $image = $request->file('file');
+        $imageName = $image->getClientOriginalName();
+
+        try{
+            $osc = OSC::find($request->osc_id);
+
+            if($osc->logo != null) {
+                Storage::disk('s3')->delete($osc->logo);
+            }
+
+            Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
+            $imageNameAWS  = Storage::disk('s3')->url($imageName);
+
+            OSC::find($request->osc_id)->update(['logo' => $imageNameAWS ]);
+
+        }catch (\Exception $e){
+            return redirect()->back();
+        }
+
+
     }
 }

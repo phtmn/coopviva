@@ -98,7 +98,12 @@
                                 <a href="{{route('detalhe.osc',$osc->id)}}" style="cursor: pointer;">
                                     <div class="card card-lift--hover shadow border-0 bg-gradient-dark">
                                         <div class="card-body py-5">
-                                            <img  class="card-img-top" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" alt="">
+                                            @if(!$osc->logo)
+                                                <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="card-img-top">
+                                            @else
+                                                <img src="{{$osc->logo}}" class="card-img-top">
+                                            @endif
+
                                             <h6 class="text-success text-uppercase">{{$osc->nome_fantasia}}</h6>
                                             <p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>
                                             <div>

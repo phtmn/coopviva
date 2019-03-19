@@ -41,12 +41,8 @@
 									<form class="form form-investidor" action="{{route('register')}}" method="POST">
 										@csrf
 										<div class="form-group">
-											<label for="name">Nome</label>
+											<label for="name">Nome Completo</label>
 											<input type="text" name="name" class="form-control" placeholder="Digite seu nome" required="true" value="{{ old('name') }}">
-										</div>
-										<div class="form-group">
-											<label for="name">Sobrenome</label>
-											<input type="text" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required="true" value="{{ old('sobrenome') }}">
 										</div>
 										<div class="form-group">
 											<label for="name">Como gosta de ser chamado?</label>
@@ -123,7 +119,7 @@
 										<div class="form-group">
 											<div class="form-group" style="margin-left: 25px">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO"  checked="checked"     >
+													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
 													<label class="form-check-label" >Aceito os <a href="{{url('/termo-de-uso')}}" target="_blank"> Termos de Uso </a></label>
 												</div>
 											</div>
@@ -182,16 +178,17 @@
 	<script>
 		$(document).ready(function(){
 			let tipoUsuario      = $('#tipo_usuario');
-			let boxTipoUsuario  = $('#box-tipo-usuario');
+			let boxTipoUsuario   = $('#box-tipo-usuario');
+			let radioPJ 		 = $('#radioPJ')
 
 			tipoUsuario.change(function(){
 
 				if(tipoUsuario.val() == 1){
-
 					boxTipoUsuario.css({'display':'block'});
 
 				}else{
 					boxTipoUsuario.css({'display':'none'});
+					radioPJ.attr('checked', true);
 				}
 			});
 		});

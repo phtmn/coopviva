@@ -17,7 +17,7 @@
         <div class="form-group row">
             <label for="nome_completo" class="col-sm-3 col-form-label text-right">Nome Completo</label>
             <div class="col-md-8">
-                {!! Form::text('nome_completo',$perfil->nome_social,['class'=> 'form-control','required'=>'true']) !!}
+                {!! Form::text('nome_completo',$perfil->nome,['class'=> 'form-control','required'=>'true']) !!}
             </div>
         </div>
 

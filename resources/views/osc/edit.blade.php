@@ -37,14 +37,18 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                    @if(!$osc->logo)
+                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                    @else
+                                        <img src="{{$osc->logo}}" class="rounded-circle">
+                                    @endif
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
+                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
                         </div>
                     </div>
                     <div class="card-body pt-0 pt-md-4">
@@ -77,7 +81,7 @@
                                 <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}}
                             </div>
                             <div>
-                                <i class="ni education_hat mr-2"></i>Outra Informação ??
+                                <a href="" class="btn btn-danger">Fonte de Recursos</a>
                             </div>
                             <hr class="my-4" />
                             <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
@@ -290,6 +294,31 @@
                 </div>
             </div>
             {!! Form::close() !!}
+        </div>
+
+        <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered"  role="document">
+                {!! Form::open(['route'=>'osc.uploadFoto','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="modal-title-default">Carregue sua Foto</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            {!! Form::file('file',null,['class'=>'form-control']) !!}
+                        </div>
+                    </div>
+                    <input type="hidden" name="osc_id" value="{{$osc->id}}">
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+                {!! Form::close() !!}
+            </div>
         </div>
     </div>
 @stop

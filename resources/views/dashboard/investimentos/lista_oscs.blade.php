@@ -60,7 +60,7 @@
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
                                 <div class="col-lg-9">
-                                @include('dashboard.investimentos.resultado-pesquisa')
+                                    @include('dashboard.investimentos.resultado-pesquisa')
                                 </div>
                             </div>
                         </div>

@@ -12,6 +12,11 @@ class ConfigTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('perfis')->insert([
+            ['nome'=>'Investidor'],
+            ['nome'=>'Osc (Organizacao da Sociedade Civil)'],
+            ['nome'=>'Administrador'],
+        ]);
 
         DB::table('ambitos')->insert([
             ['nome'=>'Federal'],

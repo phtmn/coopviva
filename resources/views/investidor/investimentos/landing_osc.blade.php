@@ -28,7 +28,11 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" class="rounded-circle">
+                                        @if(!$osc->logo)
+                                            <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                        @else
+                                            <img src="{{$osc->logo}}" class="rounded-circle">
+                                        @endif
                                     </a>
                                 </div>
                             </div>

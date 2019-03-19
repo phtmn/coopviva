@@ -29,9 +29,10 @@ Route::group( ['middleware'=> ['auth','verified','perfil'],'prefix'=>'painel-inv
 });
 
 //Grupo de Rotas para OSC
-Route::group( ['middleware'=> ['auth','verified'],'prefix'=>'painel-osc','namespace'=>'Osc'],function() {
+Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-osc','namespace'=>'Osc'],function() {
 
     Route::view('/','layouts.dashboard')->name('osc.dashboard');
+    Route::post('/uploadFoto','OscController@uploadFoto')->name('osc.uploadFoto');
 
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
