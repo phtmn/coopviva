@@ -223,7 +223,7 @@ class OscController extends Controller
             $imageNameAWS  = Storage::disk('s3')->url($imageName);
 
             OSC::find($request->osc_id)->update(['logo' => $imageNameAWS ]);
-
+            return redirect()->back();
         }catch (\Exception $e){
             return redirect()->back();
         }
