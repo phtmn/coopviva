@@ -88,46 +88,38 @@
                         <div class=" col-xs-12 m-5">
                             <div class="row row-grid d-flex justify-content-between">
                                     @include('dashboard.investimentos.projetos')
-                                 <div class="col-xs-12 col-lg-4 ">
-                                    <div class="">
-                                          <div id="carouselGaleria" class="carousel slide" data-ride="carousel">
-                                                  <ol class="carousel-indicators">
-                                                      <li data-target="#carouselGaleiraIndicators" data-slide-to="0" class="active"></li>
-                                                      <li data-target="#carouselGaleiraIndicators" data-slide-to="1"></li>
-                                                      <li data-target="#carouselGaleriaIndicators" data-slide-to="2"></li>
-                                                  </ol>
-                                                      <div class="carousel-inner">
-                                                          <div class="carousel-item active">
-                                                              <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
-                                                           <div class="carousel-caption d-none d-md-block">
-                                                              <h3></h3>
-                                                              <p></p>
-                                                          </div>
-                                                       </div>
-                                                       <div class="carousel-item">
-                                                           <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
-                                                          <div class="carousel-caption d-none d-md-block">
-                                                              <h3></h3>
-                                                               <p></p>
-                                                           </div>
-                                                       </div>
-                                                      <div class="carousel-item">
-                                                          <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
-                                                           <div class="carousel-caption d-none d-md-block">
-                                                               <h3></h3>
-                                                               <p></p>
-                                                           </div>
-                                                      </div>
-                                                  </div>
-                                                      <a class="carousel-control-prev" href="#carouselGaleriaIndicators" role="button" data-slide="prev">
-                                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                          <span class="sr-only">Anterior</span>
-                                                      </a>
-                                                      <a class="carousel-control-next" href="#carouselGaleriaIndicators" role="button" data-slide="next">
-                                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                          <span class="sr-only">Próximo</span>
-                                                      </a>
-                                                      </div>
+                                 <div class="col-xs-12 col-lg-4 shadow rounded  ">
+                                    
+                              <div id="carouselGaleria" class="carousel slide" data-ride="carousel">
+                                       <ol class="carousel-indicators">
+                                          <li data-target="#carouselGaleiraIndicators" data-slide-to="0" class="active"></li>
+                                          <li data-target="#carouselGaleiraIndicators" data-slide-to="1"></li>
+                                          <li data-target="#carouselGaleriaIndicators" data-slide-to="2"></li>
+                                       </ol>
+                                          <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                   <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
+                                                <div class="carousel-caption d-none d-md-block">
+                                                   <h3></h3>
+                                                   <p></p>
+                                                </div>
+                                             </div>
+                                             <div class="carousel-item">
+                                                <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
+                                                <div class="carousel-caption d-none d-md-block">
+                                                   <h3></h3>
+                                                   <p></p>
+                                                </div>
+                                             </div>
+                                          <div class="carousel-item">
+                                                <img class="d-block w-100" src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" >
+                                                <div class="carousel-caption d-none d-md-block">
+                                                   <h3></h3>
+                                                   <p></p>
+                                                </div>
+                                          </div>
+                                       </div>
+                              
                                   </div>                    
                             </div>
                            </div>
