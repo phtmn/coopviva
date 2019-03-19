@@ -88,9 +88,6 @@ class RegisterController extends Controller
 
         Mail::to($user->email)->send(new VerifyMail($user));
         Mail::send(new NewUser($user));
-        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
-
-        //Alert::success( 'Seu cadastro foi Efetuado, você ja pode fazer login','Muito Bom')->persistent('Ok');
 
         return $user;
 
@@ -110,21 +107,21 @@ class RegisterController extends Controller
             }
         }else{
             Alert::error( 'Não indentificamos sua conta em nosso sistema =(','Eita!')->persistent('Ok');
-            return redirect('/entrar');
+            return redirect('/login');
         }
         if($status == 'activated'){
             Alert::warning( 'Sua Conta ja foi Ativada','Keep Calm')->persistent('Ok');
-            return redirect('/entrar');
+            return redirect('/login');
         }
         Alert::success( 'Obrigado por ativar sua conta','Bom Trabalho!!!')->persistent('Ok');
-        return redirect('/entrar');
+        return redirect('/login');
     }
 
     protected function registered(Request $request, $user)
     {
         $this->guard()->logout();
         //We sent you an activation code. Check your email and click on the link to verify.
-        Alert::success( 'Obrigado por se registrar, você ja pode realizar o login','Obrigado(a)')->persistent('Ok');
+        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
         return redirect('/');
     }
 }

@@ -1,3 +1,5 @@
+
+
 @component('mail::message')
 
 
@@ -10,3 +12,6 @@
     Tipo : {{$user->tipo}}
 
 @endcomponent
+
+
+
