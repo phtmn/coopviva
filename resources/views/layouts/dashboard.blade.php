@@ -36,22 +36,12 @@
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
-            <li class="nav-item dropdown">
-                <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="ni ni-bell-55"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="{{asset('vendor/argon-dash/assets/img/theme/team-1-800x800.jpg')}}">
+                <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
               </span>
                     </div>
                 </a>
@@ -103,16 +93,7 @@
                 </div>
             </div>
             <!-- Form -->
-            <form class="mt-4 mb-3 d-md-none">
-                <div class="input-group input-group-rounded input-group-merge">
-                    <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <span class="fa fa-search"></span>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            
             <!-- Navigation -->
             @include('layouts.partes.menu')
         </div>
@@ -133,7 +114,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="{{asset('vendor/argon-dash/assets/img/theme/team-4-800x800.jpg')}}">
+                  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold">{{auth()->user()->name}}</span>
@@ -200,16 +181,17 @@
                 <div class="col-xl-6">
                     <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Rede de Conexão</a>
+							<a href="http://simeuquero.org/" class="nav-link" target="_blank">SIM EU QUERO</a>
+                            
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Agenda 2030</a>
+                            <a href="http://www.redeconexao.com.br/" class="nav-link" target="_blank">Rede de Conexão</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Sim EU QUERO</a>
+                            <a href="http://www.agenda2030.com.br/" class="nav-link" target="_blank">Agenda 2030</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Termo de Uso</a>
+                            <a href="{{url('/termo-de-uso')}}" class="nav-link" >Termo de Uso</a>
                         </li>
                     </ul>
                 </div>

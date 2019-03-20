@@ -12,16 +12,12 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-        DB::table('perfis')->insert([
-            ['nome'=>'Investidor'],
-            ['nome'=>'Osc (Organizacao da Sociedade Civil)'],
-            ['nome'=>'Administrador'],
-        ]);
+
 
         DB::table('users')->insert([
             [
-                'nome_social'   => 'Fisica - Investidor',
-                'nome_completo' => 'Pessoa Fisica',
+                'apelido'       => 'Fisica - Investidor',
+                'nome'          => 'Pessoa Fisica',
                 'email'         => 'pessoafisica@email.com',
                 'password'      => bcrypt('123456'),
                 'tipo_pessoa'   => 'F',
@@ -39,8 +35,8 @@ class UsersTableSeeder extends Seeder
                 'verified'      => 1
             ],
             [
-                'nome_social'   => 'Juridica - Investidor',
-                'nome_completo' => 'Pessoa juridica',
+                'apelido'   => 'Juridica - Investidor',
+                'nome' => 'Pessoa juridica',
                 'email'         => 'pessoajuridica@email.com',
                 'password'      => bcrypt('123456'),
                 'tipo_pessoa'   => 'J',
@@ -59,8 +55,8 @@ class UsersTableSeeder extends Seeder
 
             ],
             [
-                'nome_social'   => 'OSC - Usuario',
-                'nome_completo' => 'Osc Usuário',
+                'apelido'   => 'OSC - Usuario',
+                'nome' => 'Osc Usuário',
                 'email'         => 'osc@email.com',
                 'password'      => bcrypt('123456'),
                 'tipo_pessoa'   => 'F',
@@ -78,8 +74,8 @@ class UsersTableSeeder extends Seeder
                 'verified'      => 1
             ],
             [
-                'nome_social'   => 'Administrador',
-                'nome_completo' => 'Administrador',
+                'apelido'   => 'Administrador',
+                'nome' => 'Administrador',
                 'email'         => 'administrador@email.com',
                 'password'      => bcrypt('secret'),
                 'tipo_pessoa'   => 'M',

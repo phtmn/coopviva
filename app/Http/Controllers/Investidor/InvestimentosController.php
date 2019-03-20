@@ -30,6 +30,7 @@ class InvestimentosController extends Controller
 
     public function detalhe_oscs($id){
 
+
         return view('investidor.investimentos.landing_osc',[
             'osc'       => Osc::find($id),
             'metas'     => DB::table('metas_oscs')->where('osc_id',$id)->get(),
