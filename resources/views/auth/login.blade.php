@@ -14,7 +14,7 @@
         </div>
         <div class="container pt-lg-md">
             <div class="row justify-content-center">
-                <div class="col-lg-5">
+                <div class="col-lg-7">
                     <div class="card bg-secondary shadow border-0">
                         {{--<div class="card-header bg-white pb-5">--}}
                             {{--<div class="text-muted text-center mb-3">--}}
@@ -37,7 +37,7 @@
                         {{--</div>--}}
                         <div class="card-body px-lg-5 py-lg-5">
                             <div class="text-center text-muted mb-4">
-                                <small>Ou faça login com sua conta</small>
+                                <small>Faça login com sua conta</small>
                             </div>
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -67,10 +67,10 @@
                                         <input name="password" class="form-control" placeholder="Senha" type="password" required>
                                     </div>
                                 </div>
-                                <div class="custom-control custom-control-alternative custom-checkbox">
+                                <!--<div class="custom-control custom-control-alternative custom-checkbox">
                                     <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
                                     <label class="custom-control-label" for=" customCheckLogin"><span>Lembrar minha senha</span></label>
-                                </div>
+                                </div>-->
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary my-4">Acessar</button>
                                 </div>

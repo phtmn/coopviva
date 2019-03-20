@@ -4,7 +4,7 @@
     <main class="profile-page">
         <section class="section-profile-cover section-shaped my-0">
             <!-- Circles background -->
-            <div class="shape shape-style-1 shape-primary alpha-4">
+            <div class="shape shape-style-1 shape-dark alpha-4">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -106,14 +106,14 @@
                         @csrf
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h6 class="modal-title" id="modal-title-default">Carregue sua Foto</h6>
+                                <h6 class="modal-title" id="modal-title-default"></h6>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir','id'=>'valor']) !!}
+                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label for="">Onde deseja Investir?</label>
@@ -128,8 +128,8 @@
                                 <input type="hidden" name="osc_id" value="{{$osc->id}}">
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                                <center> <button type="submit" class="btn btn-primary">Sim EU QUERO</button> <center>
+                                
                             </div>
                         </div>
                         {!! Form::close() !!}

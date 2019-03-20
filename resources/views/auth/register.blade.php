@@ -51,7 +51,7 @@
 										<div class="form-group">
 											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
 											<select name="tipo_usuario" id="tipo_usuario" class="form-control" required>
-												<option value="">Selecione uma opção...</option>
+												<option value=""> ... Selecione uma opção ... </option>
 												<option value="2">Perfil OSC (Organização Social Civil)</option>
 												<option value="1">Perfil Investidor</option>
 											</select>

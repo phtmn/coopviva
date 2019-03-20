@@ -1,6 +1,6 @@
-@extends('site.master')
+@extends('layouts.site')
 
-@section('content')
+@section('conteudo_principal')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

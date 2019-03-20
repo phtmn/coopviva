@@ -20,7 +20,7 @@
                         <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
                         <p class="lead  text-white">Aqui no <strong><b>COOPVIVA</b></strong>, você pode engajar com projetos ou causas que estão de acordo com seus propósitos,
-                            de forma planejada, estruturada e transparente. <a href="{{route('quero_investir')}}" class="text-white"> <strong><b>#SimEuQuero</b></strong> </a> </p>
+                            de forma planejada, estruturada e transparente. <a href="{{route('quero_investir')}}" class="text-white"> <strong><b><u>#SimEuQuero</u></b></strong> </a> </p>
 
 
                     </div>

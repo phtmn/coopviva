@@ -50,23 +50,23 @@
                                 <div class="card-profile-stats d-flex justify-content-center">
                                 <div> 
                                   
-                                        <span class="heading">R$ 22</span>
+                                        <span class="heading">R$ {{ DB::table('investimentos')->count()}}</span>
                                         <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
                                     </div>
                                     <div>
-                                        <span class="heading">10</span>
+                                        <span class="heading">{{ DB::table('oscs')->count()}}</span>
                                         <span class="description">OSC's</span>
                                     </div>
                                     <div>
-                                        <span class="heading">89</span>
+                                        <span class="heading">{{ DB::table('metas_oscs')->count()}}</span>
                                         <span class="description">Metas</span>
                                     </div>
 									<div>
-                                        <span class="heading">89</span>
+                                        <span class="heading">0</span>
                                         <span class="description">Objetivos</span>
                                     </div>
 									<div>
-                                        <span class="heading">89</span>
+                                        <span class="heading">{{ DB::table('projetos')->count()}}</span>
                                         <span class="description">Projetos</span>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
                                 <div class="col-lg-6">
-                                    <p>Aqui você tem a oportunidade de participar do maior programa de <strong class="text-info">COOPERAÇÃO</strong> para ações sustentáveis.</p>
+                                    <p>Aqui você tem a oportunidade de participar do maior programa de <strong class="text-info"><b>COOPERAÇÃO</b></strong> para ações sustentáveis.</p>
                                 </div>
                             </div>
                         </div>
