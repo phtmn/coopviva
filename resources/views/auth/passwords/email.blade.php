@@ -1,39 +1,28 @@
-@extends('site.master')
+@extends('layouts.site')
 
-@section('content')
+@section('conteudo_principal')
 
-<div class="swiper-container ">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide hero-content-wrap">
-                <img src="/vendor/site/images/about-bg.jpg" alt="">
-
-                <div class="hero-content-overlay position-absolute w-100 h-100">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            <div class="col-12 col-lg-10 d-flex flex-column justify-content-center align-items-start">
-                                <header class="entry-header">
-                                    <h4> Recuperar Senha</h4>
-                                    
-                                </header><!-- .entry-header -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-    </div><!-- .hero-slider -->
-
-
-
-    
-
-    <div class="featured-cause">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="cause-wrap  flex-wrap justify-content-between">
-               
-                <div class="card-body">
-                    @if (session('status'))
+<section class="section section-shaped section-lg">
+        <div class="shape shape-style-1 bg-gradient-success">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container pt-lg-md">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card bg-secondary shadow border-0">
+                        
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <div class="text-center text-muted mb-4">
+                                <small>Esqueci minha senha</small>
+                            </div>
+                            @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
@@ -41,34 +30,38 @@
 
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-
-                        <div class="form-group">
-                            <label for="email" class="">{{ __('E-Mail') }}</label>
-
-                           
-                                <input id="email" placeholder="Digite seu e-mail" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
+							
+							
+                                <input type="hidden" id="input-login" name="input-login" value="login">
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+										 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                @endif
-                          
+										@endif
+                                        <input id="email" placeholder="Digite seu e-mail" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                    </div>
+                                </div>
+                                
+                                <!--<div class="custom-control custom-control-alternative custom-checkbox">
+                                    <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                                    <label class="custom-control-label" for=" customCheckLogin"><span>Lembrar minha senha</span></label>
+                                </div>-->
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary my-4">Recuperar Senha</button>
+                                </div>
+                            </form>
+                            
                         </div>
-
-                        <div class="form-group ">
-                       
-                              <center>  <button type="submit" class="btn gradient-bg">
-                                    {{ __('Recuperar senha') }}
-                                </button> </center>
-                           
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-</br>
+    </section>  
+
+    
 @endsection

@@ -1,6 +1,6 @@
-@extends('site.master')
+@extends('layouts.site')
 
-@section('content')
+@section('conteudo_principal')
 
 
 

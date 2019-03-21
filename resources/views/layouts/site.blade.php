@@ -126,10 +126,10 @@
 					{{--</li> -->--}}
 					<li class="nav-item ">
 						@guest
-							{{--<!-- <a href="{{url('entrar')}}"class="btn btn-success btn-icon">--}}
-								{{--<span class="nav-link-inner--text">ENTRAR</span>--}}
-							{{--</a> -->--}}
-							<button type="button" class="btn btn-success btn-icon mb-3 mb-sm-0" data-toggle="modal" data-target="#modal-login">ENTRAR</button>
+							<a href="{{route('login')}}"class="btn btn-success btn-icon">
+								<span class="nav-link-inner--text">ENTRAR</span>
+							</a>
+							{{--<button type="button" class="btn btn-success btn-icon mb-3 mb-sm-0" data-toggle="modal" data-target="#modal-login">ENTRAR</button>--}}
 							<a href="{{route('register')}}"class="btn btn-neutral btn-icon">
 								<span class="nav-link-inner--text">Cadastre-se</span>
 							</a>
@@ -349,7 +349,6 @@
 <script src="{{asset('vendor/argon-site/assets/vendor/toastr/toastr.js')}}"></script>
 <!-- Argon JS -->
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
-<script src="{{asset('vendor/site/js/coopviva.js')}}"></script>
 <iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=c64f2b69cf&tl=NTUwODMzMDM0MTY2Mw==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
 <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
 @include('sweet::alert')

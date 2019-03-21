@@ -41,26 +41,23 @@
 									<form class="form form-investidor" action="{{route('register')}}" method="POST">
 										@csrf
 										<div class="form-group">
-											<label for="name">Nome</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu nome" required="true">
-										</div>
-										<div class="form-group">
-											<label for="name">Sobrenome</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite seu sobrenome" required="true">
+											<label for="name">Nome Completo</label>
+											<input type="text" name="name" class="form-control" placeholder="Digite seu nome" required="true" value="{{ old('name') }}">
 										</div>
 										<div class="form-group">
 											<label for="name">Como gosta de ser chamado?</label>
-											<input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Digite como gosta de ser chamado" required="true">
+											<input type="text" name="apelido" class="form-control" placeholder="Digite como gosta de ser chamado" required="true" value="{{old('apelido')}}">
 										</div>
 										<div class="form-group">
 											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
-											<select name="tipo_usuario" id="tipo_usuario" class="form-control" >												
-												<option value="1">Perfil OSC (Organização Social Civil)</option>	
-												<option value="2">Perfil Investidor</option>
+											<select name="tipo_usuario" id="tipo_usuario" class="form-control" required>
+												<option value=""> ... Selecione uma opção ... </option>
+												<option value="2">Perfil OSC (Organização Social Civil)</option>
+												<option value="1">Perfil Investidor</option>
 											</select>
 										</div>
-										<div class="form-group" id="box-tipo-usuario">
-											<div class="form-group" style="margin-left: 25px">
+										<div class="form-group" id="box-tipo-usuario" style="display: none;">
+											<div class="form-group">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="radio" name="tipo_pessoa" id="radioPF" value="F" checked="checked">
 													<label class="form-check-label" for="radioPF">Pessoa Física</label>
@@ -72,43 +69,43 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-group">
-											<label for="name"> Selecione o seu Estado?</label>
-											<select name="uf" id="" class="form-control" >
-												<option value="#">...  Selecione um Estado...</option>
-												<option value="AC">AC - Acre</option>
-												<option value="AL">AL - Alagoas</option>
-												<option value="AP">AP - Amapá</option>
-												<option value="AM">AM - Amazonas</option>
-												<option value="BA">BA - Bahia</option>
-												<option value="CE">CE - Ceará</option>
-												<option value="DF">DF - Distrito Federal</option>
-												<option value="ES">ES - Espírito Santo</option>
-												<option value="GO">GO - Goiás</option>
-												<option value="MA">MA - Maranhão</option>
-												<option value="MT">MT - Mato Grosso</option>
-												<option value="MS">MS - Mato Grosso do Sul</option>
-												<option value="MG">MG - Minas Gerais</option>
-												<option value="PA">PA - Pará</option>
-												<option value="PB">PB - Paraíba</option>
-												<option value="PR">PR - Paraná</option>
-												<option value="PE">PE - Pernanbuco</option>
-												<option value="PI">PI - Piauí</option>
-												<option value="RJ">RJ - Rio de Janeiro</option>
-												<option value="RN">RN - Rio Grande do Norte</option>
-												<option value="RS">RS - Rio Grande do Sul</option>
-												<option value="RO">RO - Rondônia</option>
-												<option value="RR">RR - Roraima</option>
-												<option value="SC">SC - Santa Catarina</option>
-												<option value="SP">SP - São Paulo</option>
-												<option value="SE">SE - Sergipe</option>
-												<option value="TO">TO - Tocantins</option>
-											</select>
-										</div>
+										{{--<div class="form-group">--}}
+											{{--<label for="name"> Selecione o seu Estado?</label>--}}
+											{{--<select name="uf" id="" class="form-control" >--}}
+												{{--<option value="#">...  Selecione um Estado...</option>--}}
+												{{--<option value="AC">AC - Acre</option>--}}
+												{{--<option value="AL">AL - Alagoas</option>--}}
+												{{--<option value="AP">AP - Amapá</option>--}}
+												{{--<option value="AM">AM - Amazonas</option>--}}
+												{{--<option value="BA">BA - Bahia</option>--}}
+												{{--<option value="CE">CE - Ceará</option>--}}
+												{{--<option value="DF">DF - Distrito Federal</option>--}}
+												{{--<option value="ES">ES - Espírito Santo</option>--}}
+												{{--<option value="GO">GO - Goiás</option>--}}
+												{{--<option value="MA">MA - Maranhão</option>--}}
+												{{--<option value="MT">MT - Mato Grosso</option>--}}
+												{{--<option value="MS">MS - Mato Grosso do Sul</option>--}}
+												{{--<option value="MG">MG - Minas Gerais</option>--}}
+												{{--<option value="PA">PA - Pará</option>--}}
+												{{--<option value="PB">PB - Paraíba</option>--}}
+												{{--<option value="PR">PR - Paraná</option>--}}
+												{{--<option value="PE">PE - Pernanbuco</option>--}}
+												{{--<option value="PI">PI - Piauí</option>--}}
+												{{--<option value="RJ">RJ - Rio de Janeiro</option>--}}
+												{{--<option value="RN">RN - Rio Grande do Norte</option>--}}
+												{{--<option value="RS">RS - Rio Grande do Sul</option>--}}
+												{{--<option value="RO">RO - Rondônia</option>--}}
+												{{--<option value="RR">RR - Roraima</option>--}}
+												{{--<option value="SC">SC - Santa Catarina</option>--}}
+												{{--<option value="SP">SP - São Paulo</option>--}}
+												{{--<option value="SE">SE - Sergipe</option>--}}
+												{{--<option value="TO">TO - Tocantins</option>--}}
+											{{--</select>--}}
+										{{--</div>--}}
 
 										<div class="form-group">
 											<label for="email">E-mail</label>
-											<input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail" required="true">
+											<input type="email" name="email" class="form-control" id="email" placeholder="Digite seu e-mail" required="true" value="{{old('email')}}">
 										</div>
 
 										<div class="form-group">
@@ -123,7 +120,7 @@
 										<div class="form-group">
 											<div class="form-group" style="margin-left: 25px">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO"  checked="checked"     >
+													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
 													<label class="form-check-label" >Aceito os <a href="{{url('/termo-de-uso')}}" target="_blank"> Termos de Uso </a></label>
 												</div>
 											</div>
@@ -182,18 +179,17 @@
 	<script>
 		$(document).ready(function(){
 			let tipoUsuario      = $('#tipo_usuario');
-			let boxTipoUsuario  = $('#box-tipo-usuario');
-			let radioPJ         = $('#radioPJ');
+			let boxTipoUsuario   = $('#box-tipo-usuario');
+			let radioPJ 		 = $('#radioPJ')
 
 			tipoUsuario.change(function(){
 
-				console.log(tipoUsuario.val())
-				if(tipoUsuario.val() == 2){
+				if(tipoUsuario.val() == 1){
+					boxTipoUsuario.css({'display':'block'});
+
+				}else{
 					boxTipoUsuario.css({'display':'none'});
 					radioPJ.attr('checked', true);
-				}else{
-					boxTipoUsuario.css({'display':'block'});
-					radioPJ.attr('checked', false);
 				}
 			});
 		});

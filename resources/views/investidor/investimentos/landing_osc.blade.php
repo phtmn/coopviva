@@ -4,7 +4,7 @@
     <main class="profile-page">
         <section class="section-profile-cover section-shaped my-0">
             <!-- Circles background -->
-            <div class="shape shape-style-1 shape-primary alpha-4">
+            <div class="shape shape-style-1 shape-dark alpha-4">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,24 +28,34 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="{{asset('vendor/argon-site/assets/img/coopviva/jacareCoopViva.png')}}" class="rounded-circle">
+                                        @if(!$osc->logo)
+                                            <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                        @else
+                                            <img src="{{$osc->logo}}" class="rounded-circle">
+                                        @endif
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
-                                    <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
+                                    @if($osc->e_fins_lucrativos)
+                                        <p> Essa Organização só pode receber verbas através de seus projetos. Escolha o projeto de sua preferência.</p>
+
+                                    @else
+                                        <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
+                                        <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                    @endif
+
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
-                                    {{--<div>--}}
-                                        {{--<span class="heading">R$ 22 k</span> <!-- TODO :Falta calcular valor recebido e investimentos -->--}}
-                                        {{--<span class="description text-success">Investimentos</span>--}}
-                                    {{--</div>--}}
+                                    <div>
+                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
+
+                                    </div>
                                     <div>
                                         <span class="heading">{{ $metas->count() }}</span>
                                         <span class="description">Metas</span>
@@ -133,14 +143,14 @@
                         @csrf
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h6 class="modal-title" id="modal-title-default">Carregue sua Foto</h6>
+                                <h6 class="modal-title" id="modal-title-default"></h6>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir','id'=>'valor']) !!}
+                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label for="">Onde deseja Investir?</label>
@@ -155,8 +165,8 @@
                                 <input type="hidden" name="osc_id" value="{{$osc->id}}">
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                                <center> <button type="submit" class="btn btn-primary">Sim EU QUERO</button> <center>
+                                
                             </div>
                         </div>
                         {!! Form::close() !!}

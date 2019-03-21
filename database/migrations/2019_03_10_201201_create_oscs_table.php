@@ -18,6 +18,7 @@ class CreateOscsTable extends Migration {
 			$table->unsignedInteger('user_id');
 			$table->string('nome_fantasia', 200)->nullable();
 			$table->string('cnpj', 18)->nullable();
+			$table->boolean('e_fins_lucrativos')->default(0);
 			$table->string('ano_inscricao_cnpj', 4)->nullable();
 			$table->string('ano_fundacao', 4)->nullable();
 			$table->string('sigla', 50)->nullable();

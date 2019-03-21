@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Investidor;
 
 
+use App\Http\Requests\PerfilRequestValidation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -27,18 +28,20 @@ class PerfilController extends Controller
             return view('investidor.perfil.create');
     }
 
-    public function update(Request $request){
+    public function update(PerfilRequestValidation $request){
 
-        //dd($request->all());
         $perfil = User::find(auth()->user()->id)->update(
         [
-            'nome_completo'     => $request->nome_completo,
-            'nome_social'       => $request->nome_social,
+            'nome'              => $request->nome_completo,
+            'apelido'           => $request->apelido,
             'dt_nascimento'     => $request->dt_nascimento,
             'genero'            => $request->genero,
             'cpf_cnpj'          => $request->cpf_cnpj,
             'razao_social'      => $request->razao_social,
             'nome_fantasia'     => $request->nome_fantasia,
+            'qtd_funcionarios'  => $request->qtd_funcionarios,
+            'faturamento_mensal'=> $request->faturamento_mensal,
+            'cargo'             => $request->cargo,
             'cep'               => $request->cep,
             'logradouro'        => $request->logradouro,
             'numero'            => $request->numero,

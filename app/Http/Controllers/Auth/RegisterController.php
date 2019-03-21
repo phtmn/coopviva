@@ -57,7 +57,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name'          => ['required', 'string', 'max:255'],
             'email'         => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password'      => ['required', 'string', 'min:6', 'confirmed']
+            'password'      => ['required', 'string', 'min:6', 'confirmed'],
+            'termo'         => ['required']
         ]);
     }
 
@@ -71,24 +72,22 @@ class RegisterController extends Controller
     {
         //dd($data);
         $user = User::create([
-            'nome_social'   => $data['name'],
+            'nome'          => $data['name'],
+            'apelido'       => $data['apelido'],
             'email'         => $data['email'],
             'tipo_pessoa'   => $data['tipo_pessoa'],
             'perfil_id'     => $data['tipo_usuario'],
-            'verified'      => 1,
             'password'      => Hash::make($data['password']),
         ]);
 
 
-        //VerifyUser::create([
-        //    'user_id'   => $user->id,
-        //    'token'     => sha1(time()),
-        //]);
+        VerifyUser::create([
+            'user_id'   => $user->id,
+            'token'     => sha1(time()),
+        ]);
 
-        //Mail::to($user->email)->send(new VerifyMail($user));
-        //Mail::send(new NewUser($user));
-        //Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
-        Alert::success( 'Seu cadastro foi Efetuado, você ja pode fazer login','Muito Bom')->persistent('Ok');
+        Mail::to($user->email)->send(new VerifyMail($user));
+        Mail::send(new NewUser($user));
 
         return $user;
 
@@ -108,14 +107,14 @@ class RegisterController extends Controller
             }
         }else{
             Alert::error( 'Não indentificamos sua conta em nosso sistema =(','Eita!')->persistent('Ok');
-            return redirect('/entrar');
+            return redirect('/login');
         }
         if($status == 'activated'){
             Alert::warning( 'Sua Conta ja foi Ativada','Keep Calm')->persistent('Ok');
-            return redirect('/entrar');
+            return redirect('/login');
         }
         Alert::success( 'Obrigado por ativar sua conta','Bom Trabalho!!!')->persistent('Ok');
-        return redirect('/entrar');
+        return redirect('/login');
     }
 
     protected function registered(Request $request, $user)
