@@ -18,11 +18,13 @@
 	<!-- Docs CSS -->
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/css/docs.min.css')}}" rel="stylesheet">
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/vendor/toastr/toastr.css')}}" rel="stylesheet">
-	
+	<!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
+	<script type = 'text / javascript' src = '// platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons' async = 'async'> </script>
 </head>
 
 <body>
 <header class="header-global">
+
 	<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
 		<div class="container">
 			<a class="navbar-brand mr-lg-5" href="{{url('/')}}">
@@ -168,12 +170,72 @@
 	@yield('conteudo_principal')
 </main>
 <footer class="footer has-cards">
-
+	<!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
+	 <div class = "ShareThis-inline-share-buttons"> </div>
+	<!--:::::::::::::::::::::/SHARETHIS::::::::::::::::::::::::--> 
 	<div class="container">
-	<div class="row row-grid align-items-center my-md">
-					<div class="col-lg-6">
+	<div class="row row-grid align-items-center my-md ">
+					<div class="col-xs-12 col-lg-6">
 						<h3 class="text-primary font-weight-light mb-2"><b>Agradecemos sua visita!</b></h3>
 						<h4 class="mb-0 font-weight-light">Junte-se a nós por um mundo sustentável.</h4>
+					</div>
+					<div class="col-xs-12 col-lg-6 text-right">
+							<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Deixe seu Feedback</button>
+							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+									  <div class="modal-content">
+										<div class="modal-header">
+										  <h5 class="modal-title text-center" id="exampleModalLabel">Deixe seu Feedback</h5>
+										  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="form-group ">
+												  
+												  <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+												</div>
+												<div class="form-group ">
+													
+													<input type="text" class="form-control" id="recipient-name" placeholder="E-mail">
+												  </div>
+												  <div class="form-group ">
+													
+													<input type="tel" class="form-control " id="recipient-name" placeholder="Fone">
+												  </div>
+												  <div class="form-group ">
+													
+														<div class="input-group mb-3 ">
+																<div class="input-group-prepend">
+																  <label class="input-group-text" for="inputGroupSelect01">Selecione</label>
+																</div>
+																<select class="custom-select " id="inputGroupSelect01">
+																  <option selected>Feed...</option>
+																  <option value="1">Sugestão</option>
+																  <option value="2">Reportar Erro</option>
+																  <option value="3">Críticas</option>
+																  <option value="3">Dúvidas</option>
+																</select>
+															  </div>
+
+														
+													  </div>
+												<div class="form-group">
+												
+												  <textarea class="form-control" id="message-text" placeholder="Deixe sua Menssagem"></textarea>
+												</div>
+												
+											  </form> 
+											 
+										</div>
+										<div class="modal-footer">
+										  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+										  <button type="button" class="btn btn-primary">Enviar</button>
+										</div>
+									  </div>
+									</div>
+								  </div>
 					</div> 
 						<div class="col-lg-6 text-lg-center btn-wrapper">
 						
@@ -292,6 +354,8 @@
 <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
 @include('sweet::alert')
 @yield('js')
+
+<script src ="_// platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons” > </script>
 </body>
 
 </html>
