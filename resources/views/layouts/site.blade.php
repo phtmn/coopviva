@@ -195,14 +195,17 @@
 												<div class="form-group ">
 												  
 												  <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+												  
 												</div>
 												<div class="form-group ">
 													
 													<input type="text" class="form-control" id="recipient-name" placeholder="E-mail">
+													
 												  </div>
 												  <div class="form-group ">
 													
-													<input type="tel" class="form-control " id="recipient-name" placeholder="Fone">
+													<input type="tel" class="form-control " id="recipient-name" placeholder="Telefone">
+													
 												  </div>
 												  <div class="form-group ">
 													
