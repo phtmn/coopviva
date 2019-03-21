@@ -23,7 +23,7 @@
 
         <div class="form-group row">
             <label for="data_nascimento" class="col-sm-3 col-form-label text-right">Data Nascimento</label>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
             </div>
         </div>
@@ -33,7 +33,7 @@
 
         <div class="form-group row">
             <label for="telefone" class="col-sm-3 col-form-label text-right">Telefone </label>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
             </div>
         </div>
@@ -53,14 +53,33 @@
         @if(Auth::user()->tipo_pessoa == 'F')
             <div class="form-group row">
                 <label for="cpf" class="col-sm-3 col-form-label text-right">CPF</label>
-                <div class="col-md-5">
+                <div class="col-md-3">
                     {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
                 </div>
             </div>
         @else
+			<div class="form-group row">
+                <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
+                <div class="col-md-3">
+                    {{ Form::select('cargo',[
+                                'Analista'      => 'Analista',
+                                'Auditor'       => 'Auditor',
+                                'Ceo'           => 'CEO',
+                                'Conselheiro'   => 'Conselheiro',
+                                'Diretor'       => 'Diretor',
+                                'Empresário'    => 'Empresário',
+                                'Estagiário'    => 'Estagiário',
+                                'Gerente'       => 'Gerente',
+                                'Supervisor'    => 'Supervisor',
+                                'Outro'         => 'Outro'
+                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
+                    }}
+                </div>
+            </div>
+			
             <div class="form-group row">
                 <label for="cnpj" class="col-sm-3 col-form-label text-right">CNPJ</label>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
                 </div>
             </div>
@@ -73,14 +92,14 @@
             </div>
 
             <div class="form-group row">
-                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Fantasia</label>
+                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Nome Fantasia</label>
                 <div class="col-md-8">
                     {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="cnpj" class="col-sm-3 col-form-label text-right">Número aprox. de funcionários</label>
+                <label for="cnpj" class="col-sm-3 col-form-label text-right">Quantidade de Funcionários</label>
                 <div class="col-md-3">
                     {{ Form::select('qtd_funcionarios',[
                         'A'    => 'de 1 a 3',
@@ -109,79 +128,67 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
-                <div class="col-md-3">
-                    {{ Form::select('cargo',[
-                                'Analista'      => 'Analista',
-                                'Auditor'       => 'Auditor',
-                                'Ceo'           => 'CEO',
-                                'Conselheiro'   => 'Conselheiro',
-                                'Diretor'       => 'Diretor',
-                                'Empresário'    => 'Empresário',
-                                'Estagiário'    => 'Estagiário',
-                                'Gerente'       => 'Gerente',
-                                'Supervisor'    => 'Supervisor',
-                                'Outro'         => 'Outro'
-                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
-                    }}
-                </div>
-            </div>
+            
         @endif
 
     <h4 class="text-primary">Endereço </h4>
     <hr>
-    <div class="row">
-        <div class="form-group col-md-5">
-            <label for="cep">CEP</label>
-            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
-        </div>
-        <div class="form-group col-md-8">
-            <label for="rua">Rua/Logradouro</label>
-            {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
-        </div>
-
-        <div class="form-group col-md-5">
-            <label for="numero">Bairro</label>
-            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="numero">Número</label>
-            {!! Form::text('numero',null,['class'=> 'form-control']) !!}
-        </div>
-        <div class="form-group col-md-8">
-            <label for="cidade">Cidade</label>
-            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
-        </div>
-        <div class="form-group col-md-6">
-            <label for="uf">Estado</label>
-            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
-        </div>
-        <div class="form-group col-md-7">
-            <label for="complemento">Complemento</label>
-            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
-        </div>
-    </div>
-	 <h4 class="text-primary">Categoria </h4>
-    <hr>
-	<div class="form-group row">
-                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>
-                <div class="col-md-8">
-                   <input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Investidor Social </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Ativo </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Passivo </label>
-                </div>
+	 <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">CEP </label>
+            <div class="col-md-2">
+                {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
             </div>
-		<br>
+        </div>
+		
+	 <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Rua/Logradouro </label>
+            <div class="col-md-8	">
+                {!!Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
+            </div>
+        </div>
+
+ <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Bairro </label>
+            <div class="col-md-4">
+                {!!Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!} 
+            </div>
+        </div>
+
+ <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Número </label>
+            <div class="col-md-1">
+                 {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+            </div>
+        </div>
+
+ <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Cidade </label>
+            <div class="col-md-4">
+                {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
+            </div>
+        </div>
+
+ <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Estado </label>
+            <div class="col-md-2">
+                {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
+            </div>
+        </div>
+
+ <div class="form-group row">
+            <label for="telefone" class="col-sm-3 col-form-label text-right">Complemento </label>
+            <div class="col-md-2">
+               
+            {!! Form::text('complemento',null,['class'=> 'form-control']) !!} 
+            </div>
+        </div>	
+
+		
+
+	 <br>
+	  <div class="card-footer text-center">
         <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
- 
+ </div>
     </div>
     {!! Form::close() !!}
 

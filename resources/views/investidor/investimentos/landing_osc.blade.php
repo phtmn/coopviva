@@ -113,7 +113,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
+                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','required'=>'true','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
                                 </div>
                                 <div class="form-group">
                                     <label for="">Onde deseja Investir?</label>

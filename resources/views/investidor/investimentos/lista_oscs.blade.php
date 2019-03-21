@@ -113,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="card-footer text-center">
-                                            <a href="{{route('detalhe.osc',$osc->id)}}" class="btn btn-success btn-xs">#SimEuQuero</a>
+                                            <a href="{{route('detalhe.osc',$osc->id)}}" class="btn btn-success btn-xs"><u style="text-transform: capitalize;">#SimEuQuero</u></a>
                                         </div>
                                     </div>
                                 </a>
