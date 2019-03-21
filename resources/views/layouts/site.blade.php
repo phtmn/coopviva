@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Start your development with a Design System for Bootstrap 4.">
-	<meta name="author" content="Creative Tim">
+	<meta name="description" content="Aqui no COOPVIVA, você pode engajar com projetos ou causas que estão de acordo com seus propósitos, de forma planejada, estruturada e transparente">
+	<meta name="author" content="Coopviva">
 	<title>.:: COOPVIVA ::. </title>
 	<!-- Favicon -->
 	<link href="{{asset('vendor/site/images/favicon.ico')}}" rel="icon" type="image/png">
@@ -18,8 +18,7 @@
 	<!-- Docs CSS -->
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/css/docs.min.css')}}" rel="stylesheet">
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/vendor/toastr/toastr.css')}}" rel="stylesheet">
-	<!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
-	<script type = 'text / javascript' src = '// platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons' async = 'async'> </script>
+
 </head>
 
 <body>
@@ -170,9 +169,6 @@
 	@yield('conteudo_principal')
 </main>
 <footer class="footer has-cards">
-	<!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
-	 <div class = "ShareThis-inline-share-buttons"> </div>
-	<!--:::::::::::::::::::::/SHARETHIS::::::::::::::::::::::::--> 
 	<div class="container">
 	<div class="row row-grid align-items-center my-md ">
 					<div class="col-xs-12 col-lg-6">
@@ -345,6 +341,7 @@
 </div>
 <!-- /Modal Login -->
 <!-- Core -->
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5c9271b572e5930011671391&product=inline-share-buttons"></script>
 <script src="{{asset('vendor/argon-site/assets/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/argon-site/assets/vendor/popper/popper.min.js')}}"></script>
 <script src="{{asset('vendor/argon-site/assets/vendor/bootstrap/bootstrap.min.js')}}"></script>
@@ -353,11 +350,13 @@
 <!-- Argon JS -->
 <script src="{{asset('vendor/argon-site/assets/js/argon.js?v=1.0.1')}}"></script>
 <iframe width="70" height="70" src="https://whatsmagic.bitnix.com.br/embed/?id=c64f2b69cf&tl=NTUwODMzMDM0MTY2Mw==" frameborder="0" style="position:fixed;z-index:1000;bottom:20px;right:20px;"></iframe>
+<!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
+<script type = 'text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons' async = 'async'> </script>
 <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
 @include('sweet::alert')
 @yield('js')
 
-<script src ="_// platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons” > </script>
+
 </body>
 
 </html>

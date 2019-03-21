@@ -14,7 +14,7 @@
                     {{--</div>--}}
                 </div>
                 <div class="card-footer text-center">
-                    <a href="{{route('detalhe.osc',$osc->id)}}" class="btn btn-success btn-xs">#SimEuQuero</a>
+                    <a href="{{route('detalhe.projeto',$p->id)}}" class="btn btn-success btn-xs">#SimEuQuero</a>
                 </div>
             </div>
         </a>

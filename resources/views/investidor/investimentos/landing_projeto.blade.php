@@ -29,42 +29,39 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        @if(!$osc->logo)
+                                        @if(!$projeto->osc->logo)
                                             <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                                         @else
-                                            <img src="{{$osc->logo}}" class="rounded-circle">
+                                            <img src="{{$projeto->osc->logo}}" class="rounded-circle">
                                         @endif
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div class="card-profile-actions py-4 mt-lg-0">
-                                    @if($osc->e_fins_lucrativos)
-                                        <p> Essa Organização só pode receber verbas através de seus projetos. Escolha o projeto de sua preferência.</p>
 
-                                    @else
                                         <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
                                         <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
                                             <i class="fa fa-heart"></i>
                                         </a>
-                                    @endif
 
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
-                                <div class="card-profile-stats d-flex justify-content-center">
-                                    <div>
-                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
-
+                                <div class="card-profile-stats">
+                                    <div class="pull-left">
+                                        <span class="heading">
+                                            <a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a>
+                                        </span>
                                     </div>
-                                    <div>
-                                        <span class="heading">{{ $metas->count() }}</span>
-                                        <span class="description">Metas</span>
-                                    </div>
-                                    <div>
-                                        <span class="heading">{{ $projetos->count() }}</span>
-                                        <span class="description">Projetos</span>
-                                    </div>
+                                    {{--<div>--}}
+                                        {{--<span class="heading">{{ $metas->count() }}</span>--}}
+                                        {{--<span class="description">Metas</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div>--}}
+                                        {{--<span class="heading">{{ $projetos->count() }}</span>--}}
+                                        {{--<span class="description">Projetos</span>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -72,34 +69,47 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="">
-                                        <h3>{{$osc->nome_fantasia}}
-                                            <span class="font-weight-light">, {{$osc->sigla}}</span>
-                                        </h3>
+                                        <h3>{{ $projeto->nome }}</h3>
                                     </div>
-                                    <div class="h6 font-weight-300">{{$osc->responsavel_legal}}, Responsável Legal</div>
-                                    <div class="h6 mt-4">Ano Fundação {{$osc->ano_fundacao}}</div>
-                                    <div>Outro texto</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="ods pull-right">
-                                        <label for="" class="display-4">Objetivos agenda 2030</label>
-                                        @forelse($metas->unique('objetivo_id') as $obj)
-                                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
-                                        @empty
-                                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
-                                        @endforelse
-                                    </div>
-                                </div>
 
-                               
+                                    <div class="h4 font-weight-300">{{$projeto->nome}}, Responsável Legal</div>
+                                    <div class="h4 font-weight-300">Valor Meta: {{ $projeto->valor_meta }}</div>
+
+                                </div>
+                                {{--<div class="col-md-4">--}}
+                                    {{--<div class="ods pull-right">--}}
+                                        {{--<label for="" class="display-4">Objetivos agenda 2030</label>--}}
+                                        {{--@forelse($metas->unique('objetivo_id') as $obj)--}}
+                                            {{--<a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>--}}
+                                        {{--@empty--}}
+                                            {{--<p style="color:red">Você não está em nenhum objetivo ODS</p>--}}
+                                        {{--@endforelse--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                             </div>
-
                         </div>
                     
                         <div class=" col-xs-12 m-5">
-                            <div class="row row-grid d-flex justify-content-between">
-                                    @include('dashboard.investimentos.projetos')
-                           </div>
+                            <div class="text-center">
+                                <label for="Publico Algo" class="display-3">Publico Alvo</label>
+                                <p> {{ $projeto->publico_alvo }}</p>
+                            </div>
+
+                            <div class="text-center">
+                                <label for="Publico Algo" class="display-3">Objetivo Geral</label>
+                                <p> {{ $projeto->objetivo_geral }}</p>
+                            </div>
+
+                            <div class="text-center">
+                                <label for="Publico Algo" class="display-3">Objetivo Especificos</label>
+                                <p> {{ $projeto->objetivos_especificos }}</p>
+                            </div>
+
+                            <div class="text-center">
+                                <label for="Publico Algo" class="display-3">Inpactos Esperados</label>
+                                <p> {{ $projeto->impactos_esperados }}</p>
+                            </div>
+
                         </div>
                         
                     </div>
@@ -118,19 +128,20 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
+                                    {!! Form::text('valor',null,['class'=>'form-control form-control-lg','placeholder'=>'Quanto gostaria de Investir Nesse Projeto (R$)','id'=>'valor']) !!}
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Onde deseja Investir?</label>
-                                    <select name="escolha" id="OndeInvestir" class="form-control custom-select" required>
-                                        <option value="osc" selected>Investir em: {{$osc->nome_fantasia}}</option>
-                                        <option value="projetos">Investir em Projetos</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" id="box-projetos" style="display: none">
-                                    {!! Form::select('projeto_id',$projetos->pluck('nome','id'),null,['class'=>'form-control','placeholder'=>'Selecione o Projeto']) !!}
-                                </div>
-                                <input type="hidden" name="osc_id" value="{{$osc->id}}">
+                                {{--<div class="form-group">--}}
+                                    {{--<label for="">Onde deseja Investir?</label>--}}
+                                    {{--<select name="escolha" id="OndeInvestir" class="form-control custom-select" required>--}}
+                                        {{--<option value="osc" selected>Investir em: {{$osc->nome_fantasia}}</option>--}}
+                                        {{--<option value="projetos">Investir em Projetos</option>--}}
+                                    {{--</select>--}}
+                                {{--</div>--}}
+                                {{--<div class="form-group" id="box-projetos" style="display: none">--}}
+                                    {{--{!! Form::select('projeto_id',$projetos->pluck('nome','id'),null,['class'=>'form-control','placeholder'=>'Selecione o Projeto']) !!}--}}
+                                {{--</div>--}}
+                                <input type="hidden" name="osc_id" value="{{$projeto->osc->id}}">
+                                <input type="hidden" name="projeto_id" value="{{$projeto->id}}">
                             </div>
                             <div class="modal-footer">
                                 <center> <button type="submit" class="btn btn-primary">Sim EU QUERO</button> <center>

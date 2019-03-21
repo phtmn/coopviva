@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Investidor;
 
 use App\Models\Investimento;
+use App\Models\Projeto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Alert;
@@ -36,6 +37,15 @@ class InvestimentosController extends Controller
             'metas'     => DB::table('metas_oscs')->where('osc_id',$id)->get(),
             'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
             'projetos'  => DB::table('projetos')->where('osc_id',$id)->get()
+        ]);
+    }
+
+    public function detalhe_projeto($id){
+
+
+        return view('investidor.investimentos.landing_projeto',[
+            'projeto'   => Projeto::find($id),
+            'galerias'  => DB::table('galerias')->where('projeto_id',$id)->get(),
         ]);
     }
 

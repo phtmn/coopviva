@@ -11,149 +11,10 @@
         </div>
     @endif
     {!! Form::model($perfil,['route'=> ['perfil.update'] ]) !!}
-<<<<<<< HEAD
-   	
-	<div class="container-mt--7">
-               
+	<div class="container mt--9">
                 <div class="col-md-12">
-                 
                         <div class="card-body bg-transparent">
-                           
-							<p class="text-primary">Dados Gerais</p>							
-							<hr>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Nome do Contato (RETIRAR)</label>
-                                <div class="col-sm-8">
-                                    {!! Form::text('nome_completo',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-							
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Nome (NOVO) </label>
-                                <div class="col-sm-5">
-                                    {!! Form::text('nome',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-							
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Sobrenome (NOVO)</label>
-                                <div class="col-sm-5">
-                                    {!! Form::text('sobrenome',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-							
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Data Nascimento</label>
-                                <div class="col-sm-3">
-                                    {!! Form::date('dt_nascimento',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Telefone  </label>  
-                                <div class="col-sm-3">
-                                     {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Gênero </label>
-                                <div class="col-sm-3">
-                                    {{ Form::select('genero',[
-									'M'             => 'Masculino',
-									'F'             => 'Feminino',
-									'Outro'         => 'Outro'
-									],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true'])
-									}}
-                                </div>
-                            </div>
-							
-							
-							
-							
-						 @if(Auth::user()->tipo_pessoa == 'F')	
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> CPF  </label>  
-                                <div class="col-sm-3">
-                                    {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
-                                </div>
-                            </div>
-						@else	
-							
-							
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> CNPJ  </label>  
-                                <div class="col-sm-3">
-                                    {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
-                                </div>
-                            </div>
-							
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Razão Social  </label>  
-                                <div class="col-sm-8">
-                                    {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-							
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Nome Fantasia (NOVO)  </label>  
-                                <div class="col-sm-8">
-                                    {!! Form::text('razao_fantasia',null,['class'=> 'form-control','required'=>'true']) !!}
-                                </div>
-                            </div>
-						@endif	
-						
-							
-							
-							<p class="text-primary">Endereço</p>							
-							<hr>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> CEP  </label>  
-                                <div class="col-sm-2">
-                                    {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Rua/Logradouro  </label>  
-                                <div class="col-sm-8">
-                                    {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Bairro  </label>  
-                                <div class="col-sm-4">
-                                    {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Número  </label>  
-                                <div class="col-sm-2">
-                                    {!! Form::text('numero',null,['class'=> 'form-control']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Cidade  </label>  
-                                <div class="col-sm-3">
-                                    {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Estado  </label>  
-                                <div class="col-sm-3">
-                                     {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
-                                </div>
-                            </div>
-							<div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Complemento  </label>  
-                                <div class="col-sm-2">
-                                    {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-center">
-                              <input type="submit" value="Salvar" class="btn btn-outline-success"> 
-                        </div>
-                    </div>
-            </div>			
-=======
+
     <h4 class="text-primary">Dados Pessoais</h4>
     <hr>
 
@@ -309,23 +170,26 @@
             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
     </div>
-	 <h4 class="text-primary">Categoria </h4>
-    <hr>
-	<div class="form-group row">
-                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>
-                <div class="col-md-8">
-                   <input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Investidor Social </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Ativo </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Passivo </label>
-                </div>
-            </div>
-		<br>
-        <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
- 
->>>>>>> abf6a6b7fd294d8d183e5740e3f1202cc9885755
+	 {{--<h4 class="text-primary">Categoria </h4>--}}
+    {{--<hr>--}}
+	{{--<div class="form-group row">--}}
+                {{--<label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>--}}
+                {{--<div class="col-md-8">--}}
+                   {{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
+													{{--<label class="form-check-label" >Investidor Social </label><br>--}}
+													{{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
+													{{--<label class="form-check-label" >Voluntário Ativo </label><br>--}}
+													{{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
+													{{--<label class="form-check-label" >Voluntário Passivo </label>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+		{{--<br>--}}
+        {{--<center>--}}
+
+
+
+    <div class="text-center">
+        <input type="submit" value="Salvar" class="btn btn-outline-success">
     </div>
     {!! Form::close() !!}
 

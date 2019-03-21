@@ -89,6 +89,13 @@ class ProjetosController extends Controller
                 $projeto->ambito_id             = $request->ambito_id;
                 $projeto->segmento_id           = $request->segmento_id;
 
+                $projeto->responsavel_nome      = $request->responsavel_nome;
+                $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;
+                $projeto->responsavel_telefone1 = $request->responsavel_telefone1;
+                $projeto->responsavel_telefone2 = $request->responsavel_telefone2;
+                $projeto->responsavel_email1    = $request->responsavel_email1;
+                $projeto->responsavel_email2    = $request->responsavel_email2;
+
                 $projeto->objetivo_geral        = $request->objetivo_geral;
                 $projeto->objetivos_especificos = $request->objetivos_especificos;
                 $projeto->justificativa         = $request->justificativa;
@@ -144,6 +151,13 @@ class ProjetosController extends Controller
                  $projeto->nome                  = $request->nome;
                  $projeto->instancia_id          = $request->instancia_id;
                  $projeto->ambito_id             = $request->ambito_id;
+
+                 $projeto->responsavel_nome      = $request->responsavel_nome;
+                 $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;
+                 $projeto->responsavel_telefone1 = $request->responsavel_telefone1;
+                 $projeto->responsavel_telefone2 = $request->responsavel_telefone2;
+                 $projeto->responsavel_email1    = $request->responsavel_email1;
+                 $projeto->responsavel_email2    = $request->responsavel_email2;
 
                  $projeto->objetivo_geral        = $request->objetivo_geral;
                  $projeto->objetivos_especificos = $request->objetivos_especificos;

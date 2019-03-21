@@ -239,7 +239,7 @@
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Objetivos Específicos</label>
-                    {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                    {!! Form::textarea('objetivos_especificos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                 </div>
                 <div class="form-group col-md-12">
                     <label for="">Justificativa</label>
