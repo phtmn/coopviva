@@ -25,11 +25,9 @@
 							 <div class="modal-body">
 	  <b>
 <p align="justify" class="sample-text" style="text-indent: 15px;"> O acesso ao conteúdo daplataforma http://www.coopviva.com.br ("SITE") dependerá da sua plena concordância com o Termo de Uso e Política de Privacidade ("TERMO DE USO") aqui previstos, então a sua leitura e posterior aceitação são indispensáveis. 
-<<<<<<< HEAD
-O TERMO DE USO tem como objetivo estabelecer os direitos e obrigações aos INVESTIDORES e organizações da sociedade civil (OSC)USUÁRIOS, bem como parceiros fomentadores, e esclarecer qual o tratamento conferido aos dados e informações fornecidos por aqueles que se cadastrarem para acesso a qualquer área do SITE, conforme as regras e informações abaixo previstas:<br>
-=======
+
 O TERMO DE USO tem como objetivo estabelecer os direitos e obrigações aos INVESTIDORES e organizações da sociedade civil (OSC)USUÁRIOS, bem como parceiros fomentadores, e esclarecer qual o tratamento conferido aos dados e informações fornecidos por aqueles que se cadastrarem para acesso a qualquer área do SITE, conforme as regras e informações abaixo previstas.<br>
->>>>>>> abf6a6b7fd294d8d183e5740e3f1202cc9885755
+
 
 	<h4>O QUE É O COOPVIVA?</h4>
 </p><p align="justify" class="sample-text" style="text-indent: 15px;">O COOPVIVA, é uma plataforma online que proporciona a realização colaborativa destinada a financiar OSC’s (Organizações da Sociedade Civil) através de doações/patrocínio diretas e/ou através de seus respectivos projetos de sustentabilidade, tendo identificação direta com a Agenda 2030 da ONU. Uma maneira inovadora e prática de viabilizar a perenidade das OSC’s com a colaboração de diversas pessoas, possibilitando escalabilidade e engajamento de stakeholders.
