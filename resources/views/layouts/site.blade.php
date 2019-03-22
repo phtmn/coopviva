@@ -353,6 +353,7 @@
 <!--:::::::::::::::::::::SHARETHIS::::::::::::::::::::::::-->
 <script type = 'text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c92adf98429650013e9d722&product=inline-share-buttons' async = 'async'> </script>
 <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5c9271b572e5930011671391&product=inline-share-buttons"></script>
 @include('sweet::alert')
 @yield('js')
 

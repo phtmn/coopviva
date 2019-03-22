@@ -52,6 +52,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-1">
+                                <div class="sharethis-inline-share-buttons"></div>
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
                                         <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
