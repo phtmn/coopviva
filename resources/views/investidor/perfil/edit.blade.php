@@ -11,10 +11,6 @@
         </div>
     @endif
     {!! Form::model($perfil,['route'=> ['perfil.update'] ]) !!}
-	<div class="container mt--9">
-                <div class="col-md-12">
-                        <div class="card-body bg-transparent">
-
     <h4 class="text-primary">Dados Pessoais</h4>
     <hr>
 
@@ -48,7 +44,7 @@
                 {{ Form::select('genero',[
                 'M'             => 'Masculino',
                 'F'             => 'Feminino',
-                'Outro'         => 'Outro'
+                'LGBTI'         => 'LGBTI'
                 ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true'])
             }}
             </div>
@@ -170,26 +166,22 @@
             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
     </div>
-	 {{--<h4 class="text-primary">Categoria </h4>--}}
-    {{--<hr>--}}
-	{{--<div class="form-group row">--}}
-                {{--<label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>--}}
-                {{--<div class="col-md-8">--}}
-                   {{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
-													{{--<label class="form-check-label" >Investidor Social </label><br>--}}
-													{{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
-													{{--<label class="form-check-label" >Voluntário Ativo </label><br>--}}
-													{{--<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">--}}
-													{{--<label class="form-check-label" >Voluntário Passivo </label>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-		{{--<br>--}}
-        {{--<center>--}}
-
-
-
-    <div class="text-center">
-        <input type="submit" value="Salvar" class="btn btn-outline-success">
+	 <h4 class="text-primary">Categoria </h4>
+    <hr>
+	<div class="form-group row">
+                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>
+                <div class="col-md-8">
+                   <input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
+													<label class="form-check-label" >Investidor Social </label><br>
+													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
+													<label class="form-check-label" >Voluntário Ativo </label><br>
+													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
+													<label class="form-check-label" >Voluntário Passivo </label>
+                </div>
+            </div>
+		<br>
+        <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
+ 
     </div>
     {!! Form::close() !!}
 

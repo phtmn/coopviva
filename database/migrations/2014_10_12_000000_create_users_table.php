@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('apelido', 100)->nullable();
             $table->string('tipo_pessoa',2);
             $table->date('dt_nascimento')->nullable();
-            $table->enum('genero', ['M','F'])->nullable();
+            $table->string('genero', 10)->nullable();
             $table->string('cpf_cnpj', 50)->nullable();
             $table->string('razao_social', 100)->nullable();
             $table->string('nome_fantasia', 100)->nullable();

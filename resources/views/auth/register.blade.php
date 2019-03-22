@@ -149,18 +149,18 @@
 								<div class="form-group">
 									<label for="name"><strong class="text-success">  <i class="ni ni-satisfied"></i> Perfil Investidor Pessoa Física</strong></label>
 									<p class="text-justify class="sample-text" style="text-indent: 20px;">Se você quer apoiar, investir, trocar informações, divulgar conteúdos por simpatia, afinidade ou estilo de vida.</p>
-									 <h5 ><span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="left" title="- É possível realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base." >Investidor Social</span></a>
-									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="bottom" title="- Contabilizar suas horas dedicadas a instituição. - Registrar sua ações e resultados. - Consultar instituições que comunguem com seus valores e necessitam de suas habilidades. - Participar do banco de ações positivas. - Fazer doações de bens e serviços.">Volutário Ativo</span></a>
-									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="right" title="Pesquisar Organizações no mundo inteiro. - Contribuir com uma causa sem sair de casa e que encaixe com seu tempo disponível. - Contabilizar sua dedicação a organização ou projeto especifico. - Trocar experiências e expertise. - Gerar uma rede de relacionamento para o bem. - Divulgar para seus familiares, amigos, empresas e pontuar por engajamento.">Volutário Passivo</span></a></h5>
+									 <h5 class="text-center"><span class="badge badge-pill badge-success" style="text-transform: capitalize;"  >Investidor Social</span></a>
+									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" >Volutário Ativo</span></a>
+									 <span class="badge badge-pill badge-success" style="text-transform: capitalize;" >Volutário Passivo</span></a></h5>
 								</div>
 								
 								<hr>
 								<div class="form-group">
 									<label for="name"><strong class="text-warning"><i class="ni ni-istanbul"></i> Perfil Investidor Pessoa Jurídica</strong></label>
 									<p class="text-justify" class="sample-text" style="text-indent: 20px;">	Se sua empresa está voltada para resultados sustentáveis de impacto, engajamento e transformação social.</p>
-									<h5 ><span class="badge badge-pill badge-warning" style="text-transform: capitalize;" data-toggle="tooltip" data-placement="left" title="É possível realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base.">Investidor Social</span></a>
-									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; " data-toggle="tooltip" data-placement="bottom" title="- Contabilizar suas horas dedicadas a instituição. - Registrar sua ações e resultados. - Consultar instituições que comunguem com seus valores e necessitam de suas habilidades. - Participar do banco de ações positivas. - Fazer doações de bens e serviços.">Volutário Ativo</span></a>
-									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; "data-toggle="tooltip" data-placement="right" title="Pesquisar Organizações no mundo inteiro. - Contribuir com uma causa sem sair de casa e que encaixe com seu tempo disponível. - Contabilizar sua dedicação a organização ou projeto especifico. - Trocar experiências e expertise. - Gerar uma rede de relacionamento para o bem. - Divulgar para seus familiares, amigos, empresas e pontuar por engajamento." >Volutário Passivo</span></a></h5>
+									<h5 class="text-center"><span class="badge badge-pill badge-warning" style="text-transform: capitalize;" >Investidor Social</span></a>
+									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; " >Volutário Ativo</span></a>
+									 <span class="badge badge-pill badge-warning" style="text-transform: capitalize; "  >Volutário Passivo</span></a></h5>
 								</div>
 
 								

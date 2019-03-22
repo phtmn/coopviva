@@ -10,40 +10,152 @@
 		
     </div>
 	
-	
+	@if(Auth::user()->tipo_pessoa == 'F')
 	<div class="col-lg-12 mt-5 mt-lg-0">
               <!-- Menu -->
               <div class="mb-3">
                 
               </div>
               <div class="nav-wrapper">
-                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-text" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Investidor Social</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">Voluntário Ativo</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab" href="#tabs-text-3" role="tab" aria-controls="tabs-text-3" aria-selected="false">Voluntário Passivo
-                </ul>
+                
+				
+				
               </div>
-              <div class="card shadow">
-                <div class="card-body">
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
-                      <p class="description"> O cadastro como investidor é possível realizar investimentos (doação ou patrocínio PESSOA FISICA OU JURÍDICA em instituições ou projetos cadastrados em nossa base. Ou você pode, também, tornar-se um voluntário.</p>
-                      
+			  
+			  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="row row-grid">
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                              
+                                <h5 class="text-success text-center"><b>Investidor Social</b></h5>
+								
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">Como investidor social você pode realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base. </p>
+                                <div>
+
+                                   
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
-                      <p class="description"> -	Contabilizar suas horas dedicadas a instituição. -	Registrar sua ações e resultados. -	Consultar instituições que comunguem com seus valores e necessitam de suas habilidades . -	Participar do banco de ações positivas. -	Fazer doações de bens e serviços.</p>
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                                
+                                <h5 class="text-success text-center"><b>Voluntário Ativo</b></h5>
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">
+								Como voluntário ativo você pode contabilizar suas horas dedicadas a instituição, registrar sua ações e resultados, consultar instituições que comunguem com seus valores e necessitam de suas habilidades, participar do banco de ações positivas e fazer doações de bens e serviços.</p>
+                                <div>
+
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="tabs-text-3" role="tabpanel" aria-labelledby="tabs-text-3-tab">
-                      <p class="description"> -	Pesquisar Organizações no mundo inteiro. -	Contribuir  com uma causa sem sair de casa e que encaixe com seu tempo disponível . -	Contabilizar sua dedicação a organização ou projeto especifico. -	Trocar experiências e expertise. -	Gerar uma rede de relacionamento para o bem. - 	Divulgar para seus familiares, amigos, empresas e pontuar  por engajamento.</p>
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                                
+                                <h5 class="text-success text-center"><b>Voluntário Passivo</b></h5>
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">
+								Como voluntário passivo você pode pesquisar Organizações no mundo inteiro, contribuir  com uma causa sem sair de casa e que encaixe com seu tempo disponível, contabilizar sua dedicação a organização ou projeto especifico, trocar experiências e expertise, gerar uma rede de relacionamento para o bem, divulgar para seus familiares, amigos, empresas e pontuar por engajamento.</p>
+                                <div>
+
+                                  
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
+        </div>
+    </div>
+	   
             </div>
           </div>
+	 @else
+			<div class="col-lg-12 mt-5 mt-lg-0">
+              <!-- Menu -->
+              <div class="mb-3">
+                
+              </div>
+              <div class="nav-wrapper">
+                
+				
+				
+              </div>
+			  
+			  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="row row-grid">
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                              
+                                <h5 class="text-warning	 text-center"><b>Investidor Social</b></h5>
+								
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">
+								Como investidor social você pode realizar investimentos (doação ou patrocínio) em instituições ou projetos cadastrados em nossa base. 
+								
+								</p>
+                                <div>
+
+                                   
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                                
+                                <h5 class="text-warning text-center"><b>Voluntário Ativo</b></h5>
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">
+																
+								Aqui seu colaborador, pares e parceiros podem engajar em causas que sua empresa comunga dos valores, contabilizar suas horas dedicadas a instituição, fazer campanhas de adesão, registrar sua ações e resultados, consultar instituições que comunguem com seus valores e necessitam de suas habilidades, criar um  banco de ações positivas próprio bem como fazer doações de bens e serviços.
+								</p>
+                                <div>
+
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-lift--hover shadow border-0">
+                            <div class="card-body py-5">
+                                
+                                <h5 class="text-warning text-center"><b>Voluntário Passivo</b></h5>
+                                <p class="description mt-3 text-justify class="sample-text" style="text-indent: 20px;">
+								
+								Sua emprsa por pesquisar organizações e causas no mundo inteiro, seus colaboradores, pares e parceiro podem dedicar e engajar a uma causa de forma on-line, contabilizar sua dedicação a organização ou projeto especifico, trocar experiências e expertise, gerar uma rede de relacionamento para o bem, divulgar para seus familiares, amigos, empresas bem como pontuar por engajamento.
+								</p>
+                                <div>
+
+                                  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	   
+            </div>
+          </div>
+ @endif		
+			  
+         
 @endsection

@@ -138,14 +138,14 @@
 									<span class="btn-inner--icon">
 									  <i class="ni ni-tv-2 mr-2"></i>
 									</span>
-									<span class="nav-link-inner--text">Painel do Investidor</span>
+									<span class="nav-link-inner--text">Painel </span>
 								</a>
 							@else
 								<a href="{{route('osc.index')}}" class="btn btn-neutral btn-icon">
 								<span class="btn-inner--icon">
 								  <i class="ni ni-tv-2 mr-2"></i>
 								</span>
-									<span class="nav-link-inner--text">Painel da OSC</span>
+									<span class="nav-link-inner--text">Painel </span>
 								</a>
 							@endif
 							<a href="{{route('logout')}}" target="_blank" class="btn btn-neutral btn-icon"

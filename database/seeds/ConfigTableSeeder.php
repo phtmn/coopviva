@@ -32,7 +32,6 @@ class ConfigTableSeeder extends Seeder
 
         DB::table('imoveis_situacoes')->insert([
             ['descricao'=>'Alugada','pontuacao'=>2],
-            ['descricao'=>'Mora com parentes/pais', 'pontuacao'=>4],
             ['descricao'=>'Outros', 'pontuacao'=>1],
             ['descricao'=>'Cedida Funcional', 'pontuacao'=> 5],
             ['descricao'=>'Própria/Quitada', 'pontuacao'=> 6],
