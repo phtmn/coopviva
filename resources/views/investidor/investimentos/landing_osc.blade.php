@@ -32,7 +32,7 @@
                                         @if(!$osc->logo)
                                             <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                                         @else
-                                            <img src="{{$osc->logo}}" class="rounded-circle">
+                                            <img src="{{$osc->logo}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;">
                                         @endif
                                     </a>
                                 </div>
@@ -54,7 +54,7 @@
                             <div class="col-lg-4 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
+                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-default">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
 
                                     </div>
                                     <div>

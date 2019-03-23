@@ -94,26 +94,47 @@
                 @foreach($data->chunk(3) as $d)
                     <div class="row row-grid">
                         @foreach($d as $osc)
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <a href="{{route('detalhe.osc',$osc->id)}}" style="cursor: pointer;">
-                                    <div class="card card-lift--hover shadow border-0 bg-gradient-dark">
-                                        <div class="card-body py-5">
+                                    <div class="card card-lift--hover shadow border-0 bg-white-default">
+									
+                                        <div class="card-body py-4">
+											
+											
+										
                                             @if(!$osc->logo)
-                                                <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="card-img-top">
+                                               <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;"></center> 
                                             @else
-                                                <img src="{{$osc->logo}}" class="card-img-top">
+                                                <center> <img src="{{$osc->logo}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;"> </center> 
                                             @endif
-
-                                            <h6 class="text-success text-uppercase">{{$osc->nome_fantasia}}</h6>
-                                            <p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>
+											<br>
+											
+                                            <h6 class="text-default text-uppercase text-center"><b>{{$osc->nome_fantasia}}</b></h6>
+											<hr>
+                                            <!--<p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>-->
                                             <div>
-                                                <span class="badge badge-pill badge-success text-white">{{ $osc->projetos()->count() }} projetos</span>
-                                                <span class="badge badge-pill badge-success text-white">{{$osc->metas()->count() }} Metas</span>
-                                                {{--<span class="badge badge-pill badge-success text-white">2 ODS</span>--}}
+											<div class="row justify-content-center">
+											
+												<div class="card-profile-stats d-flex justify-content-center">   
+                                                
+														<div class="alert alert-success text-center " role="alert">
+															<strong>{{ $osc->projetos()->count() }}</strong> Projeto(s)
+														</div>-
+												
+														<div class="alert alert-info text-center" role="alert">
+															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
+														</div>
+											
+											</div>
+												</div>		
+																		
+												
+                                                
                                             </div>
                                         </div>
                                         <div class="card-footer text-center">
-                                            <a href="{{route('detalhe.osc',$osc->id)}}" class="btn btn-success btn-xs"><u style="text-transform: capitalize;">#SimEuQuero</u></a>
+											<h4><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-dark"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h4>
+                                            
                                         </div>
                                     </div>
                                 </a>
