@@ -4,6 +4,7 @@ Auth::routes(['verify'=>true]);
 Route::view('/','site.index');
 Route::view('/termo-de-uso','site.termodeuso');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
+
 Route::get('/feedback', 'FeedbackController@create')->name('site.feedback');
 Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
@@ -36,6 +37,8 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
+
+    Route::resource('documentos','DocumentosController');
 
     Route::resource('galeria','GaleriaController');
 

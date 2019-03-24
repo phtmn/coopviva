@@ -74,6 +74,7 @@ class OscController extends Controller
                        'ano_fundacao'          => $request->ano_fundacao,
                        'sigla '                => $request->sigla,
                        'cnae '                 => $request->cnae,
+                       'cnae_sec '             => $request->cnae_sec,
                        'responsavel_legal'     => $request->responsavel_legal,
                        'situacao_imovel_id'    => $request->situacao_imovel_id,
                        'email '                => $request->email,
@@ -135,6 +136,7 @@ class OscController extends Controller
                        $osc->ano_fundacao          = $request->ano_fundacao;
                        $osc->sigla                = $request->sigla;
                        $osc->cnae                = $request->cnae;
+                       $osc->cnae_sec                = $request->cnae_sec;
                        $osc->responsavel_legal   = $request->responsavel_legal;
                        $osc->situacao_imovel_id   = $request->situacao_imovel_id;
                        $osc->email            = $request->email;
@@ -209,11 +211,11 @@ class OscController extends Controller
 
     public function uploadFoto(Request $request){
 
-        $image = $request->file('file');
-        $imageName = $image->getClientOriginalName();
+        $osc = OSC::find($request->osc_id);
 
+        $image = $request->file('file');
+        $imageName = 'LOGOOSC-'.$osc->id.time();
         try{
-            $osc = OSC::find($request->osc_id);
 
             if($osc->logo != null) {
                 Storage::disk('s3')->delete($osc->logo);
@@ -225,6 +227,7 @@ class OscController extends Controller
             OSC::find($request->osc_id)->update(['logo' => $imageNameAWS ]);
             return redirect()->back();
         }catch (\Exception $e){
+            dd($e->getMessage());
             return redirect()->back();
         }
 

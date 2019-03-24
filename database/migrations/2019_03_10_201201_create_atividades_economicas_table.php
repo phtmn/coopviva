@@ -15,11 +15,8 @@ class CreateAtividadesEconomicasTable extends Migration {
 		Schema::create('atividades_economicas', function(Blueprint $table)
 		{
             $table->increments('id');
-			$table->string('descricao', 100);
+			$table->text('descricao');
 			$table->string('cod_atividade', 50);
-			$table->string('cnae_fiscal', 50);
-			$table->integer('segmento_id');
-			$table->integer('pontuacao')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

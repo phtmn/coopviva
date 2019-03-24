@@ -108,7 +108,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
                                 <div class="col-sm-4">
-                                    {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('sigla',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -136,6 +136,15 @@
                                 </label>
                                 <div class="col-sm-8">
                                     {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">
+                                    <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Secundário
+                                </label>
+                                <div class="col-sm-8">
+                                    {!! Form::select('cnae_sec',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
                                 </div>
                             </div>
 

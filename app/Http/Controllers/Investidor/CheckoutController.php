@@ -13,15 +13,11 @@ use Alert;
 
 class CheckoutController extends Controller
 {
-//    public function formIncentivar($id){
-//        $osc = DB::table('oscs')->find($id);
-//        return view('dashboard.incentivos.formCheckout',[
-//            'osc'       => $osc,
-//            //'projetos'  => $osc->projetos->pluck('descricao','id'),
-//            'tab'       => 'investir'
-//        ]);
-//
-//    }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function pagar(Request $request){
 

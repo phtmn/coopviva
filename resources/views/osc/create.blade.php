@@ -25,63 +25,63 @@
 @section('conteudo')
     <div class="container mt--7">
         <div class="row">
-            <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
-                <div class="card card-profile shadow">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 order-lg-2">
-                            <div class="card-profile-image">
-                                <a href="#">
-                                  <!--  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle"> -->
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                        <div class="d-flex justify-content-between">
-                         <!--   <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Assim que preencher o formulário você poderá alterar a logo">Alterar Logo</a> -->
-                        </div>
-                    </div>
-                    <div class="card-body pt-0 pt-md-4">
-                        <div class="row">
-                            <div class="col">
-                                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                                    <div>
-                                        <span class="heading">22</span>
-                                        <span class="description">Metas</span>
-                                    </div>
-                                    <div>
-                                        <span class="heading">10</span>
-                                        <span class="description">Objetivos</span>
-                                    </div>
-                                    <div>
-                                        <span class="heading">89</span>
-                                        <span class="description">Projetos</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h3>
-                                {{auth()->user()->nome_social}}<span class="font-weight-light"></span>
-                            </h3>
-                            <div class="h5 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}
-                            </div>
-                            <div class="h5 mt-4">
-                             <!--   <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}} -->
-                            </div>
-                            <div>
-                               <!-- <i class="ni education_hat mr-2"></i>Outra Informação ?? -->
-                            </div>
-                            <hr class="my-4" />
-                            <!--<p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
-                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">--}}
+                {{--<div class="card card-profile shadow">--}}
+                    {{--<div class="row justify-content-center">--}}
+                        {{--<div class="col-lg-3 order-lg-2">--}}
+                            {{--<div class="card-profile-image">--}}
+                                {{--<a href="#">--}}
+                                  {{--<!--  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle"> -->--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">--}}
+                        {{--<div class="d-flex justify-content-between">--}}
+                         {{--<!--   <a href="#" class="btn btn-sm btn-default float-right" data-toggle="tooltip" title="Assim que preencher o formulário você poderá alterar a logo">Alterar Logo</a> -->--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="card-body pt-0 pt-md-4">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col">--}}
+                                {{--<div class="card-profile-stats d-flex justify-content-center mt-md-5">--}}
+                                    {{--<div>--}}
+                                        {{--<span class="heading">22</span>--}}
+                                        {{--<span class="description">Metas</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div>--}}
+                                        {{--<span class="heading">10</span>--}}
+                                        {{--<span class="description">Objetivos</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div>--}}
+                                        {{--<span class="heading">89</span>--}}
+                                        {{--<span class="description">Projetos</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="text-center">--}}
+                            {{--<h3>--}}
+                                {{--{{auth()->user()->nome_social}}<span class="font-weight-light"></span>--}}
+                            {{--</h3>--}}
+                            {{--<div class="h5 font-weight-300">--}}
+                                {{--<i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}--}}
+                            {{--</div>--}}
+                            {{--<div class="h5 mt-4">--}}
+                             {{--<!--   <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}} -->--}}
+                            {{--</div>--}}
+                            {{--<div>--}}
+                               {{--<!-- <i class="ni education_hat mr-2"></i>Outra Informação ?? -->--}}
+                            {{--</div>--}}
+                            {{--<hr class="my-4" />--}}
+                            {{--<!--<p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>--}}
+                            {{--<a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a> -->--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="col-xl-8 order-xl-1">
+            <div class="col-xl-12 order-xl-1">
                 {!! Form::open(['route'=>'osc.store','enctype'=>'multipart/form-data']) !!}
                 <div class="col-md-12">
                     <div class="card shadow">
@@ -97,7 +97,7 @@
                                     <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
                                         <div class="col-sm-4">
-                                            {!! Form::text('sigla_osc',null,['class'=>'form-control']) !!}
+                                            {!! Form::text('sigla',null,['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -125,6 +125,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-4 col-form-label text-right">
+                                            <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Secundário
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {!! Form::select('cnae_sec',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
                                         </div>
                                     </div>
 

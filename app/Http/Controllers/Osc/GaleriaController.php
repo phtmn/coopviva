@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Osc;
 
 use App\Models\Galeria;
 use App\Models\Projeto;
-use Aws\Glacier\GlacierClient;
 use Illuminate\Http\Request;
 use Auth;
 use Alert;
@@ -36,7 +35,8 @@ class GaleriaController extends Controller
         $osc = $request->user()->osc()->id;
 
         $image = $request->file('file');
-        $imageName = $image->getClientOriginalName();
+        $imageName = 'GAOSC-'.$osc.time();
+
 
         Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
 
@@ -55,6 +55,7 @@ class GaleriaController extends Controller
 
             return redirect()->route('galeria.index');
         } else{
+
             return redirect()->route('galeria.index')->with('msg','Erro');
         }
     }
