@@ -21,7 +21,7 @@ class FeedbackController extends Controller
 
     public function store(Request $request){
         
-    
+        
         $feedback = new Feedback();
         $feedback->nome =   $request['nome'];
         $feedback->email =  $request['email'];
@@ -56,8 +56,8 @@ class FeedbackController extends Controller
         }
         
         //grava os dados no banco
-        $feedback->save();
-        return redirect()->route('home');
-
+         $feedback->save();
+         return redirect()->route('home');
+        
     }
 }    
