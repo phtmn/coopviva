@@ -227,14 +227,14 @@
 												  <textarea class="form-control" name="mensagem" id="message-text" placeholder="Deixe sua Menssagem"></textarea>
 												  
 												</div>
-												
-											  </form> 
-											 
-										</div>
-										<div class="modal-footer">
+												<div class="modal-footer">
 										  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
 										  <button type="submit" class="btn btn-primary">Enviar</button>
 										</div>
+											  </form> 
+											 
+										</div>
+										
 									  </div>
 									</div>
 								  </div>
