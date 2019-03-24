@@ -94,7 +94,7 @@
                 @foreach($data->chunk(3) as $d)
                     <div class="row row-grid">
                         @foreach($d as $osc)
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <a href="{{route('detalhe.osc',$osc->id)}}" style="cursor: pointer;">
                                     <div class="card card-lift--hover shadow border-0 bg-white-default">
 									
