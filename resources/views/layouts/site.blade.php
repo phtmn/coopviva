@@ -228,9 +228,9 @@
 												  
 												</div>
 												<div class="modal-footer">
-										  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-										  <button type="submit" class="btn btn-primary">Enviar</button>
-										</div>
+												  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+												  <button type="submit" class="btn btn-primary">Enviar</button>
+												</div>
 											  </form> 
 											 
 										</div>
