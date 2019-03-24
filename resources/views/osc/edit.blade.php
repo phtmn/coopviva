@@ -16,7 +16,7 @@
                     {{--</p>--}}
                     <div class="ods">
                         @forelse($metas->unique('objetivo_id') as $obj)
-                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                         @empty
                             <p style="color:red">Você não está em nenhum objetivo ODS</p>
                         @endforelse
@@ -78,14 +78,14 @@
                                 <i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}
                             </div>
                             <div class="h5 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}}
+                               <!-- <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}} -->
                             </div>
                             <div>
-                                <a href="" class="btn btn-danger">Fonte de Recursos</a>
+                               <!-- <a href="" class="btn btn-danger">Fonte de Recursos</a> -->
                             </div>
                             <hr class="my-4" />
-                            <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
-                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a>
+                           <!-- <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
+                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a> -->
                         </div>
                     </div>
                 </div>

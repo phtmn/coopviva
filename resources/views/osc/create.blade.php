@@ -68,14 +68,14 @@
                                 <i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}
                             </div>
                             <div class="h5 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}}
+                             <!--   <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}} -->
                             </div>
                             <div>
-                                <i class="ni education_hat mr-2"></i>Outra Informação ??
+                               <!-- <i class="ni education_hat mr-2"></i>Outra Informação ?? -->
                             </div>
                             <hr class="my-4" />
-                            <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
-                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a>
+                            <!--<p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
+                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a> -->
                         </div>
                     </div>
                 </div>
