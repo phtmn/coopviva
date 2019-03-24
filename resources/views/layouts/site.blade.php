@@ -187,20 +187,21 @@
 										  </button>
 										</div>
 										<div class="modal-body">
-											<form>
+											<form method="POST" action="{{ route('feedback.store') }}">
+											@csrf
 												<div class="form-group ">
 												  
-												  <input type="text" class="form-control" id="recipient-name" placeholder="Nome">
+												  <input type="text" class="form-control" name="nome" id="recipient-name" placeholder="Nome">
 												  
 												</div>
 												<div class="form-group ">
 													
-													<input type="text" class="form-control" id="recipient-name" placeholder="E-mail">
+													<input type="text" class="form-control" name="email" id="recipient-name" placeholder="E-mail">
 													
 												  </div>
 												  <div class="form-group ">
 													
-													<input type="tel" class="form-control " id="recipient-name" placeholder="Telefone">
+													<input type="tel" class="form-control " name="telefone" id="recipient-name" placeholder="Telefone">
 													
 												  </div>
 												  <div class="form-group ">
@@ -209,29 +210,31 @@
 																<div class="input-group-prepend">
 																  <label class="input-group-text" for="inputGroupSelect01">Selecione</label>
 																</div>
-																<select class="custom-select " id="inputGroupSelect01">
+																<select class="custom-select " name="categoria" id="inputGroupSelect01">
 																  <option selected>Feed...</option>
 																  <option value="1">Sugestão</option>
 																  <option value="2">Reportar Erro</option>
 																  <option value="3">Críticas</option>
 																  <option value="3">Dúvidas</option>
 																</select>
+																
 															  </div>
 
 														
 													  </div>
 												<div class="form-group">
 												
-												  <textarea class="form-control" id="message-text" placeholder="Deixe sua Menssagem"></textarea>
+												  <textarea class="form-control" name="mensagem" id="message-text" placeholder="Deixe sua Menssagem"></textarea>
+												  
 												</div>
-												
+												<div class="modal-footer">
+										  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+										  <button type="submit" class="btn btn-primary">Enviar</button>
+										</div>
 											  </form> 
 											 
 										</div>
-										<div class="modal-footer">
-										  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-										  <button type="button" class="btn btn-primary">Enviar</button>
-										</div>
+										
 									  </div>
 									</div>
 								  </div>
