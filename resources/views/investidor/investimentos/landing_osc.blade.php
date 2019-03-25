@@ -5,6 +5,7 @@
 
 
     <main class="profile-page">
+
         <section class="section-profile-cover section-shaped my-0" style="background-image: url('{{asset('images/2.jpg')}}')">
 
         </section>
@@ -13,28 +14,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card card-profile shadow mt--500">
+                        <div class="card card-profile shadow mt--300">
+
                             <div class="titulo mt-2 text-center">
                                 <h3>{{$osc->nome_fantasia}}</h3>
                             </div>
 
-                            <div class="descricao mt-4 text-center">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex nec mauris lacinia vestibulum eu at ante. Donec ut metus sodales, consequat orci ac, efficitur dui. Suspendisse dictum ultrices sapien eu viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed nibh porta, egestas purus eget, pulvinar nisi. Etiam sed fringilla nibh. Vivamus sed libero id massa finibus auctor sed vel libero. Vivamus vel est nibh. In hac habitasse platea dictumst. Integer ullamcorper sapien leo. Phasellus vel tempor odio, quis dictum felis. Pellentesque ultricies lectus lectus, non fermentum odio molestie nec. Donec justo nisl, posuere in lacus sit amet, aliquam dictum mi. Quisque non ultrices massa. Vestibulum pharetra bibendum convallis.
-
-                                Donec eget mollis felis. Nam eu neque iaculis, gravida lacus eget, sodales ipsum. Nam rutrum rutrum massa. Proin laoreet non velit a rutrum. Donec varius lectus in quam mollis, non fermentum quam mollis. Ut dapibus mauris in magna commodo, eget commodo velit ultricies. Quisque consectetur faucibus purus. Ut porttitor, odio porttitor maximus rhoncus, arcu mauris hendrerit enim, id ultricies risus sapien quis leo. In at congue risus. Nam porttitor sodales massa nec placerat. Curabitur vel orci vitae felis tempor consectetur ac aliquam erat. Integer sed sem urna. Proin tempus sapien ultrices metus hendrerit molestie. Vivamus egestas, enim vitae dictum tristique, enim lectus euismod nisl, at viverra mi nulla id lacus. Donec ut tellus est.
-
-                                Morbi tempor leo eget nisi lobortis, ac blandit dui tempus. Vestibulum vitae semper nunc. Nullam egestas dolor ligula, eget pretium massa dignissim at. In quis risus sit amet mauris auctor ornare. Donec lobortis nulla ut lectus placerat, luctus convallis odio dignissim. Duis tempus at velit quis dapibus. Praesent tincidunt arcu nunc, finibus blandit metus dignissim vitae.
-
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis hendrerit semper. Nam pellentesque dui tincidunt nisl posuere, at commodo elit mattis. Maecenas ut congue libero. Quisque facilisis nec lectus eu gravida. Proin semper consequat nisl nec rhoncus. Nullam a efficitur felis. Integer sed nisl non odio iaculis semper. Pellentesque volutpat, tellus vestibulum malesuada efficitur, dolor tortor tincidunt ex, sit amet pharetra leo nunc at tellus. Aliquam a massa varius, rutrum erat eget, porta ex. Quisque pretium lacinia nunc, feugiat euismod leo sagittis in. Sed dapibus ante in lorem vestibulum imperdiet.
-
-                                Vivamus euismod nisl quis ligula malesuada, non placerat dui facilisis. Vestibulum aliquam tortor purus, vestibulum mollis ipsum tempor at. Nunc tristique sapien tortor, nec pulvinar nibh malesuada sed. Cras sagittis sollicitudin nisi non viverra. In ut dapibus est. Vivamus sed lacus vel neque iaculis gravida. Nunc eget eleifend est. Aliquam et malesuada ligula. Maecenas ac viverra ante. Vestibulum quis bibendum arcu, eu congue turpis. Praesent accumsan metus massa, et sollicitudin leo tristique et. Phasellus ut odio in dolor tincidunt congue nec quis mauris. Donec ac ligula eget lectus luctus viverra. Cras risus est, vehicula vel mi vitae, viverra elementum eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel dui eu tellus aliquam efficitur.
+                            <div class="descricao mt-4 text-justify mx-4">
+                                <p>{{$osc->surgimento_osc}}</p>
+                                <p>{{$osc->missao_osc}}</p>
+                                <p>{{$osc->visao_osc}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-profile shadow mt--500 my-2">
+                        <div class="card card-profile shadow mt--300 my-2">
 
-                            <div class="text-center mt-3">
+                            <div class="mt-3 d-flex justify-content-center">
                                 @forelse($metas->unique('objetivo_id') as $obj)
                                     <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                                 @empty
@@ -57,10 +53,17 @@
                             <div class="botao mx-4 mb-2">
                                 <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-outline-success btn-block">Investir</a>
                             </div>
+
+
+                        </div>
+
+                        <div class="projetos text-center">
+                            @include('dashboard.investimentos.projetos')
+
                         </div>
 
 
-                        @include('dashboard.investimentos.projetos')
+
 
                     </div>
 

@@ -53,7 +53,7 @@
                                 <div class="card-profile-stats">
                                     <div class="pull-left">
                                         <span class="heading">
-                                            <a href="{{ route('quero_investir') }}" class="btn bt-sm btn-info">Voltar</a>
+                                            <a href="{{ route('quero_investir') }}" class="btn bt-sm btn-default">Voltar</a>
                                         </span>
                                     </div>
                                     {{--<div>--}}
