@@ -94,7 +94,7 @@
                 @foreach($data->chunk(3) as $d)
                     <div class="row row-grid">
                         @foreach($d as $osc)
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <a href="{{route('detalhe.osc',$osc->id)}}" style="cursor: pointer;">
                                     <div class="card card-lift--hover shadow border-0 bg-white-default">
 									
@@ -103,14 +103,14 @@
 											
 										
                                             @if(!$osc->logo)
-                                               <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;"></center> 
+                                               <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="" style="width:205px; height:205px;"></center> 
                                             @else
-                                                <center> <img src="{{$osc->logo}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;"> </center> 
+                                                <center> <img src="{{$osc->logo}}" class="" style="width:205px; height:205px;"> </center> 
                                             @endif
 											<br>
 											
                                             <h6 class="text-default text-uppercase text-center"><b>{{$osc->nome_fantasia}}</b></h6>
-											<hr>
+											
                                             <!--<p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>-->
                                             <div>
 											<div class="row justify-content-center">
@@ -128,14 +128,14 @@
 											</div>
 												</div>		
 																		
-												
+												<center><h5><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-default"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h5> </center>
                                                 
                                             </div>
                                         </div>
-                                        <div class="card-footer text-center">
-											<h4><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-dark"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h4>
+                                        <!--<div class="card-footer text-center">
+											<h5><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-dark"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h5>
                                             
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </a>
                             </div>

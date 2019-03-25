@@ -1,10 +1,24 @@
 @extends('layouts.site')
 
+
 @section('conteudo_principal')
+
+
     <main class="profile-page">
         <section class="section-profile-cover section-shaped my-0">
             <!-- Circles background -->
+
+			<div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-size: cover; background-position: center top;">
+        <!-- Mask -->
+
+
+        <span class="mask bg-gradient-default opacity-8"></span>
+        <!-- Header container -->
+
+    </div>
+			
             <div class="shape shape-style-1 shape-dark alpha-4">
+
                 <span></span>
                 <span></span>
                 <span></span>
@@ -20,19 +34,42 @@
                 </svg>
             </div>
         </section>
+
+		
+		
         <section class="section">
+
+
             <div class="sharethis-inline-share-buttons"></div>
             <div class="container">
+
                 <div class="card card-profile shadow mt--500">
                     <div class="px-4">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3 order-lg-2">
+						<br>
+						  <center><div class="col-lg-12 order-lg-1">
+						<div class="ods mt-8">
+                        @forelse($metas->unique('objetivo_id') as $obj)
+                                            <a style="cursor: pointer"><img class="" style="width:52px; height:52px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                        @empty
+                                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
+                                        @endforelse
+                    </div>
+
+						</div></center>
+
+                            <div class="col-lg-3 order-lg-3">
+							
                                 <div class="card-profile-image">
+								
                                     <a href="#">
+										<BR>
+											<BR>
+												<BR>
                                         @if(!$osc->logo)
-                                            <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                            <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="">
                                         @else
-                                            <img src="{{$osc->logo}}" class="rounded-circle img-thumbnail" style="width:205px; height:205px;">
+                                            <img src="{{$osc->logo}}" class="" style="width:205px; height:205px;">
                                         @endif
                                     </a>
                                 </div>
@@ -43,10 +80,14 @@
                                         <p> Essa Organização só pode receber verbas através de seus projetos. Escolha o projeto de sua preferência.</p>
 
                                     @else
-                                        <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default">Investir</a>
-                                        <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Add Favoritos versoes futuras">
-                                            <i class="fa fa-heart"></i>
+                                        <a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-default"> Investir </a>
+                                        <a href="#" class="btn btn-danger pull-right" data-toggle="tooltip" data-title="Em Breve">
+                                            <i class="fa fa-heart"> </i>
                                         </a>
+									<!--	<a href="#" class="btn btn-default " >
+                                            <i class="fa fa-facebook"> </i>
+                                        </a> -->
+										
                                     @endif
 
                                 </div>
@@ -55,7 +96,7 @@
                                 <div class="sharethis-inline-share-buttons"></div>
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-default">Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
+                                        <span class="heading"><a href="{{ route('quero_investir') }}" class="btn bt-sm btn-default"> Voltar</a></span> <!-- TODO :Falta calcular valor recebido e investimentos -->
 
                                     </div>
                                     <div>
@@ -69,35 +110,117 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-2">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="">
-                                        <h3>{{$osc->nome_fantasia}}
-                                            <span class="font-weight-light">, {{$osc->sigla}}</span>
-                                        </h3>
-                                    </div>
-                                    <div class="h6 font-weight-300">{{$osc->responsavel_legal}}, Responsável Legal</div>
-                                    <div class="h6 mt-4">Ano Fundação {{$osc->ano_fundacao}}</div>
-                                    <div>Outro texto</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="ods pull-right">
-                                        <label for="" class="display-4">Objetivos agenda 2030</label>
-                                        @forelse($metas->unique('objetivo_id') as $obj)
-                                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
-                                        @empty
-                                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
-                                        @endforelse
-                                    </div>
-                                </div>
+                   
+						<div class="text-center mt-5">
+						<br>
+						<br>
+						<h3>{{$osc->sigla}} {{$osc->nome_fantasia}} 
+						<span class="font-weight-light"></span>
+						</h3>
+       
+						<div class="h6 mt-4" style="text-transform: capitalize;"><i class="ni business_briefcase-24 mr-2"></i> {{$osc->descricao}}</div>
+						<br>
+						
 
-                               
-                            </div>
+	
+	
+	
 
-                        </div>
+      <div class="shape shape-style-1 shape-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container py-md">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h2 class="text-dark font-weight-light"><b>Como surgiu?</b></h2>
+            <p class="lead text-dark mt-4">
+			{{$osc->surgimento_osc}} </p>
+			
+			
+			
+          </div>
+          <div class="col-lg-6 mb-lg-auto">
+            <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
+              <div id="carousel_example" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel_example" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel_example" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="img-fluid" src="{{asset('vendor/site/images/meioa.jpg')}}" >
+                  </div>
+                  <div class="carousel-item">
+                    <img class="img-fluid" src="{{asset('vendor/site/images/cultura.jpg')}}" >
+                  </div>
+				  <div class="carousel-item">
+                    <img class="img-fluid" src="{{asset('vendor/site/images/idoso1.jpg')}}" >
+                  </div>
+				  <div class="carousel-item">
+                    <img class="img-fluid" src="{{asset('vendor/site/images/esporte.jpg')}}" >
+                  </div>
+				  
+                </div>
+                <a class="carousel-control-prev" href="#carousel_example" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_example" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+
+						</div>
+						
+						
                     
                         <div class=" col-xs-12 m-5">
+						
+						
+						<div class="container">
+		<div class="card bg-gradient-warning shadow-lg border-0">
+			<div class="p-5">
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+						<h3 class="text-white">CNAE Principal {{$osc->area_atuacao}} </h3>
+						
+					</div>
+					<div class="col-lg-3 ml-lg-auto">
+					
+
+
+							<a href="#" class="btn btn-lg btn-block btn-white" style="text-transform: capitalize;">{{$osc->cidade}} - {{$osc->uf}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
                             <div class="row row-grid d-flex justify-content-between">
                                     @include('dashboard.investimentos.projetos')
                            </div>

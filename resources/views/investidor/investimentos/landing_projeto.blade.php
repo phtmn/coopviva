@@ -1,5 +1,7 @@
 @extends('layouts.site')
 
+
+
 @section('conteudo_principal')
     <main class="profile-page">
         <section class="section-profile-cover section-shaped my-0">

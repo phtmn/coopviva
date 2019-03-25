@@ -40,7 +40,7 @@
                                     @if(!$osc->logo)
                                         <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                                     @else
-                                        <img src="{{$osc->logo}}" class="rounded-circle">
+                                        <img src="{{$osc->logo}}" class="">
                                     @endif
                                 </a>
                             </div>
