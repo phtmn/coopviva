@@ -1,21 +1,21 @@
-<h2 class="text-dark ">Nossos Projetos</h2>
-<br>
+
+
+
+
+    <div class="col">
     @forelse($projetos as $p)
-    <div class="col-lg-12">
-        <a href="{{route('detalhe.osc',$p->id)}}" style="cursor: pointer;">
-            <div class="card card-lift--hover shadow border-0 bg-default">
-                
-                <div class="card-footer">
-				<h6 class="text-dark ">
-				<a href="{{route('detalhe.projeto',$p->id)}}" class="btn btn-success btn-xs" style="text-transform: capitalize;">#SimEuQuero</a> |
-				
-				
-				{{$p->nome}} | Meta R$ {{ number_format($p->valor_meta,2,',','.') }}</h6>
+            <a href="{{route('detalhe.osc',$p->id)}}" style="cursor: pointer;">
+                <div class="card my-1" style="width: 18rem;">
+                    <div class="card-body">
+                        <p class="card-title font-weight-900">{{ $p->nome }}</p>
+                        <p class="card-text font-weight-600">{{ $p->descricao }}</p>
+                    </div>
+                    <div class="card-footer">
+                        Valor do Projeto: R$ {{ number_format($p->valor_meta,2,',','.') }}
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
-	<br>
+            </a>
     @empty
       <!--  <p>Não há projetos cadastrados e/ou ativos</p>-->
     @endforelse
+    </div>

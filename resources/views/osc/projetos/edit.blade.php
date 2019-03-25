@@ -199,6 +199,10 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="">Objetivo Geral</label>
+                            {!! Form::textarea('descricao',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="">Objetivo Geral</label>
                             {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                         </div>
                         <div class="form-group col-md-12">

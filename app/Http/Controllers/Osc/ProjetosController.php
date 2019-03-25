@@ -101,6 +101,7 @@ class ProjetosController extends Controller
                 $projeto->justificativa         = $request->justificativa;
                 $projeto->publico_alvo          = $request->publico_alvo;
                 $projeto->impactos_esperados    = $request->impactos_esperados;
+                $projeto->descricao             = $request->descricao;
 
                 $projeto->artigo                = $request->artigo;
                 $projeto->valor_meta            = toMoney($request->valor_meta);
