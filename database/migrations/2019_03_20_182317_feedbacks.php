@@ -19,8 +19,6 @@ class Feedbacks extends Migration{
             $table->string('telefone')->nullable();
             $table->string('categoria')->nullable();
             $table->text('mensagem')->nullable();
-            
-            
         });
     }    
 

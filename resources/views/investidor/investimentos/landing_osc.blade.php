@@ -25,14 +25,23 @@
                                 <p>{{$osc->missao_osc}}</p>
                                 <p>{{$osc->visao_osc}}</p>
                             </div>
+
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://youtu.be/6LPCOPm9zgE"></iframe>
+                            </div>
                         </div>
+
+
                     </div>
+
                     <div class="col-md-4">
                         <div class="card card-profile shadow mt--300 my-2">
 
-                            <div class="mt-3 d-flex justify-content-center">
+                            <div class="mt-3 d-flex justify-content-around">
                                 @forelse($metas->unique('objetivo_id') as $obj)
-                                    <a style="cursor: pointer"><img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                    <div class="thumb">
+                                        <img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
+                                    </div>
                                 @empty
                                     <p style="color:red">Você não está em nenhum objetivo ODS</p>
                                 @endforelse
@@ -57,18 +66,12 @@
 
                         </div>
 
-                        <div class="projetos text-center">
+                        <div class="projetos d-flex flex-column justify-content-between">
+                            <h4 class="display-6 text-center">Principais projetos</h4>
                             @include('dashboard.investimentos.projetos')
-
                         </div>
-
-
-
-
                     </div>
-
                 </div>
-
             </div>
 
 

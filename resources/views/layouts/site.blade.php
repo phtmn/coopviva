@@ -54,7 +54,7 @@
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
 							
-							<span class="nav-link-inner--text">Conheça</span>
+							<span class="nav-link-inner--text font-weight-900">Conheça</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-xl">
 							<div class="dropdown-menu-inner">
@@ -86,7 +86,7 @@
 					<li class="nav-item dropdown">
 						<a href="{{url('/termo-de-uso')}}" class="nav-link" >
 							
-							<span class="nav-link-inner--text">Termo de Uso</span>
+							<span class="nav-link-inner--text font-weight-900">Termo de Uso</span>
 						</a>
 						
 					</li>

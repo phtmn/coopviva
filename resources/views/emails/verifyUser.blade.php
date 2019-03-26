@@ -166,7 +166,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
     height:268.8pt'>
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:
     0cm'><b><span style='font-size:21.0pt;font-family:"Helvetica",sans-serif;
-    color:black'>Olá, {{$user['name']}}.</span></b><span style='font-size:21.0pt;
+    color:black'>Olá, {{$user['apelido']}}.</span></b><span style='font-size:21.0pt;
     font-family:"Helvetica",sans-serif;color:black'><o:p></o:p></span></p>
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:
     35.4pt'><span style='font-size:11.5pt;font-family:"Helvetica",sans-serif;

@@ -1,7 +1,10 @@
 <?php
 
 Auth::routes(['verify'=>true]);
-Route::view('/','site.index');
+
+
+
+Route::view('/','site.index')->name('site.index');
 Route::view('/termo-de-uso','site.termodeuso');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 

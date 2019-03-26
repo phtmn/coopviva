@@ -1,21 +1,11 @@
 @extends('layouts.site')
 
 @section('conteudo_principal')
-    <section class="section section-shaped section-lg">
-        <div class="shape shape-style-1 bg-gradient-success">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <section class="section section-shaped section-lg" style="background-image: url('{{asset('vendor/site/images/cause-bg.jpg')}}'); filter: brightness(100%);">
         <div class="container pt-lg-md">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="card bg-secondary shadow border-0">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <div class="card bg-white shadow border-1">
                         {{--<div class="card-header bg-white pb-5">--}}
                             {{--<div class="text-muted text-center mb-3">--}}
                                 {{--<small>Entre com :</small>--}}
@@ -35,9 +25,9 @@
                                 {{--</a>--}}
                             {{--</div>--}}
                         {{--</div>--}}
-                        <div class="card-body px-lg-5 py-lg-5">
+                        <div class="card card-body px-lg-5 py-lg-5">
                             <div class="text-center text-muted mb-4">
-                                <small>Faça login com sua conta</small>
+                                <h4>Faça login com sua conta</h4>
                             </div>
                             @if ($errors->any())
                                 <div class="alert alert-danger">

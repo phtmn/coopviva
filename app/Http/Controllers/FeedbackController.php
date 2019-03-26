@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Feedback;
 use App\Http\Controllers\Controller;
 Use Validator;
+use Alert;
 
 
 class FeedbackController extends Controller
@@ -40,9 +41,8 @@ class FeedbackController extends Controller
         $validator = Validator::make($request->all(),[  
             'nome'                  => 'required|min:10|max:100|string|',
             'email'                 => 'required|min:8',
-            'telefone'              => 'required|min:14|max:15',
             'categoria'             => 'required',
-            'mensagem'              => 'required|min:15'
+            'mensagem'              => 'required|min:3'
                              
         ],$messages);
         
@@ -56,7 +56,8 @@ class FeedbackController extends Controller
         
         //grava os dados no banco
          $feedback->save();
-         return redirect()->route('home');
+            Alert::success('Obrigado por seu FeedBack','OBG')->persistent('ok');
+         return redirect()->route('site.index');
         
     }
 }    
