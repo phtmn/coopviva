@@ -105,7 +105,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html"><i class="ni ni-world-2 "></i> Landing Page - http://coopviva.com.br/ponto/ (modal)</a>
+            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{route('detalhe.osc',auth()->user()->osc()->id)}}"><i class="ni ni-world-2 "></i> Landing Page - Veja suas informações no site</a>
             <!-- Form -->
             
             <!-- User -->
@@ -123,7 +123,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                         <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Olá!</h6>
+                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0">Olá, Eu sou Ka lahun</h6></a>
                         </div>
                         {{--<a href="./examples/profile.html" class="dropdown-item">--}}
                         {{--<i class="ni ni-tv-2 text-primary"></i> --}}
@@ -170,6 +170,28 @@
     <div class="container-fluid mt--7">
         @yield('conteudo')
 
+        <div class="modal fade" id="kalahun-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+            <div class="modal-dialog"  role="document">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="modal-title-default"></h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail" style="max-width: 300px; max-height: 300px">
+
+                        <p>
+                            Nosso mascote foi batizado com o nome de KA LAHUN numa expressao MAIA que simboliza o numeral 12 e sintetiza a expressao
+                            do significado de três palavras poderosas DEDICAÇÂO - COOPERACAO - EQUILIBRIO
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Footer -->
         <footer class="footer">
             <div class="row align-items-center justify-content-xl-between">

@@ -1,7 +1,18 @@
 @extends('layouts.site')
 
 @section('conteudo_principal')
-    <section class="section section-shaped section-sm" style="background-image: url('{{asset('vendor/site/images/cause-bg.jpg')}}'); filter: brightness(100%);">
+    <section class="section section-shaped section-sm">
+		<div class="shape shape-style-1 bg-gradient-success">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 
         <div class="container pt-lg-md">
             <div class="row justify-content-center">

@@ -37,7 +37,6 @@ class GaleriaController extends Controller
         $image = $request->file('file');
         $imageName = 'GAOSC-'.$osc.time();
 
-
         Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
 
         $imageNameAWS  = Storage::disk('s3')->url($imageName);
@@ -45,9 +44,7 @@ class GaleriaController extends Controller
         if($imageNameAWS != null){
             $galeria = new Galeria();
             $galeria->osc_id        = $osc;
-            $galeria->projeto_id    = isset($request->projeto_id) ? $request->projeto_id : null;
             $galeria->legenda       = $request->legenda;
-            $galeria->album         = $request->album;
             $galeria->aws_url       = $imageNameAWS;
             $galeria->aws_name      = $imageName;
             $galeria->ativo         = 1;

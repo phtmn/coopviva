@@ -28,10 +28,6 @@
                                 <p>{{$projeto->impactos_esperados}}</p>
 
                             </div>
-
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://youtu.be/6LPCOPm9zgE"></iframe>
-                            </div>
                         </div>
 
 
@@ -47,19 +43,22 @@
 
                             <div class="card-profile-stats d-flex justify-content-center">
                                 <div>
-                                    <span class="heading">$ {{ $projeto->valor_meta }}</span>
-                                    <span class="description">Meta</span>
+                                    <span class="heading">$ {{ number_format($projeto->valor_meta,2,',','.') }}</span>
+                                    <span class="description text-success font-weight-900">Meta</span>
                                 </div>
                                 <div>
-                                    <span class="heading">{{ 0 }}</span>
-                                    <span class="description">Arrecadado</span>
+                                    <span class="heading">$ {{ 0 }}</span>
+                                    <span class="description font-weight-900">Arrecadado</span>
                                 </div>
                             </div>
 
                             <div class="card-profile-stats text-center d-flex flex-column">
-                                <h5 class="display-5">Responsável </h5>
+                                <h5 class="display-5">Responsável pelo Projeto </h5>
                                 <p>{{$projeto->responsavel_nome}}</p>
+                            </div>
 
+                            <div class="card-profile-stats text-center d-flex flex-column">
+                                <h5 class="display-5 text-warning">{{ $dias }} Dias Restantes</h5>
                             </div>
 
                             <div class="botao mx-4 mb-2">
@@ -69,6 +68,9 @@
                         </div>
 
                     </div>
+                </div>
+                <div class="row">
+                    @include('osc.galeria.landing')
                 </div>
             </div>
 
@@ -106,8 +108,28 @@
     </main>
 @stop
 
+@section('css')
+    <style>
+        .btn:focus, .btn:active, button:focus, button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        #image-gallery .modal-footer{
+            display: block;
+        }
+
+        .thumb{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+
+@stop
+
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script src="{{asset('js/galeria.js')}}"> </script>
     <script>
         $(document).ready(function(){
             let Ondeinvestir      = $('#OndeInvestir');

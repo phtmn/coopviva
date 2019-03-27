@@ -44,6 +44,20 @@
                                     </div>
 
                                     <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label text-right">Início da Captação</label>
+                                        <div class="col-md-3">
+                                            {!! Form::date('inicio_captacao',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label text-right">Fim da Captação</label>
+                                        <div class="col-md-3">
+                                            {!! Form::date('fim_captacao',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
 									<label for="" class="col-sm-3 col-form-label text-right">Nº de Registro 1</label>
                                         <div class="col-md-3">
                                             {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
@@ -147,12 +161,7 @@
                                     <div class="row">
                                         <div class="form-group col-md-3">
                                             {!! Form::label('Banco') !!}
-                                            {!! Form::select('banco_doacao',[
-                                            'CEF'   =>  "Caixa Economica Federal",
-                                            'BB'    =>  "Banco do Brasil",
-                                            'SA'    =>  "Banco Santander",
-                                            'IT'    =>  "Banco Itaú"
-                                            ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                            {!! Form::select('banco_doacao',$lista_bancos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                                         </div>
 
                                         <div class="form-group col-md-2">
@@ -174,9 +183,7 @@
                                 <div class="row"><!--row-3-->
                                     <div class="form-group col-md-3">
                                         {!! Form::label('Banco') !!}
-                                        {!! Form::select('banco_patrocinio',[
-                                        'BB'    =>  "Banco do Brasil"
-                                        ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                        {!! Form::select('banco_patrocinio',$lista_bancos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                                     </div>
 
                                     <div class="form-group col-md-2">

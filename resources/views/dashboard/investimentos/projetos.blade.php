@@ -6,9 +6,11 @@
                     <p class="card-text font-weight-200">Descricao do projeto</p>
                     <p class="card-text font-weight-900">Meta R$ {{ number_format($p->valor_meta,2,',','.') }}</p>
                 </div>
-                <div class="card-footer">
-                    <a href="{{ route('detalhe.projeto',$p->id )}}" class=" btn-outline-success btn btn-block">SimEuQuero</a>
+
+                <div class="p-4">
+                    <a href="{{ route('detalhe.projeto',$p->id )}}" class="btn-success btn btn-block">Saiba Mais</a>
                 </div>
+
             </div>
         </div>
 @empty

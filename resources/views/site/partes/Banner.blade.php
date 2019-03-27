@@ -1,6 +1,18 @@
 <div class="position-relative">
     <!-- shape Hero -->
-    <section class="section section-lg section-shaped pb-250" style="background-image: url('{{asset('vendor/site/images/cause-bg.jpg')}}');">
+    <section class="section section-lg section-shaped pb-250">
+        <div class="shape shape-style-1 bg-gradient-success">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="container py-lg-md d-flex">
             <div class="col px-0">
                 <div class="row">
@@ -9,7 +21,7 @@
                         <span style="line-height: 1.1;">Experiências singulares com agilidade e transparência.</span>
                         </h1>
                         <p class="lead text-white font-weight-900">Aqui no <strong><b>COOPVIVA</b></strong>, você pode engajar com projetos ou causas que estão de acordo com seus propósitos,
-                            de forma planejada, estruturada e transparente. <a href="{{route('quero_investir')}}" class="label-success"> <strong><b><u>#SimEuQuero</u></b></strong> </a> </p>
+                            de forma planejada, estruturada e transparente. <a href="{{route('quero_investir')}}" class="text-white"> <strong><b><u>#SimEuQuero</u></b></strong> </a> </p>
 
 
                     </div>
@@ -22,6 +34,7 @@
                 <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
             </svg>
         </div>
+
     </section>
     <!-- 1st Hero Variation -->
 </div>

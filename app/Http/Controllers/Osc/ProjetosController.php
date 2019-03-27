@@ -37,6 +37,7 @@ class ProjetosController extends Controller
         }
 
         return view('osc.projetos.create',[
+            'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
             'instancias'    =>  DB::table('instancias')->pluck('nome','id'),
             'ambitos'       =>  DB::table('ambitos')->pluck('nome','id'),
             'segmentos'     =>  DB::table('segmentos')->pluck('nome','id'),
@@ -47,6 +48,7 @@ class ProjetosController extends Controller
         $projeto  = Projeto::find($id);
         return view('osc.projetos.edit',[
             'projeto'           => $projeto,
+            'lista_bancos'      =>  DB::table('lista_bancos')->pluck('banco','id'),
             'instancias'        =>  DB::table('instancias')->pluck('nome','id'),
             'ambitos'           =>  DB::table('ambitos')->pluck('nome','id'),
             'segmentos'         =>  DB::table('segmentos')->pluck('nome','id'),
@@ -88,6 +90,9 @@ class ProjetosController extends Controller
                 $projeto->instancia_id          = $request->instancia_id;
                 $projeto->ambito_id             = $request->ambito_id;
                 $projeto->segmento_id           = $request->segmento_id;
+
+                $projeto->inicio_captacao       = $request->inicio_captacao;
+                $projeto->fim_captacao          = $request->fim_captacao;
 
                 $projeto->responsavel_nome      = $request->responsavel_nome;
                 $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;
@@ -152,6 +157,9 @@ class ProjetosController extends Controller
                  $projeto->nome                  = $request->nome;
                  $projeto->instancia_id          = $request->instancia_id;
                  $projeto->ambito_id             = $request->ambito_id;
+
+                 $projeto->inicio_captacao       = $request->inicio_captacao;
+                 $projeto->fim_captacao          = $request->fim_captacao;
 
                  $projeto->responsavel_nome      = $request->responsavel_nome;
                  $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;

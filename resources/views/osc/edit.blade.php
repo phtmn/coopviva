@@ -70,22 +70,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center">
-                            <h3>
-                                {{auth()->user()->nome_social}}<span class="font-weight-light"></span>
-                            </h3>
-                            <div class="h5 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>{{ auth()->user()->email}}
+                        <div class="card">
+                            <div class="embed-responsive embed-responsive-1by1">
+                                {!! $osc->video_institucional  !!}
                             </div>
-                            <div class="h5 mt-4">
-                               <!-- <i class="ni business_briefcase-24 mr-2"></i>{{ auth()->user()->cidade }} - {{auth()->user()->uf}} -->
-                            </div>
-                            <div>
-                               <!-- <a href="" class="btn btn-danger">Fonte de Recursos</a> -->
-                            </div>
-                            <hr class="my-4" />
-                           <!-- <p>Aqui pode ser mostrado uma breve descriçao da osc, o usuario ode editar clicando no link abaixo</p>
-                            <a href="#" data-toggle="tooltip" title="Abrir modal para editar essa informação?">Editar</a> -->
+
                         </div>
                     </div>
                 </div>
@@ -232,7 +221,7 @@
                             <div class="row">
                                 <div class="form-group col-md-5">
                                     {!! Form::label('Banco') !!}
-                                    {{ Form::select('banco',['CEF'=>'Caixa Economica','BB'=>'Banco do Brasil','BA'=>'Bradesco'],$banco->banco,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                    {{ Form::select('banco',$lista_bancos,$banco->banco,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                 </div>
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}
@@ -292,6 +281,24 @@
                                 <label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>
                                 <div class="col-md-8">
                                     {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('fan_page',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Instagram</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('instagram',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                         </div>

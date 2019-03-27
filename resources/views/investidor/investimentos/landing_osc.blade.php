@@ -25,19 +25,23 @@
                                 <p>{{$osc->missao_osc}}</p>
                                 <p>{{$osc->visao_osc}}</p>
                             </div>
-
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://youtu.be/6LPCOPm9zgE"></iframe>
-                            </div>
                         </div>
+                        @if($osc->video_institucional)
+                            <div class="card shadow mt-5 text-center">
+                                <p>Video Institucional</p>
+                                <div class="p-3">
+                                    {!! $osc->video_institucional !!}
+                                </div>
 
+                            </div>
+                        @endif
 
                     </div>
 
                     <div class="col-md-4">
                         <div class="card card-profile shadow mt--300 my-2">
 
-                            <div class="mt-3 d-flex justify-content-around">
+                            <div class="mt-3 d-flex justify-content-center">
                                 @forelse($metas->unique('objetivo_id') as $obj)
                                     <div class="thumb">
                                         <img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
@@ -63,14 +67,22 @@
                                 <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-outline-success btn-block">Investir</a>
                             </div>
 
-
                         </div>
 
                         <div class="projetos d-flex flex-column justify-content-between">
-                            <h4 class="display-6 text-center">Principais projetos</h4>
                             @include('dashboard.investimentos.projetos')
                         </div>
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <div class="titulo mt-2 text-center">
+                            <h3>Galeria de Fotos</h3>
+                        </div>
+                        @include('osc.galeria.landing')
+                    </div>
+
                 </div>
             </div>
 
@@ -90,20 +102,11 @@
                                 <div class="form-group">
                                     {!! Form::text('valor',null,['class'=>'form-control form-control-lg','required'=>'true','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Onde deseja Investir?</label>
-                                    <select name="escolha" id="OndeInvestir" class="form-control custom-select" required>
-                                        <option value="osc" selected>Investir em: {{$osc->nome_fantasia}}</option>
-                                        <option value="projetos">Investir em Projetos</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" id="box-projetos" style="display: none">
-                                    {!! Form::select('projeto_id',$projetos->pluck('nome','id'),null,['class'=>'form-control','placeholder'=>'Selecione o Projeto']) !!}
-                                </div>
+
                                 <input type="hidden" name="osc_id" value="{{$osc->id}}">
                             </div>
-                            <div class="modal-footer">
-                                <center> <button type="submit" class="btn btn-primary">Sim EU QUERO</button> <center>
+                            <div class="modal-footer text-center">
+                               <button type="submit" class="btn btn-success btn-block">Sim EU QUERO</button>
                                 
                             </div>
                         </div>
@@ -117,8 +120,28 @@
     </main>
 @stop
 
+@section('css')
+    <style>
+    .btn:focus, .btn:active, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    }
+
+    #image-gallery .modal-footer{
+    display: block;
+    }
+
+    .thumb{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+    </style>
+
+@stop
+
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script src="{{asset('js/galeria.js')}}"> </script>
     <script>
         $(document).ready(function(){
             let Ondeinvestir      = $('#OndeInvestir');

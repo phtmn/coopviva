@@ -19,6 +19,8 @@
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/css/docs.min.css')}}" rel="stylesheet">
 	<link type="text/css" href="{{asset('vendor/argon-site/assets/vendor/toastr/toastr.css')}}" rel="stylesheet">
 
+	@yield('css')
+
 </head>
 
 <body>
@@ -176,12 +178,12 @@
 						<h4 class="mb-0 font-weight-light">Junte-se a nós por um mundo sustentável.</h4>
 					</div>
 					<div class="col-xs-12 col-lg-6 text-right">
-							<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Deixe seu Feedback</button>
+							<button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Deixe seu Feedback</button>
 							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog" role="document">
 									  <div class="modal-content">
 										<div class="modal-header">
-										  <h5 class="modal-title text-center" id="exampleModalLabel">Deixe seu Feedback</h5>
+										  <h6 class="modal-title text-center" id="exampleModalLabel">Sua opnião é muito importante para nós!</h6>
 										  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										  </button>
@@ -212,10 +214,11 @@
 																</div>
 																<select class="custom-select " name="categoria" id="inputGroupSelect01">
 																  <option selected>Feed...</option>
-																  <option value="1">Sugestão</option>
-																  <option value="2">Reportar Erro</option>
-																  <option value="3">Críticas</option>
-																  <option value="3">Dúvidas</option>
+																  <option value="sugestao">Sugestão</option>
+																  <option value="elgio">Elogio</option>
+																  <option value="erro">Reportar Erro</option>
+																  <option value="critica">Críticas</option>
+																  <option value="duvida">Dúvidas</option>
 																</select>
 																
 															  </div>
@@ -224,12 +227,12 @@
 													  </div>
 												<div class="form-group">
 												
-												  <textarea class="form-control" name="mensagem" id="message-text" placeholder="Deixe sua Menssagem"></textarea>
+												  <textarea class="form-control" name="mensagem" id="message-text" placeholder="Deixe sua Menssagem" rows="8"></textarea>
 												  
 												</div>
 												<div class="modal-footer">
 												  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-												  <button type="submit" class="btn btn-primary">Enviar</button>
+												  <button type="submit" class="btn btn-success">Enviar</button>
 												</div>
 											  </form> 
 											 

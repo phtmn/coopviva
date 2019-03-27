@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Investidor;
 
 use App\Models\Investimento;
 use App\Models\Projeto;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Alert;
@@ -41,10 +42,12 @@ class InvestimentosController extends Controller
 
     public function detalhe_projeto($id){
 
+        $projeto = Projeto::find($id);
 
         return view('investidor.investimentos.landing_projeto',[
             'projeto'   => Projeto::find($id),
-            'galerias'  => DB::table('galerias')->where('projeto_id',$id)->get(),
+            'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
+            'dias'      => Carbon::parse($projeto->inicio_captacao)->diffInDays($projeto->fim_captacao)
         ]);
     }
 

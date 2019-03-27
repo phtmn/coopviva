@@ -221,7 +221,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-5">
                                         {!! Form::label('Banco') !!}
-                                        {{ Form::select('banco',['CEF'=>'Caixa Economica','BB'=>'Banco do Brasil','BA'=>'Bradesco'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                        {{ Form::select('banco',$lista_bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                     </div>
                                     <div class="form-group col-md-2">
                                         {!! Form::label('Agência') !!}
@@ -281,6 +281,24 @@
                                 <label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>
                                 <div class="col-md-8">
                                     {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('fan_page',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Instagram</label>
+                                <div class="col-md-8">
+                                    {!! Form::text('instagram',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                         </div>

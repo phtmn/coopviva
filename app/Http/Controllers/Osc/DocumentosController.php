@@ -13,7 +13,7 @@ class DocumentosController extends Controller
 
 
         return view('osc.documentos.index',[
-            'data' => Documento::all()
+            'data' => Documento::where('osc_id', auth()->user()->osc()->id)
         ]);
     }
 

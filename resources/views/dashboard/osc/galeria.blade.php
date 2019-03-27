@@ -60,13 +60,7 @@
                             {!! Form::file('file',null,['class'=>'form-control']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::text('legenda',null,['class'=>'form-control','placeholder'=>'Insira uma legenda para essa foto']) !!}
-                        </div>
-                        <div class="form-group">
-                            {!! Form::select('album',['osc'=>'OSC','projetos'=>'projetos'],null,['class'=>'form-control']) !!}
-                        </div>
-                        <div class="form-group">
-                            {!! Form::select('projeto_id',$projetos,null,['class'=>'form-control']) !!}
+                            {!! Form::textArea('legenda',null,['class'=>'form-control','placeholder'=>'Insira uma legenda para essa foto']) !!}
                         </div>
                     </div>
                     <div class="modal-footer">

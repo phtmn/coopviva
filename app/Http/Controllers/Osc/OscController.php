@@ -30,20 +30,22 @@ class OscController extends Controller
         $osc = OSC::where('user_id',Auth::user()->id)->first();
         if($osc){
             return view('osc.edit',[
-                'osc'       => $osc,
-                'banco'     => $osc->banco(),
-                'ae'        => DB::table('atividades_economicas')->pluck('descricao','id'),
-                'si'        => DB::table('imoveis_situacoes')->pluck('descricao','id'),
-                'projetos'  => $osc->projetos()->count(),
-                'metas'     => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
+                'osc'           => $osc,
+                'banco'         => $osc->banco(),
+                'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
+                'ae'            => DB::table('atividades_economicas')->pluck('descricao','id'),
+                'si'            => DB::table('imoveis_situacoes')->pluck('descricao','id'),
+                'projetos'      => $osc->projetos()->count(),
+                'metas'         => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
 
             ]);
         }
 
         return view('osc.create',[
-            'ae'        => DB::table('atividades_economicas')->pluck('descricao','id'),
-            'si'        => DB::table('imoveis_situacoes')->pluck('descricao','id'),
-            'bancos'    => DB::table('bancos')->pluck('banco','id')
+            'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
+            'ae'            => DB::table('atividades_economicas')->pluck('descricao','id'),
+            'si'            => DB::table('imoveis_situacoes')->pluck('descricao','id'),
+            'bancos'        => DB::table('bancos')->pluck('banco','id')
         ]);
     }
 
@@ -98,7 +100,9 @@ class OscController extends Controller
                        'visao_osc'            => $request->visao_osc,
                        'finalidades_estatutarias_ods' => $request->finalidades_estatutarias_ods,
                        'link_estatuto_osc'     => $request->link_estatuto_osc,
-                       //'metas_ods'             => $request->metas_ods,
+                       'video_institucional'    => $request->video_institucional,
+                       'fan_page'    => $request->fan_page,
+                       'instagram'    => $request->instagram,
                        'user_id'               => $request->user()->id,
                         'banco_id'              => $banco->id
 
@@ -130,7 +134,7 @@ class OscController extends Controller
                 $banco->tipo_conta  = 3;
                 $banco->save();
 
-                       $osc->nome_fantasia                = $request->nome_fantasia;
+                       $osc->nome_fantasia          = $request->nome_fantasia;
                        $osc->cnpj                           = $request->cnpj;
                        $osc->ano_inscricao_cnpj   = $request->ano_inscricao_cnpj;
                        $osc->ano_fundacao          = $request->ano_fundacao;
@@ -156,6 +160,10 @@ class OscController extends Controller
                        $osc->sub_area2            = $request->sub_area2;
                        $osc->surgimento_osc    = $request->surgimento_osc;
                        $osc->missao_osc          = $request->missao_osc;
+                       $osc->video_institucional    = $request->video_institucional;
+                       $osc->fan_page    = $request->fan_page;
+                       $osc->instagram    = $request->instagram;
+
                        
                 $osc->save();
 
