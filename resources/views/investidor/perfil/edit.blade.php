@@ -168,17 +168,7 @@
     </div>
 	 <h4 class="text-primary">Categoria </h4>
     <hr>
-	<div class="form-group row">
-                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Tipo </label>
-                <div class="col-md-8">
-                   <input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Investidor Social </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Ativo </label><br>
-													<input class="form-check-input" type="checkbox" name="termo" value="ACEITO">
-													<label class="form-check-label" >Voluntário Passivo </label>
-                </div>
-            </div>
+	
 		<br>
         <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
  

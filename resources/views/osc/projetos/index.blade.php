@@ -28,7 +28,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">Projeto</th>
+                                <th scope="col">Nome </th>
                                 <th scope="col">Valor (R$)</th>
                                 <th scope="col">Status</th>
                                 <th scope="col"></th>
@@ -55,7 +55,7 @@
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar esse projeto </a>
+                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar </a>
                                            
                                         </div>
                                     </td>

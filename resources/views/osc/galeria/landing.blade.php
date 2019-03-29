@@ -5,9 +5,9 @@
             @forelse($galerias as $g)
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                   data-image="{{$g->aws_url}}"
+                   data-image="{{$g->aws_url}}" 
                    data-target="#image-gallery">
-                    <img class="img-thumbnail"
+                    <img class="img-thumbnail" style="width:300px; height:300px;"
                          src="{{$g->aws_url}}"
                          alt="{{$g->legenda}}">
                 </a>
@@ -27,7 +27,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                        <img id="image-gallery-image" class="img-responsive col-md-12 " src="" style="width:305px; height:305px;">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>

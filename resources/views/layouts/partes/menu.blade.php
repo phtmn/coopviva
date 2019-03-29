@@ -28,7 +28,7 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{route('documentos.index')}}">
-            <i class="ni ni-chart-bar-32 text-info"></i> Documentos
+            <i class="ni ni-archive-2 text-info"></i> Documentos
         </a>
     </li>
     

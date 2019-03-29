@@ -4,7 +4,7 @@
 
     <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
         <!-- Mask -->
-        <span class="mask bg-gradient-danger opacity-8"></span>
+        <span class="mask bg-gradient-info opacity-8"></span>
         <!-- Header container -->
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
@@ -34,7 +34,7 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">Descricao</th>
+                                    <th scope="col">Descrição</th>
                                     <th scope="col">Tipo</th>
                                 </tr>
                             </thead>

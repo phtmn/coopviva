@@ -10,24 +10,27 @@
 
         </section>
 		
-        <section class="section">
-            <div class="container">
-                <div class="row">
+        	
+		<section class="section">
+			<div class="container">	
+                <div class="row">				
                     <div class="col-md-8">
-                        <div class="card card-profile shadow mt--300">
+                        <div class="card card-profile shadow mt--500">
 
-                            <div class="titulo mt-2 text-center">
-                                <h3>{{$osc->nome_fantasia}}</h3>
+                            <div class="descricao mt-4 text-justify mx-4">
+								<h2 class="text-center" >{{$osc->nome_fantasia}}</h2>
+                               
                             </div>
 
                             <div class="descricao mt-4 text-justify mx-4">
-                                <p>{{$osc->surgimento_osc}}</p>
-                                <p>{{$osc->missao_osc}}</p>
-                                <p>{{$osc->visao_osc}}</p>
+								
+                                <p align="justify" style="text-indent: 15px;">{{$osc->surgimento_osc}}</p>
+                                <p align="justify" style="text-indent: 15px;">{{$osc->missao_osc}}</p>
+                                <p align="justify" style="text-indent: 15px;">{{$osc->visao_osc}}</p>
                             </div>
                         </div>
                         @if($osc->video_institucional)
-                            <div class="card shadow mt-5 text-center">
+                            <div class="card shadow mt-5 text-center ">
                                 <p>Video Institucional</p>
                                 <div class="p-3">
                                     {!! $osc->video_institucional !!}
@@ -39,32 +42,46 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card card-profile shadow mt--300 my-2">
+                        <div class="card card-profile shadow mt--500">
 
                             <div class="mt-3 d-flex justify-content-center">
-                                @forelse($metas->unique('objetivo_id') as $obj)
-                                    <div class="thumb">
-                                        <img class="img-thumbnail" style="width:80px; height:80px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
-                                    </div>
-                                @empty
-                                    <p style="color:red">Você não está em nenhum objetivo ODS</p>
-                                @endforelse
+                                   @if(!$osc->logo)
+                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle" style="width:205px; height:205px;">
+                                    @else
+                                        <img src="{{$osc->logo}}" class="" style="width:205px; height:205px;">
+                                    @endif
                             </div>
-
+							<hr>
+							<div class="botao mx-4 mb-2">
+                                <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-block">Investir</a>
+                            </div>
+							<hr>
 
                             <div class="card-profile-stats d-flex justify-content-center">
                                 <div>
-                                    <span class="heading">{{ $metas->count() }}</span>
-                                    <span class="description">Metas</span>
-                                </div>
-                                <div>
                                     <span class="heading">{{ $projetos->count() }}</span>
-                                    <span class="description">Projetos</span>
+                                    <span class="description text-success">Projetos</span>
                                 </div>
+								
+								<div>
+                                    <span class="heading">{{ $metas->count() }}</span>
+                                    <span class="description text-info">Metas</span>
+                                </div>
+                                
                             </div>
-
+							<hr>
                             <div class="botao mx-4 mb-2">
-                                <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-outline-success btn-block">Investir</a>
+                                <div class="descricao mt-4 text-justify mx-4">
+                               
+                               <div class="mt-3 d-flex justify-content-center">
+                                @forelse($metas->unique('objetivo_id') as $obj)
+                                    <div class="thumb">
+                                        <img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
+                                    </div>
+                                @empty
+                                    <p style="color:red">Esta organização sem fins lucrativos não possui nenhum objetivo de desenvolvimento sustetável (ODS)</p>
+                                @endforelse
+                            </div>
                             </div>
 
                         </div>

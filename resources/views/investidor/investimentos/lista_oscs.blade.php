@@ -113,29 +113,30 @@
 											
                                             <!--<p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>-->
                                             <div>
-											<div class="row justify-content-center">
-											
-												<div class="card-profile-stats d-flex justify-content-center">   
-                                                
-														<div class="alert alert-success text-center " role="alert">
-															<strong>{{ $osc->projetos()->count() }}</strong> Projeto(s)
-														</div>-
 												
-														<div class="alert alert-info text-center" role="alert">
-															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
-														</div>
-											
-											</div>
-												</div>		
 																		
-												<center><h5><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-default"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h5> </center>
+												
                                                 
                                             </div>
                                         </div>
-                                        <!--<div class="card-footer text-center">
-											<h5><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-dark"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h5>
+                                       <div class="card-footer text-center">
+									   <div class="row justify-content-center">
+											
+												<div class="mt-3 d-flex justify-content-center">   
+                                                
+														<div class="alert alert-success text-center px-2 py-2" role="alert">
+															<strong>{{ $osc->projetos()->count() }}</strong> Projeto(s) 
+														</div>
+														__
+														<div class="alert alert-info text-center px-2 py-2" role="alert">
+															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
+														</div>
+											
+												</div>
+											</div>	
+											<h5><a href="{{route('detalhe.osc',$osc->id)}}"><span class="badge badge-pill badge-default"><b style="text-transform: capitalize;">#SimEuQuero</b></span></a></h5>
                                             
-                                        </div>-->
+                                        </div>
                                     </div>
                                 </a>
                             </div>

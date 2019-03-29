@@ -44,34 +44,7 @@
                 <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
               </span>
                     </div>
-                </a>
-                {{--<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">--}}
-                    {{--<div class=" dropdown-header noti-title">--}}
-                        {{--<h6 class="text-overflow m-0">Welcomesss!</h6>--}}
-                    {{--</div>--}}
-                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-single-02"></i>--}}
-                        {{--<span>My profile</span>--}}
-                    {{--</a>--}}
-                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-settings-gear-65"></i>--}}
-                        {{--<span>Settings</span>--}}
-                    {{--</a>--}}
-                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-calendar-grid-58"></i>--}}
-                        {{--<span>Activity</span>--}}
-                    {{--</a>--}}
-                    {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-support-16"></i>--}}
-                        {{--<span>Support</span>--}}
-                    {{--</a>--}}
-                    {{--<div class="dropdown-divider"></div>--}}
-                    {{--<a href="#!" class="dropdown-item">--}}
-                        {{--<i class="ni ni-user-run"></i>--}}
-                        {{--<span>Logousst</span>--}}
-                    {{--</a>--}}
-
-                {{--</div>--}}
+                </a>               
             </li>
         </ul>
         <!-- Collapse -->
@@ -123,33 +96,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                         <div class=" dropdown-header noti-title">
-                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0">Olá, Eu sou Ka lahun</h6></a>
+                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>
                         </div>
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-tv-2 text-primary"></i> --}}
-                            {{--<span>Dashboard</span>--}}
-                        {{--</a>--}}
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-settings-gear-65 text-blue"></i> --}}
-                            {{--<span>Perfil</span>--}}
-                        {{--</a>--}}
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-collection text-success"></i> --}}
-                            {{--<span>Projetos</span>--}}
-                        {{--</a>--}}
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class=""><img src="{{asset('vendor/site/images/agenda_ico.png')}}" class="navbar-brand-img" alt="..."></i>--}}
-                            {{--<span>ODS</span>--}}
-                        {{--</a>--}}
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-album-2 text-red"></i> --}}
-                            {{--<span>Galeria</span>--}}
-                        {{--</a>--}}
-
-                        {{--<a href="./examples/profile.html" class="dropdown-item">--}}
-                        {{--<i class="ni ni-chart-bar-32 text-info"></i> --}}
-                            {{--<span>Relatórios</span>--}}
-                        {{--</a>--}}
+                       
                         <div class="dropdown-divider"></div>
                         <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -169,9 +118,12 @@
     <!-- Page content -->
     <div class="container-fluid mt--7">
         @yield('conteudo')
+		
+		
+		
 
         <div class="modal fade" id="kalahun-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-            <div class="modal-dialog"  role="document">
+            <div class="modal-dialog  modal-lg"  role="document">
 
                 <div class="modal-content">
                     <div class="modal-header">
@@ -182,11 +134,26 @@
                     </div>
                     <div class="modal-body">
 
-                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail" style="max-width: 300px; max-height: 300px">
+                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail " style="max-width: 300px; max-height: 300px" >
 
-                        <p>
-                            Nosso mascote foi batizado com o nome de KA LAHUN numa expressao MAIA que simboliza o numeral 12 e sintetiza a expressao
-                            do significado de três palavras poderosas DEDICAÇÂO - COOPERACAO - EQUILIBRIO
+                        <p class="text-justify" style="text-indent: 15px;">
+                            Nosso mascote foi batizado com o nome de  KA LAHUN uma expressão MAIA que simboliza o numeral 12  e sintetiza a expressão do significado de três palavras poderosas DEDICAÇÃO – COOPERAÇÃO - EQUILIBRIO. 
+						</p>	
+						<p class="text-justify" style="text-indent: 15px;">	
+							KA LAHUN o nosso  Jacarezinho é aquele que vive nas águas e na terra representando  nossa  missão de fazer o elo de ligação entre dois mundos (Organizações da sociedade civil e investidores) e assim trabalharmos para a  união dos esforços em uma rede de cooperação viva e cidadã. 
+							KA LAHUN com seu olho que tudo vê lhe conduzirá na jornada  para o outro lado do rio diretamente ao encontro com seu maiores potenciais. 
+						</p>	
+						<p class="text-justify" style="text-indent: 15px;">
+							KA LAHUN 
+							Dedicação – Cooperação – Equilíbrio 
+						</p>	
+						<p class="text-justify" style="text-indent: 15px;">	
+							Destinar, Entregar-se, Aplicar-se, Ação e efeito de cooperar, Operar conjuntamente com outras pessoas.
+						</p>	
+						<p class="text-justify" style="text-indent: 15px;">
+							Função: Prestar serviços 
+							Ação: Universalizar benefícios aos projetos. Compartilhar com a comunidade universal, ultrapassando fronteiras
+							
                         </p>
                     </div>
                 </div>
