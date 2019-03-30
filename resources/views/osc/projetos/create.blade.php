@@ -9,10 +9,11 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->nome_social}}</h1>
-                    <p class="text-white mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado
+                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
+                    <p class="text-white font-weight-900 mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado
                         para aprovação da plataforma.
                     </p>
+                    <label class="text-danger">Campos com * são obrigatórios</label>
                     <p class="text-success">#SimEuQuero</p>
 
                 </div>
@@ -26,7 +27,7 @@
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body bg-transparent">
-                        <label class="text-danger">Campos com * são obrigatórios</label>
+
                         <hr>
                             <label class="text-success">Dados Gerais</label>
                                     <div class="form-group row">
@@ -237,6 +238,48 @@
     </div>
 
 
+
+@stop
+@section('js')
+    <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#project_value").mask('#.##0,00', {reverse: true});
+            $("#phone_number").mask('(00)00000-0000');
+            $("#phone_number2").mask('(00)00000-0000');
+            $("#cpf").mask('000.000.000-00');
+            $("#cnpj").mask('00.000.000/0000-00');
+
+        });
+
+        $("#cpfcnpj").keydown(function(){
+            try {
+                $("#cpfcnpj").unmask();
+            } catch (e) {}
+
+            var tamanho = $("#cpfcnpj").val().length;
+
+            if(tamanho < 11){
+                $("#cpfcnpj").mask("999.999.999-99");
+            } else if(tamanho >= 11){
+                $("#cpfcnpj").mask("99.999.999/9999-99");
+            }
+
+            // ajustando foco
+            var elem = this;
+            setTimeout(function(){
+                // mudo a posição do seletor
+                elem.selectionStart = elem.selectionEnd = 10000;
+            }, 0);
+            // reaplico o valor para mudar o foco
+            var currentValue = $(this).val();
+            $(this).val('');
+            $(this).val(currentValue);
+        });
+
+
+
+    </script>
 
 @stop
 

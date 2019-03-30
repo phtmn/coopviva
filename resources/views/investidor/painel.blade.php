@@ -49,12 +49,13 @@
                             <div class="col-lg-5 order-lg-1">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading">R$ {{ DB::table('investimentos')->sum('valor')}}</span>
-                                        <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Investimentos</a>
+                                        
+                                        <a href="{{ route('investimentos.index')  }}" class="btn btn-sm btn-outline-success ">Meus Investimentos</a>
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <span class="heading">{{ DB::table('oscs')->count()}}</span>
-                                        <span class="description">OSC's</span>
+                                        <span class="description">Organizações</span>
+                                        <span class="description">Cadastradas</span>
                                     </div>
                                     
 									<div>
@@ -66,9 +67,7 @@
 									<div>
                                         <span class="heading">{{ DB::table('metas_oscs')->count()}}</span>
                                         <span class="description">Metas</span>
-                                    </div>
-									
-									
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

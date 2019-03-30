@@ -78,9 +78,10 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
+            @if(auth()->user()->osc())
             <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{route('detalhe.osc',auth()->user()->osc()->id)}}"><i class="ni ni-world-2 "></i> Landing Page - Veja suas informações no site</a>
             <!-- Form -->
-            
+            @endif
             <!-- User -->
             <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">

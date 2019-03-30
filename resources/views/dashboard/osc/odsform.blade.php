@@ -9,11 +9,11 @@
 		<div class="container-fluid d-flex align-items-center">
 			<div class="row">
 				<div class="col-lg-12 col-md-10">
-					<h1 class="display-2 text-white">Foco</h1>
-					<p class="text-white mt-0 mb-2">Aqui você seleciona as metas da sua OSC, e também dos seus projetos!
-						Clique em um dos 17 Objetivos para escolher, é bem fácil =)
+					<h1 class="display-4 text-white">ODS - Objetivos para Desenvolvimento Sustentável</h1>
+					<p class="text-white mt-0 mb-2">Participe das transformações para a Agenda 2030 no Brasil. Marque
+						seus objetivos e metas aqui.
 					</p>
-					<p class="text-success">#SimEuQuero</p>
+					<p class="text-white">#SimEuQuero</p>
 
 				</div>
 			</div>
@@ -81,10 +81,10 @@
 
 										 <div class="form-group col-md-12">
 											 <input class="form-check-input" type="radio" name="opcao" id="osc" value="OSC"  onclick="radioEscolhido()" required>
-											 <b><label class="form-check-label" for="osc">Desejo adicionar essa(s) ODS em minha OSC </label> </b>
+											 <b><label class="form-check-label" for="osc">Desejo selecionar este objetivo e metas para minha Organização</label> </b>
 											 <br>
 											 <input class="form-check-input" type="radio" name="opcao" id="projeto" value="PROJETO" onclick="radioEscolhido()" required>
-											 <b><label class="form-check-label" for="projeto">Desejo adicionar essa(s) ODS no Projeto </label> </b>
+											 <b><label class="form-check-label" for="projeto">Desejo selecionar este objetivo e metas para meu Projeto </label> </b>
 
 
 											 <div id="projetos" style="display: none;">

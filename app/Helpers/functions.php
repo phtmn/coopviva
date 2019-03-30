@@ -39,5 +39,12 @@ if(! function_exists('toMoney')){
     }
 }
 
+if(!function_exists('toEmbed')){
+    function toEmbeb($string){
+        $url = str_replace('watch?v=','embed/',$string);
+        return $url;      
+    }
+}
+
 
 

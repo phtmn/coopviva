@@ -6,10 +6,38 @@
 
     <main class="profile-page">
 
-        <section class="section-profile-cover section-shaped my-0" style="background-image: url('{{asset('images/2.jpg')}}')">
-
+        <section class="section-profile-cover section-shaped my-0">
+            <div class="shape shape-style-1 bg-gradient-success">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>           
+            </div>                      
+           
         </section>
-		
+
+        <section class="section-profile-cover section-shaped my-0">
+            <div class="container">
+                <div class="descricao mt-4 text-justify mx-4 mt--500">
+                    <h1 class="text-center text-white">{{$osc->nome_fantasia}}</h1>                               
+                </div>
+                <div class="d-flex flex-row justify-content-center mb-2">
+                    @forelse($metas->unique('objetivo_id') as $obj)
+                        <div class="thumb">
+                            <img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
+                        </div>
+                    @empty
+                        <p style="color:red">Esta organização sem fins lucrativos não possui nenhum objetivo de desenvolvimento sustetável (ODS)</p>
+                    @endforelse
+                </div>
+            </div>
+        </section>
+       
         	
 		<section class="section">
 			<div class="container">	
@@ -17,10 +45,10 @@
                     <div class="col-md-8">
                         <div class="card card-profile shadow mt--500">
 
-                            <div class="descricao mt-4 text-justify mx-4">
+                            <!-- <div class="descricao mt-4 text-justify mx-4">
 								<h2 class="text-center" >{{$osc->nome_fantasia}}</h2>
                                
-                            </div>
+                            </div> -->
 
                             <div class="descricao mt-4 text-justify mx-4">
 								
@@ -33,10 +61,12 @@
                             <div class="card shadow mt-5 text-center ">
                                 <p>Video Institucional</p>
                                 <div class="p-3">
-                                    {!! $osc->video_institucional !!}
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="{{$osc->video_institucional}}" allowfullscreen></iframe>
+                                    </div>
                                 </div>
-
-                            </div>
+                            </div>                         
+                            
                         @endif
 
                     </div>
@@ -44,20 +74,18 @@
                     <div class="col-md-4">
                         <div class="card card-profile shadow mt--500">
 
-                            <div class="mt-3 d-flex justify-content-center">
+                            <div class="mt-3 d-flex justify-content-center mb-4">
                                    @if(!$osc->logo)
-                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle" style="width:205px; height:205px;">
+                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail" style="width:205px; height:205px;">
                                     @else
                                         <img src="{{$osc->logo}}" class="" style="width:205px; height:205px;">
                                     @endif
-                            </div>
-							<hr>
-							<div class="botao mx-4 mb-2">
+                            </div>							
+							<div class="botao mx-4 mb-2 mt-4">
                                 <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-block">Investir</a>
-                            </div>
-							<hr>
+                            </div>						
 
-                            <div class="card-profile-stats d-flex justify-content-center">
+                            <!-- <div class="card-profile-stats d-flex justify-content-center">
                                 <div>
                                     <span class="heading">{{ $projetos->count() }}</span>
                                     <span class="description text-success">Projetos</span>
@@ -69,8 +97,8 @@
                                 </div>
                                 
                             </div>
-							<hr>
-                            <div class="botao mx-4 mb-2">
+							<hr> -->
+                            <!-- <div class="botao mx-4 mb-2">
                                 <div class="descricao mt-4 text-justify mx-4">
                                
                                <div class="mt-3 d-flex justify-content-center">
@@ -81,26 +109,22 @@
                                 @empty
                                     <p style="color:red">Esta organização sem fins lucrativos não possui nenhum objetivo de desenvolvimento sustetável (ODS)</p>
                                 @endforelse
-                            </div>
-                            </div>
+                                </div>
+                            </div> -->
 
                         </div>
 
-                        <div class="projetos d-flex flex-column justify-content-between">
+                        <!-- <div class="projetos d-flex flex-column justify-content-between">
                             @include('dashboard.investimentos.projetos')
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="container">
-                        <div class="titulo mt-2 text-center">
-                            <h3>Galeria de Fotos</h3>
-                        </div>
-                        @include('osc.galeria.landing')
+                               
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fNMcuBkgZd4" allowfullscreen></iframe>
                     </div>
-
-                </div>
+                
             </div>
 
 
@@ -122,10 +146,11 @@
 
                                 <input type="hidden" name="osc_id" value="{{$osc->id}}">
                             </div>
+
                             <div class="modal-footer text-center">
                                <button type="submit" class="btn btn-success btn-block">Sim EU QUERO</button>
-                                
                             </div>
+
                         </div>
                         {!! Form::close() !!}
                     </div>
@@ -139,21 +164,20 @@
 
 @section('css')
     <style>
-    .btn:focus, .btn:active, button:focus, button:active {
-    outline: none !important;
-    box-shadow: none !important;
-    }
+        .btn:focus, .btn:active, button:focus, button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
 
-    #image-gallery .modal-footer{
-    display: block;
-    }
+        #image-gallery .modal-footer{
+            display: block;
+        }
 
-    .thumb{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    }
+        .thumb{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
     </style>
-
 @stop
 
 @section('js')
@@ -165,7 +189,7 @@
             let boxOndeInvestir   = $('#box-projetos');
 
             Ondeinvestir.change(function(){
-                console.log(Ondeinvestir.val())
+                
                 if(Ondeinvestir.val() == 'osc'){
                     boxOndeInvestir.css({'display':'none'});
                 }else{

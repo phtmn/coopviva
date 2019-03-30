@@ -54,7 +54,7 @@
 											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
 											<select name="tipo_usuario" id="tipo_usuario" class="form-control" required>
 												<option value=""> ... Selecione uma opção ... </option>
-												<option value="2">Perfil OSC (Organização Social Civil)</option>
+												<option value="2">Perfil OSC (Organização Sem Fins Lucrativos)</option>
 												<option value="1">Perfil Investidor</option>
 											</select>
 										</div>
@@ -144,7 +144,7 @@
 							
 							<div class="card-body">
 							<div class="form-group">
-									<label for="name"><strong class="text-primary"><i class="ni ni-building"></i> Perfil OSC (Organização Social Civil)</strong></label>
+									<label for="name"><strong class="text-primary"><i class="ni ni-building"></i> Perfil OSC (Organização Sem fins lucrativos)</strong></label>
 									<p class="text-justify" class="sample-text" style="text-indent: 20px;"> Se você é uma organização sem fins lucrativos e produz o bem comum, com alto valor socioambiental agregado.</p>
 								</div>
 								<hr>

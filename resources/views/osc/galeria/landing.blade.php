@@ -1,6 +1,7 @@
 
 <div class="container">
     <div class="row">
+        
         <div class="row">
             @forelse($galerias as $g)
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">

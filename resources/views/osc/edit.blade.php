@@ -18,7 +18,7 @@
                         @forelse($metas->unique('objetivo_id') as $obj)
                             <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                         @empty
-                            <p style="color:red">Você não está em nenhum objetivo ODS</p>
+                            <p class="text-danger font-weight-500">Você não selecionou nenhum objetivo da agenda 2030</p>
                         @endforelse
                     </div>
 
@@ -72,16 +72,15 @@
                         </div>
                         <div class="card">
                             <div class="embed-responsive embed-responsive-1by1">
-                                {!! $osc->video_institucional  !!}
+                                <iframe class="embed-responsive-item" src="{{$osc->video_institucional}}" allowfullscreen></iframe>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-xl-8 order-xl-1">
-                {!! Form::model($osc,['route'=> ['osc.update',$osc->id],'enctype'=>'multipart/form-data']) !!}
+                {!! Form::model($osc,['route'=> ['osc.update', $osc->id],'enctype'=>'multipart/form-data']) !!}
                 @method('PUT')
                 <div class="col-md-12">
                     <div class="card shadow">
@@ -110,33 +109,13 @@
                             </div>
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ
+                                    <strong> * </strong>CNPJ
                                 </label>
-                                <div class="col-sm-3">
-                                    {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control','id'=>'ano','placeholder' => 'Ano']) !!}
+                                <div class="col-sm-4">
+                                    {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'ano','id'=>'cnpj']) !!}
                                 </div>
                             </div>
-
-
-
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Principal
-                                </label>
-                                <div class="col-sm-8">
-                                    {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Secundário
-                                </label>
-                                <div class="col-sm-8">
-                                    {!! Form::select('cnae_sec',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
-                                </div>
-                            </div>
-
+                            
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
                                 <div class="col-sm-8">
@@ -246,21 +225,44 @@
 
 
                             <div class="row">
-                                <div class="form-group col-md-12">
-                                    <label for="" >O que a OSC faz?</label>
-                                    {!! Form::textarea('descricao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            <div class="form-group col-md-12">
+                                    <label for="" >Conte-nos sua história:</label>
+                                {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
+                                    <span class='caracteres1'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Como surgiu a OSC?</label>
-                                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Os objetivos que deseja atingir</label>
+                                    {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres2'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Missão da OSC?</label>
-                                    {!! Form::textarea('missao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Impactos gerados no úlitmo ano</label>
+                                    {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres3'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Visão da OSC?</label>
-                                    {!! Form::textarea('visao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Missão</label>
+                                    {!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres4'></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="">Visão</label>
+                                    {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres5'></span>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="">Valores</label>
+                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500']) !!}
+                                    <span class='caracteres6'></span>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="">Espaço Livre</label>
+                                   {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
+                                            'style'=>'resize: none', 'rows'=>'5',
+                                            'placeholder'=>'Se uma revista internacional  - muito importante  lhe convidasse para escrever uma matéria sobre sua organização. Qual seria o título e quais os diferenciais você indicaria para esta matéria?']) !!}
+                                            <span class='caracteres7'></span>
                                 </div>
 
                             </div>
@@ -271,7 +273,7 @@
                                     {!! Form::text('site',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>
                                 <div class="col-md-8">
                                     {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
@@ -282,7 +284,7 @@
                                 <div class="col-md-8">
                                     {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
                                 <div class="col-md-8">
@@ -341,6 +343,8 @@
 
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script src="{{asset('js/caracter_count.js')}}"> </script>
+
     <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');

@@ -222,14 +222,15 @@
                 </div>
 
 
-                <div class="card-footer">
-                    <center> <button type="submit" class="btn btn-outline-success">Salvar</button> </center>
+                <div class="card-footer text-center">
+                     <button type="submit" class="btn btn-outline-success">Salvar</button>
                 </div>
             </div>
         </div>
         {!! Form::close() !!}
     </div>
     </div>
+
 @stop
 
 @section('js')

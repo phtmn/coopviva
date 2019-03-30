@@ -10,11 +10,10 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->nome_social}}</h1>
-                    <p class="text-white mt-0 mb-2">Precisamos de algumas informações sobre sua Instiuição, preencha o formulario abaixo. Ele é
-                        pouco grande, mas irá nos ajudar!
+                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
+                    <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Instituição. Preencha com cuidado, pois elas serão enviadas para os patrocinadores/doadores.
                     </p>
-                    <p><b>Campos com * são obrigatórios</b></p>
+                    <p class="text-white font-weight-300">Campos com * são obrigatórios</p>
 
                 </div>
             </div>
@@ -96,7 +95,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             {!! Form::text('sigla',null,['class'=>'form-control']) !!}
                                         </div>
                                     </div>
@@ -110,16 +109,16 @@
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">
-                                            <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> Inscrição CNPJ
+                                            <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> CNPJ
                                         </label>
                                         <div class="col-sm-3">
-                                            {!! Form::text('ano_inscricao_cnpj',null,['class'=>'form-control','id'=>'ano','placeholder' => 'Ano']) !!}
+                                            {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj','placeholder' => 'Ano']) !!}
                                         </div>
                                     </div>
 
 
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">
                                             <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Principal
                                         </label>
@@ -135,7 +134,7 @@
                                         <div class="col-sm-8">
                                             {!! Form::select('cnae_sec',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
@@ -145,14 +144,15 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">E-mail </label>
+                                        <label for="" class="col-sm-4 col-form-label text-right">
+                                            <strong title="E-mail do responsável legal" data-toggle="tooltip"> * </strong>E-mail </label>
                                         <div class="col-sm-8">
                                             {!! Form::text('email',null,['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-sm-4 col-form-label text-right">Telefone</label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-3">
                                             {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                                         </div>
                                     </div>
@@ -225,16 +225,16 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         {!! Form::label('Agência') !!}
-                                        {!! Form::text('agencia',null,['class'=>'form-control']) !!}
+                                        {!! Form::text('agencia',null,['class'=>'form-control','placeholder'=>'Apenas números']) !!}
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         {!! Form::label('Conta') !!}
-                                        {!! Form::text('conta',null,['class'=>'form-control']) !!}
+                                        {!! Form::text('conta',null,['class'=>'form-control','placeholder'=>'Apenas números']) !!}
                                     </div>
 
                                     <div class="form-group col-md-2">
-                                        {!! Form::label('DV') !!}
+                                        {!! Form::label('Operação') !!}
                                         {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
                                     </div>
                                 </div>
@@ -247,22 +247,45 @@
 
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label for="" >O que a OSC faz?</label>
-                                    {!! Form::textarea('descricao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="" >Conte-nos sua história:</label>
+                                {!! Form::textarea('descricao_osc',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
+                                    <span class='caracteres1'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Como surgiu a OSC?</label>
-                                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Os objetivos que deseja atingir</label>
+                                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres2'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Missão da OSC?</label>
-                                    {!! Form::textarea('missao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Impactos gerados no úlitmo ano</label>
+                                    {!! Form::textarea('impactos_gerados',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres3'></span>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="">Visão da OSC?</label>
-                                    {!! Form::textarea('visao_osc',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <label for="">Missão</label>
+                                    {!! Form::textarea('missao_osc',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres4'></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="">Visão</label>
+                                    {!! Form::textarea('visao_osc',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres5'></span>
                                 </div>
 
+                                <div class="form-group col-md-12">
+                                    <label for="">Valores</label>
+                                    {!! Form::textarea('valores_osc',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    <span class='caracteres6'></span>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="">Espaço Livre</label>
+                                   {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
+                                            'style'=>'resize: none', 'rows'=>'5',
+                                            'placeholder'=>'Se uma revista internacional  - muito importante  lhe convidasse para escrever uma matéria sobre sua organização. Qual seria o título e quais os diferenciais você indicaria para esta matéria?']) !!}
+                                            <span class='caracteres7'></span>
+                                </div>
+                                
                             </div>
 
                             <div class="form-group row">
@@ -271,18 +294,18 @@
                                     {!! Form::text('site',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>
-                                <div class="col-md-8">
-                                    {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>
-                                <div class="col-md-8">
-                                    {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
-                                </div>
-                            </div>
+                            {{--<div class="form-group row">--}}
+                                {{--<label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>--}}
+                                {{--<div class="col-md-8">--}}
+                                    {{--{!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="form-group row">--}}
+                                {{--<label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>--}}
+                                {{--<div class="col-md-8">--}}
+                                    {{--{!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
                                 <div class="col-md-8">
@@ -316,6 +339,8 @@
 
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+    <script src="{{asset('js/caracter_count.js')}}"> </script>
+
     <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');
@@ -397,7 +422,7 @@
 
 
     </script>
-
+    
 
 @stop
 

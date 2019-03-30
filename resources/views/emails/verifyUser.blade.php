@@ -124,8 +124,7 @@ div.WordSection1
 <div class=WordSection1>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
-display:none;mso-hide:all'>Muito obrigado por se cadastrar no COOPVIVA! Agora
-você está a um passo de se tornar um INVESTIDOR SOCIAL.<o:p></o:p></span></p>
+display:none;mso-hide:all'>Você está a um passo de fazer parte da maior rede de Cooperação Viva e Cidadã<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
 mso-no-proof:yes'><img width=1 height=1 id="_x0000_i1027"
@@ -173,7 +172,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
     color:#5B5A5A'><o:p>&nbsp;</o:p></span></p>
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:
     35.4pt'><span style='font-size:11.5pt;font-family:"Helvetica",sans-serif;
-    color:#5B5A5A'>Você está a um passo de ser tornar um Investidor Social. <o:p></o:p></span></p>
+    color:#5B5A5A'>Você está a um passo de fazer parte da maior rede de Cooperação Viva e Cidadã <o:p></o:p></span></p>
     <p class=Estilo1>Sua conta foi criada com sucesso!</p>
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:
     35.4pt'><span style='font-size:11.5pt;font-family:"Helvetica",sans-serif;
@@ -209,7 +208,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
     padding:22.5pt 26.25pt 22.5pt 26.25pt'>
     <p class=MsoNormal align=center style='text-align:center'><b
     style='mso-bidi-font-weight:normal'><span style="color:black;" style='font-family:"Helvetica",sans-serif;
-    mso-no-proof:yes'>contato@rededeconexao.art.br</span></b><b
+    mso-no-proof:yes'>contato@redeconexao.com.br</span></b><b
     style='mso-bidi-font-weight:normal'><span style='font-family:"Helvetica",sans-serif;
     mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></b></p>
     </td>

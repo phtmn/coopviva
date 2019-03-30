@@ -13,7 +13,8 @@ class AddCamposOscTable extends Migration
      */
     public function up()
     {
-        Schema::table('oscs',function (Blueprint $table){
+        Schema::table('oscs',function (Blueprint $table){          
+           $table->text('espaco_livre')->nullable();
            $table->text('video_institucional')->nullable();
            $table->text('fan_page')->nullable();
            $table->text('instagram')->nullable();
@@ -27,10 +28,11 @@ class AddCamposOscTable extends Migration
      */
     public function down()
     {
-        Schema::table('oscs', function (Blueprint $table){
-            $table->dropColumn('video_institucional');
-            $table->dropColumn('fan_page');
-            $table->dropColumn('instagram');
-        });
+       
+        if(Schema::hasColumn('oscs','espaco_livre')){            
+            Schema::table('oscs',function(Blueprint $table){                               
+                $table->dropColumn('espaco_livre');               
+            });        
+       }
     }
 }

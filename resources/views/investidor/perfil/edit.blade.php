@@ -28,6 +28,25 @@
             </div>
         </div>
 
+        <div class="form-group row">
+                <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
+                <div class="col-md-3">
+                    {{ Form::select('cargo',[
+                                'Analista'      => 'Analista',
+                                'Auditor'       => 'Auditor',
+                                'Ceo'           => 'CEO',
+                                'Conselheiro'   => 'Conselheiro',
+                                'Diretor'       => 'Diretor',
+                                'Empresário'    => 'Empresário',
+                                'Estagiário'    => 'Estagiário',
+                                'Gerente'       => 'Gerente',
+                                'Supervisor'    => 'Supervisor',
+                                'Outro'         => 'Outro'
+                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
+                    }}
+                </div>
+            </div>
+
 
 
 
@@ -44,7 +63,7 @@
                 {{ Form::select('genero',[
                 'M'             => 'Masculino',
                 'F'             => 'Feminino',
-                'LGBTI'         => 'LGBTI'
+                'Outros'        => 'Outros'
                 ],null,['class'=>'form-control custom-select','placeholder'=> 'selecione um gênero', 'required'=>'true'])
             }}
             </div>
@@ -98,35 +117,18 @@
                 <label for="cnpj" class="col-sm-3 col-form-label text-right">Faturamento Mensal</label>
                 <div class="col-md-3">
                     {{ Form::select('faturamento_mensal',[
+                        'F0'    => 'até R$ 9.999,99',
                         'F1'    => 'entre R$ 10.000,00 e R$ 15.000,00',
                         'F2'    => 'entre R$ 15.000,00 e R$ 30.000,00',
                         'F3'    => 'entre R$ 30.000,00 e R$ 50.000,00',
                         'F4'    => 'entre R$ 50.000,00 e R$ 100.000,00',
                         'F5'    => 'entre R$ 100.000,00 e R$ 200.000,00',
                         'F6'    => 'acima de R$ 500.000,00',
+                        'F7'    => 'acima de R$ 1.000.000,00'
                         ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
                     }}
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
-                <div class="col-md-3">
-                    {{ Form::select('cargo',[
-                                'Analista'      => 'Analista',
-                                'Auditor'       => 'Auditor',
-                                'Ceo'           => 'CEO',
-                                'Conselheiro'   => 'Conselheiro',
-                                'Diretor'       => 'Diretor',
-                                'Empresário'    => 'Empresário',
-                                'Estagiário'    => 'Estagiário',
-                                'Gerente'       => 'Gerente',
-                                'Supervisor'    => 'Supervisor',
-                                'Outro'         => 'Outro'
-                        ],null,['class'=>'form-control custom-select','placeholder'=> 'Selecione', 'required'=>'true'])
-                    }}
-                </div>
-            </div>
+            </div>            
         @endif
 
     <h4 class="text-primary">Endereço </h4>
@@ -141,9 +143,9 @@
             {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
         </div>
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-3">
             <label for="numero">Bairro</label>
-            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
+            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro','maxlength'=>'5']) !!}
         </div>
 
     </div>
@@ -155,22 +157,22 @@
         </div>
         <div class="form-group col-md-8">
             <label for="cidade">Cidade</label>
-            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade']) !!}
+            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
         </div>
         <div class="form-group col-md-6">
             <label for="uf">Estado</label>
-            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado']) !!}
+            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
         </div>
         <div class="form-group col-md-7">
             <label for="complemento">Complemento</label>
             {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
         </div>
-    </div>
-	 <h4 class="text-primary">Categoria </h4>
-    <hr>
-	
-		<br>
-        <center>  <input type="submit" value="Salvar" class="btn btn-outline-success"> </center>
+    </div>	
+    <hr>	
+		<div class="text-center">
+        <input type="submit" value="Salvar" class="btn btn-outline-success"> 
+        </div>
+        
  
     </div>
     {!! Form::close() !!}
@@ -178,13 +180,14 @@
 @stop
 @section('js')
 <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
-
-<script>
+<script src="{{asset('js/viaCep.js')}}"> </script>
+<!-- <script>
         $(document).ready(function(){
             $('#telefone').mask('(99) 9 9999-9999');
             $("#cpf").mask('000.000.000-00');
             $("#cnpj").mask('00.000.000/0000-00');
             $("#cep").mask('00.000-000');
+            
 
            
         
@@ -250,9 +253,9 @@
       limpa_formulário_cep();
     }
   });
-});
+}); -->
 
-</script>
+
 
 
     @stop

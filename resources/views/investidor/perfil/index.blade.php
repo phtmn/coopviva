@@ -2,7 +2,7 @@
 
 @section('conteudo_painel')
     <div class="text-center mt-5">
-        <h3>bem vindo(a), {{ auth()->user()->apelido }}
+        <h3>Bem vindo(a), {{ auth()->user()->apelido }}
             <span class="font-weight-light"></span>
         </h3>
        

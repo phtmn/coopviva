@@ -6,7 +6,8 @@
         <div class="row row justify-content-center">
             <div class="col-md-12">
                 <div class="card mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Total Investido: R$ {{ $data->where('mp_status','==','approved')->sum('valor_investimento') }}</div>
+                    <div class="card-header">Total Investido: R$ {{ $data->where('mp_status','==','approved')->sum('valor') }}</div>
+                    <div class="card-header">Total Investido: R$ {{ number_format(DB::table('investimentos')->sum('valor'),2,',','.')}}</div>                   
                 </div>
 
                 <div class="row">
