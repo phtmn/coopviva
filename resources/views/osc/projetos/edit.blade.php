@@ -59,49 +59,55 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Nº de Registro 1</label>
+
+                        <label for="tipo" class="col-sm-3 col-form-label text-right">Lei de Incentivo?</label>
                         <div class="col-md-3">
-                            {!! Form::text('num_registro1',null,['class'=>'form-control']) !!}
+                            {!! Form::select('tipo',['sim'=>'Sim','nao'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo']) !!}
+                            <span class="help-inline text-success" data-toggle="tooltip" title="Recebe via lei de incentivo?">
+                            Recebe via lei de incentivo?
+                        </span>
                         </div>
+
                     </div>
 
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Nº de Registro 1</label>
-                        <div class="col-md-3">
-                            {!! Form::text('num_registro2',null,['class'=>'form-control']) !!}
+                    <div id="box-lei" style="display: none">
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Instância</label>
+                            <div class="col-md-4">
+                                {!! Form::select('instancia_id',$instancias,null,['placeholder'=>'Escolha uma opção','class'=>'form-control','id'=>'artigo']) !!}
+                            </div>
                         </div>
+
+                        <div id="box-artigo" style="display: none">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
+                                <div class="col-md-4">
+                                    {!! Form::select('artigo',['18'=>'Art. 18','26'=>'Art. 26'],null,['class'=>'form-control']) !!}
+                                    <span class="help-inline danger">Artigo em que se encaixa o projeto</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Ambito</label>
+                            <div class="col-md-4">
+                                {!! Form::select('ambito_id',$ambitos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Segmento</label>
+                            <div class="col-md-4">
+                                {!! Form::select('segmento_id',$segmentos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            </div>
+                        </div>
+
+
                     </div>
 
 
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Instância</label>
-                        <div class="col-md-4">
-                            {!! Form::select('instancia_id',$instancias,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Ambito</label>
-                        <div class="col-md-4">
-                            {!! Form::select('ambito_id',$ambitos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Segmento</label>
-                        <div class="col-md-4">
-                            {!! Form::select('segmento_id',$segmentos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
-                        <div class="col-md-4">
-                            {!! Form::text('artigo',null,['class'=>'form-control']) !!}
-                            <span class="help-inline danger">Artigo em que se encaixa o projeto</span>
-                        </div>
-                    </div>
                     <hr>
                     <label for="Dadod do Poponente" class="text-success">Dados do Proponente</label>
 
@@ -269,9 +275,35 @@
             $(this).val('');
             $(this).val(currentValue);
         });
+    </script>
 
+    <script>
+        $(document).ready(function(){
+            let incentivo        = $('#incentivo');
+            let boxLei           = $('#box-lei');
 
+            incentivo.change(function(){
+                if(incentivo.val() == 'sim'){
+                    boxLei.css({'display':'block'});
 
+                }else{
+                    boxLei.css({'display':'none'});
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            let artigo     = $('#artigo');
+            let boxArtigo  = $('#box-artigo');
+
+            artigo.change(function(){
+                if(artigo.val() == 11){
+                    boxArtigo.css({'display':'block'});
+                }else{
+                    boxArtigo.css({'display':'none'});
+                }
+            });
+        });
     </script>
 
 @stop

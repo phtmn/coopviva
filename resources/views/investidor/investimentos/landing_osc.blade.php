@@ -85,7 +85,7 @@
                                 <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-block">Investir</a>
                             </div>						
 
-                            <!-- <div class="card-profile-stats d-flex justify-content-center">
+                            <div class="card-profile-stats d-flex justify-content-center">
                                 <div>
                                     <span class="heading">{{ $projetos->count() }}</span>
                                     <span class="description text-success">Projetos</span>
@@ -97,33 +97,29 @@
                                 </div>
                                 
                             </div>
-							<hr> -->
-                            <!-- <div class="botao mx-4 mb-2">
-                                <div class="descricao mt-4 text-justify mx-4">
-                               
-                               <div class="mt-3 d-flex justify-content-center">
-                                @forelse($metas->unique('objetivo_id') as $obj)
-                                    <div class="thumb">
-                                        <img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">
-                                    </div>
-                                @empty
-                                    <p style="color:red">Esta organização sem fins lucrativos não possui nenhum objetivo de desenvolvimento sustetável (ODS)</p>
-                                @endforelse
-                                </div>
-                            </div> -->
+{{--							<hr>--}}
+{{--                            <div class="botao mx-4 mb-2">--}}
+{{--                                <div class="descricao mt-4 text-justify mx-4">--}}
+{{--                               --}}
+{{--                               <div class="mt-3 d-flex justify-content-center">--}}
+{{--                                @forelse($metas->unique('objetivo_id') as $obj)--}}
+{{--                                    <div class="thumb">--}}
+{{--                                        <img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}">--}}
+{{--                                    </div>--}}
+{{--                                @empty--}}
+{{--                                    <p style="color:red">Esta organização sem fins lucrativos não possui nenhum objetivo de desenvolvimento sustetável (ODS)</p>--}}
+{{--                                @endforelse--}}
+{{--                                </div>--}}
+{{--                            </div> --}}
 
                         </div>
 
-                        <!-- <div class="projetos d-flex flex-column justify-content-between">
+                        <div class="projetos d-flex flex-column justify-content-between">
                             @include('dashboard.investimentos.projetos')
-                        </div> -->
+                        </div>
                     </div>
                 </div>
 
-                               
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fNMcuBkgZd4" allowfullscreen></iframe>
-                    </div>
                 
             </div>
 

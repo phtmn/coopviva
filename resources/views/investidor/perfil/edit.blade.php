@@ -132,46 +132,60 @@
         @endif
 
     <h4 class="text-primary">Endereço </h4>
-    <hr>
-    <div class="row">
-        <div class="form-group col-md-5">
-            <label for="cep">CEP</label>
-            {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
-        </div>
-        <div class="form-group col-md-8">
-            <label for="rua">Rua/Logradouro</label>
-            {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
+        <div class="form-group row">
+            <label for="cep" class="col-sm-3 col-form-label text-right">Cep</label>
+            <div class="col-md-3">
+                {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
+            </div>
         </div>
 
-        <div class="form-group col-md-3">
-            <label for="numero">Bairro</label>
-            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro','maxlength'=>'5']) !!}
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right">Rua/Logradouro</label>
+            <div class="col-md-5">
+                {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
+            </div>
         </div>
 
-    </div>
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right">Bairro</label>
+            <div class="col-md-5">
+                {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro','maxlength'=>'5']) !!}
+            </div>
+        </div>
 
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="numero">Número</label>
-            {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right">Número</label>
+            <div class="col-md-2">
+                {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+            </div>
         </div>
-        <div class="form-group col-md-8">
-            <label for="cidade">Cidade</label>
-            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right"> Cidade </label>
+            <div class="col-md-5">
+                {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="uf">Estado</label>
-            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right">Estado</label>
+            <div class="col-md-2">
+                {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+            </div>
         </div>
-        <div class="form-group col-md-7">
-            <label for="complemento">Complemento</label>
-            {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+
+        <div class="form-group row">
+            <label for="" class="col-sm-3 col-form-label text-right">Complemento</label>
+            <div class="col-md-8">
+                {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+            </div>
         </div>
-    </div>	
-    <hr>	
-		<div class="text-center">
-        <input type="submit" value="Salvar" class="btn btn-outline-success"> 
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-outline-success">Salvar</button>
         </div>
+
+
         
  
     </div>
