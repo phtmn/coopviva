@@ -39,7 +39,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="image-gallery-title">
-						{{$g->legenda}}
+						{{$g->legenda ?? ''}}
 						
 						
 						</h4>

@@ -62,7 +62,7 @@
 
                         <label for="tipo" class="col-sm-3 col-form-label text-right">Lei de Incentivo?</label>
                         <div class="col-md-3">
-                            {!! Form::select('tipo',['sim'=>'Sim','nao'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo']) !!}
+                            {!! Form::select('lei_incentivo',['1'=>'Sim','0'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo']) !!}
                             <span class="help-inline text-success" data-toggle="tooltip" title="Recebe via lei de incentivo?">
                             Recebe via lei de incentivo?
                         </span>
@@ -283,7 +283,7 @@
             let boxLei           = $('#box-lei');
 
             incentivo.change(function(){
-                if(incentivo.val() == 'sim'){
+                if(incentivo.val() == 1){
                     boxLei.css({'display':'block'});
 
                 }else{
@@ -291,6 +291,7 @@
                 }
             });
         });
+
 
         $(document).ready(function(){
             let artigo     = $('#artigo');
