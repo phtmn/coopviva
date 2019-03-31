@@ -225,12 +225,12 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         {!! Form::label('Agência') !!}
-                                        {!! Form::text('agencia',null,['class'=>'form-control','placeholder'=>'Apenas números']) !!}
+                                        {!! Form::text('agencia',null,['class'=>'form-control','placeholder'=>'Apenas nº']) !!}
                                     </div>
 
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-2">
                                         {!! Form::label('Conta') !!}
-                                        {!! Form::text('conta',null,['class'=>'form-control','placeholder'=>'Apenas números']) !!}
+                                        {!! Form::text('conta',null,['class'=>'form-control','placeholder'=>'Apenas nº']) !!}
                                     </div>
 
                                     <div class="form-group col-md-2">
@@ -247,7 +247,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label for="" >Conte-nos sua história:</label>
+                                    <label for="" >Conte-nos sua história</label>
                                 {!! Form::textarea('descricao_osc',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
                                     <span class='caracteres1'></span>
                                 </div>
@@ -289,9 +289,9 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link do Site </label>
+                                <label for="" class="col-sm-4 col-form-label text-right"> Site </label>
                                 <div class="col-md-8">
-                                    {!! Form::text('site',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('site',null,['class'=>'form-control','placeholder'=>'Link do seu Site']) !!}
                                 </div>
                             </div>
                             {{--<div class="form-group row">--}}
@@ -307,7 +307,7 @@
                                 {{--</div>--}}
                             {{--</div>--}}
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
+                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional </label>
                                 <div class="col-md-8">
                                     {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
                                 </div>
@@ -321,7 +321,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Instagram</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('instagram',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('instagram',null,['class'=>'form-control','placeholder'=>'Link do seu Instagram']) !!}
                                 </div>
                             </div>
                         </div>

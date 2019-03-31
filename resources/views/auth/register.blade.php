@@ -144,7 +144,7 @@
 							
 							<div class="card-body">
 							<div class="form-group">
-									<label for="name"><strong class="text-primary"><i class="ni ni-building"></i> Perfil OSC (Organização Sem fins lucrativos)</strong></label>
+									<label for="name"><strong class="text-primary"><i class="ni ni-building"></i> Perfil OSC (Organização Sem Fins Lucrativos)</strong></label>
 									<p class="text-justify" class="sample-text" style="text-indent: 20px;"> Se você é uma organização sem fins lucrativos e produz o bem comum, com alto valor socioambiental agregado.</p>
 								</div>
 								<hr>

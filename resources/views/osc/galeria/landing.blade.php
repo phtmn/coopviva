@@ -1,4 +1,5 @@
-
+<section class="section section-lg">
+   
 <div class="container">
     <div class="row">
         
@@ -8,7 +9,7 @@
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{$g->aws_url}}" 
                    data-target="#image-gallery">
-                    <img class="img-thumbnail" style="width:300px; height:300px;"
+                    <img class="" style="width:300px; height:200px;"
                          src="{{$g->aws_url}}"
                          alt="{{$g->legenda}}">
                 </a>
@@ -28,7 +29,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img id="image-gallery-image" class="img-responsive col-md-12 " src="" style="width:305px; height:305px;">
+                        <img id="image-gallery-image" class="img-responsive col-md-12 " src="" style="width:100%; height:80%;">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
@@ -42,3 +43,5 @@
         </div>
     </div>
 </div>
+
+</section>

@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-10">
                         <h1 class="display-3  text-white">Realize um investimento agora
-                            <span style="line-height: 1.1;">Escolha uma Osc para Investir</span>
+                            <span style="line-height: 1.1;">Escolha uma Organização para Investir</span>
                         </h1>
                         <div class="btn-wrapper">
                         <!--  <a href="{{route('register')}}" class="btn btn-success btn-icon mb-3 mb-sm-0">
@@ -122,15 +122,16 @@
                                        <div class="card-footer text-center">
 									   <div class="row justify-content-center">
 											
-												<div class="mt-3 d-flex justify-content-center">   
-                                                
+												<div class="mt-3 d-flex justify-content-center ">   
+														<div class="alert alert-info text-center px-2 py-2 " role="alert">
+															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
+														</div>
+														
 														<div class="alert alert-success text-center px-2 py-2" role="alert">
 															<strong>{{ $osc->projetos()->count() }}</strong> Projeto(s) 
 														</div>
-														__
-														<div class="alert alert-info text-center px-2 py-2" role="alert">
-															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
-														</div>
+														
+														
 											
 												</div>
 											</div>	

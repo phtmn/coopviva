@@ -121,7 +121,7 @@ class RegisterController extends Controller
     {
         $this->guard()->logout();
         //We sent you an activation code. Check your email and click on the link to verify.
-        Alert::success( 'Nós enviamos um email de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
+        Alert::success( 'Nós enviamos um e-mail de confirmação de conta. ','Verifique seu e-mail')->persistent('Ok');
         return redirect('/');
     }
 }
