@@ -33,7 +33,7 @@
 
                             <div class="portfolio-cont p-4">
                                 <a href="#">
-                                    <img src="{{asset($g->aws_url)}}" alt="" class="img-responsive border-light img-thumbnail" style="width:200px; height:200px;"  data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}"></a>
+                                    <img src="{{asset($g->aws_url)}}" alt="" class="img-responsive border-light img-thumbnail" style="width:150px; height:150px;"  data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}"></a>
                                 <h3 class="entry-title text-center"><a href="{{route('galeria.show',$g->id)}}"><i class="fa fa-trash" style="color:red" data-toggle="tooltip" data-placement="left" title="Remover "></i></a></h3>
                             </div>
                     @empty

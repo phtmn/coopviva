@@ -85,15 +85,21 @@
 						</div>
 					</li>
 					
-					
-					
 					<li class="nav-item dropdown">
-						<a href="{{url('/termo-de-uso')}}" class="nav-link" >
+						<a href="{{route('quero_investir')}}" class="nav-link" >
 							
-							<span class="nav-link-inner--text font-weight-900">Termo de Uso</span>
+							<span class="nav-link-inner--text font-weight-900">Colabore</span>
 						</a>
 						
 					</li>
+					
+					{{--<li class="nav-item dropdown">--}}
+					{{--	<a href="{{url('/termo-de-uso')}}" class="nav-link" >--}}
+							
+						{{--	<span class="nav-link-inner--text font-weight-900">Termo de Uso</span>--}}
+						{{--</a>--}}
+						
+					{{--</li> --}}
 				</ul>
 
 				<ul class="navbar-nav align-items-lg-center ml-lg-auto">
