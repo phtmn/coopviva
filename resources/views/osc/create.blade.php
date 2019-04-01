@@ -162,7 +162,7 @@
                             <div class="form-group row">
                                 <label for="numero" class="col-sm-4 col-form-label text-right">Número</label>
                                 <div class="col-sm-3">
-                                    {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+                                    {!! Form::text('numero',null,['class'=> 'form-control','id'=>'num']) !!}
                                 </div>
                             </div>
 
@@ -206,7 +206,6 @@
                             <label>Conta para receber Doações</label>
                             <div class="row">
                                 <div class="form-group col-md-5">
-                                    {{ $bancos = DB::table('bancos')->pluck('banco','id') }}
                                     {!! Form::label('Banco') !!}
                                     {{ Form::select('banco_investimentos',$bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                 </div>
@@ -222,7 +221,7 @@
 
                                 <div class="form-group col-md-2">
                                     {!! Form::label('OP') !!}
-                                    {!! Form::text('op_investimentos',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('op_investimentos',null,['class'=>'form-control','id'=>'op']) !!}
                                 </div>
                             </div>
 
@@ -324,8 +323,8 @@
             $("#cnpj").mask('00.000.000/0000-00');
             $("#cep").mask('00.000-000');
             $("#ano").mask('0000');
-            $("#anofun").mask('0000');
-            $("#cnae").mask('0000000');
+            $("#num").mask('0000');
+            $("#op").mask('000');
 
             function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
