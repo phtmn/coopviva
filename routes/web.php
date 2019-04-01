@@ -67,7 +67,7 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 });
 
 //# ROTAS PARA A AREA ADMINISTRATIVA
-Route::group(['prefix'=>'sistema','middleware'=>['auth','isAdmin']],function(){
+Route::group(['prefix'=>'sistema','middleware'=>'auth'],function(){
     Route::view('/','admin.home');
 
     Route::resource('admin-osc','Admin\OscController');

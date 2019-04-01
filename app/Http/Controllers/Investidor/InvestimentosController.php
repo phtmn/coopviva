@@ -24,7 +24,7 @@ class InvestimentosController extends Controller
     }
 
     public function lista_oscs(){
-        $data = Osc::paginate(12);
+        $data = Osc::where('ativo',1)->paginate(12);
         return view('investidor.investimentos.lista_oscs',[
             'data' => $data
         ]);

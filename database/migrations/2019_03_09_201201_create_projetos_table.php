@@ -19,7 +19,7 @@ class CreateProjetosTable extends Migration {
 			$table->unsignedInteger('osc_id');
 
 			$table->string('nome_projeto')->nullable();
-			$table->string('descricao_resumida')->nullable();
+			$table->text('descricao_resumida')->nullable();
 			$table->string('responsavel_projeto')->nullable();
 			$table->decimal('valor_projeto',15,2)->nullable();
 			$table->decimal('valor_meta',15,2)->nullable();
@@ -61,6 +61,7 @@ class CreateProjetosTable extends Migration {
             $table->string('op_patrocinio')->nullable();
 
 			$table->string('status')->default('enviado');
+			$table->boolean('ativo')->default(0);
 
 
 			$table->timestamps();

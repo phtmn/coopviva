@@ -15,12 +15,7 @@
         <ul>
             <li>Nome: <b>{{$user->name}}</b></li>
             <li>Email: <b>{{$user->email}}</b></li>
-            <li>Tipo de Conta: <b>{{ strtoupper($user->tipo_usuario) }}</b></li>
-            <li>Tipo de Cadastro: <b>{{$user->tipo}}</b></li>
-            <li>Sexo: <b>{{$user->sexo}}</b></li>
-            <li>UF: <b>{{$user->uf}}</b></li>
-            <li>Cidade: <b>{{$user->cidade}}</b></li>
-            <li>Telefone: <b>{{$perfil->telefone}}</b></li>
+            <li>Tipo de Conta: <b>{{ strtoupper($user->tipo_conta) }}</b></li>
         </ul>
 
 

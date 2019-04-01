@@ -56,6 +56,7 @@ class CreateOscsTable extends Migration {
 			$table->text('valores')->nullable();
 			$table->text('espaco_livre')->nullable();
 
+			$table->boolean('ativa')->default(0);
 			$table->string('logo', 200)->nullable();
 			$table->timestamps();
 			$table->softDeletes();
