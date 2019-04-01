@@ -143,7 +143,7 @@
 								<span class="nav-link-inner--text">Cadastre-se</span>
 							</a>
 						@else
-							@if(auth()->user()->perfil_id == 1)
+							@if(auth()->user()->tipo_conta <> 'osc')
 								<a href="{{route('perfil.index')}}" class="btn btn-neutral btn-icon">
 									<span class="btn-inner--icon">
 									  <i class="ni ni-tv-2 mr-2"></i>
