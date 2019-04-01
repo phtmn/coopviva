@@ -7,25 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Perfil extends Model
 {
-
-//    public static function boot(){
-//        parent::boot();
-//            static::addGlobalScope(new UserScope());
-//    }
+    protected $table = 'perfis';
 
     protected $fillable = [
+        'user_id',
         'nome_completo',
-        'data_nascimento',
-        'telefone_principal',
-        'cpf',
-        'cnpj',
+        'dt_nascimento',
+        'genero',
+        'cpf_cnpj',
+        'telefone',
+        'celular',
         'razao_social',
         'nome_fantasia',
-        'genero',
+        'qtd_funcionarios',
+        'faturamento_mensal',
+        'cargo',
         'cep',
-        'rua',
+        'logradouro',
         'numero',
         'endereco',
+        'bairro',
         'cidade',
         'estado',
         'complemento'];

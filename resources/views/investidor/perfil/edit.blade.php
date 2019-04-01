@@ -17,7 +17,7 @@
         <div class="form-group row">
             <label for="nome_completo" class="col-sm-3 col-form-label text-right">Nome Completo</label>
             <div class="col-md-8">
-                {!! Form::text('nome_completo',$perfil->nome,['class'=> 'form-control','required'=>'true']) !!}
+                {!! Form::text('nome_completo',$perfil->name,['class'=> 'form-control','required'=>'true']) !!}
             </div>
         </div>
 
@@ -28,6 +28,7 @@
             </div>
         </div>
 
+        @if(auth()->user()->tipo_conta == 'investidor-pj')
         <div class="form-group row">
                 <label for="cargo" class="col-sm-3 col-form-label text-right">Cargo</label>
                 <div class="col-md-3">
@@ -46,7 +47,7 @@
                     }}
                 </div>
             </div>
-
+        @endif
 
 
 
@@ -69,7 +70,7 @@
             </div>
         </div>
 
-        @if(Auth::user()->tipo_pessoa == 'F')
+        @if(Auth::user()->tipo_conta == 'investidor-pf')
             <div class="form-group row">
                 <label for="cpf" class="col-sm-3 col-form-label text-right">CPF</label>
                 <div class="col-md-5">
@@ -195,15 +196,15 @@
 @section('js')
 <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
 <script src="{{asset('js/viaCep.js')}}"> </script>
-<!-- <script>
-        $(document).ready(function(){
+<script>
+        $(document).ready(function() {
             $('#telefone').mask('(99) 9 9999-9999');
             $("#cpf").mask('000.000.000-00');
             $("#cnpj").mask('00.000.000/0000-00');
             $("#cep").mask('00.000-000');
-            
+        })
 
-           
+</script>
         
 
 

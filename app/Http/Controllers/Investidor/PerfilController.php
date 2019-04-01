@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Investidor;
 use App\Http\Requests\PerfilRequestValidation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Perfil;
 use Auth;
 use Alert;
 
@@ -20,7 +20,7 @@ class PerfilController extends Controller
 
     public function perfil(){
         
-        $perfil = User::find(auth()->user()->id);
+        $perfil = Perfil::find(auth()->user()->id);
 
         if($perfil){
             return view('investidor.perfil.edit',compact('perfil'));
@@ -30,29 +30,29 @@ class PerfilController extends Controller
 
     public function update(PerfilRequestValidation $request){
 
-        $perfil = User::find(auth()->user()->id)->update(
-        [
-            'nome'              => $request->nome_completo,
-            'apelido'           => $request->apelido,
-            'dt_nascimento'     => $request->dt_nascimento,
-            'genero'            => $request->genero,
-            'cpf_cnpj'          => $request->cpf_cnpj,
-            'razao_social'      => $request->razao_social,
-            'nome_fantasia'     => $request->nome_fantasia,
-            'qtd_funcionarios'  => $request->qtd_funcionarios,
-            'faturamento_mensal'=> $request->faturamento_mensal,
-            'cargo'             => $request->cargo,
-            'cep'               => $request->cep,
-            'logradouro'        => $request->logradouro,
-            'numero'            => $request->numero,
-            'complemento'       => $request->complemento,
-            'bairro'            => $request->bairro,
-            'cidade'            => $request->cidade,
-            'uf'                => $request->uf,
-            'telefone'          => $request->telefone,
-            'celular'           => $request->celular,
-            'user_id'           => auth()->user()->id
-        ]);
+        $perfil = Perfil::updateOrCreate(
+            ['user_id' => auth()->user()->id ],
+            [
+                'nome_completo'     => $request->nome_completo,
+                'dt_nascimento'     => $request->dt_nascimento,
+                'genero'            => $request->genero,
+                'cpf_cnpj'          => $request->cpf_cnpj,
+                'razao_social'      => $request->razao_social,
+                'nome_fantasia'     => $request->nome_fantasia,
+                'qtd_funcionarios'  => $request->qtd_funcionarios,
+                'faturamento_mensal'=> $request->faturamento_mensal,
+                'cargo'             => $request->cargo,
+                'cep'               => $request->cep,
+                'logradouro'        => $request->logradouro,
+                'numero'            => $request->numero,
+                'complemento'       => $request->complemento,
+                'bairro'            => $request->bairro,
+                'cidade'            => $request->cidade,
+                'uf'                => $request->uf,
+                'telefone'          => $request->telefone,
+                'celular'           => $request->celular,
+                'user_id'           => auth()->user()->id
+            ]);
 
         if($perfil){
             Alert::success( 'Seus dados foram Salvos','Sucesso')->persistent('Ok');

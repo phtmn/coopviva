@@ -72,11 +72,10 @@ class RegisterController extends Controller
     {
         //dd($data);
         $user = User::create([
-            'nome'          => $data['name'],
+            'name'          => $data['name'],
             'apelido'       => $data['apelido'],
             'email'         => $data['email'],
-            'tipo_pessoa'   => $data['tipo_pessoa'],
-            'perfil_id'     => $data['tipo_usuario'],
+            'tipo_conta'    => $data['tipo_conta'],
             'password'      => Hash::make($data['password']),
         ]);
 
@@ -87,7 +86,7 @@ class RegisterController extends Controller
         ]);
 
         Mail::to($user->email)->send(new VerifyMail($user));
-        Mail::send(new NewUser($user));
+        //Mail::send(new NewUser($user));
 
         return $user;
 

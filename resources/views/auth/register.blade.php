@@ -51,59 +51,16 @@
 											<input type="text" name="apelido" class="form-control" placeholder="Digite como gosta de ser chamado" required="true" value="{{old('apelido')}}">
 										</div>
 										<div class="form-group">
-											<label for="tipo_usuario">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
-											<select name="tipo_usuario" id="tipo_usuario" class="form-control" required>
+											<label for="tipo_conta">Como você deseja participar do <b class="text-success">COOPVIVA</b>?</label>
+											<select name="tipo_conta" id="tipo_conta" class="form-control" required>
 												<option value=""> ... Selecione uma opção ... </option>
-												<option value="2">Perfil OSC (Organização Sem Fins Lucrativos)</option>
-												<option value="1">Perfil Investidor</option>
+												<option value="osc">Perfil OSC (Organização Sem Fins Lucrativos)</option>
+												<option value="investidor-pf">Perfil Investidor Pessoa Fìsica</option>
+												<option value="investidor-pj">Perfil Investidor Pessoa Jurídica</option>
+{{--												<option value="empresa">Empresa</option>--}}
 											</select>
 										</div>
-										<div class="form-group" id="box-tipo-usuario" style="display: none;">
-											<div class="form-group">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="tipo_pessoa" id="radioPF" value="F" checked="checked">
-													<label class="form-check-label" for="radioPF">Pessoa Física</label>
-												</div>
-												<br>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="tipo_pessoa" id="radioPJ" value="J">
-													<label class="form-check-label" for="radioPJ">Pessoa Jurídica</label>
-												</div>
-											</div>
-										</div>
-										{{--<div class="form-group">--}}
-											{{--<label for="name"> Selecione o seu Estado?</label>--}}
-											{{--<select name="uf" id="" class="form-control" >--}}
-												{{--<option value="#">...  Selecione um Estado...</option>--}}
-												{{--<option value="AC">AC - Acre</option>--}}
-												{{--<option value="AL">AL - Alagoas</option>--}}
-												{{--<option value="AP">AP - Amapá</option>--}}
-												{{--<option value="AM">AM - Amazonas</option>--}}
-												{{--<option value="BA">BA - Bahia</option>--}}
-												{{--<option value="CE">CE - Ceará</option>--}}
-												{{--<option value="DF">DF - Distrito Federal</option>--}}
-												{{--<option value="ES">ES - Espírito Santo</option>--}}
-												{{--<option value="GO">GO - Goiás</option>--}}
-												{{--<option value="MA">MA - Maranhão</option>--}}
-												{{--<option value="MT">MT - Mato Grosso</option>--}}
-												{{--<option value="MS">MS - Mato Grosso do Sul</option>--}}
-												{{--<option value="MG">MG - Minas Gerais</option>--}}
-												{{--<option value="PA">PA - Pará</option>--}}
-												{{--<option value="PB">PB - Paraíba</option>--}}
-												{{--<option value="PR">PR - Paraná</option>--}}
-												{{--<option value="PE">PE - Pernanbuco</option>--}}
-												{{--<option value="PI">PI - Piauí</option>--}}
-												{{--<option value="RJ">RJ - Rio de Janeiro</option>--}}
-												{{--<option value="RN">RN - Rio Grande do Norte</option>--}}
-												{{--<option value="RS">RS - Rio Grande do Sul</option>--}}
-												{{--<option value="RO">RO - Rondônia</option>--}}
-												{{--<option value="RR">RR - Roraima</option>--}}
-												{{--<option value="SC">SC - Santa Catarina</option>--}}
-												{{--<option value="SP">SP - São Paulo</option>--}}
-												{{--<option value="SE">SE - Sergipe</option>--}}
-												{{--<option value="TO">TO - Tocantins</option>--}}
-											{{--</select>--}}
-										{{--</div>--}}
+
 
 										<div class="form-group">
 											<label for="email">E-mail</label>

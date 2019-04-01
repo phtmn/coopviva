@@ -80,8 +80,8 @@
             </div>
 
             <div class="col-xl-8 order-xl-1">
-                {!! Form::model($osc,['route'=> ['osc.update', $osc->id],'enctype'=>'multipart/form-data']) !!}
-                @method('PUT')
+                {!! Form::model($osc,['route'=> ['osc.store'],'enctype'=>'multipart/form-data']) !!}
+
                 <div class="col-md-12">
                     <div class="card shadow">
                         <div class="card-body bg-transparent">
@@ -119,7 +119,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
                                 <div class="col-sm-8">
-                                    {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('responsavel',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
 
@@ -190,7 +190,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
                                 <div class="col-sm-3">
-                                    {{ Form::select('situacao_imovel',$si,null,['class'=>'form-control']) }}
+                                    {{ Form::select('situacao_imovel',['Alugado'=>'Alugado'],null,['class'=>'form-control']) }}
                                 </div>
                             </div>
 
@@ -200,21 +200,21 @@
                             <div class="row">
                                 <div class="form-group col-md-5">
                                     {!! Form::label('Banco') !!}
-                                    {{ Form::select('banco',$lista_bancos,$banco->banco,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                    {{ Form::select('banco_investimentos',['lista'=>'lista'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                 </div>
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}
-                                    {!! Form::text('agencia',$banco->agencia,['class'=>'form-control']) !!}
+                                    {!! Form::text('agencia_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     {!! Form::label('Conta') !!}
-                                    {!! Form::text('conta',$banco->conta,['class'=>'form-control']) !!}
+                                    {!! Form::text('conta_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
 
                                 <div class="form-group col-md-2">
-                                    {!! Form::label('DV') !!}
-                                    {!! Form::text('contaDv',$banco->contaDv,['class'=>'form-control']) !!}
+                                    {!! Form::label('OP') !!}
+                                    {!! Form::text('op_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
 
@@ -273,18 +273,7 @@
                                     {!! Form::text('site',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
-                            <!-- <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>
-                                <div class="col-md-8">
-                                    {!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>
-                                <div class="col-md-8">
-                                    {!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}
-                                </div>
-                            </div> -->
+
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
                                 <div class="col-md-8">
@@ -294,7 +283,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('fan_page',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
+                                    {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">

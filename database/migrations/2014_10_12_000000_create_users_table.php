@@ -15,37 +15,14 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->index('email')->unique();
+            $table->string('name');
+            $table->string('apelido');
+            $table->enum('tipo_conta',['osc','investidor-pf','investidor-pj','empresa']);
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('nome', 100)->nullable()->index('nome');
-            $table->string('apelido', 100)->nullable();
-            $table->string('tipo_pessoa',2);
-            $table->date('dt_nascimento')->nullable();
-            $table->string('genero', 10)->nullable();
-            $table->string('cpf_cnpj', 50)->nullable();
-            $table->string('razao_social', 100)->nullable();
-            $table->string('nome_fantasia', 100)->nullable();
-            $table->string('qtd_funcionarios')->nullable();
-            $table->string('faturamento_mensal')->nullable();
-            $table->string('cargo')->nullable();
-            $table->string('cep')->nullable();
-            $table->string('logradouro', 200)->nullable();
-            $table->string('numero', 50)->nullable();
-            $table->string('complemento', 200)->nullable();
-            $table->string('bairro', 200)->nullable();
-            $table->string('cidade', 200)->nullable();
-            $table->string('uf', 2)->nullable();
-            $table->string('telefone')->nullable();
-            $table->string('celular')->nullable();
-            $table->string('banco_id', 2)->nullable();
-            $table->boolean('ativo')->default(0);
-            $table->text('imagem')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
-
-            $table->unsignedInteger('perfil_id')->index('perfil_id');
-
         });
     }
 

@@ -87,157 +87,136 @@
                         <div class="card-body bg-transparent">
                                 <p class="text-primary">Dados Gerais</p>
 
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
-                                        <div class="col-sm-8">
-                                            {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
-                                        <div class="col-sm-3">
-                                            {!! Form::text('sigla',null,['class'=>'form-control']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">
-                                                <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação
-                                        </label>
-                                        <div class="col-sm-3">
-                                            {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">
-                                            <strong title="Ano de inscrição no Cadastro de CNPJ" data-toggle="tooltip"> * </strong> CNPJ
-                                        </label>
-                                        <div class="col-sm-3">
-                                            {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'cnpj','placeholder' => 'Ano']) !!}
-                                        </div>
-                                    </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
+                                <div class="col-sm-4">
+                                    {!! Form::text('sigla',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">
+                                    <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação
+                                </label>
+                                <div class="col-sm-3">
+                                    {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">
+                                    <strong> * </strong>CNPJ
+                                </label>
+                                <div class="col-sm-4">
+                                    {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'ano','id'=>'cnpj']) !!}
+                                </div>
+                            </div>
 
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('responsavel',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
 
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">E-mail </label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('email',null,['class'=>'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Telefone</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
+                                </div>
+                            </div>
 
-                                    <!-- <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">
-                                            <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Principal
-                                        </label>
-                                        <div class="col-sm-8">
-                                            {!! Form::select('cnae',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">
-                                            <strong title="Atividade Econômica" data-toggle="tooltip"> * </strong> CNAE Secundário
-                                        </label>
-                                        <div class="col-sm-8">
-                                            {!! Form::select('cnae_sec',$ae,null,['class'=>'form-control','placeholder'=>'Selecione...']) !!}
-                                        </div>
-                                    </div> -->
-
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
-                                        <div class="col-sm-8">
-                                            {!! Form::text('responsavel_legal',null,['class'=>'form-control']) !!}
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">
-                                            <strong title="E-mail do responsável legal" data-toggle="tooltip"> * </strong>E-mail </label>
-                                        <div class="col-sm-8">
-                                            {!! Form::text('email',null,['class'=>'form-control']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-4 col-form-label text-right">Telefone</label>
-                                        <div class="col-sm-3">
-                                            {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="cep" class="col-sm-4 col-form-label text-right">CEP</label>
-                                        <div class="col-sm-3">
-                                            {!! Form::text('cep',null,['class'=> 'form-control','id'=>'cep']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="rua" class="col-sm-4 col-form-label text-right">Rua/Logradouro</label>
-                                        <div class="col-sm-8">
-                                            {!! Form::text('rua',null,['class'=> 'form-control','id'=>'endereco']) !!}
-                                        </div>
-
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="Bairro" class="col-sm-4 col-form-label text-right">Bairro</label>
-                                        <div class="col-sm-8">
-                                            {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
-                                        </div>
-                                    </div>
-
-
-
-                                <div class="form-group row">
-                                    <label for="numero" class="col-sm-4 col-form-label text-right">Número</label>
-                                    <div class="col-sm-3">
-                                        {!! Form::text('numero',null,['class'=> 'form-control']) !!}
-                                    </div>
+                            <div class="form-group row">
+                                <label for="cep" class="col-sm-4 col-form-label text-right">CEP</label>
+                                <div class="col-sm-3">
+                                    {!! Form::text('cep',null,['class'=> 'form-control','id'=>'cep']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="rua" class="col-sm-4 col-form-label text-right">Rua/Logradouro</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('rua',null,['class'=> 'form-control','id'=>'endereco']) !!}
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="cidade" class="col-sm-4 col-form-label text-right">Cidade</label>
-                                    <div class="col-sm-8">
-                                        {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
-                                    </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="Bairro" class="col-sm-4 col-form-label text-right">Bairro</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <label for="numero" class="col-sm-4 col-form-label text-right">Número</label>
+                                <div class="col-sm-3">
+                                    {!! Form::text('numero',null,['class'=> 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cidade" class="col-sm-4 col-form-label text-right">Cidade</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="uf" class="col-sm-4 col-form-label text-right">Estado</label>
+                                <div class="col-sm-3">
+                                    {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="complemento" class="col-sm-4 col-form-label text-right">Complemento</label>
+                                <div class="col-sm-8">
+                                    {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
+                                <div class="col-sm-3">
+                                    {{ Form::select('situacao_imovel',['Alugado'=>'Alugado'],null,['class'=>'form-control']) }}
+                                </div>
+                            </div>
+
+
+                            <p class="text-primary ">Dados Bancários</p>
+                            <label>Conta para receber Doações</label>
+                            <div class="row">
+                                <div class="form-group col-md-5">
+                                    {!! Form::label('Banco') !!}
+                                    {{ Form::select('banco_investimentos',['lista'=>'lista'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                </div>
+                                <div class="form-group col-md-2">
+                                    {!! Form::label('Agência') !!}
+                                    {!! Form::text('agencia_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="uf" class="col-sm-4 col-form-label text-right">Estado</label>
-                                    <div class="col-sm-3">
-                                        {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
-                                    </div>
+                                <div class="form-group col-md-3">
+                                    {!! Form::label('Conta') !!}
+                                    {!! Form::text('conta_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="complemento" class="col-sm-4 col-form-label text-right">Complemento</label>
-                                    <div class="col-sm-8">
-                                        {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
-                                    </div>
+                                <div class="form-group col-md-2">
+                                    {!! Form::label('OP') !!}
+                                    {!! Form::text('op_investimentos',null,['class'=>'form-control']) !!}
                                 </div>
-
-                                <div class="form-group row">
-                                    <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
-                                    <div class="col-sm-3">
-                                        {{ Form::select('situacao_imovel',$si,null,['class'=>'form-control']) }}
-                                    </div>
-                                </div>
-
-
-                                <p class="text-primary ">Dados Bancários</p>
-                                <label>Conta para receber Doações</label>
-                                <div class="row">
-                                    <div class="form-group col-md-5">
-                                        {!! Form::label('Banco') !!}
-                                        {{ Form::select('banco',$lista_bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        {!! Form::label('Agência') !!}
-                                        {!! Form::text('agencia',null,['class'=>'form-control','placeholder'=>'Apenas nº']) !!}
-                                    </div>
-
-                                    <div class="form-group col-md-2">
-                                        {!! Form::label('Conta') !!}
-                                        {!! Form::text('conta',null,['class'=>'form-control','placeholder'=>'Apenas nº']) !!}
-                                    </div>
-
-                                    <div class="form-group col-md-2">
-                                        {!! Form::label('Operação') !!}
-                                        {!! Form::text('contaDv',null,['class'=>'form-control']) !!}
-                                    </div>
-                                </div>
+                            </div>
 
 
 
@@ -247,67 +226,56 @@
 
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label for="" >Conte-nos sua história</label>
-                                {!! Form::textarea('descricao_osc',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
+                                    <label for="" >Conte-nos sua história:</label>
+                                    {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
                                     <span class='caracteres1'></span>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Os objetivos que deseja atingir</label>
-                                    {!! Form::textarea('surgimento_osc',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     <span class='caracteres2'></span>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Impactos gerados no úlitmo ano</label>
-                                    {!! Form::textarea('impactos_gerados',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     <span class='caracteres3'></span>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Missão</label>
-                                    {!! Form::textarea('missao_osc',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    {!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     <span class='caracteres4'></span>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Visão</label>
-                                    {!! Form::textarea('visao_osc',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                     <span class='caracteres5'></span>
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="">Valores</label>
-                                    {!! Form::textarea('valores_osc',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500']) !!}
                                     <span class='caracteres6'></span>
                                 </div>
 
                                 <div class="form-group col-md-12">
                                     <label for="">Espaço Livre</label>
-                                   {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
-                                            'style'=>'resize: none', 'rows'=>'5',
-                                            'placeholder'=>'Se uma revista internacional  - muito importante  lhe convidasse para escrever uma matéria sobre sua organização. Qual seria o título e quais os diferenciais você indicaria para esta matéria?']) !!}
-                                            <span class='caracteres7'></span>
+                                    {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
+                                             'style'=>'resize: none', 'rows'=>'5',
+                                             'placeholder'=>'Se uma revista internacional  - muito importante  lhe convidasse para escrever uma matéria sobre sua organização. Qual seria o título e quais os diferenciais você indicaria para esta matéria?']) !!}
+                                    <span class='caracteres7'></span>
                                 </div>
-                                
+
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right"> Site </label>
+                                <label for="" class="col-sm-4 col-form-label text-right">Link do Site </label>
                                 <div class="col-md-8">
-                                    {!! Form::text('site',null,['class'=>'form-control','placeholder'=>'Link do seu Site']) !!}
+                                    {!! Form::text('site',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
-                            {{--<div class="form-group row">--}}
-                                {{--<label for="" class="col-sm-4 col-form-label text-right">Link do Estatuto </label>--}}
-                                {{--<div class="col-md-8">--}}
-                                    {{--{!! Form::text('link_estatuto_osc',null,['class'=>'form-control']) !!}--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<div class="form-group row">--}}
-                                {{--<label for="" class="col-sm-4 col-form-label text-right">Link da Finalidade Estatutária</label>--}}
-                                {{--<div class="col-md-8">--}}
-                                    {{--{!! Form::text('finalidades_estatutarias_ods',null,['class'=>'form-control']) !!}--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional </label>
+                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
                                 <div class="col-md-8">
                                     {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
                                 </div>
@@ -315,13 +283,13 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('fan_page',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
+                                    {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Instagram</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('instagram',null,['class'=>'form-control','placeholder'=>'Link do seu Instagram']) !!}
+                                    {!! Form::text('instagram',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                         </div>

@@ -21,7 +21,7 @@ class MetasController extends Controller
         }
         $metas      = Meta::where('objetivo_id',$ods)->get();
         $metas_osc  = Metas_Oscs::where('osc_id',$osc->id)->get();
-        $projetos   = Projeto::where('osc_id',$osc->id)->pluck('nome','id');
+        $projetos   = Projeto::where('osc_id',$osc->id)->pluck('nome_projeto','id');
 
         return view('dashboard.osc.odsform',[
             'metas'         => $metas,

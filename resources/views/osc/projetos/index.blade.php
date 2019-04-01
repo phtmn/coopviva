@@ -41,7 +41,7 @@
                                     <th scope="row">
                                         <div class="media align-items-center">
                                             <div class="media-body">
-                                                <span class="mb-0 text-sm">{{$d->nome}}</span>
+                                                <span class="mb-0 text-sm">{{$d->nome_projeto}}</span>
                                             </div>
                                         </div>
                                     </th>
@@ -55,7 +55,7 @@
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Editar </a>
+                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Visualizar </a>
                                            
                                         </div>
                                     </td>

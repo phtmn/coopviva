@@ -15,7 +15,9 @@ class CreateInvestimentosTable extends Migration {
 		Schema::create('investimentos', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->unsignedInteger('investimento_tipo_id');
+			$table->uuid('uuid')->nullable();
+
+			$table->string('tipo_investimento')->nullable();
 			$table->unsignedInteger('user_id')->index('user_id');
 			$table->unsignedInteger('projeto_id')->nullable()->index('projeto_id');
 			$table->unsignedInteger('osc_id')->nullable()->index('osc_id');

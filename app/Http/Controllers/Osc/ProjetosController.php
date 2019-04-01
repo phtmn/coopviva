@@ -36,24 +36,13 @@ class ProjetosController extends Controller
             return redirect()->route('osc.create');
         }
 
-        return view('osc.projetos.create',[
-            'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
-            'instancias'    =>  DB::table('instancias')->pluck('nome','id'),
-            'ambitos'       =>  DB::table('ambitos')->pluck('nome','id'),
-            'segmentos'     =>  DB::table('segmentos')->pluck('nome','id'),
-        ]);
+        return view('osc.projetos.create');
     }
 
     public function edit($id){
         $projeto  = Projeto::find($id);
         return view('osc.projetos.edit',[
             'projeto'           => $projeto,
-            'lista_bancos'      =>  DB::table('lista_bancos')->pluck('banco','id'),
-            'instancias'        =>  DB::table('instancias')->pluck('nome','id'),
-            'ambitos'           =>  DB::table('ambitos')->pluck('nome','id'),
-            'segmentos'         =>  DB::table('segmentos')->pluck('nome','id'),
-            'bancoPatrocinio'   => $projeto->bancoPatrocinio(),
-            'bancoDoacao'       => $projeto->bancoDoacao(),
         ]);
     }
 
@@ -67,54 +56,53 @@ class ProjetosController extends Controller
 
         $result = DB::transaction(function() use($request){
             try{
-                $banco_doacao               = new Banco();
-                $banco_doacao->banco        = $request->banco_doacao;
-                $banco_doacao->tipo_conta   = 1;
-                $banco_doacao->agencia      = $request->agencia_doacao;
-                $banco_doacao->conta        = $request->conta_doacao;
-                $banco_doacao->contaDv      = $request->contaDv_doacao;
-                $banco_doacao->save();
 
-                $banco_patrocinio               = new Banco();
-                $banco_patrocinio->banco        = $request->banco_patrocinio;
-                $banco_patrocinio->tipo_conta   = 2;
-                $banco_patrocinio->agencia      = $request->agencia_patrocinio;
-                $banco_patrocinio->conta        = $request->conta_patrocinio;
-                $banco_patrocinio->contaDv      = $request->contaDv_patrocinio;
-                $banco_patrocinio->save();
+                $projeto = Projeto::create([
+                    'nome_projeto'          => $request->nome_projeto,
+                    'descricao_resumida'    => $request->descricao_resumida,
+                    'responsavel_projeto'   => $request->responsavel_projeto,
+                    'valor_projeto'         => toMoney($request->valor_projeto),
+                    'valor_meta'            => toMoney($request->valor_meta),
+                    'data_inicio'           => $request->data_inicio,
+                    'data_final'            => $request->data_final,
 
-                $projeto                        = new Projeto();
-                $projeto->num_registro1         = $request->num_registro1;
-                $projeto->num_registro2         = $request->num_registro2;
-                $projeto->nome                  = $request->nome;
-                $projeto->instancia_id          = $request->instancia_id;
-                $projeto->ambito_id             = $request->ambito_id;
-                $projeto->segmento_id           = $request->segmento_id;
+                    'lei_incentivo'         => $request->lei_incentivo,
+                    'lei'                   => $request->lei,
+                    'artigo'                => $request->artigo,
+                    'ambito'                => $request->ambito,
+                    'num_registro1'         => $request->num_registro1,
+                    'num_registro2'         => $request->num_registro2,
+                    'segmento'              => $request->segmento,
 
-                $projeto->inicio_captacao       = $request->inicio_captacao;
-                $projeto->fim_captacao          = $request->fim_captacao;
+                    'resumo'                => $request->resumo,
+                    'objetivos'             => $request->objetivos,
+                    'justificativa'         => $request->justificativa,
+                    'publico_alvo'          => $request->publico_alvo,
+                    'impactos_esperados'    => $request->impactos_esperados,
+                    'contra_partidas'       => $request->contra_partidas,
 
-                $projeto->responsavel_nome      = $request->responsavel_nome;
-                $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;
-                $projeto->responsavel_telefone1 = $request->responsavel_telefone1;
-                $projeto->responsavel_telefone2 = $request->responsavel_telefone2;
-                $projeto->responsavel_email1    = $request->responsavel_email1;
-                $projeto->responsavel_email2    = $request->responsavel_email2;
+                    'prop_nome'             => $request->prop_nome,
+                    'prop_documento'        => $request->prop_documento,
+                    'prop_telefone1'        => $request->prop_telefone1,
+                    'prop_telefone2'        => $request->prop_telefone2,
+                    'prop_email1'           => $request->prop_email1,
+                    'prop_email2'           => $request->prop_email2,
 
-                $projeto->objetivo_geral        = $request->objetivo_geral;
-                $projeto->objetivos_especificos = $request->objetivos_especificos;
-                $projeto->justificativa         = $request->justificativa;
-                $projeto->publico_alvo          = $request->publico_alvo;
-                $projeto->impactos_esperados    = $request->impactos_esperados;
-                $projeto->descricao             = $request->descricao;
+                    'banco_doacao'          => $request->banco_doacao,
+                    'agencia_doacao'        => $request->agencia_doacao,
+                    'conta_doacao'          => $request->conta_doacao,
+                    'op_doacao'             => $request->op_doacao,
 
-                $projeto->artigo                = $request->artigo;
-                $projeto->valor_meta            = toMoney($request->valor_meta);
-                $projeto->banco_doacao_id       = $banco_doacao->id;
-                $projeto->banco_patrocinio_id   = $banco_patrocinio->id;
-                $projeto->osc_id                = $request->user()->osc()->id;
-                $projeto->status                = 'enviado';
-                $projeto->save();
+                    'banco_patrocinio'      => $request->banco_patrocinio,
+                    'agencia_patrocinio'    => $request->agencia_patrocinio,
+                    'conta_patrocinio'      => $request->conta_patrocinio,
+                    'op_patrocinio'         => $request->op_patrocinio,
+
+                    'status'                => 'Enviado',
+                    'osc_id'                => $request->user()->osc()->id
+
+                ]);
+
 
                 if($projeto){
                     Alert::success( 'Projeto Cadastrado com Sucesso','Sucesso')->persistent('Ok');
@@ -133,48 +121,54 @@ class ProjetosController extends Controller
 
     public function update(Request $request,$id){
 
-         $projeto = Projeto::findOrFail($id);
-
-         $result = DB::transaction(function () use ($request,$projeto){
+         $result = DB::transaction(function () use ($request,$id){
              try{
-                 $bancoPatrocinio                = $projeto->bancoPatrocinio();
-                 $bancoPatrocinio->banco         = $request->banco_patrocinio;
-                 $bancoPatrocinio->conta         = $request->conta_patrocinio;
-                 $bancoPatrocinio->agencia       = $request->agencia_patrocinio;
-                 $bancoPatrocinio->contaDv       = $request->contaDv_patrocinio;
-                 $bancoPatrocinio->save();
 
-                 $bancoDaocao                = $projeto->bancoDoacao();
-                 $bancoDaocao->banco         = $request->banco_doacao;
-                 $bancoDaocao->conta         = $request->conta_doacao;
-                 $bancoDaocao->agencia       = $request->agencia_doacao;
-                 $bancoDaocao->contaDv       = $request->contaDv_doacao;
-                 $bancoDaocao->save();
+                 $projeto = Projeto::find($id)->Update([
+                     'nome_projeto'          => $request->nome_projeto,
+                     'descricao_resumida'    => $request->descricao_resumida,
+                     'responsavel_projeto'   => $request->responsavel_projeto,
+                     'valor_projeto'         => toMoney($request->valor_projeto),
+                     'valor_meta'            => toMoney($request->valor_meta),
+                     'data_inicio'           => $request->data_inicio,
+                     'data_final'            => $request->data_final,
 
-                 $projeto->num_registro1         = $request->num_registro1;
-                 $projeto->num_registro2         = $request->num_registro2;
-                 $projeto->segmento_id           = $request->segmento_id;
-                 $projeto->nome                  = $request->nome;
-                 $projeto->instancia_id          = $request->instancia_id;
-                 $projeto->ambito_id             = $request->ambito_id;
+                     'lei_incentivo'         => $request->lei_incentivo,
+                     'lei'                   => $request->lei,
+                     'artigo'                => $request->artigo,
+                     'ambito'                => $request->ambito,
+                     'num_registro1'         => $request->num_registro1,
+                     'num_registro2'         => $request->num_registro2,
+                     'segmento'              => $request->segmento,
 
-                 $projeto->inicio_captacao       = $request->inicio_captacao;
-                 $projeto->fim_captacao          = $request->fim_captacao;
+                     'resumo'                => $request->resumo,
+                     'objetivos'             => $request->objetivos,
+                     'justificativa'         => $request->justificativa,
+                     'publico_alvo'          => $request->publico_alvo,
+                     'impactos_esperados'    => $request->impactos_esperados,
+                     'contra_partidas'       => $request->contra_partidas,
 
-                 $projeto->responsavel_nome      = $request->responsavel_nome;
-                 $projeto->responsavel_cpf_cnpj  = $request->responsavel_cpf_cnpj;
-                 $projeto->responsavel_telefone1 = $request->responsavel_telefone1;
-                 $projeto->responsavel_telefone2 = $request->responsavel_telefone2;
-                 $projeto->responsavel_email1    = $request->responsavel_email1;
-                 $projeto->responsavel_email2    = $request->responsavel_email2;
+                     'prop_nome'             => $request->prop_nome,
+                     'prop_documento'        => $request->prop_documento,
+                     'prop_telefone1'        => $request->prop_telefone1,
+                     'prop_telefone2'        => $request->prop_telefone2,
+                     'prop_email1'           => $request->prop_email1,
+                     'prop_email2'           => $request->prop_email2,
 
-                 $projeto->objetivo_geral        = $request->objetivo_geral;
-                 $projeto->objetivos_especificos = $request->objetivos_especificos;
-                 $projeto->justificativa         = $request->justificativa;
-                 $projeto->publico_alvo          = $request->publico_alvo;
-                 $projeto->impactos_esperados    = $request->impactos_esperados;
-                 $projeto->artigo                = $request->artigo;
-                 $projeto->save();
+                     'banco_doacao'          => $request->banco_doacao,
+                     'agencia_doacao'        => $request->agencia_doacao,
+                     'conta_doacao'          => $request->conta_doacao,
+                     'op_doacao'             => $request->op_doacao,
+
+                     'banco_patrocinio'      => $request->banco_patrocinio,
+                     'agencia_patrocinio'    => $request->agencia_patrocinio,
+                     'conta_patrocinio'      => $request->conta_patrocinio,
+                     'op_patrocinio'         => $request->op_patrocinio,
+
+                     'status'                => 'Enviado',
+
+                 ]);
+
 
                  if($projeto){
                      Alert::success( 'Dados Alterados com Sucesso','Sucesso')->persistent('Ok');

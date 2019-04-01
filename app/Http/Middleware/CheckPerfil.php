@@ -15,7 +15,7 @@ class CheckPerfil
      */
     public function handle($request, Closure $next)
     {
-        return (auth()->user()->perfil_id == 1)
+        return (auth()->user()->tipo_conta <> 'osc')
             ? $next($request)
             : redirect()->route('osc.index');
 

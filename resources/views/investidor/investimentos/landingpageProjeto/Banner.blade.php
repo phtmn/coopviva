@@ -17,20 +17,20 @@
             <div class="col px-0">
                 <div class="row justify-content-center">
                     <div class="osc">
-                        <h1 class="display-2 text-white font-weight-bold">{{$osc->nome_fantasia}} </h1>
+                        <h1 class="display-2 text-white font-weight-bold">{{$projeto->nome_projeto}} </h1>
                     </div>
 
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="ods">
-                        @forelse($metas->unique('objetivo_id') as $obj)
-                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
-                        @empty
-                            <p class="text-danger font-weight-500">Você não selecionou nenhum objetivo da agenda 2030</p>
-                        @endforelse
-                    </div>
-                </div>
+{{--                <div class="row justify-content-center">--}}
+{{--                    <div class="ods">--}}
+{{--                        @forelse($metas->unique('objetivo_id') as $obj)--}}
+{{--                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>--}}
+{{--                        @empty--}}
+{{--                            <p class="text-danger font-weight-500">Você não selecionou nenhum objetivo da agenda 2030</p>--}}
+{{--                        @endforelse--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
         <!-- SVG separator -->

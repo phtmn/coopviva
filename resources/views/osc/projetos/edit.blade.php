@@ -26,212 +26,264 @@
         @method('PUT')
         <div class="col-md-12">
             <div class="card shadow">
-                <div class="card-body bg-transparent">
-                    <label class="text-danger">Campos com * são obrigatórios</label>
-                    <hr>
-                    <label class="text-success">Dados Gerais</label>
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Nome do Projeto</label>
-                        <div class="col-md-8">
-                            {!! Form::text('nome',null,["class"=>"form-control",'required'=>'true']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Valor do Projeto</label>
-                        <div class="col-md-5">
-                            {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value','disabled']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Início da Captação</label>
-                        <div class="col-md-3">
-                            {!! Form::date('inicio_captacao',null,['class'=>'input input-lg form-control','required'=>'true',]) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Fim da Captação</label>
-                        <div class="col-md-3">
-                            {!! Form::date('fim_captacao',null,['class'=>'input input-lg form-control', 'disabled']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-
-                        <label for="tipo" class="col-sm-3 col-form-label text-right">Lei de Incentivo?</label>
-                        <div class="col-md-3">
-                            {!! Form::select('lei_incentivo',['1'=>'Sim','0'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo']) !!}
-                            <span class="help-inline text-success" data-toggle="tooltip" title="Recebe via lei de incentivo?">
-                            Recebe via lei de incentivo?
-                        </span>
-                        </div>
-
-                    </div>
-
-                    <div id="box-lei" style="display: none">
-
+                <div class="card shadow">
+                    <div class="card-body bg-transparent">
+                        <hr>
+                        <label class="text-success">Dados Gerais</label>
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Instância</label>
-                            <div class="col-md-4">
-                                {!! Form::select('instancia_id',$instancias,null,['placeholder'=>'Escolha uma opção','class'=>'form-control','id'=>'artigo']) !!}
+                            <label for="" class="col-sm-3 col-form-label text-right">Nome do Projeto</label>
+                            <div class="col-md-8">
+                                {!! Form::text('nome_projeto',null,["class"=>"form-control",'required'=>'true']) !!}
                             </div>
                         </div>
 
-                        <div id="box-artigo" style="display: none">
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Descricao Resumida</label>
+                            <div class="col-md-8">
+                                {!! Form::textarea('descricao_resumida',null,["class"=>"form-control",'required'=>'true','rows'=>'2']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Responsável pelo Projeto</label>
+                            <div class="col-md-8">
+                                {!! Form::text('responsavel_projeto',null,["class"=>"form-control",'required'=>'true']) !!}
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Valor do Projeto</label>
+                            <div class="col-md-5">
+                                {!! Form::text('valor_projeto',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_projeto']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Valor de Meta</label>
+                            <div class="col-md-5">
+                                {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_meta']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Início da Captação</label>
+                            <div class="col-md-3">
+                                {!! Form::date('data_inicio',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Fim da Captação</label>
+                            <div class="col-md-3">
+                                {!! Form::date('data_final',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'project_value']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <label for="tipo" class="col-sm-3 col-form-label text-right">Lei de Incentivo?</label>
+                            <div class="col-md-3">
+                                {!! Form::select('lei_incentivo',['1'=>'Sim','0'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo']) !!}
+                                <span class="help-inline text-success" data-toggle="tooltip" title="Recebe via lei de incentivo?">
+                                        Recebe via lei de incentivo?
+                                    </span>
+                            </div>
+
+                        </div>
+
+                        @if($projeto->lei_incentivo == 1)
+
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Instância(Lei)</label>
                                 <div class="col-md-4">
-                                    {!! Form::select('artigo',['18'=>'Art. 18','26'=>'Art. 26'],null,['class'=>'form-control']) !!}
-                                    <span class="help-inline danger">Artigo em que se encaixa o projeto</span>
+                                    {!! Form::select('lei',[
+                                        'Lei Rouanet' => 'Lei Rouanet',
+                                        'Fia'         => 'Fia',
+                                        'Pronon'      => 'Pronon',
+                                        'Pronas'      => 'Pronas',
+                                        'Esporte'     => 'Esporte',
+                                        'Idoso'       => 'Idoso'
+                                    ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control','id'=>'artigo']) !!}
                                 </div>
                             </div>
-                        </div>
+                            @if($projeto->lei == 'Lei Rouanet')
+                            <div id="box-artigo">
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
+                                    <div class="col-md-4">
+                                        {!! Form::select('artigo',['18'=>'Art. 18','26'=>'Art. 26'],null,['class'=>'form-control','placeholder'=>'Selecione']) !!}
+                                        <span class="help-inline danger">Artigo em que se encaixa o projeto</span>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
 
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Ambito</label>
+                                <div class="col-md-4">
+                                    {!! Form::select('ambito',[
+                                        'Federal'   => 'Federal',
+                                        'Estadual'  => 'Estadual',
+                                        'Municipal' => 'Municipal'
+                                    ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                </div>
+                            </div>
+
+                        @endif
+                        @if($projeto->lei_incentivo == 0)
+                            <div id="box-segmento">
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-3 col-form-label text-right">Segmento</label>
+                                    <div class="col-md-4">
+                                        {!! Form::select('segmento',[
+                                            'Meio Ambiente' => 'Meio Ambiente',
+                                            'Cultura'       => 'Cultura',
+                                            'Esporte'       => 'Esporte',
+                                            'Criança e Adolescente' => 'Criança e Adolescente',
+                                            'Idoso'             => 'Idoso',
+                                            'Saúde'             => 'Saúde'
+                                        ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                        <hr>
+                        <label for="Dadod do Poponente" class="text-success">Dados do Proponente</label>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Ambito</label>
-                            <div class="col-md-4">
-                                {!! Form::select('ambito_id',$ambitos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            <label for="" class="col-sm-3 col-form-label text-right">Proponente</label>
+                            <div class="col-md-8">
+                                {!! Form::text('prop_nome',null,['class'=>'form-control']) !!}
+                                <span class="help-inline text-success">Responsável Legal do Projeto</span>
+                            </div>
+                        </div>
+
+                        {{--                                    <div class="form-group row">--}}
+                        {{--                                        <label for="" class="col-sm-3 col-form-label text-right">Tipo Documento</label>--}}
+                        {{--                                        <div class="col-md-2">--}}
+                        {{--                                            {!! Form::select('tipo_documento',[--}}
+                        {{--                                                 'CPF'  => "CPF",--}}
+                        {{--                                                 'CNPJ' => "CNPJ"],null,--}}
+                        {{--                                             ['class'=>'form-control', 'id'=>'tipo-perfil','placeholder'=> 'selecione']) !!}--}}
+                        {{--                                        </div>--}}
+                        {{--                                    </div>--}}
+
+                        <div class="form-group row" id="tipo-perfil">
+                            <label for="" class="col-sm-3 col-form-label text-right">Nº Documento</label>
+                            <div class="col-md-3">
+                                {!! Form::text('prop_documento',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Segmento</label>
-                            <div class="col-md-4">
-                                {!! Form::select('segmento_id',$segmentos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            <label for="" class="col-sm-3 col-form-label text-right">Telefone Principal</label>
+                            <div class="col-md-3">
+                                {!! Form::text('prop_telefone1',null,['class'=>'form-control','id'=>'telefone1']) !!}
                             </div>
                         </div>
 
-
-                    </div>
-
-
-                    <hr>
-                    <label for="Dadod do Poponente" class="text-success">Dados do Proponente</label>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Proponente</label>
-                        <div class="col-md-8">
-                            {!! Form::text('responsavel_nome',null,['class'=>'form-control','required']) !!}
-                            <span class="help-inline text-success">Responsável Legal do Projeto</span>
-                        </div>
-                    </div>
-
-                    <div class="form-group row" id="tipo-perfil">
-                        <label for="" class="col-sm-3 col-form-label text-right">CPF ou CNPJ</label>
-                        <div class="col-md-3">
-                            {!! Form::text('responsavel_cpf_cnpj',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Telefone Principal</label>
-                        <div class="col-md-3">
-                            {!! Form::text('responsavel_telefone1',null,['class'=>'form-control','id'=>'phone_number','required']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Telefone Sedunário</label>
-                        <div class="col-md-3">
-                            {!! Form::text('responsavel_telefone2',null,['class'=>'form-control','id'=>'phone_number2']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Email Principal</label>
-                        <div class="col-md-6">
-                            {!! Form::email('responsavel_email1',null,['class'=>'form-control','id'=>'email1','required']) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label text-right">Email Secundário</label>
-                        <div class="col-md-6">
-                            {!! Form::email('responsavel_email2',null,['class'=>'form-control','id'=>'email2']) !!}
-                        </div>
-                    </div>
-                    <hr>
-                    <label class="text-success">Conta para receber Doações</label>
-                    <div class="row">
-                        <div class="form-group col-md-5">
-                            {!! Form::label('Banco') !!}
-                            {!! Form::select('banco_doacao',$lista_bancos,$bancoDoacao->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Telefone Sedunário</label>
+                            <div class="col-md-3">
+                                {!! Form::text('prop_telefone2',null,['class'=>'form-control','id'=>'telefone2']) !!}
+                            </div>
                         </div>
 
-                        <div class="form-group col-md-2">
-                            {!! Form::label('Agência') !!}
-                            {!! Form::text('agencia_doacao',$bancoDoacao->agencia,['class'=>'form-control']) !!}
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Email Principal</label>
+                            <div class="col-md-6">
+                                {!! Form::text('prop_email1',null,['class'=>'form-control','id'=>'email1']) !!}
+                            </div>
                         </div>
 
-                        <div class="form-group col-md-2">
-                            {!! Form::label('Conta') !!}
-                            {!! Form::text('conta_doacao',$bancoDoacao->conta,['class'=>'form-control']) !!}
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3 col-form-label text-right">Email Secundário</label>
+                            <div class="col-md-6">
+                                {!! Form::text('prop_email2',null,['class'=>'form-control','id'=>'email2']) !!}
+                            </div>
                         </div>
-                        <div class="form-group col-md-1">
-                            {!! Form::label('OP') !!}
-                            {!! Form::text('contaDv_doacao',$bancoDoacao->contaDv,['class'=>'form-control']) !!}
-                        </div>
-                    </div>
-                    <hr>
-                    <label class="text-success">Conta para Receber Patrocínios</label>
-                    <div class="row"><!--row-3-->
-                        <div class="form-group col-md-5">
-                            {!! Form::label('Banco') !!}
-                            {!! Form::select('banco_patrocinio',$lista_bancos,$bancoPatrocinio->banco,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                        </div>
+                        <hr>
+                        <label class="text-success">Conta para receber Doações</label>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                {!! Form::label('Banco') !!}
+                                {!! Form::select('banco_doacao',['lista'=>'lista'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            </div>
 
-                        <div class="form-group col-md-2">
-                            {!! Form::label('Agência') !!}
-                            {!! Form::text('agencia_patrocinio',$bancoPatrocinio->agencia,['class'=>'form-control']) !!}
-                        </div>
+                            <div class="form-group col-md-2">
+                                {!! Form::label('Agência') !!}
+                                {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
+                            </div>
 
-                        <div class="form-group col-md-2">
-                            {!! Form::label('Conta') !!}
-                            {!! Form::text('conta_patrocinio',$bancoPatrocinio->conta,['class'=>'form-control']) !!}
+                            <div class="form-group col-md-3">
+                                {!! Form::label('Conta') !!}
+                                {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
+                            </div>
+                            <div class="form-group col-md-1">
+                                {!! Form::label('OP') !!}
+                                {!! Form::text('op_doacao',null,['class'=>'form-control']) !!}
+                            </div>
                         </div>
-                        <div class="form-group col-md-1">
-                            {!! Form::label('OP') !!}
-                            {!! Form::text('contaDv_patrocinio',$bancoPatrocinio->contaDv,['class'=>'form-control']) !!}
+                        <hr>
+                        <label class="text-success">Conta para Receber Patrocínios</label>
+                        <div class="row"><!--row-3-->
+                            <div class="form-group col-md-3">
+                                {!! Form::label('Banco') !!}
+                                {!! Form::select('banco_patrocinio',['lista'=>'lista'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                {!! Form::label('Agência') !!}
+                                {!! Form::text('agencia_patrocinio',null,['class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                {!! Form::label('Conta') !!}
+                                {!! Form::text('conta_patrocinio',null,['class'=>'form-control']) !!}
+                            </div>
+                            <div class="form-group col-md-1">
+                                {!! Form::label('OP') !!}
+                                {!! Form::text('op_patrocinio',null,['class'=>'form-control']) !!}
+                            </div>
                         </div>
-                    </div>
-                    <hr>
-                    <label for="" class="text-success">Mais informações</label>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="">Objetivo Geral</label>
-                            {!! Form::textarea('descricao',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Objetivo Geral</label>
-                            {!! Form::textarea('objetivo_geral',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Objetivos Específicos</label>
-                            {!! Form::textarea('objetivos_esp',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Justificativa</label>
-                            {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Público Alvo</label>
-                            {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Impactos Esperados</label>
-                            {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                        <hr>
+                        <label for="" class="text-success">Fale sobre seu Projeto</label>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="">Resumo do Projeto</label>
+                                {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Objetivos</label>
+                                {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Justificativa</label>
+                                {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Público Alvo</label>
+                                {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Impactos Esperados</label>
+                                {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="">Contra Partidas</label>
+                                {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-                <div class="card-footer text-center">
-                     <button type="submit" class="btn btn-outline-success">Salvar</button>
+                    <div class="card-footer text-center">
+                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                    </div>
                 </div>
             </div>
+        </div>
+
+
         </div>
         {!! Form::close() !!}
     </div>
@@ -243,11 +295,10 @@
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
     <script>
         $(document).ready(function(){
-            $("#project_value").mask('#.##0,00', {reverse: true});
-            $("#phone_number").mask('(00)00000-0000');
-            $("#phone_number2").mask('(00)00000-0000');
-            $("#cpf").mask('000.000.000-00');
-            $("#cnpj").mask('00.000.000/0000-00');
+            $("#valor_projeto").mask('#.##0,00', {reverse: true});
+            $("#valor_meta").mask('#.##0,00', {reverse: true});
+            $("#telefone1").mask('(00)00000-0000');
+            $("#telefone2").mask('(00)00000-0000');
 
         });
 
@@ -277,35 +328,6 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function(){
-            let incentivo        = $('#incentivo');
-            let boxLei           = $('#box-lei');
-
-            incentivo.change(function(){
-                if(incentivo.val() == 1){
-                    boxLei.css({'display':'block'});
-
-                }else{
-                    boxLei.css({'display':'none'});
-                }
-            });
-        });
-
-
-        $(document).ready(function(){
-            let artigo     = $('#artigo');
-            let boxArtigo  = $('#box-artigo');
-
-            artigo.change(function(){
-                if(artigo.val() == 11){
-                    boxArtigo.css({'display':'block'});
-                }else{
-                    boxArtigo.css({'display':'none'});
-                }
-            });
-        });
-    </script>
 
 @stop
 

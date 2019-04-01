@@ -26,7 +26,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('osc', function ($user) {
-            if($user->perfil_id == 2){
+            if($user->tipo_conta == 'osc'){
                 return true;
             }
             return false;

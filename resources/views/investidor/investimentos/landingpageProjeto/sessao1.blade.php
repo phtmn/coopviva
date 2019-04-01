@@ -8,31 +8,31 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-5  mt-3 mx-3">
                                 
-                                <h5 class="text-primary text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
+                                <h5 class="text-primary text-uppercase">{{$projeto->osc->nome_fantasia}}</h5>
 								
-                                <p class="description mt-3"><p align="justify" style="text-indent: 25px;">{{$osc->historia ?? ''}}</p></p>
+                                <p class="description mt-3"><p align="justify" style="text-indent: 25px;">{{$projeto->resumo ?? ''}}</p></p>
                                 <div>
 									<hr>
 									
-									<div class="d-flex justify-content-center mb-2 ">
-						
-										<a href="{{ $osc->site ?? 'https://coopviva.com.br' }}" class="nav-link nav-link-icon" target="_blank"  >
-										<i class="ni ni-world-2  text-Primary"></i>
-										</a>
-										
-										<a href="{{ $osc->facebook ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >
-										<i class="fa fa-facebook  text-Primary"></i>
-										</a>
-										
-										<a href="{{ $osc->instagram ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >
-										<i class="fa fa-instagram  text-Primary"></i>
-										</a>
-										
-										<a href="{{ $osc->mapa ?? '#' }}" class="nav-link nav-link-icon"  target="_blank"  >
-										<i class="ni ni-square-pin text-Primary"></i>
-										</a>
-									
-									</div>	
+{{--									<div class="d-flex justify-content-center mb-2 ">--}}
+{{--						--}}
+{{--										<a href="{{ $osc->site ?? 'https://coopviva.com.br' }}" class="nav-link nav-link-icon" target="_blank"  >--}}
+{{--										<i class="ni ni-world-2  text-Primary"></i>--}}
+{{--										</a>--}}
+{{--										--}}
+{{--										<a href="{{ $osc->facebook ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >--}}
+{{--										<i class="fa fa-facebook  text-Primary"></i>--}}
+{{--										</a>--}}
+{{--										--}}
+{{--										<a href="{{ $osc->instagram ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >--}}
+{{--										<i class="fa fa-instagram  text-Primary"></i>--}}
+{{--										</a>--}}
+{{--										--}}
+{{--										<a href="{{ $osc->mapa ?? '#' }}" class="nav-link nav-link-icon"  target="_blank"  >--}}
+{{--										<i class="ni ni-square-pin text-Primary"></i>--}}
+{{--										</a>--}}
+{{--									--}}
+{{--									</div>	--}}
                                                                       
                                 </div>
                                 
@@ -44,10 +44,10 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-4 mt-4 d-flex justify-content-center mb-4">
                                                                
-								@if(!$osc->logo)
+								    @if(!$projeto->imagem)
                                         <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail" style="width:205px; height:205px;">
                                     @else
-                                        <img src="{{$osc->logo}}" class="" style="width:205px; height:205px;">
+                                        <img src="{{$projeto->imagem ?? ''}}" class="" style="width:205px; height:205px;">
                                     @endif
 								
                                 <div>
@@ -86,7 +86,7 @@
                                     {!! Form::text('valor',null,['class'=>'form-control form-control-lg','required'=>'true','placeholder'=>'Quanto gostaria de Investir (R$)','id'=>'valor']) !!}
                                 </div>
 
-                                <input type="hidden" name="osc_id" value="{{$osc->id}}">
+{{--                                <input type="hidden" name="osc_id" value="{{$osc->id}}">--}}
                             </div>
 
                             <div class="modal-footer text-center">

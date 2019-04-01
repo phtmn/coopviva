@@ -31,80 +31,62 @@ class OscController extends Controller
         if($osc){
             return view('osc.edit',[
                 'osc'           => $osc,
-                'banco'         => $osc->banco(),
-                'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
-                'ae'            => DB::table('atividades_economicas')->pluck('descricao','id'),
-                'si'            => DB::table('imoveis_situacoes')->pluck('descricao','id'),
                 'projetos'      => $osc->projetos()->count(),
                 'metas'         => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
 
             ]);
         }
-
-        return view('osc.create',[
-            'lista_bancos'  =>  DB::table('lista_bancos')->pluck('banco','id'),
-            'ae'            => DB::table('atividades_economicas')->pluck('descricao','id'),
-            'si'            => DB::table('imoveis_situacoes')->pluck('descricao','id'),
-            'bancos'        => DB::table('bancos')->pluck('banco','id')
-        ]);
+        return view('osc.create');
     }
 
 
     public function store(Request $request){
 
-        if($request->banco == null){
-            Alert::warning('você precisa inserir dados bancários','Eita')->persistent('ok');
-            return redirect()->back()->withInput($request->all());
-        }
 
         $result = DB::transaction(function() use ($request) {
             try {
 
-                $banco              = new Banco();
-                $banco->banco       = $request->banco;
-                $banco->agencia     = $request->agencia;
-                $banco->conta       = $request->conta;
-                $banco->contaDV     = $request->contaDv;
-                $banco->tipo_conta  = 3;
-                $banco->save();
-
-                OSC::Create(
+                OSC::UpdateOrCreate(
+                    ['user_id' => auth()->user()->id],
                     [
                        'nome_fantasia'         => $request->nome_fantasia,
                        'cnpj'                  => $request->cnpj,
-                       'ano_inscricao_cnpj'    => $request->ano_inscricao_cnpj,
                        'ano_fundacao'          => $request->ano_fundacao,
-                       'sigla '                => $request->sigla,
-                       'cnae '                 => $request->cnae,
-                       'cnae_sec '             => $request->cnae_sec,
-                       'responsavel_legal'     => $request->responsavel_legal,
-                       'situacao_imovel_id'    => $request->situacao_imovel_id,
-                       'email '                => $request->email,
-                       'site'                  => $request->site,
-                       'descricao'             => $request->descricao,
+                       'sigla'                => $request->sigla,
+                       'cnaes'                => $request->cnae,
+                       'responsavel'           => $request->responsavel,
+                       'email'                => $request->email,
                        'telefone'              => $request->telefone,
-                            'cep'                   => $request->cep,
-                            'logradouro'            => $request->logradouro,
-                            'numero'                => $request->numero,
-                            'complemento'           => $request->complemento,
-                            'bairro'                => $request->bairro,
-                            'cidade'                => $request->cidade,
-                            'uf'                    => $request->uf,
-                       'atividades_economicas_id'   => $request->atividades_economicas_id,
-                       'area_atuacao'          => $request->area_atuacao,
-                       'sub_area1'             => $request->sub_area1,
-                       'sub_area2'             => $request->sub_area2,
-                       'surgimento_osc'        => $request->surgimento_osc,
-                       'missao_osc'            => $request->missao_osc,
-                       'espaco_livre'           => $request->espaco_livre,
-                       'visao_osc'            => $request->visao_osc,
-                       'finalidades_estatutarias_ods' => $request->finalidades_estatutarias_ods,
-                       'link_estatuto_osc'     => $request->link_estatuto_osc,
-                       'video_institucional'    => toEmbeb($request->video_institucional),
-                       'fan_page'    => $request->fan_page,
-                       'instagram'    => $request->instagram,
+                       'site'                  => $request->site,
+                       'facebook'              => $request->facebook,
+                       'instagram'             => $request->instagram,
+                       'youtube'               => $request->youtube,
+                       'video_institucional'   => toEmbeb($request->video_institucional),
+                       'mapa'                  => $request->mapa,
+
+                        'cep'                  => $request->cep,
+                       'logradouro'            => $request->rua,
+                       'numero'                => $request->numero,
+                       'complemento'           => $request->complemento,
+                       'bairro'                => $request->bairro,
+                       'cidade'                => $request->cidade,
+                       'uf'                    => $request->uf,
+                       'situacao_imovel'       => $request->situacao_imovel,
+
+                       'banco_investimentos'    => $request->banco_investimentos,
+                       'agencia_investimentos'  => $request->agencia_investimentos,
+                       'conta_investimentos'    => $request->conta_investimentos,
+                       'op_investimentos'       => $request->op_investimentos,
+
+                       'historia'       => $request->historia,
+                       'objetivos'      => $request->objetivos,
+                       'impactos'       => $request->impactos,
+                       'missao'         => $request->missao,
+                       'visao'          => $request->visao,
+                       'valores'        => $request->valores,
+                       'espaco_livre'   => $request->espaco_livre,
+
                        'user_id'               => $request->user()->id,
-                       'banco_id'              => $banco->id
 
                     ]);
 

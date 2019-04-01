@@ -15,15 +15,15 @@ class CreateGaleriasTable extends Migration {
 		Schema::create('galerias', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('osc_id')->nullable();
-			$table->integer('projeto_Id')->nullable();
-			$table->string('album')->nullable();
+			$table->unsignedInteger('osc_id');
 			$table->string('legenda', 200);
 			$table->string('aws_url');
 			$table->string('aws_name');
 			$table->boolean('ativo')->default(1);
 			$table->timestamps();
 			$table->softDeletes();
+
+            $table->foreign('osc_id')->references('id')->on('oscs');
 		});
 	}
 
