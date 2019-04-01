@@ -28,7 +28,6 @@ class CheckoutController extends Controller
         $investimento = new Investimento();
         $investimento->descricao            = 'Investimento em:'.$osc->nome_fantasia;
         $investimento->valor                = toMoney($request->valor);
-        $investimento->investimento_tipo_id = 3;
         $investimento->status_interno       = 'Aguardando Pagamento';
         $investimento->user_id              = $request->user()->id;
         $investimento->projeto_id           = $request->projeto_id;

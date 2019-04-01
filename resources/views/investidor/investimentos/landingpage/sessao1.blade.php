@@ -59,7 +59,13 @@
                             </div>
 							
 							<div class="botao mx-2 mb-4 mt-0">
-                                <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-block">Investir</a>
+                                @guest
+                                    <div class="text-center">
+                                        <a href="{{route('login')}}" class="btn btn-default btn-round">Realize login para Investir</a>
+                                    </div>
+                                @else
+                                    <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-block">Quero Investir</a>
+                                @endguest
                             </div>	
                         </div>
                     </div>

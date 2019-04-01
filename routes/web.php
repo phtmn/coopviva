@@ -30,6 +30,7 @@ Route::group( ['middleware'=> ['auth','verified','perfil'],'prefix'=>'painel-inv
     Route::post('/pagar','CheckoutController@pagar')->name('pagar');
     Route::get('/investimento/d/{id}','InvestimentosController@cancelar')->name('investimento.cancelar');
     Route::get('/investimento/{status}','InvestimentosController@callback');
+    Route::get('/investimento/detalhe/{id}','InvestimentosController@detalhe')->name('investimento.detalhe');
 
 });
 

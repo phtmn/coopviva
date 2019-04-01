@@ -31,7 +31,7 @@
                                             @elseif($d->status_interno == 'Investimento Realizado')
                                                 <div class="pull-right">
                                                     <a href="#"  class="btn btn-info btn-sm" data-toggle="tooltip" title="Solicitar Recibo"><i class="fa fa-print"></i> Recibo</a>
-                                                    <a href="#"  class="btn btn-sm btn-outline-success" data-toggle="tooltip" title="Ver Detalhes"><i class="fa fa-eyes"></i> Detalhes</a>
+                                                    <a href="{{route('investimento.detalhe',$d->id)}}"  class="btn btn-sm btn-outline-success" data-toggle="tooltip" title="Ver Detalhes"><i class="fa fa-eyes"></i> Detalhes</a>
                                                 </div>
                                             @endif
                                         </td>

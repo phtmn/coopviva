@@ -81,4 +81,9 @@ class InvestimentosController extends Controller
         Alert::warning('Você Cancelou esse investimento','Tenso!')->persistent('Ok');
         return redirect()->back();
     }
+
+    public function detalhe($id){
+        $investimento = Investimento::find($id);
+        return view('investidor.investimentos.detalhe',compact('investimento'));
+    }
 }
