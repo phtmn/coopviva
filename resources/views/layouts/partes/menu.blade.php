@@ -26,11 +26,11 @@
             <i class="ni ni-album-2 text-red"></i> Galeria
         </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{route('documentos.index')}}">
-            <i class="ni ni-archive-2 text-info"></i> Documentos
-        </a>
-    </li>
+{{--    <li class="nav-item">--}}
+{{--        <a class="nav-link" href="{{route('documentos.index')}}">--}}
+{{--            <i class="ni ni-archive-2 text-info"></i> Documentos--}}
+{{--        </a>--}}
+{{--    </li>--}}
     
 </ul>
 <!-- Divider -->
