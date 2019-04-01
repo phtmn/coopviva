@@ -190,7 +190,14 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
                                 <div class="col-sm-3">
-                                    {{ Form::select('situacao_imovel',['Alugado'=>'Alugado'],null,['class'=>'form-control']) }}
+                                    {{ Form::select('situacao_imovel',[
+                                            'Alugado'           =>'Alugado',
+                                            'Cedida/Funcional'  =>'Cedida/Funcional',
+                                            'Própria/Quitada'   => 'Própria/Quitada',
+                                            'Financiada'        => 'Financiada',
+                                            'Outro'             => 'Outro'
+
+                                            ],null,['class'=>'form-control']) }}
                                 </div>
                             </div>
 
@@ -200,7 +207,7 @@
                             <div class="row">
                                 <div class="form-group col-md-5">
                                     {!! Form::label('Banco') !!}
-                                    {{ Form::select('banco_investimentos',['lista'=>'lista'],null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
+                                    {{ Form::select('banco_investimentos',$bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
                                 </div>
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}

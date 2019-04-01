@@ -31,12 +31,15 @@ class OscController extends Controller
         if($osc){
             return view('osc.edit',[
                 'osc'           => $osc,
+                'bancos'        => DB::table('bancos')->pluck('banco','id'),
                 'projetos'      => $osc->projetos()->count(),
                 'metas'         => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
 
             ]);
         }
-        return view('osc.create');
+        return view('osc.create',[
+            'bancos' => DB::table('bancos')->pluck('banco','id')
+        ]);
     }
 
 

@@ -208,7 +208,7 @@
                         <div class="row">
                             <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
-                                {!! Form::select('banco_doacao',['lista'=>'lista'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                {!! Form::select('banco_doacao',$bancos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group col-md-2">
@@ -230,7 +230,7 @@
                         <div class="row"><!--row-3-->
                             <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
-                                {!! Form::select('banco_patrocinio',['lista'=>'lista'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                {!! Form::select('banco_patrocinio',['001'=>'001 - BANCO DO BRASIL S/A'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group col-md-2">

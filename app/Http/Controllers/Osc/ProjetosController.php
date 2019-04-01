@@ -36,13 +36,16 @@ class ProjetosController extends Controller
             return redirect()->route('osc.create');
         }
 
-        return view('osc.projetos.create');
+        return view('osc.projetos.create',[
+            'bancos' => DB::table('bancos')->pluck('banco','id')
+        ]);
     }
 
     public function edit($id){
         $projeto  = Projeto::find($id);
         return view('osc.projetos.edit',[
             'projeto'           => $projeto,
+            'bancos'            => DB::table('bancos')->pluck('banco','id')
         ]);
     }
 
