@@ -128,32 +128,37 @@
 
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h6 class="modal-title" id="modal-title-default"></h6>
+                        <h2 class="modal-title" id="modal-title-default">Quem é KA LAHUN? </h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
 
-                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail " style="max-width: 300px; max-height: 300px" >
-
-                        <p class="text-justify" style="text-indent: 15px;">
-                            Nosso mascote foi batizado com o nome de  KA LAHUN uma expressão MAIA que simboliza o numeral 12  e sintetiza a expressão do significado de três palavras poderosas DEDICAÇÃO – COOPERAÇÃO - EQUILIBRIO. 
+                      <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail " style="max-width: 300px; max-height: 300px" ></center>
+						<br>
+						<hr>	
+                        <p class="text-justify mt-3 mx-3" style="text-indent: 15px;">
+                            Nosso mascote foi batizado com o nome de <b class="font-weight-bold">KA LAHUN </b>uma expressão maia que simboliza o numeral 12  e sintetiza a expressão do significado de três palavras poderosas Dedicação – Cooperação – Equilíbrio. 
 						</p>	
-						<p class="text-justify" style="text-indent: 15px;">	
-							KA LAHUN o nosso  Jacarezinho é aquele que vive nas águas e na terra representando  nossa  missão de fazer o elo de ligação entre dois mundos (Organizações da sociedade civil e investidores) e assim trabalharmos para a  união dos esforços em uma rede de cooperação viva e cidadã. 
-							KA LAHUN com seu olho que tudo vê lhe conduzirá na jornada  para o outro lado do rio diretamente ao encontro com seu maiores potenciais. 
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">	
+							<b class="font-weight-bold">KA LAHUN </b> o nosso  Jacarezinho é aquele que vive nas águas e na terra representando  nossa  missão de fazer o elo de ligação entre dois mundos (Organizações da Sociedade Civil e Investidores) e assim trabalharmos para a  união dos esforços em uma rede de cooperação viva e cidadã. 
 						</p>	
-						<p class="text-justify" style="text-indent: 15px;">
-							KA LAHUN 
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">		
+							<b class="font-weight-bold">KA LAHUN </b> com seu olho que tudo vê lhe conduzirá na jornada  para o outro lado do rio diretamente ao encontro com seu maiores potenciais. 
+						</p>	
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">
+							<b class="font-weight-bold">KA LAHUN </b> 
 							Dedicação – Cooperação – Equilíbrio 
 						</p>	
-						<p class="text-justify" style="text-indent: 15px;">	
-							Destinar, Entregar-se, Aplicar-se, Ação e efeito de cooperar, Operar conjuntamente com outras pessoas.
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">	
+							Destinar, entregar-se, aplicar-se, ação e efeito de cooperar, operar conjuntamente com outras pessoas.
 						</p>	
-						<p class="text-justify" style="text-indent: 15px;">
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">
 							Função: Prestar serviços 
-							Ação: Universalizar benefícios aos projetos. Compartilhar com a comunidade universal, ultrapassando fronteiras
+						 </p>	
+						<p class="text-justify mt-3 mx-3" style="text-indent: 15px;">
+							Ação: Universalizar benefícios aos projetos. Compartilhar com a comunidade universal, ultrapassando fronteiras.
 							
                         </p>
                     </div>

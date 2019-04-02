@@ -2,15 +2,15 @@
 
 @section('conteudo_painel')
     <div class="text-center mt-5">
-        <h3>Bem vindo(a), {{ auth()->user()->apelido }}
+        <h3>Olá, {{ auth()->user()->apelido }}
             <span class="font-weight-light"></span>
         </h3>
        
-        <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i> {{auth()->user()->email}}</div>
+        <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i> {{auth()->user()->email}} </div>
 		
     </div>
 	
-	@if(Auth::user()->tipo_pessoa == 'F')
+	@if(Auth::user()->tipo_conta == 'investidor-pf')
 	<div class="col-lg-12 mt-5 mt-lg-0">
               <!-- Menu -->
               <div class="mb-3">

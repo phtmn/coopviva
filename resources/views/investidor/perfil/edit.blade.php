@@ -53,7 +53,7 @@
 
         <div class="form-group row">
             <label for="telefone" class="col-sm-3 col-form-label text-right">Telefone </label>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 {!! Form::text('telefone',null,['class'=> 'form-control', 'id'=>'telefone','required'=>'true','id'=>'telefone']) !!}
             </div>
         </div>
@@ -73,14 +73,14 @@
         @if(Auth::user()->tipo_conta == 'investidor-pf')
             <div class="form-group row">
                 <label for="cpf" class="col-sm-3 col-form-label text-right">CPF</label>
-                <div class="col-md-5">
+                <div class="col-md-3">
                     {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cpf']) !!}
                 </div>
             </div>
         @else
             <div class="form-group row">
                 <label for="cnpj" class="col-sm-3 col-form-label text-right">CNPJ</label>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     {!! Form::text('cpf_cnpj',null,['class'=> 'form-control','required'=>'true','id'=>'cnpj']) !!}
                 </div>
             </div>
@@ -93,14 +93,14 @@
             </div>
 
             <div class="form-group row">
-                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Fantasia</label>
+                <label for="razao_social" class="col-sm-3 col-form-label text-right" >Nome Fantasia</label>
                 <div class="col-md-8">
                     {!! Form::text('razao_social',null,['class'=> 'form-control','required'=>'true']) !!}
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="cnpj" class="col-sm-3 col-form-label text-right">Número aprox. de funcionários</label>
+                <label for="cnpj" class="col-sm-3 col-form-label text-right">Nº de Funcionários</label>
                 <div class="col-md-3">
                     {{ Form::select('qtd_funcionarios',[
                         'A'    => 'de 1 a 3',
@@ -133,17 +133,18 @@
         @endif
 
     <h4 class="text-primary">Endereço </h4>
+	<hr>
         <div class="form-group row">
-            <label for="cep" class="col-sm-3 col-form-label text-right">Cep</label>
-            <div class="col-md-3">
+            <label for="cep" class="col-sm-3 col-form-label text-right">CEP</label>
+            <div class="col-md-2">
                 {!! Form::text('cep',null,['class'=> 'form-control','required'=>'true','id'=>'cep']) !!}
             </div>
         </div>
 
         <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label text-right">Rua/Logradouro</label>
-            <div class="col-md-5">
-                {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'endereco']) !!}
+            <div class="col-md-8">
+                {!! Form::text('logradouro',null,['class'=> 'form-control','required'=>'true','id'=>'rua']) !!}
             </div>
         </div>
 
@@ -171,18 +172,18 @@
         <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label text-right">Estado</label>
             <div class="col-md-2">
-                {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+                {!! Form::text('uf',null,['class'=> 'form-control','id'=>'uf','disabled']) !!}
             </div>
         </div>
 
         <div class="form-group row">
             <label for="" class="col-sm-3 col-form-label text-right">Complemento</label>
-            <div class="col-md-8">
+            <div class="col-md-5">
                 {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
             </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center card-footer">
             <button type="submit" class="btn btn-outline-success">Salvar</button>
         </div>
 

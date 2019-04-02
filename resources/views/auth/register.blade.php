@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('conteudo_principal')
-    <section class="section section-shaped section-sm">
+    <section class="section section-shaped section-lg-12">
 		<div class="shape shape-style-1 bg-gradient-success">
 			<span></span>
 			<span></span>
@@ -15,9 +15,11 @@
 		</div>
 
         <div class="container pt-lg-md">
+		<br>
             <div class="row justify-content-center">
-				<div class="card shadow border-0">
-                	<div class="col-lg-12">
+			<div class="col-lg-12">
+				<div class="card bg-white shadow border-1">
+                	
 					<div class="row">
 						<div class="col-12 col-lg-6">
 							<div class="cause-wrap  flex-wrap justify-content-between">
@@ -95,7 +97,7 @@
 						<div class="cause-wrap d-flex flex-wrap justify-content-between">
 							<header class="entry-header  flex-wrap align-items-center ">
 							<br>
-							<h3 class="entry-title w-100 m-0 text-center">Perfis de Acesso</h3>
+							<h3 class="entry-title w-100 m-0 text-center px-2">Perfis de Acesso</h3>
 								
 							</header><!-- .entry-header -->
 							
