@@ -1,18 +1,21 @@
 <section class="section section-lg">
    
 <div class="container">
-    <div class="row">
+   
         
-        <div class="row">
+        <div class="row d-flex justify-content-center ">
             @forelse($galerias as $g)
 			
 			
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb">
-			<div class="hovereffect">
-				<img class="img-responsive" src="{{$g->aws_url}}" alt="{{$g->legenda}}" style="width:355px; height:255px;">
-				<div class="overlay">				   
-				   <a class="info thumbnail" data-toggle="modal" data-image="{{$g->aws_url}}" data-target="#image-gallery" href="{{$g->aws_url}}">
-				   <i class="ni ni-image"></i>
+		<div class="col-xs-12 thumb">
+             <div class="col-xs-12 hovereffect ">
+                <img class="img-fluid" src="{{$g->aws_url}}" alt="{{$g->legenda}}" style="width:255px; height:255px;">
+                
+				<div class="overlay " >				   
+				   <a class="info thumbnail " data-toggle="modal" data-image="{{$g->aws_url}}" data-target="#image-gallery" href="{{$g->aws_url}}">
+                   <i class="ni ni-image "></i>
+                   
+                   
 				   </a>
 				</div>
 			</div>
@@ -46,8 +49,8 @@
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <img id="image-gallery-image" class="img-responsive col-md-12 " src="" style="width:100%; height:80%;">
+                    <div class="">
+                        <img id="image-gallery-image" class="img-fluid " src="" style="width:100%; height:auto;">
                     </div>
                      {{--<div class="modal-footer">--}}
                      {{--    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>--}}
@@ -59,7 +62,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 </div>
 
 </section>
@@ -75,6 +78,7 @@ overflow:hidden;
 position:relative;
 text-align:center;
 cursor:default;
+
 }
 
 .hovereffect .overlay {
@@ -92,9 +96,10 @@ transition:all .4s ease-in-out
 
 .hovereffect img {
 display:block;
-position:relative;
+/*position:relative;*/
 -webkit-transition:all .4s linear;
 transition:all .4s linear;
+margin: 2px;
 }
 
 .hovereffect h2 {
