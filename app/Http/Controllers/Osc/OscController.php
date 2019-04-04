@@ -12,6 +12,7 @@ use Alert;
 use Throwable;
 use Storage;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\CreateOscRequest;
 
 class OscController extends Controller
 {
@@ -43,7 +44,7 @@ class OscController extends Controller
     }
 
 
-    public function store(Request $request){
+    public function store(CreateOscRequest $request){
 
 
         $result = DB::transaction(function() use ($request) {

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Projeto;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateProjetoRequest;
 use Alert;
 use Throwable;
 
@@ -50,10 +51,15 @@ class ProjetosController extends Controller
     }
 
 
-    public function store(Request $request){
+    public function store(CreateProjetoRequest $request){
 
         if( ($request->banco_docacao == null) && ($request->banco_patrocinio == null) ){
             Alert::warning('Voce Precisa inserir dados bancários','Ops')->persistent('ok');
+            return redirect()->back()->withInput($request->all());
+        }
+
+        if($request->valor_meta > $request->valor_projeto){
+            Alert::warning('O valor da Meta não pode ser maior que o valor do Projeto','Ops')->persistent('ok');
             return redirect()->back()->withInput($request->all());
         }
 

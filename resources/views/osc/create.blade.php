@@ -14,6 +14,7 @@
                     <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Instituição. Preencha com cuidado, pois elas serão enviadas para os patrocinadores/doadores.
                     </p>
                     <p class="text-white font-weight-300">Campos com * são obrigatórios</p>
+                    
 
                 </div>
             </div>
@@ -88,9 +89,14 @@
                                 <p class="text-primary">Dados Gerais</p>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
+                                <label for="" class="col-sm-4 col-form-label text-right {{ $errors->has('nome_fantasia') ? 'is-invalid' : '' }}">Nome Fantasia</label>
                                 <div class="col-sm-8">
                                     {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('nome_fantasia'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('nome_fantasia') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -231,6 +237,11 @@
                                     <label for="" >Conte-nos sua história:</label>
                                     {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
                                     <span class='caracteres1'></span>
+                                    @if ($errors->has('historia'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('historia') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="">Os objetivos que deseja atingir</label>

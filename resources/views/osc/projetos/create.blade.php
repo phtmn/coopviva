@@ -63,6 +63,11 @@
                                         <label for="" class="col-sm-3 col-form-label text-right">Valor de Meta</label>
                                         <div class="col-md-5">
                                             {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_meta']) !!}
+                                            @if ($errors->has('valor_meta'))
+                                                <span class="text-danger" role="alert">
+                                                    <strong>{{ $errors->first('valor_meta') }}</strong>
+                                                </span>
+                                             @endif
                                         </div>
                                     </div>
 
