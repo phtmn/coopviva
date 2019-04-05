@@ -3,24 +3,20 @@
 <div class="container">
    
         
-        <div class="row d-flex justify-content-center ">
-            @forelse($galerias as $g)
-			
-			
-		<div class="col-xs-12 thumb">
-             <div class="col-xs-12 hovereffect ">
-                <img class="img-fluid" src="{{$g->aws_url}}" alt="{{$g->legenda}}" style="width:255px; height:255px;">
-                
-				<div class="overlay " >				   
-				   <a class="info thumbnail " data-toggle="modal" data-image="{{$g->aws_url}}" data-target="#image-gallery" href="{{$g->aws_url}}">
-                   <i class="ni ni-image "></i>
-                   
-                   
-				   </a>
-				</div>
-			</div>
-		</div>
-			
+      <div class="row d-flex justify-content-center ">
+         @forelse($galerias as $g)
+
+        <div class="col-xs-12 "><!--corpo-da-galeria-->
+			    <div class="col-xs-12 hovereffect">
+                <div>
+              
+                    <a href="{{$g->aws_url}}" data-fancybox="gallery" data-caption="{{$g->legenda}}" class="">
+                            <img src = "{{$g->aws_url}}" class="img-fluid " alt = "" style="width:255px; height:255px;" />
+                            
+                    </a>
+                </div>  
+            </div>
+        </div><!--//corpo-da-galeria-->
 			{{--	<hr>  --}}
             {{--<div class="col-lg-3 col-md-4 col-xs-6 thumb"> --}}
                 {{--<a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""--}}
@@ -33,43 +29,24 @@
             {{--</div> --}}
             @empty
             <p>não há fotos para exibir</p>
-            @endforelse
-        </div>
+            @endforelse                  
+  </div><!---/row--->
+</div><!--/container-->
 
 
-        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="image-gallery-title">
-						{{$g->legenda ?? ''}}
-						
-						
-						</h4>
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                        </button>
-                    </div>
-                    <div class="">
-                        <img id="image-gallery-image" class="img-fluid " src="" style="width:100%; height:auto;">
-                    </div>
-                     {{--<div class="modal-footer">--}}
-                     {{--    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>--}}
-                     {{--    </button>--}}
-
-                      {{--   <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>--}}
-                      {{--   </button>--}}
-                    {{-- </div>--}}
-                </div>
-            </div>
-        </div>
-    
-</div>
-
+<script>
+    $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+    });
+    $().fancybox({
+    selector : '.imglist a:visible'
+    }); 
+</script>
 </section>
 
 
 @section('css')
-    <style>
+<style>
 .hovereffect {
 width:100%;
 height:100%;
@@ -160,6 +137,9 @@ transform:translatey(0);
 transition-delay:.2s;
 }
 
-    </style>
+</style>
+<!--.:::::::carregamento-da-galleria::::::::.-->
+<script src = "// code.jquery.com/jquery-3.2.1.min.js"> </script>
+<script src = "jquery.fancybox.min.js"> </script>
 @stop
 
