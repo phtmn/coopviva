@@ -22,16 +22,18 @@
 							<td>R$ {{ number_format($p->valor_projeto,2,',','.')}}</td>
 							<td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
 							<td>
-								<a href="{{route('detalhe.projeto',$p->id)}}" class="btn btn-dark"> Saiba Mais</a>
+								<a href="{{route('detalhe.projeto',$p->id)}}" class="btn btn-dark " > Saiba Mais</a>
 							</td>
 						</tr>
 						@empty
 							<p>Nenhum projeto Cadastrado</p>
 						@endforelse
+							
+						
 					</tbody>
 
 			 </table>
-
+<a  class="btn btn-dark " data-target="#modal-default-projeto" data-toggle="modal"> Saiba Maaaais</a>
         </div>
 		<hr color="white">
 		

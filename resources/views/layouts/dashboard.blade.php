@@ -116,6 +116,8 @@
     </nav>
     <!-- Header -->
     @yield('cabecalho')
+	
+	
     <!-- Page content -->
     <div class="container-fluid mt--7">
         @yield('conteudo')

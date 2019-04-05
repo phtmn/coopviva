@@ -1,6 +1,6 @@
 <ul class="navbar-nav">
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('osc.index')}}">
             <i class="ni ni-tv-2 text-primary"></i> Dashboard
         </a>
     </li>

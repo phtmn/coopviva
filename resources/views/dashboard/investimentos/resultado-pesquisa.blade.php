@@ -22,6 +22,8 @@
                 </label>
                 </div>   
                 <div class="form-group col-md-6">
+				
+				 
                     <label for=""><b>{{$d->sigla_osc}} - {{$d->nome_fantasia}} </b></label>
                    <p> <label for=""><strong>Ano de Fundação:</strong> {{$d->ano_fundacao}}</label>
                     <label for=""><strong>CNAE:</strong> {{$d->cnae}}</label> </p>
