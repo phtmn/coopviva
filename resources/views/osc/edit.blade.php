@@ -18,7 +18,7 @@
                         @forelse($metas->unique('objetivo_id') as $obj)
                             <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
                         @empty
-                            <p class="text-danger font-weight-500">Você não selecionou nenhum objetivo da agenda 2030</p>
+                            <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p>
                         @endforelse
                     </div>
 

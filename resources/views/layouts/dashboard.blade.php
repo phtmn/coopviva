@@ -78,12 +78,23 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid">
             <!-- Brand -->
+			
+			<ul class="navbar-nav align-items-center d-none d-md-flex">
+                <li class="nav-item dropdown">
+				<a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" data-toggle="tooltip" data-placement="right" title="Em breve"><i class="ni ni-bell-55 "></i> </a>
+                
+                    </a>
+                    
+                </li>
+            </ul>
+			
             @if(auth()->user()->osc())
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{route('detalhe.osc',auth()->user()->osc()->id)}}"><i class="ni ni-world-2 "></i> Landing Page - Veja suas informações no site</a>
+            <a class="h4 mb-0 text-white d-none d-lg-inline-block" href="{{route('detalhe.osc',auth()->user()->osc()->id)}}"><i class="ni ni-world-2 "></i> <i class="font-weight-bold 900">Landing Page </i></a>
             <!-- Form -->
             @endif
             <!-- User -->
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
+			<ul class="navbar-nav align-items-center d-none d-md-flex">
+				
                 <li class="nav-item dropdown">
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
@@ -111,9 +122,15 @@
                         </a>
                     </div>
                 </li>
+				
             </ul>
+			
+            
+			
         </div>
+		
     </nav>
+	
     <!-- Header -->
     @yield('cabecalho')
 	

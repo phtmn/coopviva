@@ -12,7 +12,7 @@
                     <h1 class="display-2 text-white">Olá, {{auth()->user()->apelido}}</h1>
                     <p class="text-white">Para que possamos viabilizar melhor seus recursos, vamos precisar colher dados importantes. Quanto mais dados e informações inserir, mais chances de sucesso com patrocinadores/doadores terá.</p>
                     <p class="text-white">Engajamento está diretamente ligado a transparência.</p>
-                    <p class="text-white">Mostre  aqui todo o seu talento e força e vamos construir essa rede de cooperação viva e cidadã.</p>
+                    <p class="text-white">Mostre aqui todo o seu talento e força e vamos construir essa rede de cooperação viva e cidadã.</p>
                     <p class="text-white font-weight-500">Boa sorte!</p>
                     <a href="{{ route('osc.create') }}" class="btn btn-outline-success">Preencher Dados</a>
                 </div>

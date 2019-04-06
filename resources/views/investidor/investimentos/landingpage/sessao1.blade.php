@@ -8,7 +8,7 @@
                         <div class="card card-lift--hover shadow border-0">
                             <div class="card-body py-5  mt-3 mx-3">
                                 
-                                <h5 class="text-primary text-uppercase">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
+                                <h5 class="text-primary text-uppercase text-center">SOU UMA ORGANIZAÇÃO SEM FINS LUCRATIVOS</h5>
 								
                                 <p class="description mt-3"><p align="justify" style="text-indent: 25px;">{{$osc->historia ?? ''}}</p></p>
                                 <div>

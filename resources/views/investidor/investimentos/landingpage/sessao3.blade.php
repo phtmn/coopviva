@@ -28,7 +28,7 @@
                 {{--</a> --}}
             {{--</div> --}}
             @empty
-            <p>não há fotos para exibir</p>
+            <p class="font-weight-900 text-default">#não há Fotos para exibir!</p>
             @endforelse                  
   </div><!---/row--->
 </div><!--/container-->

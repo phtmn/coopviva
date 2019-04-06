@@ -2,7 +2,7 @@
 
 @section('cabecalho')
 
-    @include('layouts.partes.cards')
+    @include('layouts.partes.dashboard')
 
 @stop
 

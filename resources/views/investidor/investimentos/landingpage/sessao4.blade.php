@@ -26,7 +26,7 @@
 							</td>
 						</tr>
 						@empty
-							<p>Nenhum projeto Cadastrado</p>
+							<p class="font-weight-900 text-white">#não há Projetos para exibir!</p>
 						@endforelse
 							
 						
