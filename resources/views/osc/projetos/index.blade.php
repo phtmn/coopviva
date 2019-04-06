@@ -61,7 +61,7 @@
                                     </td>
                                 </tr>
                             @empty
-                                <p style="color:red">Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                                <p  class="text-warning font-weight-bold 900" style="text-indent: 25px;">Você ainda não cadastrou nenhum Projeto! <span></span></p>
                             @endforelse
                         </tbody>
                     </table>

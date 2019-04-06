@@ -1,14 +1,15 @@
-<div class="row mt-5">
-		<div class="col-xl-6">
+
+		<div class="col-xl-6 mt-5">
           <div class="card shadow">
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Investimentos recebidos na sua <b>Organização </b></h3>
+					
+                  <h3 class="mb-0">Investimentos recebidos em <b>SIGLA </b></h3>
                 </div>
-                <!--<div class="col text-right"> -->
-                <!--  <a href="#!" class="btn btn-sm btn-primary">See all</a> -->
-                <!--  </div> -->
+                <div class="col text-right"> 
+                <a href="#" class="btn btn-sm text-white bg-yellow"><i class="fas fa-chart-bar"></i></a>
+                 </div> 
               </div>
             </div>
             <div class="table-responsive">
@@ -43,16 +44,17 @@
 
 
 
-        <div class="col-xl-6 mb-5 mb-xl-0">
+        <div class="col-xl-6 mb-5 mb-xl-0 mt-5">
           <div class="card shadow">
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
+				
                   <h3 class="mb-0">Investimentos recebidos em <b>Projetos</b></h3>
                 </div>
-               <!-- <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                </div> -->
+                <div class="col text-right">
+                  <a href="#" class="btn btn-sm text-white bg-yellow"><i class="fas fa-chart-bar"></i></a>
+                </div> 
               </div>
             </div>
             <div class="table-responsive">
@@ -87,6 +89,6 @@
           </div>
         </div>
         
-      </div>
+   
       
-          
+        

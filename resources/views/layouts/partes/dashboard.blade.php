@@ -27,8 +27,9 @@
                       {{--  @endforelse --}}
                     </div>
 					 <!-- ODS -->
+
 					 @include('layouts.partes.dashboard.sessao1')
-					 
+					
 					  <!-- ODS -->
 					 @include('layouts.partes.dashboard.sessao2')
 					 
