@@ -15,23 +15,30 @@
 									<hr>
 									
 									<div class="d-flex justify-content-center mb-2 ">
-						
-										<a href="{{ $osc->site ?? 'https://coopviva.com.br' }}" class="nav-link nav-link-icon" target="_blank"  >
-										<i class="ni ni-world-2  text-Primary"></i>
-										</a>
-										
-										<a href="{{ $osc->facebook ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >
-										<i class="fa fa-facebook  text-Primary"></i>
-										</a>
-										
+
+                                        @if($osc->site)
+                                            <a href="{{ $osc->site ?? 'https://coopviva.com.br' }}" class="nav-link nav-link-icon" target="_blank"  >
+                                            <i class="ni ni-world-2  text-Primary"></i>
+                                            </a>
+                                        @endif
+
+                                        @if($osc->facebook)
+                                            <a href="{{ $osc->facebook ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >
+                                            <i class="fa fa-facebook  text-Primary"></i>
+                                            </a>
+										@endif
+
+                                        @if($osc->instagram)
 										<a href="{{ $osc->instagram ?? '#' }}" class="nav-link nav-link-icon"  target="_blank" >
 										<i class="fa fa-instagram  text-Primary"></i>
 										</a>
-										
+                                        @endif
+
+                                            @if($osc->mapa)
 										<a href="{{ $osc->mapa ?? '#' }}" class="nav-link nav-link-icon"  target="_blank"  >
 										<i class="ni ni-square-pin text-Primary"></i>
 										</a>
-									
+									        @endif
 									</div>	
                                                                       
                                 </div>

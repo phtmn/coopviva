@@ -165,14 +165,14 @@
     <div class="form-group row">
         <label for="" class="col-sm-3 col-form-label text-right"> Cidade </label>
         <div class="col-md-5">
-            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+            {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','readonly']) !!}
         </div>
     </div>
 
     <div class="form-group row">
         <label for="" class="col-sm-3 col-form-label text-right">Estado</label>
         <div class="col-md-2">
-            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'uf','disabled']) !!}
+            {!! Form::text('uf',null,['class'=> 'form-control','id'=>'uf','readonly']) !!}
         </div>
     </div>
 

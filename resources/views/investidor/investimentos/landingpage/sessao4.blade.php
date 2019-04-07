@@ -7,7 +7,8 @@
 			<h1 class="display-3 text-white font-weight-900 ">Nossos Projetos</h1>
         <div class="col-lg-12">
 			 <table class="table table-bordered text-white">
-					<thead class="bg-dark">
+					@isset($projetos)
+				 	<thead class="bg-dark">
 						<tr>
 							<th>Projeto</th>
 							<th>Valor Projeto</th>
@@ -15,6 +16,7 @@
 							<th></th>
 						</tr>
 					</thead>
+				 	@endisset
 				 	<tbody class="font-weight-900">
 						@forelse($projetos as $p)
 						<tr>
@@ -22,18 +24,17 @@
 							<td>R$ {{ number_format($p->valor_projeto,2,',','.')}}</td>
 							<td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
 							<td>
-								<a href="{{route('detalhe.projeto',$p->id)}}" class="btn btn-dark " > Saiba Mais</a>
+								<a href="javascript:void(0)" class="btn btn-dark detalhe-projeto" data-id="{{ $p->id }}" > Saiba Mais</a>
 							</td>
 						</tr>
 						@empty
 							<p class="font-weight-900 text-white">#não há Projetos para exibir!</p>
 						@endforelse
-							
 						
 					</tbody>
 
 			 </table>
-<a  class="btn btn-dark " data-target="#modal-default-projeto" data-toggle="modal"> Saiba Maaaais</a>
+
         </div>
 		<hr color="white">
 		
@@ -49,54 +50,61 @@
           <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
+
+	<div class="modal fade" id="kalahun-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+		<div class="modal-dialog  modal-lg"  role="document">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="nome">Quem é KA LAHUN? </h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<h3>Objetivos</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="objetivos"></p>
+
+					<h3>Resumo</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="resumo"></p>
+
+					<h3>Publico Alvo</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="publico_alvo"></p>
+
+					<h3>Contra Partidas</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="contra_partidas"></p>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 	
-	
-	
-	
-	
-	
-	
-	
-	<div class="modal fade" id="modal-default-projeto" tabindex="-1" role="dialog" aria-labelledby="modal-default-projeto" aria-hidden="true">
-                    <div class="modal-dialog-lg-12"  role="document">
-                       
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="modal-title-default font-weight-900">Título de Projeto</h6>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-							<!-- <div class="form-group text-center font-weight-900"> -->
-                            <!--     <h3 class="font-weight-900"> Título de Projeto </h3> -->
-                                <!--</div> -->
 
-                               <h5>Resumo </h5>
-							   <p class="description mt-3 "><p align="justify" style="text-indent: 25px;"> 
-							   Você sabe o que fazer com o seu lixo? A sociedade como um todo têm se visto diante de um novo dilema: o que fazer com o lixo que produzem. À medida que novas tecnologias são disponibilizadas no mercado, aparelhos são substituídos com uma frequência cada vez maior. Por todo o mundo empresas têm sido responsabilizadas pelo ciclo completo de seus produtos, inclusive após o descarte dos mesmos. Saber o que fazer com o lixo produzido é fundamental para uma sociedade mais próspera e sustentável.
-							   Você sabe o que fazer com o seu lixo? A sociedade como um todo têm se visto diante de um novo dilema: o que fazer com o lixo que produzem. À medida que novas tecnologias são disponibilizadas no mercado, aparelhos são substituídos com uma frequência cada vez maior. Por todo o mundo empresas têm sido responsabilizadas pelo ciclo completo de seus produtos, inclusive após o descarte dos mesmos. Saber o que fazer com o lixo produzido é fundamental para uma sociedade mais próspera e sustentável.
-							   </p></p>
-							   <h5>Público Alvo </h5>
-							   <p class="description mt-3"><p align="justify" style="text-indent: 25px;"> 
-							   Você sabe o que fazer com o seu lixo? A sociedade como um todo têm se visto diante de um novo dilema: o que fazer com o lixo que produzem. À medida que novas tecnologias são disponibilizadas no mercado, aparelhos são substituídos com uma frequência cada vez maior. Por todo o mundo empresas têm sido responsabilizadas pelo ciclo completo de seus produtos, inclusive após o descarte dos mesmos. Saber o que fazer com o lixo produzido é fundamental para uma sociedade mais próspera e sustentável.
-							   </p></p>
-							   <h5>Impactos </h5>
-							   <p class="description mt-3"><p align="justify" style="text-indent: 25px;"> 
-							   Você sabe o que fazer com o seu lixo? A sociedade como um todo têm se visto diante de um novo dilema: o que fazer com o lixo que produzem. À medida que novas tecnologias são disponibilizadas no mercado, aparelhos são substituídos com uma frequência cada vez maior. Por todo o mundo empresas têm sido responsabilizadas pelo ciclo completo de seus produtos, inclusive após o descarte dos mesmos. Saber o que fazer com o lixo produzido é fundamental para uma sociedade mais próspera e sustentável.
-							    </p></p>
-							   <h5>Contrapartidas </h5>
-							   <p class="description mt-3"><p align="justify" style="text-indent: 25px;"> 
-							   Você sabe o que fazer com o seu lixo? A sociedade como um todo têm se visto diante de um novo dilema: o que fazer com o lixo que produzem. À medida que novas tecnologias são disponibilizadas no mercado, aparelhos são substituídos com uma frequência cada vez maior. Por todo o mundo empresas têm sido responsabilizadas pelo ciclo completo de seus produtos, inclusive após o descarte dos mesmos. Saber o que fazer com o lixo produzido é fundamental para uma sociedade mais próspera e sustentável.
-							   </p></p>
-                            </div>
+@section('js')
 
-                          <!--  <div class="modal-footer text-center">
-                               <button type="submit" class="btn btn-success btn-block">Sim EU QUERO</button>
-                            </div> -->
+	<script>
+		$('body').on('click', '.detalhe-projeto', function () {
+			var projeto_id = $(this).data('id');
+				$.get("{{ url('sim_eu_quero/projeto') }}" +'/' + projeto_id, function (data) {
 
-                        </div>
-                        
-                    </div>
-                </div>
+				$('#kalahun-modal').modal('show');
+					$('#nome').html(data.nome_projeto);
+					$('#objetivos').html(data.objetivos);
+					$('#resumo').html(data.resumo);
+					$('#publico_alvo').html(data.publico_alvo);
+					$('#contra_partidas').html(data.contra_partidas);
+
+			})
+		});
+	</script>
+
+
+@stop
+	
+	
+	
+	
+	
+	

@@ -20,8 +20,8 @@ class PerfilController extends Controller
 
     public function perfil(){
         
-        $perfil = Perfil::find(auth()->user()->id);
-
+        $perfil = auth()->user()->perfil()->first();
+        //dd($perfil);
         if($perfil){
             return view('investidor.perfil.edit',compact('perfil'));
         }

@@ -19,9 +19,13 @@ class OscController extends Controller
 
     public function index(){
 
-        $osc = OSC::where('user_id',Auth::user()->id)->count();
-        if($osc > 0){
-            return view('osc.painel');
+        $osc = auth()->user()->osc();
+        if($osc){
+            return view('osc.painel',[
+                'osc'           => $osc,
+                'projetos'      => $osc->projetos()->count(),
+                'metas'         => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
+            ]);
         }
         return view('osc.bemvindo');
     }
@@ -56,10 +60,10 @@ class OscController extends Controller
                        'nome_fantasia'         => $request->nome_fantasia,
                        'cnpj'                  => $request->cnpj,
                        'ano_fundacao'          => $request->ano_fundacao,
-                       'sigla'                => $request->sigla,
-                       'cnaes'                => $request->cnae,
+                       'sigla'                 => $request->sigla,
+                       'cnaes'                 => $request->cnae,
                        'responsavel'           => $request->responsavel,
-                       'email'                => $request->email,
+                       'email'                 => $request->email,
                        'telefone'              => $request->telefone,
                        'site'                  => $request->site,
                        'facebook'              => $request->facebook,
@@ -97,7 +101,7 @@ class OscController extends Controller
 
 
                 Alert::success('Os dados da Organização foram salvos', 'Sucesso')->persistent('Ok');
-                return redirect()->route('galeria.index');
+                return redirect()->route('osc.create');
 
             } catch (Throwable $t) {
                 Alert::error('Algum Erro ocorreu'.$t->getMessage(), 'Erro')->persistent('Ok');

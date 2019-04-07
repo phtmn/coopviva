@@ -89,7 +89,7 @@
                                 <p class="text-primary">Dados Gerais</p>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right {{ $errors->has('nome_fantasia') ? 'is-invalid' : '' }}">Nome Fantasia</label>
+                                <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
                                 <div class="col-sm-8">
                                     {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
                                     @if ($errors->has('nome_fantasia'))
@@ -99,26 +99,43 @@
                                     @endif
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
-                                <div class="col-sm-4">
-                                    {!! Form::text('sigla',null,['class'=>'form-control']) !!}
+                                <label for="" class="col-sm-4 col-form-label text-right">Sigla</label>
+                                <div class="col-sm-3">
+                                    {!! Form::text('sigla',null,['class'=>'form-control input']) !!}
+                                    @if ($errors->has('sigla'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('sigla') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">
                                     <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação
                                 </label>
                                 <div class="col-sm-3">
-                                    {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
+                                    {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'ano',  'placeholder' => 'Ano ex: 2002']) !!}
+                                    @if ($errors->has('ano_fundacao'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('ano_fundacao') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">
                                     <strong> * </strong>CNPJ
                                 </label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'ano','id'=>'cnpj']) !!}
+                                    @if ($errors->has('cnpj'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('cnpj') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 
@@ -126,6 +143,11 @@
                                 <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
                                 <div class="col-sm-8">
                                     {!! Form::text('responsavel',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('responsavel'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('responsavel') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 
@@ -133,6 +155,11 @@
                                 <label for="" class="col-sm-4 col-form-label text-right">E-mail </label>
                                 <div class="col-sm-8">
                                     {!! Form::text('email',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -175,14 +202,14 @@
                             <div class="form-group row">
                                 <label for="cidade" class="col-sm-4 col-form-label text-right">Cidade</label>
                                 <div class="col-sm-8">
-                                    {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','disabled']) !!}
+                                    {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','readonly']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="uf" class="col-sm-4 col-form-label text-right">Estado</label>
                                 <div class="col-sm-3">
-                                    {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','disabled']) !!}
+                                    {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','readonly']) !!}
                                 </div>
                             </div>
 
@@ -218,16 +245,32 @@
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}
                                     {!! Form::text('agencia_investimentos',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('agencia_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('agencia_investimentos') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     {!! Form::label('Conta') !!}
                                     {!! Form::text('conta_investimentos',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('conta_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('conta_investimentos') }}</strong>
+                                        </span>
+                                    @endif
+
                                 </div>
 
                                 <div class="form-group col-md-2">
                                     {!! Form::label('OP') !!}
                                     {!! Form::text('op_investimentos',null,['class'=>'form-control','id'=>'op']) !!}
+                                    @if ($errors->has('op_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('op_investimentos') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 
@@ -283,20 +326,20 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Link do Site </label>
                                 <div class="col-md-8">
-                                    {!! Form::text('site',null,['class'=>'form-control']) !!}
+                                    {!! Form::url('site',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
+                                    {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'exemplo: https://youtube.com/urlDoVideo']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
+                                    {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'exemplo: https://facebook.com.br/suainstituicao']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">

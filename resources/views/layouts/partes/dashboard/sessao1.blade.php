@@ -25,7 +25,7 @@
                   <tr>
                    
 					 <td class="text-center font-weight-bold">
-                      0
+                       {{ $metas->unique('objetivo_id')->count() }}
                     </td>	
 				   <th scope="row">
                       <div class="icon icon-shape text-white shadow">
@@ -67,7 +67,7 @@
                 <tbody>
                   <tr>
 				   <td class="text-center font-weight-bold">
-                      0
+                      {{ $metas->count() ?? '0' }}
                     </td>
                     <th scope="row">
                       <div class="icon icon-shape text-white shadow">

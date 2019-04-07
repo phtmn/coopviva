@@ -44,11 +44,13 @@ class InvestimentosController extends Controller
 
         $projeto = Projeto::find($id);
 
-        return view('investidor.investimentos.landing_projeto',[
-            'projeto'   => Projeto::find($id),
-            'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
-            'dias'      => Carbon::parse($projeto->inicio_captacao)->diffInDays($projeto->fim_captacao)
-        ]);
+        return response()->json($projeto);
+
+//        return view('investidor.investimentos.landing_projeto',[
+//            'projeto'   => Projeto::find($id),
+//            'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
+//            'dias'      => Carbon::parse($projeto->inicio_captacao)->diffInDays($projeto->fim_captacao)
+//        ]);
     }
 
     public function callback(Request $request){
