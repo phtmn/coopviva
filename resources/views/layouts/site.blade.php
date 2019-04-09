@@ -22,7 +22,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
 	<!---:::fancybox.mim.css:::-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110332879-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-110332879-2');
+	</script>
 	@yield('css')
 
 </head>
@@ -359,6 +366,8 @@
 </div>
 <!-- /Modal Login -->
 <!-- Core -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
 <script src="//platform-api.sharethis.com/js/sharethis.js#property=5c9271b572e5930011671391&product=inline-share-buttons"></script>
 <script src="{{asset('vendor/argon-site/assets/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/argon-site/assets/vendor/popper/popper.min.js')}}"></script>

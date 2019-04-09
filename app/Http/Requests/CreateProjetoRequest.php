@@ -33,7 +33,6 @@ class CreateProjetoRequest extends FormRequest
             'objetivo'              => 'min:100|max:500',
             'justificativa'         => 'min:100|max:500',
             'publico_alvo'          => 'min:100|max:500',
-            'publico_alvo'          => 'min:100|max:500',
             'impactos_esperados'    => 'min:100|max:500',
             'contra_partidas'       => 'min:100|max:500',
 

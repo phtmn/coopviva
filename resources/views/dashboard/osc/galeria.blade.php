@@ -47,11 +47,24 @@
 		<div class="col-md-4">
             <div class="card shadow">
                 <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                    
-					
-					<div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-primary m-4" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo">Upload Logo</a>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <a href="#">
+                                    @if(!$osc->logo)
+                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                                    @else
+                                        <img src="{{$osc->logo}}" class="">
+                                    @endif
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
+                        </div>
+                    </div>
 					
                 </div>
                 <div class="container d-flex">
@@ -78,7 +91,6 @@
                             {!! Form::file('file',null,['class'=>'form-control']) !!}
                         </div>
                     </div>
-					{{-- <input type="hidden" name="osc_id" value="{{$osc->id}}"> --}}
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Enviar</button>
                         <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>

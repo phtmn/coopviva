@@ -209,7 +209,7 @@ class OscController extends Controller
 
     public function uploadFoto(Request $request){
 
-        $osc = OSC::find($request->osc_id);
+        $osc = auth()->user()->osc();
 
         $image = $request->file('file');
         $imageName = 'LOGOOSC-'.$osc->id.time();
@@ -222,7 +222,7 @@ class OscController extends Controller
             Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
             $imageNameAWS  = Storage::disk('s3')->url($imageName);
 
-            OSC::find($request->osc_id)->update(['logo' => $imageNameAWS ]);
+            OSC::find($osc->id)->update(['logo' => $imageNameAWS ]);
             return redirect()->back();
         }catch (\Exception $e){
             dd($e->getMessage());

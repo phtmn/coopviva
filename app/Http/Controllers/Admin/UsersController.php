@@ -22,4 +22,11 @@ class UsersController extends Controller
             'perfil'    => $user->perfil()->first(),
         ]);
     }
+
+    public function active($id){
+        $user = User::findOrFail($id)->update(['verified' => 1]);
+        if($user){
+            return redirect()->route('admin-users.index')->with('msg', 'O cadastro foi ativado!');
+        }
+    }
 }
