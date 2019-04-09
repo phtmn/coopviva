@@ -116,6 +116,10 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
+            <div class="mt--100">
+                @include('admin.messages.alertas')
+            </div>
+
             @yield('content')
 
         </div>

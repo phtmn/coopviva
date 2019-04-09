@@ -1,4 +1,4 @@
-@extends('osc.painel')
+@extends('layouts.dashboard')
 
 @section('cabecalho')
     <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">

@@ -15,7 +15,7 @@ class Projeto extends Model
         'valor_meta','imagem','data_inicio','data_final','lei_incentivo','lei','ambito','artigo','num_registro1','num_registro2',
         'segmento','resumo','objetivos','justificativa','publico_alvo','impactos_esperados','contra_partidas','prop_nome',
         'prop_documento','prop_telefone1','prop_telefone2','prop_email1','prop_email2','banco_doacao','agencia_doacao','conta_doacao',
-        'op_doacao','banco_patrocinio','agencia_patrocinio','conta_patrocinio','op_patrocinio','status'];
+        'op_doacao','banco_patrocinio','agencia_patrocinio','conta_patrocinio','op_patrocinio','status','ativo'];
 
     public function osc(){
         return $this->belongsTo(Osc::class);

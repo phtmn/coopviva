@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="row">
+
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
@@ -50,6 +51,9 @@
                                     <td>{{ date('d/m/Y',strToTime($d->created_at)) }}</td>
                                     <td>
                                         <a href="{{route('admin-users.show',$d->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Detalhes</a>
+                                        @if($d->verified == 0)
+                                        <a href="{{route('users.active',$d->id)}}" class="btn btn-success btn-xs"><i class="fa fa-eye"></i> Ativar</a>
+                                        @endif
                                     </td>
                                 </tr>
                             @empty

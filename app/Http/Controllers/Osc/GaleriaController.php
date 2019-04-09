@@ -18,6 +18,7 @@ class GaleriaController extends Controller
             return redirect()->route('osc.create');
         }
         return view('dashboard.osc.galeria',[
+            'osc'           => $osc,
             'galerias'      => Galeria::where('osc_id',Auth::user()->osc()->id)->get(),
             'projetos'      => Projeto::where('osc_id',$osc->id)->get()->pluck('nome','id')
 
