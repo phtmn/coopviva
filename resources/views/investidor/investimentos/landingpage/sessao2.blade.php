@@ -5,7 +5,7 @@
       <div class="container pt-lg pb-100 ">
         <div class="row text-center justify-content-center">
          <h2 class="display-3 text-white">Qual problema sua organização resolve?</h2>
-		 <p class="lead text-white">{{ $osc->impactos ?? 'Aqui todas as instituições com seus respectivos projetos se inscrevem através de um cadastro completo e parametrizado conforme exigências de organismos internacionais de sustentabilidade. Isso significa que você pode facilmente capturar informaçõe. '}} </p>
+		 <p class="lead text-white">{{ $osc->impactos ?? 'Aqui todas as instituições com seus respectivos projetos se inscrevem através de um cadastro completo e parametrizado conforme exigências de organismos internacionais de sustentabilidade. '}} </p>
 		 
         </div>
         <div class="row row-grid mt-4">
@@ -15,7 +15,7 @@
                <H3 class="text-white text-center font-weight-900 mt-5"> Missão</h3>
             </div>
             
-            <p align="justify"  style="text-indent: 15px;"  class="font-weight-500 text-white mt-5">{{$osc->missao ?? 'Aqui todas as instituições com seus respectivos projetos se inscrevem através de um cadastro completo e parametrizado conforme exigências de organismos internacionais de sustentabilidade. Isso significa que você pode facilmente capturar informaçõe.'}}</p>
+            <p align="justify"  style="text-indent: 15px;"  class="font-weight-500 text-white mt-5">{{$osc->missao ?? 'Aqui todas as instituições com seus respectivos projetos se inscrevem através de um cadastro completo e parametrizado conforme exigências de organismos internacionais de sustentabilidade.'}}</p>
 			 <hr color="white">
 			 <div class="d-flex justify-content-center mb-1 ">
                 <div class="p-2 mt-0 bd-highlight text-white font-weight-900 text-center">{{ $metas->count() }} Meta(s)</div>

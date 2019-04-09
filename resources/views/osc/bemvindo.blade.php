@@ -14,7 +14,7 @@
                     <p class="text-white">Engajamento está diretamente ligado a transparência.</p>
                     <p class="text-white">Mostre aqui todo o seu talento e força e vamos construir essa rede de cooperação viva e cidadã.</p>
                     <p class="text-white font-weight-500">Boa sorte!</p>
-                    <a href="{{ route('osc.create') }}" class="btn btn-outline-success">Preencher Dados</a>
+                    <a href="{{ route('osc.create') }}" class="btn btn-outline-success">Preencher Perfil</a>
                 </div>
             </div>
         </div>

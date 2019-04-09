@@ -14,13 +14,13 @@
                     {{--<p class="text-white mt-0 mb-2">Precisamos de algumas informações sobre sua Instiuição, preencha o formulario abaixo. Ele é--}}
                         {{--Pouco grande, mas vas nos ajudar!--}}
                     {{--</p>--}}
-                    <div class="ods">
-                        @forelse($metas->unique('objetivo_id') as $obj)
-                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
-                        @empty
-                            <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p>
-                        @endforelse
-                    </div>
+                    {{--<div class="ods"> --}}
+                    {{--    @forelse($metas->unique('objetivo_id') as $obj)--}}
+                    {{--        <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a> --}}
+                    {{--    @empty --}}
+                    {{--        <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p> --}}
+                    {{--    @endforelse --}}
+                    {{-- </div>--}}
 
                 </div>
             </div>
@@ -31,55 +31,55 @@
 @section('conteudo')
     <div class="container mt-5">
         <div class="row">
-            <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
-                <div class="card card-profile shadow">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 order-lg-2">
-                            <div class="card-profile-image">
-                                <a href="#">
-                                    @if(!$osc->logo)
-                                        <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
-                                    @else
-                                        <img src="{{$osc->logo}}" class="">
-                                    @endif
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0 pt-md-4">
-                        <div class="row">
-                            <div class="col">
-                                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-                                    <div>
-                                        <span class="heading">{{ $metas->count() ?? '0' }}</span>
-                                        <span class="description">Metas</span>
-                                    </div>
-                                    <div>
-                                        <span class="heading">{{ $metas->unique('objetivo_id')->count() }}</span>
-                                        <span class="description">Objetivos</span>
-                                    </div>
-                                    <div>
-                                        <span class="heading">{{ $projetos }}</span>
-                                        <span class="description">Projetos</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="embed-responsive embed-responsive-1by1">
-                                <iframe class="embed-responsive-item" src="{{$osc->video_institucional}}" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		{{--<div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">--}}
+                {{--<div class="card card-profile shadow">--}}
+                    {{--<div class="row justify-content-center">--}}
+                        {{--<div class="col-lg-3 order-lg-2">--}}
+                            {{--<div class="card-profile-image">--}}
+                                {{--<a href="#">--}}
+                                    {{--@if(!$osc->logo)--}}
+                                        {{--<img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">--}}
+                                    {{--@else--}}
+{{--                                        <img src="{{$osc->logo}}" class="">--}}
+    {{--                                @endif--}}
+        {{--                        </a>--}}
+            {{--                </div>--}}
+                {{--        </div>--}}
+                    {{--</div>--}}
+                    {{--<div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">--}}
+                        {{--<div class="d-flex justify-content-between">--}}
+{{--                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default" title="Abrir modal para ulpoad de logo">Alterar Logo</a>--}}
+    {{--                    </div>--}}
+        {{--            </div>--}}
+            {{--        <div class="card-body pt-0 pt-md-4">--}}
+                {{--        <div class="row">--}}
+                    {{--        <div class="col">--}}
+                        {{--        <div class="card-profile-stats d-flex justify-content-center mt-md-5">--}}
+                            {{--        <div>--}}
+                                {{--        <span class="heading">{{ $metas->count() ?? '0' }}</span>--}}
+                                    {{--    <span class="description">Metas</span>--}}
+                                    </div>--}}
+                                  {{--  <div>--}}
+                                      {{--  <span class="heading">{{ $metas->unique('objetivo_id')->count() }}</span>--}}
+                                        {{--<span class="description">Objetivos</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div>--}}
+{{--                                        <span class="heading">{{ $projetos }}</span>--}}
+    {{--                                    <span class="description">Projetos</span>--}}
+        {{--                            </div>--}}
+            {{--                    </div>--}}
+                {{--            </div>--}}
+                    {{--    </div>--}}
+                        {{--<div class="card">--}}
+                            {{--<div class="embed-responsive embed-responsive-1by1">--}}
+                                {{--<iframe class="embed-responsive-item" src="{{$osc->video_institucional}}" allowfullscreen></iframe>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div> --}}
+            {{--</div> --}}
 
-            <div class="col-xl-8 order-xl-1">
+            <div class="col-xl-12 order-xl-1">
                 {!! Form::model($osc,['route'=> ['osc.store'],'enctype'=>'multipart/form-data']) !!}
 
                 <div class="col-md-12">

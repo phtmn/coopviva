@@ -102,7 +102,7 @@
                   <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">{{auth()->user()->name}}</span>
+                                <span class="mb-0 text-sm  font-weight-bold"></span>
                             </div>
                         </div>
                     </a>

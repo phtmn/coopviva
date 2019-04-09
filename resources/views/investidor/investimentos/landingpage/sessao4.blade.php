@@ -6,9 +6,9 @@
         <div class="row text-center justify-content-center">
 			<h1 class="display-3 text-white font-weight-900 ">Nossos Projetos</h1>
         <div class="col-lg-12">
-			 <table class="table table-bordered text-white">
+			 <table class="table text-white">
 					@isset($projetos)
-				 	<thead class="bg-dark">
+				 	<thead class="">
 						<tr>
 							<th>Projeto</th>
 							<th>Valor Projeto</th>

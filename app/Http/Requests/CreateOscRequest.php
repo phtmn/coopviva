@@ -27,21 +27,31 @@ class CreateOscRequest extends FormRequest
             'nome_fantasia' => 'required|min:3|max:100',
             'responsavel'   => 'required|min:3|max:100',
             'email'         => 'email|unique:oscs,id',
-            'historia'      => 'max:500',
-            'objetivos'     => 'max:500',
-            'impactos'      => 'max:500',
-            'missao'        => 'max:500',
-            'valores'       => 'max:500',
+            'historia'      => 'required|max:250',
+            'objetivos'     => 'max:250',
+            'impactos'      => 'required|max:250',
+            'missao'        => 'required|max:250',
+			'visao'        	=> 'required|max:250',
+            'valores'       => 'max:250',
             'espaco_livre'  => 'max:500',
+        ];
+    }
+	
+	public function attributes(){
+        return [
+            'historia'         	=> 'história',
+			'missao'         	=> 'missão',
+            'visao' 			=> 'visão',
+			'espaco_livre' 		=> 'espaço livre'
         ];
     }
 
     public function messages(){
         return [
-            'required' => 'O campo :attribute é obrigatorio',
-            'max:'     => 'O campo :attribute é muito longo',
-            'min'      => 'O campo :attribute é muito curto',
-            'unique'   => 'O campo :attribute já está em uso'
+            'required' => 'Preencha este campo!',
+            'max:'     => 'O campo é muito longo',
+            'min'      => 'O campo é muito curto',
+            'unique'   => 'O campo já está em uso'
         ];
     }    
 }
