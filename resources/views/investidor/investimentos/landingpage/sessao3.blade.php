@@ -1,6 +1,6 @@
 <section class="section section-lg">
    
-<div class="container">
+<div class="container-fluid">
    
         
       <div class="row d-flex justify-content-center ">
@@ -11,7 +11,7 @@
                 <div>
               
                     <a href="{{$g->aws_url}}" data-fancybox="gallery" data-caption="{{$g->legenda}}" class="">
-                            <img src = "{{$g->aws_url}}" class="img-fluid " alt = "" style="width:255px; height:255px;" />
+                            <img src = "{{$g->aws_url}}" class="img-fluid " alt = "" style="width:355px; height:255px;" />
                             
                     </a>
                 </div>  

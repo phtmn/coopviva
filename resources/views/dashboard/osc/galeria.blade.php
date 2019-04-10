@@ -32,9 +32,9 @@
                     <div class="row justify-content-center ">
                     @forelse($galerias as $g)
                                 
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-12 " >
                                 <a href="#">
-                                    <img src="{{asset($g->aws_url)}}" alt="" class="img-fluid border-light img-thumbnail" style="width:200px; height:200px;"  data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}"></a>
+                                    <img src="{{asset($g->aws_url)}}" alt="" class=" img-thumbnail" data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}" style="width:200px; height:150px;" ></a>
                                 <h3 class="entry-title text-center"><a href="{{route('galeria.show',$g->id)}}"><i class="fa fa-trash" style="color:red" data-toggle="tooltip" data-placement="left" title="Remover "></i></a></h3>
                             </div>
                     @empty
