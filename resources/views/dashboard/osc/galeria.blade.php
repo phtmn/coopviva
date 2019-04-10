@@ -8,7 +8,7 @@
         <!-- Header container -->
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
-                <div class="col-lg-12 col-md-10">
+                <div class="col-lg-12 col-md-10 col-xs-12">
                     <h1 class="display-2 text-white">Envie suas fotos</h1>
                    {{-- <p class="text-white mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado
 				   para aprovação da plataforma. --}}
@@ -23,24 +23,26 @@
 
 @section('conteudo')
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-xs-12 col-md-8 col-lg-8">
             <div class="card shadow">
-                <div class="card-header border-0">
+                <div class=" card-header border-0 text-center ">
                      <a href="" class="btn btn-primary m-4" data-toggle="modal" data-target="#modal-default"> Carregar uma Foto</a>
                 </div>
-                <div class="container d-flex">
+                
+                    <div class="row justify-content-center ">
                     @forelse($galerias as $g)
-
-                            <div class="portfolio-cont p-4">
+                                
+                            <div class="col-xs-12 ">
                                 <a href="#">
-                                    <img src="{{asset($g->aws_url)}}" alt="" class="img-responsive border-light img-thumbnail" style="width:50px; height:50px;"  data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}"></a>
+                                    <img src="{{asset($g->aws_url)}}" alt="" class="img-fluid border-light img-thumbnail" style="width:200px; height:200px;"  data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}"></a>
                                 <h3 class="entry-title text-center"><a href="{{route('galeria.show',$g->id)}}"><i class="fa fa-trash" style="color:red" data-toggle="tooltip" data-placement="left" title="Remover "></i></a></h3>
                             </div>
                     @empty
 
                     @endforelse
+                    </div><!--:::/row::::-->
                 </div>
-            </div>
+            
         </div>
 		
 		
