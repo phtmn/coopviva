@@ -26,7 +26,7 @@ class ProjetosController extends Controller
         }
         //dd($osc);
         return view('osc.projetos.index',[
-            'data'  => $osc->projetos()->get()
+            'data'  => $osc->projetos()
         ]);
     }
 
