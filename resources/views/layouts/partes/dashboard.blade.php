@@ -4,15 +4,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-<<<<<<< HEAD
+
                     <h1 class="display-2 text-white">{{$osc->nome_fantasia}}</h1>
                     <p class="text-white mt-0 mb-2">Olá, {{auth()->user()->name}}</p>
-=======
-                    <h1 class="display-2 text-white">{{$osc->nome_fantasia ?? ''}}</h1>
-                    <p class="text-white mt-0 mb-2">Colocar algum texto aquiiii</p>
->>>>>>> 0578bd4b640b8f32a264cca96ff12a3f4a51b7d8
-
-
 {{--                    <div class="ods">--}}
 {{--                        @forelse($metas->unique('objetivo_id') as $obj)--}}
 {{--                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>--}}
@@ -32,7 +26,7 @@
 					 @include('layouts.partes.dashboard.sessao1')
 					
 					  <!-- ODS -->
-{{--					 @include('layouts.partes.dashboard.sessao2')--}}
+                       @include('layouts.partes.dashboard.sessao2')
 					 
 					  <!-- ODS -->
 					 @include('layouts.partes.dashboard.sessao3')

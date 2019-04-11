@@ -110,8 +110,10 @@
 											<br>
 											
                                             <h6 class="text-default text-uppercase text-center"><b>{{$osc->nome_fantasia}}</b></h6>
-											
-                                            <!--<p class="description mt-3 text-white">{{$osc->descricao ?? ''}}</p>-->
+
+                                                @foreach($osc->metas->unique('objetivo_id') as $obj)
+                                                    <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                                                @endforeach
                                             <div>
 												
 																		
@@ -121,7 +123,7 @@
                                         </div>
                                        <div class="card-footer text-center">
 									   <div class="row justify-content-center">
-											
+
 												<div class="mt-3 d-flex justify-content-center ">   
 														<div class="alert alert-info text-center px-2 py-2 " role="alert">
 															<strong>{{$osc->metas()->count() }}</strong> Meta(s)
@@ -146,7 +148,7 @@
                 @endforeach
             </div>
 
-            {{$data->links()}}
+
         </div>
     </div>
 </section>
