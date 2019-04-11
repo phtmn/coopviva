@@ -1,6 +1,6 @@
 $(document).on("input", ".contador1", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 
@@ -9,7 +9,7 @@ $(document).on("input", ".contador1", function () {
 
 $(document).on("input", ".contador2", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 
@@ -18,7 +18,7 @@ $(document).on("input", ".contador2", function () {
 
 $(document).on("input", ".contador3", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 
@@ -27,7 +27,7 @@ $(document).on("input", ".contador3", function () {
 
 $(document).on("input", ".contador4", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 
@@ -36,7 +36,7 @@ $(document).on("input", ".contador4", function () {
 
 $(document).on("input", ".contador5", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 
@@ -45,7 +45,7 @@ $(document).on("input", ".contador5", function () {
 
 $(document).on("input", ".contador6", function () {
    
-    var limite = 250;
+    var limite = 500;
     var caracteresDigitados = $(this).val().length;
     var caracteresRestantes = limite - caracteresDigitados;
 

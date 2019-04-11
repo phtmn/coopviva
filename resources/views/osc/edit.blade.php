@@ -10,17 +10,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">{{$osc->nome_fantasia}}</h1>
-                    {{--<p class="text-white mt-0 mb-2">Precisamos de algumas informações sobre sua Instiuição, preencha o formulario abaixo. Ele é--}}
-                        {{--Pouco grande, mas vas nos ajudar!--}}
-                    {{--</p>--}}
-                    {{--<div class="ods"> --}}
-                    {{--    @forelse($metas->unique('objetivo_id') as $obj)--}}
-                    {{--        <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a> --}}
-                    {{--    @empty --}}
-                    {{--        <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p> --}}
-                    {{--    @endforelse --}}
-                    {{-- </div>--}}
+                     <h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
+                    <p class="text-white mt-0 mb-2">Obrigado por ter preenchido todos os dados de sua Organização. Analizaremos seu cadastro, pois elas serão enviadas para nossa rede de investidores (patrocinadores/doadores).
+                   
 
                 </div>
             </div>
@@ -29,55 +21,9 @@
 @stop
 
 @section('conteudo')
-    <div class="container mt-5">
+    <div class="container mt--7">
         <div class="row">
-		{{--<div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">--}}
-                {{--<div class="card card-profile shadow">--}}
-                    {{--<div class="row justify-content-center">--}}
-                        {{--<div class="col-lg-3 order-lg-2">--}}
-                            {{--<div class="card-profile-image">--}}
-                                {{--<a href="#">--}}
-                                    {{--@if(!$osc->logo)--}}
-                                        {{--<img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">--}}
-                                    {{--@else--}}
-{{--                                        <img src="{{$osc->logo}}" class="">--}}
-    {{--                                @endif--}}
-        {{--                        </a>--}}
-            {{--                </div>--}}
-                {{--        </div>--}}
-                    {{--</div>--}}
-                    {{--<div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">--}}
-                        {{--<div class="d-flex justify-content-between">--}}
-{{--                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default" title="Abrir modal para ulpoad de logo">Alterar Logo</a>--}}
-    {{--                    </div>--}}
-        {{--            </div>--}}
-            {{--        <div class="card-body pt-0 pt-md-4">--}}
-                {{--        <div class="row">--}}
-                    {{--        <div class="col">--}}
-                        {{--        <div class="card-profile-stats d-flex justify-content-center mt-md-5">--}}
-                            {{--        <div>--}}
-                                {{--        <span class="heading">{{ $metas->count() ?? '0' }}</span>--}}
-                                    {{--    <span class="description">Metas</span>--}}
-                                    </div>--}}
-                                  {{--  <div>--}}
-                                      {{--  <span class="heading">{{ $metas->unique('objetivo_id')->count() }}</span>--}}
-                                        {{--<span class="description">Objetivos</span>--}}
-                                    {{--</div>--}}
-                                    {{--<div>--}}
-{{--                                        <span class="heading">{{ $projetos }}</span>--}}
-    {{--                                    <span class="description">Projetos</span>--}}
-        {{--                            </div>--}}
-            {{--                    </div>--}}
-                {{--            </div>--}}
-                    {{--    </div>--}}
-                        {{--<div class="card">--}}
-                            {{--<div class="embed-responsive embed-responsive-1by1">--}}
-                                {{--<iframe class="embed-responsive-item" src="{{$osc->video_institucional}}" allowfullscreen></iframe>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div> --}}
-            {{--</div> --}}
+		
 
             <div class="col-xl-12 order-xl-1">
                 {!! Form::model($osc,['route'=> ['osc.store'],'enctype'=>'multipart/form-data']) !!}
@@ -85,74 +31,74 @@
                 <div class="col-md-12">
                     <div class="card shadow">
                         <div class="card-body bg-transparent">
-                            <p class="text-primary">Dados Gerais</p>
-
+                            <p class="text-primary mt-2">Dados Gerais</p>
+							<hr>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Nome Fantasia</label>
-                                <div class="col-sm-8">
-                                    {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
+                                <label for="" class="col-sm-3 col-form-label text-right">Nome Fantasia <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-sm-9">
+                                    {!! Form::text('nome_fantasia',null,['class'=>'form-control' ,'readonly']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Sigla OSC</label>
-                                <div class="col-sm-4">
+                                <label for="" class="col-sm-3 col-form-label text-right">Sigla </label>
+                                <div class="col-sm-3">
                                     {!! Form::text('sigla',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong title="Ano de Fundação" data-toggle="tooltip"> * </strong> Fundação
+                                <label for="" class="col-sm-3 col-form-label text-right">
+                                    Ano de Fundação
                                 </label>
-                                <div class="col-sm-3">
+                                <div class="col-sm-2">
                                     {!! Form::text('ano_fundacao',null,['class'=>'form-control','id'=>'anofun',  'placeholder' => 'Ano']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">
-                                    <strong> * </strong>CNPJ
+                                <label for="" class="col-sm-3 col-form-label text-right">
+                                    CNPJ
                                 </label>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     {!! Form::text('cnpj',null,['class'=>'form-control','id'=>'ano','id'=>'cnpj']) !!}
                                 </div>
                             </div>
                             
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Responsável Legal</label>
-                                <div class="col-sm-8">
+                                <label for="" class="col-sm-3 col-form-label text-right">Responsável Legal</label>
+                                <div class="col-sm-6">
                                     {!! Form::text('responsavel',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">E-mail </label>
-                                <div class="col-sm-8">
+                                <label for="" class="col-sm-3 col-form-label text-right">E-mail </label>
+                                <div class="col-sm-6">
                                     {!! Form::text('email',null,['class'=>'form-control']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Telefone</label>
-                                <div class="col-sm-8">
+                                <label for="" class="col-sm-3 col-form-label text-right">Telefone</label>
+                                <div class="col-sm-3">
                                     {!! Form::text('telefone',null,['class'=>'form-control','id'=>'telefone']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="cep" class="col-sm-4 col-form-label text-right">CEP</label>
+                                <label for="cep" class="col-sm-3 col-form-label text-right">CEP</label>
                                 <div class="col-sm-3">
                                     {!! Form::text('cep',null,['class'=> 'form-control','id'=>'cep']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="rua" class="col-sm-4 col-form-label text-right">Rua/Logradouro</label>
-                                <div class="col-sm-8">
+                                <label for="rua" class="col-sm-3 col-form-label text-right">Rua/Logradouro</label>
+                                <div class="col-sm-9">
                                     {!! Form::text('rua',null,['class'=> 'form-control','id'=>'endereco']) !!}
                                 </div>
 
                             </div>
 
                             <div class="form-group row">
-                                <label for="Bairro" class="col-sm-4 col-form-label text-right">Bairro</label>
-                                <div class="col-sm-8">
+                                <label for="Bairro" class="col-sm-3 col-form-label text-right">Bairro</label>
+                                <div class="col-sm-4">
                                     {!! Form::text('bairro',null,['class'=> 'form-control','id'=>'bairro']) !!}
                                 </div>
                             </div>
@@ -160,36 +106,36 @@
 
 
                             <div class="form-group row">
-                                <label for="numero" class="col-sm-4 col-form-label text-right">Número</label>
-                                <div class="col-sm-3">
+                                <label for="numero" class="col-sm-3 col-form-label text-right">Número</label>
+                                <div class="col-sm-2">
                                     {!! Form::text('numero',null,['class'=> 'form-control']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="cidade" class="col-sm-4 col-form-label text-right">Cidade</label>
-                                <div class="col-sm-8">
+                                <label for="cidade" class="col-sm-3 col-form-label text-right">Cidade <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-sm-6">
                                     {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','readonly']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="uf" class="col-sm-4 col-form-label text-right">Estado</label>
+                                <label for="uf" class="col-sm-3 col-form-label text-right">Estado <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-sm-3">
                                     {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','readonly']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="complemento" class="col-sm-4 col-form-label text-right">Complemento</label>
-                                <div class="col-sm-8">
+                                <label for="complemento" class="col-sm-3 col-form-label text-right">Complemento</label>
+                                <div class="col-sm-2">
                                     {!! Form::text('complemento',null,['class'=> 'form-control']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Tipo Imóvel</label>
-                                <div class="col-sm-3">
+                                <label for="" class="col-sm-3 col-form-label text-right">Tipo Imóvel</label>
+                                <div class="col-sm-2">
                                     {{ Form::select('situacao_imovel',[
                                             'Alugado'           =>'Alugado',
                                             'Cedida/Funcional'  =>'Cedida/Funcional',
@@ -201,10 +147,38 @@
                                 </div>
                             </div>
 
+							
+                            
+							
+							{{--  <div class="row"> --}}
+                            {{--    <div class="form-group col-md-5"> --}}
+                            {{--        {!! Form::label('Banco') !!} --}}
+                            {{--       {{ Form::select('banco_investimentos',$bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }} --}}
+                            {{--    </div>
+                            {{--    <div class="form-group col-md-2"> --}}
+                            {{--        {!! Form::label('Agência') !!} --}}
+                            {{--        {!! Form::text('agencia_investimentos',null,['class'=>'form-control']) !!} --}}
+                            {{--    </div> --}}
 
-                            <p class="text-primary ">Dados Bancários</p>
-                            <label>Conta para receber Doações</label>
-                            <div class="row">
+                            {{--    <div class="form-group col-md-3"> --}}
+                            {{--        {!! Form::label('Conta') !!} --}}
+                            {{--        {!! Form::text('conta_investimentos',null,['class'=>'form-control']) !!} --}}
+                            {{--    </div> --}}
+
+                            {{--    <div class="form-group col-md-2"> --}}
+                            {{--        {!! Form::label('OP') !!} --}}
+                            {{--        {!! Form::text('op_investimentos',null,['class'=>'form-control']) !!} --}}
+                            {{--    </div> --}}
+                            {{--</div> --}}
+
+
+							 <p class="text-primary mt-2">Dados Bancários</p>
+							<hr>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right mt-3">Conta para receber <b class="text-primary">Doações</b></label>
+                                <div class="col-md-9">
+                                    <div class="row">
                                 <div class="form-group col-md-5">
                                     {!! Form::label('Banco') !!}
                                     {{ Form::select('banco_investimentos',$bancos,null,['class'=>'form-control custom-select','placeholder'=>'Selecione...']) }}
@@ -212,91 +186,164 @@
                                 <div class="form-group col-md-2">
                                     {!! Form::label('Agência') !!}
                                     {!! Form::text('agencia_investimentos',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('agencia_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('agencia_investimentos') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
 
                                 <div class="form-group col-md-3">
                                     {!! Form::label('Conta') !!}
                                     {!! Form::text('conta_investimentos',null,['class'=>'form-control']) !!}
+                                    @if ($errors->has('conta_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('conta_investimentos') }}</strong>
+                                        </span>
+                                    @endif
+
                                 </div>
 
                                 <div class="form-group col-md-2">
                                     {!! Form::label('OP') !!}
-                                    {!! Form::text('op_investimentos',null,['class'=>'form-control']) !!}
+                                    {!! Form::text('op_investimentos',null,['class'=>'form-control','id'=>'op']) !!}
+                                    @if ($errors->has('op_investimentos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('op_investimentos') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>    
+										
+										
+										
+										
+										
                                 </div>
                             </div>
 
 
+							<p class="text-primary mt-2">Dados Organizacionais</p>
+							<hr>
 
-
-
-
-
-                            <div class="row">
-                            <div class="form-group col-md-12">
-                                    <label for="" >Conte-nos sua história:</label>
-                                {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500']) !!}
+                            						
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Sua história<b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								 {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres1'></span>
+									 @if ($errors->has('historia'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('historia') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label for="">Os objetivos que deseja atingir</label>
-                                    {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos que deseja atingir </label>
+                                <div class="col-md-9">
+								{!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres2'></span>
+									@if ($errors->has('objetivos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('objetivos') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label for="">Impactos gerados no úlitmo ano</label>
-                                    {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Impactos gerados no Úlitmo ano <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								 {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres3'></span>
+									@if ($errors->has('impactos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('impactos') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label for="">Missão</label>
-                                    {!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Missão <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								{!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres4'></span>
+										@if ($errors->has('missao'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('missao') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group col-md-12">
-                                    <label for="">Visão</label>
-                                    {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5']) !!}
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right"> Visão </label>
+                                <div class="col-md-9">
+								{!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres5'></span>
+									@if ($errors->has('visao'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('visao') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-
-                                <div class="form-group col-md-12">
-                                    <label for="">Valores</label>
-                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500']) !!}
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right"> Valores </label>
+                                <div class="col-md-9">
+                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500','placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres6'></span>
+									@if ($errors->has('valores'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('valores') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-
-                                <div class="form-group col-md-12">
-                                    <label for="">Espaço Livre</label>
-                                   {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right"> Espaço Livre </label>
+                                <div class="col-md-9">
+                                    {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
                                             'style'=>'resize: none', 'rows'=>'5',
-                                            'placeholder'=>'Se uma revista internacional  - muito importante  lhe convidasse para escrever uma matéria sobre sua organização. Qual seria o título e quais os diferenciais você indicaria para esta matéria?']) !!}
+                                            'placeholder'=>'Se uma revista internacional muito importante lhe convidasse para escrever uma matéria sobre sua organização, qual seria o título e quais os diferenciais você indicaria para esta matéria? Use no máximo 500 caracteres! ']) !!}
                                             <span class='caracteres7'></span>
+											@if ($errors->has('espaco_livre'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('espaco_livre') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-
+                            </div>
+							
+												
+						    <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Site <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
+                                <div class="col-md-7">
+                                    {!! Form::text('site',null,['class'=>'form-control','placeholder'=>'exemplo: https://www.coopviva.com.br']) !!}
+                                </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Link do Site </label>
-                                <div class="col-md-8">
-                                    {!! Form::text('site',null,['class'=>'form-control']) !!}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Video Institucional (link)</label>
-                                <div class="col-md-8">
+                                <label for="" class="col-sm-3 col-form-label text-right">Video Institucional  <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-7">
                                     {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'https://youtube.com/urlDoVideo']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Fan Page</label>
-                                <div class="col-md-8">
+                                <label for="" class="col-sm-3 col-form-label text-right">Fan Page <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-7">
                                     {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'https://facebook.com.br/suainstituicao']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-4 col-form-label text-right">Instagram</label>
-                                <div class="col-md-8">
-                                    {!! Form::text('instagram',null,['class'=>'form-control']) !!}
+                                <label for="" class="col-sm-3 col-form-label text-right">Instagram <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-7">
+                                    {!! Form::text('instagram',null,['class'=>'form-control','placeholder'=>'exemplo: https://www.instagram.com/coopviva']) !!}
                                 </div>
                             </div>
                         </div>

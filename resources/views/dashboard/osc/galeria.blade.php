@@ -64,7 +64,7 @@
                     </div>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-sm btn-default float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo">Alterar Logo</a>
+                            <a href="#" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo">Carregar uma Logo</a>
                         </div>
                     </div>
 					
@@ -119,6 +119,7 @@
                         </div>
                         <div class="form-group">Título  
                             {!! Form::text('legenda',null,['class'=>'form-control','placeholder'=>'Insira uma legenda para essa foto']) !!}
+							<!--<p> teste </p> -->
                         </div>
                     </div>
                     <div class="modal-footer">
