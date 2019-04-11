@@ -27,12 +27,12 @@ class CreateOscRequest extends FormRequest
             'nome_fantasia' => 'required|min:3|max:100',
             'responsavel'   => 'required|min:3|max:100',
             'email'         => 'email|unique:oscs,id',
-            'historia'      => 'required|max:250',
-            'objetivos'     => 'max:250',
-            'impactos'      => 'required|max:250',
-            'missao'        => 'required|max:250',
-			'visao'        	=> 'required|max:250',
-            'valores'       => 'max:250',
+            'historia'      => 'required|max:500',
+            'objetivos'     => 'max:500',
+            'impactos'      => 'required|max:500',
+            'missao'        => 'required|max:500',
+			'visao'        	=> 'max:500',
+            'valores'       => 'max:500',
             'espaco_livre'  => 'max:500',
         ];
     }

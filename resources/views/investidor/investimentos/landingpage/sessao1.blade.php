@@ -34,8 +34,8 @@
 										</a>
                                         @endif
 
-                                            @if($osc->mapa)
-										<a href="{{ $osc->mapa ?? '#' }}" class="nav-link nav-link-icon"  target="_blank"  >
+                                            @if($osc->cidade)
+										<a class="nav-link nav-link-icon"  target="_blank" data-toggle="tooltip" data-placement="right" title="{{ $osc->cidade ?? '#' }} - {{ $osc->uf ?? '#' }}" >
 										<i class="ni ni-square-pin text-Primary"></i>
 										</a>
 									        @endif

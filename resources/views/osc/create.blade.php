@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-10">
                     <h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
-                    <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Organização. Preencha com cuidado, pois elas serão enviadas para os patrocinadores/doadores.
+                    <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Organização. Preencha com cuidado, pois elas serão enviadas para nossa rede de investidores (patrocinadores/doadores).
                     </p>
                    <!-- <p class="text-white font-weight-300">Campos com * são obrigatórios</p> -->
                     
@@ -34,7 +34,7 @@
                                 <p class="text-primary mt-2">Dados Gerais</p>
 						<hr>
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Nome Fantasia</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Nome Fantasia <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-sm-9">
                                     {!! Form::text('nome_fantasia',null,['class'=>'form-control']) !!}
                                     @if ($errors->has('nome_fantasia'))
@@ -145,14 +145,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="cidade" class="col-sm-3 col-form-label text-right">Cidade</label>
+                                <label for="cidade" class="col-sm-3 col-form-label text-right">Cidade <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-sm-6">
                                     {!! Form::text('cidade',null,['class'=> 'form-control','id'=>'cidade','readonly']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="uf" class="col-sm-3 col-form-label text-right">Estado</label>
+                                <label for="uf" class="col-sm-3 col-form-label text-right">Estado <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-sm-3">
                                     {!! Form::text('uf',null,['class'=> 'form-control','id'=>'estado','readonly']) !!}
                                 </div>
@@ -234,9 +234,9 @@
                           	<p class="text-primary mt-2">Dados Organizacionais</p>
 							<hr>					
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Sua história</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Sua história <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
-                                        {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                        {!! Form::textarea('historia',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres1'></span>
                                     @if ($errors->has('historia'))
                                         <span class="text-danger" role="alert">
@@ -249,7 +249,7 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Objetivos que deseja atingir</label>
                                 <div class="col-md-9">
-                                        {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'250', 'style'=>'resize: none', 'rows'=>'5', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                        {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres2'></span>
 									@if ($errors->has('objetivos'))
                                         <span class="text-danger" role="alert">
@@ -260,9 +260,9 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Impactos gerados no Úlitmo ano</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Impactos gerados no Úlitmo ano <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
-                                    {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                    {!! Form::textarea('impactos',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres3'></span>
 									@if ($errors->has('impactos'))
                                         <span class="text-danger" role="alert">
@@ -273,9 +273,9 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Missão</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Missão <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
-                                   {!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                   {!! Form::textarea('missao',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres4'></span>
 									@if ($errors->has('missao'))
                                         <span class="text-danger" role="alert">
@@ -288,7 +288,7 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Visão</label>
                                 <div class="col-md-9">
-                                   {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                   {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres5'></span>
 									@if ($errors->has('visao'))
                                         <span class="text-danger" role="alert">
@@ -301,7 +301,7 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Valores</label>
                                 <div class="col-md-9">
-                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                    {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres6'></span>
 									@if ($errors->has('valores'))
                                         <span class="text-danger" role="alert">
@@ -327,26 +327,26 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right"> Site </label>
+                                <label for="" class="col-sm-3 col-form-label text-right"> Site <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-7">
                                     {!! Form::url('site',null,['class'=>'form-control','placeholder'=>'exemplo: https://www.coopviva.com.br']) !!}
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right"> Vídeo Institucional</label>
+                                <label for="" class="col-sm-3 col-form-label text-right"> Vídeo Institucional <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-7">
                                     {!! Form::text('video_institucional',null,['class'=>'form-control','placeholder'=>'exemplo: https://youtube.com/urlDoVideo']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Fan Page</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Fan Page <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-7">
                                     {!! Form::text('facebook',null,['class'=>'form-control','placeholder'=>'exemplo: https://facebook.com.br/suainstituicao']) !!}
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Instagram</label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Instagram <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-7">
                                     {!! Form::text('instagram',null,['class'=>'form-control','placeholder'=>'exemplo: https://www.instagram.com/coopviva']) !!}
                                 </div>
