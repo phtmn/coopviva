@@ -1,4 +1,4 @@
-@extends('osc.painel')
+@extends('osc.dashboard')
 
 @section('cabecalho')
 
