@@ -15,11 +15,11 @@
 {{--                        @endforelse--}}
 {{--                    </div>--}}
 					<div class="ods">
-                      {{--  @forelse($metas->unique('objetivo_id') as $obj) --}}
-                      {{--      <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>--}}
-                      {{--  @empty --}}
-                      {{--      <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p> --}}
-                      {{--  @endforelse --}}
+                        @forelse($metas->unique('objetivo_id') as $obj) 
+                            <a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+                        @empty 
+                            <p class="text-warning font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p> 
+                        @endforelse 
                     </div>
 					 <!-- ODS -->
 

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard') 
 
 @section('cabecalho')
     <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
@@ -8,9 +8,10 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">Cadastre seus Projetos</h1>
-                    <p class="text-white mt-0 mb-2">Receba investimentos e Doações de Grandes Investidores</p>
-                    <p class="text-success">#SimEuQuero</p>
+					<h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
+                    <p class="text-white mt-0 mb-2">Cadastre seus projetos e receba investimentos da nossa rede de investidores (patrocinadores/doadores). #SimEuQuero. 
+                    </p>
+                    
 
                 </div>
             </div>
@@ -18,8 +19,10 @@
     </div>
 @stop
 @section('conteudo')
+<div class="container mt--7">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xl-12 order-xl-1">
+		 <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-header border-0">
                     <a href="{{route('projetos.create')}}" class="btn btn-outline-success pull-left">Novo Projeto</a>
@@ -66,7 +69,9 @@
                         </tbody>
                     </table>
                 </div>
+				 </div>
             </div>
         </div>
     </div>
+	</div>
 @stop
