@@ -10,9 +10,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
-                    <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Organização. Preencha com cuidado, pois elas serão enviadas para nossa rede de investidores (patrocinadores/doadores).
-                    </p>
+					<h1 class="display-2 text-white"> # Perfil</h1>
+                    {{--<h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1> --}}
+						{{-- <p class="text-white mt-0 mb-2">Nesta etapa será preenchido todos os dados de sua Organização. Preencha com cuidado, pois elas serão enviadas para nossa rede de investidores (patrocinadores/doadores). </p> --}}
                    <!-- <p class="text-white font-weight-300">Campos com * são obrigatórios</p> -->
                     
 
@@ -25,8 +25,7 @@
 @section('conteudo')
     <div class="container mt--7">
         <div class="row">
-           
-            <div class="col-xl-12 order-xl-1">
+  
                 {!! Form::open(['route'=>'osc.store','enctype'=>'multipart/form-data']) !!}
                 <div class="col-md-12">
                     <div class="card shadow">
@@ -247,7 +246,7 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos que deseja atingir<b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos que deseja atingir</label>
                                 <div class="col-md-9">
                                         {!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres2'></span>
@@ -286,7 +285,7 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Visão<b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Visão</label>
                                 <div class="col-md-9">
                                    {!! Form::textarea('visao',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres5'></span>
@@ -299,7 +298,7 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Valores<b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Valores</label>
                                 <div class="col-md-9">
                                     {!! Form::textarea('valores',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres6'></span>
@@ -312,7 +311,7 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Espaço Livre<b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Espaço Livre</label>
                                 <div class="col-md-9">
                                    {!! Form::textarea('espaco_livre',null,['class'=>'form-control contador7',
                                              'style'=>'resize: none', 'rows'=>'5',
@@ -360,7 +359,7 @@
                 </div>
             </div>
             {!! Form::close() !!}
-        </div>
+       
     </div>
 @stop
 

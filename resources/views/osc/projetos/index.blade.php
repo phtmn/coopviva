@@ -8,9 +8,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-					<h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1>
-                    <p class="text-white mt-0 mb-2">Cadastre seus projetos e receba investimentos da nossa rede de investidores (patrocinadores/doadores). #SimEuQuero. 
-                    </p>
+				<h1 class="display-2 text-white"> # Projetos</h1>
+				{{--<h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1> --}}
+                {{--    <p class="text-white mt-0 mb-2">Cadastre seus projetos e receba investimentos da nossa rede de investidores (patrocinadores/doadores). #SimEuQuero. </p> --}}
                     
 
                 </div>
@@ -21,11 +21,11 @@
 @section('conteudo')
 <div class="container mt--7">
     <div class="row">
-        <div class="col-xl-12 order-xl-1">
+
 		 <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-header border-0">
-                    <a href="{{route('projetos.create')}}" class="btn btn-outline-success pull-left">Novo Projeto</a>
+                    <a href="{{route('projetos.create')}}" class="btn btn-success "><i class="ni ni-fat-add"></i> Adicionar Projeto</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
@@ -71,7 +71,7 @@
                 </div>
 				 </div>
             </div>
-        </div>
+     
     </div>
 	</div>
 @stop

@@ -9,11 +9,11 @@
 		<div class="container-fluid d-flex align-items-center">
 			<div class="row">
 				<div class="col-lg-12 col-md-10">
-					<h1 class="display-4 text-white">ODS - Objetivos para Desenvolvimento Sustentável</h1>
-					<p class="text-white mt-0 mb-2">Participe das transformações para a Agenda 2030 no Brasil. Marque
-						seus objetivos e metas aqui.
-					</p>
-					<p class="text-white">#SimEuQuero</p>
+					<h1 class="display-2 text-white"> # ODS </h1>
+					{{--<h1 class="display-4 text-white">ODS - Objetivos para Desenvolvimento Sustentável</h1> --}}
+					{{--<p class="text-white mt-0 mb-2">Participe das transformações para a Agenda 2030 no Brasil. Marque seus objetivos e metas aqui. --}}
+					{{--</p> --}}
+					{{--<p class="text-white">#SimEuQuero</p> --}}
 
 				</div>
 			</div>
@@ -22,6 +22,7 @@
 
 @stop
 @section('conteudo')
+<div class="container mt--7">
 <div class="row">
     
             <div class="col-md-12">
@@ -31,13 +32,14 @@
 						<div class="nav-wrapper">
 							<ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-text" role="tablist">
 								<li class="nav-item">
-									<a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Selecionar Metas</a>
+									<a class="nav-link mb-sm-3 mb-md-0  btn-warning active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true"><i class="ni ni-fat-add"></i> Adicionar Meta</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">Metas Escolhidas</a>
+									<a class="nav-link mb-sm-3 mb-md-0 text-warning" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false"><i class="ni ni-fat-remove"></i> Remover Meta </a>
 								</li>
 							</ul>
 						</div>
+						
 						<div class="tab-content" id="myTabContent">
 							 <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
 								 <center><div class="objetivos">
@@ -90,18 +92,21 @@
 											 <div id="projetos" style="display: none;">
 												 {!! Form::select('projeto_id',$projetos,null,['class'=>'form-control','placeholder'=>'Selecione seu Projeto']) !!}
 											 </div>
+											 
 										 </div>
+								</div>
+							
+								 
+								  <div class="card-footer text-center">
+								  
+											{!! Form::submit('Salvar',['class'=>'btn btn-outline-success']) !!} 
 
-
-										 {!! Form::submit('Salvar',['class'=>'btn btn-outline-success']) !!} </center>
-
-									 @endif
-
-								 </div>
+											@endif
+										</div>
 
 						 	{!! Form::close() !!}
-							 </div>
-
+						
+								  </div>
 							 <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
 							 <center><div class="metas-escolhidas ">
 									 @forelse($metas_osc->unique('objetivo_id') as $obj)
@@ -114,7 +119,7 @@
 									
 									 @forelse($metas_osc as $meta)
 									 
-										 <p align="justify" class="sample-text" style="text-indent: 5px;"><b> <a href="{{route('meta.remover',$meta->id)}}"><i class="fa fa-trash" style="color:red" data-toggle="tooltip" data-placement="left" title="Remover "></i></a>  {{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }} </p>
+										 <p align="justify" class="sample-text" style="text-indent: 5px;"><b> <a href="{{route('meta.remover',$meta->id)}}"><i class="ni ni-fat-remove text-warning"  data-toggle="tooltip" data-placement="left" title="Remover "></i></a>  {{ $meta->meta_codigo }} </b >- {{ $meta->meta_descricao }} </p>
 										 
 										 <hr>
 									 @empty
@@ -126,6 +131,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		
 			</div>
 </div>
 

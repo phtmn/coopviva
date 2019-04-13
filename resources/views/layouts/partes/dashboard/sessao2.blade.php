@@ -1,5 +1,6 @@
-
-		<div class="col-xl-6 mt-5">
+<div class="container mt--2">
+    <div class="row">
+		<div class="col-xl-6 mb-5 mb-xl-0 mt-5">
           <div class="card shadow">
             <div class="card-header border-0">
               <div class="row align-items-center">
@@ -87,6 +88,9 @@
               </table>
             </div>
           </div>
+        </div>
+		
+		  </div>
         </div>
         
    
