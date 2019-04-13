@@ -250,27 +250,27 @@
                         <hr>
                         <label for="" class="text-success">Fale sobre seu Projeto</label>
                         <div class="row">
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Resumo do Projeto</label>
                                 {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Objetivos</label>
                                 {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Justificativa</label>
                                 {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Público Alvo</label>
                                 {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Impactos Esperados</label>
                                 {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="form-group col-md-12">
+                            <div class="col-sm-3 col-form-label text-right">
                                 <label for="">Contra Partidas</label>
                                 {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
