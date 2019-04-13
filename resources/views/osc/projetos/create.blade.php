@@ -279,7 +279,7 @@
 						 <hr>
                                 <div class="row">
                                     <div class="form-group col-md-12">
-                                        <label for="">Resumo do Projeto</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Resumo do Projeto <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('resumo'))
                                             <span class="text-danger" role="alert">
@@ -288,7 +288,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="">Objetivos</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Objetivos <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('objetivos'))
                                             <span class="text-danger" role="alert">
@@ -297,7 +297,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="">Justificativa</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Justificativa <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('justificativa'))
                                             <span class="text-danger" role="alert">
@@ -306,7 +306,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="">Público Alvo</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Público Alvo <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('publico_alvo'))
                                             <span class="text-danger" role="alert">
@@ -315,7 +315,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="">Impactos Esperados</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Impactos Esperados <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('impactos_esperados'))
                                             <span class="text-danger" role="alert">
@@ -324,7 +324,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="">Contra Partidas</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Contra Partidas <b class="text-primary" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                                         @if ($errors->has('contra_partidas'))
                                             <span class="text-danger" role="alert">
