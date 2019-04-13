@@ -13,7 +13,7 @@
                    {{-- <p class="text-white mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado
 				   para aprovação da plataforma.</p> --}}
                    
-                    {{--<a href="" class="btn btn-success m-4" data-toggle="modal" data-target="#modal-default"> Carregar uma Foto</a>--}}
+                    {{--<a href="" class="btn btn-success m-4" data-toggle="modal" data-target="#modal-default"> Upload Galeria</a>--}}
 
                 </div>
             </div>
@@ -28,7 +28,7 @@
 		    <div class="col-md-8">
 				<div class="card shadow">
 						<div class=" card-header border-0 text-center ">
-							 <a href="" class="btn btn-danger m-4" data-toggle="modal" data-target="#modal-default"> <i class="ni ni-cloud-upload-96"></i> Carregar Foto</a>
+							 <a href="" class="btn btn-danger m-4" data-toggle="modal" data-target="#modal-default"> <i class="ni ni-cloud-upload-96"></i> Upload Galeria</a>
 						</div>
 					
 							<div class="row justify-content-center ">
@@ -65,7 +65,7 @@
 						</div>
 						<div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
 							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo"><i class="ni ni-cloud-upload-96"></i> Carregar Logo</a>
+								<a href="#" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo"><i class="ni ni-cloud-upload-96"></i> Upload Logo</a>
 							</div>
 						</div>
 						
@@ -82,7 +82,7 @@
                 {!! Form::open(['route'=>'osc.uploadFoto','method'=>'POST','enctype'=>'multipart/form-data']) !!}
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h6 class="modal-title" id="modal-title-default">Carregue sua Logo</h6>
+                        <h6 class="modal-title" id="modal-title-default">Upload Logo</h6>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
@@ -107,7 +107,7 @@
                 {!! Form::open(['route'=>'galeria.store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h6 class="modal-title" id="modal-title-default">Carregue sua Foto</h6>
+                        <h6 class="modal-title" id="modal-title-default">Upload Galeria</h6>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
@@ -116,7 +116,7 @@
                         <div class="form-group">
                             {!! Form::file('file',null,['class'=>'form-control']) !!}
                         </div>
-                        <div class="form-group">Título  
+                        <div class="form-group"> 
                             {!! Form::text('legenda',null,['class'=>'form-control','placeholder'=>'Insira uma legenda para essa foto']) !!}
 							<!--<p> teste </p> -->
                         </div>

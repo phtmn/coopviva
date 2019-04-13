@@ -24,14 +24,12 @@
             <div class="col-md-12">
                 <div class="card shadow">
                     <div class="card-body bg-transparent">
-
-                       
-                             <p class="text-success mt-2">Dados Gerais</p>
-						<hr>
+                            <p class="text-success mt-2">Dados Gerais</p>
+							<hr>
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Nome do Projeto <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Nome <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         <div class="col-md-9">
-                                            {!! Form::text('nome_projeto',null,["class"=>"form-control",'required'=>'true']) !!}
+                                            {!! Form::text('nome_projeto',null,["class"=>"form-control",'required'=>'true','placeholder'=>'Título do projeto']) !!}
                                             @if ($errors->has('nome_projeto'))
                                                 <span class="text-danger" role="alert">
                                                     <strong>{{ $errors->first('nome_projeto') }}</strong>
@@ -41,9 +39,10 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Descrição Resumida do Projeto <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Descrição Resumida <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         <div class="col-md-9">
-                                            {!! Form::textarea('descricao_resumida',null,["class"=>"form-control",'required'=>'true','style'=>'resize: none', 'rows'=>'3','maxlenght'=>'250', 'placeholder'=>'Use no máximo 250 caracteres!']) !!}
+                                            {!! Form::textarea('descricao_resumida',null,["class"=>"form-control contador8",'required'=>'true','style'=>'resize: none', 'rows'=>'3','maxlenght'=>'250', 'placeholder'=>'Descrição resumida do seu projeto. Use no máximo 250 caracteres!']) !!}
+											<span class='caracteres8'></span>
                                             @if ($errors->has('descricao_resumida'))
                                                 <span class="text-danger" role="alert">
                                                     <strong>{{ $errors->first('descricao_resumida') }}</strong>
@@ -51,11 +50,23 @@
                                             @endif
                                         </div>
                                     </div>
+									
+									<div class="form-group row">
+										<label for="" class="col-sm-3 col-form-label text-right">Situação </label>
+										<div class="col-md-6">
+											{!! Form::select('situacao',[												
+												'Enviado' => 'Enviado ao COOPVIVA para Avaliação!'
+												{{--	'Aprovado' => 'Aprovado pelo COOPVIVA - Habilitado para Captação!', --}}
+												{{-- 	'Encerrado' => 'Encerrado - Desabilitado para Captação!' --}}
+											],null,['class'=>'form-control']) !!}
+											
+										</div>
+									</div>
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Responsável pelo Projeto</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Responsável</label>
                                         <div class="col-md-6	">
-                                            {!! Form::text('responsavel_projeto',null,["class"=>"form-control",'required'=>'true','placeholder'=>'Nome do responsável pelo projeto']) !!}
+                                            {!! Form::text('responsavel_projeto',null,["class"=>"form-control",'required'=>'true','placeholder'=>'Nome do responsável pelas ações do projeto']) !!}
                                             @if ($errors->has('responsavel_projeto'))
                                                 <span class="text-danger" role="alert">
                                                     <strong>{{ $errors->first('responsavel_projeto') }}</strong>
@@ -66,16 +77,16 @@
 
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Valor do Projeto</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Custo (R$) <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         <div class="col-md-3">
-                                            {!! Form::text('valor_projeto',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_projeto']) !!}
+                                            {!! Form::text('valor_projeto',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'Valor do projeto','id'=>'valor_projeto']) !!}
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Meta de Captação <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Meta de Captação (R$)<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                         <div class="col-md-3">
-                                            {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_meta']) !!}
+                                            {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'Quanto deseja arrecadar','id'=>'valor_meta']) !!}
                                         </div>
                                     </div>
 
@@ -98,33 +109,33 @@
                                         <label for="tipo" class="col-sm-3 col-form-label text-right">Lei de Incentivo</label>
                                         <div class="col-md-3">
                                             {!! Form::select('lei_incentivo',['1'=>'Sim','0'=>'Não'],null,['class'=>'form-control','placeholder'=>'Selecione...','id'=>'incentivo','required']) !!}
-                                            <span class="help-inline text-success" data-toggle="tooltip" title="Recebe via Lei de incentivo?">
+                                            <span class="help-inline text-success" >
                                                Recebe via lei de incentivo?
                                             </span>
                                         </div>
 
                                     </div>
 
-                        <div id="box-lei" style="display: none">
+									<div id="box-lei" style="display: none">
 
-                            <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Instância (Lei)</label>
-                                <div class="col-md-4">
-                                    {!! Form::select('lei',[
-                                        'Lei Rouanet' => 'Lei Rouanet',
-                                        'Fia'         => 'Fia',
-                                        'Pronon'      => 'Pronon',
-                                        'Pronas'      => 'Pronas',
-                                        'Esporte'     => 'Esporte',
-                                        'Idoso'       => 'Idoso'
-                                    ],null,['placeholder'=>'Escolha uma opção','class'=>'form-control','id'=>'artigo']) !!}
-                                </div>
-                            </div>
+										<div class="form-group row">
+											<label for="" class="col-sm-3 col-form-label text-right">Instância (Lei)</label>
+											<div class="col-md-4">
+												{!! Form::select('lei',[
+													'Lei Rouanet' => 'Lei Rouanet',
+													'Fia'         => 'Fia',
+													'Pronon'      => 'Pronon',
+													'Pronas'      => 'Pronas',
+													'Esporte'     => 'Esporte',
+													'Idoso'       => 'Idoso'
+												],null,['placeholder'=>'Escolha uma opção','class'=>'form-control','id'=>'artigo']) !!}
+											</div>
+										</div>
 
-                            <div id="box-artigo" style="display: none">
-                                <div class="form-group row">
-                                    <label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
-                                    <div class="col-md-4">
+										<div id="box-artigo" style="display: none">
+											<div class="form-group row">
+												<label for="" class="col-sm-3 col-form-label text-right" data-toggle="tooltip" title="Artigo de Enquadramento">Artigo EQDM</label>
+												<div class="col-md-4">
                                         {!! Form::select('artigo',['18'=>'Art. 18','26'=>'Art. 26'],null,['class'=>'form-control','placeholder'=>'Selecione']) !!}
                                         <span class="help-inline text-success">Artigo em que se encaixa o projeto?</span>
                                     </div>
@@ -273,13 +284,13 @@
                                     </div>
                      
                        
-                        <p class="text-success mt-2">Descrição </p>
+                        <p class="text-success mt-2">Escopo </p>
 						 <hr>
                          <div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Resumo<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
-								 {!! Form::textarea('resumo',null,['class'=>'form-control contador1','style'=>'resize: none','rows'=>'5','maxlenght'=>'500','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres1'></span>
+								 {!! Form::textarea('resumo',null,['class'=>'form-control contador9','style'=>'resize: none','rows'=>'5','maxlenght'=>'500','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres9'></span>
 									 @if ($errors->has('resumo'))
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $errors->first('resumo') }}</strong>
@@ -291,8 +302,8 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Objetivos  </label>
                                 <div class="col-md-9">
-								{!! Form::textarea('objetivos',null,['class'=>'form-control contador2','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres2'></span>
+								{!! Form::textarea('objetivos',null,['class'=>'form-control contador10','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres10'></span>
 									@if ($errors->has('objetivos'))
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $errors->first('objetivos') }}</strong>
@@ -304,8 +315,8 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right">Justifictiva </label>
                                 <div class="col-md-9">
-								 {!! Form::textarea('justificativa',null,['class'=>'form-control contador3', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres3'></span>
+								 {!! Form::textarea('justificativa',null,['class'=>'form-control contador11', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres11'></span>
 									@if ($errors->has('justificativa'))
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $errors->first('justificativa') }}</strong>
@@ -315,11 +326,11 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Publico Alvo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Público Alvo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
-								{!! Form::textarea('publico_alvo',null,['class'=>'form-control contador4', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres4'></span>
-										@if ($errors->has('missao'))
+								{!! Form::textarea('publico_alvo',null,['class'=>'form-control contador12', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres12'></span>
+										@if ($errors->has('publico_alvo'))
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $errors->first('publico_alvo') }}</strong>
                                         </span>
@@ -330,9 +341,9 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right"> Impactos Esperados<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
                                 <div class="col-md-9">
-								{!! Form::textarea('impactos_esperados',null,['class'=>'form-control contador5', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres5'></span>
-									@if ($errors->has('visao'))
+								{!! Form::textarea('impactos_esperados',null,['class'=>'form-control contador13', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres13'></span>
+									@if ($errors->has('impactos_esperados'))
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $errors->first('impactos_esperados') }}</strong>
                                         </span>
@@ -343,20 +354,24 @@
 							<div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label text-right"> Contra Partida<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
                                 <div class="col-md-9">
-                                    {!! Form::textarea('contr_partida',null,['class'=>'form-control contador6', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500','placeholder'=>'Use no máximo 500 caracteres!']) !!}
-                                    <span class='caracteres6'></span>
-									@if ($errors->has('valores'))
+                                    {!! Form::textarea('contra_partidas',null,['class'=>'form-control contador14', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500','placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres14'></span>
+									@if ($errors->has('contra_partidas'))
                                         <span class="text-danger" role="alert">
-                                            <strong>{{ $errors->first('contra_partida') }}</strong>
+                                            <strong>{{ $errors->first('contra_partidas') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
-							<div class=" text-center">
-                       <button type="submit" class="btn btn-outline-success">Salvar</button> 
-                    </div>
+							
+							
+							
+								<div class="card-footer text-center">
+							
+									<button type="submit" class="btn btn-outline-success">Salvar</button> 
+								</div>
 						
-                                </div>
+                               
                             </div>
 							</div>
                    
@@ -366,11 +381,16 @@
         
             {!! Form::close() !!}
      
-                   
+           
+
+
+
+		   
 
 @stop
 @section('js')
     <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
+	<script src="{{asset('js/caracter_count.js')}}"> </script>
     <script>
         $(document).ready(function(){
             $("#valor_projeto").mask('#.##0,00', {reverse: true});

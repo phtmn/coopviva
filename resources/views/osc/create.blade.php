@@ -350,11 +350,12 @@
                                     {!! Form::text('instagram',null,['class'=>'form-control','placeholder'=>'exemplo: https://www.instagram.com/coopviva']) !!}
                                 </div>
                             </div>
-                        </div>
+                      
 
                         <div class="card-footer text-center">
                             <button type="submit" class="btn btn-outline-success">Salvar</button>
                         </div>
+						 </div>
                     </div>
                 </div>
             </div>

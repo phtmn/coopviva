@@ -32,10 +32,10 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">Nome </th>
-                                <th scope="col">Valor (R$)</th>
-                                <th scope="col">Status</th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
+                                <th scope="col">Custo (R$)</th>
+                                <th scope="col">Situação</th>
+                                <th scope="col"><i class="ni ni-cloud-upload-96"></i></th>
+                                <th scope="col">#</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,7 +64,7 @@
                                     </td>
                                 </tr>
                             @empty
-                                <p  class="text-warning font-weight-bold 900" style="text-indent: 25px;">Você ainda não cadastrou nenhum Projeto! <span></span></p>
+                                <p  class="text-warning font-weight-bold 900" style="text-indent: 25px;">Você ainda não cadastrou nenhum projeto! <span></span></p>
                             @endforelse
                         </tbody>
                     </table>
