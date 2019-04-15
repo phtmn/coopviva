@@ -14,6 +14,7 @@ class CreateFieldArquivoProjetosTable extends Migration
     public function up()
     {
         Schema::table('projetos', function (Blueprint $table) {
+            $table->text('arquivo')->nullable();
             //
         });
     }
