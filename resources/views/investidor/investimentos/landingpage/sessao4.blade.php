@@ -25,7 +25,11 @@
 							<td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
 							<td>
 								<a href="javascript:void(0)" class="btn btn-dark detalhe-projeto" data-id="{{ $p->id }}" > Saiba Mais</a>
+								@auth
+									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Receber Proposta por email</a>
+								@endauth
 							</td>
+
 						</tr>
 						@empty
 							<p class="font-weight-900 text-white">#não há Projetos para exibir!</p>

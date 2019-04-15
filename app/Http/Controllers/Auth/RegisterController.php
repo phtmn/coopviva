@@ -86,7 +86,7 @@ class RegisterController extends Controller
         ]);
 
         Mail::to($user->email)->send(new VerifyMail($user));
-        //Mail::send(new NewUser($user));
+        Mail::send(new NewUser($user));
 
         return $user;
 

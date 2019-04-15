@@ -99,7 +99,7 @@
                 </div>
                 {!! Form::close() !!}
             </div>
-        </div>
+    </div>
 
 
         <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">

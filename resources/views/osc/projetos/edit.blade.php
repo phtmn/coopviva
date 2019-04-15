@@ -1,4 +1,4 @@
-@extends('osc.painel')
+@extends('osc.dashboard')
 
 @section('cabecalho')
 
@@ -27,8 +27,19 @@
         <div class="col-md-12">
             <div class="card shadow">
                 <div class="card shadow">
+                    <div class="card-header">
+                        <div class="pull-right">
+                            <a href="#" data-toggle="modal" data-target="#modal-upload" class="btn btn-sm btn-success">
+                                Enviar PDF
+                            </a>
+                            @if($projeto->arquivo)
+                                <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a>
+                            @endif
+                        </div>
+
+                    </div>
                     <div class="card-body bg-transparent">
-                        <hr>
+
                         <label class="text-success">Dados Gerais</label>
                         <div class="form-group row">
                             <label for="" class="col-sm-3 col-form-label text-right">Nome do Projeto</label>
@@ -287,6 +298,34 @@
         </div>
         {!! Form::close() !!}
     </div>
+    </div>
+
+    <div class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="modal-default-logo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"  role="document">
+            {!! Form::open(['route'=>'projeto.uplaodFile','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="modal-title-default">Upload de arquivo</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">Envie um arquivo no formado .pdf, o segundo envio substituirá o anterior.</label>
+                    </div>
+                    <div class="form-group">
+                        {!! Form::file('file',null,['class'=>'form-control']) !!}
+                    </div>
+                    <input type="hidden" name="projeto_id" value="{{$projeto->id}}">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+            {!! Form::close() !!}
+        </div>
     </div>
 
 @stop

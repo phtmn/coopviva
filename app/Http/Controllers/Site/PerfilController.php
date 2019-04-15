@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Mail\SendFileUser;
+use App\Models\Projeto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Perfil;
 use Auth;
 use Validator;
+use Alert;
 
 class PerfilController extends Controller
 {
@@ -93,5 +96,20 @@ class PerfilController extends Controller
             return redirect('site.painel')->with('error', 'Ocorreu um erro ao tentar atualizar os dados!');
     
         }
+    }
+
+    public function sendFile($id){
+
+        $projeto = Projeto::find($id);
+        if($projeto->arquivo != null){
+
+            \Mail::to(auth()->user()->email)->send(new SendFileUser($projeto));
+            Alert::success( 'Você receberá o aquivo por email')->persistent('Ok');
+            return redirect()->back();
+        }else{
+            Alert::warning( 'Esse projeto nao contem aquivo!')->persistent('Ok');
+            return redirect()->back();
+        }
+
     }
 }

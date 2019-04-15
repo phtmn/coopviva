@@ -15,6 +15,7 @@ Route::get('/sim_eu_quero','Investidor\InvestimentosController@lista_oscs')->nam
 Route::get('/sim_eu_quero/{id}','Investidor\InvestimentosController@detalhe_oscs')->name('detalhe.osc');
 
 Route::get('/sim_eu_quero/projeto/{id}','Investidor\InvestimentosController@detalhe_projeto')->name('detalhe.projeto');
+Route::get('/sendFile/projeto/{id}','Site\PerfilController@sendFile')->name('projeto.sendFile');
 
 //Grupo de Rotas para Investidor
 Route::group( ['middleware'=> ['auth','verified','perfil'],'prefix'=>'painel-investidor','namespace'=>'Investidor'],function(){
@@ -42,6 +43,8 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
     Route::resource('osc','OscController');
     Route::resource('projetos','ProjetosController');
+
+    Route::post('/upload','ProjetosController@uploadFile')->name('projeto.uplaodFile');
 
     Route::resource('documentos','DocumentosController');
 

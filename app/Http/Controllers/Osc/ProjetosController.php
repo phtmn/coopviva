@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Osc;
 
-use App\Models\Banco;
+use App\Mail\SendFileUser;
+use Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Projeto;
@@ -53,12 +54,14 @@ class ProjetosController extends Controller
 
     public function store(CreateProjetoRequest $request){
 
+
+
         if( ($request->banco_docacao == null) && ($request->banco_patrocinio == null) ){
             Alert::warning('Voce Precisa inserir dados bancários','Ops')->persistent('ok');
             return redirect()->back()->withInput($request->all());
         }
 
-        if($request->valor_meta > $request->valor_projeto){
+        if( toMoney($request->valor_meta ) >  toMoney($request->valor_projeto)){
             Alert::warning('O valor da Meta não pode ser maior que o valor do Projeto','Ops')->persistent('ok');
             return redirect()->back()->withInput($request->all());
         }
@@ -194,24 +197,30 @@ class ProjetosController extends Controller
 
     }
 
-    public function galeria($id){
-        return view('dashboard.projetos.galeria',[
-            'tab' => 'galeria'
-        ]);
-    }
+    public function uploadFile(Request $request){
 
-    public function save(Request $request){
+        $projeto = Projeto::find($request->projeto_id);
+
         $image = $request->file('file');
-        $imageName = time().$image->getClientOriginalName();
-        $image->move(public_path('images'),$imageName);
-        return response()->json(['success'=>$imageName]);
+        $imageName = 'PROJETOFILE-'.$projeto->id.time();
+        try{
+
+            if($projeto->arquivo != null) {
+                Storage::disk('s3')->delete($projeto->arquivo);
+            }
+
+            Storage::disk('s3')->put($imageName, file_get_contents($image),'public');
+            $imageNameAWS  = Storage::disk('s3')->url($imageName);
+
+            $projeto->update(['arquivo' => $imageNameAWS ]);
+            return redirect()->back();
+        }catch (\Exception $e){
+            dd($e->getMessage());
+            return redirect()->back();
+        }
     }
 
-    public function mudarInativo($id){
 
-        $projeto = Projeto::find($id)->delete();
-        Alert::warning('Você Acabou de deletar esse projeto','Que pena')->persistent('OK');
-        return redirect()->back();
-    }
+
     
 }
