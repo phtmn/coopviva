@@ -34,8 +34,8 @@
                                 <th scope="col">Nome </th>
                                 <th scope="col">Custo (R$)</th>
                                 <th scope="col">Situação</th>
-                                <th scope="col"><i class="ni ni-cloud-upload-96"></i></th>
-                                <th scope="col">#</th>
+                                <th scope="col"></th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,7 @@
                                     <th scope="row">
                                         <div class="media align-items-center">
                                             <div class="media-body">
-                                                <span class="mb-0 text-sm">{{$d->nome_projeto}}</span>
+                                            <a href="{{route('projetos.edit',$d->id)}}"></i>{{$d->nome_projeto}}</a>
                                             </div>
                                         </div>
                                     </th>
@@ -58,7 +58,12 @@
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <a href="{{route('projetos.edit',$d->id)}}"></i> Visualizar </a>
+                                        <a href="#" data-toggle="modal" data-target="#modal-upload" class="btn btn-sm btn-success">
+                                        <i class="ni ni-cloud-upload-96"></i>  Upload .PDF
+                                        </a>
+                                            @if($d->arquivo)
+                                                <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a>
+                                            @endif
                                            
                                         </div>
                                     </td>

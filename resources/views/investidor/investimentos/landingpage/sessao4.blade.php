@@ -10,9 +10,9 @@
 					@isset($projetos)
 				 	<thead class="">
 						<tr>
-							<th>Projeto</th>
-							<th>Valor Projeto</th>
-							<th>Valor Valor Meta</th>
+							<th>Título</th>
+							<th>Custo (R$)</th>
+							<th>Meta de Captação (R$) </th>
 							<th></th>
 						</tr>
 					</thead>
@@ -24,9 +24,11 @@
 							<td>R$ {{ number_format($p->valor_projeto,2,',','.')}}</td>
 							<td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
 							<td>
+							
+							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-dark" > Quero Investir</a>
 								<a href="javascript:void(0)" class="btn btn-dark detalhe-projeto" data-id="{{ $p->id }}" > Saiba Mais</a>
 								@auth
-									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Receber Proposta por email</a>
+									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Receber Proposta </a>
 								@endauth
 							</td>
 
@@ -66,15 +68,17 @@
 					</button>
 				</div>
 				<div class="modal-body">
-
+					<h3>Resumo</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="resumo"></p>
+					
 					<h3>Objetivos</h3>
 					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="objetivos"></p>
 
-					<h3>Resumo</h3>
-					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="resumo"></p>
-
-					<h3>Publico Alvo</h3>
+					<h3>Público Alvo</h3>
 					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="publico_alvo"></p>
+
+					<h3>Impactos Esperados</h3>
+					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="impactos_esperados"></p>
 
 					<h3>Contra Partidas</h3>
 					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="contra_partidas"></p>
@@ -98,6 +102,7 @@
 					$('#objetivos').html(data.objetivos);
 					$('#resumo').html(data.resumo);
 					$('#publico_alvo').html(data.publico_alvo);
+					$('#impactos_esperados').html(data.impactos_esperados);
 					$('#contra_partidas').html(data.contra_partidas);
 
 			})

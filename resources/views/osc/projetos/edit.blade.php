@@ -9,12 +9,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-                    <h1 class="display-2 text-white">Olá, {{ auth()->user()->nome_social}}</h1>
-                    <p class="text-white mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado
-                        para aprovação da plataforma.
-                    </p>
-                    <p class="text-success">#SimEuQuero</p>
-
+                     <h1 class="display-2 text-white"> # Projetos </h1>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -286,14 +283,14 @@
                                 {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
                         </div>
-                    </div>
+                   
                     <div class="card-footer text-center">
                         <button type="submit" class="btn btn-outline-success">Salvar</button>
                     </div>
                 </div>
             </div>
         </div>
-
+        </div>
 
         </div>
         {!! Form::close() !!}
