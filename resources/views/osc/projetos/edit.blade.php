@@ -199,7 +199,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Email Principal</label>
+                            <label for="" class="col-sm-3  col-form-label text-right">Email Principal</label>
                             <div class="col-md-6">
                                 {!! Form::text('prop_email1',null,['class'=>'form-control','id'=>'email1']) !!}
                             </div>
@@ -257,32 +257,49 @@
                         </div>
                         <hr>
                         <label for="" class="text-success">Fale sobre seu Projeto</label>
-                        <div class="row">
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Resumo do Projeto</label>
+
+                        <div class="form-group row">
+                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Resumo do projeto<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                            <div class="col-xs-12 col-md-9 col-form-label text-right">                              
                                 {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Objetivos</label>
+                        </div> <!--//row-->
+
+                        <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Objetivos  </label>
+                            <div class="col-xs-12 col-md-9 col-form-label text-right">
                                 {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Justificativa</label>
+                        </div> <!--//row-->
+
+                        <div class="form-group row">
+                          <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Justifictiva </label>
+                            <div class="col-xs-12 col-md-9 col-form-label text-right"> 
                                 {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Público Alvo</label>
+                        </div> <!--//row-->
+
+                        <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Público Alvo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                            <div class="col-xs-12 col-md-9 col-form-label text-right">                              
                                 {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Impactos Esperados</label>
+                        </div> <!--//row-->
+
+                        <div class="form-group row">
+                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right"> Impactos Esperados<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
+                            <div class="col-xs-12 col-md-9 col-form-label text-right">   
                                 {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                            <div class="col-sm-3 col-form-label text-right">
-                                <label for="">Contra Partidas</label>
+                        </div> <!--//row-->
+
+                        <div class="form-group row">
+                          <label for="" class="col-xs-12 col-sm-3 col-form-label text-left text-lg-right"> Contra Partida<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
+                            <div class="col-xs-12  col-md-9  text-right">                             
                                 {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
-                        </div>
+                        </div>  <!--//row-->
+                        </div> <!--//card-body-->
                    
                     <div class="card-footer text-center">
                         <button type="submit" class="btn btn-outline-success">Salvar</button>

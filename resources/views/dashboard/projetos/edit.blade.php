@@ -6,12 +6,12 @@
     
     <div class="container" style="margin-top:20px">
     <div class="row row justify-content-center">
-                       
+                   
 
 
                 @csrf
             <div class="col-md-12">
-
+erererer
             <ul class="nav nav-tabs justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><b class="text-dark" > Dados Gerais </b></a>

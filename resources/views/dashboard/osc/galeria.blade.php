@@ -2,6 +2,7 @@
 
 @section('cabecalho')
 
+
     <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
         <!-- Mask -->
         <span class="mask bg-gradient-danger opacity-8"></span>
@@ -14,7 +15,7 @@
 				   para aprovação da plataforma.</p> --}}
                    
                     {{--<a href="" class="btn btn-success m-4" data-toggle="modal" data-target="#modal-default"> Upload Galeria</a>--}}
-
+                                               
                 </div>
             </div>
         </div>
@@ -34,11 +35,17 @@
 							<div class="row justify-content-center ">
 							@forelse($galerias as $g)
 										
-									<div class="col-xs-12 " >
-										<a href="#">
-											<img src="{{asset($g->aws_url)}}" alt="" class=" img-thumbnail" data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}" style="width:200px; height:150px;" ></a>
-										<h3 class="entry-title text-center"><a href="{{route('galeria.show',$g->id)}}"><i class="ni ni-fat-remove text-danger" data-toggle="tooltip" data-placement="left" title="Remover "></i></a></h3>
-									</div>
+                            <div class="col-xs-12">
+                                <div class="" style="width:200px;">
+                                    <span class="spanx"><a href="{{route('galeria.show',$g->id)}}"><i class="fas fa-trash-alt spanx"></i> Excluir</a></span>
+                                    <!-- <span class=""><a href="{{route('galeria.show',$g->id)}}"><i class="fas fa-edit"></i> Editar </a></span>    -->
+                                </div>
+                                    <a href="#" class="">
+                                    <img src="{{asset($g->aws_url)}}" alt="" class=" img-thumbnail " data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}" style="width:200px; height:150px;">   
+                                </a>
+                                    
+                                
+                            </div>
 							@empty
 
 							@endforelse
@@ -130,3 +137,37 @@
             </div>
         </div>
 @stop
+<style>
+/*::::::::::: classe de efeito de imagem/excluir::::::::::*/
+.spanx a:hover{
+    width: 190px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000; 
+    background-color:rgba(0, 0, 0, .6);
+    opacity: 4;
+    transition: .3s;   
+}
+
+.spanx  a{
+    width: 190px;
+    margin-left: 5px;
+    margin-top: 104px;
+    padding: 10px;
+    position: absolute;
+    /* color: rgb(255, 255, 255); */
+    text-align: right;
+    font-size: 10pt;
+    text-decoration: none;
+    opacity: 0;
+}
+ .spanx i{
+    
+     color:#da2c2c;
+
+ }
+
+
+
+</style>
