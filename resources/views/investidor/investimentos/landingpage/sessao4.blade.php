@@ -23,7 +23,7 @@
 														
 													
 													
-														<div class="table-responsive mt-0 ">
+														<div class="table-responsive 	">
 													
 														<table class="table table-hover ">
 					@isset($projetos)
@@ -34,7 +34,7 @@
 				 	<tbody class="font-weight-900">
 						@forelse($projetos as $p)
 						<tr>
-						<td  >
+						<td  style="width: 50px;">
 							
 							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a>
 							
