@@ -8,7 +8,7 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
-				<h1 class="display-2 text-white"> # Projetos > Adicionar Projeto</h1>
+				<h1 class="display-2 text-white"> # Projetos </h1>
 				{{--  <p class="text-white mt-0 mb-2">Precisamos de algumas informações para incluir o seu projeto, assim que finalizar ele será enviado para aprovação da plataforma.   </p> --}}
                     
 
@@ -300,7 +300,7 @@
                             </div>
 							
 							<div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos  </label>
+                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                                 <div class="col-md-9">
 								{!! Form::textarea('objetivos',null,['class'=>'form-control contador10','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
                                     <span class='caracteres10'></span>
@@ -368,7 +368,7 @@
 							
 								<div class="card-footer text-center">
 							
-									<button type="submit" class="btn btn-outline-success">Salvar</button> 
+									<button type="submit" class="btn btn-outline-success"><i class="ni ni-check-bold"></i> Salvar</button> 
 								</div>
 						
                                

@@ -99,8 +99,8 @@
 								 
 								  <div class="card-footer text-center">
 								  
-											{!! Form::submit('Salvar',['class'=>'btn btn-outline-success']) !!} 
-
+								  {{-- {{ Form::submit('Salvar',['class'=>'btn btn-outline-success ']) !!} --}}
+								  <button type="submit" class="btn btn-outline-success"><i class="ni ni-check-bold"></i> Salvar</button>
 											@endif
 										</div>
 

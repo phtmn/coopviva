@@ -2,50 +2,68 @@
 <!--<section class="section section-lg bg-default"> -->
 <!--<section class="section section-lg bg-success"> -->
 <!--<section class="section section-lg bg-success"> -->
-      <div class="container-fluid pt-lg pb-100 ">
+      <div class="container pt-lg pb-100 ">
         <div class="row text-center justify-content-center">
-			<h1 class="display-3 text-white font-weight-900 ">Nossos Projetos</h1>
-        <div class="col-lg-12">
-			 <table class="table text-white">
+				<h2 class="display-2 text-white"><i class="ni ni-collection text-white mx-1 my-1"></i> Projetos</h2>
+		 <p class="lead text-white  mx-2 my-2  font-weight-600">O que você pode fazer hoje para contribuir para um mundo melhor? Conheça as nossas ações e como atuamos para transformar o mundo.  </p>
+		 
+        </div>
+
+
+			
+					
+
+      
+
+				<div class="col-lg-12 mt-4">
+				
+                        <div class="card card-lift--hover shadow border-0">
+												<H1 class="text-left mt-4  mx-3 font-weight-900"> Colabore com nossas ações</h1>
+                            <div class="card-body py-4  mt-0 d-flex justify-content-center">
+														
+													
+													
+														<div class="table-responsive mt-0 ">
+													
+														<table class="table table-hover ">
 					@isset($projetos)
 				 	<thead class="">
-						<tr>
-							<th>Título</th>
-							<th>Custo (R$)</th>
-							<th>Meta de Captação (R$) </th>
-							<th></th>
-						</tr>
+						
 					</thead>
 				 	@endisset
 				 	<tbody class="font-weight-900">
 						@forelse($projetos as $p)
 						<tr>
-							<td>{{$p->nome_projeto}}</td>
-							<td>R$ {{ number_format($p->valor_projeto,2,',','.')}}</td>
-							<td>R$ {{ number_format($p->valor_meta,2,',','.')}}</td>
-							<td>
+						<td  >
 							
-							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-dark" > Quero Investir</a>
-								<a href="javascript:void(0)" class="btn btn-dark detalhe-projeto" data-id="{{ $p->id }}" > Saiba Mais</a>
-								@auth
-									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Receber Proposta </a>
-								@endauth
+							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a>
+							
+							
 							</td>
+							<td class="text-left justify-content-center">{{$p->nome_projeto}}
+							<h5><span class="badge badge-pill badge-danger"><a href="javascript:void(0)" class="text-dark detalhe-projeto" data-id="{{ $p->id }}" > <i class="ni ni-fat-add"></i><b style="text-transform: capitalize; "> Informações </b></a></span></h5>
+							
+							</td>
+							</td>
+						
+						
+						
 
 						</tr>
 						@empty
-							<p class="font-weight-900 text-white">#não há Projetos para exibir!</p>
+							<p class="font-weight-900 text-dark">#não há Projetos para exibir!</p>
 						@endforelse
 						
 					</tbody>
 
 			 </table>
-
+			 
+								
+                          
+                            </div>
+                        </div>
         </div>
-		<hr color="white">
-		
-		
-		
+				</div>
 		</div>
 		
 		
@@ -58,16 +76,17 @@
       </div>
 
 	<div class="modal fade" id="kalahun-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-		<div class="modal-dialog  modal-lg"  role="document">
+		<div class="modal-dialog modal-lg"  role="document">
 
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-title" id="nome">Quem é KA LAHUN? </h2>
+					
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
+				<h2 class="modal-title  mb-2 text-right " id="nome"> </h2>
 					<h3>Resumo</h3>
 					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="resumo"></p>
 					
@@ -82,17 +101,49 @@
 
 					<h3>Contra Partidas</h3>
 					<p class="text-justify mt-3 mx-3" style="text-indent: 15px;" id="contra_partidas"></p>
+					<hr>
+					<div class="container">
+  <div class="row">
+    <div class="col">
+		<div class="alert alert-secondary text-center" role="alert">
+    <strong>Custo (R$)</strong> <b id="valor_projeto" > </b> 
+</div>
+		
+    </div>
+    <div class="col">
+		<div class="alert alert-success text-center" role="alert">
+    <strong>Meta de Captação (R$)</strong> <b id="valor_meta" > </b> 
+</div>
+		
+    </div>
+  </div>
+  <div class="row">
+   
+    <div class="col">
+		<div class="alert alert-default text-center" role="alert">
+    <strong>	@auth
+									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Desejo receber mais informações do projeto por e-mail! </a>
+								@endauth</strong> 
 
+	
+    </div>
+   
+  </div>
+</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-	
+
+
 
 @section('js')
 
 	<script>
+
+
+
 		$('body').on('click', '.detalhe-projeto', function () {
 			var projeto_id = $(this).data('id');
 				$.get("{{ url('sim_eu_quero/projeto') }}" +'/' + projeto_id, function (data) {
@@ -104,6 +155,10 @@
 					$('#publico_alvo').html(data.publico_alvo);
 					$('#impactos_esperados').html(data.impactos_esperados);
 					$('#contra_partidas').html(data.contra_partidas);
+					$('#valor_projeto').html(data.valor_projeto);
+					$('#valor_meta').html(data.valor_meta);
+					
+					
 
 			})
 		});
@@ -113,7 +168,7 @@
 @stop
 	
 	
-	
+
 	
 	
 	

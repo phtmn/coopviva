@@ -353,7 +353,7 @@
                       
 
                         <div class="card-footer text-center">
-                            <button type="submit" class="btn btn-outline-success">Salvar</button>
+                            <button type="submit" class="btn btn-outline-success"><i class="ni ni-check-bold"></i> Salvar</button>
                         </div>
 						 </div>
                     </div>

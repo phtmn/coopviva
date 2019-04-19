@@ -8,6 +8,7 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-12 col-md-10">
+                
 				<h1 class="display-2 text-white"> # Projetos</h1>
 				{{--<h1 class="display-2 text-white">Olá, {{ auth()->user()->apelido}}</h1> --}}
                 {{--    <p class="text-white mt-0 mb-2">Cadastre seus projetos e receba investimentos da nossa rede de investidores (patrocinadores/doadores). #SimEuQuero. </p> --}}
@@ -58,8 +59,8 @@
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                        <a href="#" data-toggle="modal" data-target="#modal-upload" class="btn btn-sm btn-success">
-                                        <i class="ni ni-cloud-upload-96"></i>  Upload .PDF
+                                        <button type="submit" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Em breve"><i class="ni ni-cloud-upload-96"></i> Upload .PDF</button>
+                                        
                                         </a>
                                             @if($d->arquivo)
                                                 <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a>

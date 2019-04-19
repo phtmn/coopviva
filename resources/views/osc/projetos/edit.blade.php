@@ -23,37 +23,36 @@
         @method('PUT')
         <div class="col-md-12">
             <div class="card shadow">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <div class="pull-right">
-                            <a href="#" data-toggle="modal" data-target="#modal-upload" class="btn btn-sm btn-success">
-                                Enviar PDF
-                            </a>
-                            @if($projeto->arquivo)
-                                <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a>
-                            @endif
-                        </div>
+               
+              
+                        {{--<div class="pull-right"> --}}
+                           {{-- <a href="#" data-toggle="modal" data-target="#modal-upload" class="btn btn-sm btn-success"> Enviar PDF</a> --}}
+                           {{-- @if($projeto->arquivo) --}}
+                            {{--    <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a> --}}
+                            {{-- @endif --}}
+                        {{--</div> --}}
 
-                    </div>
+                 
                     <div class="card-body bg-transparent">
 
-                        <label class="text-success">Dados Gerais</label>
+                        <p class="text-success mt-2">Dados Gerais</p>
+                        <hr>
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Nome do Projeto</label>
-                            <div class="col-md-8">
+                            <label for="" class="col-sm-3 col-form-label text-right">Nome <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                            <div class="col-md-9">
                                 {!! Form::text('nome_projeto',null,["class"=>"form-control",'required'=>'true']) !!}
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Descricao Resumida</label>
+                            <label for="" class="col-sm-3 col-form-label text-right">Descricao Resumida <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-md-8">
                                 {!! Form::textarea('descricao_resumida',null,["class"=>"form-control",'required'=>'true','rows'=>'2']) !!}
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Responsável pelo Projeto</label>
+                            <label for="" class="col-sm-3 col-form-label text-right">Responsável </label>
                             <div class="col-md-8">
                                 {!! Form::text('responsavel_projeto',null,["class"=>"form-control",'required'=>'true']) !!}
                             </div>
@@ -61,14 +60,14 @@
 
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Valor do Projeto</label>
+                            <label for="" class="col-sm-3 col-form-label text-right">Custo (R$) <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-md-5">
                                 {!! Form::text('valor_projeto',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_projeto']) !!}
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Valor de Meta</label>
+                            <label for="" class="col-sm-3 col-form-label text-right">Meta de Captação (R$) <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-md-5">
                                 {!! Form::text('valor_meta',null,['class'=>'input input-lg form-control','required'=>'true', 'placeholder'=>'R$','id'=>'valor_meta']) !!}
                             </div>
@@ -156,9 +155,9 @@
                                 </div>
                             </div>
                         @endif
-                        <hr>
-                        <label for="Dadod do Poponente" class="text-success">Dados do Proponente</label>
-
+                        
+                        <p for="Dadod do Poponente" class="text-success mt-2">Dados do Proponente</p>
+                          <hr>                          
                         <div class="form-group row">
                             <label for="" class="col-sm-3 col-form-label text-right">Proponente</label>
                             <div class="col-md-8">
@@ -211,8 +210,9 @@
                                 {!! Form::text('prop_email2',null,['class'=>'form-control','id'=>'email2']) !!}
                             </div>
                         </div>
+                        
+                        <p class="text-success">Conta para receber Doações</p>
                         <hr>
-                        <label class="text-success">Conta para receber Doações</label>
                         <div class="row">
                             <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
@@ -234,7 +234,7 @@
                             </div>
                         </div>
                         <hr>
-                        <label class="text-success">Conta para Receber Patrocínios</label>
+                        <p class="text-success">Conta para Receber Patrocínios</p>
                         <div class="row"><!--row-3-->
                             <div class="form-group col-md-3">
                                 {!! Form::label('Banco') !!}
@@ -255,18 +255,18 @@
                                 {!! Form::text('op_patrocinio',null,['class'=>'form-control']) !!}
                             </div>
                         </div>
-                        <hr>
-                        <label for="" class="text-success">Fale sobre seu Projeto</label>
-
+                        
+                        <p for="" class="text-success mt-2">Escopo</p>
+                        <hr>                                            
                         <div class="form-group row">
-                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Resumo do projeto<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Resumo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-xs-12 col-md-9 col-form-label text-right">                              
                                 {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
                         </div> <!--//row-->
 
                         <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Objetivos  </label>
+                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Objetivos  <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-xs-12 col-md-9 col-form-label text-right">
                                 {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
@@ -299,17 +299,17 @@
                                 {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
                             </div>
                         </div>  <!--//row-->
-                        </div> <!--//card-body-->
+                         <!--//card-body-->
                    
                     <div class="card-footer text-center">
-                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                        <button type="submit" class="btn btn-outline-success"><i class="ni ni-check-bold"></i> Salvar</button>
                     </div>
                 </div>
-            </div>
-        </div>
-        </div>
+                </div>
+         
+      
 
-        </div>
+       
         {!! Form::close() !!}
     </div>
     </div>

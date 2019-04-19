@@ -26,26 +26,28 @@
 <div class="container mt--7">
     <div class="row">
         
-		    <div class="col-md-8">
-				<div class="card shadow">
-						<div class=" card-header border-0 text-center ">
+		    <div class="col-md-8 ">
+				<div class="card shadow ">
+						<div class=" card-header border-0 text-center  ">
 							 <a href="" class="btn btn-danger m-4" data-toggle="modal" data-target="#modal-default"> <i class="ni ni-cloud-upload-96"></i> Upload Galeria</a>
 						</div>
 					
 							<div class="row justify-content-center ">
 							@forelse($galerias as $g)
 										
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 ">
                                 <div class="" style="width:200px;">
                                     <span class="spanx"><a href="{{route('galeria.show',$g->id)}}"><i class="fas fa-trash-alt spanx"></i> Excluir</a></span>
                                     <!-- <span class=""><a href="{{route('galeria.show',$g->id)}}"><i class="fas fa-edit"></i> Editar </a></span>    -->
                                 </div>
                                     <a href="#" class="">
                                     <img src="{{asset($g->aws_url)}}" alt="" class=" img-thumbnail " data-toggle="tooltip" data-placement="top" title="{{$g->legenda}}" style="width:200px; height:150px;">   
-                                </a>
                                     
+                                </a>
+                          
                                 
                             </div>
+                            
 							@empty
 
 							@endforelse
@@ -100,8 +102,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                        <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger"><i class="ni ni-check-bold"></i> Enviar</button>
+                        <button type="button" class="btn btn-link-danger  ml-auto" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
                 {!! Form::close() !!}
@@ -128,9 +130,9 @@
 							<!--<p> teste </p> -->
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                        <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button>
+                    <div class="modal-footer ">
+                        <button type="submit" class="btn btn-danger "><i class="ni ni-check-bold"></i> Enviar</button>
+                        <button type="button" class="btn btn-link-danger  ml-auto" data-dismiss="modal">Cancelar</button>  
                     </div>
                 </div>
                 {!! Form::close() !!}
