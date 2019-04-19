@@ -62,8 +62,8 @@
                                         <button type="submit" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Em breve"><i class="ni ni-cloud-upload-96"></i> Upload .PDF</button>
                                         
                                         </a>
-                                            @if($d->arquivo)
-                                                <a href="{{ $projeto->arquivo }}" target="_blank"> Visualizar seu Arquivo</a>
+                                            @if($d->arquivo != null)
+                                                <a href="{{ $d->arquivo}}" target="_blank"> Visualizar seu Arquivo</a>
                                             @endif
                                            
                                         </div>

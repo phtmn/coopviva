@@ -2193,7 +2193,7 @@
     </column>
     <column id="480" parent="253" name="is_admin">
       <Position>12</Position>
-      <DataType>tinyint(4)|0s</DataType>
+      <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
