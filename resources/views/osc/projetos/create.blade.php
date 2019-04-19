@@ -207,7 +207,7 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label text-right">Telefone Sedunário</label>
+                                        <label for="" class="col-sm-3 col-form-label text-right">Telefone Secundário</label>
                                         <div class="col-md-3">
                                             {!! Form::text('prop_telefone2',null,['class'=>'form-control','id'=>'telefone2']) !!}
                                         </div>
