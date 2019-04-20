@@ -1,4 +1,4 @@
-<section class="section section-lg">
+<section class="section section-lg ">
    
 <div class="container-fluid">
    

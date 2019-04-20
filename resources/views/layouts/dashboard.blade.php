@@ -35,17 +35,44 @@
             <img src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
+        
+
         <ul class="nav align-items-center d-md-none">
-            
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="media align-items-center">
-              <span class="avatar avatar-sm rounded-circle">
-                <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
-              </span>
+          
+        <li class="nav-item dropdown">
+                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                </span>
+                            <div class="media-body ml-2 d-none d-lg-block">
+                                <span class="mb-0 text-sm  font-weight-bold"></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class=" dropdown-header noti-title">
+                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>
+                        </div>
+                        <div class=" dropdown-header noti-title">
+                        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" data-toggle="tooltip" data-placement="right" title="Em breve"><i class="ni ni-bell-55 "></i> </a>
+                            <a href=""  ><h6 class="text-overflow m-0"  style="text-transform: capitalize;"><i class="ni ni-bell-55 " ></i> Notificações (Em breve)</h6></a>
+                        </div>
+                        <div class=" dropdown-header noti-title">
+                        <a href="{{route('detalhe.osc',auth()->user()->osc()->id)}}" ><h6 class="text-overflow m-0" style="text-transform: capitalize;"><i class=" text-dark ni ni-world-2 "></i> <i class="font-weight-bold 900">Landing Page </i></h6></a>
+                        </div>
+                       
+                        <div class="dropdown-divider"></div>
+                        <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                           
+                            <span>Sair</span>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </a>
                     </div>
-                </a>               
-            </li>
+                </li>
         </ul>
         
         <!-- Collapse -->
@@ -155,7 +182,7 @@
                     </div>
                     <div class="modal-body">
 
-                      <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail " style="max-width: 300px; max-height: 300px" ></center>
+                      <center>  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="thumbnail " style="max-width: 50%; max-height: 50%" ></center>
 						<br>
 						<hr>	
                         <p class="text-justify mt-3 mx-3" style="text-indent: 15px;">

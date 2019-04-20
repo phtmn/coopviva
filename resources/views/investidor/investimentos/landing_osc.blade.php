@@ -7,9 +7,13 @@
 
 @include('investidor.investimentos.landingpage.sessao1')
 
-@include('investidor.investimentos.landingpage.sessao2')		
-
 @include('investidor.investimentos.landingpage.sessao3')
+
+@include('investidor.investimentos.landingpage.sessao2')	
+
+
+
+
 
 @include('investidor.investimentos.landingpage.sessao4')
 

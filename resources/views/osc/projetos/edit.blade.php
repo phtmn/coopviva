@@ -1,4 +1,4 @@
-@extends('osc.dashboard')
+@extends('layouts.dashboard')
 
 @section('cabecalho')
 
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="" class="col-sm-3 col-form-label text-right">Descricao Resumida <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                            <label for="" class="col-sm-3 col-form-label text-right">Descrição Resumida <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
                             <div class="col-md-9">
                                 {!! Form::textarea('descricao_resumida',null,["class"=>"form-control contador8",'required'=>'true','style'=>'resize: none', 'rows'=>'3','maxlenght'=>'250', 'placeholder'=>'Descrição resumida do seu projeto. Use no máximo 250 caracteres!']) !!}
                                 <span class='caracteres8'></span>
@@ -187,7 +187,7 @@
                           <hr>                          
                         <div class="form-group row">
                             <label for="" class="col-sm-3 col-form-label text-right">Proponente</label>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 {!! Form::text('prop_nome',null,['class'=>'form-control']) !!}
                                 <span class="help-inline text-success">Responsável Legal do Projeto</span>
                             </div>
@@ -206,7 +206,7 @@
                         <div class="form-group row" id="tipo-perfil">
                             <label for="" class="col-sm-3 col-form-label text-right">Nº Documento</label>
                             <div class="col-md-3">
-                                {!! Form::text('prop_documento',null,['class'=>'form-control','id'=>'cpfcnpj']) !!}
+                                {!! Form::text('prop_documento',null,['class'=>'form-control','id'=>'cpfcnpj', 'placeholder'=>'CPF ou CNPJ']) !!}
                             </div>
                         </div>
 
@@ -238,50 +238,63 @@
                             </div>
                         </div>
                         
-                        <p class="text-success">Conta para receber Doações</p>
-                        <hr>
-                        <div class="row">
-                            <div class="form-group col-md-3">
-                                {!! Form::label('Banco') !!}
-                                {!! Form::select('banco_doacao',$bancos,null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                            </div>
+                        <p class="text-success mt-2">Dados Bancários</p>
+									<hr>
+									
+									
+									<div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label text-right mt-3">Conta para Receber <b class="text-success">Patrocínios</b></label>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                        <div class="form-group col-md-5">
+                                            {!! Form::label('Banco') !!}
+                                            {!! Form::select('banco_doacao',$bancos,null,['placeholder'=>'Selecione..','class'=>'form-control']) !!}
+                                        </div>
 
-                            <div class="form-group col-md-2">
-                                {!! Form::label('Agência') !!}
-                                {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
-                            </div>
+                                        <div class="form-group col-md-2">
+                                            {!! Form::label('Agência') !!}
+                                            {!! Form::text('agencia_doacao',null,['class'=>'form-control']) !!}
+                                        </div>
 
-                            <div class="form-group col-md-3">
-                                {!! Form::label('Conta') !!}
-                                {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
-                            </div>
-                            <div class="form-group col-md-1">
-                                {!! Form::label('OP') !!}
-                                {!! Form::text('op_doacao',null,['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <hr>
-                        <p class="text-success">Conta para Receber Patrocínios</p>
-                        <div class="row"><!--row-3-->
-                            <div class="form-group col-md-3">
-                                {!! Form::label('Banco') !!}
-                                {!! Form::select('banco_patrocinio',['001'=>'001 - BANCO DO BRASIL S/A'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
-                            </div>
+                                        <div class="form-group col-md-3">
+                                            {!! Form::label('Conta') !!}
+                                            {!! Form::text('conta_doacao',null,['class'=>'form-control']) !!}
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            {!! Form::label('OP') !!}
+                                            {!! Form::text('op_doacao',null,['class'=>'form-control']) !!}
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+									
+									<div class="form-group row">
+                                        <label for="" class="col-sm-3 col-form-label text-right mt-3">Conta para Receber <b class="text-success">Doações</b></label>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                        <div class="form-group col-md-5">
+                                            {!! Form::label('Banco') !!}
+                                            {!! Form::select('banco_patrocinio',['001'=>'001 - BANCO DO BRASIL S/A'],null,['placeholder'=>'Escolha uma opção','class'=>'form-control']) !!}
+                                        </div>
 
-                            <div class="form-group col-md-2">
-                                {!! Form::label('Agência') !!}
-                                {!! Form::text('agencia_patrocinio',null,['class'=>'form-control']) !!}
-                            </div>
+                                        <div class="form-group col-md-2">
+                                            {!! Form::label('Agência') !!}
+                                            {!! Form::text('agencia_patrocinio',null,['class'=>'form-control']) !!}
+                                        </div>
 
-                            <div class="form-group col-md-3">
-                                {!! Form::label('Conta') !!}
-                                {!! Form::text('conta_patrocinio',null,['class'=>'form-control']) !!}
-                            </div>
-                            <div class="form-group col-md-1">
-                                {!! Form::label('OP') !!}
-                                {!! Form::text('op_patrocinio',null,['class'=>'form-control']) !!}
-                            </div>
-                        </div>
+                                        <div class="form-group col-md-3">
+                                            {!! Form::label('Conta') !!}
+                                            {!! Form::text('conta_patrocinio',null,['class'=>'form-control']) !!}
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            {!! Form::label('OP') !!}
+                                             {!! Form::text('op_patrocinio',null,['class'=>'form-control']) !!}
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+
+
                         
                         <p for="" class="text-success mt-2">Escopo</p>
                         <hr>                                            
