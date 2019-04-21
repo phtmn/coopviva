@@ -294,52 +294,87 @@
                                         </div>
                                     </div>
 
-
+                                    <p class="text-success mt-2">Escopo </p>
+						 <hr>
+                         <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Resumo<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								 {!! Form::textarea('resumo',null,['class'=>'form-control contador9','style'=>'resize: none','rows'=>'5','maxlenght'=>'500','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres9'></span>
+									 @if ($errors->has('resumo'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('resumo') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Objetivos <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								{!! Form::textarea('objetivos',null,['class'=>'form-control contador10','maxlenght'=>'500', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres10'></span>
+									@if ($errors->has('objetivos'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('objetivos') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Justifictiva </label>
+                                <div class="col-md-9">
+								 {!! Form::textarea('justificativa',null,['class'=>'form-control contador11', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres11'></span>
+									@if ($errors->has('justificativa'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('justificativa') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right">Público Alvo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
+                                <div class="col-md-9">
+								{!! Form::textarea('publico_alvo',null,['class'=>'form-control contador12', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres12'></span>
+										@if ($errors->has('publico_alvo'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('publico_alvo') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right"> Impactos Esperados<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
+                                <div class="col-md-9">
+								{!! Form::textarea('impactos_esperados',null,['class'=>'form-control contador13', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500', 'placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres13'></span>
+									@if ($errors->has('impactos_esperados'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('impactos_esperados') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+							
+							<div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label text-right"> Contra Partida<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
+                                <div class="col-md-9">
+                                    {!! Form::textarea('contra_partidas',null,['class'=>'form-control contador14', 'style'=>'resize: none', 'rows'=>'5','maxlenght'=>'500','placeholder'=>'Use no máximo 500 caracteres!']) !!}
+                                    <span class='caracteres14'></span>
+									@if ($errors->has('contra_partidas'))
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('contra_partidas') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>                
                         
-                        <p for="" class="text-success mt-2">Escopo</p>
-                        <hr>                                            
-                        <div class="form-group row">
-                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Resumo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
-                            <div class="col-xs-12 col-md-9 col-form-label text-right">                              
-                                {!! Form::textarea('resumo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div> <!--//row-->
-
-                        <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Objetivos  <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
-                            <div class="col-xs-12 col-md-9 col-form-label text-right">
-                                {!! Form::textarea('objetivos',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div> <!--//row-->
-
-                        <div class="form-group row">
-                          <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Justifictiva </label>
-                            <div class="col-xs-12 col-md-9 col-form-label text-right"> 
-                                {!! Form::textarea('justificativa',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div> <!--//row-->
-
-                        <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label text-left text-lg-right">Público Alvo <b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b></label>
-                            <div class="col-xs-12 col-md-9 col-form-label text-right">                              
-                                {!! Form::textarea('publico_alvo',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div> <!--//row-->
-
-                        <div class="form-group row">
-                           <label for="" class="col-sm-3 col-form-label text-left text-lg-right"> Impactos Esperados<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
-                            <div class="col-xs-12 col-md-9 col-form-label text-right">   
-                                {!! Form::textarea('impactos_esperados',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div> <!--//row-->
-
-                        <div class="form-group row">
-                          <label for="" class="col-xs-12 col-sm-3 col-form-label text-left text-lg-right"> Contra Partida<b class="text-success" data-toggle="tooltip" data-placement="right" title="Publicado na Landing Page"> * </b> </label>
-                            <div class="col-xs-12  col-md-9  text-right">                             
-                                {!! Form::textarea('contra_partidas',null,['class'=>'form-control', 'style'=>'resize: none', 'rows'=>'5']) !!}
-                            </div>
-                        </div>  <!--//row-->
-                         <!--//card-body-->
+                        
                    
                     <div class="card-footer text-center">
                         <button type="submit" class="btn btn-outline-success"><i class="ni ni-check-bold"></i> Salvar</button>
@@ -386,7 +421,7 @@
 
 @section('js')
 <script src="{{asset('js/jquery.mask.min.js')}}"> </script>
-	<script src="{{asset('js/caracter_count.js')}}"> </script>
+<script src="{{asset('js/caracter_count.js')}}"> </script>
     <script>
         $(document).ready(function(){
             $("#valor_projeto").mask('#.##0,00', {reverse: true});
