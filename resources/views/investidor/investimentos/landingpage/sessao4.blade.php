@@ -139,11 +139,8 @@
 
 
 @section('js')
-
+	<script src="{{asset('js/jquery.mask.min.js')}}"> </script>
 	<script>
-
-		
-
 		$('body').on('click', '.detalhe-projeto', function () {
 			var projeto_id = $(this).data('id');
 				$.get("{{ url('sim_eu_quero/projeto') }}" +'/' + projeto_id, function (data) {
@@ -155,16 +152,11 @@
 					$('#publico_alvo').html(data.publico_alvo);
 					$('#impactos_esperados').html(data.impactos_esperados);
 					$('#contra_partidas').html(data.contra_partidas);
-					$('#valor_projeto').html(data.valor_projeto).mask('000.000.000' , { reverse : true});
-	      	$('#valor_meta').html(data.valor_meta).mask('000.000.000' , { reverse : true});
-					
-					
-
+					$('#valor_projeto').html(data.valor_projeto).mask('#.##0,00', {reverse: true});
+	      			$('#valor_meta').html(data.valor_meta).mask('#.##0,00', {reverse: true});
 			})
 		});
 	</script>
-
-
 @stop
 	
 	

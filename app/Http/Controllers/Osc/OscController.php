@@ -22,9 +22,12 @@ class OscController extends Controller
         $osc = auth()->user()->osc();
         if($osc){
             return view('osc.painel',[
-                'osc'           => $osc,
-                'projetos'      => $osc->projetos()->count(),
-                'metas'         => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
+                'osc'            => $osc,
+                'projetos'       => $osc->projetos()->count(),
+                'metas'          => DB::table('metas_oscs')->where('osc_id',$osc->id)->get(),
+                'investimentos'  => DB::table('investimentos')->where('osc_id',$osc->id)->sum('valor'),
+                'investimentos_p'=> DB::table('investimentos')->where('projeto_id','<>',null)
+                                        ->where('osc_id',$osc->id)->sum('valor'),
             ]);
         }
         return view('osc.bemvindo');

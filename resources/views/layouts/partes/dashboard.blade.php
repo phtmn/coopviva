@@ -112,7 +112,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Total</h5>
-                      <span class="h2 font-weight-bold mb-0">0</span>
+                      <span class="h2 font-weight-bold mb-0">{{ $projetos ?? '0'}}</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-white text-success rounded-circle shadow">
@@ -122,7 +122,7 @@
                   </div>
                   <p class="mt-3 mb-0 text-muted text-sm">
                     
-                    <span class="text-nowrap text-success font-weight-900">  Projetos<b class="text-dark"> cadastrados</b></span>
+                    <span class="text-nowrap text-success font-weight-900">  Projetos <b class="text-dark"> cadastrados</b></span>
                   </p>
                 </div>
               </div>
@@ -141,7 +141,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">TOTAL (R$)</h5>
-                      <span class="h2 font-weight-bold mb-0"> 0</span>
+                      <span class="h2 font-weight-bold mb-0"> R$ {{ number_format($investimentos,2,',','.') ?? '0'}}</span>
                     </div>
                     <div class="col-auto">
 						<div class="icon icon-shape bg-white text-yellow rounded-circle shadow">
@@ -152,7 +152,7 @@
                   </div>
                   <p class="mt-3 mb-0 text-muted text-sm">
                     
-                    <span class="text-nowrap text-dark font-weight-900">  Investimentos recebidos em <b class="text-primary">SIGLA</b></span>
+                    <span class="text-nowrap text-dark font-weight-900">  Investimentos recebidos em <b class="text-primary">{{$osc->sigla}}</b></span>
                   </p>
                 </div>
               </div>
@@ -163,7 +163,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">TOTAL (R$)  </h5>
-                      <span class="h2 font-weight-bold mb-0"> 0</span>
+                      <span class="h2 font-weight-bold mb-0"> R$ {{ number_format($investimentos_p,2,',','.') ?? '0'}}</span>
                     </div>
                     <div class="col-auto">
                        <div class="icon icon-shape bg-white text-yellow rounded-circle shadow">
