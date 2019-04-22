@@ -155,8 +155,8 @@
 					$('#publico_alvo').html(data.publico_alvo);
 					$('#impactos_esperados').html(data.impactos_esperados);
 					$('#contra_partidas').html(data.contra_partidas);
-					$('#valor_projeto').html(data.valor_projeto);
-	      	$('#valor_meta').html(data.valor_meta);
+					$('#valor_projeto').html(data.valor_projeto).mask('000.000.000' , { reverse : true});
+	      	$('#valor_meta').html(data.valor_meta).mask('000.000.000' , { reverse : true});
 					
 					
 
