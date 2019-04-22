@@ -35,6 +35,8 @@ class InvestimentosController extends Controller
         return view('investidor.investimentos.landing_osc',[
             'osc'       => Osc::find($id),
             'metas'     => DB::table('metas_oscs')->where('osc_id',$id)->get(),
+            'metas_p'   => DB::table('metas_oscs')->where('projeto_id','<>',null)
+                                    ->where('osc_id',$id)->get(),
             'galerias'  => DB::table('galerias')->where('osc_id',$id)->get(),
             'projetos'  => DB::table('projetos')->where('osc_id',$id)->get()
         ]);

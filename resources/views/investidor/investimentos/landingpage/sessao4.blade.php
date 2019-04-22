@@ -34,7 +34,7 @@
 				 	<tbody class="font-weight-900">
 						@forelse($projetos as $p)
 						<tr>
-						<td  style="width: 50px;">
+							<td  style="width: 50px;">
 							
 							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a>
 							
@@ -42,7 +42,11 @@
 							</td>
 							<td class="text-left justify-content-center">{{$p->nome_projeto}}
 							<h5><span class="badge badge-pill badge-danger"><a href="javascript:void(0)" class="text-dark detalhe-projeto" data-id="{{ $p->id }}" > <i class="ni ni-fat-add"></i><b style="text-transform: capitalize; "> Informações </b></a></span></h5>
-							
+								@forelse($metas_p->unique('objetivo_id') as $obj)
+									<a style="cursor: pointer"><img class="img-thumbnail" style="width:55px; height:55px;" src="{{asset('/vendor/site/images/ods/ods'.$obj->objetivo_id.'.png')}}"></a>
+								@empty
+									<p class="text-white font-weight-900">#não há objetivos da Agenda 2030 cadastrados!</p>
+								@endforelse
 							</td>
 							</td>
 						
