@@ -165,6 +165,10 @@
 	      			$('#valor_meta').html(data.valor_meta).mask('#.##0,00', {reverse: true});
 			})
 		});
+
+		$(document).ready(function(){
+			$('#valor').mask('#.##0,00',{reverse:true});
+		})
 	</script>
 @stop
 	
