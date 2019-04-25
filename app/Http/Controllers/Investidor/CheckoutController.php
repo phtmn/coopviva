@@ -81,9 +81,9 @@ class CheckoutController extends Controller
 
         # callbacks urls
         $preference->back_urls = array(
-            "success" => env('APP_URL').'painel-investidor/investimento/success',
-            "failure" => env('APP_URL').'painel-investidor/investimento/failure',
-            "pending" => env('APP_URL').'painel-investidor/investimento/pending'
+            "success" => env('APP_URL').'/painel-investidor/investimento/success',
+            "failure" => env('APP_URL').'/painel-investidor/investimento/failure',
+            "pending" => env('APP_URL').'/painel-investidor/investimento/pending'
         );
 
         $preference->auto_return        = "approved";
