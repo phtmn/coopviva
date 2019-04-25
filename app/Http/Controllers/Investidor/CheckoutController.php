@@ -40,10 +40,12 @@ class CheckoutController extends Controller
         $investimento->mp_url = $pagamento->init_point;
         $investimento->save();
 
-        if(env('APP_ENV') == 'local')
+        if(env('APP_ENV') == 'local'){
             return redirect()->to($pagamento->sandbox_init_point);
-        else
+        } else{
             return redirect()->to($pagamento->init_point);
+        }
+
         
     }
 
