@@ -37,7 +37,13 @@ class CheckoutController extends Controller
         $pagamento = $this->gerarPagamento($investimento);
 
         $investimento = Investimento::find($investimento->id);
-        $investimento->mp_url = $pagamento->init_point;
+
+        if(env('APP_ENV') =='local'){
+            $investimento->mp_url = $pagamento->sandbox_init_point;
+        }else{
+            $investimento->mp_url = $pagamento->init_point;
+        }
+
         $investimento->save();
 
         if(env('APP_ENV') == 'local'){
