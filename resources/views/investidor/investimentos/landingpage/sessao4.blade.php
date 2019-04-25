@@ -49,6 +49,11 @@
 								@endforelse
 							</td>
 							</td>
+							<td>
+								@auth
+									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Desejo receber mais informações do projeto por e-mail! </a>
+								@endauth
+							</td>
 						
 						
 						
@@ -125,9 +130,9 @@
    
     <div class="col">
 		<div class="alert alert-default text-center" role="alert">
-    <strong>	@auth
-									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Desejo receber mais informações do projeto por e-mail! </a>
-								@endauth</strong> 
+    <strong>
+
+	</strong>
 
 	
     </div>
