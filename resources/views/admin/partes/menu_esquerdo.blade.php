@@ -9,7 +9,7 @@
                     <li><a href="{{route('admin-osc.index')}}">Oscs</a></li>
                     <li><a href="{{route('admin-users.index')}}">Usuarios</a></li>
                     <li><a href="{{route('admin-projetos.index')}}">Projetos</a></li>
-                    {{--<li><a href="#">Form Wizard</a></li>--}}
+                    <li><a href="{{route('admin-investimentos.index')}}">Investimentos</a></li>
                     {{--<li><a href="#">Form Upload</a></li>--}}
                     {{--<li><a href="#">Form Buttons</a></li>--}}
                 </ul>

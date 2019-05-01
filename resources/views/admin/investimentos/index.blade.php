@@ -6,7 +6,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Lista de Osc <small>Lista dos últimos cadastros</small></h2>
+                    <h2>Investimentos<small>Lista dos últimos Investimentos</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -30,10 +30,10 @@
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Codigo Interno</th>
-                                <th>Nome Fantasia</th>
-                                <th>Fundação</th>
-                                <th>Data Cadastro</th>
+                                <th>Codigo</th>
+                                <th>Investidor</th>
+                                <th>Instituição</th>
+                                <th>Valor</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -41,12 +41,12 @@
                             @forelse($data as $d)
                                 <tr>
                                     <td>{{$d->id}}</td>
-                                    <td>{{$d->nome_fantasia}}</td>
-                                    <td>{{$d->ano_fundacao}}</td>
-                                    <td>{{ date('d/m/Y',strtotime($d->created_at))}}</td>
+                                    <td>{{$d->usuario()->name}}</td>
+                                    <td>{{$d->osc->nome_fantasia}}</td>
+                                    <td>{{ number_format($d->valor,2,',','.')}}</td>
                                     <td>
-                                        <a href="{{route('admin-osc.show',$d->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Detalhes</a>
-                                        <a href="{{route('detalhe.osc',$d->id)}}" target="_blank" class="btn btn-warning btn-xs"><i class="fa fa-sitemap"></i></a>
+                                        <a href="{{route('admin-investimentos.show',$d->id)}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> Detalhes</a>
+{{--                                        <a href="{{route('detalhe.osc',$d->id)}}" target="_blank" class="btn btn-warning btn-xs"><i class="fa fa-sitemap"></i></a>--}}
                                     </td>
                                 </tr>
                             @empty

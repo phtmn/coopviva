@@ -71,7 +71,7 @@ Route::group( ['middleware'=> ['auth','verified','can:osc'],'prefix'=>'painel-os
 
 //# ROTAS PARA A AREA ADMINISTRATIVA
 Route::group(['prefix'=>'sistema','middleware'=>['auth','admin']],function(){
-    Route::view('/','admin.home');
+    Route::get('/dashboard','Admin\DashboardController@index');
 
     Route::resource('admin-osc','Admin\OscController');
     Route::get('admin-osc/active/{id}','Admin\OscController@active')->name('oscs.active');
@@ -82,6 +82,8 @@ Route::group(['prefix'=>'sistema','middleware'=>['auth','admin']],function(){
 
     Route::get('admin-projetos/active/{id}','Admin\ProjetosController@active')->name('projetos.active');
     Route::resource('admin-projetos','Admin\ProjetosController');
+
+    Route::resource('admin-investimentos','Admin\InvestimentosController');
 });
 
 

@@ -28,4 +28,5 @@ class Investimento extends Model
     public function projeto(){
         return $this->belongsTo(Projeto::class);
     }
+
 }
