@@ -35,8 +35,19 @@
 						@forelse($projetos as $p)
 						<tr>
 							<td  style="width: 50px;">
-							
-							<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a>
+							@cannot('osc')
+                                <div class="botao mx-2 mb-4 mt-0">
+                                    @guest
+                                        <div class="text-center">
+                                            <a href="{{route('login')}}" class="btn btn-default btn-round">Realize login para Investir</a>
+                                        </div>
+                                    @else
+																			<a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a>
+																				
+                                    @endguest
+                                </div>
+                            @endcannot
+					        {{-- <a href="" data-toggle="modal" data-target="#modal-default" class="btn btn-success" > Quero Investir</a> --}}	
 							
 							
 							</td>
@@ -51,7 +62,7 @@
 							</td>
 							<td>
 								@auth
-									<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-white">Desejo receber mais informações do projeto por e-mail! </a>
+								{{-- 	<a href="{{ route('projeto.sendFile',$p->id) }}" class="text-dark">Desejo receber mais informações do projeto por e-mail! </a> --}}
 								@endauth
 							</td>
 						
@@ -129,13 +140,7 @@
   <div class="row">
    
     <div class="col">
-		<div class="alert alert-default text-center" role="alert">
-    <strong>
-
-	</strong>
-
-	
-    </div>
+		
    
   </div>
 </div>
