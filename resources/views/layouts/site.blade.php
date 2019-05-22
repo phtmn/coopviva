@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Aqui no COOPVIVA, você pode engajar com projetos ou causas que estão de acordo com seus propósitos, de forma planejada, estruturada e transparente">
 	<meta name="author" content="Coopviva">
-	<title>.:: COOPVIVA ::. </title>
+	<title>.:: Ponto de Coleta ::. </title>
 	<!-- Favicon -->
 	<link href="{{asset('vendor/site/images/favicon.ico')}}" rel="icon" type="image/png">
 	<!-- Fonts -->
@@ -23,13 +23,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
 	<!---:::fancybox.mim.css:::-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110332879-2"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140035210-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'UA-110332879-2');
+		gtag('config', 'UA-140035210-1');
 	</script>
 	@yield('css')
 
@@ -41,7 +41,7 @@
 	<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
 		<div class="container">
 			<a class="navbar-brand mr-lg-5" href="{{url('/')}}">
-				<img src="{{asset('vendor/argon-site/assets/img/brand/brandlogo-white.png')}}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
+				<img src="{{asset('vendor/argon-site/assets/img/brand/logo.png')}}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
 							<a href="{{url('/')}}">
 						
 							
-							<img src="{{ asset('vendor/site/images/coopvidapreta_logo.png') }}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
+							<img src="{{ asset('vendor/site/images/logo2.png') }}" alt="..:: COOPVIVA ::.." style="width: 188px; height: auto;">
 							</a>
 						</div>
 						<div class="col-6 collapse-close">

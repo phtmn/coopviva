@@ -7,7 +7,7 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>.:: COOPVIVA ::. - Painel da OSC</title>
+    <title>.:: Ponto de Coleta ::. - Painel do Usuário</title>
     <!-- Favicon -->
     <link href="{{asset('vendor/site/images/favicon.ico')}}" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -32,7 +32,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{route('osc.index')}}">
-            <img src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" class="navbar-brand-img" alt="...">
+            <img src="{{asset('vendor/site/images/logo2.png')}}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         
@@ -43,7 +43,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                  <img src="{{asset('vendor/site/images/testelampada.png')}}" class="rounded-circle">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold"></span>
@@ -51,9 +51,9 @@
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                        <div class=" dropdown-header noti-title">
-                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>
-                        </div>
+                        {{--<div class=" dropdown-header noti-title">--}}
+                            {{--<a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>--}}
+                        {{--</div>--}}
                         <div class=" dropdown-header noti-title">
                         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" data-toggle="tooltip" data-placement="right" title="Em breve"><i class="ni ni-bell-55 "></i> </a>
                             <a href=""  ><h6 class="text-overflow m-0"  style="text-transform: capitalize;"><i class="ni ni-bell-55 " ></i> Notificações (Em breve)</h6></a>
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{route('osc.index')}}">
-                        <img src="{{asset('vendor/site/images/coopvidapreta_logo.png')}}" class="navbar-brand-img" alt="...">
+                        <img src="{{asset('vendor/site/images/logo2.png')}}" class="navbar-brand-img" alt="...">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -127,7 +127,7 @@
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img src="{{asset('vendor/site/images/jacareCoopViva.png')}}" class="rounded-circle">
+                  <img src="{{asset('vendor/site/images/testelampada.png')}}" class="rounded-circle">
                 </span>
                             <div class="media-body ml-2 d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold"></span>
@@ -135,11 +135,11 @@
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                        <div class=" dropdown-header noti-title">
-                            <a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>
-                        </div>
+                        {{--<div class=" dropdown-header noti-title">--}}
+                            {{--<a href="" data-toggle="modal" data-target="#kalahun-modal"><h6 class="text-overflow m-0" style="text-transform: capitalize;">Olá, Eu sou KA LAHUN</h6></a>--}}
+                       {{-- </div>--}}
                        
-                        <div class="dropdown-divider"></div>
+                       {{-- <div class="dropdown-divider"></div>--}}
                         <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                            
@@ -217,24 +217,22 @@
             <div class="row align-items-center justify-content-xl-between">
                 <div class="col-xl-6">
                     <div class="copyright text-center text-xl-left text-muted">
-                        &copy; 2019 <a href="" class="font-weight-bold ml-1 text-success font-weight-bold 900" >COOPVIVA</a>
+                        &copy; 2019 <a href="" class="font-weight-bold ml-1 font-weight-bold 900" >Ponto de Coleta</a>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <ul class="nav nav-footer justify-content-center justify-content-xl-end">
                         <li class="nav-item">
-							<a href="http://simeuquero.org/" class="nav-link" target="_blank">SIM EU QUERO</a>
+							<a href="#" class="nav-link" target="_blank">Sobre Nós</a>
                             
                         </li>
                         <li class="nav-item">
-                            <a href="http://www.redeconexao.com.br/" class="nav-link" target="_blank">Rede de Conexão</a>
+                            <a href="{{url('/termo-de-uso')}}" class="nav-link" target="_blank">Termo de Uso</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://www.agenda2030.com.br/" class="nav-link" target="_blank">Agenda 2030</a>
+                            <a href="#" class="nav-link" target="_blank">Política de Privadidade</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{url('/termo-de-uso')}}" class="nav-link" >Termo de Uso</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>

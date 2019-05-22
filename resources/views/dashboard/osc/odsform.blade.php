@@ -2,7 +2,8 @@
 
 
 @section('cabecalho')
-	<div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
+	{{--<div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">--}}
+	<div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-size: cover; background-position: center top;">
 		<!-- Mask -->
 		<span class="mask bg-gradient-warning opacity-8"></span>
 		<!-- Header container -->

@@ -3,9 +3,9 @@
 @section('cabecalho')
 
 
-    <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-image: url({{asset('vendor/argon-dash/assets/img/theme/profile-cover.jpg')}}); background-size: cover; background-position: center top;">
+    <div class="header pb-5 d-flex align-items-center" style="min-height: 350px; background-size: cover; background-position: center top;">
         <!-- Mask -->
-        <span class="mask bg-gradient-danger opacity-8"></span>
+        <span class="mask bg-gradient-primary opacity-8"></span>
         <!-- Header container -->
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
@@ -29,7 +29,7 @@
 		    <div class="col-md-8 ">
 				<div class="card shadow ">
 						<div class=" card-header border-0 text-center  ">
-							 <a href="" class="btn btn-danger m-4" data-toggle="modal" data-target="#modal-default"> <i class="ni ni-cloud-upload-96"></i> Upload Galeria</a>
+							 <a href="" class="btn btn-primary m-4" data-toggle="modal" data-target="#modal-default"> <i class="ni ni-cloud-upload-96"></i> Upload Galeria</a>
 						</div>
 					
 							<div class="row justify-content-center ">
@@ -74,7 +74,7 @@
 						</div>
 						<div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
 							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo"><i class="ni ni-cloud-upload-96"></i> Upload Logo</a>
+								<a href="#" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modal-default-logo" title="Abrir modal para ulpoad de logo"><i class="ni ni-cloud-upload-96"></i> Upload Logo</a>
 							</div>
 						</div>
 						
@@ -102,8 +102,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger"><i class="ni ni-check-bold"></i> Enviar</button>
-                        <button type="button" class="btn btn-link-danger  ml-auto" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary"><i class="ni ni-check-bold"></i> Enviar</button>
+                        <button type="button" class="btn btn-link-primary  ml-auto" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
                 {!! Form::close() !!}
@@ -131,8 +131,8 @@
                         </div>
                     </div>
                     <div class="modal-footer ">
-                        <button type="submit" class="btn btn-danger "><i class="ni ni-check-bold"></i> Enviar</button>
-                        <button type="button" class="btn btn-link-danger  ml-auto" data-dismiss="modal">Cancelar</button>  
+                        <button type="submit" class="btn btn-primary "><i class="ni ni-check-bold"></i> Enviar</button>
+                        <button type="button" class="btn btn-link-primary  ml-auto" data-dismiss="modal">Cancelar</button>  
                     </div>
                 </div>
                 {!! Form::close() !!}
