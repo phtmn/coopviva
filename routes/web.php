@@ -2,7 +2,7 @@
 
 Auth::routes(['verify'=>true]);
 
-
+// bla bla bla
 
 Route::view('/','site.index')->name('site.index');
 Route::view('/termo-de-uso','site.termodeuso');
